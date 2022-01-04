@@ -1,0 +1,456 @@
+@use "../resources" as *;
+
+@use "../variables" as *;
+
+/*--------------------------------------------------------------
+# Body Background
+--------------------------------------------------------------*/
+body {
+  background: var(--body-bg);
+}
+
+
+/*--------------------------------------------------------------
+# Logo
+--------------------------------------------------------------*/
+.site-logo {
+  font-size: 3.3rem; //if its a text logo
+  text-transform: uppercase;
+
+
+  color: white;
+  max-width: 350px;
+
+  svg, path, g {
+	fill: currentColor; //uses color above
+  }
+}
+
+.site-navigation .site-logo {
+  padding: 3px 0;
+}
+
+
+/*--------------------------------------------------------------
+# Site Top - holds logo and main menu at top
+--------------------------------------------------------------*/
+.site-top {
+  position: relative; //change to fixed or absolute if wanted. if absolute add padding top to your entry-header!
+  background: var(--site-top);
+}
+
+
+/*--------------------------------------------------------------
+# Default Headers
+--------------------------------------------------------------*/
+.entry-header, .page-header {
+  position: relative;
+  min-height: calc(400px + 5vw);
+  padding: 30px 0;
+  color: white;
+  background-color: var(--dark-grey);
+  background-size: cover;
+
+
+  h1 {
+	margin: 0;
+  }
+
+  .cover-image {
+	height: 500px;
+  }
+
+}
+
+
+/*--------------------------------------------------------------
+# Under header first thing should probably have padding-top. Usually its a section
+# expect it to be a paragraph or a heading or a section
+# Sometimes header is outside entry-content so we select the very first thing inside there
+--------------------------------------------------------------*/
+.entry-header + p, .entry-content > p:first-child{
+  padding-top: var(--gap);
+}
+
+
+
+/*--------------------------------------------------------------
+# Default Footer
+--------------------------------------------------------------*/
+
+.site-footer {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: var(--footer-bg);
+  color: var(--subtle-text-color);
+  font-size: 1.1rem;
+
+  a{
+	color: inherit;
+  }
+}
+
+
+
+/*--------------------------------------------------------------
+# Error 404 Page
+--------------------------------------------------------------*/
+.error404 {
+  background: white;
+  color: var(--highlight);
+
+  .site-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .site-footer, .site-top {
+    display: none;
+  }
+
+  .title-404 {
+    font-size: 27vmin;
+    font-weight: bold;
+    line-height: 1;
+    color: rgba(74, 58, 148, 0.82);
+    text-shadow: 1px 1px white;
+    margin-bottom: var(--gap);
+  }
+}
+
+
+
+
+////////////UTILITY STYLES//////
+
+
+.U_container {
+  position: relative;
+  width: 100%;
+  max-width: $base-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.U_base-pad {
+padding-left: 16px;
+padding-right: 16px;
+	@media only screen and (min-width: 700px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  // @media only screen and (min-width: 1200px) {
+  //   padding-left: 40px;
+  //   padding-right: 40px;
+  // }
+}
+
+.U-sec-pad {
+  padding-top: 100px;
+}
+
+
+
+.image-aspect-box {
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    ///ADDD PADDING ON PARENT
+}
+
+
+
+
+
+
+
+
+.image-aspect-box_inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: green;
+}
+
+.image-aspect-box_inner {
+  img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.cell-p {
+  // margin-top: 40px;
+}
+
+.heading-content {
+  .ingr {
+    max-width: 50%;
+  }
+}
+
+
+/////MODULES/////
+
+
+
+//******/HEADING + TEXT
+
+.module--heading_txt {
+  .heading {
+    max-width: 1000px;
+  }
+  .flx-container {
+    display: flex;
+  }
+  .cell {
+    width: 1000;
+      @media screen and (min-width: 1000px) {
+        width: 50%;
+      }
+    margin-top: 80px;
+  }
+  .-left-nudge {
+  margin-left: 20%;
+
+    @media screen and (min-width: 1000px) {
+  justify-content: flex-end;
+  margin: auto;
+  }
+
+  }
+
+
+
+}
+
+///*******FULL IMAGE
+
+.module--full-image {
+  position: relative;
+  .image-aspect-box{
+        padding-top: 56%;
+  }
+}
+
+.module--full-image.-left-nudge {
+  padding-left: 33.33%
+}
+
+.module--full-image.-right-nudge {
+  padding-right: 33.33%
+}
+
+.full-image__overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 40px;
+  background: yellow;
+  width: 70%;
+  max-width: 600px;
+  min-height: 240px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+}
+
+
+///********SPLIT CONTENT
+
+.module--split-content {
+
+  .flx-container {
+    display: flex;
+  }
+  .cell:first-of-type {
+    width: 50%;
+    min-width: 50%;
+  }
+  .cell:last-of-type {
+    flex-grow: 1;
+  }
+}
+
+.module--split-content {
+  margin-bottom: 80px;
+}
+
+.module--split-content h3{
+  margin-bottom: 40px;
+}
+
+.module--split-content:last-of-type {
+  margin-bottom: 0;
+}
+
+.module--split-content .heading-content {
+  margin-bottom: 64px;
+}
+
+.cell_img-content .image-aspect-box{
+      padding-top: 100%;
+}
+
+.cell_img-content .-wide-aspect {
+      padding-top: 56%;
+}
+
+//!!!!!CONTENT PADDINGS FOR SPLIT CONTENT!!!!!///
+
+.module--split-content .flx-container .cell:first-of-type .cell_txt-content {
+padding-right: $txt-pad;
+}
+.module--split-content .flx-container .cell:last-of-type .cell_txt-content {
+padding-left: $txt-pad;
+}
+
+.-mosaic-split {
+.cell:first-of-type {
+  width: 60%;
+  min-width: 60%;
+}
+}
+
+
+////********LASKENTA COUNTER
+
+
+.module--laskenta-count {
+  .flx-container {
+    display: flex;
+    .cell {
+      width: 50%;
+    }
+  }
+
+}
+
+.laskenta-count__number {
+  span {
+    font-size: 46rem;
+    line-height: 1;
+  }
+}
+.laskenta-count__label {
+  span {
+    font-size: 4rem;
+    line-height: 1;
+  }
+}
+
+.-sticky-label {
+  position: sticky;
+  top: 0;
+}
+
+
+//////*******SUPER DIGITS////////
+
+.section--super-digit {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+
+.super-digit__number {
+  font-size: 26rem;
+  line-height: 1;
+  color: inherit;
+}
+.super-digit__label {
+      font-size: 4rem;
+}
+
+.section--super-digit.-dark-mode {
+background: black;
+color: white;
+}
+
+
+
+/////////REFE PRVIEW SCROLLLER////
+
+.image-scroller {
+    width: 100%;
+      padding: 60px 0;
+    transform: none;
+    overflow: hidden;
+
+}
+.marquee {
+
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    min-width: 100%;
+}
+
+.marquee__inner {
+
+    display: flex;
+    flex-shrink: 0;
+
+    flex-wrap: nowrap;
+    width: 100%;
+    // animation: slide-left--image 5s linear infinite;
+}
+
+.marquee__inner  {
+
+  .marquee-item {
+  min-width: 40%;
+    padding-right: 10px;
+    .image-aspect-box {
+  padding-top: 50%;
+    }
+  }
+
+.type-1 {
+  min-width: 35%;
+  .image-aspect-box {
+padding-top: 40%;
+  }
+
+}
+.type-2 {
+  min-width: 40%;
+  .image-aspect-box {
+padding-top: 50%;
+  }
+
+}
+.type-3 {
+  min-width: 25%;
+  .image-aspect-box {
+padding-top: 60%;
+  }
+    }
+  .type-4 {
+    min-width: 50%;
+    .image-aspect-box {
+  padding-top: 60%;
+    }
+}
+
+
+}
+
+
+@keyframes slide-left--image {
+    from {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    to {
+
+        transform: translateX(-150%)
+    }
+}

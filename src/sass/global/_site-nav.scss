@@ -1,0 +1,43 @@
+@use "../resources" as *;
+
+
+
+.flx-nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 30px 0;
+}
+
+.flx-nav {
+.header-logo {
+width: 50%;
+}
+.navigation-links {
+  display: flex;
+width: 50%;
+}
+}
+
+.laskenta-nav-counter {
+  position: absolute;
+  right: -18px;
+    top: -15px;
+    background: yellow;
+    height: 20px;
+    width: 20px;
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      font-size: 1rem;
+    }
+}
+
+.-desktop-nav {
+  a {
+    margin-right: 42px;
+    position: relative;
+  }
+}
