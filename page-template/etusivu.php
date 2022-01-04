@@ -106,10 +106,21 @@
    <div class="marquee marq--right">
       <div class="marquee__inner" aria-hidden="true">
         <div class="marquee-item type-1">
-          <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
+          <div class="image-aspect-box">
+            <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div>
+            <div class="marquee-item__overlay">
+
+            </div>
+           </div>
+
         </div>
         <div class="marquee-item type-2">
-          <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
+          <div class="image-aspect-box">
+            <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div>
+            <div class="marquee-item__overlay">
+
+            </div>
+          </div>
         </div>
 
         <div class="marquee-item type-3">
@@ -143,7 +154,9 @@
             <div class="full-image__overlay">
               <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
               <div class="capsule-wrap">
-                <button class="basic-btn btn--bordered"type="button" name="button">Lue lisää</button>
+                <button class="basic-btn btn--bordered"type="button" name="button"><span class="basic-btn__text">Lue lisää</span> <span class="basic-btn__icon">
+
+                </span> </button>
               </div>
             </div>
         </div>
@@ -293,6 +306,29 @@
           </div>
 
         </div>
+
+      </section>
+
+      <section class="section--bottom-cta U-sec-pad">
+        <div class="module--bottom-cta">
+          <div class="flx-container">
+            <div class="cell bottom-cta__image">
+
+            </div>
+            <div class="cell bottom-cta_content">
+              <div class="content-wrap U_base-pad--right-only">
+              <h3>Kiinnostuitko?</h3>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+              <div class="capsule-wrap">
+                <button class="basic-btn btn--black btn--wide"type="button" name="button">Lue lisää</button>
+              </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
 
       </section>
 

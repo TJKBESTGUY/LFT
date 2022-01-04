@@ -10,7 +10,7 @@ html {
 
 //because we are using this on the front end and the back end we need to be careful
 body{
-	font-size: 1.6rem; //results in 16px
+	font-size: 1.7rem; //results in 16px
 	line-height: var(--line-height);
 	font-family: var(--font);
 	color: var(--main-text-color);
@@ -100,6 +100,7 @@ h3, .h3 {
 	font-size: 4rem;
 	line-height: 1.2;
 	margin: 0;
+	margin-bottom: 40px;
 
 }
 
@@ -228,7 +229,7 @@ var {
 ////////BUTTTONS//////
 
 .capsule-wrap {
-
+margin-top: 40px;
 }
 
 .basic-btn {
@@ -239,7 +240,39 @@ var {
 	border-width: 1px;
 	border-color: black;
 	border-style: solid;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 
+	cursor:pointer;
+}
+
+.basic-btn__text {
+line-height: 1;
+		transition: 0.3s;
+}
+.basic-btn__icon {
+	width: 1.6rem;
+	height: 1.6rem;
+	border-radius: 999px;
+	background: black;
+	margin-left: 0.8rem;
+			transition: 0.3s;
+}
+
+.btn--wide {
+	font-size: 2rem;
+}
+
+.basic-btn:hover {
+	.basic-btn__text {
+		transform: translateX(1.2rem);
+		transition: 0.5s;
+	}
+	.basic-btn__icon {
+		opacity: 0;
+			transition: 0.25s;
+	}
 }
 
 .btn--yellow {
@@ -248,5 +281,9 @@ var {
 }
 .btn--bordered {
 	background: transparent;
-	
+
+}
+.btn--black {
+	background: black;
+	color:yellow;
 }
