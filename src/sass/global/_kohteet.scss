@@ -1,0 +1,42 @@
+
+@use "../resources" as *;
+
+
+
+.module--laskentakohteet-app {
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
+.laskentakohteet-app__header {
+  // width: 100%;
+  // min-height: 100px;
+  // background: $a-yellow;
+  // border-radius: 10px 10px 0 0;
+
+  th {
+    background: $a-yellow;
+  }
+}
+
+.laskentakohteet-app__body {
+  width: 100%;
+  min-height: 600px;
+  background: $a-grey;
+}
+
+.module--laskentakohteet-app {
+  tr td:first-of-type {
+    width: 33.333%;
+  }
+  th, td {
+    padding: 20px;
+    font-weight: 400;
+}
+th {
+
+}
+td {
+  color:white;
+}
+}

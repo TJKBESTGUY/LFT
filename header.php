@@ -54,14 +54,15 @@ $app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg ic
     <div class="header-logo">
         <a href="#">Areite</a>
     </div>
-    <div class="navigation-links -desktop-nav">
+    <div class="navigation-links -desktop-nav flx-container">
+        <a href="Palvelut">Uutiset</a>
       <a href="Palvelut">Palvelut</a>
       <a href="Palvelut">Laskentakohteet
         <div class="laskenta-nav-counter">
           <span>42</span>
-
         </div>
       </a>
+      <a href="Palvelut">Referenssit</a>
       <a href="Palvelut">Yritys</a>
       <a href="#">Ota Yhteyttä</a>
     </div>
@@ -70,6 +71,8 @@ $app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg ic
   </div>
 
 </header>
+
+
 
 
 <div class="site-container" id="site-container">

@@ -15,7 +15,67 @@
 </div><!-- #site-content -->
 
 <footer id="colophon" class="site-footer" role="contentinfo">
-		<?php ign_template('src/parts/global/site-footer.php'); ?>
+    <div class="U_container U_base-pad">
+			<div class="footer-bg-border">
+				<div class="cell">
+				</div>
+				<div class="cell">
+				</div>
+				<div class="cell">
+				</div>
+				<div class="cell">
+				</div>
+				<div class="cell">
+				</div>
+				<div class="cell">
+				</div>
+			</div>
+			<div class="module--footer">
+				<div class="flx-container">
+					<div class="cell footer__left-bar">
+						Areite
+					</div>
+
+					<div class="cell footer__nav-links">
+						<ul>
+							<li>
+								<a href="#">Palvelut</a>
+							</li>
+							<li>
+								<a href="#">Laskentakohteet</a>
+							</li>
+							<li>
+								<a href="#">Yritys</a>
+							</li>
+							<li>
+								<a href="#">Ota yhteyttä</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="cell footer__extra-content">
+						<ul>
+							<li>
+								<a href="#">Palvelut</a>
+							</li>
+							<li>
+								<a href="#">Palvelut</a>
+							</li>
+							<li>
+								<a href="#">Palvelut</a>
+							</li>
+							<li>
+								<a href="#">Palvelut</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+
+
+			</div>
 </footer><!-- #colophon -->
 
 </div><!-- #page -->

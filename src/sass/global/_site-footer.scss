@@ -1,0 +1,76 @@
+@use "../resources" as *;
+
+/*--------------------------------------------------------------
+# Default Footer
+--------------------------------------------------------------*/
+
+.site-footer {
+width: 100%;
+background: $a-grey;
+color: white;
+
+}
+
+.module--footer {
+
+  position: relative;
+  z-index: 2;
+  color:white;
+  padding: 100px 0;
+  a {
+    color: white;
+  }
+  .flx-container {
+    display: flex;
+  }
+  ul {
+    margin:0;
+  padding: 0;
+  text-indent: 0;
+  list-style: none;
+  }
+  .footer__left-bar {
+    width: 50%
+  }
+  .footer__nav-links{
+    width: 33.3333333333%;
+  }
+  .footer__extra-content{
+    width: 16.6666666667%;
+  }
+}
+
+
+.footer-bg-border {
+  opacity: 0.1;
+  position: absolute;
+    top: 0;
+
+    width: calc(100% - 80px);
+    left: 40px;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    .cell {
+      width: 16.6666666667%;
+      position: relative;
+    }
+    .cell:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 100%;
+      background: white;
+    }
+    .cell:last-of-type:after{
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 100%;
+      background: white;
+    }
+}

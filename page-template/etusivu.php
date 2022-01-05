@@ -6,7 +6,7 @@
 
    <div id="primary" class="content-area">
  		<main id="main" class="site-main" role="main">
-      <section class="section--home-hero U-sec-pad">
+      <section class="section--home-header U-sec-pad">
         <div class="U_container U_base-pad">
           <div class="module--heading_txt">
             <div class="heading">
@@ -26,6 +26,46 @@
       </section>
 
 
+      <section class="section--laskentakohteet-app U-sec-pad">
+          <div class="U_container U_base-pad">
+            <div class="module--laskentakohteet-app -home-preview">
+              <table>
+                <thead class="laskentakohteet-app__header">
+                  <tr>
+                    <th>Company</th>
+                    <th>Contact</th>
+                    <th>Country</th>
+                  </tr>
+                </thead>
+                <tbody class="laskentakohteet-app__body">
+                  <tr>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                  </tr>
+                  <tr>
+                    <td>Centro comercial Moctezuma</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                  </tr>
+                  <tr>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+
+              <div class="laskentakohteet-app__footer">
+
+              </div>
+            </div>
+          </div>
+
+      </section>
+
       <section class="section--home-laskenta-count U-sec-pad">
         <div class="U_container U_base-pad">
           <div class="module--laskenta-count">
@@ -34,7 +74,7 @@
                 <span>42</span>
               </div>
               <div class="cell laskenta-count__label">
-                <span class="-sticky-label">Laskennassa olevaa kohdetta</span>
+                <span class="-sticky-label h3">Laskennassa olevaa kohdetta</span>
               </div>
             </div>
 
@@ -46,15 +86,17 @@
       </section>
 
 
+
+
       <section class="section--super-digit">
         <div class="U_container U_base-pad">
           <div class="module--super-digit">
             <div class="flx-container">
               <div class="cell super-digit__number">
-                <span>204 500</span>
+                <span class="">204 500</span>
               </div>
               <div class="cell super-digit__label">
-                <span class="">suurin laskettu kohde (m2)</span>
+                <span class="h3">suurin laskettu kohde (m2)</span>
               </div>
             </div>
 
@@ -74,7 +116,7 @@
                 <span>22 412 735</span>
               </div>
               <div class="cell super-digit__label">
-                <span class="">suurin laskettu kohde (m2)</span>
+                <span class="h3">suurin laskettu kohde (m2)</span>
               </div>
             </div>
 
@@ -88,61 +130,7 @@
 
 
 
-      <section class="section--refe-preview U-sec-pad">
-        <div class="U_container U_base-pad">
-          <div class="module--super-digit">
-            <div class="flx-container">
-              <div class="cell super-digit__number">
-                <span>22 412 735</span>
-              </div>
-              <div class="cell super-digit__label">
-                <span class="">suurin laskettu kohde (m2)</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="module--image-scroller">
-          <div class="image-scroller" style="position:relative">
-   <div class="marquee marq--right">
-      <div class="marquee__inner" aria-hidden="true">
-        <div class="marquee-item type-1">
-          <div class="image-aspect-box">
-            <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div>
-            <div class="marquee-item__overlay">
 
-            </div>
-           </div>
-
-        </div>
-        <div class="marquee-item type-2">
-          <div class="image-aspect-box">
-            <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div>
-            <div class="marquee-item__overlay">
-
-            </div>
-          </div>
-        </div>
-
-        <div class="marquee-item type-3">
-          <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
-        </div>
-        <div class="marquee-item type-4">
-          <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
-        </div>
-
-
-      </div>
-
-
-
-
-
-
-   </div>
-</div>
-        </div>
-
-      </section>
 
 
 
@@ -155,7 +143,7 @@
               <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
               <div class="capsule-wrap">
                 <button class="basic-btn btn--bordered"type="button" name="button"><span class="basic-btn__text">Lue lisää</span> <span class="basic-btn__icon">
-
+                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
                 </span> </button>
               </div>
             </div>
@@ -309,13 +297,66 @@
 
       </section>
 
+
+
+      <section class="section--refe-preview U-sec-pad">
+        <div class="U_container U_base-pad">
+          <div class="module--super-digit">
+            <div class="flx-container">
+              <div class="cell super-digit__number">
+                <span>22 412 735</span>
+              </div>
+              <div class="cell super-digit__label">
+                <span class="">suurin laskettu kohde (m2)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="module--image-scroller">
+          <div class="image-scroller" style="position:relative">
+   <div class="marquee marq--right">
+      <div class="marquee__inner" aria-hidden="true">
+        <div class="marquee-item type-1">
+          <div class="image-aspect-box">
+            <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div>
+            <div class="marquee-item__overlay">
+
+            </div>
+           </div>
+
+        </div>
+        <div class="marquee-item type-2">
+          <div class="image-aspect-box">
+            <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div>
+            <div class="marquee-item__overlay">
+
+            </div>
+          </div>
+        </div>
+
+        <div class="marquee-item type-3">
+          <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
+        </div>
+        <!-- <div class="marquee-item type-4">
+          <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
+        </div> -->
+
+
+      </div>
+
+   </div>
+</div>
+        </div>
+
+      </section>
+
       <section class="section--bottom-cta U-sec-pad">
         <div class="module--bottom-cta">
           <div class="flx-container">
             <div class="cell bottom-cta__image">
 
             </div>
-            <div class="cell bottom-cta_content">
+            <div class="cell bottom-cta__content">
               <div class="content-wrap U_base-pad--right-only">
               <h3>Kiinnostuitko?</h3>
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>

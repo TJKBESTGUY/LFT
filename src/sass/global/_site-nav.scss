@@ -1,12 +1,12 @@
 @use "../resources" as *;
 
 .site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  background: white;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+  // z-index: 100;
+  // background: white;
 }
 
 .flx-nav {
@@ -23,6 +23,7 @@ width: 50%;
 .navigation-links {
   display: flex;
 width: 50%;
+min-width: 660px;
 }
 }
 
@@ -30,7 +31,7 @@ width: 50%;
   position: absolute;
   right: -18px;
     top: -15px;
-    background: yellow;
+    background: $a-yellow;
     height: 20px;
     width: 20px;
     border-radius: 999px;
@@ -44,7 +45,14 @@ width: 50%;
 
 .-desktop-nav {
   a {
-    margin-right: 42px;
+
     position: relative;
   }
+  a:last-of-type {
+    margin-right: 0;
+  }
+}
+.-desktop-nav.flx-container {
+  display: flex;
+  justify-content: space-between;
 }

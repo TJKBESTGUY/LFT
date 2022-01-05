@@ -340,14 +340,32 @@ Mixins
 
 
 //////UTILITY VARAIBLES/////
-
 $base-width: 1400px;
-$base-width-half: 1400px / 2;
+// $base-width: 1480px;
+$base-width-half: $base-width / 2;
+
+$base-width-media-max: 1400px - 0.1px;
+
+
+// $base-width: 1400px;
 
 $txt-pad: 80px;
+$txt-pad-mid: 40px;
 
 $header-height: 100px;
 $header-height--mobile: 80px;
+
+
+////COLORSS//////
+
+$a-yellow: #F0FF31;
+$a-black: #000000;
+$a-black: #ffff;
+$a-grey: #333333;
+$a-grey: #252525;
+
+
+
 
 
 

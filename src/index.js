@@ -16,6 +16,8 @@ import "./js/core/smooth-scroll"
 import "./js/core/icons"
 import "./js/core/responsive-iframe"
 
+import "./js/page-specific/refe-page.js"
+
 
 //add all underscored js files from inc and parts
 import "../inc/**/_?*.js";

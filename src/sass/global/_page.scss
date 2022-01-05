@@ -78,17 +78,17 @@ body {
 # Default Footer
 --------------------------------------------------------------*/
 
-.site-footer {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background: var(--footer-bg);
-  color: var(--subtle-text-color);
-  font-size: 1.1rem;
-
-  a{
-	color: inherit;
-  }
-}
+// .site-footer {
+//   padding-top: 5px;
+//   padding-bottom: 5px;
+//   background: var(--footer-bg);
+//   color: var(--subtle-text-color);
+//   font-size: 1.1rem;
+//
+//   a{
+// 	color: inherit;
+//   }
+// }
 
 
 
@@ -122,7 +122,7 @@ body {
 
 
 
-////////////UTILITY STYLES//////
+////////////*****UTILITY STYLES//////
 
 
 .U_container {
@@ -160,19 +160,12 @@ padding-right: 16px;
 }
 
 
-
 .image-aspect-box {
     height: 0;
     overflow: hidden;
     position: relative;
     ///ADDD PADDING ON PARENT
 }
-
-
-
-
-
-
 
 
 .image-aspect-box_inner {
@@ -204,17 +197,28 @@ padding-right: 16px;
   }
 }
 
+///TEXT UTILITY FOR THIS SITE
 
-/////MODULES/////
+.heading {
+  max-width: 950px;
+}
+
+
+
+
+
+/*--------------------------------------------------------------
+# MODULES --- just add the stuff here and split to GLOBAL folder ***
+
+Moved: _kohteet
+--------------------------------------------------------------*/
 
 
 
 //******/HEADING + TEXT
 
 .module--heading_txt {
-  .heading {
-    max-width: 1000px;
-  }
+
   .flx-container {
     display: flex;
   }
@@ -249,11 +253,28 @@ padding-right: 16px;
 }
 
 .module--full-image.-left-nudge {
-  padding-left: 33.33%
+    padding-left: 16.6666666667%;
+
+    @media screen and (min-width: 500px) {
+
+        padding-left: 20%;
+    }
+  @media screen and (min-width: 1000px) {
+
+      padding-left: 33.33%;
+  }
 }
 
 .module--full-image.-right-nudge {
-  padding-right: 33.33%
+      padding-right: 16.6666666667%;
+
+      @media screen and (min-width: 500px) {
+
+          padding-right: 20%;
+    }
+  @media screen and (min-width: 1000px) {
+      padding-right: 33.33%;
+  }
 }
 
 .full-image__overlay {
@@ -261,7 +282,7 @@ padding-right: 16px;
   left: 0;
   bottom: 0;
   padding: 40px;
-  background: yellow;
+  background: $a-yellow;
   width: 70%;
   max-width: 600px;
   min-height: 240px;
@@ -313,9 +334,15 @@ padding-right: 16px;
 
 .module--split-content .flx-container .cell:first-of-type .cell_txt-content {
 padding-right: $txt-pad;
+@media screen and (max-width: 1200px) {
+    padding-right: $txt-pad-mid;
+}
 }
 .module--split-content .flx-container .cell:last-of-type .cell_txt-content {
 padding-left: $txt-pad;
+@media screen and (max-width: 1200px) {
+    padding-left: $txt-pad-mid;
+}
 }
 
 .-mosaic-split {
@@ -342,19 +369,25 @@ padding-left: $txt-pad;
 .laskenta-count__number {
   span {
     font-size: 46rem;
-    line-height: 1;
+    line-height: 38rem;
+      @media screen and (max-width: $base-width-media-max) {
+      font-size: 32.9vw;
+      line-height: 29vw;
+      }
   }
 }
 .laskenta-count__label {
   span {
-    font-size: 4rem;
+
+    padding-bottom: 2.2rem;
     line-height: 1;
+    margin: 0;
   }
 }
 
 .-sticky-label {
   position: sticky;
-  top: 0;
+  top: 0px;
 }
 
 
@@ -367,12 +400,16 @@ padding-left: $txt-pad;
 
 
 .super-digit__number {
-  font-size: 26rem;
+  font-size: 26.7rem;
   line-height: 1;
   color: inherit;
+  @media screen and (max-width: $base-width-media-max) {
+  font-size: 18vw;
+  }
+
 }
 .super-digit__label {
-      font-size: 4rem;
+
 }
 
 .section--super-digit.-dark-mode {
@@ -455,7 +492,7 @@ padding-top: 60%;
   left: 0;
   bottom: 0;
   padding: 40px;
-  background: yellow;
+  background: $a-yellow;
   width: 30%;
   max-width: 50%;
   min-height: 100px;
@@ -477,8 +514,94 @@ padding-top: 60%;
 }
 
 
+////REFE PAGE LIST/////
 
-/////////BOTTOM CTA////////
+.module--referenssit-content {
+
+}
+
+.refe-wrapper {
+  margin-left: 16.6666666667%;
+}
+
+.refe-item {
+  margin-top: 120px;
+  .flx-container {
+    display: flex;
+  }
+}
+
+.refe-item__heading {
+    border-top: solid 1px grey;
+  margin: 0;
+  padding: 14px 0;
+  h3 {
+    margin: 0;
+  }
+}
+
+.refe-item__image {
+  width: 50%;
+  padding-right: 40px;
+  .image-aspect-box {
+    padding-top: 56%;
+  }
+}
+
+.refe-item__content {
+  width: 50%;
+}
+
+.refe-item-table {
+  .table-cell {
+    display: flex;
+    border-top: solid 1px grey;
+    .label {
+      text-transform: uppercase;
+      min-width: 140px;
+      border-right: solid 1px grey;
+
+    }
+    .value {
+      padding-left: 20px;
+    }
+    .label, .value {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  .table-cell:last-of-type {
+      border-bottom: solid 1px grey;
+  }
+}
+
+
+
+//////REFE ITEM DYNAMIC STYLES////
+
+.refe-extended-content.-hidden {
+display: none;
+opacity: 0;
+transition: opacity 0.5s cubic-bezier(.7,0,.3,1), transform 0.5s;
+}
+
+.S-refe-activate {
+.refe-extended-content {
+  display: block !important;
+}
+.btn--refe-content-extend {
+  opacity: 0;
+  transition: opacity 0.3s linear;
+  pointer-events: none;
+}
+
+}
+
+
+/*--------------------------------------------------------------
+# BOTTOM CTA
+--------------------------------------------------------------*/
 
 .module--bottom-cta {
   .flx-container {
@@ -494,8 +617,8 @@ padding-top: 60%;
   min-height: 60vh;
 }
 
-.bottom-cta_content {
-  background: yellow;
+.bottom-cta__content {
+  background: $a-yellow;
   display: flex;
   align-items: center;
   .content-wrap {

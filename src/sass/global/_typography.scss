@@ -10,13 +10,16 @@ html {
 
 //because we are using this on the front end and the back end we need to be careful
 body{
-	font-size: 1.7rem; //results in 16px
+	font-size: 1.8rem; //results in 16px
 	line-height: var(--line-height);
 	font-family: var(--font);
 	color: var(--main-text-color);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-smoothing: antialiased;
+	@media screen and (max-width: 1200px) {
+		 font-size: 1.6rem; //results in 16px
+	}
 }
 
 
@@ -83,6 +86,12 @@ h1, .h1 {
 	line-height: 1.2;
 	font-weight: normal;
 	margin: 0;
+	  @media screen and (max-width: 1100px) {
+			font-size: 7vw;
+		}
+		@media screen and (max-width: 700px) {
+		 font-size: 7vw;
+	 }
 }
 
 h2, .h2 {
@@ -101,13 +110,17 @@ h3, .h3 {
 	line-height: 1.2;
 	margin: 0;
 	margin-bottom: 40px;
-
+	@media screen and (max-width: $base-width-media-max) {
+	font-size: 2.9vw;
+	}
+	@media screen and (max-width: 1200px) {
+	   margin-bottom: 20px;
+	}
 }
 
 h4, .h4 {
 	font-size: 1.9rem;
-
-	line-height: 1.5;
+	line-height: 1.2;
 }
 
 /*--------------------------------------------------------------
@@ -252,10 +265,9 @@ line-height: 1;
 		transition: 0.3s;
 }
 .basic-btn__icon {
-	width: 1.6rem;
-	height: 1.6rem;
-	border-radius: 999px;
-	background: black;
+	width: 1.7rem;
+	height: 1.7rem;
+
 	margin-left: 0.8rem;
 			transition: 0.3s;
 }
@@ -267,7 +279,7 @@ line-height: 1;
 .basic-btn:hover {
 	.basic-btn__text {
 		transform: translateX(1.2rem);
-		transition: 0.5s;
+		transition: 0.5s 0.1s;
 	}
 	.basic-btn__icon {
 		opacity: 0;
@@ -276,8 +288,8 @@ line-height: 1;
 }
 
 .btn--yellow {
-	background: yellow;
-	border-color: yellow;
+	background: $a-yellow;
+	border-color: $a-yellow;
 }
 .btn--bordered {
 	background: transparent;
@@ -285,5 +297,5 @@ line-height: 1;
 }
 .btn--black {
 	background: black;
-	color:yellow;
+	color:$a-yellow;
 }
