@@ -18,6 +18,8 @@ import "./js/core/responsive-iframe"
 
 import "./js/page-specific/refe-page.js"
 
+import "./js/page-specific/home-page.js"
+
 
 //add all underscored js files from inc and parts
 import "../inc/**/_?*.js";

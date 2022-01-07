@@ -26,45 +26,7 @@
       </section>
 
 
-      <section class="section--laskentakohteet-app U-sec-pad">
-          <div class="U_container U_base-pad">
-            <div class="module--laskentakohteet-app -home-preview">
-              <table>
-                <thead class="laskentakohteet-app__header">
-                  <tr>
-                    <th>Company</th>
-                    <th>Contact</th>
-                    <th>Country</th>
-                  </tr>
-                </thead>
-                <tbody class="laskentakohteet-app__body">
-                  <tr>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                  </tr>
-                  <tr>
-                    <td>Centro comercial Moctezuma</td>
-                    <td>Francisco Chang</td>
-                    <td>Mexico</td>
-                  </tr>
-                  <tr>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                  </tr>
 
-                </tbody>
-              </table>
-
-
-              <div class="laskentakohteet-app__footer">
-
-              </div>
-            </div>
-          </div>
-
-      </section>
 
       <section class="section--home-laskenta-count U-sec-pad">
         <div class="U_container U_base-pad">
@@ -82,6 +44,363 @@
           </div>
 
         </div>
+
+      </section>
+
+
+      <section class="section--laskentakohteet-app U-sec-pad">
+          <div class="U_container U_base-pad">
+            <div class="module--laskentakohteet-app -home-preview">
+
+              <table>
+                <thead class="laskentakohteet-app__header">
+                  <tr class="">
+                    <th>
+                      <span>Kohde</span>
+                    </th>
+                    <th><span>Tyyppi</span></th>
+                    <th><span>Bruttoala m<sup>2</sup></span></th>
+
+                      <th><span>Tilavuus m<sup>3</sup></span></th>
+                        <th><span>Tarjous pvm</span></th>
+                              <th><span>Valmistuu</span></th>
+
+                  </tr>
+                </thead>
+
+                <tbody class="laskentakohteet-app__body">
+                  <tr class="Anim-item--list">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">Alfreds Futterkiste</span>
+                      <span class="td__name">Alfreds Futterkiste</span>
+                      <span class="td__xtra-info">Alfreds Futterkiste</span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203; jjd</span>
+                        <span class="td__name">Laajennus,<br>Saneeraus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus</span>
+                        <span class="td__xtra-info">Alfreds Futterkiste</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus</span>
+                        <span class="td__xtra-info">Alfreds Futterkiste</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus</span>
+                        <span class="td__xtra-info">Alfreds Futterkiste</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus</span>
+                        <span class="td__xtra-info">Alfreds Futterkiste</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+
+                  <tr class="Anim-item--list">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">BOTTOM FOR TEST</span>
+                      <span class="td__name">Alfreds Futterkiste</span>
+                      <span class="td__xtra-info">Alfreds Futterkiste</span>
+                      </div>
+
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                  </tr>
+
+                  <tr class="Anim-item--list">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">Alfreds Futterkiste</span>
+                      <span class="td__name">Alfreds Futterkiste</span>
+                      <span class="td__xtra-info">Alfreds Futterkiste</span>
+                      </div>
+
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                  </tr>
+
+
+                  <tr class="Anim-item--list">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">Alfreds Futterkiste</span>
+                      <span class="td__name">Alfreds Futterkiste</span>
+                      <span class="td__xtra-info">Alfreds Futterkiste</span>
+                      </div>
+
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                  </tr>
+                  <tr class="Anim-item--list">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">Alfreds Futterkiste</span>
+                      <span class="td__name">Alfreds Futterkiste</span>
+                      <span class="td__xtra-info">Alfreds Futterkiste</span>
+                      </div>
+
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                  </tr>
+                  <tr class="Anim-item--list">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">Alfreds Futterkiste</span>
+                      <span class="td__name">Alfreds Futterkiste</span>
+                      <span class="td__xtra-info">Alfreds Futterkiste</span>
+                      </div>
+
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203; jjd</span>
+                      <span class="td__name">Laajennus,<br>Saneeraus</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                  </tr>
+                </tbody>
+
+              </table>
+              <div class="table-mask">
+
+              </div>
+
+
+              <div class="laskentakohteet-app__footer">
+
+              </div>
+            </div>
+          </div>
 
       </section>
 
