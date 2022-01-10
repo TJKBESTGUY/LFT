@@ -3,33 +3,16 @@
 
 
 
+.section--laskentakohteet-app {
+  position: relative;
+max-width: 100vw;
+}
+
 .module--laskentakohteet-app {
   border-radius: 10px 10px 0 0;
 
   position: relative;
-  // &:before {
-  //   content: "";
-  //   border-radius: 10px 10px 0 0;
-  //   position: absolute;
-  //   top: -20px;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 20px;
-  //       background: $a-yellow;
-  // }
-}
 
-
-.-home-preview:after {
-  content: "";
-    border-radius: 10px 10px 0 0;
-    position: absolute;
-    top: -20px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: #F0FF31;
 }
 
 
@@ -37,25 +20,9 @@ table {
   margin-bottom: 0;
 }
 
-.-home-preview table {
-  overflow: hidden;
-}
-
-.-home-preview .laskentakohteet-app__header {
-  position: relative;
-  overflow: hidden;
-  z-index: 2;
-  background: $a-yellow;
-}
 
 
 .laskentakohteet-app__header {
-  // width: 100%;
-  // min-height: 100px;
-  // background: $a-yellow;
-  // border-radius: 10px 10px 0 0;
-
-
 
   tr:after {
     content: "";
@@ -72,20 +39,15 @@ table {
   th {
     // background: $a-yellow;
     font-size: 1.4rem;
+    line-height: 22px;
+    cursor:pointer;
 
     &:before {
-      // content: "";
-      // border-radius: 10px 10px 0 0;
-      // position: absolute;
-      // top: -20px;
-      // left: 0;
-      // width: 100%;
-      // height: 100%;
-      // z-index: -1;
-      //     background: $a-yellow;
+
     }
     span {
       display: inline-block;
+        pointer-events: none;
     }
     span:after {
       content: "";
@@ -102,10 +64,7 @@ table {
   }
 }
 
-.sticky--th {
-  position: sticky;
-  top: 10px;
-}
+
 
 .laskentakohteet-app__body {
   width: 100%;
@@ -114,23 +73,10 @@ table {
 
 }
 
-.-home-preview .laskentakohteet-app__body {
-  position: relative;
-  overflow: hidden;
-}
 
-.laskentakohteet-app__body.Anim--move-up {
-  // background:green;
-  .Anim-item--list {
-    transform: translateY(-100%);
-    transition: 0.75s cubic-bezier(.7,0,.3,1);
-  }
-}
 
 .module--laskentakohteet-app {
-  tr td:first-of-type {
-    width: 33.333%;
-  }
+
   th, td {
     padding: 0 20px;
     font-weight: 400;
@@ -180,7 +126,7 @@ line-height: 20px;
   }
 }
 
-tr:after {
+td:after {
   content: "";
   position: absolute;
 
@@ -192,6 +138,53 @@ tr:after {
 
 }
 
+
+
+tbody tr {
+  position: relative;
+}
+
+
+
+//////APP SPECIFIC/////
+
+.sticky--th {
+  position: sticky;
+  top: 10px;
+  z-index: 2;
+}
+
+.module--laskentakohteet-app.-full-app {
+  @media screen and (max-width: 1100px) {
+overflow-x: scroll;
+}
+table {
+  width: 100%;
+  padding-bottom: 90px;
+}
+tr td:first-of-type {
+    min-width: 240px;
+}
+
+  td, th {
+    min-width: 153px;
+  }
+  .td--kohde, .tr--kohde {
+    @media screen and (max-width: 1100px) {
+      position: sticky;
+      left: 0;
+      z-index: 3;
+  }
+  }
+  .td--kohde {
+    background: $a-grey;
+  }
+}
+
+
+/////HOME PREVIES MODS ///
+
+
 .table-mask {
 position: absolute;
 bottom: 0;
@@ -202,18 +195,199 @@ background: white;
 
 }
 
-tbody tr {
+.-home-preview:after {
+  content: "";
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #F0FF31;
+}
+
+.-home-preview .laskentakohteet-app__body {
   position: relative;
+  overflow: hidden;
+  tr td:first-of-type {
+    width: 33.333%;
+  }
 }
 
-tr {
-
-  // animation-name: tr-anim;
-  // animation-duration: 1s;
+.laskentakohteet-app__body.Anim--move-up {
+  // background:green;
+  .Anim-item--list {
+    transform: translateY(-100%);
+    transition: 0.75s cubic-bezier(.7,0,.3,1);
+  }
 }
 
-@keyframes tr-anim {
-  from {transform: none;
-  opacity: 1}
-  to {transform: translateY(-20px);opacity:0;}
+.-home-preview table {
+  overflow: hidden;
+}
+
+.-home-preview .laskentakohteet-app__header {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  background: $a-yellow;
+}
+
+
+
+
+//////FILTER NAVIGATION/////
+
+
+.module--laskentakohteet-navigation {
+  margin-bottom: 4.4rem;
+  .flx-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.laskentakohteet-navigation__filters {
+  ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+  }
+  li {
+    background: transparent;
+    border: none;
+    padding: 0.8rem 2.4rem;
+  line-height: 1;
+  border-radius: 0.4rem;
+  &.S-active__area {
+  background: $a-yellow;
+  }
+  }
+}
+
+
+.S-disabled__area-item {
+  display: none;
+}
+
+// BTN
+
+.filter-buttton__all-results, .filter-buttton__area {
+background: none;
+padding: 0;
+margin: 0;
+border: none;
+cursor: pointer;
+
+}
+
+
+
+
+///////ANIMATIONS/////
+
+.module--laskentakohteet-app.-full-app {
+  transition: opacity 0.3s linear;
+}
+
+.module--laskentakohteet-app.S-animating {
+  transition: 0s;
+  opacity: 0;
+  button {
+    pointer-events: none;
+  }
+}
+
+
+
+
+
+
+
+
+////////SORTABBLE
+
+
+.sortable {
+  border-spacing: 0;
+}
+
+// .sortable tbody tr:nth-child(odd) {
+//   background: #e4e4e4;
+// }
+
+// .sortable td,
+// .sortable th {
+//   padding: 10px;
+// }
+
+// .sortable td:first-child,
+// .sortable th:first-child {
+//   border-top-left-radius: 4px;
+// }
+
+// .sortable td:last-child,
+// .sortable th:last-child {
+//   border-top-right-radius: 4px;
+// }
+
+// .sortable th {
+//   background: #808080;
+//   color: #fff;
+//   cursor: pointer;
+//   font-weight: normal;
+//   text-align: left;
+//   text-transform: capitalize;
+//   vertical-align: baseline;
+//   white-space: nowrap;
+// }
+
+// .sortable th:hover {
+//   color: #000;
+// }
+
+.sortable th:hover::after {
+  color: inherit;
+  font-size: 1.2em;
+  content: ' \025B8';
+  opacity: 1;
+}
+
+.sortable th::after {
+  font-size: 1.2em;
+  color: black;
+  content: ' \025B8';
+    opacity: 0.5;
+}
+
+.sortable th.dir-d {
+  color: #000;
+
+}
+
+.sortable th.dir-d::after {
+  color: inherit;
+  content: ' \025BE';
+    opacity: 1;
+}
+
+.sortable th.dir-u {
+  color: #000;
+}
+
+.sortable th.dir-u::after {
+  color: inherit;
+  content: ' \025B4';
+      opacity: 1;
+}
+
+th.no-sort {
+  pointer-events: none;
+  &:after {
+    font-size: 1.2em;
+    color: black;
+    content: "";
+  }
 }

@@ -20,6 +20,8 @@ import "./js/page-specific/refe-page.js"
 
 import "./js/page-specific/home-page.js"
 
+import "./js/page-specific/kohteet-page.js"
+
 
 //add all underscored js files from inc and parts
 import "../inc/**/_?*.js";
