@@ -21,20 +21,29 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+
+  <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/fonts/suisse-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/fonts/suisse-regular.woff2" as="font" type="font/woff2" crossorigin>
+      <style>
+         @font-face {
+         font-family: "suisse-regular";
+         src: url('<?php echo get_template_directory_uri(); ?>/fonts/suisse-regular.woff2') format('woff2'),
+          url('<?php echo get_template_directory_uri(); ?>/fonts/suisse-regular.woff2') format('woff');
+         font-weight: 400;
+         font-style: normal;
+         }
+
+      </style>
+
+<script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+<script src="https://unpkg.com/split-type"></script>
+<script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.min.js"></script>
+
+
+
 </head>
 
-<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/fonts/suisse-regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/fonts/suisse-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <style>
-       @font-face {
-       font-family: "suisse-regular";
-       src: url('<?php echo get_template_directory_uri(); ?>/fonts/suisse-regular.woff2') format('woff2'),
-        url('<?php echo get_template_directory_uri(); ?>/fonts/suisse-regular.woff2') format('woff');
-       font-weight: 400;
-       font-style: normal;
-       }
 
-    </style>
 
 
 <?php

@@ -16,6 +16,16 @@ import "./js/core/smooth-scroll"
 import "./js/core/icons"
 import "./js/core/responsive-iframe"
 
+
+//////UTILITY
+
+
+import './js/util/stickymate.js';
+
+
+
+////PAGE SPECIFIC
+
 import "./js/page-specific/refe-page.js"
 
 import "./js/page-specific/home-page.js"

@@ -132,6 +132,7 @@ document.addEventListener('click', function (e) {
 
 
 ///////////
+
 document.querySelector(".js--main-sort").click();
 
 

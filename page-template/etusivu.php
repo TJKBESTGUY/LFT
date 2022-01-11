@@ -33,10 +33,10 @@
           <div class="module--laskenta-count">
             <div class="flx-container">
               <div class="cell laskenta-count__number">
-                <span>42</span>
+                <span  class="Anim-item--counter" data-scroll data-type="counter" data-value="42">32</span>
               </div>
               <div class="cell laskenta-count__label">
-                <span class="-sticky-label h3">Laskennassa olevaa kohdetta</span>
+                <span class="h3" data-sticky="from: center, duration: 0">Laskennassa olevaa kohdetta</span>
               </div>
             </div>
 
@@ -411,6 +411,7 @@
 
 
 
+
       <section class="section--laskentakohteet-app U-sec-pad">
           <div class="U_container U_base-pad">
             <div class="module--laskentakohteet-app -full-app">
@@ -766,6 +767,26 @@
       </section>
 
 
+      <section class="section--home-laskenta-count U-sec-pad">
+        <div class="U_container U_base-pad">
+          <div class="module--laskenta-count">
+            <div class="flx-container">
+              <div class="cell laskenta-count__number">
+                  <span class="Anim-item--counter"  data-scroll data-type="counter" data-value="42">42</span>
+              </div>
+              <div class="cell laskenta-count__label">
+                <span class="-sticky-label h3">Laskennassa olevaa kohdetta</span>
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </section>
+
+
 
 
       <section class="section--super-digit">
@@ -793,7 +814,17 @@
           <div class="module--super-digit">
             <div class="flx-container">
               <div class="cell super-digit__number">
-                <span>22 412 735</span>
+                <div data-scroll class="super-digits-mask">
+                  <span class="Anim-item--split -fake-number">
+                      22 412 735
+                    </span>
+                  <span class="Anim-item--split -real-number">
+                    22 412 735
+                    </span>
+
+                </div>
+
+                <!-- <span>22 412 735</span> -->
               </div>
               <div class="cell super-digit__label">
                 <span class="h3">suurin laskettu kohde (m2)</span>
@@ -984,7 +1015,15 @@
           <div class="module--super-digit">
             <div class="flx-container">
               <div class="cell super-digit__number">
-                <span>22 412 735</span>
+                <div data-scroll class="super-digits-mask">
+                  <span class="Anim-item--split -fake-number">
+                      22 412 735
+                    </span>
+                  <span class="Anim-item--split -real-number">
+                    22 412 735
+                    </span>
+
+                </div>
               </div>
               <div class="cell super-digit__label">
                 <span class="">suurin laskettu kohde (m2)</span>

@@ -53,6 +53,7 @@
     "wp-pot-cli": "^1.5.0"
   },
   "dependencies": {
+    "countup.js": "^2.0.8",
     "normalize.css": "^8.0.1"
   }
 }
