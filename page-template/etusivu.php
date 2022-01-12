@@ -1056,10 +1056,33 @@
         <div class="marquee-item type-3">
           <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
         </div>
+
+        <div class="marquee-item type-4">
+          <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
+        </div>
         <!-- <div class="marquee-item type-4">
           <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
         </div> -->
+        <div class="marquee-item type-1">
+          <div class="image-aspect-box">
+            <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div>
+            <div class="marquee-item__overlay">
 
+            </div>
+           </div>
+
+        </div>
+        <div class="marquee-item type-2">
+          <div class="image-aspect-box">
+            <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div>
+            <div class="marquee-item__overlay">
+
+            </div>
+          </div>
+        </div>
+        <div class="marquee-item type-3">
+          <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
+        </div>
 
       </div>
 

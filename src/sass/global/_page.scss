@@ -413,8 +413,11 @@ padding-left: $txt-pad;
 }
 
 .section--super-digit.-dark-mode {
-background: black;
+background: $a-grey;
 color: white;
+.super-digit__label {
+  color: $a-yellow;
+}
 }
 
 
@@ -443,7 +446,7 @@ color: white;
 
     flex-wrap: nowrap;
     width: 100%;
-    // animation: slide-left--image 5s linear infinite;
+    animation: slide-left--image 10s linear infinite;
 }
 
 .marquee__inner  {
@@ -650,6 +653,38 @@ transition: opacity 0.5s cubic-bezier(.7,0,.3,1), transform 0.5s;
 
 }
 
+.-real-number {
+  // transform: translateX(10px);
+}
+.animated  {
+  .-real-number {
+      transform: translateY(0);
+      transition: 1s;
+  }
+
+}
+
+
+// .-real-number:after {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: black;
+//   opacity: 1;
+// }
+
+.animated {
+  .-real-number:after {
+    content: "";
+    opacity: 1;
+    transform: translateX(100%);
+    transition: 1s;
+  }
+}
+
 .-fake-number .char {
   transform: translateY(0%);
   transition: transform 0.5s, opacity 0s;
@@ -663,12 +698,38 @@ transition: opacity 0.5s cubic-bezier(.7,0,.3,1), transform 0.5s;
 
   transform: translateX(110%) skew(-4deg);
 
-    transform: translateX(20px);
+    // transform: translateY(16px);
     // transform: translateY(110%);
 
-  transition: transform 0.5s, opacity 0s;
+    transform: translateX(16px) rotateY(-33deg);
+
+    transform: rotateY(45deg) translateZ(40px);
+
+    // transform: none;
+
+  transition: transform 0.75s, opacity 0s;
   opacity: 1;
     opacity: 0;
+}
+
+.-real-number .char:after {
+    // content: "";
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // height: 100%;
+    // background: black;
+    // opacity: 1;
+}
+
+.animated {
+  .-real-number .char:after {
+  transform: translateX(100%);
+  transition: transform 0.5s, opacity 0.5s;
+  transition-delay: inherit;
+  opacity: 1;
+  }
 }
 
 .animated {
@@ -693,6 +754,8 @@ transition: opacity 0.5s cubic-bezier(.7,0,.3,1), transform 0.5s;
   transition-delay:(#{$i*0.12s});
 }
 }
+
+
 
 
 ///////ANIMATIONS//////
