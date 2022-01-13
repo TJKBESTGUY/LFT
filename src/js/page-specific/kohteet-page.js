@@ -1,5 +1,9 @@
 
 
+///////TEMPALTE WRAP STARTS//////////
+if (document.body.classList.contains('page-template-laskentakohteet')) {
+console.log("INIT LASKENTAKOHTEET");
+
 /**
  * sortable 1.0
  *
@@ -571,4 +575,9 @@ scroll.animateScroll(s_anchor, toggle, s_options);
 }, false);
 
 
+}
+
+
+
+///////TEMPALTE WRAP ENDS//////////
 }

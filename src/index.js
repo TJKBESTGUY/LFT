@@ -21,6 +21,7 @@ import "./js/core/responsive-iframe"
 
 
 import './js/util/stickymate.js';
+import './js/util/lazyloading.js';
 
 
 

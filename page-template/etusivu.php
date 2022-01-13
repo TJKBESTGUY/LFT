@@ -846,11 +846,20 @@
 
 
 
-      <section class="section--basic U-sec-pad">
+      <section class="section--basic U-sec-pad" data-scroll>
         <div class="U_container U_base-pad">
           <div class="module--full-image">
-            <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
-            <div class="full-image__overlay">
+            <div class="image-aspect-box">
+              <div class="image-aspect-box_inner -anim" data-animation="transform: {-100vh: translateY(150px) scale(1.2),100vh: translateY(-150px) scale(1)}">
+              <picture>
+                <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/3.jpg">
+                  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/3.jpg">
+                    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/3.jpg" alt="" src="">
+                </picture>
+
+            </div>
+          </div>
+            <div class="full-image__overlay Anim-item">
               <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
               <div class="capsule-wrap">
                 <button class="basic-btn btn--bordered"type="button" name="button"><span class="basic-btn__text">Lue lisää</span> <span class="basic-btn__icon">
@@ -866,7 +875,16 @@
       <section class="section--basic U-sec-pad">
         <div class="U_container U_base-pad">
           <div class="module--full-image -left-nudge">
-            <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
+            <div class="image-aspect-box Anim-item--img" data-scroll>
+  <div class="image-aspect-box_inner">
+  <picture>
+    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+    </picture>
+
+</div>
+</div>
         </div>
           </div>
 
@@ -876,7 +894,16 @@
       <section class="section--basic U-sec-pad">
         <div class="U_container U_base-pad">
           <div class="module--full-image -right-nudge">
-            <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
+            <div class="image-aspect-box">
+  <div class="image-aspect-box_inner Anim-item--img" data-scroll>
+  <picture>
+    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+    </picture>
+
+</div>
+</div>
         </div>
           </div>
 
@@ -899,7 +926,16 @@
 
             <div class="cell">
               <div class="cell_img-content">
-                <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
+                <div class="image-aspect-box">
+  <div class="image-aspect-box_inner Anim-item--img" data-scroll>
+  <picture>
+    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+    </picture>
+
+</div>
+</div>
               </div>
             </div>
           </div>
@@ -933,7 +969,16 @@
                 <div class="flx-container">
                   <div class="cell">
                     <div class="cell_img-content">
-                      <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
+                      <div class="image-aspect-box">
+  <div class="image-aspect-box_inner Anim-item--img" data-scroll>
+  <picture>
+    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+    </picture>
+
+</div>
+</div>
                     </div>
                   </div>
 
@@ -970,7 +1015,16 @@
 
                   <div class="cell">
                     <div class="cell_img-content">
-                      <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
+                      <div class="image-aspect-box">
+  <div class="image-aspect-box_inner Anim-item--img" data-scroll>
+  <picture>
+    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+    </picture>
+
+</div>
+</div>
                     </div>
                   </div>
 
@@ -1037,7 +1091,14 @@
       <div class="marquee__inner" aria-hidden="true">
         <div class="marquee-item type-1">
           <div class="image-aspect-box">
-            <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div>
+    <div class="image-aspect-box_inner">
+<picture>
+  <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/1.jpg">
+    <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/1.jpg">
+      <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+  </picture>
+
+</div>
             <div class="marquee-item__overlay">
 
             </div>
@@ -1046,7 +1107,14 @@
         </div>
         <div class="marquee-item type-2">
           <div class="image-aspect-box">
-            <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div>
+    <div class="image-aspect-box_inner">
+<picture>
+  <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/2.jpg">
+    <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+      <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+  </picture>
+
+</div>
             <div class="marquee-item__overlay">
 
             </div>
@@ -1054,18 +1122,47 @@
         </div>
 
         <div class="marquee-item type-3">
-          <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
+          <div class="image-aspect-box">
+  <div class="image-aspect-box_inner">
+  <picture>
+    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/3.jpg">
+      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+    </picture>
+
+</div>
+<div class="marquee-item__overlay">
+
+</div>
+</div>
         </div>
 
         <div class="marquee-item type-4">
-          <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
+          <div class="image-aspect-box">
+  <div class="image-aspect-box_inner">
+  <picture>
+    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/4.jpg">
+      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+    </picture>
+
+</div>
+<div class="marquee-item__overlay">
+
+</div>
+</div>
         </div>
-        <!-- <div class="marquee-item type-4">
-          <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
-        </div> -->
+
         <div class="marquee-item type-1">
           <div class="image-aspect-box">
-            <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div>
+    <div class="image-aspect-box_inner">
+<picture>
+  <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/1.jpg">
+    <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+      <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+  </picture>
+
+</div>
             <div class="marquee-item__overlay">
 
             </div>
@@ -1074,15 +1171,39 @@
         </div>
         <div class="marquee-item type-2">
           <div class="image-aspect-box">
-            <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div>
+    <div class="image-aspect-box_inner">
+<picture>
+  <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/2.jpg">
+    <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+      <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+  </picture>
+
+</div>
             <div class="marquee-item__overlay">
 
             </div>
           </div>
         </div>
+
         <div class="marquee-item type-3">
-          <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
+          <div class="image-aspect-box">
+  <div class="image-aspect-box_inner">
+  <picture>
+    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/3.jpg">
+      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+    </picture>
+
+</div>
+<div class="marquee-item__overlay">
+
+</div>
+</div>
         </div>
+
+
+
+
 
       </div>
 
@@ -1096,6 +1217,16 @@
         <div class="module--bottom-cta">
           <div class="flx-container">
             <div class="cell bottom-cta__image">
+              <div class="image-aspect-box">
+                <div class="image-aspect-box_inner -anim" data-animation="transform: {-100vh: translateY(150px) scale(1.5),100vh: translateY(-150px) scale(1)}">
+                <picture>
+                  <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+                    <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+                      <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+                  </picture>
+
+              </div>
+            </div>
 
             </div>
             <div class="cell bottom-cta__content">

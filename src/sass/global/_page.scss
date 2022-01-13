@@ -175,7 +175,7 @@ padding-right: 16px;
     width: 100%;
     height: 100%;
     display: block;
-    background: green;
+    background: #fcfcfc;
 }
 
 .image-aspect-box_inner {
@@ -446,7 +446,7 @@ color: white;
 
     flex-wrap: nowrap;
     width: 100%;
-    animation: slide-left--image 10s linear infinite;
+    animation: slide-left--image 12s linear infinite;
 }
 
 .marquee__inner  {
@@ -458,32 +458,42 @@ color: white;
     .image-aspect-box {
   padding-top: 50%;
     }
+    img {
+      // object-fit: initial;
+      // height: auto;
+    }
   }
+
+// $overlay-height: 40px;
 
 .type-1 {
   min-width: 35%;
   .image-aspect-box {
-padding-top: 40%;
+padding-top: 56%;
+padding-top: 75%;
   }
 
 }
 .type-2 {
-  min-width: 40%;
+  min-width: 25%;
   .image-aspect-box {
-padding-top: 50%;
+padding: 0;
+height: calc(100% - 40px);
+  }
+    }
+.type-3 {
+  min-width: 32.5%;
+  .image-aspect-box {
+    padding: 0;
+    height: calc(100%);
   }
 
 }
-.type-3 {
-  min-width: 25%;
-  .image-aspect-box {
-padding-top: 60%;
-  }
-    }
   .type-4 {
-    min-width: 50%;
+    min-width: 30%;
     .image-aspect-box {
-  padding-top: 60%;
+      padding: 0;
+      height: calc(100% - 80px);
     }
 }
 
@@ -494,11 +504,11 @@ padding-top: 60%;
   position: absolute;
   left: 0;
   bottom: 0;
-  padding: 40px;
+  padding: 10px;
   background: $a-yellow;
   width: 30%;
   max-width: 50%;
-  min-height: 100px;
+  min-height: 40px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -512,7 +522,7 @@ padding-top: 60%;
 
     to {
 
-        transform: translateX(-150%)
+        transform: translateX(-122.5%);
     }
 }
 
@@ -618,6 +628,11 @@ transition: opacity 0.5s cubic-bezier(.7,0,.3,1), transform 0.5s;
 .bottom-cta__image {
   background: grey;
   min-height: 60vh;
+.image-aspect-box {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
 }
 
 .bottom-cta__content {
@@ -634,6 +649,7 @@ transition: opacity 0.5s cubic-bezier(.7,0,.3,1), transform 0.5s;
 
 
 
+//////ANIMATIONSSS
 
 .Anim-item--counter {
   // transform: translateY(40px);
@@ -770,4 +786,72 @@ transition: opacity 0.5s cubic-bezier(.7,0,.3,1), transform 0.5s;
 position: absolute;
 top:0;
 left: 0;
+}
+
+
+// .Anim-item--img {
+//     img {
+//   transform: scale(1.2);
+//     // transform: translateY(50%);
+//   }
+//   //   &:after {
+//   //   content: "";
+//   //   position: absolute;
+//   //   left: 0;
+//   //   top:0;
+//   //   width: 100%;
+//   //   height: 100%;
+//   //   background: white;
+//   // }
+// }
+
+.Anim-item--img.animated {
+  img {
+    transform: none;
+    transition: 0.75s;
+  }
+  // &:after {
+  //   content: "";
+  //   position: absolute;
+  //   left: 0;
+  //   top:0;
+  //   width: 100%;
+  //   height: 100%;
+  //   transform: translateY(-100%);
+  //   transition: 0.75s;
+  // }
+}
+
+
+.image-aspect-box_inner.-anim {
+  height: calc(100% + 300px);
+  top:-150px;
+}
+
+.full-image__overlay.Anim-item {
+  overflow: hidden;
+}
+
+.full-image__overlay.Anim-item:after {
+content: "";
+position: absolute;
+left: 0;
+top:0;
+width: 100%;
+height: 100%;
+  background: $a-grey;
+}
+
+.animated {
+  .full-image__overlay.Anim-item:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+
+  transform: translateY(-100%);
+  transition: 0.75s;
+  }
 }
