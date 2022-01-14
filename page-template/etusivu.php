@@ -1011,8 +1011,6 @@
             </div>
 
                 <div class="flx-container">
-
-
                   <div class="cell">
                     <div class="cell_img-content">
                       <div class="image-aspect-box">
@@ -1093,9 +1091,9 @@
           <div class="image-aspect-box">
     <div class="image-aspect-box_inner">
 <picture>
-  <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/1.jpg">
-    <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/1.jpg">
-      <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+  <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/s1.jpg">
+    <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/s1.jpg">
+      <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/s1.jpg" alt="" src="">
   </picture>
 
 </div>
@@ -1109,9 +1107,9 @@
           <div class="image-aspect-box">
     <div class="image-aspect-box_inner">
 <picture>
-  <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/2.jpg">
-    <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-      <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+  <source media="(min-width:650px)" srcset="<?php echo get_template_directory_uri(); ?>/images/s2.jpg">
+    <source media="(min-width:465px)" srcset="<?php echo get_template_directory_uri(); ?>/images/s2.jpg">
+      <img class="lazy-anim lazyload" src="<?php echo get_template_directory_uri(); ?>/images/s2.jpg" alt="" src="">
   </picture>
 
 </div>
@@ -1125,9 +1123,9 @@
           <div class="image-aspect-box">
   <div class="image-aspect-box_inner">
   <picture>
-    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/3.jpg">
-      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+    <source media="(min-width:650px)" srcset="<?php echo get_template_directory_uri(); ?>/images/s3.jpg">
+      <source media="(min-width:465px)" srcset="<?php echo get_template_directory_uri(); ?>/images/s3.jpg">
+        <img class="lazy-anim lazyload" src="<?php echo get_template_directory_uri(); ?>/images/s3.jpg" alt="" src="">
     </picture>
 
 </div>
@@ -1141,9 +1139,9 @@
           <div class="image-aspect-box">
   <div class="image-aspect-box_inner">
   <picture>
-    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/4.jpg">
-      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+    <source media="(min-width:650px)" srcset="<?php echo get_template_directory_uri(); ?>/images/s4.jpg">
+      <source media="(min-width:465px)" srcset="<?php echo get_template_directory_uri(); ?>/images/s4.jpg">
+        <img class="lazy-anim lazyload" src="<?php echo get_template_directory_uri(); ?>/images/s4.jpg" alt="" src="">
     </picture>
 
 </div>
@@ -1153,13 +1151,16 @@
 </div>
         </div>
 
+
+
+
         <div class="marquee-item type-1">
           <div class="image-aspect-box">
     <div class="image-aspect-box_inner">
 <picture>
-  <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/1.jpg">
-    <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-      <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+  <source media="(min-width:650px)" srcset="<?php echo get_template_directory_uri(); ?>/images/s1.jpg">
+    <source media="(min-width:465px)" srcset="<?php echo get_template_directory_uri(); ?>/images/s1.jpg">
+      <img class="lazy-anim lazyload" src="<?php echo get_template_directory_uri(); ?>/images/s1.jpg" alt="" src="">
   </picture>
 
 </div>
@@ -1173,9 +1174,9 @@
           <div class="image-aspect-box">
     <div class="image-aspect-box_inner">
 <picture>
-  <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/2.jpg">
-    <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-      <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+  <source media="(min-width:650px)" srcset="<?php echo get_template_directory_uri(); ?>/images/s2.jpg">
+    <source media="(min-width:465px)" srcset="<?php echo get_template_directory_uri(); ?>/images/s2.jpg">
+      <img class="lazy-anim lazyload" src="<?php echo get_template_directory_uri(); ?>/images/s2.jpg" alt="" src="">
   </picture>
 
 </div>
@@ -1189,9 +1190,9 @@
           <div class="image-aspect-box">
   <div class="image-aspect-box_inner">
   <picture>
-    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/3.jpg">
-      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+    <source media="(min-width:650px)" srcset="<?php echo get_template_directory_uri(); ?>/images/s3.jpg">
+      <source media="(min-width:465px)" srcset="<?php echo get_template_directory_uri(); ?>/images/s3.jpg">
+        <img class="lazy-anim lazyload" src="<?php echo get_template_directory_uri(); ?>/images/s3.jpg" alt="" src="">
     </picture>
 
 </div>
@@ -1200,6 +1201,24 @@
 </div>
 </div>
         </div>
+
+        <div class="marquee-item type-4">
+          <div class="image-aspect-box">
+  <div class="image-aspect-box_inner">
+  <picture>
+    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/s4.jpg">
+      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/s4.jpg">
+        <img class="lazy-anim lazyload" src="<?php echo get_template_directory_uri(); ?>/images/s4.jpg" alt="" src="">
+    </picture>
+
+</div>
+<div class="marquee-item__overlay">
+
+</div>
+</div>
+        </div>
+
+
 
 
 

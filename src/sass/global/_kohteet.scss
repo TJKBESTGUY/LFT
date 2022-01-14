@@ -393,3 +393,92 @@ th.no-sort {
     content: "";
   }
 }
+
+
+
+
+/////AREA CONTACT////
+
+
+.module--area-contact {
+  .flx-container {
+    display: flex;
+  }
+}
+
+.area-contact__map {
+  padding-right: 80px;
+  width: 50%;
+  .cls-2 {
+    transition: 0.3s;
+  }
+
+  .cls-2.S-active__area {
+    fill: yellow;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+}
+
+.sticky-map {
+  position: sticky;
+  top: 40px;
+}
+
+.area-contact__persons {
+    flex-grow: 2;
+}
+
+.area-contact-person {
+padding: 40px 0;
+border-top: solid 1px $a-text-grey;
+  .flx-container {
+    display: flex;
+  }
+}
+
+.area-contact-person:last-of-type {
+  border-bottom: solid 1px $a-text-grey;
+}
+
+.area-contact-person__image {
+  width: 260px;
+  .image-aspect-box {
+    padding-top: 100%;
+  }
+}
+
+.area-contact-person__content {
+  width: calc(100% - 200px);
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 40px;
+  h4 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+    line-height: 1;
+  }
+  p.strong {
+
+  }
+}
+
+////MOUSE ACTIONNS FOR AREA
+
+.area-contact-person .-anim {
+  transition: 0.3s;
+}
+
+
+  .area-contact-person.S-disabled__area .-anim {
+    opacity: 0.5;
+
+
+  .area-contact-person.S-active__area .-anim {
+    opacity: 1;
+  }
+}
