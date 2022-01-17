@@ -40,6 +40,7 @@ table {
     // background: $a-yellow;
     font-size: 1.4rem;
     line-height: 22px;
+        font-weight: 500;
     cursor:pointer;
 
     &:before {
@@ -79,7 +80,11 @@ table {
 
   th, td {
     padding: 0 20px;
-    font-weight: 400;
+
+}
+td {
+
+  font-weight: 400;
 }
 th {
   padding-top: 0;
@@ -282,8 +287,11 @@ padding: 0;
 margin: 0;
 border: none;
 cursor: pointer;
-
 }
+.filter-buttton__all-results {
+  font-weight: 500;
+}
+
 
 
 

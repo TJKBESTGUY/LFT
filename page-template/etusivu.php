@@ -33,7 +33,7 @@
           <div class="module--laskenta-count">
             <div class="flx-container">
               <div class="cell laskenta-count__number">
-                <span  class="Anim-item--counter" data-scroll data-type="counter" data-value="42">32</span>
+                <span  class="Anim-item--counter -bold-txt" data-scroll data-type="counter" data-value="42">32</span>
               </div>
               <div class="cell laskenta-count__label">
                 <span class="h3" data-sticky="from: center, duration: 0">Laskennassa olevaa kohdetta</span>
@@ -772,7 +772,7 @@
           <div class="module--laskenta-count">
             <div class="flx-container">
               <div class="cell laskenta-count__number">
-                  <span class="Anim-item--counter"  data-scroll data-type="counter" data-value="42">42</span>
+                  <span class="Anim-item--counter -bold-txt"  data-scroll data-type="counter" data-value="42">42</span>
               </div>
               <div class="cell laskenta-count__label">
                 <span class="-sticky-label h3">Laskennassa olevaa kohdetta</span>
@@ -794,7 +794,7 @@
           <div class="module--super-digit">
             <div class="flx-container">
               <div class="cell super-digit__number">
-                <span class="">204 500</span>
+                <span class="-bold-txt">204 500</span>
               </div>
               <div class="cell super-digit__label">
                 <span class="h3">suurin laskettu kohde (m2)</span>
@@ -815,10 +815,10 @@
             <div class="flx-container">
               <div class="cell super-digit__number">
                 <div data-scroll class="super-digits-mask">
-                  <span class="Anim-item--split -fake-number">
+                  <span class="Anim-item--split -fake-number -bold-txt">
                       22 412 735
                     </span>
-                  <span class="Anim-item--split -real-number">
+                  <span class="Anim-item--split -real-number -bold-txt">
                     22 412 735
                     </span>
 
@@ -919,7 +919,9 @@
               <h3>Jotakin</h3>
               <p class="cell-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
               <div class="capsule-wrap">
-                <button class="basic-btn btn--yellow"type="button" name="button">Lue lisää</button>
+                <button class="basic-btn btn--yellow"type="button" name="button"><span class="basic-btn__text">Lue lisää</span> <span class="basic-btn__icon">
+                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
+                </span> </button>
               </div>
             </div>
               </div>
@@ -955,7 +957,9 @@
 
               <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
               <div class="capsule-wrap">
-                <button class="basic-btn btn--yellow"type="button" name="button">Lue lisää</button>
+                <button class="basic-btn btn--yellow"type="button" name="button"><span class="basic-btn__text">Lue lisää</span> <span class="basic-btn__icon">
+                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
+                </span> </button>
               </div>
             </div>
               </div>
@@ -1068,10 +1072,10 @@
             <div class="flx-container">
               <div class="cell super-digit__number">
                 <div data-scroll class="super-digits-mask">
-                  <span class="Anim-item--split -fake-number">
+                  <span class="Anim-item--split -fake-number -bold-txt">
                       22 412 735
                     </span>
-                  <span class="Anim-item--split -real-number">
+                  <span class="Anim-item--split -real-number -bold-txt">
                     22 412 735
                     </span>
 
@@ -1253,7 +1257,10 @@
               <h3>Kiinnostuitko?</h3>
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
               <div class="capsule-wrap">
-                <button class="basic-btn btn--black btn--wide"type="button" name="button">Lue lisää</button>
+              
+                <button class="basic-btn btn--black btn--wide" type="button" name="button"><span class="basic-btn__text">Lue lisää</span> <span class="basic-btn__icon">
+                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
+                </span> </button>
               </div>
               </div>
             </div>

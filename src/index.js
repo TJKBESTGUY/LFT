@@ -12,7 +12,7 @@ import "./js/core/objectfitFallback"
 import "./js/core/sidebar"
 import "./js/core/navigation"
 // import "./js/core/panel-left"
-import "./js/core/smooth-scroll"
+// import "./js/core/smooth-scroll"
 import "./js/core/icons"
 import "./js/core/responsive-iframe"
 
@@ -22,7 +22,10 @@ import "./js/core/responsive-iframe"
 
 import './js/util/stickymate.js';
 import './js/util/lazyloading.js';
+import './js/util/headroom.js';
 
+//navigation
+import './js/util/navigation.js';
 
 
 ////PAGE SPECIFIC
