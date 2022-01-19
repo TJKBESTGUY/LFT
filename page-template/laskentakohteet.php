@@ -8,6 +8,25 @@
  		<main id="main" class="site-main" role="main">
 
 
+    <section class="section--laskentakohteet-header U-sec-pad">
+      <div class="U_container U_base-pad">
+        <div class="module--laskenta-count--on-page">
+          <div class="flx-container">
+            <div class="cell laskenta-count__number">
+                <span class="Anim-item--counter -bold-txt"  data-scroll data-type="counter" data-value="42">32</span>
+            </div>
+            <div class="cell laskenta-count__label">
+              <span class="h2">Määrälaskennassa<br>olevaa kohdetta</span>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </section>
+
+
       <section class="section--laskentakohteet-app U-sec-pad">
           <div class="U_container U_base-pad">
 
@@ -22,7 +41,7 @@
                     <button class="filter-buttton__area js--area-filter" type="button" name="button" data-area="paakaupunki">Pääkaupunkiseutu</button>
                 </li>
                 <li>
-                    <button class="filter-buttton__area js--area-filter" type="button" name="button">Etelä-Suomi</button>
+                    <button class="filter-buttton__area js--area-filter" type="button" name="button" data-area="etela">Etelä-Suomi</button>
                 </li>
                 <li>
                   <button class="filter-buttton__area js--area-filter" type="button" name="button">Itä-Suomi</button>
@@ -35,13 +54,58 @@
 
 
               <div class="laskentakohteet-navigation__cta">
-                <button class="basic-btn btn--black btn--wide" type="button" name="button">Pyydä tarjous</button>
+                <button class="basic-btn btn--black" type="button" name="button">Pyydä tarjous</button>
               </div>
 
 
 
             </div>
                 </div>
+
+                <div class="module--laskentakohteet-area-personel S-disabled">
+                  <div class="label">
+                    Alueen yhteyshenkilö:
+                  </div>
+                  <div class="contact-person" data-area="paakaupunki">
+                    <div class="flx-container">
+                      <div class="contact-person__img">
+                        <div class="image-aspect-box">
+                          <div class="image-aspect-box_inner Anim-item--img" data-scroll>
+                            <picture>
+                              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+                                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+                                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+                                </picture>
+
+                              </div>
+                            </div>
+                      </div>
+                      <div class="contact-person__info">
+                        Jere Kuivalainen | 050 467 0910 | jere.kuivalainen@areite.fi
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contact-person" data-area="etela">
+                    <div class="flx-container">
+                      <div class="contact-person__img">
+                        <div class="image-aspect-box">
+                          <div class="image-aspect-box_inner Anim-item--img" data-scroll>
+                            <picture>
+                              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+                                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+                                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+                                </picture>
+
+                              </div>
+                            </div>
+                      </div>
+                      <div class="contact-person__info">
+                        Etelä Suomi | 050 467 0910 | jere.kuivalainen@areite.fi
+                      </div>
+                    </div>
+                  </div>
+
+                    </div>
 
 
             <div class="module--laskentakohteet-app -full-app">
@@ -119,7 +183,7 @@
                   </tr>
 
 
-                  <tr class="Anim-item--list" data-area="">
+                  <tr class="Anim-item--list" data-area="etela">
                     <td class="td--kohde">
                       <div class="flx-container">
                         <span class="td__label">BOTTOM FOR TEST</span>
@@ -386,13 +450,31 @@
 
               </table>
 
+            </div>
+          </div>
+
+      </section>
 
 
-              <div class="laskentakohteet-app__footer">
-
+      <section class="section--basic U-sec-pad">
+        <div class="U_container U_base-pad">
+          <div class="module--heading_txt">
+            <div class="heading-content">
+                <div class="heading">
+              <h3>Kiinnostuitko jostain kohteesta?<br>Pyydä tarjous lomakkeen kautta tai ottamalla yhteyttä alueen yhteyshenkilöön.</h3>
+                </div>
+                <div class="capsule-wrap">
+                <button class="basic-btn btn--black" type="button" name="button"><span class="basic-btn__text">Pyydä tarjous</span> <span class="basic-btn__icon">
+                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"></path></svg>
+                </span> </button>
+                <button class="basic-btn btn--yellow" type="button" name="button"><span class="basic-btn__text">Näytä yhteyshenkilöt</span> <span class="basic-btn__icon">
+                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"></path></svg>
+                </span> </button>
               </div>
             </div>
           </div>
+
+        </div>
 
       </section>
 
@@ -431,7 +513,7 @@
                             </div>
                       </div>
                       <div class="cell area-contact-person__content">
-                        <h4 class="content__top">Pääkaupunkiseutu</h4>
+                        <h5 class="content__top">Pääkaupunkiseutu</h5>
                         <div class="content__bottom">
                           <p class="strong">Nimi</p>
                           <p>aluepäällikkö</p>
@@ -459,7 +541,7 @@
                             </div>
                       </div>
                       <div class="cell area-contact-person__content">
-                        <h4 class="content__top">Pääkaupunkiseutu</h4>
+                        <h5 class="content__top">Pääkaupunkiseutu</h5>
                         <div class="content__bottom">
                           <p class="strong">Nimi</p>
                           <p>aluepäällikkö</p>
@@ -487,7 +569,7 @@
                             </div>
                       </div>
                       <div class="cell area-contact-person__content">
-                        <h4 class="content__top">Pääkaupunkiseutu</h4>
+                        <h5 class="content__top">Pääkaupunkiseutu</h5>
                         <div class="content__bottom">
                           <p class="strong">Nimi</p>
                           <p>aluepäällikkö</p>
@@ -507,250 +589,11 @@
       </section>
 
 
+<?php locate_template('src/parts/global/bottom-marquee.php', true, true); ?>
 
+<?php locate_template('src/parts/global/bottom-cta.php', true, true); ?>
 
 
-
-
-
-
-      <section class="section--basic U-sec-pad">
-        <div class="U_container U_base-pad">
-          <div class="module--full-image">
-            <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
-            <div class="full-image__overlay">
-              <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-              <div class="capsule-wrap">
-                <button class="basic-btn btn--bordered"type="button" name="button"><span class="basic-btn__text">Lue lisää</span> <span class="basic-btn__icon">
-                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
-                </span> </button>
-              </div>
-            </div>
-        </div>
-          </div>
-
-      </section>
-
-      <section class="section--basic U-sec-pad">
-        <div class="U_container U_base-pad">
-          <div class="module--full-image -left-nudge">
-            <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
-        </div>
-          </div>
-
-      </section>
-
-
-      <section class="section--basic U-sec-pad">
-        <div class="U_container U_base-pad">
-          <div class="module--full-image -right-nudge">
-            <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
-        </div>
-          </div>
-
-      </section>
-
-
-      <section class="section--basic U-sec-pad">
-        <div class="U_container U_base-pad">
-          <div class="module--split-content">
-                <div class="flx-container">
-            <div class="cell">
-              <div class="cell_txt-content">
-              <h3>Jotakin</h3>
-              <p class="cell-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-              <div class="capsule-wrap">
-                <button class="basic-btn btn--yellow"type="button" name="button">Lue lisää</button>
-              </div>
-            </div>
-              </div>
-
-            <div class="cell">
-              <div class="cell_img-content">
-                <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
-              </div>
-            </div>
-          </div>
-          </div>
-
-
-          <div class="module--split-content -mosaic-split">
-                <div class="flx-container">
-                  <div class="cell">
-                    <div class="cell_img-content">
-                        <h3>Jotakin Tästä</h3>
-                      <div class="image-aspect-box -wide-aspect"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
-                    </div>
-                  </div>
-            <div class="cell">
-              <div class="cell_txt-content">
-
-              <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-              <div class="capsule-wrap">
-                <button class="basic-btn btn--yellow"type="button" name="button">Lue lisää</button>
-              </div>
-            </div>
-              </div>
-
-
-          </div>
-          </div>
-
-
-          <div class="module--split-content">
-                <div class="flx-container">
-                  <div class="cell">
-                    <div class="cell_img-content">
-                      <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
-                    </div>
-                  </div>
-
-
-            <div class="cell">
-              <div class="cell_txt-content">
-              <h3>Jotakin</h3>
-              <p class="cell-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-            </div>
-              </div>
-
-          </div>
-          </div>
-
-        </div>
-
-      </section>
-
-
-
-      <section class="section--basic U-sec-pad">
-        <div class="U_container U_base-pad">
-          <div class="module--split-content">
-            <div class="heading-content">
-            <div class="heading">
-                <h2>luotettava määräluettelo, laadukkaan rakentamisen perusta</h2>
-            </div>
-
-              <p class="ingr">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-            </div>
-
-                <div class="flx-container">
-
-
-                  <div class="cell">
-                    <div class="cell_img-content">
-                      <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
-                    </div>
-                  </div>
-
-
-            <div class="cell">
-              <div class="cell_txt-content">
-              <h3>Jotakin</h3>
-              <p class="cell-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-            </div>
-              </div>
-
-
-
-
-          </div>
-          </div>
-
-        </div>
-
-      </section>
-
-
-      <section class="section--basic U-sec-pad">
-        <div class="U_container U_base-pad">
-          <div class="module--heading_txt">
-            <div class="heading-content">
-                <div class="heading">
-              <h2>luotettava määräluettelo, laadukkaan rakentamisen perusta</h2>
-                </div>
-              <p class="ingr">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-            </div>
-          </div>
-
-        </div>
-
-      </section>
-
-
-
-      <section class="section--refe-preview U-sec-pad">
-        <div class="U_container U_base-pad">
-          <div class="module--super-digit">
-            <div class="flx-container">
-              <div class="cell super-digit__number">
-                <span>22 412 735</span>
-              </div>
-              <div class="cell super-digit__label">
-                <span class="">suurin laskettu kohde (m2)</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="module--image-scroller">
-          <div class="image-scroller" style="position:relative">
-   <div class="marquee marq--right">
-      <div class="marquee__inner" aria-hidden="true">
-        <div class="marquee-item type-1">
-          <div class="image-aspect-box">
-            <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div>
-            <div class="marquee-item__overlay">
-
-            </div>
-           </div>
-
-        </div>
-        <div class="marquee-item type-2">
-          <div class="image-aspect-box">
-            <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div>
-            <div class="marquee-item__overlay">
-
-            </div>
-          </div>
-        </div>
-
-        <div class="marquee-item type-3">
-          <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
-        </div>
-        <!-- <div class="marquee-item type-4">
-          <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
-        </div> -->
-
-
-      </div>
-
-   </div>
-</div>
-        </div>
-
-      </section>
-
-      <section class="section--bottom-cta U-sec-pad">
-        <div class="module--bottom-cta">
-          <div class="flx-container">
-            <div class="cell bottom-cta__image">
-
-            </div>
-            <div class="cell bottom-cta__content">
-              <div class="content-wrap U_base-pad--right-only">
-              <h3>Kiinnostuitko?</h3>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-              <div class="capsule-wrap">
-                <button class="basic-btn btn--black btn--wide"type="button" name="button">Lue lisää</button>
-              </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-
-
-      </section>
 
 
     </main><!-- #main -->

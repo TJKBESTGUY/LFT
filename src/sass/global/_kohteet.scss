@@ -15,6 +15,10 @@ max-width: 100vw;
 
 }
 
+.-custom-pad {
+  padding-top: 90px;
+}
+
 
 table {
   margin-bottom: 0;
@@ -26,7 +30,7 @@ table {
 
   tr:after {
     content: "";
-    border-radius: 10px 10px 0 0;
+    border-radius: 8px 8px 0 0;
     position: absolute;
     top: -20px;
     left: 0;
@@ -144,9 +148,32 @@ td:after {
 }
 
 
-
 tbody tr {
   position: relative;
+}
+
+
+.laskentakohteet-app__footer {
+
+  width: 100%;
+  background: $a-black;
+      padding: 40px 20px;
+  transform: translateY(-101px);
+  margin-bottom: -101px;
+  border-top: solid 1px #B0B0B0;
+      border-radius: 0 0 8px 8px;
+      color:white;
+  .txt {
+    span {
+      color:$a-yellow;
+      font-weight: 500;
+    }
+
+  }
+  .capsule-wrap {
+    margin-top: 20px;
+  }
+
 }
 
 
@@ -202,7 +229,7 @@ background: white;
 
 .-home-preview:after {
   content: "";
-    border-radius: 10px 10px 0 0;
+    border-radius: 8px 8px 0 0;
     position: absolute;
     top: -20px;
     left: 0;
@@ -287,24 +314,66 @@ padding: 0;
 margin: 0;
 border: none;
 cursor: pointer;
+font-size: 1.6rem;
 }
 .filter-buttton__all-results {
   font-weight: 500;
 }
 
+////NAV CONTACT PERSONS////
 
+.module--laskentakohteet-area-personel {
+  margin-bottom: 50px;
+  padding-left: 20px;
+  margin-top: -20px;
+  padding-top: 20px;
+    font-size: 1.6rem;
+  border-top: solid 1px $a-text-grey;
+  .label {
+    font-weight: 500;
+    margin-bottom: 10px;
+
+  }
+
+  .flx-container {
+    display: flex;
+    align-items: center;
+  }
+  .contact-person__img {
+    width: 60px;
+    overflow: hidden;
+    border-radius: 999px;
+    margin-right: 20px;
+    .image-aspect-box {
+      padding-top: 100%;
+    }
+  }
+}
+.module--laskentakohteet-area-personel.S-disabled {
+  display: none;
+}
+
+.module--laskentakohteet-area-personel .contact-person {
+display: none;
+}
+
+.module--laskentakohteet-area-personel .contact-person.S-active {
+display: block;
+}
 
 
 
 ///////ANIMATIONS/////
 
 .module--laskentakohteet-app.-full-app {
-  transition: opacity 0.3s linear;
+  transform: none;
+    transition: opacity 0.25s, transform 0.5s;
 }
 
 .module--laskentakohteet-app.S-animating {
   transition: 0s;
   opacity: 0;
+  transform: translateY(10px);
   button {
     pointer-events: none;
   }
@@ -489,4 +558,18 @@ border-top: solid 1px $a-text-grey;
   .area-contact-person.S-active__area .-anim {
     opacity: 1;
   }
+}
+
+
+
+
+
+//////MOD FOr IMAGE SCROLLER ////
+
+
+.page-template-laskentakohteet {
+.image-scroller {
+  margin-top: 0;
+}
+
 }

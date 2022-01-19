@@ -23,6 +23,7 @@ import "./js/core/responsive-iframe"
 import './js/util/stickymate.js';
 import './js/util/lazyloading.js';
 import './js/util/headroom.js';
+import './js/util/resize.js';
 
 //navigation
 import './js/util/navigation.js';

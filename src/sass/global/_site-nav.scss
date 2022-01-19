@@ -43,11 +43,11 @@ min-width: 660px;
 
 .laskenta-nav-counter {
   position: absolute;
-  right: -18px;
-    top: -15px;
+  right: -20px;
+    top: -17px;
     background: $a-yellow;
-    height: 20px;
-    width: 20px;
+    height: 21px;
+    width: 21px;
     border-radius: 999px;
     display: flex;
     justify-content: center;
@@ -59,7 +59,7 @@ min-width: 660px;
 
 .-desktop-nav {
   a {
-
+  line-height: 1;
     position: relative;
   }
   a:last-of-type {
@@ -108,7 +108,7 @@ min-width: 660px;
   display: flex;
 align-items: center;
 justify-content: center;
-
+box-shadow: 2px 3px 20px #00000012;
 
 // opacity: 0;
 transition: 0.5s cubic-bezier(.7,0,.3,1);
@@ -178,6 +178,7 @@ max-width: 700px;
     margin: 0 !important;
     display: inline-block;
     line-height: 1;
+    font-weight: 500;
 
     color: inherit;
   }

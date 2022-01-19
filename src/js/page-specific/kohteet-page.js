@@ -142,8 +142,9 @@ document.querySelector(".js--main-sort").click();
 ////FILTER BUTTONS ///////
 
 var filter_buttons = document.querySelectorAll('.js--area-filter');
-
 var table_elems = document.querySelectorAll('.laskentakohteet-app__body tr');
+var contact_persons = document.querySelectorAll('.module--laskentakohteet-area-personel .contact-person');
+
 console.log(table_elems);
 
 filter_buttons.forEach(function (elem) {
@@ -176,6 +177,17 @@ console.log("btn working");
 document.querySelector('.module--laskentakohteet-app').classList.add("S-animating");
 
 
+if (targets_area == "all") {
+	console.log("all");
+document.querySelector('.module--laskentakohteet-area-personel').classList.add("S-disabled");
+
+}
+else {
+  document.querySelector('.module--laskentakohteet-area-personel').classList.remove("S-disabled");
+
+}
+
+
 //////RESET ANIMATION AND RUN FILTERS///
 	setTimeout(function(){
 document.querySelector('.module--laskentakohteet-app').classList.remove("S-animating");
@@ -200,13 +212,16 @@ else {
 		main_sort.click();
 }
 
-}, 300);
+}, 0);
 
 
 function reset_tr() {
 	table_elems.forEach(function (elem) {
 			 elem.classList.remove("S-disabled__area-item");
 	});
+  contact_persons.forEach(function (elem) {
+       elem.classList.remove("S-active");
+  });
 }
 
 
@@ -220,6 +235,15 @@ function filter_tr() {
 				 elem.classList.add("S-disabled__area-item");
 			 }
 	});
+  contact_persons.forEach(function (elem) {
+    // console.log(elem);
+     if (elem.dataset.area.includes(targets_area)) {
+       elem.classList.add("S-active");
+       }
+       else  {
+         elem.classList.remove("S-active");
+       }
+  });
 }
 
 }

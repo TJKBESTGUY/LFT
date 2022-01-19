@@ -128,9 +128,9 @@ $app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg ic
     <div class="image-aspect-box">
 <div class="image-aspect-box_inner">
 <picture>
-<source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/s1.jpg">
-<source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/s1.jpg">
-<img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/s1.jpg" alt="" src="">
+<source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/4.jpg">
+<source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/4.jpg">
+<img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/4.jpg" alt="" src="">
 </picture>
 
 </div>

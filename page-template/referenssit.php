@@ -8,20 +8,27 @@
  		<main id="main" class="site-main" role="main">
       <section class="section--refe-header U-sec-pad">
         <div class="U_container U_base-pad">
-          <div class="module--heading_txt">
-            <div class="heading">
-                <h1>Luotettava määräluettelo, laadukkaan rakentamisen perusta</h1>
-            </div>
+          <div class="module--super-digit">
+            <div class="flx-container">
+              <div class="cell super-digit__number">
+                <div data-scroll class="super-digits-mask">
+                  <span class="Anim-item--split -fake-number -bold-txt">
+                      10 000+
+                    </span>
+                  <span class="Anim-item--split -real-number -bold-txt">
+                  10 000+
+                    </span>
 
-            <div class="flx-container -left-nudge">
-              <div class="cell">
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                </div>
+
               </div>
-
+              <div class="cell super-digit__label">
+                <span class="h4">Laskettua kohdetta</span>
+              </div>
             </div>
           </div>
-
         </div>
+
 
       </section>
 
@@ -42,11 +49,17 @@
                 <div class="refe-wrapper">
                   <div class="refe-item">
                     <div class="refe-item__heading">
-                      <h3>Jotakin</h3>
+                      <h4>Temppeliaukion kirkko</h4>
                     </div>
                     <div class="flx-container">
                   <div class="refe-item__image">
-                  <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
+                  <div class="image-aspect-box"> <div class="image-aspect-box_inner">
+                    <picture>
+                      <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/1.jpg">
+                        <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+                          <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+                      </picture>
+                  </div> </div>
                   </div>
                   <div class="refe-item__content">
                     <div class="refe-item-table">
@@ -60,25 +73,43 @@
                       </div>
                       <div class="table-cell">
                         <div class="label">
-                          Tyyppi
+                        BRUTTOALA
                         </div>
                         <div class="value">
-                          Saneeraus
+                      3 600 m2
                         </div>
                       </div>
                       <div class="table-cell">
                         <div class="label">
-                          Tyyppi
+                        TILAVUUS
                         </div>
                         <div class="value">
-                          Saneeraus
+                          8 222 m3
+                        </div>
+                      </div>
+                      <div class="table-cell">
+                        <div class="label">
+                      LASKENTAVUOSI
+                        </div>
+                        <div class="value">
+                          2010
+                        </div>
+                      </div>
+                      <div class="table-cell">
+                        <div class="label">
+                        RAKENNUSVUOSI
+                        </div>
+                        <div class="value">
+                          1967
                         </div>
                       </div>
 
                     </div>
                     <div class="wrap__refe-extended-content">
                     <div class="capsule-wrap">
-                      <button class="basic-btn btn--refe-content-extend js--refe-content-extend" type="button" name="button">Lue lisää</button>
+                      <button class="basic-btn btn--yellow btn--refe-content-extend js--refe-content-extend" type="button" name="button"><span class="basic-btn__text">Lue lisää</span> <span class="basic-btn__icon">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
+                      </span></button>
                     </div>
                     <div class="refe-extended-content -hidden">
                       <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will</p>
@@ -92,11 +123,17 @@
 
                   <div class="refe-item">
                     <div class="refe-item__heading">
-                      <h3>Jotakin</h3>
+                      <h4>Kampin kirkko</h4>
                     </div>
                     <div class="flx-container">
                   <div class="refe-item__image">
-                  <div class="image-aspect-box"> <div class="image-aspect-box_inner"> <img class="lazy-anim lazyloaded" data-src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg" alt="" src="https://ilmalanlinna.fi/wp-content/uploads/2020/08/siniverinessn_web.jpg"> </div> </div>
+                  <div class="image-aspect-box"> <div class="image-aspect-box_inner">
+                    <picture>
+                      <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+                        <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+                          <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+                      </picture>
+                  </div> </div>
                   </div>
                   <div class="refe-item__content">
                     <div class="refe-item-table">
@@ -110,12 +147,70 @@
                       </div>
                       <div class="table-cell">
                         <div class="label">
-                          Tyyppi
+                        BRUTTOALA
                         </div>
                         <div class="value">
-                          Saneeraus
+                      3 600 m2
                         </div>
                       </div>
+                      <div class="table-cell">
+                        <div class="label">
+                        TILAVUUS
+                        </div>
+                        <div class="value">
+                          8 222 m3
+                        </div>
+                      </div>
+                      <div class="table-cell">
+                        <div class="label">
+                      LASKENTAVUOSI
+                        </div>
+                        <div class="value">
+                          2010
+                        </div>
+                      </div>
+                      <div class="table-cell">
+                        <div class="label">
+                        RAKENNUSVUOSI
+                        </div>
+                        <div class="value">
+                          1967
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="wrap__refe-extended-content">
+                    <div class="capsule-wrap">
+                      <button class="basic-btn btn--white btn--refe-content-extend js--refe-content-extend" type="button" name="button"><span class="basic-btn__text">Lue lisää</span> <span class="basic-btn__icon">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
+                      </span></button>
+                    </div>
+                    <div class="refe-extended-content -hidden">
+                      <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will</p>
+                    </div>
+                        </div>
+
+
+                  </div>
+                  </div>
+                  </div>
+
+                  <div class="refe-item">
+                    <div class="refe-item__heading">
+                      <h4>Temppeliaukion kirkko</h4>
+                    </div>
+                    <div class="flx-container">
+                  <div class="refe-item__image">
+                  <div class="image-aspect-box"> <div class="image-aspect-box_inner">
+                    <picture>
+                      <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/4.jpg">
+                        <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+                          <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+                      </picture>
+                  </div> </div>
+                  </div>
+                  <div class="refe-item__content">
+                    <div class="refe-item-table">
                       <div class="table-cell">
                         <div class="label">
                           Tyyppi
@@ -124,11 +219,119 @@
                           Saneeraus
                         </div>
                       </div>
+                      <div class="table-cell">
+                        <div class="label">
+                        BRUTTOALA
+                        </div>
+                        <div class="value">
+                      3 600 m2
+                        </div>
+                      </div>
+                      <div class="table-cell">
+                        <div class="label">
+                        TILAVUUS
+                        </div>
+                        <div class="value">
+                          8 222 m3
+                        </div>
+                      </div>
+                      <div class="table-cell">
+                        <div class="label">
+                      LASKENTAVUOSI
+                        </div>
+                        <div class="value">
+                          2010
+                        </div>
+                      </div>
+                      <div class="table-cell">
+                        <div class="label">
+                        RAKENNUSVUOSI
+                        </div>
+                        <div class="value">
+                          1967
+                        </div>
+                      </div>
 
                     </div>
                     <div class="wrap__refe-extended-content">
                     <div class="capsule-wrap">
-                      <button class="basic-btn btn--refe-content-extend js--refe-content-extend" type="button" name="button">Lue lisää</button>
+                      <button class="basic-btn btn--white btn--refe-content-extend js--refe-content-extend" type="button" name="button"><span class="basic-btn__text">Lue esittely</span> <span class="basic-btn__icon">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
+                      </span></button>
+                    </div>
+                    <div class="refe-extended-content -hidden">
+                      <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will</p>
+                    </div>
+                        </div>
+
+
+                  </div>
+                  </div>
+                  </div>
+
+                  <div class="refe-item">
+                    <div class="refe-item__heading">
+                      <h4>Temppeliaukion kirkko</h4>
+                    </div>
+                    <div class="flx-container">
+                  <div class="refe-item__image">
+                  <div class="image-aspect-box"> <div class="image-aspect-box_inner">
+                    <picture>
+                      <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
+                        <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+                          <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+                      </picture>
+                  </div> </div>
+                  </div>
+                  <div class="refe-item__content">
+                    <div class="refe-item-table">
+                      <div class="table-cell">
+                        <div class="label">
+                          Tyyppi
+                        </div>
+                        <div class="value">
+                          Saneeraus
+                        </div>
+                      </div>
+                      <div class="table-cell">
+                        <div class="label">
+                        BRUTTOALA
+                        </div>
+                        <div class="value">
+                      3 600 m2
+                        </div>
+                      </div>
+                      <div class="table-cell">
+                        <div class="label">
+                        TILAVUUS
+                        </div>
+                        <div class="value">
+                          8 222 m3
+                        </div>
+                      </div>
+                      <div class="table-cell">
+                        <div class="label">
+                      LASKENTAVUOSI
+                        </div>
+                        <div class="value">
+                          2010
+                        </div>
+                      </div>
+                      <div class="table-cell">
+                        <div class="label">
+                        RAKENNUSVUOSI
+                        </div>
+                        <div class="value">
+                          1967
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="wrap__refe-extended-content">
+                    <div class="capsule-wrap">
+                      <button class="basic-btn btn--white btn--refe-content-extend js--refe-content-extend" type="button" name="button"><span class="basic-btn__text">Lue esittely</span> <span class="basic-btn__icon">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
+                      </span></button>
                     </div>
                     <div class="refe-extended-content -hidden">
                       <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will</p>
@@ -141,6 +344,8 @@
                   </div>
 
 
+
+
                 </div>
                     </div>
                 </div>
@@ -148,28 +353,7 @@
 
 
 
-      <section class="section--bottom-cta U-sec-pad">
-        <div class="module--bottom-cta">
-          <div class="flx-container">
-            <div class="cell bottom-cta__image">
-
-            </div>
-            <div class="cell bottom-cta__content">
-              <div class="content-wrap U_base-pad--right-only">
-              <h3>Kiinnostuitko?</h3>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-              <div class="capsule-wrap">
-                <button class="basic-btn btn--black btn--wide"type="button" name="button">Lue lisää</button>
-              </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-
-
-      </section>
+  <?php locate_template('src/parts/global/bottom-cta.php', true, true); ?>
 
 
     </main><!-- #main -->

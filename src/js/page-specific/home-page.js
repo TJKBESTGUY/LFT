@@ -14,7 +14,9 @@
 //
 // });
 
-
+///////TEMPALTE WRAP STARTS//////////
+if (document.body.classList.contains('page-template-etusivu')) {
+console.log("INIT LASKENTAKOHTEET");
 const table_body = document.querySelector(".laskentakohteet-app__body");
 
 
@@ -33,7 +35,9 @@ function trigger_table_anim () {
 	}, 3000);
 }
 
-// trigger_table_anim();
+trigger_table_anim();
+
+ }
 
 
 
@@ -60,7 +64,7 @@ const target = document.querySelectorAll(".Anim-item--split");
 
 ScrollOut({
 		once: true,
-		threshold: 0.8,
+		threshold: 0.9,
   onShown(el) {
     el.classList.add("animated");
 		// var el_child = el.querySelectorAll("span");
