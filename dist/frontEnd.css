@@ -4403,6 +4403,8 @@ Moved: _kohteet
   flex-shrink: 0;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-animation: slide-left--image 16s linear infinite;
+          animation: slide-left--image 16s linear infinite;
 }
 
 .marquee__inner .marquee-item {

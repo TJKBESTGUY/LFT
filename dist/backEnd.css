@@ -4672,6 +4672,8 @@ div .editor-styles-wrapper .acf-block-preview .marquee__inner {
   flex-shrink: 0;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-animation: slide-left--image 16s linear infinite;
+          animation: slide-left--image 16s linear infinite;
 }
 div .editor-styles-wrapper .acf-block-preview .marquee__inner .marquee-item {
   position: relative;

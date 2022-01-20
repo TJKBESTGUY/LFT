@@ -14,7 +14,7 @@
     <div class="flx-container">
       <div class="cell bottom-cta__image">
         <div class="image-aspect-box">
-          <div class="image-aspect-box_inner -anim" data-animation="transform: {-100vh: translateY(150px) scale(1.5),100vh: translateY(-150px) scale(1)}">
+          <div class="image-aspect-box_inner">
           <picture>
             <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
               <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
