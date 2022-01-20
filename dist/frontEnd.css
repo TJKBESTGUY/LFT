@@ -4222,8 +4222,7 @@ Moved: _kohteet
   top: 0;
   left: 0;
   transition: 1.5s cubic-bezier(0.5, 0, 0.3, 1);
-  transition: 1.5s;
-  transition-delay: 0.3s;
+  transition-delay: 0.7s;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
@@ -4233,6 +4232,10 @@ Moved: _kohteet
           clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
           clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.-overlay-image.-delay {
+  transition-delay: 0s;
 }
 
 .module--split-content .flx-container {
@@ -5135,7 +5138,7 @@ input:focus + .input-append {
 }
 .fixed-logo svg {
   fill: white;
-  height: 24px;
+  height: 37px;
 }
 
 .fixed-mobile-navigation__links {
@@ -5226,6 +5229,7 @@ input:focus + .input-append {
 }
 .module--footer a {
   color: white;
+  line-height: 1.6;
 }
 .module--footer .flx-container {
   display: flex;
@@ -5244,6 +5248,12 @@ input:focus + .input-append {
 }
 .module--footer .footer__extra-content {
   width: 16.6666666667%;
+}
+
+.footer-logo svg {
+  height: 37px;
+  width: auto;
+  fill: white !important;
 }
 
 .footer-bg-border {
@@ -5341,6 +5351,7 @@ table {
   padding: 0 20px;
 }
 .module--laskentakohteet-app td {
+  position: relative;
   font-weight: 400;
 }
 .module--laskentakohteet-app th {
@@ -5356,26 +5367,42 @@ table {
   flex-direction: column;
   min-height: 100px;
   padding-top: 20px;
+  padding-top: 24px;
 }
 
 .td__label {
   font-size: 1rem;
   color: #F0FF31;
-  line-height: 2;
+  line-height: 16px;
 }
 
 .td__name {
   line-height: 20px;
+  font-size: 1.6rem;
 }
 
 .td__xtra-info {
   color: #B0B0B0;
   font-size: 1rem;
-  line-height: 2rem;
+  line-height: 16px;
+  margin-top: 4px;
+}
+.td__xtra-info img {
+  height: 14px;
+  width: auto;
+  margin-right: 4px;
+}
+.td__xtra-info .-location {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 8px;
 }
 
 .td--basic-cell .td__name {
   font-size: 1.6rem;
+}
+.td--basic-cell .td__name.-yellow {
+  color: #F0FF31;
 }
 
 td:after {
@@ -5388,7 +5415,7 @@ td:after {
   background: #B0B0B0;
 }
 
-tbody tr {
+tbody tr, .tbody tr {
   position: relative;
 }
 
@@ -5440,6 +5467,28 @@ tbody tr {
 }
 .module--laskentakohteet-app.-full-app .td--kohde {
   background: #333333;
+}
+
+.-home-preview .laskentakohteet-app__header tr:after {
+  display: none;
+}
+
+.-home-preview .laskentakohteet-app__header:after {
+  content: "";
+  border-radius: 8px 8px 0 0;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 62px;
+  z-index: -1;
+  background: #F0FF31;
+  z-index: 3;
+}
+
+.-home-preview .laskentakohteet-app__header th {
+  z-index: 4;
+  position: relative;
 }
 
 .table-mask {

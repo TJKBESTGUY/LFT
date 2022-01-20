@@ -36,10 +36,15 @@
                     <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva1.jpg" alt="" src="">
                 </picture>
                 <picture class="">
-                  <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3.png">
+                  <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva2.png">
                     <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3.png">
                       <img class="lazy-anim lazyload -overlay-image" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva3.png" alt="" src="">
                   </picture>
+                  <picture class="">
+                    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3.png">
+                      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva2.png">
+                        <img class="lazy-anim lazyload -overlay-image -delay" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva2.png" alt="" src="">
+                    </picture>
 
             </div>
           </div>
@@ -99,6 +104,9 @@
             <div class="module--laskentakohteet-app -home-preview">
 
               <table>
+                <div class="fake-header-mask">
+
+                </div>
                 <thead class="laskentakohteet-app__header">
                   <tr class="">
                     <th class="tr--kohde">
@@ -118,9 +126,9 @@
                   <tr class="Anim-item--list">
                     <td class="td--kohde">
                       <div class="flx-container">
-                        <span class="td__label">Alfreds Futterkiste</span>
-                      <span class="td__name">Alfreds Futterkiste</span>
-                      <span class="td__xtra-info">Alfreds Futterkiste</span>
+                        <span class="td__label">Heka</span>
+                      <span class="td__name">Maunula Töyrytie 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Pääkaupunkiseutu</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 92 kpl</span></span>
                       </div>
 
 
@@ -129,7 +137,173 @@
                     <td class="td--basic-cell">
                       <div class="">
                         <div class="flx-container">
-                          <span class="td__label">&#8203; jjd</span>
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Laajennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">8187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">24499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.12.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name -yellow">Valmis</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+                  <tr class="Anim-item--list">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">Pisan päiväkoti</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Pääkaupunkiseutu</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Saneeraus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">1087</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">24899</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">16.02.2022</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 50</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+                  <tr class="Anim-item--list">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Pääkaupunkiseutu</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+
+                  <tr class="Anim-item--list">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">Heka</span>
+                      <span class="td__name">Maunula Töyrytie 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Pääkaupunkiseutu</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 92 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
                         <span class="td__name">Laajennus,<br>Saneeraus</span>
                         <span class="td__xtra-info">&#8203;</span>
                         </div>
@@ -138,302 +312,155 @@
                     </td>
                     <td class="td--basic-cell">
                       <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus</span>
-                        <span class="td__xtra-info">Alfreds Futterkiste</span>
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">8187</span>
+                        <span class="td__xtra-info">&#8203;</span>
                       </div>
                     </td>
 
                     <td class="td--basic-cell">
                       <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus</span>
-                        <span class="td__xtra-info">Alfreds Futterkiste</span>
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">24499</span>
+                        <span class="td__xtra-info">&#8203;</span>
                       </div>
                     </td>
 
                     <td class="td--basic-cell">
                       <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus</span>
-                        <span class="td__xtra-info">Alfreds Futterkiste</span>
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.12.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
                       </div>
                     </td>
                     <td class="td--basic-cell">
                       <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus</span>
-                        <span class="td__xtra-info">Alfreds Futterkiste</span>
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name -yellow">Valmis</span>
+                        <span class="td__xtra-info">&#8203;</span>
                       </div>
                     </td>
 
-
-                  </tr>
-
-
-                  <tr class="Anim-item--list">
-                    <td class="td--kohde">
-                      <div class="flx-container">
-                        <span class="td__label">BOTTOM FOR TEST</span>
-                      <span class="td__name">Alfreds Futterkiste</span>
-                      <span class="td__xtra-info">Alfreds Futterkiste</span>
-                      </div>
-
-
-                    </td>
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
 
                   </tr>
 
                   <tr class="Anim-item--list">
                     <td class="td--kohde">
                       <div class="flx-container">
-                        <span class="td__label">Alfreds Futterkiste</span>
-                      <span class="td__name">Alfreds Futterkiste</span>
-                      <span class="td__xtra-info">Alfreds Futterkiste</span>
+                        <span class="td__label">Heka</span>
+                      <span class="td__name">Maunula Töyrytie 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Pääkaupunkiseutu</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 92 kpl</span></span>
                       </div>
 
 
                     </td>
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
 
                     <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Laajennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
                       </div>
-                    </td>
 
+                    </td>
                     <td class="td--basic-cell">
                       <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">8187</span>
+                        <span class="td__xtra-info">&#8203;</span>
                       </div>
                     </td>
 
                     <td class="td--basic-cell">
                       <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">24499</span>
+                        <span class="td__xtra-info">&#8203;</span>
                       </div>
                     </td>
-
 
                     <td class="td--basic-cell">
                       <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.12.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
                       </div>
                     </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name -yellow">Valmis</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
 
                   </tr>
-
 
                   <tr class="Anim-item--list">
                     <td class="td--kohde">
                       <div class="flx-container">
-                        <span class="td__label">Alfreds Futterkiste</span>
-                      <span class="td__name">Alfreds Futterkiste</span>
-                      <span class="td__xtra-info">Alfreds Futterkiste</span>
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Pääkaupunkiseutu</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
                       </div>
 
 
                     </td>
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
 
                     <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
                       </div>
-                    </td>
 
+                    </td>
                     <td class="td--basic-cell">
                       <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
                       </div>
                     </td>
 
                     <td class="td--basic-cell">
                       <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
                       </div>
                     </td>
-
 
                     <td class="td--basic-cell">
                       <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
                       </div>
                     </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
 
                   </tr>
-                  <tr class="Anim-item--list">
-                    <td class="td--kohde">
-                      <div class="flx-container">
-                        <span class="td__label">Alfreds Futterkiste</span>
-                      <span class="td__name">Alfreds Futterkiste</span>
-                      <span class="td__xtra-info">Alfreds Futterkiste</span>
-                      </div>
 
 
-                    </td>
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
 
 
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-                  </tr>
-                  <tr class="Anim-item--list">
-                    <td class="td--kohde">
-                      <div class="flx-container">
-                        <span class="td__label">Alfreds Futterkiste</span>
-                      <span class="td__name">Alfreds Futterkiste</span>
-                      <span class="td__xtra-info">Alfreds Futterkiste</span>
-                      </div>
 
 
-                    </td>
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
 
 
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203; jjd</span>
-                      <span class="td__name">Laajennus,<br>Saneeraus</span>
-                      <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-                  </tr>
                 </tbody>
 
               </table>

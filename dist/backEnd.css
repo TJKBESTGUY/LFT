@@ -4512,8 +4512,7 @@ div .editor-styles-wrapper .acf-block-preview .-overlay-image {
   top: 0;
   left: 0;
   transition: 1.5s cubic-bezier(0.5, 0, 0.3, 1);
-  transition: 1.5s;
-  transition-delay: 0.3s;
+  transition-delay: 0.7s;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
@@ -4522,6 +4521,9 @@ div .editor-styles-wrapper .acf-block-preview .animated .-overlay-image {
           clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
           clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+div .editor-styles-wrapper .acf-block-preview .-overlay-image.-delay {
+  transition-delay: 0s;
 }
 div .editor-styles-wrapper .acf-block-preview .module--split-content .flx-container {
   display: flex;

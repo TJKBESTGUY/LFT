@@ -1123,7 +1123,7 @@ for (var i = 0, len = target.length; i < len; i++) {
 
 ScrollOut({
   once: true,
-  threshold: 0.8,
+  threshold: 0.6,
   onShown: function onShown(el) {
     el.classList.add("animated"); // var el_child = el.querySelectorAll("span");
     // console.log(el_child);
@@ -1577,7 +1577,7 @@ var options = {
   // tolerance : 0,
   // or you can specify tolerance individually for up/down scroll
   tolerance: {
-    up: 5,
+    up: 10,
     down: 0
   },
   // css classes to apply

@@ -22,7 +22,7 @@ var options = {
 
     // or you can specify tolerance individually for up/down scroll
     tolerance : {
-        up : 5,
+        up : 10,
         down : 0
     },
     // css classes to apply
