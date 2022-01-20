@@ -10,7 +10,7 @@
         <div class="U_container U_base-pad">
           <div class="module--heading_txt">
             <div class="heading">
-                <h1>Testi Luotettava määräluettelo, laadukkaan rakentamisen perusta</h1>
+                <h1>Luotettava määräluettelo, laadukkaan rakentamisen perusta</h1>
             </div>
 
             <div class="flx-container -left-nudge">
@@ -31,14 +31,14 @@
             <div class="image-aspect-box">
               <div class="image-aspect-box_inner ">
               <picture>
-                <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/asset1.jpg">
-                  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/1.jpg">
-                    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/1.jpg" alt="" src="">
+                <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva1.jpg">
+                  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva1.jpg">
+                    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva1.jpg" alt="" src="">
                 </picture>
                 <picture class="">
-                  <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/asset3.jpg">
-                    <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/2.jpg">
-                      <img class="lazy-anim lazyload -overlay-image" data-src="<?php echo get_template_directory_uri(); ?>/images/2.jpg" alt="" src="">
+                  <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3.png">
+                    <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3.png">
+                      <img class="lazy-anim lazyload -overlay-image" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva3.png" alt="" src="">
                   </picture>
 
             </div>
