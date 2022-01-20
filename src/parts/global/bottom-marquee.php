@@ -136,9 +136,14 @@
 </picture>
 
 </div>
-      <div class="marquee-item__overlay">
-
-      </div>
+<div class="marquee-item__overlay">
+  <span class="-type">
+    Saneeraus
+  </span>
+    <span class="-name">
+      Finlandia-talo
+    </span>
+</div>
      </div>
 
   </div>
@@ -152,9 +157,14 @@
 </picture>
 
 </div>
-      <div class="marquee-item__overlay">
-
-      </div>
+<div class="marquee-item__overlay">
+  <span class="-type">
+    Saneeraus
+  </span>
+    <span class="-name">
+      Finlandia-talo
+    </span>
+</div>
     </div>
   </div>
 
@@ -169,7 +179,12 @@
 
 </div>
 <div class="marquee-item__overlay">
-
+  <span class="-type">
+    Saneeraus
+  </span>
+    <span class="-name">
+      Finlandia-talo
+    </span>
 </div>
 </div>
   </div>
@@ -185,7 +200,12 @@
 
 </div>
 <div class="marquee-item__overlay">
-
+  <span class="-type">
+    Saneeraus
+  </span>
+    <span class="-name">
+      Finlandia-talo
+    </span>
 </div>
 </div>
   </div>
