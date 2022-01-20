@@ -667,7 +667,7 @@
                 <div class="flx-container">
             <div class="cell">
               <div class="cell_txt-content">
-              <h3>Määrälaskenta palvelut</h3>
+              <h3>Määrälaskentapalvelut</h3>
               <p class="cell-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
               <div class="capsule-wrap">
                 <button class="basic-btn btn--yellow"type="button" name="button"><span class="basic-btn__text">Lue lisää</span> <span class="basic-btn__icon">
