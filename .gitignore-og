@@ -50,7 +50,7 @@ wpcs/
 
 #  Build files #
 ###############
-
+/dist
 
 # Bower #
 ##########

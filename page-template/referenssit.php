@@ -27,6 +27,15 @@
               </div>
             </div>
           </div>
+          <div class="module--refe-header-img">
+          <div class="image-aspect-box"> <div class="image-aspect-box_inner">
+            <picture>
+              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/hero-kuvitus.png">
+                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/hero-kuvitus.png">
+                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/hero-kuvitus.png">
+              </picture>
+          </div> </div>
+          </div>
         </div>
 
 
