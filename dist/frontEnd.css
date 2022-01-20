@@ -4292,6 +4292,13 @@ Moved: _kohteet
   min-width: 60%;
 }
 
+.module--floating-manifest h3 {
+  margin-bottom: 0;
+}
+.module--floating-manifest p {
+  margin-top: 40px;
+}
+
 .module--laskenta-count .flx-container {
   display: flex;
 }
@@ -4482,13 +4489,17 @@ Moved: _kohteet
 .section--refe-header {
   min-height: 800px;
 }
-
-.module--refe-header-img {
+.section--refe-header .module--super-digit {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
+}
+
+.module--refe-header-img {
   width: 100%;
   padding-left: 25%;
+  padding-top: 140px;
+  opacity: 0.5;
 }
 .module--refe-header-img .image-aspect-box {
   padding-top: 63.5%;
@@ -4571,6 +4582,14 @@ Moved: _kohteet
   opacity: 0;
   transition: opacity 0.3s linear;
   pointer-events: none;
+}
+.S-refe-activate .basic-btn .basic-btn__text {
+  transform: translateX(1.2rem);
+  transition: 0.5s 0.1s;
+}
+.S-refe-activate .basic-btn .basic-btn__icon {
+  opacity: 0;
+  transition: 0.25s;
 }
 
 /*--------------------------------------------------------------
@@ -5063,6 +5082,11 @@ input:focus + .input-append {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 1100px) {
+  .-desktop-nav.flx-container {
+    display: none;
+  }
+}
 
 .mobile-nav-trigger-box {
   position: fixed;
@@ -5109,6 +5133,26 @@ input:focus + .input-append {
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: opacity 0.25s;
+}
+
+.headroom--not-top.headroom--pinned .mobile-nav-trigger {
+  opacity: 1;
+  pointer-events: all;
+  transform: none;
+  cursor: pointer;
+}
+
+.headroom--top .mobile-nav-trigger {
+  opacity: 0;
+  transition: opacity 0.25s, transform 0s 0.5s;
+}
+
+@media screen and (max-width: 1100px) {
+  .headroom--top .mobile-nav-trigger {
+    opacity: 1;
+    transform: none;
+    pointer-events: all;
+  }
 }
 
 .fixed-mobile-navigation {
@@ -5177,6 +5221,11 @@ input:focus + .input-append {
 .fixed-mobile-navigation .-img-content {
   padding-right: 80px;
 }
+@media screen and (max-width: 1100px) {
+  .fixed-mobile-navigation .-img-content {
+    display: none;
+  }
+}
 .fixed-mobile-navigation .-img-content .image-aspect-box {
   height: 100%;
   width: 100%;
@@ -5198,13 +5247,6 @@ input:focus + .input-append {
 .S-active--mobile-nav .mobile-nav-trigger svg:last-of-type {
   opacity: 1;
   transition: opacity 0.25s 0.25s;
-}
-
-.headroom--not-top.headroom--pinned .mobile-nav-trigger {
-  opacity: 1;
-  pointer-events: all;
-  transform: none;
-  cursor: pointer;
 }
 
 .S-on-sticky-scroll .mobile-nav-trigger {
@@ -5628,6 +5670,15 @@ tbody tr, .tbody tr {
 }
 .module--laskentakohteet-app.S-animating button {
   pointer-events: none;
+}
+
+.laskentakohteet-bottom-wrapper {
+  transition: opacity 0.3s;
+}
+
+.S-animating--table .laskentakohteet-bottom-wrapper {
+  opacity: 0;
+  transition: 0s;
 }
 
 .sortable {

@@ -421,7 +421,15 @@ display: block;
   }
 }
 
-
+.laskentakohteet-bottom-wrapper {
+  transition: opacity 0.3s;
+}
+.S-animating--table {
+  .laskentakohteet-bottom-wrapper {
+    opacity: 0;
+    transition: 0s;
+  }
+}
 
 
 

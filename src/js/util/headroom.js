@@ -13,7 +13,7 @@ var doc_body = document.body
 
 var options = {
     // vertical offset in px before element is first unpinned
-    offset : 350,
+    offset : 450,
     // or you can specify offset individually for up/down scroll
 
     // scroll tolerance in px before state changes

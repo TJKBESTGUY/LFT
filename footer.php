@@ -88,7 +88,7 @@ if($sidebar_icon == 'sidebar-icon'){
 }
 ?>
 
-<button aria-label="Toggle Right Panel" data-toggle="open" data-target="#panel-right" aria-expanded="false" class="panel-right-toggle"><?php echo $sidebar_icon; ?></button>
+<!-- <button aria-label="Toggle Right Panel" data-toggle="open" data-target="#panel-right" aria-expanded="false" class="panel-right-toggle"><?php echo $sidebar_icon; ?></button> -->
 
 </div><!-- .site-container -->
 

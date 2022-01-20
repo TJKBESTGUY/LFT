@@ -1192,7 +1192,9 @@ function animateValue(obj, start, end, duration) {
 if (document.body.classList.contains('page-template-laskentakohteet')) {
   var filter_areas = function filter_areas(e) {
     console.log("btn working");
-    var targets_area = e.target.getAttribute('data-area'); ////CLEAR BUTTONS
+    var targets_area = e.target.getAttribute('data-area'); ///ADD ANIMATION ON BODY
+
+    document.body.classList.add("S-animating--table"); ////CLEAR BUTTONS
 
     filter_buttons.forEach(function (elem) {
       elem.classList.remove("S-active__area");
@@ -1235,7 +1237,9 @@ if (document.body.classList.contains('page-template-laskentakohteet')) {
         console.log("change");
         main_sort.click();
       }
-    }, 0);
+
+      document.body.classList.remove("S-animating--table");
+    }, 300);
 
     function reset_tr() {
       table_elems.forEach(function (elem) {
@@ -1571,7 +1575,7 @@ var doc_body = document.body; // construct an instance of Headroom, passing the 
 
 var options = {
   // vertical offset in px before element is first unpinned
-  offset: 350,
+  offset: 450,
   // or you can specify offset individually for up/down scroll
   // scroll tolerance in px before state changes
   // tolerance : 0,

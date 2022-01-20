@@ -156,6 +156,9 @@ function filter_areas(e) {
 console.log("btn working");
   let targets_area = e.target.getAttribute('data-area');
 
+///ADD ANIMATION ON BODY
+
+document.body.classList.add("S-animating--table");
 
 ////CLEAR BUTTONS
 	filter_buttons.forEach(function (elem) {
@@ -211,8 +214,9 @@ else {
 		console.log("change");
 		main_sort.click();
 }
+document.body.classList.remove("S-animating--table");
 
-}, 0);
+}, 300);
 
 
 function reset_tr() {
