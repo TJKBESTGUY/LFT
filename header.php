@@ -13,7 +13,7 @@
 
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js no-svg dom-loading front-end">
+<html lang="fi" class="no-js no-svg dom-loading front-end">
 
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">

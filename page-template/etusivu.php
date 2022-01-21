@@ -565,7 +565,7 @@
       <section class="section--super-digit U-sec-marg -dark-mode">
 
 
-        <div class="U_container U_base-pad -padded-container">
+        <div class="U_container U_base-pad U_padded-container">
 
 
                 <div class="footer-bg-border">
@@ -665,7 +665,7 @@
 
           <div class="module--split-content">
                 <div class="flx-container">
-            <div class="cell">
+            <div class="cell split-content__txt">
               <div class="cell_txt-content">
               <h3>Määrälaskentapalvelut</h3>
               <p class="cell-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
@@ -677,7 +677,7 @@
             </div>
               </div>
 
-            <div class="cell">
+            <div class="cell split-content__img">
               <div class="cell_img-content">
                 <div class="image-aspect-box">
   <div class="image-aspect-box_inner Anim-item--img" data-scroll>
@@ -697,7 +697,7 @@
 
           <div class="module--split-content">
                 <div class="flx-container">
-                  <div class="cell">
+                  <div class="cell split-content__img">
                     <div class="cell_img-content">
                       <div class="image-aspect-box">
   <div class="image-aspect-box_inner Anim-item--img" data-scroll>
@@ -713,7 +713,7 @@
                   </div>
 
 
-            <div class="cell">
+            <div class="cell split-content__txt">
               <div class="cell_txt-content">
               <h3>Kokemuksella</h3>
               <p class="cell-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>

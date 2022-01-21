@@ -2,11 +2,17 @@
 @use "../resources" as *;
 
 
+.section--laskentakohteet-app {
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
+}
 
 .section--laskentakohteet-app {
   position: relative;
 max-width: 100vw;
 }
+
 
 .module--laskentakohteet-app {
   border-radius: 10px 10px 0 0;

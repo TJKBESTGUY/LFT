@@ -157,10 +157,39 @@ padding-right: 16px;
 
 .U-sec-pad {
   padding-top: 160px;
+  @media only screen and (max-width: 1200px) {
+    padding-top: 100px;
+  }
+  @media only screen and (max-width: 700px) {
+    padding-top: 60px;
+  }
 }
 
 .U-sec-marg {
   margin-top: 160px;
+  @media only screen and (max-width: 1200px) {
+    margin-top: 100px;
+  }
+  @media only screen and (max-width: 700px) {
+    margin-top: 60px;
+  }
+}
+
+.U_padded-container {
+  padding-top: 140px;
+  padding-bottom: 140px;
+  @media only screen and (max-width: 1200px) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  @media only screen and (max-width: 1100px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @media only screen and (max-width: 700px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 }
 
 
@@ -218,7 +247,8 @@ background-position: center center;
 .resize-animation-stopper * {
     -webkit-animation: none !important;
     animation: none !important;
-    transition: none !important
+    transition: none !important;
+      transition-delay: none !important;
 }
 
 
@@ -242,11 +272,17 @@ Moved: _kohteet
     display: flex;
   }
   .cell {
-    width: 1000;
+    width: 100%;
+        margin-top: 80px;
       @media screen and (min-width: 1000px) {
         width: 50%;
       }
-    margin-top: 80px;
+
+
+      @media screen and (max-width: 700px) {
+      margin-top: 40px;
+      }
+
   }
   .-left-nudge {
   margin-left: 20%;
@@ -359,10 +395,14 @@ clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 ///********SPLIT CONTENT
 
 .module--split-content {
-
+  margin-bottom: 80px;
   .flx-container {
     display: flex;
+        flex-wrap: nowrap;
   }
+
+  ///desktop -- USE THE CELL STYLES for mobile
+    @media screen and (min-width: 1000.11px) {
   .cell:first-of-type {
     width: 50%;
     min-width: 50%;
@@ -370,10 +410,71 @@ clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   .cell:last-of-type {
     flex-grow: 1;
   }
+  }
+
+
 }
 
+
+///MOBILE MOD -- USE THE CELL STYLES then
+
+
+//MEADIUM///
+
+.module--split-content .split-content__txt {
+  @media screen and (max-width: 1000px) {
+  width: 60%;;
+    min-width: 60%;
+}
+}
+
+.module--split-content .split-content__img {
+  @media screen and (max-width: 1000px) {
+  width: 40%;
+    min-width: 40%;;
+}
+}
+
+////MOBILE
+
 .module--split-content {
-  margin-bottom: 80px;
+  .flx-container {
+      @media screen and (max-width: 750px) {
+        flex-wrap: wrap;
+      }
+  }
+  @media screen and (max-width: 700px) {
+    margin-bottom: 60px;
+  }
+}
+
+.module--split-content:nth-of-type(odd) {
+  @media screen and (max-width: 750px) {
+  padding-right: 25%;
+  }
+}
+
+.module--split-content:nth-of-type(even) {
+  @media screen and (max-width: 750px) {
+      padding-left: 25%;
+  }
+}
+
+.module--split-content .split-content__txt {
+  @media screen and (max-width: 750px) {
+  width: 100%;
+    min-width: 100%;
+    order: 2;
+    margin-top: 40px;
+}
+}
+
+.module--split-content .split-content__img {
+  @media screen and (max-width: 750px) {
+  width: 100%;
+    min-width: 100%;
+    order: 1;
+}
 }
 
 
@@ -388,6 +489,9 @@ clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 
 .cell_img-content .image-aspect-box{
       padding-top: 100%;
+      @media screen and (max-width: 750px) {
+          padding-top: 56%;
+      }
 }
 
 .cell_img-content .-wide-aspect {
@@ -401,11 +505,17 @@ padding-right: $txt-pad;
 @media screen and (max-width: 1200px) {
     padding-right: $txt-pad-mid;
 }
+@media screen and (max-width: 750px) {
+    padding: 0;
+}
 }
 .module--split-content .flx-container .cell:last-of-type .cell_txt-content {
 padding-left: $txt-pad;
 @media screen and (max-width: 1200px) {
     padding-left: $txt-pad-mid;
+}
+@media screen and (max-width: 750px) {
+    padding: 0;
 }
 }
 
@@ -518,10 +628,7 @@ span {
 .section--super-digit {
   // padding-top: 140px;
   // padding-bottom: 140px;
-  .-padded-container {
-    padding-top: 140px;
-    padding-bottom: 140px;
-  }
+
 }
 
 .module--super-digit {
@@ -529,13 +636,27 @@ span {
   z-index: 2;
 }
 
+.super-digits-mask {
+  position: relative;
+  overflow: hidden;
+  line-height: 220px;
+  @media screen and (max-width: $base-width-media-max) {
+    line-height: 16vw;
+  }
+}
 
 .super-digit__number {
   font-size: 26.7rem;
   line-height: 1;
   color: inherit;
   @media screen and (max-width: $base-width-media-max) {
-  font-size: 18vw;
+  font-size: 18.5vw;
+  }
+  @media screen and (max-width: 1024px) {
+  font-size: 18.1vw;
+  }
+  @media screen and (max-width: 700px) {
+  font-size: 18.3vw;
   }
 
 }
@@ -843,11 +964,34 @@ p {
   .content-wrap {
   padding-left: $txt-pad;
   max-width: $base-width-half;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @media screen and (max-width: 1200px) {
+      padding-left: $txt-pad-mid;
+  }
 
   }
 
 }
 
+////MOBILE////
+.module--bottom-cta {
+    @media screen and (max-width: 750px) {
+
+.bottom-cta__image {
+  width: calc(40px + 49%);
+      min-height: 50vw;
+  }
+  .bottom-cta__content {
+    width: 100%;
+    .content-wrap {
+
+
+    }
+    }
+
+}
+}
 
 
 //////ANIMATIONSSS
@@ -977,11 +1121,7 @@ p {
 
 ///////ANIMATIONS//////
 
-.super-digits-mask {
-  position: relative;
-  overflow: hidden;
-  line-height: 220px;
-}
+
 
 .-real-number {
 position: absolute;

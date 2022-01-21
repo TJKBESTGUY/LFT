@@ -119,9 +119,10 @@ align-items: center;
 justify-content: center;
 box-shadow: 2px 3px 20px #00000012;
 
-// opacity: 0;
-transition: 0.5s cubic-bezier(.7,0,.3,1);
-transform: translateY(-110%);
+opacity: 0;
+transition: 0.25s cubic-bezier(.7,0,.3,1);
+// transform: translateY(-110%);
+
 pointer-events: none;
 
  svg:first-of-type {
@@ -152,7 +153,16 @@ transition: opacity 0.25s;
 .headroom--top {
   .mobile-nav-trigger {
     opacity: 0;
-    transition: opacity 0.25s, transform 0s 0.5s;
+
+  }
+}
+
+.S-active--mobile-nav {
+  .mobile-nav-trigger {
+    opacity: 1 !important;
+    pointer-events: all;
+    transform: none;
+    cursor: pointer;
   }
 }
 
