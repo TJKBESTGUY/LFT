@@ -115,6 +115,9 @@ h2, .h2 {
 		@media screen and (max-width: 1200px) {
 			 margin-bottom: 32px;
 		}
+		@media screen and (max-width: 750px) {
+		margin-bottom: 22px;
+		}
 	}
 }
 
@@ -301,6 +304,10 @@ margin-top: 40px;
 
 	cursor:pointer;
 	margin-right: 20px;
+
+	@media screen and (max-width: 1200px) {
+		padding: 10px 24px;
+	}
 }
 
 .basic-btn__text {

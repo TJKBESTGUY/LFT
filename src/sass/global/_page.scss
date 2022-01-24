@@ -233,6 +233,10 @@ background-position: center center;
 .heading-content {
   .ingr {
     max-width: 50%;
+      @media only screen and (max-width: 1000px) {
+        max-width: 560px;
+
+      }
   }
 }
 
@@ -240,6 +244,10 @@ background-position: center center;
 
 .heading {
   max-width: 950px;
+  h2 {
+      margin-right: 25%;
+  }
+
 }
 
 ///resize
@@ -531,11 +539,58 @@ padding-left: $txt-pad;
 }
 }
 
+
 .-mosaic-split {
-.cell:first-of-type {
-  width: 60%;
-  min-width: 60%;
+
+  .flx-container {
+    flex-wrap: wrap;
+  }
+
+  .mosaic-split__img {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+  .mosaic-split__txt {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+  @media screen and (min-width: 800.11px) {
+  .mosaic-split__img {
+  width: 50% !important;
+  min-width: 50% !important;
+  }
+  .mosaic-split__txt {
+  width: 50% !important;
+  min-width: 50% !important;
+  }
+  }
+
+  @media screen and (min-width: 1100.11px) {
+.mosaic-split__img {
+  width: 60% !important;
+  min-width: 60% !important;
 }
+.mosaic-split__txt {
+  width: 40% !important;
+  min-width: 40% !important;
+}
+}
+
+///ORDER and aligning
+@media screen and (max-width: 800px) {
+.mosaic-split__img {
+order: 1;
+margin-bottom: 40px;
+}
+.mosaic-split__txt {
+order: 2;
+}
+.cell_txt-content {
+  padding: 0 !important;
+}
+}
+
+
 }
 
 
@@ -974,21 +1029,24 @@ p {
   display: flex;
   align-items: center;
   .content-wrap {
-  padding-left: $txt-pad;
   max-width: $base-width-half;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  @media screen and (max-width: 1200px) {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  // CHECK THE MINIMAL BASE PAD
+  padding-left: 16px;
+  @media screen and (min-width: 1200.11px) {
+      padding-left: $txt-pad;
+  }
+  @media screen and (min-width: 650.11px) {
       padding-left: $txt-pad-mid;
   }
 
   }
-
 }
 
-////MOBILE////
+////MOBILE cell styles////
 .module--bottom-cta {
-    @media screen and (max-width: 750px) {
+    @media screen and (max-width: 800px) {
 
 .bottom-cta__image {
   width: calc(40px + 49%);
@@ -997,11 +1055,20 @@ p {
   .bottom-cta__content {
     width: 100%;
     .content-wrap {
-
-
     }
     }
+}
 
+@media screen and (max-width: 650px) {
+
+.bottom-cta__image {
+width: calc(40px + 49%);
+  min-height: 50vw;
+  display: none;
+}
+.bottom-cta__content {
+width: 100%;
+}
 }
 }
 
