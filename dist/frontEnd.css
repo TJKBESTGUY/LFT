@@ -4699,12 +4699,26 @@ Moved: _kohteet
 .marquee__inner .marquee-item .image-aspect-box {
   padding-top: 50%;
 }
+@media screen and (max-width: 600px) {
+  .marquee__inner .marquee-item {
+    min-width: 75% !important;
+  }
+  .marquee__inner .marquee-item .image-aspect-box {
+    padding-top: 56% !important;
+    height: 0 !important;
+  }
+}
 .marquee__inner .type-1 {
   min-width: 35%;
 }
 @media screen and (min-width: 2000px) {
   .marquee__inner .type-1 {
     min-width: 30%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .marquee__inner .type-1 {
+    min-width: 40%;
   }
 }
 .marquee__inner .type-1 .image-aspect-box {
@@ -4719,6 +4733,11 @@ Moved: _kohteet
     min-width: 20%;
   }
 }
+@media screen and (max-width: 1000px) {
+  .marquee__inner .type-2 {
+    min-width: 30%;
+  }
+}
 .marquee__inner .type-2 .image-aspect-box {
   padding: 0;
   height: calc(100% - 48px);
@@ -4731,6 +4750,11 @@ Moved: _kohteet
     min-width: 28.5%;
   }
 }
+@media screen and (max-width: 1000px) {
+  .marquee__inner .type-3 {
+    min-width: 37.5%;
+  }
+}
 .marquee__inner .type-3 .image-aspect-box {
   padding: 0;
   height: calc(100%);
@@ -4741,6 +4765,11 @@ Moved: _kohteet
 @media screen and (min-width: 2000px) {
   .marquee__inner .type-4 {
     min-width: 25%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .marquee__inner .type-4 {
+    min-width: 35.5%;
   }
 }
 .marquee__inner .type-4 .image-aspect-box {
@@ -4803,6 +4832,42 @@ Moved: _kohteet
     }
     to {
       transform: translateX(-102.5%);
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  @-webkit-keyframes slide-left--image {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-142.5%);
+    }
+  }
+  @keyframes slide-left--image {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-142.5%);
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  @-webkit-keyframes slide-left--image {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-300%);
+    }
+  }
+  @keyframes slide-left--image {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-300%);
     }
   }
 }
