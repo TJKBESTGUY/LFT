@@ -5565,6 +5565,11 @@ input:focus + .input-append {
 .fixed-mobile-navigation .-img-content {
   padding-right: 80px;
 }
+@media screen and (max-width: 1100px) {
+  .fixed-mobile-navigation .-img-content {
+    display: none;
+  }
+}
 .fixed-mobile-navigation .-img-content .image-aspect-box {
   height: 100%;
   width: 100%;
