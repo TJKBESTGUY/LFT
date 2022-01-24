@@ -11,6 +11,8 @@ color: white;
 
 }
 
+$li-height: 28px;
+
 .module--footer {
 
   position: relative;
@@ -20,6 +22,10 @@ color: white;
   a {
     color: white;
     line-height: 1.6;
+      @media screen and (max-width: 700px) {
+        font-size: 1.6rem;
+      }
+
   }
   .flx-container {
     display: flex;
@@ -31,10 +37,23 @@ color: white;
   text-indent: 0;
   list-style: none;
   }
+  li {
+        height: $li-height;
+  }
 }
 
+
 .footer__left-bar {
-  width: 50%
+  width: 50%;
+  display: flex;
+flex-direction: column;
+.footer-logo {
+  min-height: $li-height * 2;
+}
+.flx-container {
+  display: flex;
+flex-direction: column;
+}
 }
 .footer__nav-links{
   width: 33.3333333333%;

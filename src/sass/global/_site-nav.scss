@@ -194,9 +194,6 @@ transition: opacity 0.25s;
   color: $a-white;
 
 
-  // height: 100%;
-  // opacity: 1;
-
 }
 
 .fixed-mobile-navigation_inner {
@@ -204,16 +201,33 @@ transition: opacity 0.25s;
   .content-wrap {
     // padding-left: 80px;
 max-width: 700px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 100%;
   }
 }
 
 .fixed-logo {
-  position: absolute;
-  top: 28px;
-  left: 40px;
   svg {
     fill:white;
     height: 37px;
+  }
+
+}
+.fixed-logo.-bottom {
+  margin-bottom: 10px;
+    @media screen and (min-width: 1100.11px) {
+      display: none;
+    }
+}
+
+.fixed-logo.-top {
+  position: absolute;
+  top: 28px;
+  left: 40px;
+  @media screen and (max-width: 1100px) {
+  display: none;
   }
 }
 
@@ -231,6 +245,22 @@ max-width: 700px;
     font-weight: 500;
 
     color: inherit;
+  }
+}
+
+.fixed-mobile-navigation__sub-links {
+  margin-top: 40px;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    color: white;
+    // display: flex;
+  }
+  li {
+    margin-right: 20px;
+  }
+  a {
+    color:white;
   }
 }
 
@@ -265,23 +295,40 @@ max-width: 700px;
     flex-wrap: wrap;
     min-height: 100vh;
     align-items: center;
-
     position: relative;
     z-index: 2;
+
+       @media screen and (max-height: 700px) and (min-width: 1100.11px) {
+            align-items: flex-start;
+            padding-top: 100px;
+            padding-bottom: 100px;
+       }
+
   }
   .cell {
     width: 50%;
-        height: 66.66vh;
+    height: 66.66vh;
+    max-height: 800px;
+    min-height: 466px;
+
+      @media screen and (max-width: 1100px) {
+            height: 100vh;
+            padding-top: 80px;
+            padding-bottom: 40px;
+            max-height: 100vh;
+      }
 
   }
   .-img-content {
     padding-right: 80px;
     @media screen and (max-width: 1100px) {
-    display: none;
+    // display: none;
     }
     .image-aspect-box {
       height: 100%;
+
       width: 100%;
+
     }
   }
   .-text-content {
@@ -300,6 +347,7 @@ max-width: 700px;
     height: 100%;
     opacity: 1;
     transition: opacity 0.5s;
+    overflow-y: auto;
   }
 
   .mobile-nav-trigger svg:first-of-type {
