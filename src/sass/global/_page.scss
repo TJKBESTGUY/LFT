@@ -302,8 +302,12 @@ Moved: _kohteet
 
   }
 
+}
 
-
+.module--floating-manifest.-left-nudge {
+  @media screen and (min-width: 1000.11px) {
+margin-left: 16.6666666667%;
+}
 }
 
 ///*******FULL IMAGE
@@ -580,10 +584,11 @@ padding-left: $txt-pad;
 @media screen and (max-width: 800px) {
 .mosaic-split__img {
 order: 1;
-margin-bottom: 40px;
+
 }
 .mosaic-split__txt {
 order: 2;
+margin-top: 40px;
 }
 .cell_txt-content {
   padding: 0 !important;
@@ -789,6 +794,9 @@ $marq-overlay-height: 48px;
 
 .type-1 {
   min-width: 35%;
+  @media screen and (min-width: 2000px) {
+  min-width: 30%;
+  }
   .image-aspect-box {
 padding-top: 56%;
 padding-top: 75%;
@@ -797,6 +805,9 @@ padding-top: 75%;
 }
 .type-2 {
   min-width: 25%;
+  @media screen and (min-width: 2000px) {
+  min-width: 20%;
+  }
   .image-aspect-box {
 padding: 0;
 height: calc(100% - #{$marq-overlay-height});
@@ -804,6 +815,9 @@ height: calc(100% - #{$marq-overlay-height});
     }
 .type-3 {
   min-width: 32.5%;
+  @media screen and (min-width: 2000px) {
+  min-width: 28.5%;
+  }
   .image-aspect-box {
     padding: 0;
     height: calc(100%);
@@ -812,6 +826,9 @@ height: calc(100% - #{$marq-overlay-height});
 }
   .type-4 {
     min-width: 30%;
+    @media screen and (min-width: 2000px) {
+    min-width: 25%;
+    }
     .image-aspect-box {
       padding: 0;
       height: calc(100% - #{$marq-overlay-height + $marq-overlay-height});
@@ -855,7 +872,23 @@ height: calc(100% - #{$marq-overlay-height});
     to {
 
         transform: translateX(-122.5%);
+
     }
+}
+
+@media screen and (min-width: 2000px) {
+  @keyframes slide-left--image {
+      from {
+
+          transform: translateX(0)
+      }
+
+      to {
+
+          transform: translateX(-102.5%);
+
+      }
+  }
 }
 
 
@@ -865,7 +898,7 @@ height: calc(100% - #{$marq-overlay-height});
 
 
 .section--refe-header {
-  min-height: 800px;
+  // min-height: 800px;
   .module--super-digit {
     position: absolute;
     top: 0;
@@ -896,17 +929,32 @@ height: calc(100% - #{$marq-overlay-height});
 
 
 .module--referenssit-content {
-
+margin-bottom: 80px;
 }
 
 .refe-wrapper {
+    @media screen and (min-width: 1000.11px) {
   margin-left: 16.6666666667%;
+}
+@media screen and (max-width: 650px) {
+margin-left: 16.6666666667%;
+}
+@media screen and (max-width: 450px) {
+margin-left: 0;
+}
 }
 
 .refe-item {
   margin-top: 120px;
+  @media screen and (max-width: 1400px) {
+  margin-top: 100px;
+}
+@media screen and (max-width: 1200px) {
+margin-top: 80px;
+}
   .flx-container {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -926,6 +974,16 @@ height: calc(100% - #{$marq-overlay-height});
 .refe-item__image {
   width: 50%;
   padding-right: 40px;
+  @media screen and (max-width: 800px) {
+    width: 40%;
+        padding-right: 20px;
+  }
+
+  @media screen and (max-width: 650px) {
+      width: 100%;
+      padding: 0;
+      margin-bottom: 40px;
+  }
   .image-aspect-box {
     padding-top: 56%;
   }
@@ -933,6 +991,12 @@ height: calc(100% - #{$marq-overlay-height});
 
 .refe-item__content {
   width: 50%;
+  @media screen and (max-width: 800px) {
+    width: 60%;
+  }
+  @media screen and (max-width: 650px) {
+      width: 100%;
+  }
 }
 
 .refe-item-table {
@@ -951,6 +1015,9 @@ height: calc(100% - #{$marq-overlay-height});
     .value {
       padding-left: 20px;
           font-size: 1.6rem;
+          @media screen and (max-width: 1000px) {
+              font-size: 1.4rem;
+          }
     }
     .label, .value {
       padding-top: 6px;
@@ -975,6 +1042,9 @@ transition: opacity 0.5s cubic-bezier(.7,0,.3,1), transform 0.5s;
 margin-bottom: -60px;
 p {
   font-size: 1.6rem;
+  @media screen and (max-width: 1000px) {
+      font-size: 1.4rem;
+  }
 }
 }
 
@@ -1274,4 +1344,18 @@ height: 100%;
   transform: translateY(-100%);
   transition: 0.75s;
   }
+}
+
+
+
+
+
+
+
+// DEV RESETS
+
+.full-image__overlay {
+@media screen and (max-width: 800px) {
+  display: none;
+}
 }

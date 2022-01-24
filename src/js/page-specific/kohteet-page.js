@@ -186,8 +186,9 @@ document.querySelector('.module--laskentakohteet-area-personel').classList.add("
 
 }
 else {
+  	setTimeout(function(){
   document.querySelector('.module--laskentakohteet-area-personel').classList.remove("S-disabled");
-
+  }, 300);
 }
 
 

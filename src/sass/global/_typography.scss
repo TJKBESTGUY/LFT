@@ -130,15 +130,19 @@ h3, .h3 {
 	@media screen and (max-width: $base-width-media-max) {
 	font-size: 3.3vw;
 	}
+
+	@media screen and (max-width: 1200px) {
+		 margin-bottom: 20px;
+	}
+
+
 	@media screen and (max-width: 1024px) {
 	font-size: 3.4rem;
 	}
 	@media screen and (max-width: 570px) {
 	font-size: 5.6vw;
 	}
-	@media screen and (max-width: 1200px) {
-	   margin-bottom: 20px;
-	}
+
 	@media screen and (max-width: 750px) {
 	margin-bottom: 14px;
 	}
@@ -147,6 +151,17 @@ h3, .h3 {
 h4, .h4 {
 	font-size: 3.6rem;
 	line-height: 1.2;
+
+	@media screen and (max-width: $base-width-media-max) {
+	font-size: 2.6vw;
+	}
+	@media screen and (max-width: 1024px) {
+	font-size: 2.6rem;
+	}
+	@media screen and (max-width: 570px) {
+	font-size: 4.4vw;
+	}
+
 
 }
 
@@ -310,6 +325,8 @@ margin-top: 40px;
 	}
 }
 
+
+
 .basic-btn__text {
 line-height: 1;
 		transition: 0.3s;
@@ -322,9 +339,7 @@ line-height: 1;
 			transition: 0.3s;
 }
 
-.btn--wide {
-	font-size: 2rem;
-}
+
 
 .basic-btn:hover {
 	.basic-btn__text {
@@ -362,7 +377,18 @@ line-height: 1;
 	}
 }
 
+
+
+
+
+.btn--small {
+	font-size: 1.6rem;
+			padding: 10px 24px;
+
+}
+
 .btn--wide {
+		font-size: 2rem;
 	.basic-btn__icon {
 		width: 1.8rem;
 		height: 1.8rem;

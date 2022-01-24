@@ -1214,7 +1214,9 @@ if (document.body.classList.contains('page-template-laskentakohteet')) {
       console.log("all");
       document.querySelector('.module--laskentakohteet-area-personel').classList.add("S-disabled");
     } else {
-      document.querySelector('.module--laskentakohteet-area-personel').classList.remove("S-disabled");
+      setTimeout(function () {
+        document.querySelector('.module--laskentakohteet-area-personel').classList.remove("S-disabled");
+      }, 300);
     } //////RESET ANIMATION AND RUN FILTERS///
 
 
