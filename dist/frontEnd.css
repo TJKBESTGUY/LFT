@@ -5673,8 +5673,6 @@ input:focus + .input-append {
   height: 0;
   overflow: hidden;
   color: rgba(255,255,255,1);
-  opacity: 1;
-  height: 100%;
 }
 
 .fixed-mobile-navigation_inner {
