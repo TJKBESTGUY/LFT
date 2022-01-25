@@ -1149,15 +1149,16 @@ p {
   align-items: center;
   .content-wrap {
   max-width: $base-width-half;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   // CHECK THE MINIMAL BASE PAD
   padding-left: 16px;
-  @media screen and (min-width: 1200.11px) {
-      padding-left: $txt-pad;
-  }
+
   @media screen and (min-width: 650.11px) {
       padding-left: $txt-pad-mid;
+  }
+  @media screen and (min-width: 1200.11px) {
+      padding-left: $txt-pad;
   }
 
   }

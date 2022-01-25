@@ -28,6 +28,7 @@ a {
   display: inline-block;
   line-height: 1;
   max-height: 24px;
+  opacity: 1 !important;
 }
 svg {
 height: 24px;
@@ -52,9 +53,42 @@ min-width: 660px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.3s 0.5s;
+    opacity: 1;
+    transform: none;
     span {
       font-size: 1rem;
     }
+}
+
+// .dom-loading .page-template-etusivu {
+//   .laskenta-nav-counter {
+//   opacity: 0;
+//   transform: translateY(6px);
+//
+//   }
+// }
+
+.fixed-mobile-navigation {
+  .laskenta-nav-counter {
+    position: absolute;
+    right: -22px;
+      top: -17px;
+      background: $a-yellow;
+      height: 24px;
+      width: 24px;
+      border-radius: 999px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        font-size: 1rem;
+        color:$a-black;
+        margin: 0;
+        padding-right: 1px;
+      }
+  }
+
 }
 
 .-desktop-nav {
@@ -193,6 +227,9 @@ transition: opacity 0.25s;
   overflow: hidden;
   color: $a-white;
 
+  opacity: 1;
+  height: 100%;
+
 
 }
 
@@ -246,8 +283,19 @@ height: 100%;
     display: inline-block;
     line-height: 1;
     font-weight: 500;
-
     color: inherit;
+      position: relative;
+
+    span {
+      margin-right: 16px;
+    }
+    svg {
+      height: 28px;
+    width: auto;
+    fill: #f0ff32;
+    }
+
+
   }
 }
 
@@ -264,6 +312,7 @@ height: 100%;
   }
   a {
     color:white;
+    position: relative;
   }
 }
 
@@ -312,6 +361,8 @@ height: 100%;
     width: 50%;
     height: 66.66vh;
     max-height: 800px;
+
+        max-height: 650px;
     min-height: 466px;
 
       @media screen and (max-width: 1100px) {
@@ -365,9 +416,32 @@ height: 100%;
 }
 
 
+.fixed-mobile-navigation__bottom-graphics {
+  display: none;
+}
 
+    @media screen and (min-height: 1200px) {
+.fixed-mobile-navigation_inner {
+  display: flex;
+  flex-direction: column;
+}
 
+      .fixed-mobile-navigation .flx-container {
+        min-height: 10px;
+        padding-top: 200px;
+      }
+.fixed-mobile-navigation__bottom-graphics {
+  display: block;
+  margin-top: 100px;
+  margin-top: 100px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+flex-grow: 1;
+  width: 100%;
+}
 
+}
 
 ////////LIMIT HEADROOM ON STICKY -> Laskentakohteet PAGE
 
@@ -376,4 +450,24 @@ height: 100%;
     transform: translateY(-110%) !important;
     pointer-events: none !important;
   }
+}
+
+
+
+
+//////NAV ANIMATIONS/////
+
+.-nav-link {
+  transition: opacity 0.25s;
+}
+
+.S-active--nav-hover {
+  .-nav-link {
+    opacity: 0.4;
+  }
+}
+
+.S-active--hover-element {
+  opacity: 1 !important;
+
 }
