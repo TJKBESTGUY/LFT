@@ -75,6 +75,26 @@ min-width: 660px;
     right: -22px;
       top: -17px;
       background: $a-yellow;
+      height: 22px;
+      width: 22px;
+      border-radius: 999px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        font-size: 0.8rem;
+        color:$a-black;
+        margin: 0;
+
+      }
+  }
+
+    @media screen and (min-width: 1000.11px) {
+  .laskenta-nav-counter {
+    position: absolute;
+    right: -22px;
+      top: -17px;
+      background: $a-yellow;
       height: 24px;
       width: 24px;
       border-radius: 999px;
@@ -88,7 +108,7 @@ min-width: 660px;
         padding-right: 1px;
       }
   }
-
+  }
 }
 
 .-desktop-nav {
@@ -266,6 +286,7 @@ height: 100%;
   position: absolute;
   top: 28px;
   left: 40px;
+  z-index: 33;
   @media screen and (max-width: 1100px) {
   display: none;
   }
@@ -366,10 +387,11 @@ height: 100%;
     min-height: 466px;
 
       @media screen and (max-width: 1100px) {
-            height: 100vh;
+            height: auto;
+            min-height: 10px;
             padding-top: 80px;
-            padding-bottom: 40px;
-            max-height: 100%;
+            margin-bottom: 40px;
+            // max-height: 100%;
       }
 
   }
@@ -420,10 +442,23 @@ height: 100%;
   display: none;
 }
 
+
+
+// BG NAV IMAGE
+
+
     @media screen and (min-height: 1200px) {
 .fixed-mobile-navigation_inner {
   display: flex;
   flex-direction: column;
+}
+
+.fixed-mobile-navigation .-img-content {
+    display: none;
+
+}
+.fixed-mobile-navigation .cell {
+  max-height: 500px;
 }
 
       .fixed-mobile-navigation .flx-container {
@@ -432,7 +467,7 @@ height: 100%;
       }
 .fixed-mobile-navigation__bottom-graphics {
   display: block;
-  margin-top: 100px;
+
   margin-top: 100px;
   background-position: top;
   background-repeat: no-repeat;
@@ -442,6 +477,42 @@ flex-grow: 1;
 }
 
 }
+
+
+@media screen and (max-width: 1100px) {
+.fixed-mobile-navigation_inner {
+display: flex;
+flex-direction: column;
+}
+
+.fixed-mobile-navigation .-img-content {
+display: none;
+
+}
+.fixed-mobile-navigation .cell {
+max-height: 500px;
+}
+
+  .fixed-mobile-navigation .flx-container {
+    min-height: 10px;
+    // padding-top: 200px;
+  }
+.fixed-mobile-navigation__bottom-graphics {
+display: block;
+
+// margin-top: 100px;
+background-position: top;
+background-repeat: no-repeat;
+background-size: cover;
+flex-grow: 1;
+width: calc(100% + 90px);
+margin-left: -42px;
+}
+
+}
+
+
+//// BG NNAV IMAGE ENDS
 
 ////////LIMIT HEADROOM ON STICKY -> Laskentakohteet PAGE
 

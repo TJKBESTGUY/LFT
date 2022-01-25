@@ -4734,7 +4734,7 @@ div .editor-styles-wrapper .acf-block-preview .module--split-content .flx-contai
     width: 100%;
     min-width: 100%;
     order: 2;
-    margin-top: 40px;
+    margin-top: 20px;
   }
 }
 @media screen and (max-width: 750px) {
@@ -4824,7 +4824,7 @@ div .editor-styles-wrapper .acf-block-preview .-mosaic-split .mosaic-split__txt 
   }
   div .editor-styles-wrapper .acf-block-preview .-mosaic-split .mosaic-split__txt {
     order: 2;
-    margin-top: 40px;
+    margin-top: 20px;
   }
   div .editor-styles-wrapper .acf-block-preview .-mosaic-split .cell_txt-content {
     padding: 0 !important;
