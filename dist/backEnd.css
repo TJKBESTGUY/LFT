@@ -4557,8 +4557,6 @@ div .editor-styles-wrapper .acf-block-preview .heading h2 {
   margin-right: 25%;
 }
 div .editor-styles-wrapper .acf-block-preview .resize-animation-stopper * {
-  -webkit-animation: none !important;
-  animation: none !important;
   transition: none !important;
   transition-delay: none !important;
 }
@@ -4869,19 +4867,33 @@ div .editor-styles-wrapper .acf-block-preview .module--laskenta-count .-sticky-l
   position: sticky;
   top: 0px;
 }
-div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .flx-container {
-  display: flex;
+@media screen and (min-width: 760px) {
+  div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .flx-container {
+    display: flex;
+  }
 }
 div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__number {
   min-width: 490px;
+}
+@media screen and (max-width: 1399.9px) {
+  div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__number {
+    min-width: 37vw;
+  }
 }
 div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__number span {
   font-size: 36rem;
   line-height: 24rem;
 }
+@media screen and (max-width: 1399.9px) {
+  div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__number span {
+    font-size: 27vw;
+    line-height: 17.8vw;
+  }
+}
 div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__label {
   display: flex;
   align-items: flex-end;
+  margin-top: 20px;
 }
 div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__label span {
   line-height: 1.1;
@@ -4936,6 +4948,21 @@ div .editor-styles-wrapper .acf-block-preview .image-scroller {
   overflow: hidden;
   margin-top: 60px;
   margin-bottom: 60px;
+}
+@media screen and (max-width: 1100px) {
+  div .editor-styles-wrapper .acf-block-preview .image-scroller {
+    padding: 40px 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  div .editor-styles-wrapper .acf-block-preview .image-scroller {
+    padding: 20px 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  div .editor-styles-wrapper .acf-block-preview .image-scroller {
+    padding: 0px 0;
+  }
 }
 div .editor-styles-wrapper .acf-block-preview .marquee {
   display: flex;

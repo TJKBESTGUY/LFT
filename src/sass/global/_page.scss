@@ -253,8 +253,8 @@ background-position: center center;
 ///resize
 
 .resize-animation-stopper * {
-    -webkit-animation: none !important;
-    animation: none !important;
+    // -webkit-animation: none !important;
+    // animation: none !important;
     transition: none !important;
       transition-delay: none !important;
 }
@@ -664,27 +664,32 @@ span {
 
 .module--laskenta-count--on-page {
   .flx-container {
+        @media screen and (min-width: 760px) {
     display: flex;
-    .cell {
-
-    }
+      }
   }
 
   .laskenta-count__number {
     min-width: 490px;
+          @media screen and (max-width: $base-width-media-max) {
+              min-width: 37vw;
+          }
     span {
+
       font-size: 36rem;
       line-height: 24rem;
-        // @media screen and (max-width: $base-width-media-max) {
-        // font-size: 32.9vw;
-        // line-height: 29vw;
-        // }
+      @media screen and (max-width: $base-width-media-max) {
+      font-size: 27vw;
+      line-height: 17.8vw;
+      }
+
     }
   }
 
   .laskenta-count__label {
     display: flex;
     align-items: flex-end;
+        margin-top: 20px;
     span {
     line-height: 1.1;
     margin-bottom: 0;
@@ -755,6 +760,17 @@ $marq-overlay-height: 48px;
     overflow: hidden;
     margin-top: 60px;
     margin-bottom: 60px;
+
+    @media screen and (max-width: 1100px) {
+      padding: 40px 0;
+    }
+
+    @media screen and (max-width: 800px) {
+      padding: 20px 0;
+    }
+    @media screen and (max-width: 600px) {
+      padding: 0px 0;
+    }
 
 }
 .marquee {

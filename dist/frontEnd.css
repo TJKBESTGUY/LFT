@@ -4256,8 +4256,6 @@ body {
 }
 
 .resize-animation-stopper * {
-  -webkit-animation: none !important;
-  animation: none !important;
   transition: none !important;
   transition-delay: none !important;
 }
@@ -4601,19 +4599,33 @@ Moved: _kohteet
   top: 0px;
 }
 
-.module--laskenta-count--on-page .flx-container {
-  display: flex;
+@media screen and (min-width: 760px) {
+  .module--laskenta-count--on-page .flx-container {
+    display: flex;
+  }
 }
 .module--laskenta-count--on-page .laskenta-count__number {
   min-width: 490px;
+}
+@media screen and (max-width: 1399.9px) {
+  .module--laskenta-count--on-page .laskenta-count__number {
+    min-width: 37vw;
+  }
 }
 .module--laskenta-count--on-page .laskenta-count__number span {
   font-size: 36rem;
   line-height: 24rem;
 }
+@media screen and (max-width: 1399.9px) {
+  .module--laskenta-count--on-page .laskenta-count__number span {
+    font-size: 27vw;
+    line-height: 17.8vw;
+  }
+}
 .module--laskenta-count--on-page .laskenta-count__label {
   display: flex;
   align-items: flex-end;
+  margin-top: 20px;
 }
 .module--laskenta-count--on-page .laskenta-count__label span {
   line-height: 1.1;
@@ -4673,6 +4685,21 @@ Moved: _kohteet
   overflow: hidden;
   margin-top: 60px;
   margin-bottom: 60px;
+}
+@media screen and (max-width: 1100px) {
+  .image-scroller {
+    padding: 40px 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .image-scroller {
+    padding: 20px 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .image-scroller {
+    padding: 0px 0;
+  }
 }
 
 .marquee {
@@ -5554,11 +5581,11 @@ input:focus + .input-append {
 
 .fixed-mobile-navigation .laskenta-nav-counter {
   position: absolute;
-  right: -22px;
-  top: -17px;
+  right: -20px;
+  top: -15px;
   background: #F0FF31;
-  height: 22px;
-  width: 22px;
+  height: 20px;
+  width: 20px;
   border-radius: 999px;
   display: flex;
   justify-content: center;
