@@ -5491,6 +5491,13 @@ div .editor-styles-wrapper .acf-block-preview .-real-number {
   top: 0;
   left: 0;
 }
+div .editor-styles-wrapper .acf-block-preview .Anim-item--big-img img {
+  transform: scale(1.3);
+}
+div .editor-styles-wrapper .acf-block-preview .Anim-item--big-img.animated img {
+  transform: none;
+  transition: 1.5s;
+}
 div .editor-styles-wrapper .acf-block-preview .Anim-item--img.animated img {
   transform: none;
   transition: 0.75s;

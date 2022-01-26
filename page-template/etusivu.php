@@ -506,7 +506,7 @@
                     <div class="cell_img-content">
                         <h3>Laadukasta määrälaskentaa</h3>
                       <div class="image-aspect-box -wide-aspect">
-                        <div class="image-aspect-box_inner Anim-item--img" data-scroll>
+                        <div class="image-aspect-box_inner ">
                         <picture>
                           <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/7.jpg">
                             <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/7.jpg">
@@ -553,7 +553,7 @@
                 <div class="cell_img-content">
                     <h3>Laadukasta määrälaskentaa</h3>
                   <div class="image-aspect-box -wide-aspect">
-                    <div class="image-aspect-box_inner Anim-item--img" data-scroll>
+                    <div class="image-aspect-box_inner ">
                     <picture>
                       <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/7.jpg">
                         <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/7.jpg">
@@ -576,7 +576,7 @@
                   <div class="cell split-content__img">
                     <div class="cell_img-content">
                       <div class="image-aspect-box -wide-aspect">
-    <div class="image-aspect-box_inner Anim-item--img" data-scroll>
+    <div class="image-aspect-box_inner ">
     <picture>
     <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
       <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
@@ -672,12 +672,7 @@
 
 
 
-
-
-
-
-
-      <section class="section--basic U-sec-pad">
+      <!-- <section class="section--basic U-sec-pad">
         <div class="U_container U_base-pad">
           <div class="module--full-image">
             <div class="image-aspect-box">
@@ -701,7 +696,65 @@
         </div>
           </div>
 
-      </section>
+      </section> -->
+
+
+
+            <section class="section--basic U-sec-pad">
+              <div class="U_container U_base-pad">
+                <div class="module--full-image">
+                  <div class="image-aspect-box">
+                    <div class="image-aspect-box_inner">
+                    <picture>
+                      <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/1.jpg">
+                        <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/1.jpg">
+                          <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/1.jpg" alt="" src="">
+                      </picture>
+
+                  </div>
+                </div>
+                  <div class="full-image__overlay">
+                    <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="capsule-wrap">
+                      <button class="basic-btn btn--bordered"type="button" name="button"><span class="basic-btn__text">Lue lisää</span> <span class="basic-btn__icon">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
+                      </span> </button>
+                    </div>
+                  </div>
+              </div>
+                </div>
+
+            </section>
+
+
+
+
+
+      <!-- <section class="section--basic U-sec-pad">
+        <div class="U_container U_base-pad">
+          <div class="module--full-image">
+            <div class="image-aspect-box">
+              <div class="image-aspect-box_inner Anim-item--big-img" data-scroll>
+              <picture>
+                <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/3.jpg">
+                  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/3.jpg">
+                    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/3.jpg" alt="" src="">
+                </picture>
+
+            </div>
+          </div>
+            <div class="full-image__overlay">
+              <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+              <div class="capsule-wrap">
+                <button class="basic-btn btn--bordered"type="button" name="button"><span class="basic-btn__text">Lue lisää</span> <span class="basic-btn__icon">
+                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
+                </span> </button>
+              </div>
+            </div>
+        </div>
+          </div>
+
+      </section> -->
 
       <section class="section--basic U-sec-pad">
         <div class="U_container U_base-pad">
@@ -723,7 +776,7 @@
             <div class="cell split-content__img">
               <div class="cell_img-content">
                 <div class="image-aspect-box">
-  <div class="image-aspect-box_inner Anim-item--img" data-scroll>
+  <div class="image-aspect-box_inner ">
   <picture>
     <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
       <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
@@ -743,11 +796,11 @@
                   <div class="cell split-content__img">
                     <div class="cell_img-content">
                       <div class="image-aspect-box">
-  <div class="image-aspect-box_inner Anim-item--img" data-scroll>
+  <div class="image-aspect-box_inner ">
   <picture>
-    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus7-a.png">
+      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus7-a.png">
+        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus7-a.png" alt="" src="">
     </picture>
 
 </div>
@@ -800,7 +853,7 @@
       <section class="section--basic U-sec-pad">
         <div class="U_container U_base-pad">
           <div class="module--full-image -left-nudge">
-            <div class="image-aspect-box Anim-item--img" data-scroll>
+            <div class="image-aspect-box ">
   <div class="image-aspect-box_inner">
   <picture>
     <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
@@ -820,7 +873,7 @@
         <div class="U_container U_base-pad">
           <div class="module--full-image -right-nudge">
             <div class="image-aspect-box">
-  <div class="image-aspect-box_inner Anim-item--img" data-scroll>
+  <div class="image-aspect-box_inner ">
   <picture>
     <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
       <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
@@ -858,7 +911,7 @@
                   <div class="cell split-content__img">
                     <div class="cell_img-content">
                       <div class="image-aspect-box">
-  <div class="image-aspect-box_inner Anim-item--img" data-scroll>
+  <div class="image-aspect-box_inner ">
   <picture>
     <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
       <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">

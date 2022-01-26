@@ -47,13 +47,17 @@ var options = {
         // pinned: "headroom--pinned foo bar"
     },
     // callback when pinned, `this` is headroom object
-    onPin : function() {},
+    onPin : function() {
+    },
     // callback when unpinned, `this` is headroom object
     onUnpin : function() {},
     // callback when above offset, `this` is headroom object
     onTop : function() {},
     // callback when below offset, `this` is headroom object
-    onNotTop : function() {},
+    onNotTop : function() {
+      document.body.classList.remove("S-active--news-feed");
+        document.querySelector(".js--nav-news-trigger").innerHTML = "Ajankohtaista";
+    },
     // callback when at bottom of page, `this` is headroom object
     onBottom : function() {},
     // callback when moving away from bottom of page, `this` is headroom object
