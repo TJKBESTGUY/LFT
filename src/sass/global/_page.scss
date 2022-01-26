@@ -165,6 +165,18 @@ padding-right: 16px;
   }
 }
 
+//////PAD FIRTS SECTTION LESS
+
+section.U-sec-pad:first-of-type {
+    padding-top: 100px;
+    @media only screen and (max-width: 1200px) {
+      padding-top: 80px;
+    }
+    @media only screen and (max-width: 700px) {
+      padding-top: 20px;
+    }
+}
+
 .U-sec-marg {
   margin-top: 160px;
   @media only screen and (max-width: 1200px) {

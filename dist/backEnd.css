@@ -4482,6 +4482,19 @@ div .editor-styles-wrapper .acf-block-preview .U-sec-pad {
     padding-top: 60px;
   }
 }
+div .editor-styles-wrapper .acf-block-preview section.U-sec-pad:first-of-type {
+  padding-top: 100px;
+}
+@media only screen and (max-width: 1200px) {
+  div .editor-styles-wrapper .acf-block-preview section.U-sec-pad:first-of-type {
+    padding-top: 80px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  div .editor-styles-wrapper .acf-block-preview section.U-sec-pad:first-of-type {
+    padding-top: 20px;
+  }
+}
 div .editor-styles-wrapper .acf-block-preview .U-sec-marg {
   margin-top: 160px;
 }
