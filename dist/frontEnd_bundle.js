@@ -1123,7 +1123,7 @@ for (var i = 0, len = target.length; i < len; i++) {
 
 ScrollOut({
   once: true,
-  threshold: 0.6,
+  threshold: 0.9,
   onShown: function onShown(el) {
     el.classList.add("animated"); // var el_child = el.querySelectorAll("span");
     // console.log(el_child);

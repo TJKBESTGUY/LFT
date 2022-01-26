@@ -4645,8 +4645,8 @@ div .editor-styles-wrapper .acf-block-preview .-overlay-image {
   position: absolute !important;
   top: 0;
   left: 0;
-  transition: 1.5s cubic-bezier(0.5, 0, 0.3, 1);
-  transition-delay: 0.7s;
+  transition: 1.75s cubic-bezier(0.5, 0, 0.3, 1);
+  transition-delay: 1s;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }

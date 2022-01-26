@@ -4357,8 +4357,8 @@ Moved: _kohteet
   position: absolute !important;
   top: 0;
   left: 0;
-  transition: 1.5s cubic-bezier(0.5, 0, 0.3, 1);
-  transition-delay: 0.7s;
+  transition: 1.75s cubic-bezier(0.5, 0, 0.3, 1);
+  transition-delay: 1s;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
@@ -5595,25 +5595,26 @@ input:focus + .input-append {
   font-size: 0.8rem;
   color: #000000;
   margin: 0;
+  padding-right: 1px;
 }
-@media screen and (min-width: 1000.11px) {
+@media screen and (max-width: 600px) {
   .fixed-mobile-navigation .laskenta-nav-counter {
     position: absolute;
-    right: -22px;
-    top: -17px;
+    right: -20px;
+    top: -15px;
     background: #F0FF31;
-    height: 24px;
-    width: 24px;
+    height: 18px;
+    width: 18px;
     border-radius: 999px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .fixed-mobile-navigation .laskenta-nav-counter span {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #000000;
     margin: 0;
-    padding-right: 1px;
+    padding: 0;
   }
 }
 
@@ -5857,7 +5858,7 @@ input:focus + .input-append {
 }
 
 .S-active--mobile-nav .fixed-mobile-navigation {
-  height: 100%;
+  height: 100vh;
   opacity: 1;
   transition: opacity 0.5s;
   overflow-y: auto;

@@ -64,7 +64,7 @@ const target = document.querySelectorAll(".Anim-item--split");
 
 ScrollOut({
 		once: true,
-		threshold: 0.6,
+		threshold: 0.9,
   onShown(el) {
     el.classList.add("animated");
 		// var el_child = el.querySelectorAll("span");
