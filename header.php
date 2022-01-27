@@ -209,8 +209,9 @@ $app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg ic
 
 </div>
      </div>
-     <div class="nav__news-feed -mobile">
-       <h4>Ajankohtaista</h4>
+     <div class="nav__news-feed -mobile -on__horizontal">
+       <h3>&#8203; <span class="h4">Ajankohtaista</span> </h3>
+
        <div class="inner">
        <ul>
          <li>
@@ -265,6 +266,11 @@ $app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg ic
             <a  class="h3 -nav-link" href="#">Ota Yhteyttä</a>
       </div>
     </nav>
+    <div class="nav__news-feed -mobile -on__vertical">
+      <div class="news-feed-footer">
+          <a class="basic-btn btn--uutiset btn--yellow" href="#">Ajankohtaista</a>
+      </div>
+    </div>
       <div class="fixed-mobile-navigation__sub-links">
         <div class="">
           <div class="fixed-logo -bottom">
@@ -282,38 +288,11 @@ $app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg ic
       </div>
 
 
-      <!-- <div class="nav__news-feed -mobile">
-        <div class="inner">
-        <ul>
-          <li>
-            <span class="tag">Uutinen</span>
-            <p>Jokuu uutinen lorem lokreerererer erererer</p>
-          </li>
-          <li>
-            <span class="tag">Uutinen</span>
-            <p>Jokuu uutinen asdasd asda asddas</p>
-          </li>
-          <li>
-            <span class="tag">Artikkeli</span>
-            <p>Jokuu uutinen asdasd asda asddas</p>
-          </li>
-          <li>
-            <span class="tag">Uutinen</span>
-            <p>Jokuu uutinen asdasd asda asddas</p>
-          </li>
 
-        </ul>
-          </div>
-        <div class="news-feed-footer">
-            <a class="basic-btn btn--uutiset btn--yellow" href="#">Katso kaikki</a>
-        </div>
-      </div> -->
 
   </div>
       </div>
-      <!-- <div class="cell -footer">
 
-      </div> -->
 
 </div>
 
