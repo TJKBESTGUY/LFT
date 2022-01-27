@@ -1616,7 +1616,6 @@ var options = {
   // callback when below offset, `this` is headroom object
   onNotTop: function onNotTop() {
     document.body.classList.remove("S-active--news-feed");
-    document.querySelector(".js--nav-news-trigger").innerHTML = "Ajankohtaista";
   },
   // callback when at bottom of page, `this` is headroom object
   onBottom: function onBottom() {},
@@ -1706,28 +1705,24 @@ var site_container = document.querySelector(".site-container");
 
 site_container.onclick = function (e) {
   document.body.classList.remove("S-active--news-feed");
-  document.querySelector(".js--nav-news-trigger").innerHTML = "Ajankohtaista";
 };
 
 news_trigger.onclick = function (e) {
   if (!document.body.classList.contains('S-active--news-feed')) {
     document.body.classList.add("S-active--news-feed");
-    e.target.innerHTML = "Sulje";
   } else {
     document.body.classList.remove("S-active--news-feed");
-    e.target.innerHTML = "Ajankohtaista";
   }
-};
-
-news_trigger_mobile.onclick = function (e) {
-  if (!document.body.classList.contains('S-active--news-feed-mobile')) {
-    document.body.classList.add("S-active--news-feed-mobile");
-    e.target.innerHTML = "Sulje";
-  } else {
-    document.body.classList.remove("S-active--news-feed-mobile");
-    e.target.innerHTML = "Ajankohtaista";
-  }
-};
+}; // news_trigger_mobile.onclick = function(e) {
+// 	if (!document.body.classList.contains('S-active--news-feed-mobile')) {
+// 	document.body.classList.add("S-active--news-feed-mobile");
+// 	e.target.innerHTML = "Sulje";
+// 	}
+// 	else {
+// 		document.body.classList.remove("S-active--news-feed-mobile");
+// 			e.target.innerHTML = "Ajankohtaista";
+// 	}
+// }
 
 /***/ }),
 

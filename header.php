@@ -45,8 +45,8 @@
 
       </style>
 
-<script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
-<script src="https://unpkg.com/split-type"></script>
+<!-- <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+<script src="https://unpkg.com/split-type"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.min.js"></script>
 
 
@@ -81,7 +81,11 @@ $app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg ic
 
     </div>
     <nav class="navigation-links -desktop-nav flx-container">
-        <button class="basic-btn btn--uutiset btn--yellow js--nav-news-trigger" href="#">Ajankohtaista</button>
+        <button class="basic-btn btn--uutiset btn--yellow js--nav-news-trigger" href="#">
+          <span class="basic-btn__icon"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5ZM9,13.24,5.05,6.4H13Z"/></svg></span>
+          <span class="basic-btn__text">Ajankohtaista</span>
+
+      </button>
         <div class="nav__news-feed -desktop">
           <div class="inner">
           <ul>
@@ -200,20 +204,47 @@ $app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg ic
 <picture>
 <!-- <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/4.jpg">
 <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/4.jpg"> -->
-<img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus3-a.png" alt="" src="">
+<!-- <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus3-a.png" alt="" src=""> -->
 </picture>
 
 </div>
      </div>
+     <div class="nav__news-feed -mobile">
+       <h4>Ajankohtaista</h4>
+       <div class="inner">
+       <ul>
+         <li>
+           <span class="tag">Uutinen</span>
+           <p>Jokuu uutinen lorem lokreerererer erererer</p>
+         </li>
+         <li>
+           <span class="tag">Uutinen</span>
+           <p>Jokuu uutinen asdasd asda asddas</p>
+         </li>
+         <li>
+           <span class="tag">Artikkeli</span>
+           <p>Jokuu uutinen asdasd asda asddas</p>
+         </li>
+         <li>
+           <span class="tag">Uutinen</span>
+           <p>Jokuu uutinen asdasd asda asddas</p>
+         </li>
+
+       </ul>
+         </div>
+       <div class="news-feed-footer">
+           <a class="basic-btn btn--uutiset btn--yellow" href="#">Katso kaikki</a>
+       </div>
+     </div>
   </div>
   <div class="cell -text-content">
-  
+
     <div class="content-wrap U_base-pad--right-only">
 
     <nav class="fixed-mobile-navigation__links U_base-pad--right-only">
-        <div class="link-wrap">
+        <!-- <div class="link-wrap">
           <button class="basic-btn btn--uutiset btn--yellow js--nav-news-trigger-mobile" href="#">Ajankohtaista</button>
-              </div>
+              </div> -->
       <div class="link-wrap">
         <a  class="h3 -nav-link" href="Palvelut">Palvelut</a>
       </div>
@@ -251,7 +282,7 @@ $app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg ic
       </div>
 
 
-      <div class="nav__news-feed -mobile">
+      <!-- <div class="nav__news-feed -mobile">
         <div class="inner">
         <ul>
           <li>
@@ -276,7 +307,7 @@ $app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg ic
         <div class="news-feed-footer">
             <a class="basic-btn btn--uutiset btn--yellow" href="#">Katso kaikki</a>
         </div>
-      </div>
+      </div> -->
 
   </div>
       </div>

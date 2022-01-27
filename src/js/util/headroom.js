@@ -56,7 +56,7 @@ var options = {
     // callback when below offset, `this` is headroom object
     onNotTop : function() {
       document.body.classList.remove("S-active--news-feed");
-        document.querySelector(".js--nav-news-trigger").innerHTML = "Ajankohtaista";
+  
     },
     // callback when at bottom of page, `this` is headroom object
     onBottom : function() {},
