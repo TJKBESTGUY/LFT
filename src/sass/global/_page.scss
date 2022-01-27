@@ -262,6 +262,12 @@ background-position: center center;
 
 }
 
+/////// STICKY HEADING////
+.-sticky-label {
+  position: sticky;
+  top: 0px;
+}
+
 ///resize
 
 .resize-animation-stopper * {
@@ -664,11 +670,6 @@ span {
   padding: 0;
   line-height: 1.1;
 }
-}
-
-.-sticky-label {
-  position: sticky;
-  top: 0px;
 }
 
 }
@@ -1440,10 +1441,6 @@ height: 100%;
   transition: 0.75s;
   }
 }
-
-
-
-
 
 
 

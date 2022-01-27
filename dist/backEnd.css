@@ -1548,7 +1548,7 @@ div .editor-styles-wrapper h4, div .editor-styles-wrapper .h4 {
   }
 }
 div .editor-styles-wrapper h5, div .editor-styles-wrapper .h5 {
-  font-size: 1.9rem;
+  font-size: 2.2rem;
   line-height: 1.2;
   margin: 0;
 }
@@ -4569,6 +4569,10 @@ div .editor-styles-wrapper .acf-block-preview .heading {
 div .editor-styles-wrapper .acf-block-preview .heading h2 {
   margin-right: 25%;
 }
+div .editor-styles-wrapper .acf-block-preview .-sticky-label {
+  position: sticky;
+  top: 0px;
+}
 div .editor-styles-wrapper .acf-block-preview .resize-animation-stopper * {
   transition: none !important;
   transition-delay: none !important;
@@ -4875,10 +4879,6 @@ div .editor-styles-wrapper .acf-block-preview .module--laskenta-count .-bottom-l
 div .editor-styles-wrapper .acf-block-preview .module--laskenta-count .-bottom-label span {
   padding: 0;
   line-height: 1.1;
-}
-div .editor-styles-wrapper .acf-block-preview .module--laskenta-count .-sticky-label {
-  position: sticky;
-  top: 0px;
 }
 @media screen and (min-width: 760px) {
   div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .flx-container {

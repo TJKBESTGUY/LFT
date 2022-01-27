@@ -140,7 +140,7 @@ $app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg ic
           </ul>
             </div>
           <div class="news-feed-footer">
-              <a class="basic-btn btn--uutiset btn--yellow" href="#">Katso kaikki</a>
+              <a class="basic-btn btn--uutiset btn--yellow" href="/ajankohtaista">Katso kaikki</a>
           </div>
         </div>
       <a class="-nav-link" href="">Palvelut</a>
@@ -234,7 +234,7 @@ $app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg ic
        </ul>
          </div>
        <div class="news-feed-footer">
-           <a class="basic-btn btn--uutiset btn--yellow" href="#">Katso kaikki</a>
+           <a class="basic-btn btn--uutiset btn--yellow" href="/ajankohtaista">Katso kaikki</a>
        </div>
      </div>
   </div>
@@ -268,7 +268,7 @@ $app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg ic
     </nav>
     <div class="nav__news-feed -mobile -on__vertical">
       <div class="news-feed-footer">
-          <a class="basic-btn btn--uutiset btn--yellow" href="#">Ajankohtaista</a>
+          <a class="basic-btn btn--uutiset btn--yellow" href="/ajankohtaista">Ajankohtaista</a>
       </div>
     </div>
       <div class="fixed-mobile-navigation__sub-links">
