@@ -20,14 +20,17 @@ get_header(); ?>
 	        <?php
 	        if ( have_posts() ):
 		        while ( have_posts() ) : the_post();
-	                ign_template('content');
+	                ign_template('areite_content');
 		        endwhile; // End of the loop.
 
 	        endif;
 	        ?>
 
+          <?php locate_template('src/parts/global/bottom-cta.php', true, true); ?>
+
         </main><!-- #main -->
     </div><!-- #primary -->
 
-<?php get_footer();
 
+
+<?php get_footer();
