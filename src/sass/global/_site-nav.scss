@@ -273,6 +273,14 @@ transition: opacity 0.25s;
   }
 }
 
+.page-template-laskentakohteet {
+.mobile-nav-trigger {
+        @media screen and (min-width: 1100.11px) {
+        display: none;
+        }
+  }
+}
+
 //////MOBILE///
 
 // .headroom--top {
@@ -569,12 +577,12 @@ margin-left: -42px;
 
 ////////LIMIT HEADROOM ON STICKY -> Laskentakohteet PAGE
 
-.S-on-sticky-scroll {
-  .mobile-nav-trigger {
-    transform: translateY(-110%) !important;
-    pointer-events: none !important;
-  }
-}
+// .S-on-sticky-scroll {
+//   .mobile-nav-trigger {
+//     transform: translateY(-110%) !important;
+//     pointer-events: none !important;
+//   }
+// }
 
 
 
@@ -843,9 +851,44 @@ padding-top: 10px;
 
 
 
+////SCROLL TOP///
+.-scroll-top {
+  top: auto;
+  bottom: 30px;
+
+}
+
+.scroll-top-trigger {
+
+  width: 50px;
+  border: none;
+  background: none;
+  padding: 0;
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
+    // background: white;
+    overflow: hidden;
+        // border-radius: 999px;
+  svg {
+    width: 100%;
+
+
+    height: auto;
+    transform: rotate(-90deg);
+  }
+}
 
 
 
+.headroom--not-top.headroom--pinned {
+  .scroll-top-trigger {
+    opacity: 1;
+    pointer-events: all;
+    transform: none;
+    cursor: pointer;
+  }
+}
 
 
 

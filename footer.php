@@ -54,7 +54,7 @@
 					<div class="cell footer__nav-links">
 						<ul>
               <li>
-                <a href="#">Uutiset</a>
+                <a href="/ajankohtaista">Ajankohtaista</a>
               </li>
 							<li>
 								<a href="#">Palvelut</a>

@@ -1493,7 +1493,7 @@ if (document.body.classList.contains('page-template-laskentakohteet')) {
       elem.classList.remove("S-active__area");
       elem.classList.remove("S-disabled__area");
     });
-  }; ///////TEMPALTE WRAP ENDS//////////
+  }; //////SCROLL TOP////
 
 
   console.log("INIT LASKENTAKOHTEET");
@@ -1668,6 +1668,15 @@ if (document.body.classList.contains('page-template-laskentakohteet')) {
     elem.addEventListener("mouseenter", area_cell_hover);
     elem.addEventListener("mouseleave", area_cell_hover_out);
   });
+
+  document.querySelector(".js--scroll-top").onclick = function () {
+    document.querySelector("body").scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    });
+  }; ///////TEMPALTE WRAP ENDS//////////
+
 }
 
 /***/ }),

@@ -614,6 +614,19 @@
 
 
 
+
+<div class="mobile-nav-trigger-box -scroll-top">
+  <div class="mobile-nav-trigger-box_inner U_container U_base-pad">
+    <div class="flx-container">
+      <button class="scroll-top-trigger js--scroll-top" type="button" name="button">
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
     </main><!-- #main -->
   </div><!-- #primary -->
 

@@ -405,5 +405,15 @@ elem.classList.remove("S-disabled__area");
 });
 
 }
+
+
+
+//////SCROLL TOP////
+
+	document.querySelector(".js--scroll-top").onclick = function(){
+	document.querySelector("body").scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+	};
+
+
 ///////TEMPALTE WRAP ENDS//////////
 }

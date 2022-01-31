@@ -5748,6 +5748,12 @@ input:focus + .input-append {
   cursor: pointer;
 }
 
+@media screen and (min-width: 1100.11px) {
+  .page-template-laskentakohteet .mobile-nav-trigger {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1100px) {
   .mobile-nav-trigger {
     opacity: 1 !important;
@@ -5972,11 +5978,6 @@ input:focus + .input-append {
     display: none;
   }
 }
-.S-on-sticky-scroll .mobile-nav-trigger {
-  transform: translateY(-110%) !important;
-  pointer-events: none !important;
-}
-
 .-nav-link {
   transition: opacity 0.25s;
 }
@@ -6185,6 +6186,34 @@ input:focus + .input-append {
 .S-active--news-feed-mobile .fixed-mobile-navigation__links .-nav-link, .S-active--news-feed-mobile .fixed-mobile-navigation__sub-links {
   opacity: 0;
   pointer-events: none;
+}
+
+.-scroll-top {
+  top: auto;
+  bottom: 30px;
+}
+
+.scroll-top-trigger {
+  width: 50px;
+  border: none;
+  background: none;
+  padding: 0;
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
+  overflow: hidden;
+}
+.scroll-top-trigger svg {
+  width: 100%;
+  height: auto;
+  transform: rotate(-90deg);
+}
+
+.headroom--not-top.headroom--pinned .scroll-top-trigger {
+  opacity: 1;
+  pointer-events: all;
+  transform: none;
+  cursor: pointer;
 }
 
 /*--------------------------------------------------------------
