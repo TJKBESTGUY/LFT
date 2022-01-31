@@ -28,7 +28,7 @@
 				<!-- THIS IS USED IN THE FEED -- CHECK THE SYTLES FROM THERE -->
 				<div class="news-feed-item__content">
         <div class="meta">
-      	<span class="tag">Artikkeli</span> <span class="date">08.02.2022</span>
+      	<span class="tag">Uutinen</span> <span class="date">08.02.2022</span>
         </div>
 			</div>
 				<h1 class="entry-title h2"><?php the_title(); ?></h1>
@@ -37,6 +37,13 @@
 
 		<div class="article-content">
 			<?php the_content(); ?>
+		</div>
+
+		<div class="single-post__footer">
+			<a class="basic-btn btn--go-back" href="/ajankohtaista">
+				<span class="basic-btn__icon"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"></path></svg></span>
+				<span class="basic-btn__text">Takaisin ajankohtaista sivulle</span>
+			</a>
 		</div>
 
 	</article>

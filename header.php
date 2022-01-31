@@ -45,8 +45,8 @@
 
       </style>
 
-<!-- <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
-<script src="https://unpkg.com/split-type"></script> -->
+<script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+<script src="https://unpkg.com/split-type"></script>
 <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.min.js"></script>
 
 

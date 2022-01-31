@@ -405,14 +405,5 @@ elem.classList.remove("S-disabled__area");
 });
 
 }
-
-
-
-
-
-
-
-
-
 ///////TEMPALTE WRAP ENDS//////////
 }

@@ -29,21 +29,23 @@
                 </div> -->
                 <div class="article-feed__cat-nav">
                   <ul>
-                <li class="S-active__area">
-                  <button class="filter-buttton__all-results S-active__area" type="button" name="button" data-area="all">Kaikki</button>
+                <li class="S-active__cat">
+                  <button class="filter-buttton__all-results S-active__cat js--article-filter" type="button" name="button" data-cat="all">Kaikki</button>
                 </li>
                 <li>
-                    <button class="filter-buttton__area" type="button" name="button" data-area="paakaupunki">Uutiset</button>
+                    <button class="filter-buttton__area js--article-filter" type="button" name="button" data-cat="uutinen">Uutiset</button>
                 </li>
                 <li>
-                    <button class="filter-buttton__area js--area-filter" type="button" name="button" data-area="etela">Artikkelit</button>
+                    <button class="filter-buttton__area js--article-filter" type="button" name="button" data-cat="artikkeli">Artikkelit</button>
                 </li>
 
 
               </ul>
                 </div>
+                <div class="article-feed-wrapper">
                 <ul class="article-feed__content">
-                  <li>
+                  <li data-cat="uutinen">
+                    <a href="/hello-world/">
                     <article class="news-feed-item">
                       <div class="news-feed-item__img">
                       <div class="image-aspect-box">
@@ -61,16 +63,15 @@
                                     <span class="tag">Uutinen</span> <span class="date">16.02.2022</span>
                                     </div>
 
-                                    <h5>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed di</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper</p>
-
-
-        </button>
+                                    <h5>Uudet verkkosivut julkaistu</h5>
+                                    <p>Julkaisimme uudet verkkosivumme alkuvuodesta 2022. Löydät sivuiltamme tietoa palveluistamme, yrityksestämme sekä laskennassa olevista kohteista. </p>
                                   </div>
-                    </article>
-                  </li>
 
-                  <li>
+                                </article>
+                                    </a>
+                                  </li>
+
+                  <li data-cat="artikkeli">
                     <article class="news-feed-item">
                       <div class="news-feed-item__img">
                       <div class="image-aspect-box">
@@ -95,7 +96,7 @@
                     </article>
                   </li>
 
-                  <li>
+                  <li data-cat="uutinen">
                     <article class="news-feed-item">
                       <div class="news-feed-item__img">
                       <div class="image-aspect-box">
@@ -123,6 +124,7 @@
                   </li>
 
                 </ul>
+                </div>
 
               </div>
             </div>

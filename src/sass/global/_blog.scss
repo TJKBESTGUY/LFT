@@ -54,11 +54,15 @@
 
 }
 
+.article-feed-wrapper {
+  border-top: solid 1px $a-text-grey;
+    padding-top: 40px;
+}
+
 ul.article-feed__content {
     list-style: none;
     margin: 0;
-    border-top: solid 1px $a-text-grey;
-      padding-top: 40px;
+
 
 
   li {
@@ -153,9 +157,7 @@ flex-direction: column;
     list-style: none;
     margin: 0;
     display: flex;
-    position: sticky;
-    top:0;
-    z-index: 4;
+
 
   }
   li {
@@ -166,15 +168,29 @@ flex-direction: column;
   border-radius: 0.4rem;
   transition: 0.25s;
 
-  &.S-active__area {
+  &.S-active__cat {
   background: $a-yellow;
 
   }
   }
 }
 
+////ANIMATIONS
+
+.article-feed__content{
+opacity: 1;
+transform: none;
+transition: 0.25s;
+}
+
+.S-animating--articles{
+  .article-feed__content {
+    opacity: 0;
+    transform: translateY(20px);
 
 
+  }
+}
 
 // SINGLE POST ///////
 
@@ -210,6 +226,17 @@ color:black;
     text-transform: uppercase;
 
 }
+.btn--go-back:hover {
+	.basic-btn__text {
+		transform: none;
+    text-decoration: underline;
+	}
+	.basic-btn__icon {
+		opacity: 1;
+
+
+	}
+}
 
 .section--single-post {
 padding-top: 40px;
@@ -218,11 +245,34 @@ padding-top: 40px;
 .single-post__header-actions {
   // margin-bottom: 40px;
 }
+.single-post__footer {
+  margin-top: 100px;
+  border-top: solid 1px $a-text-grey;
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+      @media screen and (max-width: 700px) {
+        margin-top: 80px;
+      }
+      @media screen and (max-width: 550px) {
+        margin-top: 60px;
+      }
+}
+
 
 .single-post__base-container {
     max-width: 1060px;
       @media screen and (max-width: $base-width-media-max) {
-        max-width: calc( 100% - 292px);
+        max-width: calc( 100% - 340px);
+      }
+      @media screen and (max-width: 1100px) {
+        max-width: 760px;
+      }
+      @media screen and (max-width: 700px) {
+        padding: 0 40px;
+      }
+      @media screen and (max-width: 550px) {
+        padding: 0 16px;
       }
 }
 
@@ -231,29 +281,65 @@ padding-top: 40px;
 }
 
 .module--single-post .entry-title {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  @media screen and (max-width: 1200px) {
+      margin-bottom: 10px;
+  }
+      @media screen and (max-width: 700px) {
+        margin-bottom: 0.8rem;
+      }
 }
 
 .module--single-post .entry-description {
   p {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    @media screen and (max-width: 1200px) {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+    @media screen and (max-width: 700px) {
+      font-size: 1.8rem;
+      line-height: 1.2;
+    }
   }
 }
 
 @mixin blog-body-pad{
     padding: 0 80px;
-    @media screen and (max-width: $base-width-media-max) {
+    @media screen and (max-width: 1300px) {
       padding: 0 60px;
+}
+@media screen and (max-width: 1200px) {
+  padding: 0 40px;
+}
+@media screen and (max-width: 1100px) {
+  padding: 0 40px;
+}
+@media screen and (max-width: 1000px) {
+  // padding: 0 0px;
+}
+@media screen and (max-width: 700px) {
+  padding: 0 20px;
+}
+@media screen and (max-width: 550px) {
+  padding: 0 16px;
 }
 }
 
 .article-content {
   margin-top: 80px;
+  @media screen and (max-width: 1200px) {
+    margin-top: 60px;
+  }
+  @media screen and (max-width: 700px) {
+    margin-top: 40px;
+  }
   p, h2, h3, h4, h5 {
     @include blog-body-pad;
   }
   p {
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.6;
     @media screen and (max-width: 700px) {
        font-size: 1.4rem; //results in 16px
@@ -262,11 +348,19 @@ padding-top: 40px;
   h2, h3 {
     margin-bottom: 20px;
     margin-top: 40px;
+    @media screen and (max-width: 700px) {
+      margin-top: 30px;
+        margin-bottom: 10px;
+    }
   }
   h4, h5 {
       font-size: 2.6rem;
       margin-top: 1em;
       margin-bottom: 1em;
+      @media screen and (max-width: 700px) {
+        margin-top: 0.6em;
+        margin-bottom: 0.6em;
+      }
   }
 }
 
@@ -276,6 +370,10 @@ padding-top: 40px;
 .wp-block-image {
   margin-top: 60px;
   margin-bottom: 60px;
+  @media screen and (max-width: 1200px) {
+    margin-top: 40px;
+      margin-bottom: 40px;
+  }
 }
 
 ///EDIT THE SIZE CLASS FOR actaul ones

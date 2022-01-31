@@ -1072,6 +1072,149 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./src/js/page-specific/blog-page.js":
+/*!*******************************************!*\
+  !*** ./src/js/page-specific/blog-page.js ***!
+  \*******************************************/
+/***/ (() => {
+
+///////TEMPALTE WRAP STARTS//////////
+if (document.body.classList.contains('page-template-ajankohtaista')) {
+  var filter_areas = function filter_areas(e) {
+    console.log("btn working"); ///HANDLE STICKY/////
+
+    if (document.body.classList.contains("S-on-sticky-scroll")) {
+      console.log("on sitcky");
+      document.querySelector(".module--article-feed").scrollIntoView({
+        behavior: "auto",
+        block: "start",
+        inline: "nearest"
+      });
+    }
+
+    var targets_area = e.target.getAttribute('data-cat'); ///ADD ANIMATION ON BODY
+
+    document.body.classList.add("S-animating--articles"); ////CLEAR BUTTONS
+
+    filter_buttons.forEach(function (elem) {
+      elem.classList.remove("S-active__cat");
+      elem.parentElement.classList.remove("S-active__cat");
+      console.log(elem);
+      console.log(elem.parentElement);
+    }); ////SET ACTIVE BUTTON
+
+    setTimeout(function () {
+      e.target.classList.add("S-active__cat");
+      e.target.parentElement.classList.add("S-active__cat");
+    }, 0); //////RESET ANIMATION AND RUN FILTERS///
+
+    setTimeout(function () {
+      if (targets_area == "all") {
+        console.log("all");
+        reset_tr();
+      } else {
+        filter_tr();
+      }
+
+      document.body.classList.remove("S-animating--articles");
+    }, 300);
+
+    function reset_tr() {
+      table_elems.forEach(function (elem) {
+        elem.classList.remove("S-disabled__area-item");
+      });
+    }
+
+    function filter_tr() {
+      table_elems.forEach(function (elem) {
+        // console.log(elem);
+        if (elem.dataset.cat.includes(targets_area)) {
+          elem.classList.remove("S-disabled__area-item");
+        } else {
+          elem.classList.add("S-disabled__area-item");
+        }
+      });
+    }
+  }; //////STICKY//////
+  // get the sticky element
+
+
+  // OPTIONAL CODE BELOW ///////////////////
+  // find-first-scrollable-parent
+  // Credit: https://stackoverflow.com/a/42543908/104380
+  var getScrollParent = function getScrollParent(element, includeHidden) {
+    var style = getComputedStyle(element),
+        excludeStaticParent = style.position === "absolute",
+        overflowRegex = includeHidden ? /(auto|scroll|hidden)/ : /(auto|scroll)/;
+    if (style.position !== "fixed") for (var parent = element; parent = parent.parentElement;) {
+      style = getComputedStyle(parent);
+      if (excludeStaticParent && style.position === "static") continue;
+      if (overflowRegex.test(style.overflow + style.overflowY + style.overflowX)) return parent;
+    }
+    return window;
+  }; // Throttle
+  // Credit: https://jsfiddle.net/jonathansampson/m7G64
+
+
+  var throttle = function throttle(callback, limit) {
+    var wait = false; // Initially, we're not waiting
+
+    return function () {
+      // We return a throttled function
+      if (!wait) {
+        // If we're not waiting
+        callback.call(); // Execute users function
+
+        wait = true; // Prevent future invocations
+
+        setTimeout(function () {
+          // After a period of time
+          wait = false; // And allow future invocations
+        }, limit);
+      }
+    };
+  }; ///////TEMPALTE WRAP ENDS//////////
+
+
+  console.log("INIT LASKENTAKOHTEET"); ////FILTER BUTTONS ///////
+
+  var filter_buttons = document.querySelectorAll('.js--article-filter');
+  var table_elems = document.querySelectorAll('.article-feed__content li');
+  filter_buttons.forEach(function (elem) {
+    console.log(elem); // The element
+
+    elem.addEventListener("click", filter_areas);
+  });
+  var stickyElm = document.querySelector('.article-feed__cat-nav'); // get the first parent element which is scrollable
+
+  var stickyElmScrollableParent = getScrollParent(stickyElm); // save the original offsetTop. when this changes, it means stickiness has begun.
+
+  stickyElm._originalOffsetTop = stickyElm.offsetTop; // compare previous scrollTop to current one
+
+  var detectStickiness = function detectStickiness(elm, cb) {
+    return function () {
+      return cb & cb(elm.offsetTop != elm._originalOffsetTop);
+    };
+  }; // Act if sticky or not
+
+
+  var onSticky = function onSticky(isSticky) {
+    // console.clear()
+    console.log(isSticky);
+    stickyElm.classList.toggle('isSticky', isSticky);
+    document.body.classList.toggle('S-on-sticky-scroll', isSticky);
+  }; // bind a scroll event listener on the scrollable parent (whatever it is)
+  // in this exmaple I am throttling the "scroll" event for performance reasons.
+  // I also use functional composition to diffrentiate between the detection function and
+  // the function which acts uppon the detected information (stickiness)
+
+
+  var scrollCallback = throttle(detectStickiness(stickyElm, onSticky), 100);
+  stickyElmScrollableParent.addEventListener('scroll', scrollCallback);
+}
+
+/***/ }),
+
 /***/ "./src/js/page-specific/home-page.js":
 /*!*******************************************!*\
   !*** ./src/js/page-specific/home-page.js ***!
@@ -4136,12 +4279,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_page_specific_home_page_js__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_js_page_specific_home_page_js__WEBPACK_IMPORTED_MODULE_14__);
 /* harmony import */ var _js_page_specific_kohteet_page_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./js/page-specific/kohteet-page.js */ "./src/js/page-specific/kohteet-page.js");
 /* harmony import */ var _js_page_specific_kohteet_page_js__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_js_page_specific_kohteet_page_js__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _inc_core_core_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../inc/core/_core.js */ "./inc/core/_core.js");
-/* harmony import */ var _inc_core_core_js__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_inc_core_core_js__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _inc_scrollmagic_scrollmagic_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../inc/scrollmagic/_scrollmagic.js */ "./inc/scrollmagic/_scrollmagic.js");
-/* harmony import */ var _inc_scrollmagic_scrollmagic_js__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_inc_scrollmagic_scrollmagic_js__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _parts_global_browser_update_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./parts/global/_browser_update.js */ "./src/parts/global/_browser_update.js");
-/* harmony import */ var _parts_global_browser_update_js__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_parts_global_browser_update_js__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var _js_page_specific_blog_page_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./js/page-specific/blog-page.js */ "./src/js/page-specific/blog-page.js");
+/* harmony import */ var _js_page_specific_blog_page_js__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_js_page_specific_blog_page_js__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _inc_core_core_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../inc/core/_core.js */ "./inc/core/_core.js");
+/* harmony import */ var _inc_core_core_js__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_inc_core_core_js__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _inc_scrollmagic_scrollmagic_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../inc/scrollmagic/_scrollmagic.js */ "./inc/scrollmagic/_scrollmagic.js");
+/* harmony import */ var _inc_scrollmagic_scrollmagic_js__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_inc_scrollmagic_scrollmagic_js__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var _parts_global_browser_update_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./parts/global/_browser_update.js */ "./src/parts/global/_browser_update.js");
+/* harmony import */ var _parts_global_browser_update_js__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_parts_global_browser_update_js__WEBPACK_IMPORTED_MODULE_19__);
  //ADDING SASS
 //add your sass files easilt by starting them with an underscore inside the inc or parts folders
 // You can also manually add a regular file to the front end bundle so you have access to all scss variables and classes
@@ -4164,6 +4309,7 @@ __webpack_require__.r(__webpack_exports__);
  //navigation
 
  ////PAGE SPECIFIC
+
 
 
 

@@ -5587,21 +5587,21 @@ input:focus + .input-append {
 .laskenta-nav-counter {
   position: absolute;
   right: -20px;
-  top: -17px;
+  top: -15px;
   background: #F0FF31;
-  height: 21px;
-  width: 21px;
+  height: 20px;
+  width: 20px;
   border-radius: 999px;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.3s 0.5s;
-  opacity: 1;
-  transform: none;
 }
 .laskenta-nav-counter span {
-  font-size: 1rem;
-  line-height: 1rem;
+  font-size: 0.8rem;
+  color: #000000;
+  margin: 0;
+  font-weight: 500;
+  line-height: 0.8rem;
 }
 
 .fixed-mobile-navigation .laskenta-nav-counter {
@@ -6872,11 +6872,14 @@ th.no-sort:after {
   line-height: 0;
 }
 
+.article-feed-wrapper {
+  border-top: solid 1px #B0B0B0;
+  padding-top: 40px;
+}
+
 ul.article-feed__content {
   list-style: none;
   margin: 0;
-  border-top: solid 1px #B0B0B0;
-  padding-top: 40px;
 }
 ul.article-feed__content li {
   margin-bottom: 40px;
@@ -6958,9 +6961,6 @@ ul.article-feed__content li {
   list-style: none;
   margin: 0;
   display: flex;
-  position: sticky;
-  top: 0;
-  z-index: 4;
 }
 .article-feed__cat-nav li {
   background: transparent;
@@ -6970,8 +6970,19 @@ ul.article-feed__content li {
   border-radius: 0.4rem;
   transition: 0.25s;
 }
-.article-feed__cat-nav li.S-active__area {
+.article-feed__cat-nav li.S-active__cat {
   background: #F0FF31;
+}
+
+.article-feed__content {
+  opacity: 1;
+  transform: none;
+  transition: 0.25s;
+}
+
+.S-animating--articles .article-feed__content {
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 .btn--go-back {
@@ -7001,8 +7012,34 @@ ul.article-feed__content li {
   text-transform: uppercase;
 }
 
+.btn--go-back:hover .basic-btn__text {
+  transform: none;
+  text-decoration: underline;
+}
+.btn--go-back:hover .basic-btn__icon {
+  opacity: 1;
+}
+
 .section--single-post {
   padding-top: 40px;
+}
+
+.single-post__footer {
+  margin-top: 100px;
+  border-top: solid 1px #B0B0B0;
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 700px) {
+  .single-post__footer {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .single-post__footer {
+    margin-top: 60px;
+  }
 }
 
 .single-post__base-container {
@@ -7010,31 +7047,99 @@ ul.article-feed__content li {
 }
 @media screen and (max-width: 1399.9px) {
   .single-post__base-container {
-    max-width: calc( 100% - 292px);
+    max-width: calc( 100% - 340px);
+  }
+}
+@media screen and (max-width: 1100px) {
+  .single-post__base-container {
+    max-width: 760px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .single-post__base-container {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .single-post__base-container {
+    padding: 0 16px;
   }
 }
 
 .module--single-post .entry-title {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .module--single-post .entry-title {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .module--single-post .entry-title {
+    margin-bottom: 0.8rem;
+  }
 }
 
 .module--single-post .entry-description p {
-  font-size: 2.6rem;
+  font-size: 2.4rem;
+  line-height: 1.2;
+}
+@media screen and (max-width: 1200px) {
+  .module--single-post .entry-description p {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+@media screen and (max-width: 700px) {
+  .module--single-post .entry-description p {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
 }
 
 .article-content {
   margin-top: 80px;
 }
+@media screen and (max-width: 1200px) {
+  .article-content {
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .article-content {
+    margin-top: 40px;
+  }
+}
 .article-content p, .article-content h2, .article-content h3, .article-content h4, .article-content h5 {
   padding: 0 80px;
 }
-@media screen and (max-width: 1399.9px) {
+@media screen and (max-width: 1300px) {
   .article-content p, .article-content h2, .article-content h3, .article-content h4, .article-content h5 {
     padding: 0 60px;
   }
 }
+@media screen and (max-width: 1200px) {
+  .article-content p, .article-content h2, .article-content h3, .article-content h4, .article-content h5 {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .article-content p, .article-content h2, .article-content h3, .article-content h4, .article-content h5 {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .article-content p, .article-content h2, .article-content h3, .article-content h4, .article-content h5 {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .article-content p, .article-content h2, .article-content h3, .article-content h4, .article-content h5 {
+    padding: 0 16px;
+  }
+}
 .article-content p {
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.6;
 }
 @media screen and (max-width: 700px) {
@@ -7046,23 +7151,61 @@ ul.article-feed__content li {
   margin-bottom: 20px;
   margin-top: 40px;
 }
+@media screen and (max-width: 700px) {
+  .article-content h2, .article-content h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+}
 .article-content h4, .article-content h5 {
   font-size: 2.6rem;
   margin-top: 1em;
   margin-bottom: 1em;
+}
+@media screen and (max-width: 700px) {
+  .article-content h4, .article-content h5 {
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+  }
 }
 
 .wp-block-image {
   margin-top: 60px;
   margin-bottom: 60px;
 }
+@media screen and (max-width: 1200px) {
+  .wp-block-image {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
 
 .wp-block-image.size-large {
   padding: 0 80px;
 }
-@media screen and (max-width: 1399.9px) {
+@media screen and (max-width: 1300px) {
   .wp-block-image.size-large {
     padding: 0 60px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .wp-block-image.size-large {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .wp-block-image.size-large {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .wp-block-image.size-large {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .wp-block-image.size-large {
+    padding: 0 16px;
   }
 }
 
