@@ -22,7 +22,7 @@
 
             <div class="flx-container -left-nudge">
               <div class="cell">
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
               </div>
 
             </div>
@@ -539,25 +539,25 @@
             <div class="cell mosaic-split__txt">
               <div class="cell_txt-content">
 
-              <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+              <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
                     <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
-              <!-- <div class="capsule-wrap">
+              <div class="capsule-wrap">
                 <button class="basic-btn btn--yellow"type="button" name="button"><span class="basic-btn__text">Lue lisää</span> <span class="basic-btn__icon">
                   <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
                 </span> </button>
-              </div> -->
+              </div>
             </div>
               </div>
 
               <div class="cell mosaic-split__img">
                 <div class="cell_img-content">
-                    <!-- <h3>Laadukasta määrälaskentaa</h3> -->
+                    <h3>Laadukasta määrälaskentaa</h3>
                   <div class="image-aspect-box -wide-aspect">
                     <div class="image-aspect-box_inner ">
                     <picture>
-                      <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b9.jpg">
-                        <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b9.jpg">
-                          <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/b9.jpg" alt="" src="">
+                      <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/7.jpg">
+                        <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/7.jpg">
+                          <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/7.jpg" alt="" src="">
                       </picture>
 
                   </div>
@@ -573,32 +573,27 @@
           <div class="module--split-content">
                 <div class="flx-container">
 
+                  <div class="cell split-content__img">
+                    <div class="cell_img-content">
+                      <div class="image-aspect-box -wide-aspect">
+    <div class="image-aspect-box_inner ">
+    <picture>
+    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+    </picture>
+
+    </div>
+    </div>
+                    </div>
+                  </div>
 
 
-
-
-
-              <div class="cell split-content__img">
-                <div class="cell_img-content">
-                  <div class="image-aspect-box -wide-aspect">
-<div class="image-aspect-box_inner ">
-<picture>
-<source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b7.jpg">
-  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b7.jpg">
-    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/b7.jpg" alt="" src="">
-</picture>
-
-</div>
-</div>
-                </div>
+            <div class="cell split-content__txt">
+              <div class="cell_txt-content">
+              <p class="cell-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+            </div>
               </div>
-
-
-              <div class="cell split-content__txt">
-                <div class="cell_txt-content">
-                <p class="cell-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-              </div>
-                </div>
 
 
 
@@ -783,9 +778,9 @@
                 <div class="image-aspect-box">
   <div class="image-aspect-box_inner ">
   <picture>
-    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b4.jpg">
-      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b4.jpg">
-        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/b4.jpg" alt="" src="">
+    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
     </picture>
 
 </div>
@@ -816,7 +811,7 @@
 
             <div class="cell split-content__txt">
               <div class="cell_txt-content">
-              <h3>Yli kolmen vuosikymmenen Kokemuksella</h3>
+              <h3>Kokemuksella</h3>
               <p class="cell-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
             </div>
               </div>
@@ -861,9 +856,9 @@
             <div class="image-aspect-box ">
   <div class="image-aspect-box_inner">
   <picture>
-    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b2.jpg">
-      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b2.jpg">
-        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/b2.jpg" alt="" src="">
+    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
     </picture>
 
 </div>
@@ -918,9 +913,9 @@
                       <div class="image-aspect-box">
   <div class="image-aspect-box_inner ">
   <picture>
-    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus4-b.png">
-      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus4-b.png">
-        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus4-b.png" alt="" src="">
+    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
     </picture>
 
 </div>

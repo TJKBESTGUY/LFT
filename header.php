@@ -296,7 +296,7 @@ $app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg ic
 
 </div>
 
-<div class="fixed-mobile-navigation__bottom-graphics" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus4-transparent.png);">
+<div class="fixed-mobile-navigation__bottom-graphics" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus4-transparent-2600px.png);">
 
 </div>
 
