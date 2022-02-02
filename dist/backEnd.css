@@ -1639,7 +1639,7 @@ div .editor-styles-wrapper var {
   font-family: var(--font-pre);
   font-size: 15px;
 }
-div .editor-styles-wrapper .-bold-txt, div .editor-styles-wrapper strong {
+div .editor-styles-wrapper .-bold-txt, div .editor-styles-wrapper strong, div .editor-styles-wrapper .strong {
   font-weight: 500;
 }
 div .editor-styles-wrapper .capsule-wrap {
@@ -1675,21 +1675,21 @@ div .editor-styles-wrapper .basic-btn {
 }
 div .editor-styles-wrapper .basic-btn__text {
   line-height: 1;
-  transition: 0.3s;
+  transition: 0.25s;
 }
 div .editor-styles-wrapper .basic-btn__icon {
   width: 1.7rem;
   height: 1.7rem;
   margin-left: 0.8rem;
-  transition: 0.3s;
+  transition: 0.25s;
 }
 div .editor-styles-wrapper .basic-btn:hover .basic-btn__text {
   transform: translateX(1.2rem);
-  transition: 0.5s 0.1s;
+  transition: 0.25s 0.1s;
 }
 div .editor-styles-wrapper .basic-btn:hover .basic-btn__icon {
   opacity: 0;
-  transition: 0.25s;
+  transition: 0.2s;
 }
 div .editor-styles-wrapper .btn--yellow {
   background: #F0FF31;
@@ -1721,6 +1721,18 @@ div .editor-styles-wrapper .btn--wide {
 div .editor-styles-wrapper .btn--wide .basic-btn__icon {
   width: 1.8rem;
   height: 1.8rem;
+}
+div .editor-styles-wrapper .btn--refe-content-extend .basic-btn__icon {
+  margin: 0;
+}
+div .editor-styles-wrapper .btn--refe-content-extend .basic-btn__text {
+  margin-left: 0.8rem;
+}
+div .editor-styles-wrapper .basic-btn.-muted-hover:hover .basic-btn__text {
+  transform: none !important;
+}
+div .editor-styles-wrapper .basic-btn.-muted-hover:hover .basic-btn__icon {
+  opacity: 1 !important;
 }
 div .editor-styles-wrapper .acf-block-preview {
   /*--------------------------------------------------------------
@@ -5310,16 +5322,8 @@ div .editor-styles-wrapper .acf-block-preview .S-refe-activate .refe-extended-co
 }
 div .editor-styles-wrapper .acf-block-preview .S-refe-activate .btn--refe-content-extend {
   opacity: 0;
-  transition: opacity 0.3s linear;
+  transition: opacity 0.25s linear;
   pointer-events: none;
-}
-div .editor-styles-wrapper .acf-block-preview .S-refe-activate .basic-btn .basic-btn__text {
-  transform: translateX(1.2rem);
-  transition: 0.5s 0.1s;
-}
-div .editor-styles-wrapper .acf-block-preview .S-refe-activate .basic-btn .basic-btn__icon {
-  opacity: 0;
-  transition: 0.25s;
 }
 div .editor-styles-wrapper .acf-block-preview .module--bottom-cta .flx-container {
   display: flex;

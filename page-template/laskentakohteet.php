@@ -72,16 +72,16 @@
                         <div class="image-aspect-box">
                           <div class="image-aspect-box_inner Anim-item--img" data-scroll>
                             <picture>
-                              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-                                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-                                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+                              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/2.jpg">
+                                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/2.jpg">
+                                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/2.jpg" alt="" src="<?php echo get_template_directory_uri(); ?>/images/2.jpg">
                                 </picture>
 
                               </div>
                             </div>
                       </div>
                       <div class="contact-person__info">
-                        Jere Kuivalainen | 050 467 0910 | jere.kuivalainen@areite.fi
+                        Jere Kuivalainen | 050 467 0910 | henkilö@areite.fi
                       </div>
                     </div>
                   </div>
@@ -100,7 +100,45 @@
                             </div>
                       </div>
                       <div class="contact-person__info">
-                        Etelä Suomi | 050 467 0910 | jere.kuivalainen@areite.fi
+                        Etelä Suomi | 050 467 0910 | henkilö@areite.fi
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contact-person" data-area="ita">
+                    <div class="flx-container">
+                      <div class="contact-person__img">
+                        <div class="image-aspect-box">
+                          <div class="image-aspect-box_inner Anim-item--img" data-scroll>
+                            <picture>
+                              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/3.jpg">
+                                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/3.jpg">
+                                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/3.jpg" alt="" src="<?php echo get_template_directory_uri(); ?>/images/3.jpg">
+                                </picture>
+
+                              </div>
+                            </div>
+                      </div>
+                      <div class="contact-person__info">
+                        Itä-Suomi | 050 467 0910 | jere.kuivalainen@areite.fi
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contact-person" data-area="pohjois">
+                    <div class="flx-container">
+                      <div class="contact-person__img">
+                        <div class="image-aspect-box">
+                          <div class="image-aspect-box_inner Anim-item--img" data-scroll>
+                            <picture>
+                              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/6.jpg">
+                                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/6.jpg">
+                                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/6.jpg" alt="" src="<?php echo get_template_directory_uri(); ?>/images/6.jpg">
+                                </picture>
+
+                              </div>
+                            </div>
+                      </div>
+                      <div class="contact-person__info">
+                        Pohjois-Suomi | 050 467 0910 | henkilö@areite.fi
                       </div>
                     </div>
                   </div>
@@ -451,7 +489,7 @@
                       <div class="flx-container">
                         <span class="td__label">&#8203;</span>
                       <span class="td__name">vko 49</span>
-                        <span class="td__xtra-info">&#8203;</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
                       </div>
                     </td>
 
@@ -519,9 +557,9 @@
                         <div class="image-aspect-box">
                           <div class="image-aspect-box_inner Anim-item--img" data-scroll>
                             <picture>
-                              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-                                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-                                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+                              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/6.jpg">
+                                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/6.jpg">
+                                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/6.jpg" alt="" src="">
                                 </picture>
 
                               </div>
@@ -530,10 +568,10 @@
                       <div class="cell area-contact-person__content">
                         <h5 class="content__top">Pääkaupunkiseutu</h5>
                         <div class="content__bottom">
-                          <p class="strong">Nimi</p>
-                          <p>aluepäällikkö</p>
-                          <p> <a href="#">Puhelin</a> </p>
-                            <p> <a href="#">Email</a> </p>
+                          <p class="strong">Etunimi Sukunimi</p>
+                          <p>Aluepäällikkö</p>
+                          <p> <a href="#">040 123 123</a> </p>
+                            <p> <a href="#">henkilö@areite.fi</a> </p>
                         </div>
                       </div>
                             </div>
@@ -547,9 +585,9 @@
                         <div class="image-aspect-box">
                           <div class="image-aspect-box_inner Anim-item--img" data-scroll>
                             <picture>
-                              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-                                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-                                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+                              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/9.jpg">
+                                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/9.jpg">
+                                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/9.jpg" alt="" src="">
                                 </picture>
 
                               </div>
@@ -558,10 +596,10 @@
                       <div class="cell area-contact-person__content">
                         <h5 class="content__top">Etelä-Suomi</h5>
                         <div class="content__bottom">
-                          <p class="strong">Nimi</p>
-                          <p>aluepäällikkö</p>
-                          <p> <a href="#">Puhelin</a> </p>
-                            <p> <a href="#">Email</a> </p>
+                          <p class="strong">Etunimi Sukunimi</p>
+                          <p>Aluepäällikkö</p>
+                          <p> <a href="#">040 123 123</a> </p>
+                            <p> <a href="#">henkilö@areite.fi</a> </p>
                         </div>
                       </div>
                             </div>
@@ -575,9 +613,9 @@
                         <div class="image-aspect-box">
                           <div class="image-aspect-box_inner Anim-item--img" data-scroll>
                             <picture>
-                              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-                                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-                                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+                              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/3.jpg">
+                                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/3.jpg">
+                                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/3.jpg" alt="" src="">
                                 </picture>
 
                               </div>
@@ -586,10 +624,10 @@
                       <div class="cell area-contact-person__content">
                         <h5 class="content__top">Itä- ja Pohjois-Suomi</h5>
                         <div class="content__bottom">
-                          <p class="strong">Nimi</p>
-                          <p>aluepäällikkö</p>
-                          <p> <a href="#">Puhelin</a> </p>
-                            <p> <a href="#">Email</a> </p>
+                          <p class="strong">Etunimi Sukunimi</p>
+                          <p>Aluepäällikkö</p>
+                          <p> <a href="#">040 123 123</a> </p>
+                            <p> <a href="#">henkilö@areite.fi</a> </p>
                         </div>
                       </div>
                             </div>

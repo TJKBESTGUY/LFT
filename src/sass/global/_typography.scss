@@ -286,7 +286,7 @@ var {
 }
 
 
-.-bold-txt, strong {
+.-bold-txt, strong, .strong {
 	font-weight: 500;
 }
 
@@ -329,14 +329,14 @@ margin-top: 40px;
 
 .basic-btn__text {
 line-height: 1;
-		transition: 0.3s;
+		transition: 0.25s;
 }
 .basic-btn__icon {
 	width: 1.7rem;
 	height: 1.7rem;
 
 	margin-left: 0.8rem;
-			transition: 0.3s;
+			transition: 0.25s;
 }
 
 
@@ -344,11 +344,11 @@ line-height: 1;
 .basic-btn:hover {
 	.basic-btn__text {
 		transform: translateX(1.2rem);
-		transition: 0.5s 0.1s;
+		transition: 0.25s 0.1s;
 	}
 	.basic-btn__icon {
 		opacity: 0;
-			transition: 0.25s;
+			transition: 0.2s;
 	}
 }
 
@@ -393,5 +393,24 @@ line-height: 1;
 	}
 }
 
+
+.btn--refe-content-extend {
+	.basic-btn__icon {
+    margin: 0;
+}
+.basic-btn__text {
+
+		margin-left: 0.8rem;
+}
+}
+
+.basic-btn.-muted-hover:hover {
+	.basic-btn__text {
+	transform: none !important;
+	}
+	.basic-btn__icon {
+		opacity: 1 !important;
+	}
+}
 
 // UUTISET BBUTTON IS ON NAV CSS

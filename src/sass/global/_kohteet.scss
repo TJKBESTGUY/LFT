@@ -240,6 +240,21 @@ tr td:first-of-type {
 }
 
 
+//HOVER ON TD ////
+
+.module--laskentakohteet-app.-full-app tr {
+  td {
+    transition: background 0.25s;
+  }
+}
+
+.module--laskentakohteet-app.-full-app tr:hover {
+  td {
+    background: #1b1b1b;
+  }
+}
+
+
 /////HOME PREVIES MODS ///
 
 .-home-preview .laskentakohteet-app__header tr:after {
@@ -604,11 +619,17 @@ border-top: solid 1px $a-text-grey;
     margin: 0;
   }
   p {
-    margin: 0;
+    font-size: 1.6rem;
+    margin-top: 7px;
+    margin-bottom: 0;
     line-height: 1;
   }
   p.strong {
 
+  }
+
+  h5.content__top {
+    font-size: 2.2rem;
   }
 }
 

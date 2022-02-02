@@ -77,9 +77,9 @@
                       <div class="image-aspect-box">
                         <div class="image-aspect-box_inner">
                         <picture>
-                          <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/1.jpg">
-                            <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/1.jpg">
-                              <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/1.jpg" alt="" src="">
+                          <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/2.jpg">
+                            <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/2.jpg">
+                              <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/2.jpg" alt="" src="">
                           </picture>
                                   </div>
                                         </div>
@@ -102,9 +102,88 @@
                       <div class="image-aspect-box">
                         <div class="image-aspect-box_inner">
                         <picture>
+                          <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/3.jpg">
+                            <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/3.jpg">
+                              <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/3.jpg" alt="" src="">
+                          </picture>
+                                  </div>
+                                        </div>
+                                        </div>
+                                  <div class="news-feed-item__content">
+                                    <div class="meta">
+                                    <span class="tag">Uutinen</span> <span class="date">16.02.2022</span>
+                                    </div>
+
+                                    <h5>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed di</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper</p>
+                                    <div class="meta">
+
+                                    </div>
+                                  </div>
+                    </article>
+                  </li>
+
+                  <li data-cat="uutinen">
+                    <a href="/hello-world/">
+                    <article class="news-feed-item">
+                      <div class="news-feed-item__img">
+                      <div class="image-aspect-box">
+                        <div class="image-aspect-box_inner">
+                        <picture>
                           <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/1.jpg">
                             <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/1.jpg">
                               <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/1.jpg" alt="" src="">
+                          </picture>
+                                  </div>
+                                        </div>
+                                        </div>
+                                  <div class="news-feed-item__content">
+                                    <div class="meta">
+                                    <span class="tag">Uutinen</span> <span class="date">16.02.2022</span>
+                                    </div>
+
+                                    <h5>Uudet verkkosivut julkaistu</h5>
+                                    <p>Julkaisimme uudet verkkosivumme alkuvuodesta 2022. Löydät sivuiltamme tietoa palveluistamme, yrityksestämme sekä laskennassa olevista kohteista. </p>
+                                  </div>
+
+                                </article>
+                                    </a>
+                                  </li>
+
+                  <li data-cat="artikkeli">
+                    <article class="news-feed-item">
+                      <div class="news-feed-item__img">
+                      <div class="image-aspect-box">
+                        <div class="image-aspect-box_inner">
+                        <picture>
+                          <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/2.jpg">
+                            <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/2.jpg">
+                              <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/2.jpg" alt="" src="">
+                          </picture>
+                                  </div>
+                                        </div>
+                                        </div>
+                                  <div class="news-feed-item__content">
+                                    <div class="meta">
+                                    <span class="tag">Artikkeli</span> <span class="date">08.02.2022</span>
+                                    </div>
+
+                                    <h5>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed di</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper.  aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper</p>
+
+                                  </div>
+                    </article>
+                  </li>
+
+                  <li data-cat="uutinen">
+                    <article class="news-feed-item">
+                      <div class="news-feed-item__img">
+                      <div class="image-aspect-box">
+                        <div class="image-aspect-box_inner">
+                        <picture>
+                          <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/3.jpg">
+                            <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/3.jpg">
+                              <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/3.jpg" alt="" src="">
                           </picture>
                                   </div>
                                         </div>
@@ -134,12 +213,7 @@
 
       </section>
 
-      <section class="section--basic U-sec-pad">
-        <div class="U_container U_base-pad">
-
-          </div>
-
-      </section>
+  
 
 
 

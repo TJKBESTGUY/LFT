@@ -1,6 +1,6 @@
 <?php
    /*
-   Template Name: Etusivu
+   Template Name: palvelut
    */
    get_header(); ?>
 
@@ -707,7 +707,7 @@
 
             <section class="section--basic U-sec-pad">
               <div class="U_container U_base-pad">
-                <div class="module--full-image ">
+                <div class="module--full-image">
                   <div class="image-aspect-box">
                     <div class="image-aspect-box_inner">
                     <picture>

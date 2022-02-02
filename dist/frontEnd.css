@@ -3544,7 +3544,7 @@ var {
   font-size: 15px;
 }
 
-.-bold-txt, strong {
+.-bold-txt, strong, .strong {
   font-weight: 500;
 }
 
@@ -3583,23 +3583,23 @@ var {
 
 .basic-btn__text {
   line-height: 1;
-  transition: 0.3s;
+  transition: 0.25s;
 }
 
 .basic-btn__icon {
   width: 1.7rem;
   height: 1.7rem;
   margin-left: 0.8rem;
-  transition: 0.3s;
+  transition: 0.25s;
 }
 
 .basic-btn:hover .basic-btn__text {
   transform: translateX(1.2rem);
-  transition: 0.5s 0.1s;
+  transition: 0.25s 0.1s;
 }
 .basic-btn:hover .basic-btn__icon {
   opacity: 0;
-  transition: 0.25s;
+  transition: 0.2s;
 }
 
 .btn--yellow {
@@ -3638,6 +3638,20 @@ var {
 .btn--wide .basic-btn__icon {
   width: 1.8rem;
   height: 1.8rem;
+}
+
+.btn--refe-content-extend .basic-btn__icon {
+  margin: 0;
+}
+.btn--refe-content-extend .basic-btn__text {
+  margin-left: 0.8rem;
+}
+
+.basic-btn.-muted-hover:hover .basic-btn__text {
+  transform: none !important;
+}
+.basic-btn.-muted-hover:hover .basic-btn__icon {
+  opacity: 1 !important;
 }
 
 .panel-left-toggle:focus, .panel-right-toggle:focus {
@@ -5068,18 +5082,9 @@ Moved: _kohteet
 }
 .S-refe-activate .btn--refe-content-extend {
   opacity: 0;
-  transition: opacity 0.3s linear;
+  transition: opacity 0.25s linear;
   pointer-events: none;
 }
-.S-refe-activate .basic-btn .basic-btn__text {
-  transform: translateX(1.2rem);
-  transition: 0.5s 0.1s;
-}
-.S-refe-activate .basic-btn .basic-btn__icon {
-  opacity: 0;
-  transition: 0.25s;
-}
-
 /*--------------------------------------------------------------
 # BOTTOM CTA
 --------------------------------------------------------------*/
@@ -6234,6 +6239,7 @@ input:focus + .input-append {
 .module--footer a {
   color: white;
   line-height: 1.6;
+  font-size: 1.6rem;
 }
 @media screen and (max-width: 700px) {
   .module--footer a {
@@ -6555,6 +6561,14 @@ tbody tr, .tbody tr {
   background: #333333;
 }
 
+.module--laskentakohteet-app.-full-app tr td {
+  transition: background 0.25s;
+}
+
+.module--laskentakohteet-app.-full-app tr:hover td {
+  background: #1b1b1b;
+}
+
 .-home-preview .laskentakohteet-app__header tr:after {
   display: none;
 }
@@ -6839,9 +6853,15 @@ th.no-sort:after {
   margin: 0;
 }
 .area-contact-person__content p {
-  margin: 0;
+  font-size: 1.6rem;
+  margin-top: 7px;
+  margin-bottom: 0;
   line-height: 1;
 }
+.area-contact-person__content h5.content__top {
+  font-size: 2.2rem;
+}
+
 .area-contact-person .-anim {
   transition: 0.3s;
 }

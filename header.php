@@ -77,11 +77,12 @@ $app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg ic
 
 
     <div class="header-logo">
-        <a href="<?php echo home_url() ?>"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 222 52"><path d="M162.66,13.5,167,10.07V3.48h-10.7v10H150V20h5.89V40.49c0,7.35,1.78,10,11.4,10h7.83v-6.8h-3.25c-3.8,0-5.28-.76-5.28-4.53V20h8.69V13.5Z"/><rect x="134.11" y="13.5" width="10.7" height="36.94"/><rect x="134.11" y="0.66" width="10.7" height="8.79"/><path d="M22.1.66,1.16,50.45H12.48l4-10.1H38.31l3.95,10.1h12L33.27.66ZM19.62,32.32l7.75-19.64,7.76,19.64Z"/><path d="M106.73,12.68c-12.33,0-20.94,8.17-20.94,19.16,0,10.64,7.83,19.5,21.25,19.5,11.4,0,17.45-6.11,19.7-11.61h-11C113.55,43,110.3,44,107,44c-5.12,0-9.93-3.09-10.55-9.41H127.2C127.59,21.54,119.6,12.68,106.73,12.68ZM96.57,28.06c.85-6.25,6.05-8.45,10.08-8.45,4.5,0,9.46,2.2,9.7,8.45Z"/><path d="M200.59,44c-5.12,0-9.93-3.09-10.55-9.41h30.79c.39-13-7.6-21.9-20.48-21.9-12.33,0-20.94,8.17-20.94,19.16,0,10.64,7.84,19.5,21.25,19.5,11.4,0,17.45-6.11,19.7-11.61h-11C207.18,43,203.92,44,200.59,44Zm-.32-24.38c4.5,0,9.47,2.2,9.7,8.45H190.19C191.05,21.81,196.24,19.61,200.27,19.61Z"/><polygon points="69.65 20.88 69.65 13.5 59.1 13.5 59.1 50.45 69.65 50.45 69.65 22.88 82.99 22.88 82.99 13.5 75.52 13.5 69.65 20.88"/></svg></a>
+        <a href="<?php echo home_url() ?>"><svg  class="logo__sans" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 222 52"><path d="M162.66,13.5,167,10.07V3.48h-10.7v10H150V20h5.89V40.49c0,7.35,1.78,10,11.4,10h7.83v-6.8h-3.25c-3.8,0-5.28-.76-5.28-4.53V20h8.69V13.5Z"/><rect x="134.11" y="13.5" width="10.7" height="36.94"/><rect x="134.11" y="0.66" width="10.7" height="8.79"/><path d="M22.1.66,1.16,50.45H12.48l4-10.1H38.31l3.95,10.1h12L33.27.66ZM19.62,32.32l7.75-19.64,7.76,19.64Z"/><path d="M106.73,12.68c-12.33,0-20.94,8.17-20.94,19.16,0,10.64,7.83,19.5,21.25,19.5,11.4,0,17.45-6.11,19.7-11.61h-11C113.55,43,110.3,44,107,44c-5.12,0-9.93-3.09-10.55-9.41H127.2C127.59,21.54,119.6,12.68,106.73,12.68ZM96.57,28.06c.85-6.25,6.05-8.45,10.08-8.45,4.5,0,9.46,2.2,9.7,8.45Z"/><path d="M200.59,44c-5.12,0-9.93-3.09-10.55-9.41h30.79c.39-13-7.6-21.9-20.48-21.9-12.33,0-20.94,8.17-20.94,19.16,0,10.64,7.84,19.5,21.25,19.5,11.4,0,17.45-6.11,19.7-11.61h-11C207.18,43,203.92,44,200.59,44Zm-.32-24.38c4.5,0,9.47,2.2,9.7,8.45H190.19C191.05,21.81,196.24,19.61,200.27,19.61Z"/><polygon points="69.65 20.88 69.65 13.5 59.1 13.5 59.1 50.45 69.65 50.45 69.65 22.88 82.99 22.88 82.99 13.5 75.52 13.5 69.65 20.88"/></svg></a>
+
 
     </div>
     <nav class="navigation-links -desktop-nav flx-container">
-        <button class="basic-btn btn--uutiset btn--yellow js--nav-news-trigger" href="#">
+        <button class="basic-btn btn--uutiset btn--yellow js--nav-news-trigger">
           <span class="basic-btn__icon"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5ZM9,13.24,5.05,6.4H13Z"/></svg></span>
           <span class="basic-btn__text">Ajankohtaista</span>
 
@@ -91,59 +92,49 @@ $app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg ic
           <ul>
             <li>
               <span class="tag">Uutinen</span>
-              <p>Jokuu uutinen lorem lokreerererer erererer</p>
+              <p>Uudet verkkosivut julkaistu</p>
+
+            </li>
+
+                  <li>
+              <span class="tag">Artikkeli</span>
+              <p>Uutiskirje: Helmikuu 2022</p>
             </li>
             <li>
               <span class="tag">Uutinen</span>
-              <p>Jokuu uutinen asdasd asda asddas</p>
+              <p>Hyvää pääsiästä toimistolta</p>
             </li>
             <li>
               <span class="tag">Artikkeli</span>
-              <p>Jokuu uutinen asdasd asda asddas</p>
+              <p>Toimiston esittely</p>
             </li>
             <li>
               <span class="tag">Uutinen</span>
-              <p>Jokuu uutinen asdasd asda asddas</p>
+              <p>Uudet verkkosivut julkaistu</p>
+
+            </li>
+
+                  <li>
+              <span class="tag">Uutiskirje</span>
+              <p>Uutiskirje: Helmikuu 2022</p>
             </li>
             <li>
               <span class="tag">Uutinen</span>
-              <p>Jokuu uutinen lorem lokreerererer erererer</p>
+              <p>Hyvää pääsiästä toimistolta</p>
             </li>
             <li>
-              <span class="tag">Uutinen</span>
-              <p>Jokuu uutinen asdasd asda asddas</p>
+              <span class="tag">Artikkeli</span>
+              <p>Toimiston esittely</p>
             </li>
-            <li>
-              <span class="tag">artikkeli</span>
-              <p>Jokuu uutinen asdasd asda asddas</p>
-            </li>
-            <li>
-              <span class="tag">Uutinen</span>
-              <p>Jokuu uutinen asdasd asda asddas</p>
-            </li>
-            <li>
-              <span class="tag">Uutinen</span>
-              <p>Jokuu uutinen lorem lokreerererer erererer</p>
-            </li>
-            <li>
-              <span class="tag">Uutinen</span>
-              <p>Jokuu uutinen asdasd asda asddas</p>
-            </li>
-            <li>
-              <span class="tag">artikkeli</span>
-              <p>Jokuu uutinen asdasd asda asddas</p>
-            </li>
-            <li>
-              <span class="tag">Uutinen</span>
-              <p>Jokuu uutinen asdasd asda asddas</p>
-            </li>
+
+
           </ul>
             </div>
           <div class="news-feed-footer">
               <a class="basic-btn btn--uutiset btn--yellow" href="/ajankohtaista">Katso kaikki</a>
           </div>
         </div>
-      <a class="-nav-link" href="">Palvelut</a>
+      <a class="-nav-link" href="/palvelut">Palvelut</a>
       <a class="-nav-link" href="/laskentakohteet">Laskentakohteet
         <div  class="laskenta-nav-counter">
           <span class="-bold-txt">42</span>
@@ -216,20 +207,23 @@ $app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg ic
        <ul>
          <li>
            <span class="tag">Uutinen</span>
-           <p>Jokuu uutinen lorem lokreerererer erererer</p>
+           <p>Uudet verkkosivut julkaistu</p>
+
+         </li>
+
+               <li>
+           <span class="tag">Artikkeli</span>
+           <p>Uutiskirje: Helmikuu 2022</p>
          </li>
          <li>
            <span class="tag">Uutinen</span>
-           <p>Jokuu uutinen asdasd asda asddas</p>
+           <p>Hyvää pääsiästä toimistolta</p>
          </li>
          <li>
            <span class="tag">Artikkeli</span>
-           <p>Jokuu uutinen asdasd asda asddas</p>
+           <p>Toimiston esittely</p>
          </li>
-         <li>
-           <span class="tag">Uutinen</span>
-           <p>Jokuu uutinen asdasd asda asddas</p>
-         </li>
+
 
        </ul>
          </div>
@@ -247,20 +241,20 @@ $app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg ic
           <button class="basic-btn btn--uutiset btn--yellow js--nav-news-trigger-mobile" href="#">Ajankohtaista</button>
               </div> -->
       <div class="link-wrap">
-        <a  class="h3 -nav-link" href="Palvelut">Palvelut</a>
+        <a  class="h3 -nav-link" href="/palvelut">Palvelut</a>
       </div>
       <div class="link-wrap">
-        <a  class="h3 -nav-link" href="Palvelut">Laskentakohteet
+        <a  class="h3 -nav-link" href="/laskentakohteet">Laskentakohteet
           <div class="laskenta-nav-counter">
             <span>42</span>
           </div>
         </a>
       </div>
       <div class="link-wrap">
-          <a  class="h3 -nav-link" href="Palvelut">Referenssit</a>
+          <a  class="h3 -nav-link" href="/referenssit">Referenssit</a>
       </div>
       <div class="link-wrap">
-          <a  class="h3 -nav-link" href="Palvelut">Yritys</a>
+          <a  class="h3 -nav-link" href="#">Yritys</a>
       </div>
       <div class="link-wrap">
             <a  class="h3 -nav-link" href="#">Ota Yhteyttä</a>

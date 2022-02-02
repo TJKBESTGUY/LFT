@@ -1134,18 +1134,24 @@ p {
 }
 .btn--refe-content-extend {
   opacity: 0;
-  transition: opacity 0.3s linear;
+  transition: opacity 0.25s linear;
   pointer-events: none;
+  // visibility: hidden;
 
 }
 
 .basic-btn .basic-btn__text {
-    transform: translateX(1.2rem);
-    transition: 0.5s 0.1s;
+    // transform: translateX(1.2rem);
+    // transition: 0.5s 0.1s;
 }
 .basic-btn .basic-btn__icon {
-    opacity: 0;
-    transition: 0.25s;
+    // opacity: 0;
+    // transition: 0.25s;
+    // opacity: 0;
+    // transition: opacity 0.25s linear;
+    // transition-delay: 0s;
+    // pointer-events: none;
+    // visibility: hidden;
 }
 
 }
