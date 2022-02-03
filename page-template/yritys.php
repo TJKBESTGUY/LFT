@@ -16,45 +16,16 @@
       <section class="section--home-header U-sec-pad">
         <div class="U_container U_base-pad">
           <div class="module--heading_txt">
-            <div class="heading">
-                <h1>Laadukkaat palvelut</h1>
+            <div class="heading" style="max-width:1200px">
+                <h1>Tarkat laskut heti alkuun,<br> vakaa perusta rakentamiselle</h1>
             </div>
-          </div>
 
-        </div>
-
-      </section>
-      <section class="section--basic U-sec-pad">
-        <div class="U_container U_base-pad">
-
-
-
-
-          <div class="module--split-content">
-                <div class="flx-container">
-                  <div class="cell split-content__img">
-                    <div class="cell_img-content">
-                      <div class="image-aspect-box">
-  <div class="image-aspect-box_inner Anim-item--img" data-scroll>
-  <picture>
-    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
-    </picture>
-
-</div>
-</div>
-                    </div>
-                  </div>
-
-
-            <div class="cell split-content__txt">
-              <div class="cell_txt-content">
-              <p class="cell-p">Hei, tämä on vain testisivu!</p>
-            </div>
+            <div class="flx-container -left-nudge">
+              <div class="cell">
+              <p>Laskemme määräluettelot kattavasti, tarkasti ja tinkimättömällä ammattitaidolla. Olemme kehittäneet määrälaskemisen tekniikoita oikeastaan siitä alkaen, kun määräluetteloita on alettu tehdä rakentamisen tueksi. Edelläkävijätyömme jatkuu. Vankka kokemuksemme näkyy laadukkaana työnä, josta on hyötyä koko rakennusprojektin ajan.</p>
               </div>
 
-          </div>
+            </div>
           </div>
 
         </div>
@@ -63,24 +34,51 @@
 
       <section class="section--basic U-sec-pad">
         <div class="U_container U_base-pad">
-          <div class="module--full-image" data-scroll>
+          <div class="module--full-image ">
             <div class="image-aspect-box">
-              <div class="image-aspect-box_inner ">
+              <div class="image-aspect-box_inner">
               <picture>
-                <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva1.jpg">
-                  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva1.jpg">
-                    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva1.jpg" alt="" src="">
+                <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/7.jpg">
+                  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/7.jpg">
+                    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/7.jpg" alt="" src="">
                 </picture>
-                <picture class="">
-                  <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva2.png">
-                    <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3.png">
-                      <img class="lazy-anim lazyload -overlay-image" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva3.png" alt="" src="">
-                  </picture>
-                  <picture class="">
-                    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3.png">
-                      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva2.png">
-                        <img class="lazy-anim lazyload -overlay-image -delay" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva2.png" alt="" src="">
-                    </picture>
+
+            </div>
+          </div>
+        </div>
+          </div>
+
+      </section>
+
+      <section class="section--home-header U-sec-pad">
+        <div class="U_container U_base-pad">
+          <div class="module--heading_txt">
+            <div class="heading" style="max-width:1200px">
+                <h1>Hyvän rakentamisen alussa:<br>tarkat laskut</h1>
+            </div>
+
+            <div class="flx-container -left-nudge">
+              <div class="cell">
+              <p>Laskemme määräluettelot kattavasti, tarkasti ja tinkimättömällä ammattitaidolla. Olemme kehittäneet määrälaskemisen tekniikoita oikeastaan siitä alkaen, kun määräluetteloita on alettu tehdä rakentamisen tueksi. Edelläkävijätyömme jatkuu. Vankka kokemuksemme näkyy laadukkaana työnä, josta on hyötyä koko rakennusprojektin ajan.</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="section--basic U-sec-pad">
+        <div class="U_container U_base-pad">
+          <div class="module--full-image ">
+            <div class="image-aspect-box">
+              <div class="image-aspect-box_inner">
+              <picture>
+                <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/3.jpg">
+                  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/3.jpg">
+                    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/3.jpg" alt="" src="">
+                </picture>
 
             </div>
           </div>
@@ -91,23 +89,28 @@
 
 
 
-
       <section class="section--basic U-sec-pad">
         <div class="U_container U_base-pad">
-
+          <div class="module--heading_txt">
+            <div class="heading-content">
+                <div class="heading">
+              <h2>Hyvät laskut saavat projektit vauhtiin</h2>
+                </div>
+            </div>
+          </div>
 
 
           <div class="module--split-content -mosaic-split">
                 <div class="flx-container">
                   <div class="cell mosaic-split__img split-content__img">
                     <div class="cell_img-content">
-                        <h3>Laadukasta määrälaskentaa</h3>
+                        <!-- <h3>Hyvät laskut saavat projektit vauhtiin</h3> -->
                       <div class="image-aspect-box -wide-aspect">
-                        <div class="image-aspect-box_inner Anim-item--img" data-scroll>
+                        <div class="image-aspect-box_inner ">
                         <picture>
-                          <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/7.jpg">
-                            <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/7.jpg">
-                              <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/7.jpg" alt="" src="">
+                          <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
+                            <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
+                              <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/8.jpg" alt="" src="">
                           </picture>
 
                       </div>
@@ -117,13 +120,12 @@
             <div class="cell mosaic-split__txt split-content__txt">
               <div class="cell_txt-content">
 
-              <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                    <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
-              <div class="capsule-wrap">
+              <p class="">Laadukkaan rakentamisen perustana toimivat tarkat laskut, jotka tukevat suunnitelmaa. Areitella meillä on yli 30 vuoden kokemus määräluetteloiden tekemisestä kaikenkokoisiin rakennushankkeisiin. Olemme toimittaneet yli tuhat luetteloa, joiden varassa on voinut viedä rakentamisen luottavaisin mielin tarjousvaiheesta valmiiseen rakennukseen. Kun me teemme laskut vankalla kokemuksella, voit sinä keskittyä paremmin olennaiseen omassa työssäsi.</p>
+              <!-- <div class="capsule-wrap">
                 <button class="basic-btn btn--yellow"type="button" name="button"><span class="basic-btn__text">Lue lisää</span> <span class="basic-btn__icon">
                   <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
                 </span> </button>
-              </div>
+              </div> -->
             </div>
               </div>
 
@@ -136,25 +138,25 @@
             <div class="cell mosaic-split__txt">
               <div class="cell_txt-content">
 
-              <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                    <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
-              <div class="capsule-wrap">
+              <p class="">Kun on laskemiseen erikoistuneesta pioneeriyrityksestä kyse, ei ehkä yllätä, että täsmällisyys on meille kaikki kaikessa. Se näkyy luonnollisesti määräluetteloissa, niiden selkeydessä kuin myös aikatauluissa ja hinnoittelussa. Jokainen sentti ja sekunti voi olla kriittinen tarjousvaiheessa, joten teemme perinpohjaista työtä sovitusti.</p>
+
+              <!-- <div class="capsule-wrap">
                 <button class="basic-btn btn--yellow"type="button" name="button"><span class="basic-btn__text">Lue lisää</span> <span class="basic-btn__icon">
                   <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
                 </span> </button>
-              </div>
+              </div> -->
             </div>
               </div>
 
               <div class="cell mosaic-split__img">
                 <div class="cell_img-content">
-                    <h3>Laadukasta määrälaskentaa</h3>
+                    <!-- <h3>Laadukasta määrälaskentaa</h3> -->
                   <div class="image-aspect-box -wide-aspect">
-                    <div class="image-aspect-box_inner Anim-item--img" data-scroll>
+                    <div class="image-aspect-box_inner ">
                     <picture>
-                      <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/7.jpg">
-                        <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/7.jpg">
-                          <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/7.jpg" alt="" src="">
+                      <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b9.jpg">
+                        <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b9.jpg">
+                          <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/b9.jpg" alt="" src="">
                       </picture>
 
                   </div>
@@ -170,93 +172,167 @@
           <div class="module--split-content">
                 <div class="flx-container">
 
-                  <div class="cell split-content__img">
-                    <div class="cell_img-content">
-                      <div class="image-aspect-box -wide-aspect">
-    <div class="image-aspect-box_inner Anim-item--img" data-scroll>
-    <picture>
-    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
-    </picture>
-
-    </div>
-    </div>
-                    </div>
-                  </div>
 
 
-            <div class="cell split-content__txt">
-              <div class="cell_txt-content">
-              <p class="cell-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-            </div>
+
+
+
+              <div class="cell split-content__img">
+                <div class="cell_img-content">
+                  <div class="image-aspect-box -wide-aspect">
+<div class="image-aspect-box_inner ">
+<picture>
+<source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b7.jpg">
+  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b7.jpg">
+    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/b7.jpg" alt="" src="">
+</picture>
+
+</div>
+</div>
+                </div>
               </div>
 
 
-
-          </div>
-          </div>
-
-        </div>
-
-      </section>
-
-
-      <section class="section--super-digit U-sec-marg -dark-mode">
-
-
-        <div class="U_container U_base-pad U_padded-container">
-
-
-                <div class="footer-bg-border">
-                      <div class="cell">
-                      </div>
-                      <div class="cell">
-                      </div>
-                      <div class="cell">
-                      </div>
-                      <div class="cell">
-                      </div>
-                      <div class="cell">
-                      </div>
-                      <div class="cell">
-                      </div>
-                    </div>
-
-          <div class="module--super-digit">
-            <div class="flx-container">
-              <div class="cell super-digit__number">
-                <div data-scroll class="super-digits-mask">
-                  <span class="Anim-item--split -fake-number -bold-txt">
-                      22 412 735
-                    </span>
-                  <span class="Anim-item--split -real-number -bold-txt">
-                    22 412 735
-                    </span>
-
+              <div class="cell split-content__txt">
+                <div class="cell_txt-content">
+                <p class="cell-p">Pitkän linjan suhteet ovat meille tyypillisiä. Työntekijämme ovat sopiva yhdistelmä konkaria ja tuoretta tulokasta, ja keskimääräinen ura Areitella kestää 10 vuotta. Suhteet ihmisiin ja yrityksiin, joille teemme määrälaskennat, ovat myös pitkiä ja perustuvat vahvaan luottamukseen. Kun aloittaa yhteistyön kanssamme, saa pian huomata, että olemme puuttuva osa tarjousprosessia. Meitä ilman voi toki elää, mutta tuomme helpotusta arkeen – ja erityisesti laskemiseen.</p>
+              </div>
                 </div>
 
-                <!-- <span>22 412 735</span> -->
-              </div>
-              <div class="cell super-digit__label">
-                <span class="h3">laskettua neliömetriä yhteensä</span>
-              </div>
-            </div>
 
 
+          </div>
           </div>
 
         </div>
 
       </section>
-
 
       <section class="section--basic U-sec-pad">
         <div class="U_container U_base-pad">
           <div class="module--heading_txt">
             <div class="heading-content">
                 <div class="heading">
-              <h2>Voit hyödyntää palveluitamme myös projektin aikana</h2>
+              <h2>Kokemus tuhansista määräluetteloista</h2>
+                </div>
+            </div>
+          </div>
+
+
+          <div class="module--split-content -mosaic-split">
+                <div class="flx-container">
+                  <div class="cell mosaic-split__img split-content__img">
+                    <div class="cell_img-content">
+                        <!-- <h3>Hyvät laskut saavat projektit vauhtiin</h3> -->
+                      <div class="image-aspect-box -wide-aspect">
+                        <div class="image-aspect-box_inner ">
+                        <picture>
+                          <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/1.jpg">
+                            <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/1.jpg">
+                              <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/1.jpg" alt="" src="">
+                          </picture>
+
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+            <div class="cell mosaic-split__txt split-content__txt">
+              <div class="cell_txt-content">
+
+              <p class="">Laadukkaan rakentamisen perustana toimivat tarkat laskut, jotka tukevat suunnitelmaa. Areitella meillä on yli 30 vuoden kokemus määräluetteloiden tekemisestä kaikenkokoisiin rakennushankkeisiin. Olemme toimittaneet yli tuhat luetteloa, joiden varassa on voinut viedä rakentamisen luottavaisin mielin tarjousvaiheesta valmiiseen rakennukseen. Kun me teemme laskut vankalla kokemuksella, voit sinä keskittyä paremmin olennaiseen omassa työssäsi.</p>
+              <!-- <div class="capsule-wrap">
+                <button class="basic-btn btn--yellow"type="button" name="button"><span class="basic-btn__text">Lue lisää</span> <span class="basic-btn__icon">
+                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
+                </span> </button>
+              </div> -->
+            </div>
+              </div>
+
+
+          </div>
+          </div>
+
+          <div class="module--split-content -mosaic-split">
+                <div class="flx-container">
+            <div class="cell mosaic-split__txt">
+              <div class="cell_txt-content">
+
+              <p class="">Kun on laskemiseen erikoistuneesta pioneeriyrityksestä kyse, ei ehkä yllätä, että täsmällisyys on meille kaikki kaikessa. Se näkyy luonnollisesti määräluetteloissa, niiden selkeydessä kuin myös aikatauluissa ja hinnoittelussa. Jokainen sentti ja sekunti voi olla kriittinen tarjousvaiheessa, joten teemme perinpohjaista työtä sovitusti.</p>
+
+              <!-- <div class="capsule-wrap">
+                <button class="basic-btn btn--yellow"type="button" name="button"><span class="basic-btn__text">Lue lisää</span> <span class="basic-btn__icon">
+                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
+                </span> </button>
+              </div> -->
+            </div>
+              </div>
+
+              <div class="cell mosaic-split__img">
+                <div class="cell_img-content">
+                    <!-- <h3>Laadukasta määrälaskentaa</h3> -->
+                  <div class="image-aspect-box -wide-aspect">
+                    <div class="image-aspect-box_inner ">
+                    <picture>
+                      <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b1.jpg">
+                        <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b1.jpg">
+                          <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/b1.jpg" alt="" src="">
+                      </picture>
+
+                  </div>
+                  </div>
+                </div>
+              </div>
+
+
+          </div>
+          </div>
+
+
+          <div class="module--split-content">
+                <div class="flx-container">
+
+
+
+
+
+
+              <div class="cell split-content__img">
+                <div class="cell_img-content">
+                  <div class="image-aspect-box -wide-aspect">
+<div class="image-aspect-box_inner ">
+<picture>
+<source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b2.jpg">
+  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b2.jpg">
+    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/b2.jpg" alt="" src="">
+</picture>
+
+</div>
+</div>
+                </div>
+              </div>
+
+
+              <div class="cell split-content__txt">
+                <div class="cell_txt-content">
+                <p class="cell-p">Pitkän linjan suhteet ovat meille tyypillisiä. Työntekijämme ovat sopiva yhdistelmä konkaria ja tuoretta tulokasta, ja keskimääräinen ura Areitella kestää 10 vuotta. Suhteet ihmisiin ja yrityksiin, joille teemme määrälaskennat, ovat myös pitkiä ja perustuvat vahvaan luottamukseen. Kun aloittaa yhteistyön kanssamme, saa pian huomata, että olemme puuttuva osa tarjousprosessia. Meitä ilman voi toki elää, mutta tuomme helpotusta arkeen – ja erityisesti laskemiseen.</p>
+              </div>
+                </div>
+
+
+
+          </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- <section class="section--basic U-sec-pad">
+        <div class="U_container U_base-pad">
+          <div class="module--heading_txt">
+            <div class="heading-content">
+                <div class="heading">
+              <h2>Hyvän rakentamisen alussa: tarkat laskut</h2>
                 </div>
               <p class="ingr">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
             </div>
@@ -264,12 +340,12 @@
 
         </div>
 
-      </section>
+      </section> -->
 
 
 
 
-      <section class="section--basic U-sec-pad">
+      <!-- <section class="section--basic U-sec-pad">
         <div class="U_container U_base-pad">
           <div class="module--full-image">
             <div class="image-aspect-box">
@@ -293,19 +369,19 @@
         </div>
           </div>
 
-      </section>
+      </section> -->
 
 
 
             <section class="section--basic U-sec-pad">
               <div class="U_container U_base-pad">
-                <div class="module--full-image">
+                <div class="module--full-image ">
                   <div class="image-aspect-box">
                     <div class="image-aspect-box_inner">
                     <picture>
-                      <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/3.jpg">
-                        <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/3.jpg">
-                          <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/3.jpg" alt="" src="">
+                      <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/1.jpg">
+                        <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/1.jpg">
+                          <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/1.jpg" alt="" src="">
                       </picture>
 
                   </div>
@@ -358,10 +434,24 @@
 
           <div class="module--split-content">
                 <div class="flx-container">
+                  <div class="cell split-content__img">
+                    <div class="cell_img-content">
+                      <div class="image-aspect-box">
+        <div class="image-aspect-box_inner ">
+        <picture>
+          <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b4.jpg">
+            <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b4.jpg">
+              <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/b4.jpg" alt="" src="">
+          </picture>
+
+      </div>
+      </div>
+                    </div>
+                  </div>
             <div class="cell split-content__txt">
               <div class="cell_txt-content">
-              <h3>Määrälaskentapalvelut</h3>
-              <p class="cell-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+              <h3>Laskuilla pääsee vauhtiin</h3>
+              <p class="cell-p">Pitkän linjan suhteet ovat meille tyypillisiä. Työntekijämme ovat sopiva yhdistelmä konkaria ja tuoretta tulokasta, ja keskimääräinen ura Areitella kestää 10 vuotta. Suhteet ihmisiin ja yrityksiin, joille teemme määrälaskennat, ovat myös pitkiä ja perustuvat vahvaan luottamukseen. Kun aloittaa yhteistyön kanssamme, saa pian huomata, että olemme puuttuva osa tarjousprosessia. Meitä ilman voi toki elää, mutta tuomme helpotusta arkeen – ja erityisesti laskemiseen.</p>
               <div class="capsule-wrap">
                 <button class="basic-btn btn--yellow"type="button" name="button"><span class="basic-btn__text">Lue lisää</span> <span class="basic-btn__icon">
                   <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
@@ -370,51 +460,12 @@
             </div>
               </div>
 
-            <div class="cell split-content__img">
-              <div class="cell_img-content">
-                <div class="image-aspect-box">
-  <div class="image-aspect-box_inner Anim-item--img" data-scroll>
-  <picture>
-    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
-    </picture>
-
-</div>
-</div>
-              </div>
-            </div>
-          </div>
-          </div>
-
-
-          <div class="module--split-content">
-                <div class="flx-container">
-                  <div class="cell split-content__img">
-                    <div class="cell_img-content">
-                      <div class="image-aspect-box">
-  <div class="image-aspect-box_inner Anim-item--img" data-scroll>
-  <picture>
-    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
-    </picture>
-
-</div>
-</div>
-                    </div>
-                  </div>
-
-
-            <div class="cell split-content__txt">
-              <div class="cell_txt-content">
-              <h3>Kokemuksella</h3>
-              <p class="cell-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-            </div>
-              </div>
 
           </div>
           </div>
+
+
+
 
         </div>
 
@@ -427,17 +478,17 @@
               <div class="cell super-digit__number">
                 <div data-scroll class="super-digits-mask">
                   <span class="Anim-item--split -fake-number -bold-txt">
-                      204 500
+                      Palvelut
                     </span>
                   <span class="Anim-item--split -real-number -bold-txt">
-                    204 500
+                    Palvelut
                     </span>
 
                 </div>
               </div>
-              <div class="cell super-digit__label">
+              <!-- <div class="cell super-digit__label">
                 <span class="h3">suurin laskettu kohde (m2)</span>
-              </div>
+              </div> -->
             </div>
 
 
@@ -449,13 +500,13 @@
 
       <section class="section--basic U-sec-pad">
         <div class="U_container U_base-pad">
-          <div class="module--full-image -left-nudge">
-            <div class="image-aspect-box Anim-item--img" data-scroll>
+          <div class="module--full-image ">
+            <div class="image-aspect-box ">
   <div class="image-aspect-box_inner">
   <picture>
-    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
+    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b2.jpg">
+      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b2.jpg">
+        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/b2.jpg" alt="" src="">
     </picture>
 
 </div>
@@ -466,72 +517,19 @@
       </section>
 
 
-      <section class="section--basic U-sec-pad">
+      <section class="section--home-header U-sec-pad">
         <div class="U_container U_base-pad">
-          <div class="module--full-image -right-nudge">
-            <div class="image-aspect-box">
-  <div class="image-aspect-box_inner Anim-item--img" data-scroll>
-  <picture>
-    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
-    </picture>
-
-</div>
-</div>
-        </div>
-          </div>
-
-      </section>
-
-
-
-
-
-
-
-
-
-
-      <section class="section--basic U-sec-pad">
-        <div class="U_container U_base-pad">
-          <div class="module--split-content">
-            <!-- <div class="heading-content">
-            <div class="heading">
-                <h2>luotettava määräluettelo, laadukkaan rakentamisen perusta</h2>
+          <div class="module--heading_txt">
+            <div class="heading" style="max-width:1200px">
+                <h1>Jatkuva kehitys pitää<br>askeleen edellä</h1>
             </div>
 
-              <p class="ingr">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-            </div> -->
-
-                <div class="flx-container">
-                  <div class="cell split-content__img">
-                    <div class="cell_img-content">
-                      <div class="image-aspect-box">
-  <div class="image-aspect-box_inner Anim-item--img" data-scroll>
-  <picture>
-    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
-    </picture>
-
-</div>
-</div>
-                    </div>
-                  </div>
-
-
-            <div class="cell split-content__txt">
-              <div class="cell_txt-content">
-              <h3>Voit hyödyntää palveluitamme myös projektin aikana</h3>
-              <p class="cell-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-            </div>
+            <div class="flx-container">
+              <div class="cell">
+              <p>Kehitämme jatkuvasti työtapojamme ja liiketoimintaamme. Kaikki lähtee vankasta osaamisesta ja kokemuksesta, jota hyödynnämme päivittäin työssämme. Edelläkävijyys on ollut meille alusta asti luontaista, joten etsimme aina uusia tapoja kehittää toimintaamme, jotta voimme palvella rakennusalaa vielä paremmin. Määrälaskenta sujuvoittaa työtä, antaa vakaan perustan rakennushankkeille ja vähentää hävikkiä – niin materiaaleissa kuin tehokkuudessa.</p>
               </div>
 
-
-
-
-          </div>
+            </div>
           </div>
 
         </div>
@@ -539,11 +537,63 @@
       </section>
 
 
+      <section class="section--basic U-sec-pad">
+        <div class="U_container U_base-pad">
+          <div class="module--full-image ">
+            <div class="image-aspect-box ">
+  <div class="image-aspect-box_inner">
+  <picture>
+    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b3.jpg">
+      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b3.jpg">
+        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/b3.jpg" alt="" src="">
+    </picture>
+
+</div>
+</div>
+        </div>
+          </div>
+
+      </section>
+
+      <section class="section--home-header U-sec-pad">
+        <div class="U_container U_base-pad">
+          <div class="module--heading_txt">
+            <div class="heading" style="max-width:1200px">
+                <h1>Osaaminen laadun ja tarkkuuden perustana</h1>
+            </div>
+
+            <div class="flx-container">
+              <div class="cell">
+              <p>Kehitämme jatkuvasti työtapojamme ja liiketoimintaamme. Kaikki lähtee vankasta osaamisesta ja kokemuksesta, jota hyödynnämme päivittäin työssämme. Edelläkävijyys on ollut meille alusta asti luontaista, joten etsimme aina uusia tapoja kehittää toimintaamme, jotta voimme palvella rakennusalaa vielä paremmin. Määrälaskenta sujuvoittaa työtä, antaa vakaan perustan rakennushankkeille ja vähentää hävikkiä – niin materiaaleissa kuin tehokkuudessa.</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="section--basic U-sec-pad">
+        <div class="U_container U_base-pad">
+          <div class="module--full-image ">
+            <div class="image-aspect-box ">
+  <div class="image-aspect-box_inner">
+  <picture>
+    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b2.jpg">
+      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b2.jpg">
+        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/b2.jpg" alt="" src="">
+    </picture>
+
+</div>
+</div>
+        </div>
+          </div>
+
+      </section>
 
 
 
-
-<?php locate_template('src/parts/global/bottom-marquee.php', true, true); ?>
 
 <?php locate_template('src/parts/global/bottom-cta.php', true, true); ?>
 
