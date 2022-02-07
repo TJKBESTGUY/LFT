@@ -4,6 +4,30 @@
    */
    get_header(); ?>
 
+
+<!-- BACEND QUERY  -->
+
+
+<?php
+
+$posts_laskenta = get_posts(array(
+ 'posts_per_page'	=> 200,
+ 'post_type'			=> 'laskentakohteet',
+ 'orderby'=> 'title',
+ 'order' => 'ASC',
+));
+
+
+?>
+
+
+
+
+
+
+
+   <!-- BACKEND QUERY END -->
+
    <div id="primary" class="content-area">
  		<main id="main" class="site-main" role="main">
 
@@ -165,60 +189,39 @@
                 </thead>
 
                 <tbody class="laskentakohteet-app__body">
-                  <tr class="Anim-item--list" data-area="paakaupunki">
-                    <td class="td--kohde">
-                      <div class="flx-container">
-                        <span class="td__label">Heka</span>
-                      <span class="td__name">Maunula Töyrytie 3</span>
-                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Pääkaupunkiseutu</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 92 kpl</span></span>
-                      </div>
 
+                  <?php	if( $posts_laskenta ): ?>
+                    <?php foreach( $posts_laskenta as $post ):
+                      setup_postdata( $post ); ?>
 
-                    </td>
+                      <?php $alue_term = get_field( 'alue' ); ?>
 
-                    <td class="td--basic-cell">
-                      <div class="">
+                    <tr class="Anim-item--list" data-area="<?php if ( $alue_term ): ?> <?php echo $alue_term->name; ?><?php endif; ?>">
+                       <?php if ( have_rows( 'kohde' ) ) : ?>
+                  	<?php while ( have_rows( 'kohde' ) ) : the_row(); ?>
+                      <td class="td--kohde">
                         <div class="flx-container">
                           <span class="td__label">&#8203;</span>
-                        <span class="td__name">Laajennus</span>
-                        <span class="td__xtra-info">&#8203;</span>
+                        <span class="td__name"><?php the_sub_field( 'kohteen_osoite' ); ?></span>
+                        <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg"><?php echo $alue_term->name; ?></span></span>
                         </div>
-                      </div>
-
-                    </td>
-                    <td class="td--basic-cell">
+                      </td>
+                  	<?php endwhile; ?>
+                  <?php endif; ?>
+                  <td class="td--basic-cell">
+                    <div class="">
                       <div class="flx-container">
                         <span class="td__label">&#8203;</span>
-                      <span class="td__name">8187</span>
-                        <span class="td__xtra-info">&#8203;</span>
+                      <span class="td__name"><?php the_field( 'kohteen_tyyppi' ); ?></span>
+                      <span class="td__xtra-info">&#8203;</span>
                       </div>
-                    </td>
+                    </div>
 
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name">24499</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name">15.12.2021</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name -yellow">Valmis</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-
-                  </tr>
+                  </td>
+                        </tr>
+                     <?php endforeach; ?>
+                     <?php wp_reset_postdata(); ?>
+                    <?php endif; ?>
 
                   <tr class="Anim-item--list" data-area="etela">
                     <td class="td--kohde">
