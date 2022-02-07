@@ -192,6 +192,17 @@ transition: 0.25s;
   }
 }
 
+.section--bottom-cta {
+  transition: 0.25s;
+}
+
+.S-animating--articles{
+.section--bottom-cta {
+    opacity: 0;
+  
+  }
+}
+
 // SINGLE POST ///////
 
 

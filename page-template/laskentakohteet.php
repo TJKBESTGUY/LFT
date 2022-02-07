@@ -495,6 +495,1464 @@
 
 
                   </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
+                  <tr class="Anim-item--list" data-area="etela">
+                    <td class="td--kohde">
+                      <div class="flx-container">
+                        <span class="td__label">ELO</span>
+                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
+                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Etelä-Suomi</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
+                      </div>
+
+
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="">
+                        <div class="flx-container">
+                          <span class="td__label">&#8203;</span>
+                        <span class="td__name">Uudisrakennus</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">19187</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">120499</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">15.09.2021</span>
+                        <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </td>
+                    <td class="td--basic-cell">
+                      <div class="flx-container">
+                        <span class="td__label">&#8203;</span>
+                      <span class="td__name">vko 49</span>
+                        <span class="td__xtra-info">Viimeistään 15.06.2020</span>
+                      </div>
+                    </td>
+
+
+                  </tr>
 
                 </tbody>
 

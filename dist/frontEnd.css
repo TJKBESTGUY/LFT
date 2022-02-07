@@ -5571,16 +5571,16 @@ input:focus + .input-append {
   width: 50%;
   display: inline-flex;
   align-items: center;
-  max-height: 24px;
+  max-height: 16px;
 }
 .flx-nav .header-logo a {
   display: inline-block;
   line-height: 1;
-  max-height: 24px;
+  max-height: 16px;
   opacity: 1 !important;
 }
 .flx-nav .header-logo svg {
-  height: 24px;
+  height: 16px;
   width: auto;
 }
 .flx-nav .navigation-links {
@@ -7032,6 +7032,14 @@ ul.article-feed__content li {
 .S-animating--articles .article-feed__content {
   opacity: 0;
   transform: translateY(20px);
+}
+
+.section--bottom-cta {
+  transition: 0.25s;
+}
+
+.S-animating--articles .section--bottom-cta {
+  opacity: 0;
 }
 
 .btn--go-back {
