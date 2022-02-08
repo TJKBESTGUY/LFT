@@ -242,7 +242,7 @@ function filter_tr() {
 	});
   contact_persons.forEach(function (elem) {
     // console.log(elem);
-     if (elem.dataset.area.includes(targets_area)) {
+     if (elem.classList.contains(targets_area)) {
        elem.classList.add("S-active");
        }
        else  {
@@ -373,14 +373,14 @@ area_contact_cells.forEach(function (elem) {
 elem.classList.remove("S-active__area");
 elem.classList.remove("S-disabled__area");
 console.log(active_area);
-if (elem.dataset.areacode.includes(area_array)) {
+if (elem.dataset.areacode.includes(active_area) ) {
 elem.classList.add("S-active__area");
 }
 else {
 elem.classList.add("S-disabled__area");
 }
 
-if (e.target.classList.contains("-hc-filter__trigger")) {
+if (e.target.classList.contains("ita-ja-pohjois")) {
     e.target.classList.remove("S-disabled__area");
   e.target.classList.add("S-active__area");
   document.querySelectorAll(".-hc-filter__target").forEach(function (elem) {
@@ -394,9 +394,6 @@ if (e.target.classList.contains("-hc-filter__trigger")) {
 
 function area_cell_hover_out(e){
 console.log("hover out");
-
-
-
 area_contact_cells.forEach(function (elem) {
 elem.classList.remove("S-active__area");
 elem.classList.remove("S-disabled__area");

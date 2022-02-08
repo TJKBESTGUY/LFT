@@ -6560,6 +6560,9 @@ tbody tr, .tbody tr {
 .module--laskentakohteet-app.-full-app .td--kohde {
   background: #333333;
 }
+.module--laskentakohteet-app.-full-app .td--basic-cell {
+  background: #333333;
+}
 
 .module--laskentakohteet-app.-full-app tr td {
   transition: background 0.25s;

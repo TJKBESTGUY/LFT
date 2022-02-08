@@ -1,0 +1,249 @@
+{
+    "key": "group_6202433b70f85",
+    "title": "Yhteyshenkilöt",
+    "fields": [
+        {
+            "key": "field_6202588d2cc18",
+            "label": "Henkilö",
+            "name": "henkilo",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "admin_only": 0,
+            "collapsed": "field_6202592d83506",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_620258c52cc19",
+                    "label": "Alue",
+                    "name": "alue",
+                    "type": "taxonomy",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "admin_only": 0,
+                    "taxonomy": "alueet",
+                    "field_type": "checkbox",
+                    "add_term": 0,
+                    "save_terms": 0,
+                    "load_terms": 0,
+                    "return_format": "object",
+                    "multiple": 0,
+                    "allow_null": 0
+                },
+                {
+                    "key": "field_620267adecd96",
+                    "label": "Alueiden otsikko",
+                    "name": "alueiden_otsikko",
+                    "type": "text",
+                    "instructions": "Lisää otsikko alueelle\/alueille. Näkyy kartan yhteydessä. Huomio yhteyshenkilöiden järjestys tässä näkymässä.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "admin_only": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "autocomplete": "",
+                    "ign_set_data": ""
+                },
+                {
+                    "key": "field_6202592d83506",
+                    "label": "Nimi",
+                    "name": "nimi",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "admin_only": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "autocomplete": "",
+                    "ign_set_data": ""
+                },
+                {
+                    "key": "field_620259e18e754",
+                    "label": "Titteli",
+                    "name": "titteli",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "admin_only": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "autocomplete": "",
+                    "ign_set_data": ""
+                },
+                {
+                    "key": "field_6202593583507",
+                    "label": "Sähköposti",
+                    "name": "sahkoposti",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "admin_only": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "autocomplete": "",
+                    "ign_set_data": ""
+                },
+                {
+                    "key": "field_6202595983508",
+                    "label": "Puhelinnumero (Tekstimuoto)",
+                    "name": "puhelinnumero_tekstimuoto",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "admin_only": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "autocomplete": "",
+                    "ign_set_data": ""
+                },
+                {
+                    "key": "field_6202598c83509",
+                    "label": "Puhelinnumero (maakoodilla)",
+                    "name": "puhelinnumero_maakoodilla",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "admin_only": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "autocomplete": "",
+                    "ign_set_data": ""
+                },
+                {
+                    "key": "field_620259c96dc11",
+                    "label": "Kuva",
+                    "name": "kuva",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "admin_only": 0,
+                    "ign_set_data": "",
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_62027eeb59395",
+                    "label": "Kartan moniarvo",
+                    "name": "kartan_moniarvo",
+                    "type": "text",
+                    "instructions": "Huomio! Tämä lisäys liittyy karttaan, jotta kartta saadaan toimimaan oikein, jos yhteyshenkilöllä on enemmän kuin yksi aluehallinnassa. Kyseinen lisäys koskee vain yhdistelmää Itä-Suomi & Pohjois-Suomi. Jos alueen yhteyshenkilö ei enää ole sama, tulee tämä arvo poistaa. Jos yhdistelmä on jokin muu, ota yhteyttä tatu@gdmn.fi",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "admin_only": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "autocomplete": "",
+                    "ign_set_data": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "yhteyshenkilot"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1644330964
+}

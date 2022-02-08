@@ -119,7 +119,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -146,7 +146,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -166,7 +166,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -188,7 +188,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -222,6 +222,87 @@
             "maxlength": "",
             "autocomplete": "",
             "ign_set_data": ""
+        },
+        {
+            "key": "field_62022682345c2",
+            "label": "Valmistuu",
+            "name": "valmistuu",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "admin_only": 0,
+            "ign_set_data": "",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_620227d0fcbd0",
+                    "label": "Viikko",
+                    "name": "viikko",
+                    "type": "text",
+                    "instructions": "Lisää tähän valmistusmisviikko: \"vko 49\". Jos kohde on valmis, lisää tähän silti viikko. Valitse kuitenkin alla olevasta päivämäärän valinnasta kyseistä päivää aikaisempi päivämäärä.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "admin_only": 0,
+                    "default_value": "",
+                    "placeholder": "vko 49",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "autocomplete": "",
+                    "ign_set_data": ""
+                },
+                {
+                    "key": "field_6202282ce5843",
+                    "label": "Valmistumisaika",
+                    "name": "valmistumisaika",
+                    "type": "date_picker",
+                    "instructions": "Valitse tästä aika milloin \"Valmistuu\" kenttä muuttuu statuksella \"Valmis\".",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "admin_only": 0,
+                    "display_format": "d\/m\/Y",
+                    "return_format": "Ymd",
+                    "first_day": 1
+                },
+                {
+                    "key": "field_620240c6fef1d",
+                    "label": "valmistumisen lisätiedot",
+                    "name": "valmistumisen_lisatiedot",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "admin_only": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "autocomplete": "",
+                    "ign_set_data": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -241,5 +322,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1644245947
+    "modified": 1644314839
 }

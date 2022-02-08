@@ -398,3 +398,28 @@ require_once get_parent_theme_file_path( '/inc/core/dev-helpers.php' );
 //Ignition will also search two directories deep for more underscored files within inc, blocks, and post-types folders.
 // (ie: inc/acf-extras/_acf-extras.php )
 
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# CUSTOM FUNCTIONS
+--------------------------------------------------------------*/
+
+
+///ACF OPTIONS//////
+
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Yhteyshenkilot',
+		'menu_title'	=> 'Yhteyshenkilot',
+		'menu_slug' 	=> 'yhteyshenkilot',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+
+
+}
