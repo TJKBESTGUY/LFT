@@ -3628,8 +3628,8 @@ var {
 }
 
 .btn--small {
-  font-size: 1.6rem;
-  padding: 10px 24px;
+  font-size: 1.3rem;
+  padding: 6px 10px;
 }
 
 .btn--wide {
@@ -5346,7 +5346,6 @@ Moved: _kohteet
 --------------------------------------------------------------*/
 label {
   display: block;
-  font-weight: 800;
 }
 
 fieldset {
@@ -6874,6 +6873,161 @@ th.no-sort:after {
 }
 .area-contact-person.S-disabled__area .-anim .area-contact-person.S-active__area .-anim {
   opacity: 1;
+}
+
+.section--form-laskenta {
+  padding: 80px 0;
+}
+
+.module--form-laskenta {
+  max-width: 700px;
+  margin: auto;
+  font-weight: 400;
+  padding: 60px;
+  background: white;
+  border-radius: 0.4rem;
+  color: black;
+}
+.module--form-laskenta h4 {
+  margin-top: 0;
+}
+.module--form-laskenta select {
+  font-weight: 400;
+  margin-bottom: 20px;
+  font-weight: inherit;
+  font-size: 1.6rem;
+  color: black;
+  border-radius: 4px;
+  padding: 10px 10px;
+}
+.module--form-laskenta input, .module--form-laskenta textarea {
+  margin-bottom: 20px;
+  font-weight: 400;
+  padding: 10px 10px;
+  font-size: 1.5rem;
+  border-radius: 3px;
+  color: black;
+}
+.module--form-laskenta input:focus, .module--form-laskenta textarea:focus {
+  border: 1px solid black;
+  background: white;
+}
+.module--form-laskenta label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #393939;
+}
+
+.form-info p {
+  font-size: 14px;
+}
+.form-info button {
+  margin-bottom: 20px;
+}
+.form-info button.S-muted {
+  opacity: 0.2;
+}
+
+.form-laskenta__checkboxes {
+  display: flex;
+  margin: 10px 0;
+  margin-bottom: 30px;
+}
+
+.checkbox-cell {
+  display: flex;
+  align-items: center;
+  margin-right: 18px;
+}
+.form-control {
+  display: flex;
+  align-items: center;
+}
+.form-control span {
+  margin-left: 6px;
+}
+.form-control input[type=checkbox] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  -moz-appearance: none;
+       appearance: none;
+  /* For iOS < 15 */
+  background-color: white;
+  /* Not removed via appearance */
+  margin: 0;
+  width: 10px;
+  height: 10px;
+  border: solid 1px black;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  place-content: center;
+}
+.form-control input[type=checkbox]::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  -webkit-clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+          clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  /* Windows High Contrast Mode */
+  background-color: black;
+}
+.form-control input[type=checkbox]:checked {
+  background: black;
+}
+.form-control input[type=checkbox]:checked::before {
+  transform: scale(1);
+  background: white;
+}
+.modal-smoke {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: black;
+  opacity: 0.6;
+  transition: opacity 0.25s;
+  z-index: 888;
+}
+
+.form-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  overflow-y: auto;
+}
+.form-modal .module--form-laskenta {
+  transition: 0.25s;
+  pointer-events: all;
+  position: relative;
+  z-index: 3;
+}
+
+.form-modal.S-hidden {
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.form-modal.S-hidden .module--form-laskenta {
+  transform: translateY(40px);
+  opacity: 0;
+}
+
+.modal-smoke.S-hidden {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
 }
 
 @media only screen and (min-width: 1100.11px) {

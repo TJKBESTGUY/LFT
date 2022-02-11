@@ -414,3 +414,72 @@ elem.classList.remove("S-disabled__area");
 
 ///////TEMPALTE WRAP ENDS//////////
 }
+
+
+
+
+
+
+// THE FORM
+
+form_init();
+
+function form_init() {
+var table_elems = document.querySelectorAll('.laskentakohteet-app__body tr');
+table_elems.forEach(function (elem) {
+elem.addEventListener("click", form_selection);
+});
+
+
+
+function form_selection(e) {
+  console.log("click on tr");
+    console.log(e.currentTarget);
+  var target_ID = e.currentTarget.id
+ const select_target = document.querySelector('#select-options');
+var optionToSelect = document.querySelector("#option-" + target_ID + "")
+console.log(optionToSelect);
+console.log(optionToSelect.value);
+select_target.value = optionToSelect.value;
+}
+document.querySelector(".js--from-show-more").onclick = function(e){
+  document.querySelector(".form-laskenta__checkboxes").removeAttribute("style");
+  e.currentTarget.classList.add("S-muted")
+};
+
+btn_show_form = document.querySelectorAll(".js--show-form-modal");
+btn_show_form.forEach(function (elem) {
+elem.addEventListener("click", show_form);
+});
+
+// btn_hide_form = document.querySelectorAll(".js--hide-form-modal");
+// btn_hide_form.forEach(function (elem) {
+// elem.addEventListener("click", hide_form);
+// });
+
+function show_form(e) {
+console.log("toggle form");
+document.querySelector(".modal-smoke").classList.remove("S-hidden");
+document.querySelector(".form-modal").classList.remove("S-hidden");
+}
+
+function hide_form(e) {
+
+    document.querySelector(".modal-smoke").classList.add("S-hidden");
+    document.querySelector(".form-modal").classList.add("S-hidden");
+
+console.log("toggle form");
+}
+
+var modal_container = document.querySelector('.form-modal');
+modal_container.addEventListener('click', event => {
+
+
+  if(event.target.classList.contains("js--hide-modal")) {
+      console.log("modal click");
+      hide_form();
+
+  }
+});
+
+}

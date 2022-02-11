@@ -665,3 +665,201 @@ border-top: solid 1px $a-text-grey;
 // }
 //
 // }
+
+
+.section--form-laskenta {
+padding: 80px 0;
+}
+
+.module--form-laskenta {
+  max-width: 700px;
+  margin: auto;
+  font-weight: 400;
+  padding: 60px;
+  background: white;
+  border-radius: 0.4rem;
+
+  color:black;
+
+  h4 {
+    margin-top: 0;
+  }
+  select {
+    font-weight: 400;
+    margin-bottom: 20px;
+      font-weight: inherit;
+      font-size: 1.6rem;
+      color:black;
+      border-radius: 4px;
+        padding: 10px 10px;
+
+  }
+  input, textarea {
+    margin-bottom: 20px;
+    font-weight: 400;
+        padding: 10px 10px;
+        font-size: 1.5rem;
+        border-radius: 3px;
+        color:black;
+  }
+  input:focus, textarea:focus {
+    border: 1px solid black;
+    background: white;
+
+  }
+  label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #393939;
+
+  }
+
+}
+
+.form-info {
+  p {
+    font-size: 14px;
+  }
+  button {
+    margin-bottom: 20px;
+    &.S-muted {
+      opacity: 0.2;
+    }
+  }
+}
+
+
+.form-laskenta__checkboxes {
+  display: flex;
+  margin: 10px 0;
+  margin-bottom: 30px;
+}
+
+.checkbox-cell {
+  display: flex;
+  align-items: center;
+  margin-right: 18px;
+  input {
+    // margin: 0;
+    // margin-right: 6px;
+  }
+  label {
+    // font-size: 14px;
+    // font-weight: 400;
+    // margin: 0;
+
+  }
+}
+
+
+
+
+
+
+
+
+.form-control {
+  display: flex;
+    align-items: center;
+
+    span {
+          margin-left: 6px;
+    }
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: white;
+  /* Not removed via appearance */
+  margin: 0;
+  width: 10px;
+  height: 10px;
+  border: solid 1px black;
+
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+
+  /* Windows High Contrast Mode */
+  background-color: black;
+}
+
+
+input[type="checkbox"]:checked{
+background: black;
+}
+
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+  background: white;
+}
+
+input[type="checkbox"]:focus {
+
+}
+
+}
+
+
+
+.modal-smoke {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: black;
+  opacity: 0.6;
+  transition: opacity 0.25s;
+  z-index: 888;
+}
+.form-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  overflow-y: auto;
+
+    .module--form-laskenta {
+      transition: 0.25s;
+      pointer-events: all;
+      // pointer-events: none;
+      position: relative;
+      z-index: 3;
+    }
+
+}
+
+.form-modal.S-hidden {
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+  .module--form-laskenta {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+}
+
+.modal-smoke.S-hidden {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+}

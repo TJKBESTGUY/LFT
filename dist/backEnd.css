@@ -1712,8 +1712,8 @@ div .editor-styles-wrapper .btn--black svg {
   fill: #F0FF31;
 }
 div .editor-styles-wrapper .btn--small {
-  font-size: 1.6rem;
-  padding: 10px 24px;
+  font-size: 1.3rem;
+  padding: 6px 10px;
 }
 div .editor-styles-wrapper .btn--wide {
   font-size: 2rem;
@@ -5761,7 +5761,6 @@ div .editor-styles-wrapper .acf-block-preview .submenu-dropdown-toggle:focus {
 }
 div .editor-styles-wrapper .acf-block-preview label {
   display: block;
-  font-weight: 800;
 }
 div .editor-styles-wrapper .acf-block-preview fieldset {
   margin-bottom: 30px;
