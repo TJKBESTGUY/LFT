@@ -68,6 +68,28 @@
                     "ign_set_data": ""
                 },
                 {
+                    "key": "field_6214cd4964d29",
+                    "label": "Maakunnat",
+                    "name": "maakunnat",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "admin_only": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "autocomplete": "",
+                    "ign_set_data": ""
+                },
+                {
                     "key": "field_6202592d83506",
                     "label": "Nimi",
                     "name": "nimi",
@@ -245,5 +267,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1644330964
+    "modified": 1645530477
 }

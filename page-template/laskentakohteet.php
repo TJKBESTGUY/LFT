@@ -895,7 +895,8 @@ $posts_laskenta = get_posts(array(
     </div>
     <?php } ?>
     <div class="cell area-contact-person__content">
-      <h5 class="content__top"><?php the_sub_field( 'alueiden_otsikko' ); ?></h5>
+      <h5 class="content__top"><?php the_sub_field( 'alueiden_otsikko' ); ?>
+      <span style="font-size:1.4rem;opacity:0.7;font-weight:500;margin-top:4px;display:block"><?php the_sub_field( 'maakunnat' ); ?></span></h5>
       <div class="content__bottom">
         <p class="strong"><?php the_sub_field( 'nimi' ); ?></p>
         <p><?php the_sub_field( 'titteli' ); ?></p>
