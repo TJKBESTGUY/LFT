@@ -452,10 +452,10 @@ btn_show_form.forEach(function (elem) {
 elem.addEventListener("click", show_form);
 });
 
-// btn_hide_form = document.querySelectorAll(".js--hide-form-modal");
-// btn_hide_form.forEach(function (elem) {
-// elem.addEventListener("click", hide_form);
-// });
+btn_hide_form = document.querySelectorAll(".js--hide-modal__btn");
+btn_hide_form.forEach(function (elem) {
+elem.addEventListener("click", hide_form);
+});
 
 function show_form(e) {
 console.log("toggle form");

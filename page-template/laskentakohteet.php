@@ -174,6 +174,7 @@ $posts_laskenta = get_posts(array(
                       <?php $id = get_the_ID(); ?>
 
                     <tr id="<?php echo $id; ?>" class="Anim-item--list js--show-form-modal" data-area="<?php if ( $alue_term ): ?><?php echo $alue_term->slug; ?><?php endif; ?>">
+
                        <?php if ( have_rows( 'kohde' ) ) : ?>
                   	<?php while ( have_rows( 'kohde' ) ) : the_row(); ?>
                       <td class="td--kohde">
@@ -240,8 +241,6 @@ $posts_laskenta = get_posts(array(
                     <div class="">
                       <div class="flx-container">
                         <span class="td__label">&#8203;</span>
-
-
                         <?php if ( have_rows( 'valmistuu' ) ) : ?>
   	<?php while ( have_rows( 'valmistuu' ) ) : the_row(); ?>
   		<?php $date = get_sub_field( 'valmistumisaika', false, false ); ?>
@@ -265,8 +264,9 @@ $posts_laskenta = get_posts(array(
     <?php endif; ?>
                       </div>
                     </div>
-
+    <div class="tr__hover-action-indicator">Pyydä tarjous</div>
                   </td>
+
                         </tr>
                      <?php endforeach; ?>
                      <?php wp_reset_postdata(); ?>
@@ -1065,6 +1065,10 @@ $posts_laskenta = get_posts(array(
 
         <div class="U_container U_base-pad js--hide-modal">
           <div class="module--form-laskenta">
+            <button class=" btn--hide-modal js--hide-modal__btn" type="button" name="button">
+
+        <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.222 17.778L17.778 2.222M2.222 2.222l15.556 15.556" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path></svg>
+      </button>
             <h4>Pyydä tarjous alla olevan lomakkeen kautta</h4>
     <form action="https://getform.io/f/d21d3adc-721c-40fa-8b28-18ac4036b976" method="POST">
       <!-- select field handle -->

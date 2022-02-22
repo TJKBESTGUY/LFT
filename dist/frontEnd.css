@@ -6508,6 +6508,7 @@ td:after {
 
 tbody tr, .tbody tr {
   position: relative;
+  cursor: pointer;
 }
 
 .laskentakohteet-app__footer {
@@ -6569,6 +6570,25 @@ tbody tr, .tbody tr {
 
 .module--laskentakohteet-app.-full-app tr:hover td {
   background: #1b1b1b;
+}
+
+.tr__hover-action-indicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1rem;
+  background: #f0ff32;
+  color: black;
+  padding: 4px 4px;
+  line-height: 1;
+  border-radius: 4px;
+  opacity: 0;
+}
+
+.module--laskentakohteet-app.-full-app tr:hover .tr__hover-action-indicator {
+  opacity: 1;
+  transform: none;
+  transition: 0.25s;
 }
 
 .-home-preview .laskentakohteet-app__header tr:after {
@@ -6984,6 +7004,24 @@ th.no-sort:after {
   transform: scale(1);
   background: white;
 }
+.btn--hide-modal {
+  display: flex;
+  height: 36px;
+  width: 36px;
+  align-items: center;
+  justify-content: center;
+  background: #f0ff32;
+  border: none;
+  border-radius: 9999px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+.btn--hide-modal svg {
+  transform: scale(0.7);
+}
+
 .modal-smoke {
   position: fixed;
   top: 0;
