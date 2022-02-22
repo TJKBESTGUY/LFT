@@ -912,7 +912,7 @@ $posts_laskenta = get_posts(array(
 <?php endif; ?>
 
 
-<div class="area-contact-person js--area-hover-item" data-areacode="paakaupunkiseutu">
+<!-- <div class="area-contact-person js--area-hover-item" data-areacode="paakaupunkiseutu">
   <div class="flx-container -anim">
 
     <div class="cell area-contact-person__image">
@@ -937,11 +937,11 @@ $posts_laskenta = get_posts(array(
     </div>
   </div>
         </div>
-</div>
+</div> -->
 
 
 
-                    <div class="area-contact-person js--area-hover-item" data-areacode="paakaupunkiseutu">
+                    <!-- <div class="area-contact-person js--area-hover-item" data-areacode="paakaupunkiseutu">
                       <div class="flx-container -anim">
 
                         <div class="cell area-contact-person__image">
@@ -966,10 +966,10 @@ $posts_laskenta = get_posts(array(
                         </div>
                       </div>
                             </div>
-                    </div>
+                    </div> -->
 
 
-                    <div class="area-contact-person js--area-hover-item" data-areacode="'etela-suomi', ">
+                    <!-- <div class="area-contact-person js--area-hover-item" data-areacode="'etela-suomi', ">
                       <div class="flx-container -anim">
                         <div class="cell area-contact-person__image">
 
@@ -994,8 +994,8 @@ $posts_laskenta = get_posts(array(
                         </div>
                       </div>
                             </div>
-                    </div>
-                    <div class="">
+                    </div> -->
+                    <!-- <div class="">
 
                     <div class="area-contact-person js--area-hover-item -hc-filter__trigger" data-areacode="14">
                       <div class="flx-container -anim">
@@ -1025,7 +1025,7 @@ $posts_laskenta = get_posts(array(
                     </div>
 
 
-                  </div>
+                  </div> -->
 
                 </div>
                 </div>
