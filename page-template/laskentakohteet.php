@@ -7,9 +7,11 @@
 
 <!-- BACEND QUERY  -->
 
+<?php $terms = get_terms( array(
+  "taxonomy" => "alueet",
+) ); ?>
 
 <?php
-
 $posts_laskenta = get_posts(array(
  'posts_per_page'	=> 200,
  'post_type'			=> 'laskentakohteet',
@@ -18,8 +20,13 @@ $posts_laskenta = get_posts(array(
 ));
 ?>
 
+
+
 <!-- Current date -->
 <?php $today = date('Ymd'); ?>
+
+
+
 
 
 
@@ -31,7 +38,13 @@ $posts_laskenta = get_posts(array(
  		<main id="main" class="site-main" role="main">
 
 
+
+
+
     <section class="section--laskentakohteet-header U-sec-pad">
+
+
+
       <div class="U_container U_base-pad">
         <div class="module--laskenta-count--on-page">
           <div class="flx-container">
@@ -173,7 +186,7 @@ $posts_laskenta = get_posts(array(
                       <?php $alue_term = get_field( 'alue' ); ?>
                       <?php $id = get_the_ID(); ?>
 
-                    <tr id="<?php echo $id; ?>" class="Anim-item--list js--show-form-modal" data-area="<?php if ( $alue_term ): ?><?php echo $alue_term->slug; ?><?php endif; ?>">
+                    <tr id="<?php echo $id; ?>" class="Anim-item--list" data-area="<?php if ( $alue_term ): ?><?php echo $alue_term->slug; ?><?php endif; ?>">
 
                        <?php if ( have_rows( 'kohde' ) ) : ?>
                   	<?php while ( have_rows( 'kohde' ) ) : the_row(); ?>
@@ -264,7 +277,7 @@ $posts_laskenta = get_posts(array(
     <?php endif; ?>
                       </div>
                     </div>
-    <div class="tr__hover-action-indicator">Pyydä tarjous</div>
+    <div class="tr__hover-action-indicator js--show-form-modal">Pyydä tarjous</div>
                   </td>
 
                         </tr>
@@ -1075,27 +1088,52 @@ $posts_laskenta = get_posts(array(
       <!-- select field handle -->
         <label for="kohde">Pääomainen kohde:</label>
       <select name="kohde" id="select-options">
-        <?php	if( $posts_laskenta ): ?>
-          <option label="">Valitse kohde</option>
-          <optgroup label="pääkaupunkiseutu">
-          <?php foreach( $posts_laskenta as $post ):
-            setup_postdata( $post ); ?>
 
-            <?php $alue_term = get_field( 'alue' ); ?>
-            <?php $id = get_the_ID(); ?>
+          <?php	if( $posts_laskenta ): ?>
+            <option label="">Valitse kohde</option>
+            <optgroup label="pääkaupunkiseutu">
+            <?php foreach( $posts_laskenta as $post ):
+              setup_postdata( $post ); ?>s
+              <?php $alue_term = get_field( 'alue' ); ?>
+              <?php $id = get_the_ID(); ?>
+                 <?php	if( $alue_term->slug == "paakaupunkiseutu"): ?>
+                <option  id="option-<?php echo $id; ?>" class="<?php echo $id; ?>" data-id="<?php echo $id; ?>" value="<?php the_title(); ?> - <?php echo $alue_term->name; ?>"><?php the_title(); ?></option>
+                     <?php endif; ?>
+             <?php endforeach; ?>
+                           </optgroup>
+                           <optgroup label="Etelä-Suomi">
+                           <?php foreach( $posts_laskenta as $post ):
+                             setup_postdata( $post ); ?>s
+                             <?php $alue_term = get_field( 'alue' ); ?>
+                             <?php $id = get_the_ID(); ?>
+                                <?php	if( $alue_term->slug == "etela-suomi"): ?>
+                               <option  id="option-<?php echo $id; ?>" class="<?php echo $id; ?>" data-id="<?php echo $id; ?>" value="<?php the_title(); ?> - <?php echo $alue_term->name; ?>"><?php the_title(); ?></option>
+                                    <?php endif; ?>
+                            <?php endforeach; ?>
+                                          </optgroup>
+                                          <optgroup label="Itä-Suomi">
+                                          <?php foreach( $posts_laskenta as $post ):
+                                            setup_postdata( $post ); ?>s
+                                            <?php $alue_term = get_field( 'alue' ); ?>
+                                            <?php $id = get_the_ID(); ?>
+                                               <?php	if( $alue_term->slug == "ita-suomi"): ?>
+                                              <option  id="option-<?php echo $id; ?>" class="<?php echo $id; ?>" data-id="<?php echo $id; ?>" value="<?php the_title(); ?> - <?php echo $alue_term->name; ?>"><?php the_title(); ?></option>
+                                                   <?php endif; ?>
+                                           <?php endforeach; ?>
+                                                         </optgroup>
+                                                         <optgroup label="Pohjois-Suomi">
+                                                         <?php foreach( $posts_laskenta as $post ):
+                                                           setup_postdata( $post ); ?>s
+                                                           <?php $alue_term = get_field( 'alue' ); ?>
+                                                           <?php $id = get_the_ID(); ?>
+                                                              <?php	if( $alue_term->slug == "pohjois-suomi"): ?>
+                                                             <option  id="option-<?php echo $id; ?>" class="<?php echo $id; ?>" data-id="<?php echo $id; ?>" value="<?php the_title(); ?> - <?php echo $alue_term->name; ?>"><?php the_title(); ?></option>
+                                                                  <?php endif; ?>
+                                                          <?php endforeach; ?>
+                                                                        </optgroup>
 
-
-              <option  id="option-<?php echo $id; ?>" class="<?php echo $id; ?>" data-id="<?php echo $id; ?>" value="<?php the_title(); ?> - <?php echo $alue_term->name; ?>"><?php the_title(); ?></option>
-           <?php endforeach; ?>
-                         </optgroup>
-                         <optgroup label="pääkaupunkiseutu">
-                         <?php foreach( $posts_laskenta as $post ):
-                           setup_postdata( $post ); ?>
-                             <option value=" <?php the_title(); ?>"><?php the_title(); ?></option>
-                          <?php endforeach; ?>
-                                        </optgroup>
-           <?php wp_reset_postdata(); ?>
-          <?php endif; ?>
+             <?php wp_reset_postdata(); ?>
+            <?php endif; ?>
 
 
       </select>
