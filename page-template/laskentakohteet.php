@@ -112,7 +112,7 @@ $posts_laskenta = get_posts(array(
 
                   <?php } ?>
                     <div class="contact-person__info">
-	<?php the_sub_field( 'nimi' ); ?> 		<?php the_sub_field( 'sahkoposti' ); ?> 		<?php the_sub_field( 'puhelinnumero_tekstimuoto' ); ?> 		<?php the_sub_field( 'puhelinnumero_maakoodilla' ); ?>
+	<?php the_sub_field( 'nimi' ); ?>  |	<?php the_sub_field( 'sahkoposti' ); ?>  |	<?php the_sub_field( 'puhelinnumero_tekstimuoto' ); ?> 	| 	<?php the_sub_field( 'puhelinnumero_maakoodilla' ); ?>
                             </div>
 
 
