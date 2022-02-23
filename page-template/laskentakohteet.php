@@ -287,7 +287,7 @@ $posts_laskenta = get_posts(array(
                      <?php wp_reset_postdata(); ?>
                     <?php endif; ?>
 
-                  <tr class="Anim-item--list" data-area="etela">
+                  <!-- <tr class="Anim-item--list" data-area="etela">
                     <td class="td--kohde">
                       <div class="flx-container">
                         <span class="td__label">&#8203;</span>
@@ -831,7 +831,7 @@ $posts_laskenta = get_posts(array(
                     </td>
 
 
-                  </tr>
+                  </tr> -->
 
 
 
