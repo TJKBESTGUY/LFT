@@ -265,16 +265,18 @@ $posts_laskenta = get_posts(array(
 
           <?php } ?>
 
+          <?php if( get_sub_field('valmistumisen_lisatiedot') ): ?>
+                <span class="td__xtra-info"><?php the_sub_field( 'valmistumisen_lisatiedot' ); ?></span>
+           <?php endif; ?>
+           <?php if(!get_sub_field('valmistumisen_lisatiedot') ): ?>
+                     <span class="td__xtra-info">&#8203;</span>
+            <?php endif; ?>
+
   	<?php endwhile; ?>
   <?php endif; ?>
 
 
-  <?php if( get_sub_field('valmistumisen_lisatiedot') ): ?>
-        <span class="td__xtra-info"><?php the_sub_field( 'valmistumisen_lisatiedot' ); ?></span>
-   <?php endif; ?>
-   <?php if(!get_sub_field('valmistumisen_lisatiedot') ): ?>
-             <span class="td__xtra-info">&#8203;</span>
-    <?php endif; ?>
+
                       </div>
                     </div>
     <div class="tr__hover-action-indicator js--show-form-modal">Pyydä tarjous</div>
