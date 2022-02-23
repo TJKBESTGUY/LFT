@@ -909,7 +909,7 @@ $posts_laskenta = get_posts(array(
     <?php } ?>
     <div class="cell area-contact-person__content">
       <h5 class="content__top"><?php the_sub_field( 'alueiden_otsikko' ); ?>
-      <span style="font-size:1.4rem;opacity:0.6;font-weight:500;margin-top:4px;display:block"><?php the_sub_field( 'maakunnat' ); ?></span></h5>
+      <span style=""><?php the_sub_field( 'maakunnat' ); ?></span></h5>
       <div class="content__bottom">
         <p class="strong"><?php the_sub_field( 'nimi' ); ?></p>
         <p><?php the_sub_field( 'titteli' ); ?></p>
@@ -926,120 +926,6 @@ $posts_laskenta = get_posts(array(
 <?php endif; ?>
 
 
-<!-- <div class="area-contact-person js--area-hover-item" data-areacode="paakaupunkiseutu">
-  <div class="flx-container -anim">
-
-    <div class="cell area-contact-person__image">
-    <div class="image-aspect-box">
-      <div class="image-aspect-box_inner Anim-item--img" data-scroll>
-        <picture>
-          <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/6.jpg">
-            <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/6.jpg">
-              <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/6.jpg" alt="" src="">
-            </picture>
-
-          </div>
-        </div>
-  </div>
-  <div class="cell area-contact-person__content">
-    <h5 class="content__top">Pääkaupunkiseutu</h5>
-    <div class="content__bottom">
-      <p class="strong">Etunimi Sukunimi</p>
-      <p>Aluepäällikkö</p>
-      <p> <a href="#">040 123 123</a> </p>
-        <p> <a href="#">henkilö@areite.fi</a> </p>
-    </div>
-  </div>
-        </div>
-</div> -->
-
-
-
-                    <!-- <div class="area-contact-person js--area-hover-item" data-areacode="paakaupunkiseutu">
-                      <div class="flx-container -anim">
-
-                        <div class="cell area-contact-person__image">
-                        <div class="image-aspect-box">
-                          <div class="image-aspect-box_inner Anim-item--img" data-scroll>
-                            <picture>
-                              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/6.jpg">
-                                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/6.jpg">
-                                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/6.jpg" alt="" src="">
-                                </picture>
-
-                              </div>
-                            </div>
-                      </div>
-                      <div class="cell area-contact-person__content">
-                        <h5 class="content__top">Pääkaupunkiseutu</h5>
-                        <div class="content__bottom">
-                          <p class="strong">Etunimi Sukunimi</p>
-                          <p>Aluepäällikkö</p>
-                          <p> <a href="#">040 123 123</a> </p>
-                            <p> <a href="#">henkilö@areite.fi</a> </p>
-                        </div>
-                      </div>
-                            </div>
-                    </div> -->
-
-
-                    <!-- <div class="area-contact-person js--area-hover-item" data-areacode="'etela-suomi', ">
-                      <div class="flx-container -anim">
-                        <div class="cell area-contact-person__image">
-
-                        <div class="image-aspect-box">
-                          <div class="image-aspect-box_inner Anim-item--img" data-scroll>
-                            <picture>
-                              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/9.jpg">
-                                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/9.jpg">
-                                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/9.jpg" alt="" src="">
-                                </picture>
-
-                              </div>
-                            </div>
-                      </div>
-                      <div class="cell area-contact-person__content">
-                        <h5 class="content__top">Etelä-Suomi</h5>
-                        <div class="content__bottom">
-                          <p class="strong">Etunimi Sukunimi</p>
-                          <p>Aluepäällikkö</p>
-                          <p> <a href="#">040 123 123</a> </p>
-                            <p> <a href="#">henkilö@areite.fi</a> </p>
-                        </div>
-                      </div>
-                            </div>
-                    </div> -->
-                    <!-- <div class="">
-
-                    <div class="area-contact-person js--area-hover-item -hc-filter__trigger" data-areacode="14">
-                      <div class="flx-container -anim">
-                        <div class="cell area-contact-person__image">
-
-                        <div class="image-aspect-box">
-                          <div class="image-aspect-box_inner Anim-item--img" data-scroll>
-                            <picture>
-                              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/3.jpg">
-                                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/3.jpg">
-                                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/3.jpg" alt="" src="">
-                                </picture>
-
-                              </div>
-                            </div>
-                      </div>
-                      <div class="cell area-contact-person__content">
-                        <h5 class="content__top">Itä- ja Pohjois-Suomi</h5>
-                        <div class="content__bottom">
-                          <p class="strong">Etunimi Sukunimi</p>
-                          <p>Aluepäällikkö</p>
-                          <p> <a href="#">040 123 123</a> </p>
-                            <p> <a href="#">henkilö@areite.fi</a> </p>
-                        </div>
-                      </div>
-                            </div>
-                    </div>
-
-
-                  </div> -->
 
                 </div>
                 </div>
@@ -1146,21 +1032,84 @@ $posts_laskenta = get_posts(array(
      <?php	if( $posts_laskenta ): ?>
        <div class="form-laskenta__checkboxes flx-container" style="display:none">
 
-       <?php foreach( $posts_laskenta as $post ):
-         setup_postdata( $post ); ?>
-         <?php $alue_term = get_field( 'alue' ); ?>
-         <div class="cell checkbox-cell">
-           <label  class="form-control" for="kohteet[]">
-             <input  type="checkbox" name="kohteet[]" value="<?php the_title(); ?> - <?php echo $alue_term->name; ?>" checked></input>
-            <span><?php the_title(); ?></span>
-           </label>
+         <div  class="checboxes__group">
+           <h5>Pääkaupunkiseutu</h5>
+         <?php foreach( $posts_laskenta as $post ):
+           setup_postdata( $post ); ?>
+           <?php $alue_term = get_field( 'alue' ); ?>
+           <?php $id = get_the_ID(); ?>
+              <?php	if( $alue_term->slug == "paakaupunkiseutu"): ?>
+                <div class="cell checkbox-cell">
+                  <label  class="form-control" for="kohteet[]">
+                    <input  type="checkbox" name="kohteet[]" value="<?php the_title(); ?> - <?php echo $alue_term->name; ?>" ></input>
+                   <span><?php the_title(); ?></span>
+                  </label>
 
-         </div>
-        <?php endforeach; ?>
-
+                </div>
+                  <?php endif; ?>
+                     <?php wp_reset_postdata(); ?>
+          <?php endforeach; ?>
         </div>
-        <?php wp_reset_postdata(); ?>
-       <?php endif; ?>
+        <div  class="checboxes__group" >
+          <h5>Etelä-Suomi</h5>
+                        <?php foreach( $posts_laskenta as $post ):
+                          setup_postdata( $post ); ?>
+                          <?php $alue_term = get_field( 'alue' ); ?>
+                          <?php $id = get_the_ID(); ?>
+                             <?php	if( $alue_term->slug == "etela-suomi"): ?>
+                               <div class="cell checkbox-cell">
+                                 <label  class="form-control" for="kohteet[]">
+                                   <input  type="checkbox" name="kohteet[]" value="<?php the_title(); ?> - <?php echo $alue_term->name; ?>" ></input>
+                                  <span><?php the_title(); ?></span>
+                                 </label>
+
+                               </div>
+                                 <?php endif; ?>
+                                    <?php wp_reset_postdata(); ?>
+                         <?php endforeach; ?>
+                                          </div>
+                                          <div  class="checboxes__group" >
+                                            <h5>Itä-Suomi</h5>
+                                       <?php foreach( $posts_laskenta as $post ):
+                                         setup_postdata( $post ); ?>
+                                         <?php $alue_term = get_field( 'alue' ); ?>
+                                         <?php $id = get_the_ID(); ?>
+                                            <?php	if( $alue_term->slug == "ita-suomi"): ?>
+                                              <div class="cell checkbox-cell">
+                                                <label  class="form-control" for="kohteet[]">
+                                                  <input  type="checkbox" name="kohteet[]" value="<?php the_title(); ?> - <?php echo $alue_term->name; ?>" ></input>
+                                                 <span><?php the_title(); ?></span>
+                                                </label>
+
+                                              </div>
+                                                <?php endif; ?>
+                                                   <?php wp_reset_postdata(); ?>
+                                        <?php endforeach; ?>
+                                      </div>
+                                      <div  class="checboxes__group">
+                                        <h5>Pohjois-Suomi</h5>
+                                                      <?php foreach( $posts_laskenta as $post ):
+                                                        setup_postdata( $post ); ?>
+                                                        <?php $alue_term = get_field( 'alue' ); ?>
+                                                        <?php $id = get_the_ID(); ?>
+                                                           <?php	if( $alue_term->slug == "pohjois-suomi"): ?>
+                                                             <div class="cell checkbox-cell">
+                                                               <label  class="form-control" for="kohteet[]">
+                                                                 <input  type="checkbox" name="kohteet[]" value="<?php the_title(); ?> - <?php echo $alue_term->name; ?>" ></input>
+                                                                <span><?php the_title(); ?></span>
+                                                               </label>
+
+                                                             </div>
+                                                               <?php endif; ?>
+                                                                  <?php wp_reset_postdata(); ?>
+                                                       <?php endforeach; ?>
+                                                     </div>
+          </div>
+         <?php endif; ?>
+
+
+
+
   <label for="nimi">Nimi:</label>
   <input type="text" name="nimi" required>
     <label for="yritys">Yritys:</label>
