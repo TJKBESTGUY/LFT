@@ -5442,7 +5442,7 @@ div .editor-styles-wrapper .acf-block-preview .areite-office {
 div .editor-styles-wrapper .acf-block-preview .areite-office h5 {
   font-size: 2.2rem;
   margin-bottom: 10px;
-  text-decoration: underline;
+  font-weight: 500;
 }
 div .editor-styles-wrapper .acf-block-preview .areite-office p {
   font-size: 1.6rem;
@@ -5459,13 +5459,12 @@ div .editor-styles-wrapper .acf-block-preview .contact-offices__content .cell {
 div .editor-styles-wrapper .acf-block-preview .contact-offices__content h5 {
   margin-top: 0;
   margin-bottom: 4px;
-  text-decoration: underline;
   font-size: 2.2rem;
   margin-bottom: 10px;
+  font-weight: 500;
 }
 div .editor-styles-wrapper .acf-block-preview .contact-offices__content p {
   font-size: 2.2rem;
-  font-weight: 500;
   line-height: 1;
 }
 div .editor-styles-wrapper .acf-block-preview .module--bottom-cta .flx-container {
