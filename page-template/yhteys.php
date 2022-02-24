@@ -254,33 +254,33 @@
                             </div>
                             <div class="cell areite-office">
                               <h5>Joensuu</h5>
-                              <p>Esterinportti 2C,</p>
-                              <p>00240 Helsinki</p>
+                              <p>Jokikatu 7 LT2,,</p>
+                              <p>80220 Joensuu</p>
                             </div>
                             <div class="cell areite-office">
                               <h5>Kuopio</h5>
-                              <p>Esterinportti 2C,</p>
-                              <p>00240 Helsinki</p>
+                              <p>Puutarhakatu 9 B1,</p>
+                              <p>70300 Kuopio</p>
                             </div>
                             <div class="cell areite-office">
                               <h5>Lappeenranta</h5>
-                              <p>Esterinportti 2C,</p>
-                              <p>00240 Helsinki</p>
+                              <p>Ainonkatu 7,</p>
+                              <p>53100 Lappeenranta</p>
                             </div>
                             <div class="cell areite-office">
-                              <h5>Lappeenranta</h5>
-                              <p>Esterinportti 2C,</p>
-                              <p>00240 Helsinki</p>
+                              <h5>Oulu</h5>
+                              <p>Kasarmintie 23,</p>
+                              <p>90130 Oulu</p>
                             </div>
                             <div class="cell areite-office">
-                              <h5>Lappeenranta</h5>
-                              <p>Esterinportti 2C,</p>
-                              <p>00240 Helsinki</p>
+                              <h5>Rovaniemi</h5>
+                              <p>Rovakatu 29,</p>
+                              <p>96200 Rovaniemi</p>
                             </div>
                             <div class="cell areite-office">
-                              <h5>Lappeenranta</h5>
-                              <p>Esterinportti 2C,</p>
-                              <p>00240 Helsinki</p>
+                              <h5>Seinäjoki</h5>
+                              <p>Tiedekatu 2,</p>
+                              <p>60320 Seinäjoki</p>
                             </div>
 
 
