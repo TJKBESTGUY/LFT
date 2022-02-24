@@ -1,3 +1,6 @@
+
+
+
 let scrollEvent = new Event('afterScroll', { bubbles: true }); //bubble allows for delegation on body
 
 /**
@@ -29,6 +32,8 @@ function scrolltoHash (element) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+    // LOADED ONLY FOR PAGE NEEDED
+  if (document.body.classList.contains('page-template-yhteys')) {
 
 	if (location.hash) {
 		scrolltoHash(document.querySelector(location.hash));
@@ -51,9 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		//run an event after scroll begins
 	});
 
+
+} // LOADED ONLY FOR PAGE NEEDED -- END
+
 });
-
-
-
-
-

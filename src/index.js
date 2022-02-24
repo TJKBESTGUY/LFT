@@ -12,7 +12,10 @@ import "./js/core/objectfitFallback"
 import "./js/core/sidebar"
 import "./js/core/navigation"
 // import "./js/core/panel-left"
-// import "./js/core/smooth-scroll"
+
+
+///////SMOOTH SCROLL IS WRAPPER TO ONLY LOAD ON SPECIFIC PAGE
+import "./js/core/smooth-scroll"
 import "./js/core/icons"
 import "./js/core/responsive-iframe"
 

@@ -143,7 +143,7 @@ $app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg ic
       </a>
       <a class="-nav-link" href="/referenssit">Referenssit</a>
       <a class="-nav-link" href="">Yritys</a>
-      <a class="-nav-link" href="">Ota Yhteyttä</a>
+      <a class="-nav-link" href="/yhteystiedot">Ota Yhteyttä</a>
     </nav>
 
       </div>
@@ -260,7 +260,7 @@ $app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg ic
           <a  class="h3 -nav-link" href="#">Yritys</a>
       </div>
       <div class="link-wrap">
-            <a  class="h3 -nav-link" href="#">Ota Yhteyttä</a>
+            <a  class="h3 -nav-link" href="/yhteystiedot">Ota Yhteyttä</a>
       </div>
     </nav>
     <div class="nav__news-feed -mobile -on__vertical">

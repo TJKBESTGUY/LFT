@@ -165,6 +165,16 @@ padding-right: 16px;
   }
 }
 
+.U-sec-pad__small {
+  padding-top: 80px;
+  @media only screen and (max-width: 1200px) {
+    padding-top: 60px;
+  }
+  @media only screen and (max-width: 700px) {
+    padding-top: 40px;
+  }
+}
+
 //////PAD FIRTS SECTTION LESS
 
 section.U-sec-pad:first-of-type {
@@ -1156,6 +1166,175 @@ p {
 
 }
 
+
+
+
+
+//////CONTACT PAGE///////////
+
+.-border-section {
+  border-top: solid 1px $a-text-grey;
+  padding-top: 60px;
+}
+
+///FLEX LAYOUT ON CONTACT
+.module--contact-offices, .module--contact-sales, .module--contact-customer-service {
+.flx-container {
+  display: flex;
+}
+}
+
+.aside-heading {
+  min-width: 33.33%;
+  width: 33.33%;
+  h4 {
+    line-height: 1;
+    margin: 0;
+    font-weight: 500;
+  }
+}
+.aside-friend {
+    width: 66.66%;
+}
+
+
+// Contact page navigation
+
+.contact-header, .contact-links {
+  &.-left-nudge {
+    margin-left: 33.33%;
+  }
+}
+
+.contact-links {
+  margin-top: 30px;
+  display: flex;
+  a {
+    background: $a-yellow;
+  color: black;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-right: 6px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  }
+}
+
+.contact-desc {
+margin-bottom: 40px;
+    padding-right: 20%;
+
+}
+
+//////!!!!!! THESE ARE OVERRIDES FORM LASKENTA KOHTEET TEAM MEMBERS
+
+
+
+.contact-sales__persons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+
+}
+.contact-sales__persons .area-contact-person {
+  width: calc(33.33% - 10px);
+    padding-top: 0;
+    border: none !important;
+  .area-contact-person__image {
+      width: 100%;
+    }
+  .area-contact-person__content {
+  padding: 0;
+  display: block;
+  width: 100%;
+  .content__top {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    span {
+      min-height: 36px;
+      margin-bottom: 0;
+    }
+  }
+  }
+}
+
+
+
+.map-box {
+  position: relative;
+      height: 0;
+      margin-bottom: 1rem;
+      padding-bottom: 50%;
+      overflow: hidden;
+      background: #f3f3f3;
+}
+.map-box-inner {
+  position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      iframe {
+        position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+      }
+}
+
+.contact-offices__locations {
+  margin-bottom: 40px;
+  .flx-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .cell {
+    width: 25%;
+    padding-right: 10px;
+  }
+}
+
+////CHECK FONT SIZE FROM MYYNTI TEAM AND COMPRESS
+.areite-office {
+  margin-top: 40px;
+
+  h5 {
+    font-size: 2.2rem;
+        margin-bottom: 10px;
+        text-decoration: underline;
+  }
+  p {
+
+    font-size: 1.6rem;
+margin-top: 7px;
+margin-bottom: 0;
+line-height: 1;
+
+  }
+}
+
+.contact-offices__content {
+  margin-bottom: 40px;
+  .cell {
+  min-width: 25%;
+  }
+  h5 {
+    margin-top: 0;
+    margin-bottom: 4px;
+    text-decoration: underline;
+    font-size: 2.2rem;
+      margin-bottom: 10px;
+  }
+  p {
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 1;
+
+  }
+}
 
 /*--------------------------------------------------------------
 # BOTTOM CTA

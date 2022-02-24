@@ -412,7 +412,13 @@ elem.classList.remove("S-disabled__area");
 	};
 
 
+
+//init Form on laskenta
+form_init();
+
 ///////TEMPALTE WRAP ENDS//////////
+
+
 }
 
 
@@ -422,7 +428,7 @@ elem.classList.remove("S-disabled__area");
 
 // THE FORM
 
-form_init();
+
 
 function form_init() {
 var table_elems = document.querySelectorAll('.laskentakohteet-app__body tr');

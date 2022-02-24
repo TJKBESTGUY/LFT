@@ -1,0 +1,350 @@
+<?php
+   /*
+   Template Name: Ota Yhteyttä
+   */
+   get_header(); ?>
+
+
+
+
+   <div id="primary" class="content-area">
+ 		<main id="main" class="site-main" role="main">
+
+
+
+
+
+
+      <div class="contact-header-wrap">
+
+
+      <section class="section--home-header U-sec-pad">
+        <div class="U_container U_base-pad">
+          <div class="module--heading_txt contact-header -left-nudge">
+            <div class="heading">
+                <h1>Ota yhteyttä</h1>
+            </div>
+
+            <!-- <div class="flx-container">
+              <div class="cell">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+              </div>
+
+            </div> -->
+          </div>
+
+        </div>
+
+      </section>
+
+      <div class="contact-sticky-nav">
+              <div class="U_container U_base-pad">
+                <div class="contact-links -left-nudge">
+        <a href="#myynti">Myynti</a>
+          <a href="#asiakaspalvelu">Asiakaspalvelu</a>
+            <a href="#toimistot">Toimistot</a>
+              <a href="#hallinto">Hallinto</a>
+              </div>
+                          </div>
+      </div>
+          </div>
+
+      <section class="section--basic U-sec-pad__small">
+        <div class="U_container U_base-pad">
+            <div id="myynti" class="module--contact-sales -border-section" data-scroll>
+              <div class="flx-container">
+                <div class="cell aside-heading">
+                  <h4>
+                    Myynti
+                  </h4>
+
+
+                </div>
+                <div class="cell aside-friend contact-sales__persons">
+                      <p class="contact-desc">Ota yhteyttä myyntihenkilöstöön, jos sinulla on kysymyksiä laskentakohteistamme. Laskennassa olevat kohteet voit nähdä laskentakohteet-sivuilta.</p>
+
+
+                      <?php if ( have_rows( 'henkilo', 'option' ) ) : ?>
+  	<?php while ( have_rows( 'henkilo', 'option' ) ) : the_row(); ?>
+      <div class="area-contact-person <?php the_sub_field( 'kartan_moniarvo' ); ?>" data-areacode="<?php $alue_terms = get_sub_field( 'alue' ); ?><?php if ( $alue_terms ): ?><?php foreach ( $alue_terms as $alue_term ): ?><?php echo $alue_term->slug; ?> <?php endforeach; ?><?php endif; ?>">
+          <div class="">
+      <?php $kuva = get_sub_field( 'kuva' ); ?>
+      <?php if ( $kuva ) { ?>
+        <div class="cell area-contact-person__image">
+        <div class="image-aspect-box">
+          <div class="image-aspect-box_inner Anim-item--img" data-scroll>
+            <picture>
+              <source media="(min-width:650px)" data-srcset="<?php echo $kuva['url']; ?>">
+                <source media="(min-width:465px)" data-srcset="<?php echo $kuva['url']; ?>">
+                  <img class="lazy-anim lazyload" data-src="<?php echo $kuva['url']; ?>" alt="" src="">
+                </picture>
+
+              </div>
+            </div>
+      </div>
+      <?php } ?>
+      <div class="cell area-contact-person__content">
+        <h5 class="content__top"><?php the_sub_field( 'alueiden_otsikko' ); ?>
+        <span style=""><?php the_sub_field( 'maakunnat' ); ?></span></h5>
+        <div class="content__bottom">
+          <p class="strong"><?php the_sub_field( 'nimi' ); ?></p>
+          <p><?php the_sub_field( 'titteli' ); ?></p>
+          <p> <a href="tel:<?php the_sub_field( 'puhelinnumero_maakoodilla' ); ?>"><?php the_sub_field( 'puhelinnumero_tekstimuoto' ); ?></a></p>
+            <p> <a href="mailto:<?php the_sub_field( 'sahkoposti' ); ?>"><?php the_sub_field( 'sahkoposti' ); ?></a></p>
+        </div>
+      </div>
+
+
+      </div>
+          </div>
+  	<?php endwhile; ?>
+
+  <?php endif; ?>
+
+
+                    <!-- <div class="area-contact-person js--area-hover-item" data-areacode="paakaupunkiseutu ">
+  <div class="">
+        <div class="cell area-contact-person__image">
+<div class="image-aspect-box">
+  <div class="image-aspect-box_inner Anim-item--img animated" data-scroll="in">
+    <picture>
+      <source media="(min-width:650px)" data-srcset="//areite.local:3000/wp-content/uploads/2022/02/Screen-Shot-2022-02-08-at-1.57.22-PM.png" srcset="//areite.local:3000/wp-content/uploads/2022/02/Screen-Shot-2022-02-08-at-1.57.22-PM.png">
+        <source media="(min-width:465px)" data-srcset="//areite.local:3000/wp-content/uploads/2022/02/Screen-Shot-2022-02-08-at-1.57.22-PM.png" srcset="//areite.local:3000/wp-content/uploads/2022/02/Screen-Shot-2022-02-08-at-1.57.22-PM.png">
+          <img class="lazy-anim ls-is-cached lazyloaded" data-src="//areite.local:3000/wp-content/uploads/2022/02/Screen-Shot-2022-02-08-at-1.57.22-PM.png" alt="" src="//areite.local:3000/wp-content/uploads/2022/02/Screen-Shot-2022-02-08-at-1.57.22-PM.png">
+        </picture>
+
+      </div>
+    </div>
+</div>
+  <div class="cell area-contact-person__content">
+<h5 class="content__top">Pääkaupunkiseutu<span style="">Helsinki, Espoo, Vantaa</span></h5>
+<div class="content__bottom">
+  <p class="strong">Pääkaupunki henkilö</p>
+  <p>Aluepäällikkö</p>
+  <p> <a href="tel:050 467 0910 ">050 467 0910 </a></p>
+    <p> <a href="mailto:areite@areite.fi">areite@areite.fi</a></p>
+</div>
+</div>
+
+
+</div>
+  </div>
+<div class="area-contact-person js--area-hover-item" data-areacode="etela-suomi ">
+      <div class="">
+        <div class="cell area-contact-person__image">
+<div class="image-aspect-box">
+  <div class="image-aspect-box_inner Anim-item--img animated" data-scroll="in">
+    <picture>
+      <source media="(min-width:650px)" data-srcset="//areite.local:3000/wp-content/uploads/2022/02/Screen-Shot-2022-02-08-at-1.57.22-PM.png" srcset="//areite.local:3000/wp-content/uploads/2022/02/Screen-Shot-2022-02-08-at-1.57.22-PM.png">
+        <source media="(min-width:465px)" data-srcset="//areite.local:3000/wp-content/uploads/2022/02/Screen-Shot-2022-02-08-at-1.57.22-PM.png" srcset="//areite.local:3000/wp-content/uploads/2022/02/Screen-Shot-2022-02-08-at-1.57.22-PM.png">
+          <img class="lazy-anim ls-is-cached lazyloaded" data-src="//areite.local:3000/wp-content/uploads/2022/02/Screen-Shot-2022-02-08-at-1.57.22-PM.png" alt="" src="//areite.local:3000/wp-content/uploads/2022/02/Screen-Shot-2022-02-08-at-1.57.22-PM.png">
+        </picture>
+
+      </div>
+    </div>
+</div>
+  <div class="cell area-contact-person__content">
+<h5 class="content__top">Etelä-Suomi<span style=""></span></h5>
+<div class="content__bottom">
+  <p class="strong">Etelä-Suomi</p>
+  <p>Etelä-Suomi</p>
+  <p> <a href="tel:Etelä-Suomi">Etelä-Suomi</a></p>
+    <p> <a href="mailto:Etelä-Suomi">Etelä-Suomi</a></p>
+</div>
+</div>
+
+
+</div>
+  </div>
+<div class="area-contact-person js--area-hover-item ita-ja-pohjois" data-areacode="ita-suomi pohjois-suomi ">
+        <div class="">
+        <div class="cell area-contact-person__image">
+<div class="image-aspect-box">
+  <div class="image-aspect-box_inner Anim-item--img" data-scroll="out">
+    <picture>
+      <source media="(min-width:650px)" data-srcset="//areite.local:3000/wp-content/uploads/2022/01/7-1.jpeg" srcset="//areite.local:3000/wp-content/uploads/2022/01/7-1.jpeg">
+        <source media="(min-width:465px)" data-srcset="//areite.local:3000/wp-content/uploads/2022/01/7-1.jpeg" srcset="//areite.local:3000/wp-content/uploads/2022/01/7-1.jpeg">
+          <img class="lazy-anim ls-is-cached lazyloaded" data-src="//areite.local:3000/wp-content/uploads/2022/01/7-1.jpeg" alt="" src="//areite.local:3000/wp-content/uploads/2022/01/7-1.jpeg">
+        </picture>
+
+      </div>
+    </div>
+</div>
+  <div class="cell area-contact-person__content">
+<h5 class="content__top">Itä- ja Pohjois-Suomi      <span style=""></span></h5>
+<div class="content__bottom">
+  <p class="strong">Itä-Suomi ja pohjois</p>
+  <p>Itä-Suomi</p>
+  <p> <a href="tel:">Itä-Suomi</a></p>
+    <p> <a href="mailto:Itä-Suomi">Itä-Suomi</a></p>
+</div>
+</div>
+
+
+</div>
+  </div> -->
+                </div>
+              </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="section--basic U-sec-pad__small">
+        <div class="U_container U_base-pad">
+            <div id="asiakaspalvelu" class="module--contact-customer-service -border-section" data-scroll>
+              <div class="flx-container">
+                <div class="cell aside-heading">
+                  <h4>
+                  Asiakaspalvelu
+                  </h4>
+                </div>
+                <div class="cell aside-friend ">
+                    <p class="contact-desc">Haluatko kuulla lisää tuotteistamme? Autamme mielellämme! Ota yhteyttä asiakaspalveluumme puhelimitse tai sähköpostitse.</p>
+                        <div class="contact-offices__content">
+                          <div class="flx-container">
+                            <div class="cell">
+                                  <h5>Puhelin</h5>
+                                  <p>09 586 0030</p>
+                            </div>
+                            <div class="cell">
+                              <h5>Sähköposti</h5>
+                              <p>areite@areite.fi</p>
+                            </div>
+
+
+                          </div>
+                            </div>
+
+                </div>
+
+
+                </div>
+              </div>
+          </div>
+
+
+      </section>
+
+
+
+
+            <section class="section--basic U-sec-pad__small">
+              <div class="U_container U_base-pad">
+                  <div  id="toimistot" class="module--contact-offices -border-section" data-scroll>
+                    <div class="flx-container">
+                      <div class="cell aside-heading">
+                        <h4>
+                        Toimistot
+                        </h4>
+                      </div>
+                      <div class="cell aside-friend contact-offices-wrapper">
+                        <div class="map-box">
+                          <div class="map-box-inner">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.100505269999!2d24.926335316372512!3d60.19561958197036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bccd23400dd%3A0x86c198bac66fa98b!2sAreite%20Oy!5e0!3m2!1sen!2sfi!4v1645627455699!5m2!1sen!2sfi" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                          </div>
+
+                        </div>
+                        <div class="contact-offices__locations">
+                          <div class="flx-container">
+                            <div class="cell areite-office">
+                              <h5>Helsinki</h5>
+                              <p>Esterinportti 2C,</p>
+                              <p>00240 Helsinki</p>
+                            </div>
+                            <div class="cell areite-office">
+                              <h5>Joensuu</h5>
+                              <p>Esterinportti 2C,</p>
+                              <p>00240 Helsinki</p>
+                            </div>
+                            <div class="cell areite-office">
+                              <h5>Kuopio</h5>
+                              <p>Esterinportti 2C,</p>
+                              <p>00240 Helsinki</p>
+                            </div>
+                            <div class="cell areite-office">
+                              <h5>Lappeenranta</h5>
+                              <p>Esterinportti 2C,</p>
+                              <p>00240 Helsinki</p>
+                            </div>
+                            <div class="cell areite-office">
+                              <h5>Lappeenranta</h5>
+                              <p>Esterinportti 2C,</p>
+                              <p>00240 Helsinki</p>
+                            </div>
+                            <div class="cell areite-office">
+                              <h5>Lappeenranta</h5>
+                              <p>Esterinportti 2C,</p>
+                              <p>00240 Helsinki</p>
+                            </div>
+                            <div class="cell areite-office">
+                              <h5>Lappeenranta</h5>
+                              <p>Esterinportti 2C,</p>
+                              <p>00240 Helsinki</p>
+                            </div>
+
+
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+
+            </section>
+
+
+
+
+            <section class="section--basic U-sec-pad__small">
+              <div class="U_container U_base-pad">
+                  <div  id="hallinto"  class="module--contact-customer-service -border-section" data-scroll>
+                    <div class="flx-container">
+                      <div class="cell aside-heading">
+                        <h4>
+                        Hallinto
+                        </h4>
+                      </div>
+                      <div class="cell aside-friend ">
+                          <p class="contact-desc">Haluatko kuulla lisää tuotteistamme? Autamme mielellämme! Ota yhteyttä asiakaspalveluumme puhelimitse tai sähköpostitse.</p>
+                              <div class="contact-offices__content">
+                                <div class="flx-container">
+                                  <div class="cell">
+                                        <h5>Puhelin</h5>
+                                        <p>09 586 0030</p>
+                                  </div>
+                                  <div class="cell">
+                                    <h5>Sähköposti</h5>
+                                    <p>areite@areite.fi</p>
+                                  </div>
+
+
+                                </div>
+                                  </div>
+
+                      </div>
+
+
+                      </div>
+                    </div>
+                </div>
+
+
+            </section>
+
+
+              <section class="section--basic U-sec-pad"></section>
+                <section class="section--basic U-sec-pad"></section>
+
+
+
+
+
+
+    </main><!-- #main -->
+  </div><!-- #primary -->
+
+
+
+<?php get_footer();
