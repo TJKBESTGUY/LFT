@@ -1175,26 +1175,39 @@ p {
 .-border-section {
   border-top: solid 1px $a-text-grey;
   padding-top: 60px;
+  @media screen and (max-width: 1200px) {
+      padding-top: 40px;
+  }
 }
 
 ///FLEX LAYOUT ON CONTACT
 .module--contact-offices, .module--contact-sales, .module--contact-customer-service {
 .flx-container {
   display: flex;
+    @media screen and (max-width: 1000px) {
+    display: block;
+    }
 }
 }
 
 .aside-heading {
   min-width: 33.33%;
   width: 33.33%;
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+  }
   h4 {
     line-height: 1;
     margin: 0;
+    margin-bottom: 20px;
     font-weight: 500;
   }
 }
 .aside-friend {
     width: 66.66%;
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+    }
 }
 
 
@@ -1203,6 +1216,9 @@ p {
 .contact-header, .contact-links {
   &.-left-nudge {
     margin-left: 33.33%;
+    @media screen and (max-width: 1000px) {
+          margin-left: 0;
+    }
   }
 }
 
@@ -1223,6 +1239,7 @@ p {
 .contact-desc {
 margin-bottom: 40px;
     padding-right: 20%;
+    min-width: 100%;
 
 }
 
@@ -1255,6 +1272,9 @@ margin-bottom: 40px;
       min-height: 36px;
       margin-bottom: 0;
     }
+  }
+.content__bottom.-marq-added {
+margin-top: 20px;
   }
   }
 }
@@ -1309,9 +1329,9 @@ margin-bottom: 40px;
   p {
 
     font-size: 1.6rem;
-margin-top: 7px;
+margin-top: 4px;
 margin-bottom: 0;
-line-height: 1;
+line-height: 1.4;
 
   }
 }
@@ -1331,7 +1351,7 @@ line-height: 1;
   }
   p {
     font-size: 2.2rem;
-  
+
     line-height: 1;
 
   }

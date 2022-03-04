@@ -1,0 +1,608 @@
+{
+    "key": "group_6218b11a0c324",
+    "title": "Yhteystiedot",
+    "fields": [
+        {
+            "key": "field_6218b12fa4cd0",
+            "label": "Myynti",
+            "name": "myynti_lohko",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "admin_only": 0,
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6218b49731ee5",
+                    "label": "Lohkon selvenne",
+                    "name": "lohkon_selvenne",
+                    "type": "textarea",
+                    "instructions": "Voit lisätä tähän selventeen koskien lohkoa. Näkyy ennen muuta sisältöä.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "admin_only": 0,
+                    "ign_set_data": "",
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_6218b46c31ee4",
+                    "label": "Myynnin henkilöstö",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "admin_only": 0,
+                    "ign_set_data": "",
+                    "message": "Alueiden yhteyshenkilöt lisätään sivupalkin kohdassa \"Yhteyshenkilöt\", ja ne näkyvät automaattisesti tällä sivulla.",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                }
+            ]
+        },
+        {
+            "key": "field_6218b5e7226c0",
+            "label": "Yhteystietojen lohkot",
+            "name": "yhteystietojen_lohkot",
+            "type": "flexible_content",
+            "instructions": "valitse sopiva lohko.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "admin_only": 0,
+            "layouts": {
+                "layout_6218b615ce89a": {
+                    "key": "layout_6218b615ce89a",
+                    "name": "henkilosto",
+                    "label": "Henkilöstö",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6218b66e226c1",
+                            "label": "Lohkon otsikko",
+                            "name": "lohkon_otsikko",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "admin_only": 0,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "autocomplete": "",
+                            "ign_set_data": ""
+                        },
+                        {
+                            "key": "field_6218c3ea0d3bc",
+                            "label": "Navigaation teksti",
+                            "name": "navigaation_teksti",
+                            "type": "text",
+                            "instructions": "Lisää tähän pienellä kirjaimella yksittäinen sana ilman välejä.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "admin_only": 0,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "autocomplete": "",
+                            "ign_set_data": ""
+                        },
+                        {
+                            "key": "field_6218b683226c2",
+                            "label": "Lohkon selvenne",
+                            "name": "lohkon_selvenne",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "admin_only": 0,
+                            "ign_set_data": "",
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 4,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_6218b696226c3",
+                            "label": "Henkilö",
+                            "name": "henkilo",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "admin_only": 0,
+                            "ign_set_data": "",
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6218b6b3226c4",
+                                    "label": "Kuva",
+                                    "name": "kuva",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "admin_only": 0,
+                                    "ign_set_data": "",
+                                    "return_format": "array",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_6218b6d2226c5",
+                                    "label": "Nimi",
+                                    "name": "nimi",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "admin_only": 0,
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "autocomplete": "",
+                                    "ign_set_data": ""
+                                },
+                                {
+                                    "key": "field_6218b6e1226c6",
+                                    "label": "Titteli",
+                                    "name": "titteli",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "admin_only": 0,
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "autocomplete": "",
+                                    "ign_set_data": ""
+                                },
+                                {
+                                    "key": "field_6218b701226c7",
+                                    "label": "Sähköposti",
+                                    "name": "sahkoposti",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "admin_only": 0,
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "autocomplete": "",
+                                    "ign_set_data": ""
+                                },
+                                {
+                                    "key": "field_6218b709226c8",
+                                    "label": "Puhelinnumero (Tekstimuoto)",
+                                    "name": "puhelinnumero_tekstimuoto",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "admin_only": 0,
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "autocomplete": "",
+                                    "ign_set_data": ""
+                                },
+                                {
+                                    "key": "field_6218b722226c9",
+                                    "label": "Puhelinnumero (maakoodilla)",
+                                    "name": "puhelinnumero_maakoodilla",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "admin_only": 0,
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "autocomplete": "",
+                                    "ign_set_data": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6218b75bf1fc5": {
+                    "key": "layout_6218b75bf1fc5",
+                    "name": "toimistot",
+                    "label": "Toimistot",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6218b75bf1fc6",
+                            "label": "Lohkon otsikko",
+                            "name": "lohkon_otsikko",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "admin_only": 0,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "autocomplete": "",
+                            "ign_set_data": ""
+                        },
+                        {
+                            "key": "field_6218c442d4045",
+                            "label": "Navigaation teksti",
+                            "name": "navigaation_teksti",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "admin_only": 0,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "autocomplete": "",
+                            "ign_set_data": ""
+                        },
+                        {
+                            "key": "field_6218b75bf1fc7",
+                            "label": "Lohkon selvenne",
+                            "name": "lohkon_selvenne",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "admin_only": 0,
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 4,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_6218b75bf1fc8",
+                            "label": "Yksittäinen toimisto",
+                            "name": "yksittainen_toimisto",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "admin_only": 0,
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6218b75bf1fca",
+                                    "label": "Nimi",
+                                    "name": "nimi",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "admin_only": 0,
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "autocomplete": "",
+                                    "ign_set_data": ""
+                                },
+                                {
+                                    "key": "field_6218b7eaf1fcf",
+                                    "label": "Tiedot",
+                                    "name": "tiedot",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "admin_only": 0,
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": 2,
+                                    "new_lines": "wpautop"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6218b885b34ef": {
+                    "key": "layout_6218b885b34ef",
+                    "name": "asiakaspalvelu",
+                    "label": "Asiakaspalvelu",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6218b885b34f0",
+                            "label": "Lohkon otsikko",
+                            "name": "lohkon_otsikko",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "admin_only": 0,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "autocomplete": "",
+                            "ign_set_data": ""
+                        },
+                        {
+                            "key": "field_6218c452d4046",
+                            "label": "Navigaation teksti",
+                            "name": "navigaation_teksti",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "admin_only": 0,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "autocomplete": "",
+                            "ign_set_data": ""
+                        },
+                        {
+                            "key": "field_6218b885b34f1",
+                            "label": "Lohkon selvenne",
+                            "name": "lohkon_selvenne",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "admin_only": 0,
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 4,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_6218b885b34f2",
+                            "label": "Yhteystiedot",
+                            "name": "yhteystiedot",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "admin_only": 0,
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6218b885b34f3",
+                                    "label": "Otsikko",
+                                    "name": "nimi",
+                                    "type": "text",
+                                    "instructions": "Esimerkiksi sähköposti tai puhelinnumero",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "admin_only": 0,
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "autocomplete": "",
+                                    "ign_set_data": ""
+                                },
+                                {
+                                    "key": "field_6218b885b34f4",
+                                    "label": "Linkki",
+                                    "name": "linkki",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "admin_only": 0,
+                                    "return_format": "array"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Row",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-template\/yhteys.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1645790301
+}

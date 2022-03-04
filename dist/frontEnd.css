@@ -5103,27 +5103,53 @@ Moved: _kohteet
   border-top: solid 1px #B0B0B0;
   padding-top: 60px;
 }
+@media screen and (max-width: 1200px) {
+  .-border-section {
+    padding-top: 40px;
+  }
+}
 
 .module--contact-offices .flx-container, .module--contact-sales .flx-container, .module--contact-customer-service .flx-container {
   display: flex;
+}
+@media screen and (max-width: 1000px) {
+  .module--contact-offices .flx-container, .module--contact-sales .flx-container, .module--contact-customer-service .flx-container {
+    display: block;
+  }
 }
 
 .aside-heading {
   min-width: 33.33%;
   width: 33.33%;
 }
+@media screen and (max-width: 1000px) {
+  .aside-heading {
+    width: 100%;
+  }
+}
 .aside-heading h4 {
   line-height: 1;
   margin: 0;
+  margin-bottom: 20px;
   font-weight: 500;
 }
 
 .aside-friend {
   width: 66.66%;
 }
+@media screen and (max-width: 1000px) {
+  .aside-friend {
+    width: 100%;
+  }
+}
 
 .contact-header.-left-nudge, .contact-links.-left-nudge {
   margin-left: 33.33%;
+}
+@media screen and (max-width: 1000px) {
+  .contact-header.-left-nudge, .contact-links.-left-nudge {
+    margin-left: 0;
+  }
 }
 
 .contact-links {
@@ -5143,6 +5169,7 @@ Moved: _kohteet
 .contact-desc {
   margin-bottom: 40px;
   padding-right: 20%;
+  min-width: 100%;
 }
 
 .contact-sales__persons {
@@ -5171,6 +5198,9 @@ Moved: _kohteet
 .contact-sales__persons .area-contact-person .area-contact-person__content .content__top span {
   min-height: 36px;
   margin-bottom: 0;
+}
+.contact-sales__persons .area-contact-person .area-contact-person__content .content__bottom.-marq-added {
+  margin-top: 20px;
 }
 
 .map-box {
@@ -5219,9 +5249,9 @@ Moved: _kohteet
 }
 .areite-office p {
   font-size: 1.6rem;
-  margin-top: 7px;
+  margin-top: 4px;
   margin-bottom: 0;
-  line-height: 1;
+  line-height: 1.4;
 }
 
 .contact-offices__content {
