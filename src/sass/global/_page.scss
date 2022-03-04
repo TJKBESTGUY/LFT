@@ -332,6 +332,17 @@ Moved: _kohteet
 
 }
 
+//FLOATING HEADING
+.floating-heading {
+  padding-top: 20px;
+  padding-left: 8.33333%;
+  margin-bottom: -100px;
+}
+
+.floating-heading--pre-table {
+  padding-bottom: 20px;
+}
+
 .module--floating-manifest.-left-nudge {
   @media screen and (min-width: 1000.11px) {
 margin-left: 16.6666666667%;
@@ -455,6 +466,16 @@ clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
 
 
+}
+
+.module--split-content.-right-nudge {
+  padding-right: 8.3333%;
+}
+
+.module--split-content.-boxed-layout {
+  .image-aspect-box {
+    padding-top: 75%;
+  }
 }
 
 
@@ -626,6 +647,16 @@ margin-top: 20px;
 }
 
 
+}
+
+
+.-boxed-cell {
+	background: $a-yellow;
+  display: flex;
+  align-items: center;
+  .cell_txt-content {
+    padding: 80px !important;
+  }
 }
 
 

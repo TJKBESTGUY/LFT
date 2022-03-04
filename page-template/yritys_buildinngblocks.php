@@ -165,37 +165,45 @@
               </div>
 
             </section>
-      <section class="section--basic U-sec-pad">
+            <section class="section--basic U-sec-pad">
         <div class="U_container U_base-pad">
-                    <h2>Määrälaskenta ohjaa työtä</h2>
-          <div class="module--split-content -boxed-layout">
+
+          <div class="module--split-content -mosaic-split">
                 <div class="flx-container">
-
-                  <div class="cell split-content__img">
+                  <div class="cell mosaic-split__img split-content__img">
                     <div class="cell_img-content">
-                      <div class="image-aspect-box">
-        <div class="image-aspect-box_inner ">
-        <picture>
-          <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b4.jpg">
-            <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b4.jpg">
-              <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/b4.jpg" alt="" src="">
-          </picture>
+                        <h3>Määrälaskenta ohjaa työtä</h3>
+                      <div class="image-aspect-box -wide-aspect">
+                        <div class="image-aspect-box_inner ">
+                        <picture>
+                          <source media="(min-width:650px)" data-srcset="https://dev.gdmn.fi/wp-content/themes/areite/images/7.jpg" srcset="https://dev.gdmn.fi/wp-content/themes/areite/images/7.jpg">
+                            <source media="(min-width:465px)" data-srcset="https://dev.gdmn.fi/wp-content/themes/areite/images/7.jpg" srcset="https://dev.gdmn.fi/wp-content/themes/areite/images/7.jpg">
+                              <img class="lazy-anim lazyloaded" data-src="https://dev.gdmn.fi/wp-content/themes/areite/images/7.jpg" alt="" src="https://dev.gdmn.fi/wp-content/themes/areite/images/7.jpg">
+                          </picture>
 
-      </div>
-      </div>
+                      </div>
+                      </div>
                     </div>
                   </div>
+            <div class="cell mosaic-split__txt split-content__txt">
+              <div class="cell_txt-content">
 
-                  <div class="cell split-content__txt -boxed-cell">
-                    <div class="cell_txt-content">
-                    <!-- <h3>Määrälaskenta ohjaa työtä</h3> -->
-                    <p class="cell-p">Jo ennen rakentamista on tärkeä saada mahdollisimman täsmällinen kuva tarvittavista materiaaleista. Määrälaskenta antaa tarkan määrätiedon saatavilla olevista laskenta-asiakirjoista. Laskennan tuloksena on määräluettelo, joka ohjaa kustannusarviota, projektin budjetointia ja kohteen aikataulutusta. Määräluettelo on kuin ”ostoslista”, jonka avulla rakennukset rakennetaan.</p>
-                  </div>
-                    </div>
+              <p class="">Jo ennen rakentamista on tärkeä saada mahdollisimman täsmällinen kuva tarvittavista materiaaleista. Määrälaskenta antaa tarkan määrätiedon saatavilla olevista laskenta-asiakirjoista. Laskennan tuloksena on määräluettelo, joka ohjaa kustannusarviota, projektin budjetointia ja kohteen aikataulutusta. Määräluettelo on kuin ”ostoslista”, jonka avulla rakennukset rakennetaan.</p>
+
+              <div class="capsule-wrap">
+                <button class="basic-btn btn--yellow" type="button" name="button"><span class="basic-btn__text">Lue lisää</span> <span class="basic-btn__icon">
+                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"></path></svg>
+                </span> </button>
+              </div>
+            </div>
+              </div>
 
 
           </div>
           </div>
+
+
+
 
 
 

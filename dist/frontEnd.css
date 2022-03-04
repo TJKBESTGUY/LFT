@@ -4339,6 +4339,16 @@ Moved: _kohteet
   }
 }
 
+.floating-heading {
+  padding-top: 20px;
+  padding-left: 8.33333%;
+  margin-bottom: -100px;
+}
+
+.floating-heading--pre-table {
+  padding-bottom: 20px;
+}
+
 @media screen and (min-width: 1000.11px) {
   .module--floating-manifest.-left-nudge {
     margin-left: 16.6666666667%;
@@ -4436,6 +4446,14 @@ Moved: _kohteet
   .module--split-content .cell:last-of-type {
     flex-grow: 1;
   }
+}
+
+.module--split-content.-right-nudge {
+  padding-right: 8.3333%;
+}
+
+.module--split-content.-boxed-layout .image-aspect-box {
+  padding-top: 75%;
 }
 
 @media screen and (max-width: 1000px) {
@@ -4603,6 +4621,15 @@ Moved: _kohteet
   .-mosaic-split .cell_txt-content {
     padding: 0 !important;
   }
+}
+
+.-boxed-cell {
+  background: #F0FF31;
+  display: flex;
+  align-items: center;
+}
+.-boxed-cell .cell_txt-content {
+  padding: 80px !important;
 }
 
 .module--floating-manifest h3 {

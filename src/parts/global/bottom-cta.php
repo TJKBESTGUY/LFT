@@ -27,8 +27,8 @@
       </div>
       <div class="cell bottom-cta__content">
         <div class="content-wrap U_base-pad--right-only">
-        <h3>Kiinnostuitko?</h3>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+        <h3>Kannattaa kysyä!</h3>
+        <p>Meiltä saat helposti lisää tietoa määrälaskennasta sekä laskennassa olevista kohteista. Kaipaatko määräluetteloa tietystä kohteesta tai arviota määrälaskennasta?</p>
         <div class="capsule-wrap">
 
           <button class="basic-btn btn--black btn--wide" type="button" name="button"><span class="basic-btn__text">Ota yhteyttä</span> <span class="basic-btn__icon">
