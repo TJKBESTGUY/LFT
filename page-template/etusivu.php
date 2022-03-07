@@ -34,7 +34,7 @@
 
       <section class="section--basic U-sec-pad">
         <div class="U_container U_base-pad">
-          <div class="module--full-image " style="margin-right:8.33%;" data-scroll>
+          <div class="module--full-image " style="" data-scroll>
               <!-- <div class="module--full-image " style="margin-right:8.33%;margin-left:8.33%" data-scroll> -->
 
             <div class="image-aspect-box">
@@ -49,11 +49,11 @@
                     <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3.png">
                       <img class="lazy-anim lazyload -overlay-image" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva3.png" alt="" src="">
                   </picture>
-                  <picture class="">
+                  <!-- <picture class="">
                     <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3.png">
                       <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva2.png">
                         <img class="lazy-anim lazyload -overlay-image -delay" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva2.png" alt="" src="">
-                    </picture>
+                    </picture> -->
 
             </div>
           </div>
@@ -182,7 +182,7 @@
 
       <div class="heading-content">
       <div class="heading">
-    <h3>Pysymme ajan tasalla siitä, missä rakennetaan. Asiakkaamme saavat meiltä tietää missä rakentamista suunnitellaan.
+    <h3>Pysymme ajan tasalla siitä, missä rakennetaan. Asiakkaamme saavat meiltä tietää missä rakentamista suunnitellaan
 </h3>
       </div>
   </div>
@@ -195,9 +195,9 @@
 
 
       <!-- <section class="section--laskentakohteet-app -custom-pad"> -->
-            <section class="section--laskentakohteet-app U-sec-pad">
+            <section class="section--laskentakohteet-app U-sec-pad ">
           <div class="U_container U_base-pad">
-            <div class="module--laskentakohteet-app -home-preview" style="margin-left:8.333333333%; margin-right:8.333333333%">
+            <div class="module--laskentakohteet-app -home-preview">
 
               <table>
                 <div class="fake-header-mask">
@@ -566,7 +566,7 @@
 
             </div>
 
-            <div class="laskentakohteet-app__footer">
+            <div class="laskentakohteet-app__footer laskentakohteet-app__footer--home" style="">
               <div class="txt">
                 Tällä hetkellä laskennassa <span>42</span> kohdetta. Katso kaikki kohteet laskentakohteet-sivulta.
               </div>
@@ -604,7 +604,7 @@
 
             <div class="cell split-content__txt">
               <div class="cell_txt-content">
-              <h3>Meillä on kokemusta määräluetteloiden laskemisesta kaikenkokoiseen rakentamiseen.</h3>
+              <h3>Meillä on kokemusta määräluetteloiden laskemisesta kaikenkokoiseen rakentamiseen</h3>
             </div>
               </div>
 
@@ -683,7 +683,7 @@
 
 
 
-          <div class="module--split-content -mosaic-split">
+          <div class="module--split-content -mosaic-split -boxed-layout">
                 <div class="flx-container">
                   <div class="cell mosaic-split__img split-content__img">
                     <div class="cell_img-content">
@@ -700,11 +700,7 @@
                       </div>
                     </div>
                   </div>
-            <div class="cell mosaic-split__txt split-content__txt" style="
-    background: #f0ff32;
-    display: flex;
-    align-items: center;
-    padding-right: 20px">
+            <div class="cell mosaic-split__txt split-content__txt -boxed-cell">
               <div class="cell_txt-content">
 
               <p class="">Olemme toimittaneet yli 10 000 määräluetteloa. Niiden varassa rakennusprojekteja on viety tarjousvaiheen kautta valmiisiin kohteisiin.</p>
@@ -751,9 +747,9 @@
             <div class="cell split-content__txt">
               <div class="cell_txt-content">
               <!-- <h3>Täsmällisyys on meille kaikki kaikessa.</h3> -->
-              <p class="cell-p">Se ei varmasti ole yllätys, kun on puhe määrien laskemiseen erikoistuneesta pioneeriyrityksestä. Tarkkuus näkyy määräluetteloiden selkeydessä ja käytettävyydessä kuten myös aikatauluissa ja hinnoittelussa. Pidämme kiinni sovitusta.</p>
+              <p class="cell-p">Se ei varmasti ole yllätys, kun on puhe määrien laskemiseen erikoistuneesta pioneeriyrityksestä. Tarkkuus näkyy määräluetteloiden selkeydessä ja käytettävyydessä kuten myös aikatauluissa ja hinnoittelussa. Tähän ytimekäs johdatus yrityssivulle?</p>
               <div class="capsule-wrap">
-                <button class="basic-btn btn--yellow"type="button" name="button"><span class="basic-btn__text">Lue lisää</span> <span class="basic-btn__icon">
+                <button class="basic-btn btn--yellow"type="button" name="button"><span class="basic-btn__text">Lue lisää Areitesta</span> <span class="basic-btn__icon">
                   <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
                 </span> </button>
               </div>
@@ -831,7 +827,7 @@
                 <div class="heading-content" style="margin-left:0">
                 <div class="heading">
               <h2>Jatkuva kehitys  pitää askeleen edellä</h2>
-              <p class="ingr" style="max-width:800px">Etsimme aina tapoja kehittää toimintaamme, jotta voimme palvella rakentajia vielä paremmin. Edistämme niin tapoja laskea kuin määrälaskentaohjelmistoja. Oma väkemme on olennaisessa roolissa kehittämässä, jotta voimme aina hyödyntää laajaa kokemustamme</p>
+              <p class="ingr" style="max-width:800px">Etsimme aina tapoja kehittää toimintaamme, jotta voimme palvella rakentajia vielä paremmin. Edistämme niin tapoja laskea kuin määrälaskentaohjelmistoja. Oma väkemme on olennaisessa roolissa kehittämässä, jotta voimme aina hyödyntää laajaa kokemustamme.</p>
                 </div>
               <!-- <p class="ingr">Sivuillamme jaamme tiedot kohteista, jotka ovat nyt laskennassa.<br>Usein asiakkaamme saavat meiltä tietää missä rakentamista suunnitellaan.</p> -->
             </div>

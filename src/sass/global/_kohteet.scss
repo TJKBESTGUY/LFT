@@ -285,6 +285,17 @@ tr td:first-of-type {
 
 /////HOME PREVIES MODS ///
 
+.-home-preview {
+  margin-left: 8.3333%;
+  margin-right: 8.3333%;
+
+}
+
+.laskentakohteet-app__footer--home{
+      margin-left: 8.3333%;
+      width: calc(100% - 16.6666%)
+  }
+
 .-home-preview .laskentakohteet-app__header tr:after {
 
 display: none;

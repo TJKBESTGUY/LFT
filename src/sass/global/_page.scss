@@ -420,7 +420,7 @@ transition: 1.75s cubic-bezier(.5,0,.3,1);
 // transition: 2s;
 
 // transition: 1.5s;
-transition-delay: 1s;
+// transition-delay: 1s;
 
 
 // transition: 1s;
@@ -472,10 +472,39 @@ clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   padding-right: 8.3333%;
 }
 
+
+
 .module--split-content.-boxed-layout {
-  .image-aspect-box {
-    padding-top: 75%;
+  .split-content__img {
+    position: relative;
+
   }
+
+  .image-aspect-box {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.-boxed-cell {
+	background: $a-yellow;
+  display: flex;
+  align-items: center;
+  .cell_txt-content {
+    padding: 120px 80px !important;
+  }
+}
+
+.-mosaic-split .-boxed-cell   .cell_txt-content{
+    padding: 120px 50px !important;
+}
+
+.-boxed-cell_dark {
+
 }
 
 
@@ -650,14 +679,7 @@ margin-top: 20px;
 }
 
 
-.-boxed-cell {
-	background: $a-yellow;
-  display: flex;
-  align-items: center;
-  .cell_txt-content {
-    padding: 80px !important;
-  }
-}
+
 
 
 //////FLOATING HEADING////
