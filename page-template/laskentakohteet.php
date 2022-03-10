@@ -39,31 +39,121 @@ $posts_laskenta = get_posts(array(
 
 
 
+      <!-- <section class="section--home-header">
+        <div class="U_container U_base-pad">
+          <div class="module--heading_txt module--services-header">
+            <div class="flx-container">
+              <div class="cell" style="width:100%; max-width: 880px; margin-top:40px;font-size:2.2rem">
+              <p>Olemme aina ajan tasalla. Määrälaskemisen kokeneena asiantuntijana, tiedämme missä rakennetaan ja missä rakentamista suunnitellaan. Meillä on resurssit vastata rakennusyritysten laskentatarpeisiin nopeasti.
+              </p>
+              </div>
 
-
-    <section class="section--laskentakohteet-header U-sec-pad">
-
-
-
-      <div class="U_container U_base-pad">
-        <div class="module--laskenta-count--on-page">
-          <div class="flx-container">
-            <div class="cell laskenta-count__number">
-                <span class="Anim-item--counter -bold-txt"  data-scroll data-type="counter" data-value="42">32</span>
-            </div>
-            <div class="cell laskenta-count__label">
-              <span class="h2">Määrälaskennassa<br>olevaa kohdetta</span>
             </div>
           </div>
 
+        </div>
+
+      </section> -->
+
+
+      <!-- <section class="section--home-header U-sec-pad">
+        <div class="U_container U_base-pad">
+          <div class="module--heading_txt module--services-header">
+            <div class="heading" style="max-width:1200px">
+                <h1>Olemme aina ajan tasalla</h1>
+            </div>
+
+            <div class="flx-container">
+              <div class="cell" style="width:100%; max-width: 880px; margin-top:40px;font-size:2.2rem">
+              <p>Määrälaskemisen kokeneena asiantuntijana, tiedämme missä rakennetaan ja missä rakentamista suunnitellaan. Meillä on resurssit vastata rakennusyritysten laskentatarpeisiin nopeasti.
+              </p>
+              </div>
+
+            </div>
+          </div>
 
         </div>
-      </div>
 
-    </section>
+      </section> -->
 
 
-      <section class="section--laskentakohteet-app U-sec-pad">
+      <section class="section--laskentakohteet-header U-sec-pad__small">
+
+        <div class="U_container U_base-pad">
+          <div class="module--laskenta-count--on-page">
+            <div class="flx-container">
+              <div class="cell super-digit__number">
+                <div data-scroll class="super-digits-mask">
+                  <span class="Anim-item--split -fake-number -bold-txt">
+                      18
+                    </span>
+                  <span class="Anim-item--split -real-number -bold-txt">
+                    18
+                    </span>
+
+                </div>
+              </div>
+                  <!--
+              <div class="cell laskenta-count__number">
+              <span class="Anim-item--counter -bold-txt"  style="" data-scroll data-type="counter" data-value="15">16</span>
+                  <span class="Anim-item--counter -bold-txt"  style=""  data-type="counter" data-value="15">18</span>
+              </div>
+               -->
+              <div class="cell laskenta-count__label">
+                <span class="h3">Määrälaskennassa<br>olevaa kohdetta</span>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+      </section>
+
+
+      <section class="section--home-header">
+        <div class="U_container U_base-pad">
+          <div class="module--heading_txt module--services-header">
+            <div class="flx-container">
+              <div class="cell" style="width:100%; max-width: 880px; margin-top:80px;font-size:2.2rem">
+              <p>Olemme aina ajan tasalla. Määrälaskemisen kokeneena asiantuntijana, tiedämme missä rakennetaan ja missä rakentamista suunnitellaan. Meillä on resurssit vastata rakennusyritysten laskentatarpeisiin nopeasti.
+              </p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- <section class="section--laskentakohteet-header U-sec-pad__small">
+        <div class="U_container U_base-pad">
+          <div class="module--laskenta-count--on-page" >
+            <div class="flx-container">
+              <div class="cell laskenta-count__number"style="min-width:10px">
+                  <span class="Anim-item--counter -bold-txt h2"  style="font-size:6.2rem;min-width:auto;margin-right:10px" data-scroll data-type="counter" data-value="15">16</span>
+              </div>
+              <div class="cell laskenta-count__label">
+                <span class="h2">Määrälaskennassa<br>olevaa kohdetta</span>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+      </section> -->
+
+
+
+
+
+
+
+
+      <section class="section--laskentakohteet-app  " style="padding-top:80px">
           <div class="U_container U_base-pad">
 
             <div class="module--laskentakohteet-navigation">
@@ -856,7 +946,7 @@ $posts_laskenta = get_posts(array(
           <div class="module--heading_txt">
             <div class="heading-content">
                 <div class="heading">
-              <h3>Kiinnostuitko jostain kohteesta?<br>Pyydä tarjous lomakkeen kautta tai ottamalla yhteyttä alueen yhteyshenkilöön.</h3>
+              <h3>Kiinnostuitko jostain kohteesta?<br>Pyydä tarjous lomakkeella tai ota yhteyttä oman alueesi aluepäällikköön.</h3>
                 </div>
                 <div class="capsule-wrap">
                 <button class="basic-btn btn--black js--show-form-modal" type="button" name="button"><span class="basic-btn__text">Pyydä tarjous</span> <span class="basic-btn__icon">
@@ -878,7 +968,7 @@ $posts_laskenta = get_posts(array(
               <div class="module--area-contact">
                 <div class="heading-content">
                 <div class="heading">
-                    <h3>Alueiden yhteyshenkilöt</h3>
+                    <h3>Aluepäälliköt</h3>
                 </div>
                 <div class="flx-container -hover-parent">
                   <div class="cell area-contact__map">
