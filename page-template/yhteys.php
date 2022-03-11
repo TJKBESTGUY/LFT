@@ -295,7 +295,7 @@
                     <?php endif; ?>
 
 
-                        <div class="contact-offices__content">
+                        <!-- <div class="contact-offices__content">
                           <div class="flx-container">
                             <div class="cell">
                                   <h5>Puhelin</h5>
@@ -308,7 +308,7 @@
 
 
                           </div>
-                            </div>
+                            </div> -->
 
                 </div>
 
@@ -387,7 +387,7 @@
         </div>
 
       </section>
-
+<!--
       <section class="section--basic U-sec-pad__small">
         <div class="U_container U_base-pad">
             <div id="asiakaspalvelu" class="module--contact-customer-service -border-section" data-scroll>
@@ -422,12 +422,12 @@
           </div>
 
 
-      </section>
+      </section> -->
 
 
 
 
-            <section class="section--basic U-sec-pad__small">
+            <!-- <section class="section--basic U-sec-pad__small">
               <div class="U_container U_base-pad">
                   <div  id="toimistot" class="module--contact-offices -border-section" data-scroll>
                     <div class="flx-container">
@@ -490,12 +490,12 @@
                 </div>
               </div>
 
-            </section>
+            </section> -->
 
 
 
 
-            <section class="section--basic U-sec-pad__small">
+            <!-- <section class="section--basic U-sec-pad__small">
               <div class="U_container U_base-pad">
                   <div  id="hallinto"  class="module--contact-customer-service -border-section" data-scroll>
                     <div class="flx-container">
@@ -529,7 +529,7 @@
                 </div>
 
 
-            </section>
+            </section> -->
 
 
               <section class="section--basic U-sec-pad"></section>
