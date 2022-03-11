@@ -327,7 +327,7 @@
 
 <?php endif; ?>
 
-      <section class="section--basic U-sec-pad__small">
+      <!-- <section class="section--basic U-sec-pad__small">
         <div class="U_container U_base-pad">
             <div id="" class="module--contact-sales -border-section" data-scroll>
               <div class="flx-container">
@@ -386,7 +386,7 @@
           </div>
         </div>
 
-      </section>
+      </section> -->
 <!--
       <section class="section--basic U-sec-pad__small">
         <div class="U_container U_base-pad">
