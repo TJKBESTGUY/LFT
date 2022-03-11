@@ -6567,6 +6567,22 @@ input:focus + .input-append {
   cursor: pointer;
 }
 
+.Palvelut .Target--palvelut {
+  text-decoration: underline;
+}
+
+.Laskentakohteet .Target--laskentakohteet {
+  text-decoration: underline;
+}
+
+.Referenssit .Target--referenssit {
+  text-decoration: underline;
+}
+
+.Yhteystiedot .Target--yhteystiedot {
+  text-decoration: underline;
+}
+
 /*--------------------------------------------------------------
 # Default Footer
 --------------------------------------------------------------*/

@@ -112,6 +112,7 @@ if($sidebar_icon == 'sidebar-icon'){
 
 </div><!-- .site-container -->
 
+
 <?php wp_footer(); ?>
 
 </body>

@@ -58,10 +58,10 @@
 
 <?php
 $app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg icon or 'app' which renders the special = to x
-
+$page_name = get_the_title();
 ?>
 
-<body <?php body_class( $app_menu ); ?>>
+<body <?php body_class( $page_name ); ?>>
 
 <a class="skip-link screen-reader-text" href="#site-content-skip">
 	<?php _e( 'Skip to content', 'areite' ); ?>
@@ -135,15 +135,15 @@ $app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg ic
               <a class="basic-btn btn--uutiset btn--yellow" href="/ajankohtaista">Katso kaikki</a>
           </div>
         </div>
-      <a class="-nav-link" href="/palvelut">Palvelut</a>
-      <a class="-nav-link" href="/laskentakohteet">Laskentakohteet
+      <a class="-nav-link Target--palvelut" href="/palvelut">Palvelut</a>
+      <a class="-nav-link Target--laskentakohteet" href="/laskentakohteet">Laskentakohteet
         <div  class="laskenta-nav-counter">
           <span class="-bold-txt">42</span>
         </div>
       </a>
-      <a class="-nav-link" href="/referenssit">Referenssit</a>
-      <a class="-nav-link" href="">Yritys</a>
-      <a class="-nav-link" href="/yhteystiedot">Ota Yhteyttä</a>
+      <a class="-nav-link Target--referenssit" href="/referenssit">Referenssit</a>
+      <a class="-nav-link Target--yritys" href="">Yritys</a>
+      <a class="-nav-link Target--yhteystiedot" href="/yhteystiedot">Ota Yhteyttä</a>
     </nav>
 
       </div>
@@ -244,23 +244,23 @@ $app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg ic
           <button class="basic-btn btn--uutiset btn--yellow js--nav-news-trigger-mobile" href="#">Ajankohtaista</button>
               </div> -->
       <div class="link-wrap">
-        <a  class="h3 -nav-link" href="/palvelut">Palvelut</a>
+        <a  class="h3 -nav-link Target--palvelut" href="/palvelut">Palvelut</a>
       </div>
       <div class="link-wrap">
-        <a  class="h3 -nav-link" href="/laskentakohteet">Laskentakohteet
+        <a  class="h3 -nav-link Target--laskentakohteet" href="/laskentakohteet">Laskentakohteet
           <div class="laskenta-nav-counter">
             <span>42</span>
           </div>
         </a>
       </div>
       <div class="link-wrap">
-          <a  class="h3 -nav-link" href="/referenssit">Referenssit</a>
+          <a  class="h3 -nav-link Target--referenssit" href="/referenssit">Referenssit</a>
       </div>
       <div class="link-wrap">
           <a  class="h3 -nav-link" href="#">Yritys</a>
       </div>
       <div class="link-wrap">
-            <a  class="h3 -nav-link" href="/yhteystiedot">Ota Yhteyttä</a>
+            <a  class="h3 -nav-link Target--yhteystiedot" href="/yhteystiedot">Ota Yhteyttä</a>
       </div>
     </nav>
     <div class="nav__news-feed -mobile -on__vertical">

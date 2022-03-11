@@ -1,6 +1,7 @@
 
 
 
+
 // var row_anim_items = document.querySelectorAll('.js--table-row-anim');
 //
 // row_anim_items.forEach(function (elem) {
