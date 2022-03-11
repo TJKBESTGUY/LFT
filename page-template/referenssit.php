@@ -60,9 +60,9 @@
                 <div class="image-aspect-box" style="padding-top:66.67%">
   <div class="image-aspect-box_inner ">
   <picture>
-    <source media="(min-width:650px)" data-srcset="http://areite.local/wp-content/themes/areite/images/b4.jpg" srcset="http://areite.local/wp-content/themes/areite/images/b4.jpg">
-      <source media="(min-width:465px)" data-srcset="http://areite.local/wp-content/themes/areite/images/b4.jpg" srcset="http://areite.local/wp-content/themes/areite/images/b4.jpg">
-        <img class="lazy-anim ls-is-cached lazyloaded" data-src="http://areite.local/wp-content/themes/areite/images/b4.jpg" alt="" src="http://areite.local/wp-content/themes/areite/images/b4.jpg">
+    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b4.jpg" srcset="<?php echo get_template_directory_uri(); ?>/images/b4.jpg">
+      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b4.jpg" srcset="<?php echo get_template_directory_uri(); ?>/images/b4.jpg">
+        <img class="lazy-anim ls-is-cached lazyloaded" data-src="<?php echo get_template_directory_uri(); ?>/images/b4.jpg" alt="" src="<?php echo get_template_directory_uri(); ?>/images/b4.jpg">
     </picture>
 
 </div>
@@ -86,9 +86,9 @@
             <div class="image-aspect-box ">
   <div class="image-aspect-box_inner">
   <picture>
-    <source media="(min-width:650px)" data-srcset="http://areite.local/wp-content/themes/areite/images/b2.jpg" srcset="http://areite.local/wp-content/themes/areite/images/b2.jpg">
-      <source media="(min-width:465px)" data-srcset="http://areite.local/wp-content/themes/areite/images/b2.jpg" srcset="http://areite.local/wp-content/themes/areite/images/b2.jpg">
-        <img class="lazy-anim ls-is-cached lazyloaded" data-src="http://areite.local/wp-content/themes/areite/images/b2.jpg" alt="" src="http://areite.local/wp-content/themes/areite/images/b2.jpg">
+    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b2.jpg" srcset="<?php echo get_template_directory_uri(); ?>/images/b2.jpg">
+      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b2.jpg" srcset="<?php echo get_template_directory_uri(); ?>/images/b2.jpg">
+        <img class="lazy-anim ls-is-cached lazyloaded" data-src="<?php echo get_template_directory_uri(); ?>/images/b2.jpg" alt="" src="<?php echo get_template_directory_uri(); ?>/images/b2.jpg">
     </picture>
 
 </div>
@@ -376,9 +376,9 @@ Laskettua kohdetta
             <div class="image-aspect-box ">
   <div class="image-aspect-box_inner">
   <picture>
-    <source media="(min-width:650px)" data-srcset="http://areite.local/wp-content/themes/areite/images/b2.jpg" srcset="http://areite.local/wp-content/themes/areite/images/b2.jpg">
-      <source media="(min-width:465px)" data-srcset="http://areite.local/wp-content/themes/areite/images/b2.jpg" srcset="http://areite.local/wp-content/themes/areite/images/b2.jpg">
-        <img class="lazy-anim ls-is-cached lazyloaded" data-src="http://areite.local/wp-content/themes/areite/images/b2.jpg" alt="" src="http://areite.local/wp-content/themes/areite/images/b2.jpg">
+    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b2.jpg" srcset="<?php echo get_template_directory_uri(); ?>/images/b2.jpg">
+      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b2.jpg" srcset="<?php echo get_template_directory_uri(); ?>/images/b2.jpg">
+        <img class="lazy-anim ls-is-cached lazyloaded" data-src="<?php echo get_template_directory_uri(); ?>/images/b2.jpg" alt="" src="<?php echo get_template_directory_uri(); ?>/images/b2.jpg">
     </picture>
 
 </div>
@@ -560,9 +560,9 @@ Laskettua kohdetta
                             <div class="image-aspect-box" style="padding-top:75%">
                               <div class="image-aspect-box_inner ">
                               <picture>
-                                <source media="(min-width:650px)" data-srcset="http://areite.local/wp-content/themes/areite/images/7.jpg" srcset="http://areite.local/wp-content/themes/areite/images/7.jpg">
-                                  <source media="(min-width:465px)" data-srcset="http://areite.local/wp-content/themes/areite/images/7.jpg" srcset="http://areite.local/wp-content/themes/areite/images/7.jpg">
-                                    <img class="lazy-anim ls-is-cached lazyloaded" data-src="http://areite.local/wp-content/themes/areite/images/7.jpg" alt="" src="http://areite.local/wp-content/themes/areite/images/7.jpg">
+                                <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/7.jpg" srcset="<?php echo get_template_directory_uri(); ?>/images/7.jpg">
+                                  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/7.jpg" srcset="<?php echo get_template_directory_uri(); ?>/images/7.jpg">
+                                    <img class="lazy-anim ls-is-cached lazyloaded" data-src="<?php echo get_template_directory_uri(); ?>/images/7.jpg" alt="" src="<?php echo get_template_directory_uri(); ?>/images/7.jpg">
                                 </picture>
 
                             </div>
@@ -576,9 +576,9 @@ Laskettua kohdetta
                             <div class="image-aspect-box" style="padding-top:75%">
                               <div class="image-aspect-box_inner ">
                               <picture>
-                                <source media="(min-width:650px)" data-srcset="http://areite.local/wp-content/themes/areite/images/9.jpg" srcset="http://areite.local/wp-content/themes/areite/images/9.jpg">
-                                  <source media="(min-width:465px)" data-srcset="http://areite.local/wp-content/themes/areite/images/9.jpg" srcset="http://areite.local/wp-content/themes/areite/images/9.jpg">
-                                    <img class="lazy-anim ls-is-cached lazyloaded" data-src="http://areite.local/wp-content/themes/areite/images/9.jpg" alt="" src="http://areite.local/wp-content/themes/areite/images/9.jpg">
+                                <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/9.jpg" srcset="<?php echo get_template_directory_uri(); ?>/images/9.jpg">
+                                  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/9.jpg" srcset="<?php echo get_template_directory_uri(); ?>/images/9.jpg">
+                                    <img class="lazy-anim ls-is-cached lazyloaded" data-src="<?php echo get_template_directory_uri(); ?>/images/9.jpg" alt="" src="<?php echo get_template_directory_uri(); ?>/images/9.jpg">
                                 </picture>
 
                             </div>
