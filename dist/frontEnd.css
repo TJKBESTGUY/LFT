@@ -5047,6 +5047,21 @@ Moved: _kohteet
   padding-top: 63.5%;
 }
 
+.-dark-refe {
+  padding-bottom: 40px;
+  background: #333333;
+  color: white;
+}
+.-dark-refe h3 {
+  color: #F0FF31;
+}
+.-dark-refe div, .-dark-refe span {
+  border-color: #242424 !important;
+}
+.-dark-refe .label, .-dark-refe .value {
+  opacity: 0.8;
+}
+
 .module--referenssit-content {
   margin-bottom: 80px;
 }
@@ -5075,6 +5090,25 @@ Moved: _kohteet
 
 .refe-item {
   width: 50%;
+  margin-bottom: 60px;
+}
+
+.refe-item:nth-of-type(odd) {
+  padding-right: 40px;
+}
+
+.refe-item:nth-of-type(even) {
+  padding-left: 40px;
+}
+
+.refe-item-table .table-cell .value {
+  padding-left: 20px;
+  font-size: 1.5rem !important;
+}
+
+.refe-item__heading h4 {
+  margin: 0;
+  font-size: 2.8rem;
 }
 
 .refe-item .flx-container {
@@ -5611,12 +5645,25 @@ Moved: _kohteet
 }
 .Anim-item--reveal .heading {
   opacity: 0;
+  transform: translateY(16px);
+}
+
+.Anim-item--reveal h3 {
+  font-size: 3.4rem;
+}
+.Anim-item--reveal h3 strong {
+  margin: 0 !important;
+  margin-right: 30px !important;
 }
 
 .Anim-item--reveal.animated .heading {
   opacity: 1;
   transform: none;
   transition: 1s;
+}
+
+.Anim-item--reveal .char {
+  transform: rotateY(45deg) translateZ(10px);
 }
 
 @media screen and (max-width: 800px) {

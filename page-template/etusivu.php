@@ -79,7 +79,7 @@
       <section class="section--basic U-sec-pad">
         <div class="U_container U_base-pad">
 
-          <div class="module--split-content">
+          <div class="module--split-content" >
                 <div class="flx-container">
             <div class="cell split-content__img">
               <div class="cell_img-content">
@@ -99,7 +99,7 @@
             <div class="cell split-content__txt">
               <div class="cell_txt-content">
 
-                <p class="cell-p">Edelläkävijänä olemme kehittäneet määrälaskemisen tekniikoita toimintamme alusta alkaen. Kokemus antaa meille vakaan pohjan jatkuvalle kehitystyölle. Kymmenien vuosien kokemus määräluetteloiden laskemisesta näkyy laatuna ja luotettavuutena. Täsmällisyys on meille arvo niin määrälaskennassa kuin aikatauluissa..</p>
+                <p class="cell-p" style="padding-right:60px">Edelläkävijänä olemme kehittäneet määrälaskemisen tekniikoita toimintamme alusta alkaen. Kokemus antaa meille vakaan pohjan jatkuvalle kehitystyölle. Kymmenien vuosien kokemus määräluetteloiden laskemisesta näkyy laatuna ja luotettavuutena. Täsmällisyys on meille arvo niin määrälaskennassa kuin aikatauluissa.</p>
             </div>
               </div>
 
@@ -747,7 +747,7 @@
             <div class="cell split-content__txt">
               <div class="cell_txt-content">
               <!-- <h3>Täsmällisyys on meille kaikki kaikessa.</h3> -->
-              <p class="cell-p">Se ei varmasti ole yllätys, kun on puhe määrien laskemiseen erikoistuneesta pioneeriyrityksestä. Tarkkuus näkyy määräluetteloiden selkeydessä ja käytettävyydessä kuten myös aikatauluissa ja hinnoittelussa. Tähän ytimekäs johdatus yrityssivulle?</p>
+              <p class="cell-p" style="padding-right:60px">Se ei varmasti ole yllätys, kun on puhe määrien laskemiseen erikoistuneesta pioneeriyrityksestä. Tarkkuus näkyy määräluetteloiden selkeydessä ja käytettävyydessä kuten myös aikatauluissa ja hinnoittelussa. Tähän ytimekäs johdatus yrityssivulle?</p>
               <div class="capsule-wrap">
                 <button class="basic-btn btn--yellow"type="button" name="button"><span class="basic-btn__text">Lue lisää Areitesta</span> <span class="basic-btn__icon">
                   <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>

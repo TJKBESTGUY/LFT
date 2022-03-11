@@ -963,7 +963,7 @@ $posts_laskenta = get_posts(array(
 
       </section>
 
-      <section class="section--area-contact U-sec-pad">
+      <section class="section--area-contact U-sec-pad__small">
             <div class="U_container U_base-pad">
               <div class="module--area-contact">
                 <div class="heading-content">

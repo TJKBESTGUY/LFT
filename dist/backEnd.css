@@ -5284,6 +5284,20 @@ div .editor-styles-wrapper .acf-block-preview .module--refe-header-img {
 div .editor-styles-wrapper .acf-block-preview .module--refe-header-img .image-aspect-box {
   padding-top: 63.5%;
 }
+div .editor-styles-wrapper .acf-block-preview .-dark-refe {
+  padding-bottom: 40px;
+  background: #333333;
+  color: white;
+}
+div .editor-styles-wrapper .acf-block-preview .-dark-refe h3 {
+  color: #F0FF31;
+}
+div .editor-styles-wrapper .acf-block-preview .-dark-refe div, div .editor-styles-wrapper .acf-block-preview .-dark-refe span {
+  border-color: #242424 !important;
+}
+div .editor-styles-wrapper .acf-block-preview .-dark-refe .label, div .editor-styles-wrapper .acf-block-preview .-dark-refe .value {
+  opacity: 0.8;
+}
 div .editor-styles-wrapper .acf-block-preview .module--referenssit-content {
   margin-bottom: 80px;
 }
@@ -5309,6 +5323,21 @@ div .editor-styles-wrapper .acf-block-preview .refe-flx {
 }
 div .editor-styles-wrapper .acf-block-preview .refe-item {
   width: 50%;
+  margin-bottom: 60px;
+}
+div .editor-styles-wrapper .acf-block-preview .refe-item:nth-of-type(odd) {
+  padding-right: 40px;
+}
+div .editor-styles-wrapper .acf-block-preview .refe-item:nth-of-type(even) {
+  padding-left: 40px;
+}
+div .editor-styles-wrapper .acf-block-preview .refe-item-table .table-cell .value {
+  padding-left: 20px;
+  font-size: 1.5rem !important;
+}
+div .editor-styles-wrapper .acf-block-preview .refe-item__heading h4 {
+  margin: 0;
+  font-size: 2.8rem;
 }
 div .editor-styles-wrapper .acf-block-preview .refe-item .flx-container {
   display: flex;
@@ -5780,11 +5809,22 @@ div .editor-styles-wrapper .acf-block-preview .Anim-item--reveal .super-digits-m
 }
 div .editor-styles-wrapper .acf-block-preview .Anim-item--reveal .heading {
   opacity: 0;
+  transform: translateY(16px);
+}
+div .editor-styles-wrapper .acf-block-preview .Anim-item--reveal h3 {
+  font-size: 3.4rem;
+}
+div .editor-styles-wrapper .acf-block-preview .Anim-item--reveal h3 strong {
+  margin: 0 !important;
+  margin-right: 30px !important;
 }
 div .editor-styles-wrapper .acf-block-preview .Anim-item--reveal.animated .heading {
   opacity: 1;
   transform: none;
   transition: 1s;
+}
+div .editor-styles-wrapper .acf-block-preview .Anim-item--reveal .char {
+  transform: rotateY(45deg) translateZ(10px);
 }
 @media screen and (max-width: 800px) {
   div .editor-styles-wrapper .acf-block-preview .full-image__overlay {

@@ -1122,7 +1122,27 @@ max-width: none;
 
 ////REFE PAGE LIST/////
 
+.-dark-refe {
+  padding-bottom: 40px;
+  background: $a-grey;
+  color:white;
+  h3 {
+    color: $a-yellow;
+  }
+  p {
 
+  }
+}
+
+.-dark-refe{
+  div, span {
+      border-color: #242424 !important;
+  }
+  .label, .value {
+  opacity: 0.8;
+  }
+
+}
 
 
 
@@ -1150,6 +1170,24 @@ margin-left: 0;
 
 .refe-item {
   width: 50%;
+  margin-bottom: 60px;
+}
+
+.refe-item:nth-of-type(odd) {
+  padding-right: 40px;
+}
+.refe-item:nth-of-type(even) {
+  padding-left: 40px;
+}
+
+.refe-item-table .table-cell .value {
+    padding-left: 20px;
+    font-size: 1.5rem !important;
+}
+
+.refe-item__heading h4 {
+    margin: 0;
+    font-size: 2.8rem;
 }
 
 .refe-item {
@@ -1768,14 +1806,27 @@ height: 100%;
 
 
 .Anim-item--reveal {
+
   .super-digits-mask {
     overflow: visible;
     line-height: 1;
   }
   .heading {
     opacity: 0;
-    // transform: translateY(20px);
+    transform: translateY(16px);
   }
+}
+
+
+
+.Anim-item--reveal h3 {
+  font-size: 3.4rem;
+      // line-height: 5.3rem;
+      // align-items: flex-end !important;
+      strong {
+        margin: 0 !important;
+        margin-right: 30px !important;
+      }
 }
 
 .Anim-item--reveal {
@@ -1790,7 +1841,9 @@ height: 100%;
   }
     }
 
-
+.Anim-item--reveal .char  {
+  transform: rotateY(45deg) translateZ(10px);
+}
 
 
 // DEV RESETS
