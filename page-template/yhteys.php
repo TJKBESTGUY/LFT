@@ -120,7 +120,7 @@
           </div>
           <?php } ?>
           <div class="cell area-contact-person__content">
-            <h5 class="content__top"><?php the_sub_field( 'alueiden_otsikko' ); ?>
+            <h5 class="content__top js--show-area-pop"><?php the_sub_field( 'alueiden_otsikko' ); ?>
             <span style=""><?php the_sub_field( 'maakunnat' ); ?></span></h5>
             <div class="content__bottom">
               <p class="strong"><?php the_sub_field( 'nimi' ); ?></p>
@@ -229,11 +229,24 @@
                   <?php if (get_sub_field('lohkon_selvenne')) { ?>
                     <p class="contact-desc"><?php the_sub_field( 'lohkon_selvenne' ); ?></p>
                     <?php } ?>
-                  <div class="map-box">
+                  <!-- <div class="map-box">
                     <div class="map-box-inner">
                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.100505269999!2d24.926335316372512!3d60.19561958197036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bccd23400dd%3A0x86c198bac66fa98b!2sAreite%20Oy!5e0!3m2!1sen!2sfi!4v1645627455699!5m2!1sen!2sfi" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
 
+                  </div> -->
+
+                  <div class="cell_img-content">
+                    <div class="image-aspect-box" style="padding-top:66.67%">
+      <div class="image-aspect-box_inner ">
+      <picture>
+        <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kartta-toimistot.png">
+          <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kartta-toimistot.png">
+            <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kartta-toimistot.png" alt="" src="">
+        </picture>
+
+    </div>
+    </div>
                   </div>
                   <?php if ( have_rows( 'yksittainen_toimisto' ) ) : ?>
                       <div class="contact-offices__locations">

@@ -15,12 +15,12 @@
       <section class="section--home-header U-sec-pad">
         <div class="U_container U_base-pad">
           <div class="module--heading_txt module--services-header">
-            <div class="heading" style="max-width:1200px">
+            <div class="heading" style="">
                 <h1>Laaja osaaminen<br>laadun takeena</h1>
             </div>
 
             <div class="flx-container">
-              <div class="cell" style="width:100%; max-width: 880px; margin-top:40px;font-size:2.2rem">
+              <div class="large-p-wrapper" style="">
               <p>Kehitämme jatkuvasti työtapojamme ja liiketoimintaamme. Katsomme eteenpäin, minne ala on menossa ja edistämme määräluetteloiden käytettävyyttä sekä määrälaskentaohjelmistoja. Näin palvelemme rakennusalaa aina ajantasaisesti ja paremmin.
               </p>
               </div>
@@ -36,7 +36,7 @@
 
 
 
-      <section class="section--basic" style="padding-top:80px;">
+      <section class="section--basic U-sec-pad__small" style="">
         <div class="U_container U_base-pad">
           <div class="module--full-image ">
             <div class="image-aspect-box">
@@ -114,7 +114,7 @@
         <div class="module--heading_txt floating-heading">
 
             <div class="heading-content">
-            <div class="heading" style="max-width: 960px;">
+            <div class="heading" style="">
           <h3>Areiten henkilökunta on aina olennaisessa roolissa tuotekehityksessä, sillä heillä on monivuotinen kokemus niin asiakkaiden liiketoiminnasta kuin määrälaskennasta.</h3>
             </div>
         </div>
@@ -125,7 +125,7 @@
             <section class="section--basic U-sec-pad">
               <div class="U_container U_base-pad">
 
-                <div class="module--split-content " style="padding-left:8.333%">
+                <div class="module--split-content  -split-nudge--after-heading" style="">
                       <div class="flx-container">
                         <div class="cell mosaic-split__txt split-content__txt">
                           <div class="cell_txt-content">
@@ -167,9 +167,9 @@
             </section>
       <section class="section--basic U-sec-pad">
         <div class="U_container U_base-pad">
-          <div class="module--split-content -boxed-layout">
+          <div class="module--split-content -boxed-layout -boxed-layout__page-bottom">
                 <div class="flx-container">
-                  <div class="cell split-content__txt -boxed-cell -boxed-cell_dark">
+                  <div class="cell split-content__txt -boxed-cell ">
                     <div class="cell_txt-content">
                     <h3>Määrälaskenta ohjaa työtä</h3>
                     <p class="cell-p">Jo ennen rakentamista on tärkeä saada mahdollisimman täsmällinen kuva tarvittavista materiaaleista. Määrälaskenta antaa tarkan määrätiedon saatavilla olevista laskenta-asiakirjoista. Laskennan tuloksena on määräluettelo, joka ohjaa kustannusarviota, projektin budjetointia ja kohteen aikataulutusta. Määräluettelo on kuin ”ostoslista”, jonka avulla rakennukset rakennetaan.</p>

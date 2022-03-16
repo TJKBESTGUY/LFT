@@ -130,3 +130,24 @@ function animateValue(obj, start, end, duration) {
 
 // const obj = document.getElementById("value");
 // animateValue(obj, 100, 0, 5000);
+
+
+
+
+
+
+/////HOVER FOR CONTACT AREAS
+
+if (document.body.classList.contains('page-template-yhteys')) {
+	var hover_elems = document.querySelectorAll(".js--show-area-pop")
+	hover_elems.forEach(function (elem) {
+		console.log(elem); // The element
+	elem.addEventListener("mouseenter", function(e) {
+  e.target.classList.add("S-hover-active")
+});
+	elem.addEventListener("mouseleave", function(e) {
+		  e.target.classList.remove("S-hover-active")
+});
+	});
+
+}

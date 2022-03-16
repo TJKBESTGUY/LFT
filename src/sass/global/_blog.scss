@@ -113,7 +113,7 @@ flex-direction: column;
   }
     .tag {
       font-size: 1.3rem;
-  background: #f0ff32;
+  background: $a-yellow;
   color: black;
   padding: 6px;
   border-radius: 2px;
@@ -199,7 +199,7 @@ transition: 0.25s;
 .S-animating--articles{
 .section--bottom-cta {
     opacity: 0;
-  
+
   }
 }
 

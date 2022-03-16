@@ -88,6 +88,11 @@ $page_name = get_the_title();
           <span class="basic-btn__text">Ajankohtaista</span>
 
       </button>
+      <div class="nav-separator">
+        <div class="nav-separator__inner">
+
+        </div>
+      </div>
         <div class="nav__news-feed -desktop">
           <div class="inner">
           <ul>
@@ -135,6 +140,7 @@ $page_name = get_the_title();
               <a class="basic-btn btn--uutiset btn--yellow" href="/ajankohtaista">Katso kaikki</a>
           </div>
         </div>
+
       <a class="-nav-link Target--palvelut" href="/palvelut">Palvelut</a>
       <a class="-nav-link Target--laskentakohteet" href="/laskentakohteet">Laskentakohteet
         <div  class="laskenta-nav-counter">
@@ -144,6 +150,11 @@ $page_name = get_the_title();
       <a class="-nav-link Target--referenssit" href="/referenssit">Referenssit</a>
       <a class="-nav-link Target--yritys" href="">Yritys</a>
       <a class="-nav-link Target--yhteystiedot" href="/yhteystiedot">Ota Yhteyttä</a>
+      <!-- <button class="basic-btn btn--uutiset btn--yellow js--nav-news-trigger">
+        <span class="basic-btn__icon"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5ZM9,13.24,5.05,6.4H13Z"/></svg></span>
+        <span class="basic-btn__text">Ajankohtaista</span>
+
+    </button> -->
     </nav>
 
       </div>

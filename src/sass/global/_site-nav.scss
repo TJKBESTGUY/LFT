@@ -43,6 +43,7 @@ width: auto;
   display: flex;
 width: 50%;
 min-width: 660px;
+min-width: 700px;
 }
 }
 
@@ -376,7 +377,7 @@ height: 100%;
     svg {
       height: 28px;
     width: auto;
-    fill: #f0ff32;
+    fill: $a-yellow;
     }
 
 
@@ -618,6 +619,22 @@ margin-left: -42px;
   z-index: 3;
 }
 
+.nav-separator {
+  display: flex;
+  position: relative;
+
+  height: 100%;
+
+  .nav-separator__inner {
+      background: black;
+      height: 23px;
+    width: 1px;
+    background: black;
+    opacity: 0.3;
+
+  }
+}
+
 .btn--uutiset {
 	font-size: 1.2rem !important;
 margin: 0;
@@ -737,7 +754,7 @@ li {
 }
 .tag {
   font-size: 1.1rem;
-    background: #f0ff32;
+    background: $a-yellow;
     color: black;
     padding: 4px;
     border-radius: 2px;
