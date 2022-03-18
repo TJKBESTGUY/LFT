@@ -925,27 +925,42 @@ padding-top: 10px;
 }
 
 
-
+.Target--palvelut {
+min-width: 60px;
+text-align: center;
+}
+.Target--laskentakohteet {
+min-width: 126px;
+text-align: center;
+}
+.Target--referenssit {
+min-width: 86px;
+text-align: center;
+}
+.Target--yhteystiedot {
+min-width: 93px;
+text-align: center;
+}
 
 ////////NAV DATA///////
 .Palvelut {
 .Target--palvelut {
-text-decoration: underline;
+font-weight: 500;
 }
 }
 .Laskentakohteet {
 .Target--laskentakohteet {
-text-decoration: underline;
+font-weight: 500;
 }
 }
 .Referenssit {
 .Target--referenssit {
-text-decoration: underline;
+font-weight: 500;
 }
 }
-.Yhteystiedot {
+.Yhteystiedot, .page-template-yhteys {
 .Target--yhteystiedot {
-text-decoration: underline;
+font-weight: 500;
 }
 }
 // .page-template-yritys {

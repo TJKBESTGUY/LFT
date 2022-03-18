@@ -153,7 +153,7 @@ $posts_laskenta = get_posts(array(
 
 
 
-      <section class="section--laskentakohteet-app  " style="padding-top:80px">
+      <section class="section--laskentakohteet-app section--laskentakohteet-app__full-app" style="padding-top:80px">
           <div class="U_container U_base-pad">
 
             <div class="module--laskentakohteet-navigation">
@@ -163,6 +163,7 @@ $posts_laskenta = get_posts(array(
                 <li class="S-active__area">
                   <button class="filter-buttton__all-results js--area-filter S-active__area" type="button" name="button" data-area="all">Kaikki</button>
                 </li>
+                <div class="mobile-filters-breaker"></div>
                 <li>
                     <button class="filter-buttton__area js--area-filter" type="button" name="button" data-area="paakaupunkiseutu">Pääkaupunkiseutu</button>
                 </li>
@@ -257,6 +258,7 @@ $posts_laskenta = get_posts(array(
                     <th class="sticky--th tr--kohde no-sort">
                       <span>Kohde</span>
                     </th>
+                      <th class="sticky--th "><span>Kaupunki</span></th>
                     <th class="sticky--th js--main-sort"><span>Tyyppi</span></th>
                     <th class="sticky--th"><span>Bruttoala m<sup>2</sup></span></th>
 
@@ -304,6 +306,16 @@ $posts_laskenta = get_posts(array(
                     <div class="">
                       <div class="flx-container">
                         <span class="td__label">&#8203;</span>
+                      <span class="td__name">Helsinki</span>
+                      <span class="td__xtra-info">&#8203;</span>
+                      </div>
+                    </div>
+
+                  </td>
+                  <td class="td--basic-cell">
+                    <div class="">
+                      <div class="flx-container">
+                        <span class="td__label td__label--basic">Tyyppi</span>
                       <span class="td__name"><?php the_field( 'kohteen_tyyppi' ); ?></span>
                       <span class="td__xtra-info">&#8203;</span>
                       </div>
@@ -313,7 +325,7 @@ $posts_laskenta = get_posts(array(
                   <td class="td--basic-cell">
                     <div class="">
                       <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
+                        <span class="td__label td__label--basic">Bruttoala</span>
                       <span class="td__name"><?php the_field( 'bruttoala_m2' ); ?></span>
                       <span class="td__xtra-info">&#8203;</span>
                       </div>
@@ -323,7 +335,7 @@ $posts_laskenta = get_posts(array(
                   <td class="td--basic-cell">
                     <div class="">
                       <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
+                        <span class="td__label td__label--basic">Tilavuus</span>
                       <span class="td__name"><?php the_field( 'tilavuus_m3' ); ?></span>
                       <span class="td__xtra-info">&#8203;</span>
                       </div>
@@ -333,7 +345,7 @@ $posts_laskenta = get_posts(array(
                   <td class="td--basic-cell">
                     <div class="">
                       <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
+                        <span class="td__label td__label--basic">Tarjous</span>
                       <span class="td__name"><?php the_field( 'tarjous_pvm' ); ?></span>
                       <span class="td__xtra-info">&#8203;</span>
                       </div>
@@ -343,7 +355,7 @@ $posts_laskenta = get_posts(array(
                   <td class="td--basic-cell">
                     <div class="">
                       <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
+                        <span class="td__label td__label--basic">Valmistuu</span>
                         <?php if ( have_rows( 'valmistuu' ) ) : ?>
   	<?php while ( have_rows( 'valmistuu' ) ) : the_row(); ?>
   		<?php $date = get_sub_field( 'valmistumisaika', false, false ); ?>

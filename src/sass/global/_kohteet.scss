@@ -4,13 +4,22 @@
 
 .section--laskentakohteet-app {
   @media screen and (max-width: 1000px) {
-    display: none;
+    // display: none;
   }
 }
 
 .section--laskentakohteet-app {
   position: relative;
 max-width: 100vw;
+}
+
+.section--laskentakohteet-app__full-app {
+  .U_base-pad {
+    @media screen and (max-width: 1360px) {
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+      }
 }
 
 
@@ -89,8 +98,10 @@ table {
 .module--laskentakohteet-app {
 
   th, td {
-    padding: 0 20px;
-
+      padding: 0 20px;
+      @media screen and (max-width: 1100px) {
+    padding: 0 14px;
+  }
 }
 td {
   position: relative;
@@ -129,9 +140,18 @@ td {
   color: $a-yellow;
   line-height: 16px;
 }
+.td__label--basic {
+color: #B0B0B0;
+  @media screen and (min-width: 1200.11px) {
+  visibility: hidden;
+  }
+}
 .td__name {
 line-height: 20px;
-font-size: 1.6rem;
+font-size: 1.5rem;
+  @media screen and (max-width: 1200px) {
+  font-size: 1.4rem;
+  }
 }
 .td__xtra-info {
   color: $a-text-grey;
@@ -153,7 +173,10 @@ margin-right: 8px;
 
 .td--basic-cell {
   .td__name {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+  @media screen and (max-width: 1200px) {
+  font-size: 1.4rem;
+  }
   &.-yellow {
     color: $a-yellow;
   }
@@ -216,7 +239,7 @@ tbody tr, .tbody tr {
 }
 
 .module--laskentakohteet-app.-full-app {
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1200px) {
 overflow-x: scroll;
 }
 table {
@@ -224,26 +247,48 @@ table {
   padding-bottom: 90px;
 }
 tr td:first-of-type {
-    min-width: 240px;
+    min-width: 260px;
 }
 
   td, th {
     min-width: 153px;
+      min-width: 140px;
   }
   .td--kohde, .tr--kohde {
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: 1200px) {
       position: sticky;
       left: 0;
       z-index: 3;
   }
   }
+
+  .tr--kohde:after {
+        @media screen and (max-width: 1200px) {
+    content: "";
+    position: absolute;
+    left: 259px;
+    top: 0;
+    height: 24px;
+    width: 1px;
+      background: #33333357;
+    z-index: 3;
+      }
+  }
+
+
+
   .td--kohde {
     background: $a-grey;
+        @media screen and (max-width: 1200px) {
+        background: #282727;
+        }
   }
   .td--basic-cell {
     background: $a-grey;
   }
 }
+
+
 
 
 //HOVER ON TD ////
@@ -385,10 +430,18 @@ background: white;
 }
 
 .laskentakohteet-navigation__filters {
+
+
+  @media screen and (max-width: 740px) {
+    // overflow: auto;
+  }
   ul {
     list-style: none;
     margin: 0;
     display: flex;
+    // min-width: 700px;
+    flex-wrap: wrap;
+    max-width: 100%;
   }
   li {
     background: transparent;
@@ -397,6 +450,15 @@ background: white;
   line-height: 1;
   border-radius: 0.4rem;
   transition: 0.25s;
+  white-space: nowrap;
+  @media screen and (max-width: 940px) {
+    padding: 0.6rem 1.4rem;
+  }
+  @media screen and (max-width: 740px) {
+  background: #90909012;
+margin-right: 10px;
+margin-bottom: 10px;
+  }
 
   &.S-active__area {
   background: $a-yellow;
@@ -405,9 +467,11 @@ background: white;
   }
 }
 
-
-.S-disabled__area-item {
-  display: none;
+.mobile-filters-breaker {
+  min-width: 100%;
+    @media screen and (min-width: 720.11px) {
+      display: none;
+}
 }
 
 // BTN
@@ -419,9 +483,31 @@ margin: 0;
 border: none;
 cursor: pointer;
 font-size: 1.6rem;
+    white-space: nowrap;
+  @media screen and (max-width: 940px) {
+  font-size: 1.4rem;
+  }
 }
 .filter-buttton__all-results {
   font-weight: 500;
+}
+
+.laskentakohteet-navigation__cta {
+  button {
+    white-space: nowrap;
+    margin-right: 0;
+      @media screen and (max-width: 800px) {
+      font-size: 1.4rem;
+      }
+  }
+  @media screen and (max-width: 740px) {
+  display:none;
+  }
+}
+
+
+.S-disabled__area-item {
+  display: none;
 }
 
 ////NAV CONTACT PERSONS////
