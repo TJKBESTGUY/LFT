@@ -36,7 +36,7 @@
 
 
 
-      <section class="section--basic U-sec-pad__small" style="">
+      <section class="section--basic U-sec-pad" style="">
         <div class="U_container U_base-pad">
           <div class="module--full-image ">
             <div class="image-aspect-box">

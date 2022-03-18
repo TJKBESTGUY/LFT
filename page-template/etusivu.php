@@ -32,7 +32,7 @@
 
       </section>
 
-      <section class="section--basic U-sec-pad__small">
+      <section class="section--basic U-sec-pad">
         <div class="U_container U_base-pad">
           <div class="module--full-image " style="" data-scroll>
               <!-- <div class="module--full-image " style="margin-right:8.33%;margin-left:8.33%" data-scroll> -->
