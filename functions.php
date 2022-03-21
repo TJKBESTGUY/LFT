@@ -423,3 +423,107 @@ if( function_exists('acf_add_options_page') ) {
 
 
 }
+
+
+
+
+
+add_action('wp_ajax_get_token', 'get_token');  // for admins only
+add_action('wp_ajax_nopriv_get_token', 'get_token'); // for ALL users
+
+
+
+
+// function get_token(){
+//
+//   $url = "https://api-test.bisnode.fi/permission/v1/ticket";
+//
+//   $curl = curl_init($url);
+//   curl_setopt($curl, CURLOPT_URL, $url);
+//   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+//   curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+//   //for debug only!
+//   curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+//   curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+//
+//   $resp = curl_exec($curl);
+//   curl_close($curl);
+//   // echo($resp);
+//   echo($output["ticket"]);
+//
+//   $output = json_decode($resp, true);
+//     var_dump($output["ticket"]);
+//
+//    wp_die();// this is required to terminate immediately and return a proper response
+// }
+
+
+
+function get_token(){
+
+  $url = "https://www.areite.fi/xml/laskentakohteet_pohjois-suomi.xml";
+
+	$response = wp_remote_get( $url );
+	$responseBody = wp_remote_retrieve_body( $response );
+
+	$xml = simplexml_load_string($responseBody); // where $xml_string is the XML data you'd like to use (a well-formatted XML string). If retrieving from an external source, you can use file_get_contents to retrieve the data and populate this variable.
+$json = json_encode($xml); // convert the XML string to JSON
+
+
+	$result = json_decode( $responseBody );
+	if ( is_array( $result ) && ! is_wp_error( $result ) ) {
+		echo($json );
+
+	} else {
+			echo($json);
+	}
+
+   wp_die();// this is required to terminate immediately and return a proper response
+}
+
+
+add_action('wp_head', 'myplugin_ajaxurl');
+
+function myplugin_ajaxurl() {
+
+   echo '<script type="text/javascript">
+           window.ajaxurl = "' . admin_url('admin-ajax.php') . '";
+         </script>';
+}
+
+// function css_t_subscribers() {
+//
+//   // Do we have this information in our transients already?
+//   $transient = get_transient( 'css_t_subscribers' );
+//
+//   // Yep!  Just return it and we're done.
+//   if( ! empty( $transient ) ) {
+//
+//     // The function will return here every time after the first time it is run, until the transient expires.
+//     return $transient;
+//
+//   // Nope!  We gotta make a call.
+//   } else {
+//
+//     // We got this url from the documentation for the remote API.
+//     $url = 'https://api.example.com/v4/subscribers';
+//
+//     // We are structuring these args based on the API docs as well.
+//     $args = array(
+//       'headers' => array(
+//         'token' => 'example_token'
+//       ),
+//     );
+//
+//     // Call the API.
+//     $out = wp_remote_get( $url, $args );
+//
+//     // Save the API response so we don't have to call again until tomorrow.
+//     set_transient( 'css_t_subscribers', $out, DAY_IN_SECONDS );
+//
+//     // Return the list of subscribers.  The function will return here the first time it is run, and then once again, each time the transient expires.
+//     return $out;
+//
+//   }
+//
+// }

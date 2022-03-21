@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <?xml-stylesheet href='laskentakohteet.xsl' type='text/xsl'?> -->
+<projects>
+  <item>
+    <title>NREP / Project Nurmijärvi logistiikkarakennus, Huom Lisäaika!</title>
+    <type>Uudisrakennus</type>
+    <brarea>25625</brarea>
+    <capacity>358870</capacity>
+    <offer>25.03.2022</offer>
+    <state />
+    <done>true</done>
+    <desc></desc>
+    <upcoming>false</upcoming>
+    <decoration>old</decoration>
+  </item>
+  <item>
+    <title>KAS Kappelitie 6 Nummelaan, Huom Lisäaika!</title>
+    <type>Uudisrakennus</type>
+    <brarea>3856</brarea>
+    <capacity>12610</capacity>
+    <offer>25.03.2022</offer>
+    <state />
+    <done>true</done>
+    <desc>Asuntoja 56 kpl</desc>
+    <upcoming>false</upcoming>
+    <decoration>old</decoration>
+  </item>
+  <item>
+    <title>KOy Nikkarinkruunu-Killan hanke vaihe 2 Keravalle</title>
+    <type>Laaj. + San.</type>
+    <brarea>155 + 9500</brarea>
+    <capacity>540 + 32660</capacity>
+    <offer>31.03.2022</offer>
+    <state />
+    <done>true</done>
+    <desc>Asuntoja 139 kpl</desc>
+    <upcoming>false</upcoming>
+    <decoration>old</decoration>
+  </item>
+  <item>
+    <title>Business Park Aisti Lahteen, Huom Lisäaika!</title>
+    <type>Uudisrakennus</type>
+    <brarea>9033</brarea>
+    <capacity>35450</capacity>
+    <offer>11.04.2022</offer>
+    <state />
+    <done>true</done>
+    <desc></desc>
+    <upcoming>false</upcoming>
+    <decoration>old</decoration>
+  </item>
+  <item>
+    <title>KONE / Office Building Heves, Urakka 1</title>
+    <type>Saneeraus</type>
+    <brarea>7330</brarea>
+    <capacity>29900</capacity>
+    <offer>11.04.2022</offer>
+    <state>vko 11</state>
+    <done>true</done>
+    <desc />
+    <upcoming>false</upcoming>
+    <decoration>old</decoration>
+  </item>
+  <item>
+    <title>KONE / Office Building Heves, Urakka 2</title>
+    <type>Saneeraus</type>
+    <brarea>5220</brarea>
+    <capacity>19150</capacity>
+    <offer>11.04.2022</offer>
+    <state>vko 12</state>
+    <done>false</done>
+    <desc />
+    <upcoming>false</upcoming>
+    <decoration>old</decoration>
+  </item>
+  <additionalInfo>
+    <areaName>Etelä-Suomi</areaName>
+    <executiveName>Ari Harilo</executiveName>
+    <executivePhone>040 832 3100</executivePhone>
+    <executiveEmail>ari.harilo@areite.fi</executiveEmail>
+    <rssUrl>xml/laskentakohteet_etela-suomi.rss</rssUrl>
+  </additionalInfo>
+</projects>

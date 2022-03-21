@@ -50,6 +50,14 @@
 <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.min.js"></script>
 
 
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script type="text/javascript">
+const home_url = "<?php echo home_url() ?>"; // "A string here"
+const dir_url = "<?php echo get_template_directory_uri(); ?>/xml/test.xml"
+console.log(home_url);
+console.log(dir_url);
+</script>
 
 </head>
 

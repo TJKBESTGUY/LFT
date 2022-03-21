@@ -155,7 +155,7 @@ elem.addEventListener("click", filter_areas);
 function filter_areas(e) {
 console.log("btn working");
   let targets_area = e.target.getAttribute('data-area');
-
+var table_elems = document.querySelectorAll('.laskentakohteet-app__body tr');
 ///ADD ANIMATION ON BODY
 
 document.body.classList.add("S-animating--table");
@@ -489,3 +489,189 @@ modal_container.addEventListener('click', event => {
 });
 
 }
+
+
+
+
+
+
+
+
+
+///////AXIOS CALLLL//////
+
+var the_url = dir_url
+
+// axios.get(the_url)
+//   .then(function (response) {
+//       console.log(response);
+//       console.log(response.headers)
+//       var json = xmlToJson.parse( response );
+//            console.log(json);
+//   })
+//   .catch(function (error) {
+//     // handle error
+//     console.log(error);
+//   })
+//   .then(function () {
+//     // console.log("axios request");
+//   });
+
+
+var ajax_url = ajaxurl;
+
+
+function get_token() {
+let params = new FormData;
+params.append('action', 'get_token');
+axios.post(ajax_url, params )
+.then( function (response) {
+
+console.log(response);
+// var id = response.data.id;
+// var no_data_on_trfi = response.data.message;
+
+// JSON.parse(response.data)
+console.log(response.data);
+// console.log(response.item);
+var r_items = response.data.item
+var r_count = response.data.item.length;
+console.log(r_count);
+
+let output = '';
+
+r_items.forEach((elem) => {
+	console.log(elem); // The element
+  console.log(elem.title);
+    console.log(elem.type);
+        console.log(elem.brarea);
+            console.log(elem.capacity);
+                  console.log(elem.offer);
+                    console.log(elem.desc);
+
+                    if (elem.desc.length > 0 ) {
+                      var extra_info = `<span class="-location"><img src="http://areite.local/wp-content/themes/areite/svg/info.svg">${elem.desc}</span>`
+                    }
+                    else {
+                        // var extra_info = `<span class="-location"><img src="http://areite.local/wp-content/themes/areite/svg/info.svg">NULL</span>`
+                        var extra_info = `<span class="-location" style="display:none"><img src="http://areite.local/wp-content/themes/areite/svg/info.svg">NULL</span>`
+                    }
+
+                    if (elem.done === "true" ) {
+                      var state = `<span class="td__name -yellow">Valmis</span>`
+
+                    }
+                    else {
+                        var state = `<span class="td__name ">${elem.state}</span>`
+                    }
+
+
+
+                    output +=
+                    `<tr id="65" class="Anim-item--list" data-area="etela-suomi">
+
+                        <td class="td--kohde">
+                        <div class="flx-container">
+                        <span class="td__label">
+                        ${elem.title}
+                        </span>
+
+                        <span class="td__name">${elem.title}</span>
+                        <span class="td__xtra-info">
+                          <span class="-location"><img src="http://areite.local/wp-content/themes/areite/svg/location.svg">Etelä-Suomi</span>
+
+                                            ${extra_info}
+                                               </span>
+                        </div>
+                      </td>
+                  	                                    <td class="td--basic-cell">
+                    <div class="">
+                      <div class="flx-container">
+                        <span class="td__label">​</span>
+                      <span class="td__name">Helsinki</span>
+                      <span class="td__xtra-info">​</span>
+                      </div>
+                    </div>
+
+                  </td>
+                  <td class="td--basic-cell">
+                    <div class="">
+                      <div class="flx-container">
+                        <span class="td__label td__label--basic">Tyyppi</span>
+                      <span class="td__name">${elem.type}</span>
+                      <span class="td__xtra-info">​</span>
+                      </div>
+                    </div>
+
+                  </td>
+                  <td class="td--basic-cell">
+                    <div class="">
+                      <div class="flx-container">
+                        <span class="td__label td__label--basic">Bruttoala</span>
+                      <span class="td__name">${elem.brarea}</span>
+                      <span class="td__xtra-info">​</span>
+                      </div>
+                    </div>
+
+                  </td>
+                  <td class="td--basic-cell">
+                    <div class="">
+                      <div class="flx-container">
+                        <span class="td__label td__label--basic">Tilavuus</span>
+                      <span class="td__name">${elem.capacity}</span>
+                      <span class="td__xtra-info">​</span>
+                      </div>
+                    </div>
+
+                  </td>
+                  <td class="td--basic-cell">
+                    <div class="">
+                      <div class="flx-container">
+                        <span class="td__label td__label--basic">Tarjous</span>
+                      <span class="td__name">${elem.offer}</span>
+                      <span class="td__xtra-info">​</span>
+                      </div>
+                    </div>
+
+                  </td>
+                  <td class="td--basic-cell">
+                    <div class="">
+                      <div class="flx-container">
+                        <span class="td__label td__label--basic">Valmistuu</span>
+
+                    ${state}
+
+                                          <span class="td__xtra-info">​</span>
+
+
+
+
+                      </div>
+                    </div>
+    <div class="tr__hover-action-indicator js--show-form-modal">Pyydä tarjous</div>
+                  </td>
+
+                        </tr>`
+
+    })
+
+
+    document.querySelector('.laskentakohteet-app__body').innerHTML = output
+
+// document.getElementById("plate_id").innerHTML = response.data.id.registerPlate;
+// document.getElementById("make_id").innerHTML = response.data.details.make;
+// document.getElementById("model_id").innerHTML = response.data.details.model;
+//
+// document.getElementById("kilpi").value = response.data.id.registerPlate;
+// document.getElementById("malli").value = response.data.basicDetails.commercialName;
+// document.getElementById("merkki").value = response.data.details.make;
+
+
+
+})
+.catch( function (error) {
+  console.log(error);
+});
+}
+
+get_token();
