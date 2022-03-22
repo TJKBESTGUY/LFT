@@ -1817,29 +1817,64 @@ function form_init() {
       hide_form();
     }
   });
-} ///////AXIOS CALLLL//////
+}
 
-
-var the_url = dir_url; // axios.get(the_url)
-//   .then(function (response) {
-//       console.log(response);
-//       console.log(response.headers)
-//       var json = xmlToJson.parse( response );
-//            console.log(json);
-//   })
-//   .catch(function (error) {
-//     // handle error
-//     console.log(error);
-//   })
-//   .then(function () {
-//     // console.log("axios request");
-//   });
+function handle_counters() {
+  document.querySelector(".laskenta-nav-counter span").innerHTML = laskenta_counter_value;
+}
 
 var ajax_url = ajaxurl;
+var server_url;
+var kohde_area;
+var laskenta_counter_value = 0;
+window.last_call; // var server_url_etela = "https://www.areite.fi/xml/laskentakohteet_pohjois-suomi.xml"
 
-function get_token() {
+function call_etela() {
+  server_url = "https://www.areite.fi/xml/laskentakohteet_etela-suomi.xml";
+  kohde_area = "Etelä-Suomi";
+  data_area = "etela-suomi";
+  last_call = false;
+  get_kohteet();
+}
+
+function call_ita() {
+  server_url = "https://www.areite.fi/xml/laskentakohteet_ita-suomi.xml";
+  kohde_area = "Itä-Suomi";
+  data_area = "ita-suomi";
+  last_call = false;
+  get_kohteet();
+}
+
+function call_paakaupunki() {
+  server_url = "https://www.areite.fi/xml/laskentakohteet_paakaupunkiseutu.xml";
+  kohde_area = "Pääkaupunkiseutu";
+  data_area = "paakaupunkiseutu";
+  last_call = false;
+  get_kohteet();
+}
+
+function call_pohjois() {
+  server_url = "https://www.areite.fi/xml/laskentakohteet_pohjois-suomi.xml";
+  kohde_area = "Pohjois-Suomi";
+  data_area = "pohjois-suomi";
+  last_call = true;
+  get_kohteet();
+}
+
+call_etela();
+call_paakaupunki();
+call_ita();
+call_pohjois();
+
+function get_kohteet() {
+  var server_url_local = server_url;
+  var kohde_area_local = kohde_area;
+  var data_area_local = data_area;
+  var last_call_local = last_call;
+  console.log(server_url_local);
   var params = new FormData();
   params.append('action', 'get_token');
+  params.append('server_url', server_url_local);
   axios.post(ajax_url, params).then(function (response) {
     console.log(response); // var id = response.data.id;
     // var no_data_on_trfi = response.data.message;
@@ -1848,47 +1883,61 @@ function get_token() {
     console.log(response.data); // console.log(response.item);
 
     var r_items = response.data.item;
-    var r_count = response.data.item.length;
+    var result = r_items.filter(function (r_item) {
+      return r_item.upcoming === "false";
+    });
+    console.log("result");
+    console.log(result); // console.log(Object.keys(result).length);
+
+    console.log("result");
+    var r_count = Object.keys(result).length;
+    laskenta_counter_value = laskenta_counter_value + r_count;
     console.log(r_count);
+    console.log("total");
+    console.log(laskenta_counter_value);
+    console.log("total");
+    console.log("last call");
+    console.log(last_call);
+    console.log("last call");
+
+    if (last_call_local === true) {
+      handle_counters();
+    }
+
     var output = '';
     r_items.forEach(function (elem) {
-      console.log(elem); // The element
+      if (elem.upcoming === "false") {
+        console.log(elem); // The element
 
-      console.log(elem.title);
-      console.log(elem.type);
-      console.log(elem.brarea);
-      console.log(elem.capacity);
-      console.log(elem.offer);
-      console.log(elem.desc);
+        console.log(elem.title);
+        console.log(elem.type);
+        console.log(elem.brarea);
+        console.log(elem.capacity);
+        console.log(elem.offer);
+        console.log(elem.desc);
 
-      if (elem.desc.length > 0) {
-        var extra_info = "<span class=\"-location\"><img src=\"http://areite.local/wp-content/themes/areite/svg/info.svg\">".concat(elem.desc, "</span>");
-      } else {
-        // var extra_info = `<span class="-location"><img src="http://areite.local/wp-content/themes/areite/svg/info.svg">NULL</span>`
-        var extra_info = "<span class=\"-location\" style=\"display:none\"><img src=\"http://areite.local/wp-content/themes/areite/svg/info.svg\">NULL</span>";
+        if (elem.desc.length > 0) {
+          var extra_info = "<span class=\"-location\"><img src=\"http://areite.local/wp-content/themes/areite/svg/info.svg\">".concat(elem.desc, "</span>");
+        } else {
+          // var extra_info = `<span class="-location"><img src="http://areite.local/wp-content/themes/areite/svg/info.svg">NULL</span>`
+          var extra_info = "<span class=\"-location\" style=\"display:none\"><img src=\"http://areite.local/wp-content/themes/areite/svg/info.svg\">NULL</span>";
+        }
+
+        if (elem.done === "true") {
+          var state = "<span class=\"td__name -yellow\">Valmis</span>";
+        } else {
+          var state = "<span class=\"td__name \">".concat(elem.state, "</span>");
+        }
+
+        output += "<tr id=\"65\" class=\"Anim-item--list\" data-area=\"".concat(data_area_local, "\">\n\n                        <td class=\"td--kohde\">\n                        <div class=\"flx-container\">\n                        <span class=\"td__label\">\n                        ").concat(elem.title, "\n                        </span>\n\n                        <span class=\"td__name\">").concat(elem.title, "</span>\n                        <span class=\"td__xtra-info\">\n                          <span class=\"-location\"><img src=\"http://areite.local/wp-content/themes/areite/svg/location.svg\">").concat(kohde_area_local, "</span>\n\n                                            ").concat(extra_info, "\n                                               </span>\n                        </div>\n                      </td>\n                  \t                                    <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label\">\u200B</span>\n                      <span class=\"td__name\">Helsinki</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Tyyppi</span>\n                      <span class=\"td__name\">").concat(elem.type, "</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Bruttoala</span>\n                      <span class=\"td__name\">").concat(elem.brarea, "</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Tilavuus</span>\n                      <span class=\"td__name\">").concat(elem.capacity, "</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Tarjous</span>\n                      <span class=\"td__name\">").concat(elem.offer, "</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Valmistuu</span>\n\n                    ").concat(state, "\n\n                                          <span class=\"td__xtra-info\">\u200B</span>\n\n\n\n\n                      </div>\n                    </div>\n    <div class=\"tr__hover-action-indicator js--show-form-modal\">Pyyd\xE4 tarjous</div>\n                  </td>\n\n                        </tr>");
       }
+    }); // document.querySelector('.laskentakohteet-app__body').innerHTML = output
 
-      if (elem.done === "true") {
-        var state = "<span class=\"td__name -yellow\">Valmis</span>";
-      } else {
-        var state = "<span class=\"td__name \">".concat(elem.state, "</span>");
-      }
-
-      output += "<tr id=\"65\" class=\"Anim-item--list\" data-area=\"etela-suomi\">\n\n                        <td class=\"td--kohde\">\n                        <div class=\"flx-container\">\n                        <span class=\"td__label\">\n                        ".concat(elem.title, "\n                        </span>\n\n                        <span class=\"td__name\">").concat(elem.title, "</span>\n                        <span class=\"td__xtra-info\">\n                          <span class=\"-location\"><img src=\"http://areite.local/wp-content/themes/areite/svg/location.svg\">Etel\xE4-Suomi</span>\n\n                                            ").concat(extra_info, "\n                                               </span>\n                        </div>\n                      </td>\n                  \t                                    <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label\">\u200B</span>\n                      <span class=\"td__name\">Helsinki</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Tyyppi</span>\n                      <span class=\"td__name\">").concat(elem.type, "</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Bruttoala</span>\n                      <span class=\"td__name\">").concat(elem.brarea, "</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Tilavuus</span>\n                      <span class=\"td__name\">").concat(elem.capacity, "</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Tarjous</span>\n                      <span class=\"td__name\">").concat(elem.offer, "</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Valmistuu</span>\n\n                    ").concat(state, "\n\n                                          <span class=\"td__xtra-info\">\u200B</span>\n\n\n\n\n                      </div>\n                    </div>\n    <div class=\"tr__hover-action-indicator js--show-form-modal\">Pyyd\xE4 tarjous</div>\n                  </td>\n\n                        </tr>");
-    });
-    document.querySelector('.laskentakohteet-app__body').innerHTML = output; // document.getElementById("plate_id").innerHTML = response.data.id.registerPlate;
-    // document.getElementById("make_id").innerHTML = response.data.details.make;
-    // document.getElementById("model_id").innerHTML = response.data.details.model;
-    //
-    // document.getElementById("kilpi").value = response.data.id.registerPlate;
-    // document.getElementById("malli").value = response.data.basicDetails.commercialName;
-    // document.getElementById("merkki").value = response.data.details.make;
+    document.querySelector('.laskentakohteet-app__body').insertAdjacentHTML('beforeend', output);
   })["catch"](function (error) {
     console.log(error);
   });
 }
-
-get_token();
 
 /***/ }),
 

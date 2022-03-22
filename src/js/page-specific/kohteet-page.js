@@ -496,34 +496,63 @@ modal_container.addEventListener('click', event => {
 
 
 
-
-
-///////AXIOS CALLLL//////
-
-var the_url = dir_url
-
-// axios.get(the_url)
-//   .then(function (response) {
-//       console.log(response);
-//       console.log(response.headers)
-//       var json = xmlToJson.parse( response );
-//            console.log(json);
-//   })
-//   .catch(function (error) {
-//     // handle error
-//     console.log(error);
-//   })
-//   .then(function () {
-//     // console.log("axios request");
-//   });
+function handle_counters() {
+  document.querySelector(".laskenta-nav-counter span").innerHTML = laskenta_counter_value;
+}
 
 
 var ajax_url = ajaxurl;
+var server_url;
+var kohde_area;
+var laskenta_counter_value = 0;
+window.last_call;
+// var server_url_etela = "https://www.areite.fi/xml/laskentakohteet_pohjois-suomi.xml"
+function call_etela() {
+  server_url = "https://www.areite.fi/xml/laskentakohteet_etela-suomi.xml"
+  kohde_area = "Etelä-Suomi"
+    data_area = "etela-suomi"
+        last_call = false;
+  get_kohteet();
+}
+function call_ita() {
+  server_url = "https://www.areite.fi/xml/laskentakohteet_ita-suomi.xml"
+  kohde_area = "Itä-Suomi"
+    data_area = "ita-suomi"
+        last_call = false;
+  get_kohteet();
+}
+function call_paakaupunki() {
+  server_url = "https://www.areite.fi/xml/laskentakohteet_paakaupunkiseutu.xml"
+  kohde_area = "Pääkaupunkiseutu"
+    data_area = "paakaupunkiseutu"
+      last_call = false;
+  get_kohteet();
+}
+function call_pohjois() {
+  server_url = "https://www.areite.fi/xml/laskentakohteet_pohjois-suomi.xml"
+  kohde_area = "Pohjois-Suomi"
+  data_area = "pohjois-suomi"
+  last_call = true;
+  get_kohteet();
+}
+
+call_etela();
+call_paakaupunki();
+call_ita();
+call_pohjois();
 
 
-function get_token() {
+function get_kohteet() {
+
+var server_url_local = server_url;
+var kohde_area_local = kohde_area;
+var data_area_local = data_area;
+var last_call_local = last_call;
+
+console.log(server_url_local);
 let params = new FormData;
 params.append('action', 'get_token');
+params.append('server_url', server_url_local);
 axios.post(ajax_url, params )
 .then( function (response) {
 
@@ -535,12 +564,39 @@ console.log(response);
 console.log(response.data);
 // console.log(response.item);
 var r_items = response.data.item
-var r_count = response.data.item.length;
+const result = r_items.filter(r_item => r_item.upcoming === "false");
+console.log("result");
+console.log(result);
+
+  // console.log(Object.keys(result).length);
+
+
+console.log("result");
+
+
+
+var r_count = Object.keys(result).length;
+
+laskenta_counter_value = laskenta_counter_value + r_count
+
+
+
 console.log(r_count);
+console.log("total");
+console.log(laskenta_counter_value);
+console.log("total");
+console.log("last call");
+console.log(last_call);
+console.log("last call");
+if (last_call_local === true) {
+handle_counters();
+}
 
 let output = '';
 
 r_items.forEach((elem) => {
+  if (elem.upcoming === "false") {
+
 	console.log(elem); // The element
   console.log(elem.title);
     console.log(elem.type);
@@ -568,7 +624,7 @@ r_items.forEach((elem) => {
 
 
                     output +=
-                    `<tr id="65" class="Anim-item--list" data-area="etela-suomi">
+                    `<tr id="65" class="Anim-item--list" data-area="${data_area_local}">
 
                         <td class="td--kohde">
                         <div class="flx-container">
@@ -578,7 +634,7 @@ r_items.forEach((elem) => {
 
                         <span class="td__name">${elem.title}</span>
                         <span class="td__xtra-info">
-                          <span class="-location"><img src="http://areite.local/wp-content/themes/areite/svg/location.svg">Etelä-Suomi</span>
+                          <span class="-location"><img src="http://areite.local/wp-content/themes/areite/svg/location.svg">${kohde_area_local}</span>
 
                                             ${extra_info}
                                                </span>
@@ -652,26 +708,15 @@ r_items.forEach((elem) => {
                   </td>
 
                         </tr>`
-
+}
     })
 
 
-    document.querySelector('.laskentakohteet-app__body').innerHTML = output
-
-// document.getElementById("plate_id").innerHTML = response.data.id.registerPlate;
-// document.getElementById("make_id").innerHTML = response.data.details.make;
-// document.getElementById("model_id").innerHTML = response.data.details.model;
-//
-// document.getElementById("kilpi").value = response.data.id.registerPlate;
-// document.getElementById("malli").value = response.data.basicDetails.commercialName;
-// document.getElementById("merkki").value = response.data.details.make;
-
-
+    // document.querySelector('.laskentakohteet-app__body').innerHTML = output
+      document.querySelector('.laskentakohteet-app__body').insertAdjacentHTML( 'beforeend', output );
 
 })
 .catch( function (error) {
   console.log(error);
 });
 }
-
-get_token();

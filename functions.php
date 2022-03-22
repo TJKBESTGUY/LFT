@@ -461,7 +461,9 @@ add_action('wp_ajax_nopriv_get_token', 'get_token'); // for ALL users
 
 function get_token(){
 
-  $url = "https://www.areite.fi/xml/laskentakohteet_pohjois-suomi.xml";
+  // $url = "https://www.areite.fi/xml/laskentakohteet_pohjois-suomi.xml";
+
+	  $url = $_POST['server_url'];
 
 	$response = wp_remote_get( $url );
 	$responseBody = wp_remote_retrieve_body( $response );
