@@ -1827,6 +1827,7 @@ var ajax_url = ajaxurl;
 var server_url;
 var kohde_area;
 var laskenta_counter_value = 0;
+var call_count = 0;
 window.last_call; // var server_url_etela = "https://www.areite.fi/xml/laskentakohteet_pohjois-suomi.xml"
 
 function call_etela() {
@@ -1892,15 +1893,17 @@ function get_kohteet() {
     console.log("result");
     var r_count = Object.keys(result).length;
     laskenta_counter_value = laskenta_counter_value + r_count;
+    call_count = call_count + 1;
     console.log(r_count);
     console.log("total");
     console.log(laskenta_counter_value);
     console.log("total");
     console.log("last call");
     console.log(last_call);
+    console.log(call_count);
     console.log("last call");
 
-    if (last_call_local === true) {
+    if (call_count === 4) {
       handle_counters();
     }
 

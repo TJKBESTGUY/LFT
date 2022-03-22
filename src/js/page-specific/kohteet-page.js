@@ -505,6 +505,7 @@ var ajax_url = ajaxurl;
 var server_url;
 var kohde_area;
 var laskenta_counter_value = 0;
+var call_count = 0;
 window.last_call;
 // var server_url_etela = "https://www.areite.fi/xml/laskentakohteet_pohjois-suomi.xml"
 function call_etela() {
@@ -512,6 +513,7 @@ function call_etela() {
   kohde_area = "Etelä-Suomi"
     data_area = "etela-suomi"
         last_call = false;
+
   get_kohteet();
 }
 function call_ita() {
@@ -519,6 +521,7 @@ function call_ita() {
   kohde_area = "Itä-Suomi"
     data_area = "ita-suomi"
         last_call = false;
+
   get_kohteet();
 }
 function call_paakaupunki() {
@@ -526,6 +529,7 @@ function call_paakaupunki() {
   kohde_area = "Pääkaupunkiseutu"
     data_area = "paakaupunkiseutu"
       last_call = false;
+
   get_kohteet();
 }
 function call_pohjois() {
@@ -579,7 +583,7 @@ var r_count = Object.keys(result).length;
 
 laskenta_counter_value = laskenta_counter_value + r_count
 
-
+  call_count = call_count + 1;
 
 console.log(r_count);
 console.log("total");
@@ -587,8 +591,9 @@ console.log(laskenta_counter_value);
 console.log("total");
 console.log("last call");
 console.log(last_call);
+console.log(call_count);
 console.log("last call");
-if (last_call_local === true) {
+if (call_count === 4) {
 handle_counters();
 }
 
