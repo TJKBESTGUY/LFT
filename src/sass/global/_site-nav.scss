@@ -971,3 +971,23 @@ font-weight: 500;
 // text-decoration: underline;
 // }
 // }
+
+
+
+
+
+
+
+
+////////LOADING SHIT/////
+.laskenta-nav-counter {
+  opacity: 0;
+  transform: translateY(6px);
+}
+.S-app-ready {
+  .laskenta-nav-counter {
+    opacity: 1;
+    transition: 0.3s;
+    transform: none;
+  }
+}

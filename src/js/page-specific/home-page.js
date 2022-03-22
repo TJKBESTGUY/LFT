@@ -17,7 +17,7 @@
 
 ///////TEMPALTE WRAP STARTS//////////
 if (document.body.classList.contains('page-template-etusivu')) {
-console.log("INIT LASKENTAKOHTEET");
+console.log("INIT LASKENTAKOHTEET preview");
 const table_body = document.querySelector(".laskentakohteet-app__body");
 
 
@@ -73,16 +73,14 @@ ScrollOut({
 		var anim_type = el.getAttribute('data-type');
 		console.log(anim_type);
 		if (anim_type == "counter" ) {
-			var value = el.getAttribute('data-value');
-			var min_value = value - 10;
-			animateValue(el, min_value, value, 900);
-
-			const options = {
-			  startVal: min_value,
-			  duration: 2,
-			};
-
-
+			// var value = el.getAttribute('data-value');
+			// var min_value = value - 10;
+			// animateValue(el, min_value, value, 900);
+			//
+			// const options = {
+			//   startVal: min_value,
+			//   duration: 2,
+			// };
 		// var numAnim = new countUp.CountUp(el, value, options);
 		// numAnim.start()
 
@@ -92,7 +90,6 @@ ScrollOut({
 // } else {
 //   console.error(count.error);
 // }
-
 		}
 		else {
 			console.log("no counnt");

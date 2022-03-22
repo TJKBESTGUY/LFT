@@ -416,10 +416,7 @@ elem.classList.remove("S-disabled__area");
 //init Form on laskenta
 form_init();
 
-///////TEMPALTE WRAP ENDS//////////
 
-
-}
 
 
 
@@ -493,11 +490,39 @@ modal_container.addEventListener('click', event => {
 
 
 
-
+function animateValue(obj, start, end, duration) {
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    obj.innerHTML = Math.floor(progress * (end - start) + start);
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  };
+  window.requestAnimationFrame(step);
+}
 
 
 function handle_counters() {
+    body = document.getElementsByTagName('body')[0];
+    body.classList.add("S-app-ready")
+    document.querySelector(".site-container").style.visibility = "visible";
+
+
   document.querySelector(".laskenta-nav-counter span").innerHTML = laskenta_counter_value;
+  document.querySelector(".-counted-number").innerHTML = laskenta_counter_value;
+  document.querySelector(".-overlay-number").dataset.value = laskenta_counter_value
+
+  var el = document.querySelector(".-overlay-number")
+  var value = document.querySelector(".-overlay-number").getAttribute('data-value');
+  var min_value = value - 8;
+  animateValue(el, min_value, value, 700);
+
+  const options = {
+    startVal: min_value,
+    duration: 2,
+  };
 }
 
 
@@ -565,17 +590,14 @@ console.log(response);
 // var no_data_on_trfi = response.data.message;
 
 // JSON.parse(response.data)
-console.log(response.data);
+// console.log(response.data);
 // console.log(response.item);
 var r_items = response.data.item
 const result = r_items.filter(r_item => r_item.upcoming === "false");
-console.log("result");
-console.log(result);
-
+// console.log("result");
+// console.log(result);
   // console.log(Object.keys(result).length);
-
-
-console.log("result");
+// console.log("result");
 
 
 
@@ -602,13 +624,13 @@ let output = '';
 r_items.forEach((elem) => {
   if (elem.upcoming === "false") {
 
-	console.log(elem); // The element
-  console.log(elem.title);
-    console.log(elem.type);
-        console.log(elem.brarea);
-            console.log(elem.capacity);
-                  console.log(elem.offer);
-                    console.log(elem.desc);
+	// console.log(elem); // The element
+  // console.log(elem.title);
+  //   console.log(elem.type);
+  //       console.log(elem.brarea);
+  //           console.log(elem.capacity);
+  //                 console.log(elem.offer);
+  //                   console.log(elem.desc);
 
                     if (elem.desc.length > 0 ) {
                       var extra_info = `<span class="-location"><img src="http://areite.local/wp-content/themes/areite/svg/info.svg">${elem.desc}</span>`
@@ -724,4 +746,11 @@ r_items.forEach((elem) => {
 .catch( function (error) {
   console.log(error);
 });
+}
+
+
+
+///////TEMPALTE WRAP ENDS//////////
+
+
 }

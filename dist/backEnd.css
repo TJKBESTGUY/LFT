@@ -5138,6 +5138,9 @@ div .editor-styles-wrapper .acf-block-preview .module--laskenta-count .flx-conta
 div .editor-styles-wrapper .acf-block-preview .module--laskenta-count .flx-container .cell {
   width: 50%;
 }
+div .editor-styles-wrapper .acf-block-preview .module--laskenta-count .laskenta-count__number {
+  position: relative;
+}
 div .editor-styles-wrapper .acf-block-preview .module--laskenta-count .laskenta-count__number span {
   font-size: 46rem;
   line-height: 38rem;
@@ -6062,12 +6065,22 @@ div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .
 div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__number {
   min-width: 10px;
   margin-right: 26px;
+  position: relative;
+}
+div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__number .-overlay-number {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__number .-counted-number {
+  text-align: right;
+  visibility: hidden;
 }
 div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__label {
   display: flex;
   align-items: flex-start;
   margin-top: 100px;
-  padding-left: 30px;
+  padding-left: 10px;
 }
 div .editor-styles-wrapper .acf-block-preview .background-image {
   position: absolute;

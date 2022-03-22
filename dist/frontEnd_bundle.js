@@ -1314,7 +1314,7 @@ if (document.body.classList.contains('page-template-etusivu')) {
     }, 3000);
   };
 
-  console.log("INIT LASKENTAKOHTEET");
+  console.log("INIT LASKENTAKOHTEET preview");
   var table_body = document.querySelector(".laskentakohteet-app__body");
   trigger_table_anim();
 }
@@ -1342,14 +1342,15 @@ ScrollOut({
     var anim_type = el.getAttribute('data-type');
     console.log(anim_type);
 
-    if (anim_type == "counter") {
-      var value = el.getAttribute('data-value');
-      var min_value = value - 10;
-      animateValue(el, min_value, value, 900);
-      var options = {
-        startVal: min_value,
-        duration: 2
-      }; // var numAnim = new countUp.CountUp(el, value, options);
+    if (anim_type == "counter") {// var value = el.getAttribute('data-value');
+      // var min_value = value - 10;
+      // animateValue(el, min_value, value, 900);
+      //
+      // const options = {
+      //   startVal: min_value,
+      //   duration: 2,
+      // };
+      // var numAnim = new countUp.CountUp(el, value, options);
       // numAnim.start()
       // let count = new CountUp( el, 42, options);
       // if (!count.error) {
@@ -1581,6 +1582,199 @@ if (document.body.classList.contains('page-template-laskentakohteet')) {
   }; //////SCROLL TOP////
 
 
+  // THE FORM
+  var form_init = function form_init() {
+    var table_elems = document.querySelectorAll('.laskentakohteet-app__body tr');
+    table_elems.forEach(function (elem) {
+      elem.addEventListener("click", form_selection);
+    });
+
+    function form_selection(e) {
+      console.log("click on tr");
+      console.log(e.currentTarget);
+      var target_ID = e.currentTarget.id;
+      var select_target = document.querySelector('#select-options');
+      var optionToSelect = document.querySelector("#option-" + target_ID + "");
+      console.log(optionToSelect);
+      console.log(optionToSelect.value);
+      select_target.value = optionToSelect.value;
+    }
+
+    document.querySelector(".js--from-show-more").onclick = function (e) {
+      document.querySelector(".form-laskenta__checkboxes").removeAttribute("style");
+      e.currentTarget.classList.add("S-muted");
+    };
+
+    btn_show_form = document.querySelectorAll(".js--show-form-modal");
+    btn_show_form.forEach(function (elem) {
+      elem.addEventListener("click", show_form);
+    });
+    btn_hide_form = document.querySelectorAll(".js--hide-modal__btn");
+    btn_hide_form.forEach(function (elem) {
+      elem.addEventListener("click", hide_form);
+    });
+
+    function show_form(e) {
+      console.log("toggle form");
+      document.querySelector(".modal-smoke").classList.remove("S-hidden");
+      document.querySelector(".form-modal").classList.remove("S-hidden");
+    }
+
+    function hide_form(e) {
+      document.querySelector(".modal-smoke").classList.add("S-hidden");
+      document.querySelector(".form-modal").classList.add("S-hidden");
+      console.log("toggle form");
+    }
+
+    var modal_container = document.querySelector('.form-modal');
+    modal_container.addEventListener('click', function (event) {
+      if (event.target.classList.contains("js--hide-modal")) {
+        console.log("modal click");
+        hide_form();
+      }
+    });
+  };
+
+  var animateValue = function animateValue(obj, start, end, duration) {
+    var startTimestamp = null;
+
+    var step = function step(timestamp) {
+      if (!startTimestamp) startTimestamp = timestamp;
+      var progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      obj.innerHTML = Math.floor(progress * (end - start) + start);
+
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+
+    window.requestAnimationFrame(step);
+  };
+
+  var handle_counters = function handle_counters() {
+    body = document.getElementsByTagName('body')[0];
+    body.classList.add("S-app-ready");
+    document.querySelector(".site-container").style.visibility = "visible";
+    document.querySelector(".laskenta-nav-counter span").innerHTML = laskenta_counter_value;
+    document.querySelector(".-counted-number").innerHTML = laskenta_counter_value;
+    document.querySelector(".-overlay-number").dataset.value = laskenta_counter_value;
+    var el = document.querySelector(".-overlay-number");
+    var value = document.querySelector(".-overlay-number").getAttribute('data-value');
+    var min_value = value - 8;
+    animateValue(el, min_value, value, 700);
+    var options = {
+      startVal: min_value,
+      duration: 2
+    };
+  };
+
+  // var server_url_etela = "https://www.areite.fi/xml/laskentakohteet_pohjois-suomi.xml"
+  var call_etela = function call_etela() {
+    server_url = "https://www.areite.fi/xml/laskentakohteet_etela-suomi.xml";
+    kohde_area = "Etelä-Suomi";
+    data_area = "etela-suomi";
+    last_call = false;
+    get_kohteet();
+  };
+
+  var call_ita = function call_ita() {
+    server_url = "https://www.areite.fi/xml/laskentakohteet_ita-suomi.xml";
+    kohde_area = "Itä-Suomi";
+    data_area = "ita-suomi";
+    last_call = false;
+    get_kohteet();
+  };
+
+  var call_paakaupunki = function call_paakaupunki() {
+    server_url = "https://www.areite.fi/xml/laskentakohteet_paakaupunkiseutu.xml";
+    kohde_area = "Pääkaupunkiseutu";
+    data_area = "paakaupunkiseutu";
+    last_call = false;
+    get_kohteet();
+  };
+
+  var call_pohjois = function call_pohjois() {
+    server_url = "https://www.areite.fi/xml/laskentakohteet_pohjois-suomi.xml";
+    kohde_area = "Pohjois-Suomi";
+    data_area = "pohjois-suomi";
+    last_call = true;
+    get_kohteet();
+  };
+
+  var get_kohteet = function get_kohteet() {
+    var server_url_local = server_url;
+    var kohde_area_local = kohde_area;
+    var data_area_local = data_area;
+    var last_call_local = last_call;
+    console.log(server_url_local);
+    var params = new FormData();
+    params.append('action', 'get_token');
+    params.append('server_url', server_url_local);
+    axios.post(ajax_url, params).then(function (response) {
+      console.log(response); // var id = response.data.id;
+      // var no_data_on_trfi = response.data.message;
+      // JSON.parse(response.data)
+      // console.log(response.data);
+      // console.log(response.item);
+
+      var r_items = response.data.item;
+      var result = r_items.filter(function (r_item) {
+        return r_item.upcoming === "false";
+      }); // console.log("result");
+      // console.log(result);
+      // console.log(Object.keys(result).length);
+      // console.log("result");
+
+      var r_count = Object.keys(result).length;
+      laskenta_counter_value = laskenta_counter_value + r_count;
+      call_count = call_count + 1;
+      console.log(r_count);
+      console.log("total");
+      console.log(laskenta_counter_value);
+      console.log("total");
+      console.log("last call");
+      console.log(last_call);
+      console.log(call_count);
+      console.log("last call");
+
+      if (call_count === 4) {
+        handle_counters();
+      }
+
+      var output = '';
+      r_items.forEach(function (elem) {
+        if (elem.upcoming === "false") {
+          // console.log(elem); // The element
+          // console.log(elem.title);
+          //   console.log(elem.type);
+          //       console.log(elem.brarea);
+          //           console.log(elem.capacity);
+          //                 console.log(elem.offer);
+          //                   console.log(elem.desc);
+          if (elem.desc.length > 0) {
+            var extra_info = "<span class=\"-location\"><img src=\"http://areite.local/wp-content/themes/areite/svg/info.svg\">".concat(elem.desc, "</span>");
+          } else {
+            // var extra_info = `<span class="-location"><img src="http://areite.local/wp-content/themes/areite/svg/info.svg">NULL</span>`
+            var extra_info = "<span class=\"-location\" style=\"display:none\"><img src=\"http://areite.local/wp-content/themes/areite/svg/info.svg\">NULL</span>";
+          }
+
+          if (elem.done === "true") {
+            var state = "<span class=\"td__name -yellow\">Valmis</span>";
+          } else {
+            var state = "<span class=\"td__name \">".concat(elem.state, "</span>");
+          }
+
+          output += "<tr id=\"65\" class=\"Anim-item--list\" data-area=\"".concat(data_area_local, "\">\n\n                        <td class=\"td--kohde\">\n                        <div class=\"flx-container\">\n                        <span class=\"td__label\">\n                        ").concat(elem.title, "\n                        </span>\n\n                        <span class=\"td__name\">").concat(elem.title, "</span>\n                        <span class=\"td__xtra-info\">\n                          <span class=\"-location\"><img src=\"http://areite.local/wp-content/themes/areite/svg/location.svg\">").concat(kohde_area_local, "</span>\n\n                                            ").concat(extra_info, "\n                                               </span>\n                        </div>\n                      </td>\n                  \t                                    <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label\">\u200B</span>\n                      <span class=\"td__name\">Helsinki</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Tyyppi</span>\n                      <span class=\"td__name\">").concat(elem.type, "</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Bruttoala</span>\n                      <span class=\"td__name\">").concat(elem.brarea, "</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Tilavuus</span>\n                      <span class=\"td__name\">").concat(elem.capacity, "</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Tarjous</span>\n                      <span class=\"td__name\">").concat(elem.offer, "</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Valmistuu</span>\n\n                    ").concat(state, "\n\n                                          <span class=\"td__xtra-info\">\u200B</span>\n\n\n\n\n                      </div>\n                    </div>\n    <div class=\"tr__hover-action-indicator js--show-form-modal\">Pyyd\xE4 tarjous</div>\n                  </td>\n\n                        </tr>");
+        }
+      }); // document.querySelector('.laskentakohteet-app__body').innerHTML = output
+
+      document.querySelector('.laskentakohteet-app__body').insertAdjacentHTML('beforeend', output);
+    })["catch"](function (error) {
+      console.log(error);
+    });
+  }; ///////TEMPALTE WRAP ENDS//////////
+
+
   console.log("INIT LASKENTAKOHTEET");
   /**
    * sortable 1.0
@@ -1763,183 +1957,17 @@ if (document.body.classList.contains('page-template-laskentakohteet')) {
   }; //init Form on laskenta
 
 
-  form_init(); ///////TEMPALTE WRAP ENDS//////////
-} // THE FORM
-
-
-function form_init() {
-  var table_elems = document.querySelectorAll('.laskentakohteet-app__body tr');
-  table_elems.forEach(function (elem) {
-    elem.addEventListener("click", form_selection);
-  });
-
-  function form_selection(e) {
-    console.log("click on tr");
-    console.log(e.currentTarget);
-    var target_ID = e.currentTarget.id;
-    var select_target = document.querySelector('#select-options');
-    var optionToSelect = document.querySelector("#option-" + target_ID + "");
-    console.log(optionToSelect);
-    console.log(optionToSelect.value);
-    select_target.value = optionToSelect.value;
-  }
-
-  document.querySelector(".js--from-show-more").onclick = function (e) {
-    document.querySelector(".form-laskenta__checkboxes").removeAttribute("style");
-    e.currentTarget.classList.add("S-muted");
-  };
-
-  btn_show_form = document.querySelectorAll(".js--show-form-modal");
-  btn_show_form.forEach(function (elem) {
-    elem.addEventListener("click", show_form);
-  });
-  btn_hide_form = document.querySelectorAll(".js--hide-modal__btn");
-  btn_hide_form.forEach(function (elem) {
-    elem.addEventListener("click", hide_form);
-  });
-
-  function show_form(e) {
-    console.log("toggle form");
-    document.querySelector(".modal-smoke").classList.remove("S-hidden");
-    document.querySelector(".form-modal").classList.remove("S-hidden");
-  }
-
-  function hide_form(e) {
-    document.querySelector(".modal-smoke").classList.add("S-hidden");
-    document.querySelector(".form-modal").classList.add("S-hidden");
-    console.log("toggle form");
-  }
-
-  var modal_container = document.querySelector('.form-modal');
-  modal_container.addEventListener('click', function (event) {
-    if (event.target.classList.contains("js--hide-modal")) {
-      console.log("modal click");
-      hide_form();
-    }
-  });
-}
-
-function handle_counters() {
-  document.querySelector(".laskenta-nav-counter span").innerHTML = laskenta_counter_value;
-}
-
-var ajax_url = ajaxurl;
-var server_url;
-var kohde_area;
-var laskenta_counter_value = 0;
-var call_count = 0;
-window.last_call; // var server_url_etela = "https://www.areite.fi/xml/laskentakohteet_pohjois-suomi.xml"
-
-function call_etela() {
-  server_url = "https://www.areite.fi/xml/laskentakohteet_etela-suomi.xml";
-  kohde_area = "Etelä-Suomi";
-  data_area = "etela-suomi";
-  last_call = false;
-  get_kohteet();
-}
-
-function call_ita() {
-  server_url = "https://www.areite.fi/xml/laskentakohteet_ita-suomi.xml";
-  kohde_area = "Itä-Suomi";
-  data_area = "ita-suomi";
-  last_call = false;
-  get_kohteet();
-}
-
-function call_paakaupunki() {
-  server_url = "https://www.areite.fi/xml/laskentakohteet_paakaupunkiseutu.xml";
-  kohde_area = "Pääkaupunkiseutu";
-  data_area = "paakaupunkiseutu";
-  last_call = false;
-  get_kohteet();
-}
-
-function call_pohjois() {
-  server_url = "https://www.areite.fi/xml/laskentakohteet_pohjois-suomi.xml";
-  kohde_area = "Pohjois-Suomi";
-  data_area = "pohjois-suomi";
-  last_call = true;
-  get_kohteet();
-}
-
-call_etela();
-call_paakaupunki();
-call_ita();
-call_pohjois();
-
-function get_kohteet() {
-  var server_url_local = server_url;
-  var kohde_area_local = kohde_area;
-  var data_area_local = data_area;
-  var last_call_local = last_call;
-  console.log(server_url_local);
-  var params = new FormData();
-  params.append('action', 'get_token');
-  params.append('server_url', server_url_local);
-  axios.post(ajax_url, params).then(function (response) {
-    console.log(response); // var id = response.data.id;
-    // var no_data_on_trfi = response.data.message;
-    // JSON.parse(response.data)
-
-    console.log(response.data); // console.log(response.item);
-
-    var r_items = response.data.item;
-    var result = r_items.filter(function (r_item) {
-      return r_item.upcoming === "false";
-    });
-    console.log("result");
-    console.log(result); // console.log(Object.keys(result).length);
-
-    console.log("result");
-    var r_count = Object.keys(result).length;
-    laskenta_counter_value = laskenta_counter_value + r_count;
-    call_count = call_count + 1;
-    console.log(r_count);
-    console.log("total");
-    console.log(laskenta_counter_value);
-    console.log("total");
-    console.log("last call");
-    console.log(last_call);
-    console.log(call_count);
-    console.log("last call");
-
-    if (call_count === 4) {
-      handle_counters();
-    }
-
-    var output = '';
-    r_items.forEach(function (elem) {
-      if (elem.upcoming === "false") {
-        console.log(elem); // The element
-
-        console.log(elem.title);
-        console.log(elem.type);
-        console.log(elem.brarea);
-        console.log(elem.capacity);
-        console.log(elem.offer);
-        console.log(elem.desc);
-
-        if (elem.desc.length > 0) {
-          var extra_info = "<span class=\"-location\"><img src=\"http://areite.local/wp-content/themes/areite/svg/info.svg\">".concat(elem.desc, "</span>");
-        } else {
-          // var extra_info = `<span class="-location"><img src="http://areite.local/wp-content/themes/areite/svg/info.svg">NULL</span>`
-          var extra_info = "<span class=\"-location\" style=\"display:none\"><img src=\"http://areite.local/wp-content/themes/areite/svg/info.svg\">NULL</span>";
-        }
-
-        if (elem.done === "true") {
-          var state = "<span class=\"td__name -yellow\">Valmis</span>";
-        } else {
-          var state = "<span class=\"td__name \">".concat(elem.state, "</span>");
-        }
-
-        output += "<tr id=\"65\" class=\"Anim-item--list\" data-area=\"".concat(data_area_local, "\">\n\n                        <td class=\"td--kohde\">\n                        <div class=\"flx-container\">\n                        <span class=\"td__label\">\n                        ").concat(elem.title, "\n                        </span>\n\n                        <span class=\"td__name\">").concat(elem.title, "</span>\n                        <span class=\"td__xtra-info\">\n                          <span class=\"-location\"><img src=\"http://areite.local/wp-content/themes/areite/svg/location.svg\">").concat(kohde_area_local, "</span>\n\n                                            ").concat(extra_info, "\n                                               </span>\n                        </div>\n                      </td>\n                  \t                                    <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label\">\u200B</span>\n                      <span class=\"td__name\">Helsinki</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Tyyppi</span>\n                      <span class=\"td__name\">").concat(elem.type, "</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Bruttoala</span>\n                      <span class=\"td__name\">").concat(elem.brarea, "</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Tilavuus</span>\n                      <span class=\"td__name\">").concat(elem.capacity, "</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Tarjous</span>\n                      <span class=\"td__name\">").concat(elem.offer, "</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Valmistuu</span>\n\n                    ").concat(state, "\n\n                                          <span class=\"td__xtra-info\">\u200B</span>\n\n\n\n\n                      </div>\n                    </div>\n    <div class=\"tr__hover-action-indicator js--show-form-modal\">Pyyd\xE4 tarjous</div>\n                  </td>\n\n                        </tr>");
-      }
-    }); // document.querySelector('.laskentakohteet-app__body').innerHTML = output
-
-    document.querySelector('.laskentakohteet-app__body').insertAdjacentHTML('beforeend', output);
-  })["catch"](function (error) {
-    console.log(error);
-  });
+  form_init();
+  var ajax_url = ajaxurl;
+  var server_url;
+  var kohde_area;
+  var laskenta_counter_value = 0;
+  var call_count = 0;
+  window.last_call;
+  call_etela();
+  call_paakaupunki();
+  call_ita();
+  call_pohjois();
 }
 
 /***/ }),

@@ -921,7 +921,10 @@ order: 2;
 
 
 
+
 .laskenta-count__number {
+  position: relative;
+
   span {
     font-size: 46rem;
     line-height: 38rem;
@@ -930,6 +933,7 @@ order: 2;
       line-height: 29vw;
       }
   }
+
 }
 .laskenta-count__label {
   span {
@@ -2093,6 +2097,16 @@ height: 100%;
 .module--laskenta-count--on-page .laskenta-count__number {
     min-width: 10px;
       margin-right: 26px;
+      position: relative;
+      .-overlay-number {
+        position: absolute;
+        top:0;
+        right: 0;
+      }
+      .-counted-number {
+        text-align: right;
+        visibility: hidden;
+      }
 }
 
 .module--laskenta-count--on-page .laskenta-count__label {
@@ -2100,5 +2114,5 @@ height: 100%;
     align-items: flex-start;
     // margin-top: 100px;
     margin-top: 100px;
-padding-left: 30px;
+padding-left: 10px;
 }

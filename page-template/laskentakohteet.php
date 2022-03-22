@@ -107,7 +107,7 @@ $posts_laskenta = get_posts(array(
         <div class="U_container U_base-pad">
           <div class="module--laskenta-count--on-page">
             <div class="flx-container">
-              <div class="cell super-digit__number">
+              <!-- <div class="cell super-digit__number">
                 <div data-scroll class="super-digits-mask">
                   <span class="Anim-item--split -fake-number -bold-txt">
                       18
@@ -117,13 +117,13 @@ $posts_laskenta = get_posts(array(
                     </span>
 
                 </div>
-              </div>
-                  <!--
+              </div> -->
+
               <div class="cell laskenta-count__number">
-              <span class="Anim-item--counter -bold-txt"  style="" data-scroll data-type="counter" data-value="15">16</span>
-                  <span class="Anim-item--counter -bold-txt"  style=""  data-type="counter" data-value="15">18</span>
+              <span class="Anim-item--counter -bold-txt -overlay-number"  style="" data-scroll data-type="counter" data-value="15"></span>
+                  <span class="Anim-item--counter -bold-txt -counted-number"  style=""  data-type="counter" data-value="15">15</span>
               </div>
-               -->
+
               <div class="cell laskenta-count__label">
                 <span class="h3">Määrälaskennassa<br>olevaa kohdetta</span>
               </div>

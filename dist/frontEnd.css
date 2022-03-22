@@ -4888,6 +4888,9 @@ Moved: _kohteet
 .module--laskenta-count .flx-container .cell {
   width: 50%;
 }
+.module--laskenta-count .laskenta-count__number {
+  position: relative;
+}
 .module--laskenta-count .laskenta-count__number span {
   font-size: 46rem;
   line-height: 38rem;
@@ -5912,13 +5915,23 @@ Moved: _kohteet
 .module--laskenta-count--on-page .laskenta-count__number {
   min-width: 10px;
   margin-right: 26px;
+  position: relative;
+}
+.module--laskenta-count--on-page .laskenta-count__number .-overlay-number {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.module--laskenta-count--on-page .laskenta-count__number .-counted-number {
+  text-align: right;
+  visibility: hidden;
 }
 
 .module--laskenta-count--on-page .laskenta-count__label {
   display: flex;
   align-items: flex-start;
   margin-top: 100px;
-  padding-left: 30px;
+  padding-left: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -6855,6 +6868,17 @@ input:focus + .input-append {
   font-weight: 500;
 }
 
+.laskenta-nav-counter {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.S-app-ready .laskenta-nav-counter {
+  opacity: 1;
+  transition: 0.3s;
+  transform: none;
+}
+
 /*--------------------------------------------------------------
 # Default Footer
 --------------------------------------------------------------*/
@@ -7008,6 +7032,10 @@ input:focus + .input-append {
     display: none;
   }
 }
+.page-template-laskentakohteet .site-container {
+  visibility: hidden;
+}
+
 @media screen and (max-width: 1000px) {
   .section--laskentakohteet-app {
     display: none;
