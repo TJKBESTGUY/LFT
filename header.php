@@ -50,6 +50,34 @@
 <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.min.js"></script>
 
 
+<script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+
+<style media="screen">
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #ffff22;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 3px;
+}
+</style>
+
+
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 <script type="text/javascript">
@@ -267,7 +295,7 @@ $page_name = get_the_title();
       </div>
       <div class="link-wrap">
         <a  class="h3 -nav-link Target--laskentakohteet" href="/laskentakohteet">Laskentakohteet
-          <div class="laskenta-nav-counter">
+          <div class="laskenta-nav-counter laskenta-nav-counter--mobile">
             <span>42</span>
           </div>
         </a>

@@ -69,14 +69,14 @@
 
           <div class="heading-content">
           <div class="heading">
-        <h3>Määrälaskenta-alan markkinajohtajana tuotamme määräluetteloita ja määrätietoa kattavasti, tarkasti ja tinkimättömällä ammattitaidolla</h3>
+        <h3>Laskemme määräluettelot rakentamista varten kattavasti, tarkasti ja tinkimättömällä ammattitaidolla</h3>
           </div>
       </div>
     </div>
     </div>
           </section>
 
-      <!-- <section class="section--basic U-sec-pad">
+      <section class="section--basic U-sec-pad">
         <div class="U_container U_base-pad">
 
           <div class="module--split-content -home-first-split" >
@@ -113,7 +113,7 @@
 
         </div>
 
-      </section> -->
+      </section>
 
 
       <!-- <section class="section--super-digit U-sec-marg -dark-mode">
@@ -176,7 +176,7 @@
       </section> -->
 
 
-      <!-- <section class="section--basic U-sec-pad__small">
+      <section class="section--basic U-sec-pad__small">
                 <div class="U_container U_base-pad">
   <div class="module--heading_txt floating-heading floating-heading--pre-table">
 
@@ -188,7 +188,7 @@
   </div>
 </div>
 </div>
-      </section> -->
+      </section>
 
 
 
@@ -584,86 +584,6 @@
 
       <section class="section--basic U-sec-pad">
         <div class="U_container U_base-pad">
-          <div class="module--split-content -mosaic-split">
-                <div class="flx-container">
-                  <div class="cell mosaic-split__img split-content__img">
-                    <div class="cell_img-content">
-                        <!-- <h3>Hyvät laskut saavat projektit vauhtiin</h3> -->
-                      <div class="image-aspect-box -wide-aspect">
-                        <div class="image-aspect-box_inner ">
-                        <picture>
-                          <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                            <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                              <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/8.jpg" alt="" src="">
-                          </picture>
-
-                      </div>
-                      </div>
-                    </div>
-                  </div>
-            <div class="cell mosaic-split__txt split-content__txt">
-              <div class="cell_txt-content">
-                  <h3>Meillä on kokemusta määrälaskennasta kaikenkokoiseen rakentamiseen<br>ja monenlaisiin urakkamuotoihin</h3>
-              <!-- <p class="">Määrälaskenta sujuvoittaa työtä, antaa vakaan perustan rakennushankkeille ja vähentää hävikkiä – niin materiaaleissa kuin tehokkuudessa. Laskenta on standardoitua ja yhdenmukaista, laskentaprosessi on loppuun asti ajateltu.</p> -->
-              <!-- <div class="capsule-wrap">
-                <button class="basic-btn btn--yellow"type="button" name="button"><span class="basic-btn__text">Lue lisää</span> <span class="basic-btn__icon">
-                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
-                </span> </button>
-              </div> -->
-            </div>
-              </div>
-
-
-          </div>
-          </div>
-
-        </div>
-
-      </section>
-
-      <section class="section--super-digit U-sec-marg -dark-mode">
-        <div class="U_container U_base-pad U_padded-container">
-          <div class="footer-bg-border">
-                <div class="cell">
-                </div>
-                <div class="cell">
-                </div>
-                <div class="cell">
-                </div>
-                <div class="cell">
-                </div>
-                <div class="cell">
-                </div>
-                <div class="cell">
-                </div>
-              </div>
-          <div class="module--super-digit">
-            <div class="flx-container">
-              <div class="cell super-digit__number">
-                <div data-scroll class="super-digits-mask">
-                  <span class="Anim-item--split -fake-number -bold-txt">
-                      204 500
-                    </span>
-                  <span class="Anim-item--split -real-number -bold-txt">
-                    204 500
-                    </span>
-
-                </div>
-              </div>
-              <div class="cell super-digit__label">
-                <span class="h3">suurin laskettu kohde (m2)</span>
-              </div>
-            </div>
-
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <!-- <section class="section--basic U-sec-pad">
-        <div class="U_container U_base-pad">
           <div class="module--split-content">
                 <div class="flx-container">
                   <div class="cell split-content__img">
@@ -684,7 +604,7 @@
 
             <div class="cell split-content__txt">
               <div class="cell_txt-content">
-              <h3>Meillä on kokemusta määrälaskennasta kaikenkokoiseen rakentamiseen<br>ja monenlaisiin urakkamuotoihin</h3>
+              <h3>Meillä on kokemusta määräluetteloiden laskemisesta kaikenkokoiseen rakentamiseen</h3>
             </div>
               </div>
 
@@ -692,80 +612,10 @@
           </div>
           </div>
 
-      </section> -->
+      </section>
 
 
-<!--
-      <section class="section--basic U-sec-pad">
-        <div class="U_container U_base-pad">
-          <div class="module--split-content">
-                <div class="flx-container">
-                  <div class="cell split-content__txt">
-                    <div class="cell_txt-content">
-                    <h3>Määrälaskentakokemusta kolmelta vuosikymmeneltä ja yli 10 000 määräluettelosta.</h3>
-                  </div>
-                    </div>
-                  <div class="cell split-content__img">
-                    <div class="cell_img-content">
-                      <div class="image-aspect-box" style="padding-top:75%">
-  <div class="image-aspect-box_inner ">
-  <picture>
-    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus7-a.png">
-      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus7-a.png">
-        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus7-a.png" alt="" src="">
-    </picture>
-
-</div>
-</div>
-                    </div>
-                  </div>
-
-
-
-
-          </div>
-          </div>
-          </div>
-
-      </section> -->
-
-
-      <!-- <section class="section--basic U-sec-pad">
-        <div class="U_container U_base-pad">
-          <div class="module--split-content -mosaic-split">
-                <div class="flx-container">
-                  <div class="cell mosaic-split__img split-content__img">
-                    <div class="cell_img-content">
-
-                      <div class="image-aspect-box -wide-aspect">
-                        <div class="image-aspect-box_inner ">
-                        <picture>
-                          <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                            <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                              <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/8.jpg" alt="" src="">
-                          </picture>
-
-                      </div>
-                      </div>
-                    </div>
-                  </div>
-            <div class="cell mosaic-split__txt split-content__txt">
-              <div class="cell_txt-content">
-                  <h3>Meillä on kokemusta määrälaskennasta kaikenkokoiseen rakentamiseen<br>ja monenlaisiin urakkamuotoihin</h3>
-
-            </div>
-              </div>
-
-
-          </div>
-          </div>
-
-        </div>
-
-      </section> -->
-
-
-      <!-- <section class="section--super-digit U-sec-marg">
+      <section class="section--super-digit U-sec-marg">
         <div class="U_container U_base-pad">
           <div class="module--super-digit">
             <div class="flx-container">
@@ -808,41 +658,27 @@
         </div>
           </div>
 
-      </section> -->
+      </section>
 
 
-      <!-- <section class="section--basic U-sec-pad" style="">
+      <section class="section--basic U-sec-pad" style="">
         <div class="U_container U_base-pad">
           <div class="module--heading_txt" >
-
+            <!-- <div class="heading-content" style="margin-left:8.333333333%"> -->
                 <div class="heading-content" style="margin-left:0">
                 <div class="heading">
-              <h2>Määrälaskentakokemusta kolmelta vuosikymmeneltä ja yli 10 000 määräluettelosta</h2>
-
+              <h2>Tarkkuus palkitsee läpi rakennushankkeen</h2>
+              <p class="ingr" style="">Luotettava määräluettelo on laadukkaan rakentamisen perusta. Olemme yli 30 vuoden ajan kehittäneet määräluettelomme auttamaan rakennushankkeiden alusta loppuun. Meillä on kokemusta määräluetteloiden laskemisesta kaikenkokoiseen rakentamiseen. Kun teemme työmme huolella ja tarkkuudella, niin asiakkaamme voivat keskittyä olennaiseen omassa työssään.</p>
                 </div>
-
+              <!-- <p class="ingr">Sivuillamme jaamme tiedot kohteista, jotka ovat nyt laskennassa.<br>Usein asiakkaamme saavat meiltä tietää missä rakentamista suunnitellaan.</p> -->
             </div>
           </div>
 
         </div>
 
-      </section> -->
-
-
-      <section class="section--basic U-sec-pad__small">
-                <div class="U_container U_base-pad">
-  <div class="module--heading_txt floating-heading" style="padding-left:0">
-
-      <div class="heading-content">
-      <div class="heading">
-    <h2 style="margin-right:20%">Määrälaskentakokemusta kolmelta vuosikymmeneltä ja yli 10 000 määräluettelosta</h2>
-      </div>
-  </div>
-</div>
-</div>
       </section>
 
-      <section class="section--basic U-sec-pad" >
+      <section class="section--basic U-sec-pad__small" >
         <div class="U_container U_base-pad">
 
 
@@ -885,7 +721,7 @@
 
           <div class="heading-content">
           <div class="heading">
-          <h3>Tarkkaan mietitty määrälaskentaprosessi ja alan kehittyneimmät työkalut mahdollistavat resurssien täyden hyödyntämisen</h3>
+          <h3>Täsmällisyys on meille kaikki kaikessa, pidämme kiinni sovitusta</h3>
           </div>
       </div>
     </div>
@@ -893,57 +729,7 @@
           </section>
 
 
-          <section class="section--basic U-sec-pad" style="">
-            <div class="U_container U_base-pad">
-
-
-
-              <div class="module--split-content -boxed-layout">
-                    <div class="flx-container">
-
-
-                <div class="cell split-content__txt -boxed-cell">
-                  <div class="cell_txt-content">
-                  <!-- <h3>Täsmällisyys on meille kaikki kaikessa.</h3> -->
-                  <p class="cell-p">Palveluitamme käyttävät säännöllisesti kaiken kokoiset rakennusliikkeet. Meillä on kokemusta monipuolisista kohteista ja urakkamuodoista: monimutkaisista erikoiskohteista kerrostaloihin. Tavoite on aina auttaa asiakasta heidän työssään. Määrälaskenta sujuvoittaa työtä, antaa vankan perustan rakentamiselle ja vähentää hävikkiä.</p>
-                  <div class="capsule-wrap">
-                    <button class="basic-btn btn--black"type="button" name="button"><span class="basic-btn__text">Lue lisää palveluista</span> <span class="basic-btn__icon">
-                      <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
-                    </span> </button>
-                  </div>
-                </div>
-                  </div>
-
-                  <div class="cell split-content__img">
-                    <div class="cell_img-content">
-                      <div class="image-aspect-box">
-        <div class="image-aspect-box_inner ">
-        <picture>
-          <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus3-b.png">
-            <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus3-b.png">
-              <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus3-b.png" alt="" src="">
-          </picture>
-
-      </div>
-      </div>
-                    </div>
-                  </div>
-
-
-              </div>
-              </div>
-
-
-
-
-
-
-            </div>
-
-          </section>
-
-
-          <!-- <section class="section--basic U-sec-pad">
+          <section class="section--basic U-sec-pad">
                     <div class="U_container U_base-pad">
 
           <div class="module--split-content -home-yritys-split" style="">
@@ -969,7 +755,7 @@
 
             <div class="cell split-content__txt">
               <div class="cell_txt-content">
-
+              <!-- <h3>Täsmällisyys on meille kaikki kaikessa.</h3> -->
               <p class="cell-p" style="">Se ei varmasti ole yllätys, kun on puhe määrien laskemiseen erikoistuneesta pioneeriyrityksestä. Tarkkuus näkyy määräluetteloiden selkeydessä ja käytettävyydessä kuten myös aikatauluissa ja hinnoittelussa. Tähän ytimekäs johdatus yrityssivulle?</p>
               <div class="capsule-wrap">
                 <button class="basic-btn btn--yellow"type="button" name="button"><span class="basic-btn__text">Lue lisää Areitesta</span> <span class="basic-btn__icon">
@@ -987,7 +773,7 @@
 
         </div>
 
-      </section> -->
+      </section>
 
       <section class="section--super-digit U-sec-marg -dark-mode">
 
@@ -1039,91 +825,30 @@
 
 
 
-      <section class="section--basic U-sec-pad__small">
-                <div class="U_container U_base-pad">
-  <div class="module--heading_txt floating-heading" style="padding-left:0">
-
-      <div class="heading-content">
-      <div class="heading">
-    <h2 style="margin-right:0%">Määrälaskennan moniosaajat tuottavat luotettavaa määrätietoa vuosien kokemuksella.</h2>
-      </div>
-  </div>
-</div>
-</div>
-      </section>
-
-
-      <section class="section--basic U-sec-pad">
-                <div class="U_container U_base-pad">
-
-      <div class="module--split-content -home-yritys-split" style="">
-            <div class="flx-container">
 
 
 
 
-        <div class="cell split-content__img">
-          <div class="cell_img-content">
-            <div class="image-aspect-box" style="padding-top:66.67%">
-<div class="image-aspect-box_inner ">
-<picture>
-<source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b4.jpg">
-  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b4.jpg">
-    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/b4.jpg" alt="" src="">
-</picture>
-
-</div>
-</div>
-          </div>
-        </div>
-
-        <div class="cell split-content__txt">
-          <div class="cell_txt-content">
-
-          <p class="cell-p" style="">Se ei varmasti ole yllätys, kun on puhe määrien laskemiseen erikoistuneesta pioneeriyrityksestä. Tarkkuus näkyy määräluetteloiden selkeydessä ja käytettävyydessä kuten myös aikatauluissa ja hinnoittelussa. Tähän ytimekäs johdatus yrityssivulle?</p>
-          <div class="capsule-wrap">
-            <button class="basic-btn btn--yellow"type="button" name="button"><span class="basic-btn__text">Lue lisää Areitesta</span> <span class="basic-btn__icon">
-              <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
-            </span> </button>
-          </div>
-        </div>
-          </div>
-
-
-      </div>
-      </div>
-
-
-
-    </div>
-
-  </section>
-
-
-
-
-
-
-      <!-- <section class="section--basic U-sec-pad" style="">
+      <section class="section--basic U-sec-pad" style="">
         <div class="U_container U_base-pad">
           <div class="module--heading_txt" >
-
+            <!-- <div class="heading-content" style="margin-left:8.333333333%"> -->
                 <div class="heading-content" style="margin-left:0">
                 <div class="heading">
               <h2>Jatkuva kehitys  pitää<br>askeleen edellä</h2>
               <p class="ingr" style="">Etsimme aina tapoja kehittää toimintaamme, jotta voimme palvella rakentajia vielä paremmin. Edistämme niin tapoja laskea kuin määrälaskentaohjelmistoja. Oma väkemme on olennaisessa roolissa kehittämässä, jotta voimme aina hyödyntää laajaa kokemustamme.</p>
                 </div>
-
+              <!-- <p class="ingr">Sivuillamme jaamme tiedot kohteista, jotka ovat nyt laskennassa.<br>Usein asiakkaamme saavat meiltä tietää missä rakentamista suunnitellaan.</p> -->
             </div>
           </div>
 
         </div>
 
-      </section> -->
+      </section>
 
 
 
-      <!-- <section class="section--basic U-sec-pad__small" style="">
+      <section class="section--basic U-sec-pad__small" style="">
         <div class="U_container U_base-pad">
 
 
@@ -1151,7 +876,7 @@
 
             <div class="cell split-content__txt -boxed-cell">
               <div class="cell_txt-content">
-
+              <!-- <h3>Täsmällisyys on meille kaikki kaikessa.</h3> -->
               <p class="cell-p">Palveluitamme käyttävät säännöllisesti kaiken kokoiset rakennusliikkeet. Meillä on kokemusta monipuolisista kohteista ja urakkamuodoista: monimutkaisista erikoiskohteista kerrostaloihin. Tavoite on aina auttaa asiakasta heidän työssään. Määrälaskenta sujuvoittaa työtä, antaa vankan perustan rakentamiselle ja vähentää hävikkiä.</p>
               <div class="capsule-wrap">
                 <button class="basic-btn btn--black"type="button" name="button"><span class="basic-btn__text">Lue lisää palveluista</span> <span class="basic-btn__icon">
@@ -1172,7 +897,7 @@
 
         </div>
 
-      </section> -->
+      </section>
 
 
 

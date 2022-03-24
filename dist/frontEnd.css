@@ -3375,6 +3375,7 @@ h2:first-child, .h2:first-child {
 
 h3, .h3 {
   font-size: 4.8rem;
+  font-size: 4.7rem;
   line-height: 1.2;
   margin: 0;
   margin-bottom: 40px;
@@ -7590,7 +7591,17 @@ th.no-sort:after {
 .area-contact__map {
   padding-right: 80px;
   width: 50%;
-  max-width: 600px;
+  max-width: 582px;
+}
+@media screen and (max-width: 1300px) {
+  .area-contact__map {
+    padding-right: 60px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .area-contact__map {
+    padding-right: 40px;
+  }
 }
 .area-contact__map .cls-2 {
   transition: 0.3s;
@@ -7611,6 +7622,11 @@ th.no-sort:after {
 .area-contact__persons {
   flex-grow: 2;
 }
+@media screen and (max-width: 1100px) {
+  .area-contact__persons {
+    max-width: 50%;
+  }
+}
 
 .area-contact-person {
   padding: 40px 0;
@@ -7627,6 +7643,21 @@ th.no-sort:after {
 .area-contact-person__image {
   width: 260px;
 }
+@media screen and (max-width: 1300px) {
+  .area-contact-person__image {
+    width: 220px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .area-contact-person__image {
+    width: 180px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .area-contact-person__image {
+    width: 120px;
+  }
+}
 .area-contact-person__image .image-aspect-box {
   padding-top: 100%;
 }
@@ -7639,6 +7670,11 @@ th.no-sort:after {
   justify-content: space-between;
   padding-left: 40px;
 }
+@media screen and (max-width: 1100px) {
+  .area-contact-person__content {
+    padding-left: 30px;
+  }
+}
 .area-contact-person__content h4 {
   margin: 0;
 }
@@ -7650,6 +7686,7 @@ th.no-sort:after {
 }
 .area-contact-person__content h5.content__top {
   font-size: 2.2rem;
+  margin-bottom: 20px;
 }
 .area-contact-person__content h5.content__top span {
   font-size: 1.3rem;

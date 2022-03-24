@@ -489,6 +489,13 @@ modal_container.addEventListener('click', event => {
 
 
 
+///////TEMPALTE WRAP ENDS//////////
+
+
+}
+
+
+
 
 function animateValue(obj, start, end, duration) {
   let startTimestamp = null;
@@ -508,9 +515,11 @@ function handle_counters() {
     body = document.getElementsByTagName('body')[0];
     body.classList.add("S-app-ready")
     document.querySelector(".site-container").style.visibility = "visible";
-
-
   document.querySelector(".laskenta-nav-counter span").innerHTML = laskenta_counter_value;
+  document.querySelector(".laskenta-nav-counter--mobile span").innerHTML = laskenta_counter_value;
+
+  ///PAGE SPECIFIC///
+  if (document.body.classList.contains('page-template-laskentakohteet')) {
   document.querySelector(".-counted-number").innerHTML = laskenta_counter_value;
   document.querySelector(".-overlay-number").dataset.value = laskenta_counter_value
 
@@ -523,6 +532,11 @@ function handle_counters() {
     startVal: min_value,
     duration: 2,
   };
+}
+  if (document.body.classList.contains('page-template-etusivu')) {
+    document.querySelector(".js--counted-number").innerHTML = laskenta_counter_value;
+  }
+
 }
 
 
@@ -565,10 +579,35 @@ function call_pohjois() {
   get_kohteet();
 }
 
-call_etela();
-call_paakaupunki();
-call_ita();
-call_pohjois();
+// call_etela();
+// call_paakaupunki();
+// call_ita();
+// call_pohjois();
+
+
+// handle_counters();
+
+ if (document.body.classList.contains('page-template-laskentakohteet')) {
+   call_etela();
+   call_paakaupunki();
+   call_ita();
+   call_pohjois();
+   console.log("ON LASKENTA GET KOHTEET");
+ }
+ else if (sessionStorage.getItem("counter_value")) {
+  // Restore the contents of the text field
+  laskenta_counter_value = sessionStorage.getItem("counter_value");
+  handle_counters();
+  console.log("GET COUNT FROM SESSION STORAGE");
+}
+else {
+  call_etela();
+  call_paakaupunki();
+  call_ita();
+  call_pohjois();
+    console.log("INITIAL LOAD ON SESSION");
+
+}
 
 
 function get_kohteet() {
@@ -617,6 +656,7 @@ console.log(call_count);
 console.log("last call");
 if (call_count === 4) {
 handle_counters();
+sessionStorage.setItem('counter_value', laskenta_counter_value);
 }
 
 let output = '';
@@ -740,17 +780,13 @@ r_items.forEach((elem) => {
 
 
     // document.querySelector('.laskentakohteet-app__body').innerHTML = output
+    if (document.body.classList.contains('page-template-laskentakohteet')) {
       document.querySelector('.laskentakohteet-app__body').insertAdjacentHTML( 'beforeend', output );
+    }
+
 
 })
 .catch( function (error) {
   console.log(error);
 });
-}
-
-
-
-///////TEMPALTE WRAP ENDS//////////
-
-
 }

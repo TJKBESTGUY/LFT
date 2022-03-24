@@ -1633,145 +1633,6 @@ if (document.body.classList.contains('page-template-laskentakohteet')) {
         hide_form();
       }
     });
-  };
-
-  var animateValue = function animateValue(obj, start, end, duration) {
-    var startTimestamp = null;
-
-    var step = function step(timestamp) {
-      if (!startTimestamp) startTimestamp = timestamp;
-      var progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      obj.innerHTML = Math.floor(progress * (end - start) + start);
-
-      if (progress < 1) {
-        window.requestAnimationFrame(step);
-      }
-    };
-
-    window.requestAnimationFrame(step);
-  };
-
-  var handle_counters = function handle_counters() {
-    body = document.getElementsByTagName('body')[0];
-    body.classList.add("S-app-ready");
-    document.querySelector(".site-container").style.visibility = "visible";
-    document.querySelector(".laskenta-nav-counter span").innerHTML = laskenta_counter_value;
-    document.querySelector(".-counted-number").innerHTML = laskenta_counter_value;
-    document.querySelector(".-overlay-number").dataset.value = laskenta_counter_value;
-    var el = document.querySelector(".-overlay-number");
-    var value = document.querySelector(".-overlay-number").getAttribute('data-value');
-    var min_value = value - 8;
-    animateValue(el, min_value, value, 700);
-    var options = {
-      startVal: min_value,
-      duration: 2
-    };
-  };
-
-  // var server_url_etela = "https://www.areite.fi/xml/laskentakohteet_pohjois-suomi.xml"
-  var call_etela = function call_etela() {
-    server_url = "https://www.areite.fi/xml/laskentakohteet_etela-suomi.xml";
-    kohde_area = "Etelä-Suomi";
-    data_area = "etela-suomi";
-    last_call = false;
-    get_kohteet();
-  };
-
-  var call_ita = function call_ita() {
-    server_url = "https://www.areite.fi/xml/laskentakohteet_ita-suomi.xml";
-    kohde_area = "Itä-Suomi";
-    data_area = "ita-suomi";
-    last_call = false;
-    get_kohteet();
-  };
-
-  var call_paakaupunki = function call_paakaupunki() {
-    server_url = "https://www.areite.fi/xml/laskentakohteet_paakaupunkiseutu.xml";
-    kohde_area = "Pääkaupunkiseutu";
-    data_area = "paakaupunkiseutu";
-    last_call = false;
-    get_kohteet();
-  };
-
-  var call_pohjois = function call_pohjois() {
-    server_url = "https://www.areite.fi/xml/laskentakohteet_pohjois-suomi.xml";
-    kohde_area = "Pohjois-Suomi";
-    data_area = "pohjois-suomi";
-    last_call = true;
-    get_kohteet();
-  };
-
-  var get_kohteet = function get_kohteet() {
-    var server_url_local = server_url;
-    var kohde_area_local = kohde_area;
-    var data_area_local = data_area;
-    var last_call_local = last_call;
-    console.log(server_url_local);
-    var params = new FormData();
-    params.append('action', 'get_token');
-    params.append('server_url', server_url_local);
-    axios.post(ajax_url, params).then(function (response) {
-      console.log(response); // var id = response.data.id;
-      // var no_data_on_trfi = response.data.message;
-      // JSON.parse(response.data)
-      // console.log(response.data);
-      // console.log(response.item);
-
-      var r_items = response.data.item;
-      var result = r_items.filter(function (r_item) {
-        return r_item.upcoming === "false";
-      }); // console.log("result");
-      // console.log(result);
-      // console.log(Object.keys(result).length);
-      // console.log("result");
-
-      var r_count = Object.keys(result).length;
-      laskenta_counter_value = laskenta_counter_value + r_count;
-      call_count = call_count + 1;
-      console.log(r_count);
-      console.log("total");
-      console.log(laskenta_counter_value);
-      console.log("total");
-      console.log("last call");
-      console.log(last_call);
-      console.log(call_count);
-      console.log("last call");
-
-      if (call_count === 4) {
-        handle_counters();
-      }
-
-      var output = '';
-      r_items.forEach(function (elem) {
-        if (elem.upcoming === "false") {
-          // console.log(elem); // The element
-          // console.log(elem.title);
-          //   console.log(elem.type);
-          //       console.log(elem.brarea);
-          //           console.log(elem.capacity);
-          //                 console.log(elem.offer);
-          //                   console.log(elem.desc);
-          if (elem.desc.length > 0) {
-            var extra_info = "<span class=\"-location\"><img src=\"http://areite.local/wp-content/themes/areite/svg/info.svg\">".concat(elem.desc, "</span>");
-          } else {
-            // var extra_info = `<span class="-location"><img src="http://areite.local/wp-content/themes/areite/svg/info.svg">NULL</span>`
-            var extra_info = "<span class=\"-location\" style=\"display:none\"><img src=\"http://areite.local/wp-content/themes/areite/svg/info.svg\">NULL</span>";
-          }
-
-          if (elem.done === "true") {
-            var state = "<span class=\"td__name -yellow\">Valmis</span>";
-          } else {
-            var state = "<span class=\"td__name \">".concat(elem.state, "</span>");
-          }
-
-          output += "<tr id=\"65\" class=\"Anim-item--list\" data-area=\"".concat(data_area_local, "\">\n\n                        <td class=\"td--kohde\">\n                        <div class=\"flx-container\">\n                        <span class=\"td__label\">\n                        ").concat(elem.title, "\n                        </span>\n\n                        <span class=\"td__name\">").concat(elem.title, "</span>\n                        <span class=\"td__xtra-info\">\n                          <span class=\"-location\"><img src=\"http://areite.local/wp-content/themes/areite/svg/location.svg\">").concat(kohde_area_local, "</span>\n\n                                            ").concat(extra_info, "\n                                               </span>\n                        </div>\n                      </td>\n                  \t                                    <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label\">\u200B</span>\n                      <span class=\"td__name\">Helsinki</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Tyyppi</span>\n                      <span class=\"td__name\">").concat(elem.type, "</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Bruttoala</span>\n                      <span class=\"td__name\">").concat(elem.brarea, "</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Tilavuus</span>\n                      <span class=\"td__name\">").concat(elem.capacity, "</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Tarjous</span>\n                      <span class=\"td__name\">").concat(elem.offer, "</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Valmistuu</span>\n\n                    ").concat(state, "\n\n                                          <span class=\"td__xtra-info\">\u200B</span>\n\n\n\n\n                      </div>\n                    </div>\n    <div class=\"tr__hover-action-indicator js--show-form-modal\">Pyyd\xE4 tarjous</div>\n                  </td>\n\n                        </tr>");
-        }
-      }); // document.querySelector('.laskentakohteet-app__body').innerHTML = output
-
-      document.querySelector('.laskentakohteet-app__body').insertAdjacentHTML('beforeend', output);
-    })["catch"](function (error) {
-      console.log(error);
-    });
   }; ///////TEMPALTE WRAP ENDS//////////
 
 
@@ -1958,16 +1819,186 @@ if (document.body.classList.contains('page-template-laskentakohteet')) {
 
 
   form_init();
-  var ajax_url = ajaxurl;
-  var server_url;
-  var kohde_area;
-  var laskenta_counter_value = 0;
-  var call_count = 0;
-  window.last_call;
+}
+
+function animateValue(obj, start, end, duration) {
+  var startTimestamp = null;
+
+  var step = function step(timestamp) {
+    if (!startTimestamp) startTimestamp = timestamp;
+    var progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    obj.innerHTML = Math.floor(progress * (end - start) + start);
+
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  };
+
+  window.requestAnimationFrame(step);
+}
+
+function handle_counters() {
+  body = document.getElementsByTagName('body')[0];
+  body.classList.add("S-app-ready");
+  document.querySelector(".site-container").style.visibility = "visible";
+  document.querySelector(".laskenta-nav-counter span").innerHTML = laskenta_counter_value;
+  document.querySelector(".laskenta-nav-counter--mobile span").innerHTML = laskenta_counter_value; ///PAGE SPECIFIC///
+
+  if (document.body.classList.contains('page-template-laskentakohteet')) {
+    document.querySelector(".-counted-number").innerHTML = laskenta_counter_value;
+    document.querySelector(".-overlay-number").dataset.value = laskenta_counter_value;
+    var el = document.querySelector(".-overlay-number");
+    var value = document.querySelector(".-overlay-number").getAttribute('data-value');
+    var min_value = value - 8;
+    animateValue(el, min_value, value, 700);
+    var options = {
+      startVal: min_value,
+      duration: 2
+    };
+  }
+
+  if (document.body.classList.contains('page-template-etusivu')) {
+    document.querySelector(".js--counted-number").innerHTML = laskenta_counter_value;
+  }
+}
+
+var ajax_url = ajaxurl;
+var server_url;
+var kohde_area;
+var laskenta_counter_value = 0;
+var call_count = 0;
+window.last_call; // var server_url_etela = "https://www.areite.fi/xml/laskentakohteet_pohjois-suomi.xml"
+
+function call_etela() {
+  server_url = "https://www.areite.fi/xml/laskentakohteet_etela-suomi.xml";
+  kohde_area = "Etelä-Suomi";
+  data_area = "etela-suomi";
+  last_call = false;
+  get_kohteet();
+}
+
+function call_ita() {
+  server_url = "https://www.areite.fi/xml/laskentakohteet_ita-suomi.xml";
+  kohde_area = "Itä-Suomi";
+  data_area = "ita-suomi";
+  last_call = false;
+  get_kohteet();
+}
+
+function call_paakaupunki() {
+  server_url = "https://www.areite.fi/xml/laskentakohteet_paakaupunkiseutu.xml";
+  kohde_area = "Pääkaupunkiseutu";
+  data_area = "paakaupunkiseutu";
+  last_call = false;
+  get_kohteet();
+}
+
+function call_pohjois() {
+  server_url = "https://www.areite.fi/xml/laskentakohteet_pohjois-suomi.xml";
+  kohde_area = "Pohjois-Suomi";
+  data_area = "pohjois-suomi";
+  last_call = true;
+  get_kohteet();
+} // call_etela();
+// call_paakaupunki();
+// call_ita();
+// call_pohjois();
+// handle_counters();
+
+
+if (document.body.classList.contains('page-template-laskentakohteet')) {
   call_etela();
   call_paakaupunki();
   call_ita();
   call_pohjois();
+  console.log("ON LASKENTA GET KOHTEET");
+} else if (sessionStorage.getItem("counter_value")) {
+  // Restore the contents of the text field
+  laskenta_counter_value = sessionStorage.getItem("counter_value");
+  handle_counters();
+  console.log("GET COUNT FROM SESSION STORAGE");
+} else {
+  call_etela();
+  call_paakaupunki();
+  call_ita();
+  call_pohjois();
+  console.log("INITIAL LOAD ON SESSION");
+}
+
+function get_kohteet() {
+  var server_url_local = server_url;
+  var kohde_area_local = kohde_area;
+  var data_area_local = data_area;
+  var last_call_local = last_call;
+  console.log(server_url_local);
+  var params = new FormData();
+  params.append('action', 'get_token');
+  params.append('server_url', server_url_local);
+  axios.post(ajax_url, params).then(function (response) {
+    console.log(response); // var id = response.data.id;
+    // var no_data_on_trfi = response.data.message;
+    // JSON.parse(response.data)
+    // console.log(response.data);
+    // console.log(response.item);
+
+    var r_items = response.data.item;
+    var result = r_items.filter(function (r_item) {
+      return r_item.upcoming === "false";
+    }); // console.log("result");
+    // console.log(result);
+    // console.log(Object.keys(result).length);
+    // console.log("result");
+
+    var r_count = Object.keys(result).length;
+    laskenta_counter_value = laskenta_counter_value + r_count;
+    call_count = call_count + 1;
+    console.log(r_count);
+    console.log("total");
+    console.log(laskenta_counter_value);
+    console.log("total");
+    console.log("last call");
+    console.log(last_call);
+    console.log(call_count);
+    console.log("last call");
+
+    if (call_count === 4) {
+      handle_counters();
+      sessionStorage.setItem('counter_value', laskenta_counter_value);
+    }
+
+    var output = '';
+    r_items.forEach(function (elem) {
+      if (elem.upcoming === "false") {
+        // console.log(elem); // The element
+        // console.log(elem.title);
+        //   console.log(elem.type);
+        //       console.log(elem.brarea);
+        //           console.log(elem.capacity);
+        //                 console.log(elem.offer);
+        //                   console.log(elem.desc);
+        if (elem.desc.length > 0) {
+          var extra_info = "<span class=\"-location\"><img src=\"http://areite.local/wp-content/themes/areite/svg/info.svg\">".concat(elem.desc, "</span>");
+        } else {
+          // var extra_info = `<span class="-location"><img src="http://areite.local/wp-content/themes/areite/svg/info.svg">NULL</span>`
+          var extra_info = "<span class=\"-location\" style=\"display:none\"><img src=\"http://areite.local/wp-content/themes/areite/svg/info.svg\">NULL</span>";
+        }
+
+        if (elem.done === "true") {
+          var state = "<span class=\"td__name -yellow\">Valmis</span>";
+        } else {
+          var state = "<span class=\"td__name \">".concat(elem.state, "</span>");
+        }
+
+        output += "<tr id=\"65\" class=\"Anim-item--list\" data-area=\"".concat(data_area_local, "\">\n\n                        <td class=\"td--kohde\">\n                        <div class=\"flx-container\">\n                        <span class=\"td__label\">\n                        ").concat(elem.title, "\n                        </span>\n\n                        <span class=\"td__name\">").concat(elem.title, "</span>\n                        <span class=\"td__xtra-info\">\n                          <span class=\"-location\"><img src=\"http://areite.local/wp-content/themes/areite/svg/location.svg\">").concat(kohde_area_local, "</span>\n\n                                            ").concat(extra_info, "\n                                               </span>\n                        </div>\n                      </td>\n                  \t                                    <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label\">\u200B</span>\n                      <span class=\"td__name\">Helsinki</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Tyyppi</span>\n                      <span class=\"td__name\">").concat(elem.type, "</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Bruttoala</span>\n                      <span class=\"td__name\">").concat(elem.brarea, "</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Tilavuus</span>\n                      <span class=\"td__name\">").concat(elem.capacity, "</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Tarjous</span>\n                      <span class=\"td__name\">").concat(elem.offer, "</span>\n                      <span class=\"td__xtra-info\">\u200B</span>\n                      </div>\n                    </div>\n\n                  </td>\n                  <td class=\"td--basic-cell\">\n                    <div class=\"\">\n                      <div class=\"flx-container\">\n                        <span class=\"td__label td__label--basic\">Valmistuu</span>\n\n                    ").concat(state, "\n\n                                          <span class=\"td__xtra-info\">\u200B</span>\n\n\n\n\n                      </div>\n                    </div>\n    <div class=\"tr__hover-action-indicator js--show-form-modal\">Pyyd\xE4 tarjous</div>\n                  </td>\n\n                        </tr>");
+      }
+    }); // document.querySelector('.laskentakohteet-app__body').innerHTML = output
+
+    if (document.body.classList.contains('page-template-laskentakohteet')) {
+      document.querySelector('.laskentakohteet-app__body').insertAdjacentHTML('beforeend', output);
+    }
+  })["catch"](function (error) {
+    console.log(error);
+  });
 }
 
 /***/ }),

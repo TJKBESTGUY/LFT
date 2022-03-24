@@ -1501,6 +1501,7 @@ div .editor-styles-wrapper h2:first-child, div .editor-styles-wrapper .h2:first-
 }
 div .editor-styles-wrapper h3, div .editor-styles-wrapper .h3 {
   font-size: 4.8rem;
+  font-size: 4.7rem;
   line-height: 1.2;
   margin: 0;
   margin-bottom: 40px;
