@@ -5461,6 +5461,11 @@ Moved: _kohteet
     padding-top: 40px;
   }
 }
+@media screen and (max-width: 700px) {
+  .-border-section {
+    border-top: none;
+  }
+}
 
 .module--contact-offices .flx-container, .module--contact-sales .flx-container, .module--contact-customer-service .flx-container {
   display: flex;
@@ -5505,9 +5510,17 @@ Moved: _kohteet
   }
 }
 
+@media screen and (max-width: 500px) {
+  .contact-sticky-nav {
+    overflow-x: auto;
+    max-width: 100vw;
+  }
+}
+
 .contact-links {
   margin-top: 30px;
   display: flex;
+  flex-wrap: nowrap;
 }
 .contact-links a {
   background: #ffff22;
@@ -5517,6 +5530,13 @@ Moved: _kohteet
   margin-right: 6px;
   font-size: 1.2rem;
   font-weight: 500;
+  white-space: nowrap;
+}
+@media screen and (max-width: 500px) {
+  .contact-links a {
+    font-size: 1.1rem;
+    padding: 6px 12px;
+  }
 }
 
 .contact-desc {
@@ -5532,29 +5552,40 @@ Moved: _kohteet
 }
 
 .contact-sales__persons .area-contact-person {
-  width: calc(33.33% - 10px);
-  padding-top: 0;
-  border: none !important;
-}
-.contact-sales__persons .area-contact-person .area-contact-person__image {
   width: 100%;
 }
-.contact-sales__persons .area-contact-person .area-contact-person__content {
-  padding: 0;
-  display: block;
-  width: 100%;
+
+@media screen and (min-width: 700.11px) {
+  .contact-sales__persons .area-contact-person {
+    width: calc(33.33% - 10px);
+    padding-top: 0;
+    border: none !important;
+  }
+  .contact-sales__persons .area-contact-person .area-contact-person__image {
+    width: 100%;
+  }
+  .contact-sales__persons .area-contact-person .area-contact-person__content {
+    padding: 0;
+    display: block;
+    width: 100%;
+  }
+  .contact-sales__persons .area-contact-person .area-contact-person__content .content__top {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .contact-sales__persons .area-contact-person .area-contact-person__content .content__top span {
+    min-height: 54px;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+  }
+  .contact-sales__persons .area-contact-person .area-contact-person__content .content__bottom.-marq-added {
+    margin-top: 20px;
+  }
 }
-.contact-sales__persons .area-contact-person .area-contact-person__content .content__top {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-.contact-sales__persons .area-contact-person .area-contact-person__content .content__top span {
-  min-height: 54px;
-  margin-bottom: 0;
-  font-size: 1.2rem;
-}
-.contact-sales__persons .area-contact-person .area-contact-person__content .content__bottom.-marq-added {
-  margin-top: 20px;
+@media screen and (max-width: 700px) {
+  .contact-sales__persons .area-contact-person > div {
+    display: flex;
+  }
 }
 
 .map-box {
@@ -7587,6 +7618,11 @@ th.no-sort:after {
 .module--area-contact .flx-container {
   display: flex;
 }
+@media screen and (max-width: 740px) {
+  .module--area-contact .flx-container {
+    display: block;
+  }
+}
 
 .area-contact__map {
   padding-right: 80px;
@@ -7627,6 +7663,11 @@ th.no-sort:after {
     max-width: 50%;
   }
 }
+@media screen and (max-width: 740px) {
+  .area-contact__persons {
+    max-width: 100%;
+  }
+}
 
 .area-contact-person {
   padding: 40px 0;
@@ -7658,6 +7699,11 @@ th.no-sort:after {
     width: 120px;
   }
 }
+@media screen and (max-width: 500px) {
+  .area-contact-person__image {
+    width: 100px;
+  }
+}
 .area-contact-person__image .image-aspect-box {
   padding-top: 100%;
 }
@@ -7675,6 +7721,11 @@ th.no-sort:after {
     padding-left: 30px;
   }
 }
+@media screen and (max-width: 1100px) {
+  .area-contact-person__content {
+    padding-left: 20px;
+  }
+}
 .area-contact-person__content h4 {
   margin: 0;
 }
@@ -7684,16 +7735,46 @@ th.no-sort:after {
   margin-bottom: 0;
   line-height: 1;
 }
+@media screen and (max-width: 700px) {
+  .area-contact-person__content p {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .area-contact-person__content p {
+    font-size: 1.3rem;
+  }
+}
 .area-contact-person__content h5.content__top {
   font-size: 2.2rem;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 860px) {
+  .area-contact-person__content h5.content__top {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .area-contact-person__content h5.content__top {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .area-contact-person__content h5.content__top {
+    font-size: 1.6rem;
+  }
+}
 .area-contact-person__content h5.content__top span {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   opacity: 0.6;
   font-weight: 500;
   margin-top: 4px;
   display: block;
+}
+@media screen and (max-width: 700px) {
+  .area-contact-person__content h5.content__top span {
+    font-size: 1.1rem;
+  }
 }
 
 .area-contact-person .-anim {
