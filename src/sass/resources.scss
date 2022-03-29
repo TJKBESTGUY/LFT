@@ -375,7 +375,18 @@ $a-text-grey: #B0B0B0;
 $a-text-grey-alt: #858585;
 
 
-
+@mixin h5-contact-size {
+	font-size: 2.2rem;
+	@media screen and (max-width: 1200px) {
+		font-size: 1.8rem;
+	}
+		@media screen and (max-width: 700px) {
+				font-size: 1.7rem;
+		}
+		@media screen and (max-width: 500px) {
+				font-size: 1.6rem;
+		}
+}
 
 
 

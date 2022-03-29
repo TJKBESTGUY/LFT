@@ -1606,6 +1606,10 @@ p {
   }
 }
 
+.contact-sticky-nav::-webkit-scrollbar {
+  display: none;
+}
+
 .contact-links {
   margin-top: 30px;
   display: flex;
@@ -1744,7 +1748,7 @@ display: flex;
   margin-top: 40px;
 
   h5 {
-    font-size: 2.2rem;
+     @include h5-contact-size;
         margin-bottom: 10px;
         font-weight: 500;
   }
@@ -1773,12 +1777,15 @@ line-height: 1.4;
     margin-top: 0;
     margin-bottom: 4px;
 
-    font-size: 2.2rem;
+   @include h5-contact-size;
       margin-bottom: 10px;
       font-weight: 500;
   }
   p {
     font-size: 2.2rem;
+        @media screen and (max-width: 1100px) {
+          font-size: 2rem;
+        }
 
     line-height: 1;
 

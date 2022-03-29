@@ -5517,6 +5517,10 @@ Moved: _kohteet
   }
 }
 
+.contact-sticky-nav::-webkit-scrollbar {
+  display: none;
+}
+
 .contact-links {
   margin-top: 30px;
   display: flex;
@@ -5647,6 +5651,21 @@ Moved: _kohteet
   margin-bottom: 10px;
   font-weight: 500;
 }
+@media screen and (max-width: 1200px) {
+  .areite-office h5 {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .areite-office h5 {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .areite-office h5 {
+    font-size: 1.6rem;
+  }
+}
 .areite-office p {
   font-size: 1.6rem;
   margin-top: 4px;
@@ -5672,9 +5691,29 @@ Moved: _kohteet
   margin-bottom: 10px;
   font-weight: 500;
 }
+@media screen and (max-width: 1200px) {
+  .contact-offices__content h5 {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .contact-offices__content h5 {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contact-offices__content h5 {
+    font-size: 1.6rem;
+  }
+}
 .contact-offices__content p {
   font-size: 2.2rem;
   line-height: 1;
+}
+@media screen and (max-width: 1100px) {
+  .contact-offices__content p {
+    font-size: 2rem;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -7769,7 +7808,7 @@ th.no-sort:after {
   font-size: 2.2rem;
   margin-bottom: 20px;
 }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 1200px) {
   .area-contact-person__content h5.content__top {
     font-size: 1.8rem;
   }
