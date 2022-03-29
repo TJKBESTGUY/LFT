@@ -5723,6 +5723,9 @@ div .editor-styles-wrapper .acf-block-preview .contact-header.-left-nudge, div .
     overflow-x: auto;
     max-width: 100vw;
   }
+  div .editor-styles-wrapper .acf-block-preview .contact-sticky-nav > div {
+    margin-right: 30px;
+  }
 }
 div .editor-styles-wrapper .acf-block-preview .contact-sticky-nav::-webkit-scrollbar {
   display: none;

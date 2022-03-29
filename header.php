@@ -177,7 +177,7 @@ $page_name = get_the_title();
           </div>
         </div>
 
-      <a class="-nav-link Target--palvelut" href="/palvelut">Palvelut</a>
+      <a class="-nav-link Target--palvelut" href="/palvelut">Määrälaskenta</a>
       <a class="-nav-link Target--laskentakohteet" href="/laskentakohteet">Laskentakohteet
         <div  class="laskenta-nav-counter">
           <span class="-bold-txt">42</span>
@@ -291,7 +291,7 @@ $page_name = get_the_title();
           <button class="basic-btn btn--uutiset btn--yellow js--nav-news-trigger-mobile" href="#">Ajankohtaista</button>
               </div> -->
       <div class="link-wrap">
-        <a  class="h3 -nav-link Target--palvelut" href="/palvelut">Palvelut</a>
+        <a  class="h3 -nav-link Target--palvelut" href="/palvelut">Määrälaskenta</a>
       </div>
       <div class="link-wrap">
         <a  class="h3 -nav-link Target--laskentakohteet" href="/laskentakohteet">Laskentakohteet

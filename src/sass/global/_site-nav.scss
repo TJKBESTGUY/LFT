@@ -39,11 +39,19 @@ width: auto;
 }
 }
 
+  @media screen and (max-width: 600px) {
+.header-logo, .header-logo a, .header-logo svg {
+  height: 14px;
+}
+  }
+
+
+
 .navigation-links {
   display: flex;
 width: 50%;
 min-width: 660px;
-min-width: 700px;
+min-width: 750px;
 }
 }
 
@@ -645,6 +653,10 @@ font-weight: 500;
 padding: 6px 10px;
 min-width: 115px;
 text-align: center;
+    @media screen and (max-width: 600px) {
+    font-size: 1rem !important;
+    min-width: 40px;
+    }
 .basic-btn__text {
   margin-left: 4px;
 }
@@ -929,7 +941,7 @@ padding-top: 10px;
 
 
 .Target--palvelut {
-min-width: 60px;
+min-width: 111px;
 text-align: center;
 }
 .Target--laskentakohteet {
