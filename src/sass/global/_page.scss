@@ -1727,7 +1727,16 @@ display: flex;
   .cell {
     width: 25%;
     padding-right: 10px;
+        @media screen and (max-width: 1200px) {
+          width: 33.33%;
+      }
+      @media screen and (max-width: 740px) {
+        width: 50%;
+    }
+    @media screen and (max-width: 600px) {
+      width: 100%;
   }
+    }
 }
 
 ////CHECK FONT SIZE FROM MYYNTI TEAM AND COMPRESS
@@ -1751,8 +1760,14 @@ line-height: 1.4;
 
 .contact-offices__content {
   margin-bottom: 40px;
+  .flx-container {
+      flex-wrap: wrap;
+  }
+
   .cell {
   min-width: 25%;
+  padding-right: 40px;
+  margin-bottom: 30px;
   }
   h5 {
     margin-top: 0;

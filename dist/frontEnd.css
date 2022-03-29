@@ -5623,6 +5623,21 @@ Moved: _kohteet
   width: 25%;
   padding-right: 10px;
 }
+@media screen and (max-width: 1200px) {
+  .contact-offices__locations .cell {
+    width: 33.33%;
+  }
+}
+@media screen and (max-width: 740px) {
+  .contact-offices__locations .cell {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .contact-offices__locations .cell {
+    width: 100%;
+  }
+}
 
 .areite-office {
   margin-top: 40px;
@@ -5642,8 +5657,13 @@ Moved: _kohteet
 .contact-offices__content {
   margin-bottom: 40px;
 }
+.contact-offices__content .flx-container {
+  flex-wrap: wrap;
+}
 .contact-offices__content .cell {
   min-width: 25%;
+  padding-right: 40px;
+  margin-bottom: 30px;
 }
 .contact-offices__content h5 {
   margin-top: 0;

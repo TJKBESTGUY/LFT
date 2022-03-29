@@ -5823,6 +5823,21 @@ div .editor-styles-wrapper .acf-block-preview .contact-offices__locations .cell 
   width: 25%;
   padding-right: 10px;
 }
+@media screen and (max-width: 1200px) {
+  div .editor-styles-wrapper .acf-block-preview .contact-offices__locations .cell {
+    width: 33.33%;
+  }
+}
+@media screen and (max-width: 740px) {
+  div .editor-styles-wrapper .acf-block-preview .contact-offices__locations .cell {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  div .editor-styles-wrapper .acf-block-preview .contact-offices__locations .cell {
+    width: 100%;
+  }
+}
 div .editor-styles-wrapper .acf-block-preview .areite-office {
   margin-top: 40px;
 }
@@ -5840,8 +5855,13 @@ div .editor-styles-wrapper .acf-block-preview .areite-office p {
 div .editor-styles-wrapper .acf-block-preview .contact-offices__content {
   margin-bottom: 40px;
 }
+div .editor-styles-wrapper .acf-block-preview .contact-offices__content .flx-container {
+  flex-wrap: wrap;
+}
 div .editor-styles-wrapper .acf-block-preview .contact-offices__content .cell {
   min-width: 25%;
+  padding-right: 40px;
+  margin-bottom: 30px;
 }
 div .editor-styles-wrapper .acf-block-preview .contact-offices__content h5 {
   margin-top: 0;

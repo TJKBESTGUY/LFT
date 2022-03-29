@@ -1636,7 +1636,31 @@ if (document.body.classList.contains('page-template-laskentakohteet')) {
   }; ///////TEMPALTE WRAP ENDS//////////
 
 
-  console.log("INIT LASKENTAKOHTEET");
+  console.log("INIT LASKENTAKOHTEET"); // let url = 'https://api.sheety.co/1f705ac98f68ad9b98a51addbc7605ce/laskentakohteet/sheet1';
+  // fetch(url)
+  // .then((response) => response.json())
+  // .then(json => {
+  //   // Do something with the data
+  //   console.log(json.sheet1S);
+  // });
+  // // Get all data
+  // axios.get('https://sheetdb.io/api/v1/58f61be4dda40')
+  // .then( response => {
+  //     console.log(response.data);
+  // });
+  //
+  // // Get 10 results starting from 20
+  // axios.get('https://sheetdb.io/api/v1/58f61be4dda40?limit=10&offset=20')
+  // .then( response => {
+  //     console.log(response.data);
+  // });
+  //
+  // // Get all data sorted by name in ascending order
+  // axios.get('https://sheetdb.io/api/v1/58f61be4dda40?sort_by=name&sort_order=asc')
+  // .then( response => {
+  //     console.log(response.data);
+  // });
+
   /**
    * sortable 1.0
    *
