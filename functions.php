@@ -599,6 +599,7 @@ do_action( 'rss_tag_pre', 'rss2' );
 <item>
 <title><?php echo $object->Kohde;  ?></title>
 <description><?php echo $object->description; ?></description>
+<link>https://www.areite.fi/</link>
 </item>
 			<?php  } ?>
 
