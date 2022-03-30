@@ -493,11 +493,14 @@ function myplugin_ajaxurl() {
          </script>';
 }
 
+
+
+
 ///////RSS SHIT//////
 
 add_action('init', 'customRSS');
 function customRSS(){
-    add_feed('laskentakohteet', 'customRSSFunc');
+    add_feed('maaralaskentakohteet', 'customRSSFunc');
 }
 
 function customRSSFunc(){
@@ -540,10 +543,10 @@ do_action( 'rss_tag_pre', 'rss2' );
 	?> >
 
 <channel>
-	<title><?php wp_title_rss(); ?></title>
+	<title>Areite - määrälaskentakohteet</title>
 	<atom:link href="<?php self_link(); ?>" rel="self" type="application/rss+xml" />
 	<link><?php bloginfo_rss( 'url' ); ?></link>
-	<description><?php bloginfo_rss( 'description' ); ?></description>
+	<description>Tällä hetkellä laskenannassa olevat kohteet</description>
 	<lastBuildDate><?php echo get_feed_build_date( 'r' ); ?></lastBuildDate>
 	<language><?php bloginfo_rss( 'language' ); ?></language>
 	<sy:updatePeriod>
