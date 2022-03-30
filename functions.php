@@ -493,39 +493,125 @@ function myplugin_ajaxurl() {
          </script>';
 }
 
-// function css_t_subscribers() {
-//
-//   // Do we have this information in our transients already?
-//   $transient = get_transient( 'css_t_subscribers' );
-//
-//   // Yep!  Just return it and we're done.
-//   if( ! empty( $transient ) ) {
-//
-//     // The function will return here every time after the first time it is run, until the transient expires.
-//     return $transient;
-//
-//   // Nope!  We gotta make a call.
-//   } else {
-//
-//     // We got this url from the documentation for the remote API.
-//     $url = 'https://api.example.com/v4/subscribers';
-//
-//     // We are structuring these args based on the API docs as well.
-//     $args = array(
-//       'headers' => array(
-//         'token' => 'example_token'
-//       ),
-//     );
-//
-//     // Call the API.
-//     $out = wp_remote_get( $url, $args );
-//
-//     // Save the API response so we don't have to call again until tomorrow.
-//     set_transient( 'css_t_subscribers', $out, DAY_IN_SECONDS );
-//
-//     // Return the list of subscribers.  The function will return here the first time it is run, and then once again, each time the transient expires.
-//     return $out;
-//
-//   }
-//
-// }
+///////RSS SHIT//////
+
+add_action('init', 'customRSS');
+function customRSS(){
+    add_feed('laskentakohteet', 'customRSSFunc');
+}
+
+function customRSSFunc(){
+
+/**
+ * RSS2 Feed Template for displaying RSS2 Posts feed.
+ *
+ * @package WordPress
+ */
+
+header( 'Content-Type: ' . feed_content_type( 'rss2' ) . '; charset=' . get_option( 'blog_charset' ), true );
+$more = 1;
+
+echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>';
+
+/**
+ * Fires between the xml and rss tags in a feed.
+ *
+ * @since 4.0.0
+ *
+ * @param string $context Type of feed. Possible values include 'rss2', 'rss2-comments',
+ *                        'rdf', 'atom', and 'atom-comments'.
+ */
+do_action( 'rss_tag_pre', 'rss2' );
+?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	<?php
+	/**
+	 * Fires at the end of the RSS root to add namespaces.
+	 *
+	 * @since 2.0.0
+	 */
+	do_action( 'rss2_ns' );
+	?> >
+
+<channel>
+	<title><?php wp_title_rss(); ?></title>
+	<atom:link href="<?php self_link(); ?>" rel="self" type="application/rss+xml" />
+	<link><?php bloginfo_rss( 'url' ); ?></link>
+	<description><?php bloginfo_rss( 'description' ); ?></description>
+	<lastBuildDate><?php echo get_feed_build_date( 'r' ); ?></lastBuildDate>
+	<language><?php bloginfo_rss( 'language' ); ?></language>
+	<sy:updatePeriod>
+	<?php
+		$duration = 'hourly';
+
+		/**
+		 * Filters how often to update the RSS feed.
+		 *
+		 * @since 2.1.0
+		 *
+		 * @param string $duration The update period. Accepts 'hourly', 'daily', 'weekly', 'monthly',
+		 *                         'yearly'. Default 'hourly'.
+		 */
+		echo apply_filters( 'rss_update_period', $duration );
+	?>
+	</sy:updatePeriod>
+	<sy:updateFrequency>
+	<?php
+		$frequency = '1';
+
+		/**
+		 * Filters the RSS update frequency.
+		 *
+		 * @since 2.1.0
+		 *
+		 * @param string $frequency An integer passed as a string representing the frequency
+		 *                          of RSS updates within the update period. Default '1'.
+		 */
+		echo apply_filters( 'rss_update_frequency', $frequency );
+	?>
+	</sy:updateFrequency>
+	<?php
+	/**
+	 * Fires at the end of the RSS2 Feed Header.
+	 *
+	 * @since 2.0.0
+	 */
+	do_action( 'rss2_head' );
+	?>
+
+	<?php  $base_url = "https://sheetdb.io/api/v1/a58wtyooepdtq";
+	  $response = wp_remote_get( $base_url);
+		$responseBody = wp_remote_retrieve_body( $response );
+		$result = json_decode( $responseBody );
+	  if ( is_array( $result ) && ! is_wp_error( $result ) ) {
+			 echo("working");
+			 	?>
+<?php  foreach ($result as $key => $object) { ?>
+<item>
+<title><?php echo $object->Kohde;  ?></title>
+</item>
+			<?php  } ?>
+
+	<?php
+{
+
+}
+
+	  } else {
+	      // Work with the error
+	          echo("error");
+	  }
+	?>
+</channel>
+</rss>
+
+
+
+<?php
+}
