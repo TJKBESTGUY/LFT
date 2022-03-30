@@ -590,11 +590,12 @@ do_action( 'rss_tag_pre', 'rss2' );
 		$responseBody = wp_remote_retrieve_body( $response );
 		$result = json_decode( $responseBody );
 	  if ( is_array( $result ) && ! is_wp_error( $result ) ) {
-			 echo("working");
+
 			 	?>
 <?php  foreach ($result as $key => $object) { ?>
 <item>
 <title><?php echo $object->Kohde;  ?></title>
+<description><?php echo $object->description; ?></description>
 </item>
 			<?php  } ?>
 
