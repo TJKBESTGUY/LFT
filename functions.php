@@ -549,36 +549,7 @@ do_action( 'rss_tag_pre', 'rss2' );
 	<description>Tällä hetkellä laskenannassa olevat kohteet</description>
 	<lastBuildDate><?php echo mysql2date( 'D, d M Y H:i:s +0400', get_post_field( 'post_modified', "89" ), false ); ?></lastBuildDate>
 	<language>FI</language>
-	<sy:updatePeriod>
-	<?php
-		$duration = 'hourly';
 
-		/**
-		 * Filters how often to update the RSS feed.
-		 *
-		 * @since 2.1.0
-		 *
-		 * @param string $duration The update period. Accepts 'hourly', 'daily', 'weekly', 'monthly',
-		 *                         'yearly'. Default 'hourly'.
-		 */
-		echo apply_filters( 'rss_update_period', $duration );
-	?>
-	</sy:updatePeriod>
-	<sy:updateFrequency>
-	<?php
-		$frequency = '1';
-
-		/**
-		 * Filters the RSS update frequency.
-		 *
-		 * @since 2.1.0
-		 *
-		 * @param string $frequency An integer passed as a string representing the frequency
-		 *                          of RSS updates within the update period. Default '1'.
-		 */
-		echo apply_filters( 'rss_update_frequency', $frequency );
-	?>
-	</sy:updateFrequency>
 	<?php
 	/**
 	 * Fires at the end of the RSS2 Feed Header.
@@ -597,7 +568,7 @@ do_action( 'rss_tag_pre', 'rss2' );
 			 	?>
 <?php  foreach ($reverse as $key => $object) { ?>
 
-<?php $full_minute = 60; ?>
+<?php $full_minute = 59; ?>
 <?php $seconds = $full_minute - $key ?>
 
 <item>
