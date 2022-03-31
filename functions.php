@@ -605,7 +605,7 @@ do_action( 'rss_tag_pre', 'rss2' );
 <description><?php echo $object->description; ?></description>
 <link>https://www.areite.fi/</link>
 
-<pubDate><?php echo mysql2date( 'D, d M Y H:i', get_post_field( 'post_modified', "89" ), false ); ?>:<?php echo $seconds; ?> +0400</pubDate>
+<pubDate><?php echo mysql2date( 'D, d M Y H', get_post_field( 'post_modified', "89" ), false ); ?>:<?php echo $seconds; ?>:<?php echo $seconds; ?> +0400</pubDate>
 	<guid isPermaLink="false"><?php bloginfo_rss( 'url' ); ?>/?p=<?php echo $object->ID;  ?></guid>
 
 </item>
