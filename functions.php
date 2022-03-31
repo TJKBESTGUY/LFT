@@ -601,6 +601,7 @@ do_action( 'rss_tag_pre', 'rss2' );
 <description><?php echo $object->description; ?></description>
 <link>https://www.areite.fi/</link>
 <pubDate><?php echo mysql2date( 'D, d M Y H:i:s +0000', get_post_field( 'post_modified', "89" ), false ); ?></pubDate>
+	<guid isPermaLink="false"><?php bloginfo_rss( 'url' ); ?>/?p=<?php echo $object->ID;  ?><guid>
 
 </item>
 			<?php  } ?>
@@ -636,12 +637,18 @@ $post_id = get_the_ID();
 
 
 $my_post = array(
-    'ID'           => 89,
+    'ID'           =>151,
+		//89
+		//151
+);
+$my_post_ = array(
+    'ID'           =>89,
 		//89
 		//151
 );
 
 wp_update_post( $my_post );
+wp_update_post( $my_post_ );
 
 echo mysql2date( 'D, d M Y H:i:s +0000', get_lastpostmodified( 'GMT' ), false );
 

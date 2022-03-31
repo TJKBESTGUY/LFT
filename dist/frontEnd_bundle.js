@@ -1637,7 +1637,7 @@ if (document.body.classList.contains('page-template-laskentakohteet')) {
 
 
   console.log("INIT LASKENTAKOHTEET");
-  axios.get('https://sheetdb.io/api/v1/58f61be4dda40') // axios.get('https://sheetdb.io/api/v1/a58wtyooepdtq?sheet=Pohjois-Suomi')
+  axios.get('https://sheetdb.io/api/v1/a58wtyooepdtq') // axios.get('https://sheetdb.io/api/v1/a58wtyooepdtq?sheet=Pohjois-Suomi')
   .then(function (response) {
     console.log("SHEETS");
     console.log(response.data);
