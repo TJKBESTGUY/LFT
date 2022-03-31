@@ -547,7 +547,7 @@ do_action( 'rss_tag_pre', 'rss2' );
 	<atom:link href="<?php self_link(); ?>" rel="self" type="application/rss+xml" />
 	<link><?php bloginfo_rss( 'url' ); ?></link>
 	<description>Tällä hetkellä laskenannassa olevat kohteet</description>
-	<lastBuildDate><?php echo mysql2date( 'D, d M Y H:i:s +0200', get_post_field( 'post_modified', "89" ), false ); ?>></lastBuildDate>
+	<lastBuildDate><?php echo mysql2date( 'D, d M Y H:i:s +0200', get_post_field( 'post_modified', "89" ), false ); ?></lastBuildDate>
 	<language>FI</language>
 	<sy:updatePeriod>
 	<?php
