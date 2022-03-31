@@ -547,7 +547,7 @@ do_action( 'rss_tag_pre', 'rss2' );
 	<atom:link href="<?php self_link(); ?>" rel="self" type="application/rss+xml" />
 	<link><?php bloginfo_rss( 'url' ); ?></link>
 	<description>Tällä hetkellä laskenannassa olevat kohteet</description>
-	<lastBuildDate><?php echo mysql2date( 'D, d M Y H:i:s +0000', get_post_field( 'post_modified', "89" ), false ); ?>></lastBuildDate>
+	<lastBuildDate><?php echo mysql2date( 'D, d M Y H:i:s +0200', get_post_field( 'post_modified', "89" ), false ); ?>></lastBuildDate>
 	<language>FI</language>
 	<sy:updatePeriod>
 	<?php
@@ -600,7 +600,7 @@ do_action( 'rss_tag_pre', 'rss2' );
 <title><?php echo $object->Kohde;  ?></title>
 <description><?php echo $object->description; ?></description>
 <link>https://www.areite.fi/</link>
-<pubDate><?php echo mysql2date( 'D, d M Y H:i:s +0000', get_post_field( 'post_modified', "89" ), false ); ?></pubDate>
+<pubDate><?php echo mysql2date( 'D, d M Y H:i:s +0200', get_post_field( 'post_modified', "89" ), false ); ?></pubDate>
 	<guid isPermaLink="false"><?php bloginfo_rss( 'url' ); ?>/?p=<?php echo $object->ID;  ?></guid>
 
 </item>
