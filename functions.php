@@ -596,11 +596,16 @@ do_action( 'rss_tag_pre', 'rss2' );
 			$reverse = 	array_reverse($result)
 			 	?>
 <?php  foreach ($reverse as $key => $object) { ?>
+
+<?php $full_minute = 60; ?>
+<?php $seconds = $full_minute - $key ?>
+
 <item>
 <title><?php echo $object->Kohde;  ?></title>
 <description><?php echo $object->description; ?></description>
 <link>https://www.areite.fi/</link>
-<pubDate><?php echo mysql2date( 'D, d M Y H:i:s +0400', get_post_field( 'post_modified', "89" ), false ); ?></pubDate>
+
+<pubDate><?php echo mysql2date( 'D, d M Y H:i', get_post_field( 'post_modified', "89" ), false ); ?>:<?php echo $seconds; ?> +0400</pubDate>
 	<guid isPermaLink="false"><?php bloginfo_rss( 'url' ); ?>/?p=<?php echo $object->ID;  ?></guid>
 
 </item>
