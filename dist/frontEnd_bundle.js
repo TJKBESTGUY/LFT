@@ -1636,14 +1636,18 @@ if (document.body.classList.contains('page-template-laskentakohteet')) {
   }; ///////TEMPALTE WRAP ENDS//////////
 
 
-  console.log("INIT LASKENTAKOHTEET"); // let url = 'https://api.sheety.co/1f705ac98f68ad9b98a51addbc7605ce/laskentakohteet/sheet1';
-  // fetch(url)
-  // .then((response) => response.json())
-  // .then(json => {
-  //   // Do something with the data
-  //   console.log(json.sheet1S);
-  // });
-  // // Get all data
+  console.log("INIT LASKENTAKOHTEET");
+  axios.get('https://sheetdb.io/api/v1/58f61be4dda40') // axios.get('https://sheetdb.io/api/v1/a58wtyooepdtq?sheet=Pohjois-Suomi')
+  .then(function (response) {
+    console.log("SHEETS");
+    console.log(response.data);
+    console.log(response.data.length);
+    var kohteet = response.data;
+    console.log(kohteet);
+    kohteet.forEach(function (elem) {
+      console.log(elem);
+    });
+  }); // // Get all data
   // axios.get('https://sheetdb.io/api/v1/58f61be4dda40')
   // .then( response => {
   //     console.log(response.data);
