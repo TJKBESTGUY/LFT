@@ -5144,13 +5144,6 @@ div .editor-styles-wrapper .acf-block-preview .module--laskenta-count .laskenta-
 }
 div .editor-styles-wrapper .acf-block-preview .module--laskenta-count .laskenta-count__number span {
   font-size: 46rem;
-  line-height: 38rem;
-}
-@media screen and (max-width: 1399.9px) {
-  div .editor-styles-wrapper .acf-block-preview .module--laskenta-count .laskenta-count__number span {
-    font-size: 32.9vw;
-    line-height: 29vw;
-  }
 }
 div .editor-styles-wrapper .acf-block-preview .module--laskenta-count .laskenta-count__label span {
   padding-bottom: 2.2rem;
@@ -5165,7 +5158,7 @@ div .editor-styles-wrapper .acf-block-preview .module--laskenta-count .-bottom-l
   padding: 0;
   line-height: 1.1;
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 1000px) {
   div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .flx-container {
     display: flex;
   }
@@ -5176,16 +5169,6 @@ div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .
 @media screen and (max-width: 1399.9px) {
   div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__number {
     min-width: 37vw;
-  }
-}
-div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__number span {
-  font-size: 36rem;
-  line-height: 24rem;
-}
-@media screen and (max-width: 1399.9px) {
-  div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__number span {
-    font-size: 27vw;
-    line-height: 17.8vw;
   }
 }
 div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__label {
@@ -5503,11 +5486,29 @@ div .editor-styles-wrapper .acf-block-preview .section--refe-header .module--sup
   top: 0;
   left: 0;
 }
+@media screen and (max-width: 900px) {
+  div .editor-styles-wrapper .acf-block-preview .section--refe-header .module--super-digit {
+    position: relative;
+  }
+}
 div .editor-styles-wrapper .acf-block-preview .module--refe-header-img {
   width: 100%;
-  padding-left: 25%;
+  padding-left: 15%;
+  margin-bottom: 80px;
   padding-top: 140px;
   opacity: 0.5;
+}
+@media screen and (max-width: 1399.89px) {
+  div .editor-styles-wrapper .acf-block-preview .module--refe-header-img {
+    padding-top: 10vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  div .editor-styles-wrapper .acf-block-preview .module--refe-header-img {
+    padding-top: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
 }
 div .editor-styles-wrapper .acf-block-preview .module--refe-header-img .image-aspect-box {
   padding-top: 63.5%;
@@ -5548,16 +5549,57 @@ div .editor-styles-wrapper .acf-block-preview .refe-flx {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  justify-content: center;
 }
 div .editor-styles-wrapper .acf-block-preview .refe-item {
   width: 50%;
   margin-bottom: 60px;
+}
+@media screen and (max-width: 600px) {
+  div .editor-styles-wrapper .acf-block-preview .refe-item {
+    width: 100%;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    max-width: 440px;
+  }
+}
+@media screen and (max-width: 400px) {
+  div .editor-styles-wrapper .acf-block-preview .refe-item {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
 div .editor-styles-wrapper .acf-block-preview .refe-item:nth-of-type(odd) {
   padding-right: 40px;
 }
 div .editor-styles-wrapper .acf-block-preview .refe-item:nth-of-type(even) {
   padding-left: 40px;
+}
+@media screen and (max-width: 1200px) {
+  div .editor-styles-wrapper .acf-block-preview .refe-item:nth-of-type(odd) {
+    padding-right: 20px;
+  }
+  div .editor-styles-wrapper .acf-block-preview .refe-item:nth-of-type(even) {
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 640px) {
+  div .editor-styles-wrapper .acf-block-preview .refe-item:nth-of-type(odd) {
+    padding-right: 12px;
+  }
+  div .editor-styles-wrapper .acf-block-preview .refe-item:nth-of-type(even) {
+    padding-left: 12px;
+  }
+}
+@media screen and (max-width: 600px) {
+  div .editor-styles-wrapper .acf-block-preview .refe-item:nth-of-type(odd) {
+    padding-right: 0;
+  }
+  div .editor-styles-wrapper .acf-block-preview .refe-item:nth-of-type(even) {
+    padding-left: 0;
+  }
 }
 div .editor-styles-wrapper .acf-block-preview .refe-item-table .table-cell .value {
   padding-left: 20px;
@@ -5586,13 +5628,19 @@ div .editor-styles-wrapper .acf-block-preview .refe-item__image {
   width: 50%;
   padding-right: 40px;
 }
+@media screen and (max-width: 1200px) {
+  div .editor-styles-wrapper .acf-block-preview .refe-item__image {
+    width: 40%;
+    padding-right: 30px;
+  }
+}
 @media screen and (max-width: 800px) {
   div .editor-styles-wrapper .acf-block-preview .refe-item__image {
     width: 40%;
     padding-right: 20px;
   }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1000px) {
   div .editor-styles-wrapper .acf-block-preview .refe-item__image {
     width: 100%;
     padding: 0;
@@ -5600,17 +5648,23 @@ div .editor-styles-wrapper .acf-block-preview .refe-item__image {
   }
 }
 div .editor-styles-wrapper .acf-block-preview .refe-item__image .image-aspect-box {
-  padding-top: 56%;
+  padding-top: 0;
+  height: 100%;
+}
+@media screen and (max-width: 1000px) {
+  div .editor-styles-wrapper .acf-block-preview .refe-item__image .image-aspect-box {
+    padding-top: 56%;
+  }
 }
 div .editor-styles-wrapper .acf-block-preview .refe-item__content {
   width: 50%;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
   div .editor-styles-wrapper .acf-block-preview .refe-item__content {
     width: 60%;
   }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1000px) {
   div .editor-styles-wrapper .acf-block-preview .refe-item__content {
     width: 100%;
   }
@@ -6150,28 +6204,62 @@ div .editor-styles-wrapper .acf-block-preview .Anim-item--reveal .char {
     display: none;
   }
 }
-div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__number span {
-  font-size: 26.7rem;
-}
 div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__number {
   min-width: 10px;
   margin-right: 26px;
   position: relative;
+}
+@media screen and (max-width: 999.89px) {
+  div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__number {
+    font-size: 18.1rem;
+  }
+}
+@media screen and (max-width: 570px) {
+  div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__number {
+    font-size: 30vw;
+  }
 }
 div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__number .-overlay-number {
   position: absolute;
   top: 0;
   right: 0;
 }
+@media screen and (max-width: 999.89px) {
+  div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__number .-overlay-number {
+    right: auto;
+    left: 0;
+  }
+}
 div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__number .-counted-number {
   text-align: right;
   visibility: hidden;
 }
+@media screen and (max-width: 999.89px) {
+  div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__number .-counted-number {
+    text-align: left;
+  }
+}
 div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__label {
   display: flex;
   align-items: flex-start;
-  margin-top: 100px;
+  margin-top: 132px;
   padding-left: 10px;
+}
+@media screen and (max-width: 1399.89px) {
+  div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__label {
+    margin-top: 8.7vw;
+  }
+}
+@media screen and (max-width: 1020px) {
+  div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__label {
+    margin-top: 8.5vw;
+  }
+}
+@media screen and (max-width: 999.89px) {
+  div .editor-styles-wrapper .acf-block-preview .module--laskenta-count--on-page .laskenta-count__label {
+    margin-top: 0;
+    padding-left: 0;
+  }
 }
 div .editor-styles-wrapper .acf-block-preview .background-image {
   position: absolute;

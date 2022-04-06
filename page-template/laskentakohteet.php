@@ -119,7 +119,7 @@ $posts_laskenta = get_posts(array(
                 </div>
               </div> -->
 
-              <div class="cell laskenta-count__number">
+              <div class="cell laskenta-count__number super-digit__number">
               <span class="Anim-item--counter -bold-txt -overlay-number"  style="" data-scroll data-type="counter" data-value="15"></span>
                   <span class="Anim-item--counter -bold-txt -counted-number"  style=""  data-type="counter" data-value="15">15</span>
               </div>
@@ -140,7 +140,7 @@ $posts_laskenta = get_posts(array(
         <div class="U_container U_base-pad">
           <div class="module--heading_txt module--services-header">
             <div class="flx-container">
-              <div class="cell" style="width:100%; max-width: 880px; margin-top:80px;font-size:2.2rem">
+              <div class="large-p-wrapper large-p-wrapper--laskenta">
               <p>Olemme aina ajan tasalla. Määrälaskemisen kokeneena asiantuntijana, tiedämme missä rakennetaan ja missä rakentamista suunnitellaan. Meillä on resurssit vastata rakennusyritysten laskentatarpeisiin nopeasti.
               </p>
               </div>
@@ -241,7 +241,7 @@ $posts_laskenta = get_posts(array(
 
                   <?php } ?>
                     <div class="contact-person__info">
-	<?php the_sub_field( 'nimi' ); ?>  |	<?php the_sub_field( 'sahkoposti' ); ?>  |	<?php the_sub_field( 'puhelinnumero_tekstimuoto' ); ?> 	| 	<?php the_sub_field( 'puhelinnumero_maakoodilla' ); ?>
+	<?php the_sub_field( 'nimi' ); ?>  |	<a href="mailto:<?php the_sub_field( 'sahkoposti' ); ?> "><?php the_sub_field( 'sahkoposti' ); ?></a> |	<a href="tel:<?php the_sub_field( 'puhelinnumero_maakoodilla' ); ?>"><?php the_sub_field( 'puhelinnumero_tekstimuoto' ); ?> </a>
                             </div>
 
 
@@ -252,7 +252,7 @@ $posts_laskenta = get_posts(array(
 <?php endif; ?>
 
 
-                  <div class="contact-person" data-area="pohjois">
+                  <!-- <div class="contact-person" data-area="pohjois">
                     <div class="flx-container">
                       <div class="contact-person__img">
                         <div class="image-aspect-box">
@@ -270,7 +270,7 @@ $posts_laskenta = get_posts(array(
                         Pohjois-Suomi | 050 467 0910 | henkilö@areite.fi
                       </div>
                     </div>
-                  </div>
+                  </div> -->
 
                     </div>
 
@@ -348,7 +348,7 @@ $posts_laskenta = get_posts(array(
 
 
                           <img class="lazy-anim lazyload" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kartta-alueet.png">
-                
+
                 </div>
                               </div>
 

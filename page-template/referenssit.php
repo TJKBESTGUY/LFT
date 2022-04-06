@@ -30,7 +30,7 @@
             </div>
           </div>
                     </div>
-          <div class="module--refe-header-img" style="    padding-left: 15%;margin-bottom:80px;">
+          <div class="module--refe-header-img" style="">
           <div class="image-aspect-box" style="padding-top: 38.5%;"> <div class="image-aspect-box_inner">
             <picture>
               <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/hero-kuvitus2.png">
@@ -623,7 +623,7 @@ Laskettua kohdetta
                     </div>
                     <div class="flx-container">
                   <div class="refe-item__image">
-                  <div class="image-aspect-box" style="padding-top:0; height:100%">
+                  <div class="image-aspect-box" style="">
                     <div class="image-aspect-box_inner">
                     <picture>
                       <source media="(min-width:650px)" data-srcset="https://upload.wikimedia.org/wikipedia/commons/6/62/Temppeliaukio_Church_3.jpg">
@@ -697,7 +697,7 @@ Laskettua kohdetta
                     </div>
                     <div class="flx-container">
                   <div class="refe-item__image">
-                  <div class="image-aspect-box" style="padding-top:0; height:100%">
+                  <div class="image-aspect-box" style="">
                     <div class="image-aspect-box_inner">
                     <picture>
                       <source media="(min-width:650px)" data-srcset="https://upload.wikimedia.org/wikipedia/commons/6/62/Temppeliaukio_Church_3.jpg">
@@ -776,7 +776,7 @@ Laskettua kohdetta
                     </div>
                     <div class="flx-container">
                   <div class="refe-item__image">
-                  <div class="image-aspect-box" style="padding-top:0; height:100%">
+                  <div class="image-aspect-box" style="">
                     <div class="image-aspect-box_inner">
                     <picture>
                       <source media="(min-width:650px)" data-srcset="https://upload.wikimedia.org/wikipedia/commons/6/62/Temppeliaukio_Church_3.jpg">
@@ -854,7 +854,7 @@ Laskettua kohdetta
                     </div>
                     <div class="flx-container">
                   <div class="refe-item__image">
-                  <div class="image-aspect-box" style="padding-top:0; height:100%">
+                  <div class="image-aspect-box" style="">
                     <div class="image-aspect-box_inner">
                     <picture>
                       <source media="(min-width:650px)" data-srcset="https://upload.wikimedia.org/wikipedia/commons/6/62/Temppeliaukio_Church_3.jpg">
@@ -1198,7 +1198,7 @@ Areite laski määräluettelon vuoden 2014 julkisivusaneerausta varten.</p>
                     </div>
                     <div class="flx-container">
                   <div class="refe-item__image">
-                  <div class="image-aspect-box" style="padding-top:0; height:100%">
+                  <div class="image-aspect-box" style="">
                     <div class="image-aspect-box_inner">
                     <picture>
                       <source media="(min-width:650px)" data-srcset="https://upload.wikimedia.org/wikipedia/commons/f/fa/Kamppi_Center_II.jpg">
@@ -1272,7 +1272,7 @@ Areite laski määräluettelon vuoden 2014 julkisivusaneerausta varten.</p>
                     </div>
                     <div class="flx-container">
                   <div class="refe-item__image">
-                  <div class="image-aspect-box" style="padding-top:0; height:100%">
+                  <div class="image-aspect-box" style="">
                     <div class="image-aspect-box_inner">
                     <picture>
                       <source media="(min-width:650px)" data-srcset="https://upload.wikimedia.org/wikipedia/commons/6/62/Temppeliaukio_Church_3.jpg">
@@ -1351,7 +1351,7 @@ Areite laski määräluettelon vuoden 2014 julkisivusaneerausta varten.</p>
                     </div>
                     <div class="flx-container">
                   <div class="refe-item__image">
-                  <div class="image-aspect-box" style="padding-top:0; height:100%">
+                  <div class="image-aspect-box" style="">
                     <div class="image-aspect-box_inner">
                     <picture>
                       <source media="(min-width:650px)" data-srcset="https://upload.wikimedia.org/wikipedia/commons/f/fa/Kamppi_Center_II.jpg">
@@ -1429,7 +1429,7 @@ Areite laski määräluettelon vuoden 2014 julkisivusaneerausta varten.</p>
                     </div>
                     <div class="flx-container">
                   <div class="refe-item__image">
-                  <div class="image-aspect-box" style="padding-top:0; height:100%">
+                  <div class="image-aspect-box" style="">
                     <div class="image-aspect-box_inner">
                     <picture>
                       <source media="(min-width:650px)" data-srcset="https://upload.wikimedia.org/wikipedia/commons/6/62/Temppeliaukio_Church_3.jpg">

@@ -927,11 +927,8 @@ order: 2;
 
   span {
     font-size: 46rem;
-    line-height: 38rem;
-      @media screen and (max-width: $base-width-media-max) {
-      font-size: 32.9vw;
-      line-height: 29vw;
-      }
+
+
   }
 
 }
@@ -960,7 +957,7 @@ span {
 
 .module--laskenta-count--on-page {
   .flx-container {
-        @media screen and (min-width: 760px) {
+        @media screen and (min-width: 1000px) {
     display: flex;
       }
   }
@@ -972,11 +969,11 @@ span {
           }
     span {
 
-      font-size: 36rem;
-      line-height: 24rem;
+
+
       @media screen and (max-width: $base-width-media-max) {
-      font-size: 27vw;
-      line-height: 17.8vw;
+
+
       }
 
     }
@@ -1319,6 +1316,9 @@ max-width: none;
     position: absolute;
     top: 0;
     left: 0;
+      @media screen and (max-width: 900px) {
+        position: relative;
+          }
   }
 }
 
@@ -1327,8 +1327,18 @@ max-width: none;
 
 .module--refe-header-img {
   width: 100%;
-  padding-left: 25%;
+
+  padding-left: 15%;
+  margin-bottom:80px;
   padding-top: 140px;
+  @media screen and (max-width: 1399.89px) {
+  padding-top: 10vw;
+  }
+  @media screen and (max-width: 900px) {
+  padding-top: 0;
+  padding-left: 0;
+  margin-bottom: 0;
+  }
   opacity: 0.5;
   .image-aspect-box {
     padding-top: 63.5%;
@@ -1384,11 +1394,26 @@ margin-left: 0;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  justify-content: center;
 }
 
 .refe-item {
   width: 50%;
   margin-bottom: 60px;
+      @media screen and (max-width: 600px) {
+    width: 100%;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    max-width: 440px;
+      }
+
+      @media screen and (max-width: 400px) {
+    width: 100%;
+        max-width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+      }
 }
 
 .refe-item:nth-of-type(odd) {
@@ -1397,6 +1422,35 @@ margin-left: 0;
 .refe-item:nth-of-type(even) {
   padding-left: 40px;
 }
+
+@media screen and (max-width: 1200px) {
+  .refe-item:nth-of-type(odd) {
+    padding-right: 20px;
+  }
+  .refe-item:nth-of-type(even) {
+    padding-left: 20px;
+  }
+
+  }
+
+  @media screen and (max-width: 640px) {
+    .refe-item:nth-of-type(odd) {
+      padding-right: 12px;
+    }
+    .refe-item:nth-of-type(even) {
+      padding-left: 12px;
+    }
+
+    }
+    @media screen and (max-width: 600px) {
+      .refe-item:nth-of-type(odd) {
+        padding-right: 0;
+      }
+      .refe-item:nth-of-type(even) {
+        padding-left: 0;
+      }
+
+      }
 
 .refe-item-table .table-cell .value {
     padding-left: 20px;
@@ -1438,27 +1492,37 @@ margin-left: 0;
 .refe-item__image {
   width: 50%;
   padding-right: 40px;
+  @media screen and (max-width: 1200px) {
+    width: 40%;
+        padding-right: 30px;
+  }
   @media screen and (max-width: 800px) {
     width: 40%;
         padding-right: 20px;
   }
 
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 1000px) {
       width: 100%;
       padding: 0;
       margin-bottom: 40px;
   }
   .image-aspect-box {
-    padding-top: 56%;
+    padding-top:0; height:100%;
+
+    @media screen and (max-width: 1000px) {
+        padding-top: 56%;
+
+            }
+    }
   }
-}
+
 
 .refe-item__content {
   width: 50%;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1200px) {
     width: 60%;
   }
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 1000px) {
       width: 100%;
   }
 }
@@ -2151,7 +2215,7 @@ height: 100%;
 
 ///UPER DIGIT QUICK EDIT
 .module--laskenta-count--on-page .laskenta-count__number span {
-    font-size: 26.7rem;
+
 
 }
 
@@ -2159,14 +2223,31 @@ height: 100%;
     min-width: 10px;
       margin-right: 26px;
       position: relative;
+      @media screen and (max-width: 999.89px) {
+      font-size: 18.1rem;
+
+      }
+      @media screen and (max-width: 570px) {
+      font-size: 30vw;
+
+      }
       .-overlay-number {
         position: absolute;
         top:0;
         right: 0;
+        @media screen and (max-width: 999.89px) {
+        right: auto;
+        left: 0;
+        }
       }
       .-counted-number {
         text-align: right;
-        visibility: hidden;
+          visibility: hidden;
+        @media screen and (max-width: 999.89px) {
+        text-align: left;
+        }
+
+
       }
 }
 
@@ -2174,6 +2255,16 @@ height: 100%;
     display: flex;
     align-items: flex-start;
     // margin-top: 100px;
-    margin-top: 100px;
+    margin-top: 132px;
 padding-left: 10px;
+@media screen and (max-width: 1399.89px) {
+  margin-top: 8.7vw;
+}
+@media screen and (max-width: 1020px) {
+  margin-top: 8.5vw;
+}
+@media screen and (max-width: 999.89px) {
+  margin-top: 0;
+  padding-left: 0;
+}
 }
