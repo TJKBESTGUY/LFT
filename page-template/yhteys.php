@@ -240,9 +240,9 @@
                     <div class="image-aspect-box" style="padding-top:66.67%">
       <div class="image-aspect-box_inner ">
       <picture>
-        <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kartta-toimistot.png">
-          <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kartta-toimistot.png">
-            <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kartta-toimistot.png" alt="" src="">
+        <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kartta-toimistot2.png">
+          <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kartta-toimistot2.png">
+            <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kartta-toimistot2.png" alt="" src="">
         </picture>
 
     </div>

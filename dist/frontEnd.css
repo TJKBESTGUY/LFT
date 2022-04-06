@@ -7712,6 +7712,13 @@ th.no-sort:after {
     padding-right: 40px;
   }
 }
+@media screen and (max-width: 740px) {
+  .area-contact__map {
+    padding-right: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}
 .area-contact__map .cls-2 {
   transition: 0.3s;
 }
@@ -7726,6 +7733,21 @@ th.no-sort:after {
   top: 40px;
   padding: 40px;
   background: #333333;
+}
+
+.area-contact__map--mobile {
+  margin-bottom: -7px;
+}
+@media screen and (min-width: 740.11px) {
+  .area-contact__map--mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .area-contact__map--desktop {
+    display: none;
+  }
 }
 
 .area-contact__persons {

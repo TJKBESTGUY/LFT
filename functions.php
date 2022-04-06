@@ -559,7 +559,7 @@ do_action( 'rss_tag_pre', 'rss2' );
 	do_action( 'rss2_head' );
 	?>
 
-	<?php  $base_url = "https://sheetdb.io/api/v1/a58wtyooepdtq";
+	<?php  $base_url = "https://sheet2api.com/v1/33IX0QdQyC77/book";
 	  $response = wp_remote_get( $base_url);
 		$responseBody = wp_remote_retrieve_body( $response );
 		$result = json_decode( $responseBody );
@@ -573,7 +573,7 @@ do_action( 'rss_tag_pre', 'rss2' );
 
 <item>
 <title><?php echo $object->Kohde;  ?></title>
-<description><?php echo $object->description; ?></description>
+<description><?php echo $object->RSS; ?></description>
 <link>https://www.areite.fi/</link>
 
 <pubDate><?php echo mysql2date( 'D, d M Y H', get_post_field( 'post_modified', "89" ), false ); ?>:<?php echo $seconds; ?>:<?php echo $seconds; ?> +0400</pubDate>

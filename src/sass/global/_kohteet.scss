@@ -708,6 +708,11 @@ th.no-sort {
   @media screen and (max-width: 1200px) {
     padding-right: 40px;
   }
+  @media screen and (max-width: 740px) {
+    padding-right: 0;
+    max-width: 100%;
+    width: 100%;
+  }
   .cls-2 {
     transition: 0.3s;
   }
@@ -725,6 +730,19 @@ th.no-sort {
   padding: 40px;
 background: #333333;
 
+}
+
+.area-contact__map--mobile {
+  margin-bottom: -7px;
+    @media screen and (min-width: 740.11px) {
+  display: none;
+}
+}
+
+.area-contact__map--desktop {
+    @media screen and (max-width: 740px) {
+  display: none;
+}
 }
 
 .area-contact__persons {
@@ -793,7 +811,7 @@ border-top: solid 1px $a-text-grey;
         font-size: 1.5rem;
       }
       @media screen and (max-width: 500px) {
-        
+
       }
   }
   p.strong {
