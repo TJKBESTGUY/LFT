@@ -5491,6 +5491,59 @@ div .editor-styles-wrapper .acf-block-preview .section--refe-header .module--sup
     position: relative;
   }
 }
+div .editor-styles-wrapper .acf-block-preview .refe-digits-h3 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+div .editor-styles-wrapper .acf-block-preview .refe-digits-h3 strong {
+  font-size: 12rem;
+  margin: 0 20px;
+}
+@media screen and (max-width: 1200px) {
+  div .editor-styles-wrapper .acf-block-preview .refe-digits-h3 strong {
+    font-size: 10rem;
+    margin: 0 20px;
+  }
+  div .editor-styles-wrapper .acf-block-preview .refe-digits-h3 .label {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  div .editor-styles-wrapper .acf-block-preview .refe-digits-h3 strong {
+    font-size: 8rem;
+    margin: 0 20px;
+  }
+  div .editor-styles-wrapper .acf-block-preview .refe-digits-h3 .label {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  div .editor-styles-wrapper .acf-block-preview .refe-digits-h3 {
+    display: block;
+  }
+  div .editor-styles-wrapper .acf-block-preview .refe-digits-h3 strong {
+    font-size: 8rem;
+    margin: 0 20px;
+    display: block;
+  }
+  div .editor-styles-wrapper .acf-block-preview .label {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  div .editor-styles-wrapper .acf-block-preview .refe-digits-h3 {
+    display: block;
+  }
+  div .editor-styles-wrapper .acf-block-preview .refe-digits-h3 strong {
+    font-size: 8rem;
+    margin: 0 20px;
+    display: block;
+  }
+  div .editor-styles-wrapper .acf-block-preview .label {
+    font-size: 2rem;
+  }
+}
 div .editor-styles-wrapper .acf-block-preview .module--refe-header-img {
   width: 100%;
   padding-left: 15%;
@@ -6180,9 +6233,14 @@ div .editor-styles-wrapper .acf-block-preview .Anim-item--reveal .super-digits-m
   overflow: visible;
   line-height: 1;
 }
-div .editor-styles-wrapper .acf-block-preview .Anim-item--reveal .heading {
+div .editor-styles-wrapper .acf-block-preview .Anim-item--reveal .heading .label {
   opacity: 0;
   transform: translateY(16px);
+}
+@media screen and (min-width: 1000.11px) {
+  div .editor-styles-wrapper .acf-block-preview .Anim-item--reveal .heading .label {
+    transform: rotateY(-22deg) rotateZ(0deg) perspective(3px);
+  }
 }
 div .editor-styles-wrapper .acf-block-preview .Anim-item--reveal h3 {
   font-size: 3.4rem;
@@ -6191,7 +6249,7 @@ div .editor-styles-wrapper .acf-block-preview .Anim-item--reveal h3 strong {
   margin: 0 !important;
   margin-right: 30px !important;
 }
-div .editor-styles-wrapper .acf-block-preview .Anim-item--reveal.animated .heading {
+div .editor-styles-wrapper .acf-block-preview .Anim-item--reveal.animated .heading .label {
   opacity: 1;
   transform: none;
   transition: 1s;

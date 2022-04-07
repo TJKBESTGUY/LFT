@@ -5261,6 +5261,62 @@ Moved: _kohteet
   }
 }
 
+.refe-digits-h3 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.refe-digits-h3 strong {
+  font-size: 12rem;
+  margin: 0 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .refe-digits-h3 strong {
+    font-size: 10rem;
+    margin: 0 20px;
+  }
+  .refe-digits-h3 .label {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .refe-digits-h3 strong {
+    font-size: 8rem;
+    margin: 0 20px;
+  }
+  .refe-digits-h3 .label {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .refe-digits-h3 {
+    display: block;
+  }
+  .refe-digits-h3 strong {
+    font-size: 8rem;
+    margin: 0 20px;
+    display: block;
+  }
+
+  .label {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .refe-digits-h3 {
+    display: block;
+  }
+  .refe-digits-h3 strong {
+    font-size: 8rem;
+    margin: 0 20px;
+    display: block;
+  }
+
+  .label {
+    font-size: 2rem;
+  }
+}
 .module--refe-header-img {
   width: 100%;
   padding-left: 15%;
@@ -6030,9 +6086,14 @@ Moved: _kohteet
   overflow: visible;
   line-height: 1;
 }
-.Anim-item--reveal .heading {
+.Anim-item--reveal .heading .label {
   opacity: 0;
   transform: translateY(16px);
+}
+@media screen and (min-width: 1000.11px) {
+  .Anim-item--reveal .heading .label {
+    transform: rotateY(-22deg) rotateZ(0deg) perspective(3px);
+  }
 }
 
 .Anim-item--reveal h3 {
@@ -6043,7 +6104,7 @@ Moved: _kohteet
   margin-right: 30px !important;
 }
 
-.Anim-item--reveal.animated .heading {
+.Anim-item--reveal.animated .heading .label {
   opacity: 1;
   transform: none;
   transition: 1s;

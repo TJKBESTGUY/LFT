@@ -106,8 +106,8 @@
 
       <div class="heading-content" style="margin-bottom:20px;">
       <div class="heading">
-    <h3 style="display:flex;align-items:center; margin-bottom:30px;">
-    <strong style="font-size:12rem; margin:0 20px;">    <div data-scroll class="super-digits-mask">
+    <h3 style="" class="refe-digits-h3">
+    <strong style="">    <div data-scroll class="super-digits-mask">
             <span class="Anim-item--split -fake-number -bold-txt">
                 256
               </span>
@@ -120,7 +120,8 @@
         </strong>
 
 
-      Laskettua päiväkotia</h3>
+      <div class="label">
+        Laskettua päiväkotia</div></h3>
       </div>
   </div>
 
@@ -134,8 +135,8 @@
 
       <div class="heading-content" style="margin-bottom:20px;">
       <div class="heading">
-    <h3 style="display:flex;align-items:center; margin-bottom:30px;">
-    <strong style="font-size:12rem; margin:0 20px;"><div data-scroll class="super-digits-mask">
+    <h3 style="" class="refe-digits-h3">
+    <strong style=""><div data-scroll class="super-digits-mask">
             <span class="Anim-item--split -fake-number -bold-txt">
                 365
               </span>
@@ -147,8 +148,10 @@
 
         </strong>
 
-
-      Laskettua koulurakennusta</h3>
+              <div class="label">
+      Laskettua koulurakennusta
+      </div>
+    </h3>
       </div>
   </div>
 
@@ -162,8 +165,8 @@
 
       <div class="heading-content" style="margin-bottom:20px;">
       <div class="heading">
-    <h3 style="display:flex;align-items:center; margin-bottom:30px;">
-    <strong style="font-size:12rem; margin:0 20px;">    <div data-scroll class="super-digits-mask">
+    <h3 style="" class="refe-digits-h3">
+    <strong style="">    <div data-scroll class="super-digits-mask">
             <span class="Anim-item--split -fake-number -bold-txt">
                 1989
               </span>
@@ -174,9 +177,11 @@
           </div>
 
         </strong>
-
+<div class="label">
 Laskettua kohdetta
-      vuonna 2020</h3>
+      vuonna 2020
+        </div>
+    </h3>
       </div>
   </div>
 
@@ -191,8 +196,8 @@ Laskettua kohdetta
 
       <div class="heading-content" style="margin-bottom:20px;">
       <div class="heading">
-    <h3 style="display:flex;align-items:center; margin-bottom:30px;">
-      Olemme laskeneet<strong style="font-size:12rem; margin:0 20px;"><div data-scroll class="super-digits-mask">
+    <h3 style="" class="refe-digits-h3">
+      Olemme laskeneet<strong style=""><div data-scroll class="super-digits-mask">
             <span class="Anim-item--split -fake-number -bold-txt">
                 256
               </span>
@@ -219,8 +224,8 @@ Laskettua kohdetta
 
       <div class="heading-content" style="margin-bottom:20px;">
       <div class="heading">
-    <h3 style="display:flex;align-items:center; margin-bottom:30px;">
-    <strong style="font-size:12rem; margin:0 20px;"><div data-scroll class="super-digits-mask">
+    <h3 style="" class="refe-digits-h3">
+    <strong style=""><div data-scroll class="super-digits-mask">
             <span class="Anim-item--split -fake-number -bold-txt">
                 365
               </span>
@@ -247,8 +252,8 @@ Laskettua kohdetta
 
       <div class="heading-content" style="margin-bottom:20px;">
       <div class="heading">
-    <h3 style="display:flex;align-items:center; margin-bottom:30px;">
-      Laskettuja kouluja<strong style="font-size:12rem; margin:0 20px;">    <div data-scroll class="super-digits-mask">
+    <h3 style="" class="refe-digits-h3">
+      Laskettuja kouluja<strong style="">    <div data-scroll class="super-digits-mask">
             <span class="Anim-item--split -fake-number -bold-txt">
                 256
               </span>
@@ -277,7 +282,7 @@ Laskettua kohdetta
 
       <div class="heading-content">
       <div class="heading">
-    <h3 style="display:flex;align-items:center">Vuonna 2020 laskimme <strong style="font-size:12rem; margin:0 20px;">
+    <h3 style="display:flex;align-items:center">Vuonna 2020 laskimme <strong style="">
       <div data-scroll class="super-digits-mask">
            <span class="Anim-item--split -fake-number -bold-txt">
                1989
@@ -304,7 +309,7 @@ Laskettua kohdetta
 
       <div class="heading-content">
       <div class="heading">
-    <h3 style="display:flex;align-items:center">koulusaneerauksen laskemiseen kuluu keskimäärin<strong style="font-size:12rem; margin:0 20px;">
+    <h3 style="display:flex;align-items:center">koulusaneerauksen laskemiseen kuluu keskimäärin<strong style="">
       <div data-scroll class="super-digits-mask">
            <span class="Anim-item--split -fake-number -bold-txt">
                200

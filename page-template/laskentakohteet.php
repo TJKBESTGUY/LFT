@@ -216,7 +216,7 @@ $posts_laskenta = get_posts(array(
 
                 <div class="module--laskentakohteet-area-personel S-disabled">
                   <div class="label">
-                    Aluepäällikö:
+                    Aluepäällikkö:
                   </div>
 
                   <?php if ( have_rows( 'henkilo', 'option' ) ) : ?>
