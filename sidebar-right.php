@@ -11,7 +11,7 @@
  * you can also use .align-content-left to align the content to the left as opposed to being centered.
  * The class header-above pulls the header out of the content column and puts it above the sidebar layout making it full width
  *
- * @package Areite
+ * @package ebikerental
  * @since 1.0
  * @version 1.0
  */

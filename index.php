@@ -11,7 +11,7 @@
  *
  * @link    https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Areite
+ * @package ebikerental
  * @since   1.0
  * @version 1.0
  *
@@ -54,9 +54,9 @@ get_header();
                 <div class="container card-pagination text-center">
 					<?php
 					the_posts_pagination( array(
-						'prev_text'          => '<span class="iconify" data-icon="carbon:chevron-left"></span><span class="screen-reader-text">' . __( 'Previous page', 'areite' ) . '</span>',
-						'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'areite' ) . '</span><span class="iconify" data-icon="carbon:chevron-right"></span>',
-						'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'areite' ) . ' </span>',
+						'prev_text'          => '<span class="iconify" data-icon="carbon:chevron-left"></span><span class="screen-reader-text">' . __( 'Previous page', 'ebikerental' ) . '</span>',
+						'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'ebikerental' ) . '</span><span class="iconify" data-icon="carbon:chevron-right"></span>',
+						'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'ebikerental' ) . ' </span>',
 					) );
 					?>
                 </div>

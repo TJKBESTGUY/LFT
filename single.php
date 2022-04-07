@@ -20,7 +20,7 @@ get_header(); ?>
 	        <?php
 	        if ( have_posts() ):
 		        while ( have_posts() ) : the_post();
-	                ign_template('areite_content');
+	                ign_template('ebikerental_content');
 		        endwhile; // End of the loop.
 
 	        endif;

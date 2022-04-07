@@ -38,26 +38,8 @@ function nav_hover_out(e){
 }
 
 
-var news_trigger = document.querySelector(".js--nav-news-trigger");
-var news_trigger_mobile = document.querySelector(".js--nav-news-trigger-mobile");
 
-var site_container = document.querySelector(".site-container");
 
-site_container.onclick = function(e) {
-	document.body.classList.remove("S-active--news-feed");
-
-}
-
-news_trigger.onclick = function(e) {
-	if (!document.body.classList.contains('S-active--news-feed')) {
-	document.body.classList.add("S-active--news-feed");
-
-	}
-	else {
-		document.body.classList.remove("S-active--news-feed");
-
-	}
-}
 
 // news_trigger_mobile.onclick = function(e) {
 // 	if (!document.body.classList.contains('S-active--news-feed-mobile')) {

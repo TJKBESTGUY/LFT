@@ -34,13 +34,11 @@ import './js/util/navigation.js';
 
 ////PAGE SPECIFIC
 
-import "./js/page-specific/refe-page.js"
+
 
 import "./js/page-specific/home-page.js"
 
-import "./js/page-specific/kohteet-page.js"
 
-import "./js/page-specific/blog-page.js"
 
 
 //add all underscored js files from inc and parts

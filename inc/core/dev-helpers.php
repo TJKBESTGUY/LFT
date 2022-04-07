@@ -123,13 +123,13 @@ ign_require_all( locate_template( '/src/blocks' ) );
  *
  * @since Ignition 1.0
  */
-function areite_javascript_detection() {
+function ebikerental_javascript_detection() {
 	echo "<script type='text/javascript'>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 	echo "<script type='text/javascript'>var  isIE11 = !!window.MSInputMethodContext && !!document.documentMode;</script>";
 }
 
-add_action( 'wp_head', 'areite_javascript_detection', 0 );
-add_action( 'admin_head', 'areite_javascript_detection', 0 );
+add_action( 'wp_head', 'ebikerental_javascript_detection', 0 );
+add_action( 'admin_head', 'ebikerental_javascript_detection', 0 );
 
 
 /**

@@ -120,7 +120,7 @@ function ign_block_categories( $categories, $post ) {
 		array(
 			array(
 				'slug'  => 'ign-custom',
-				'title' => __( 'Ignition', 'areite' ),
+				'title' => __( 'Ignition', 'ebikerental' ),
 //				'icon'  => 'marker',
 			),
 		),

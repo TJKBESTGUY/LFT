@@ -4,7 +4,7 @@
  * Most expect you to be in the loop
  * ign_get_terms  and ign_get_term_links does not need to be in loop
  *
- * @package Areite
+ * @package ebikerental
  * @since   1.0
  */
 
@@ -52,7 +52,7 @@ if ( ! function_exists( 'ign_posted_by' ) ) {
 		$author_meta        = ign_author_meta( $post_id, $avatar_size );
 		$author_link        = esc_url( get_author_posts_url( $author_meta['author_id'] ) );
 		$author_image       = '<a href="' . $author_link . '" class="author-avatar">' . $author_meta( 'author_image' ) . '</a>';
-		$author_name        = sprintf( __( '%s by %s', 'areite' ), '<a href="' . $author_link . '" class="author-name"><span class="byline">', '</span>' . $author_meta( 'author_name' ) . '</a>' );
+		$author_name        = sprintf( __( '%s by %s', 'ebikerental' ), '<a href="' . $author_link . '" class="author-name"><span class="byline">', '</span>' . $author_meta( 'author_name' ) . '</a>' );
 		$author_description = '<div class="author-description">' . $author_meta( 'author_description' ) . '</div>';
 
 		echo '<div class="posted-by">' . $author_image . '<div class="author-info">' . $author_name . $author_description . '</div></div>';
@@ -105,7 +105,7 @@ if ( ! function_exists( 'ign_time_link' ) ) {
 		// Wrap the time string in a link, and preface it with 'Posted on'.
 		return sprintf(
 		/* translators: %s: post date */
-			__( '<span class="screen-reader-text">Posted on</span> %s', 'areite' ),
+			__( '<span class="screen-reader-text">Posted on</span> %s', 'ebikerental' ),
 			'<a class="entry-date" href="' . esc_url( get_permalink( $post_id ) ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 	}
@@ -190,7 +190,7 @@ if ( ! function_exists( 'ign_edit_link' ) ) :
 		edit_post_link(
 			sprintf(
 			/* translators: %s: Name of current post */
-				__( '%s<span class="screen-reader-text"> "%s"</span>', 'areite' ),
+				__( '%s<span class="screen-reader-text"> "%s"</span>', 'ebikerental' ),
 				$text, get_the_title()
 			),
 			'<span class="edit-link">',

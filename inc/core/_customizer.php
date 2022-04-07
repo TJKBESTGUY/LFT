@@ -11,19 +11,19 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function areite_customize_register( $wp_customize )
+function ebikerental_customize_register( $wp_customize )
 {
     $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
     $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 
     $wp_customize->selective_refresh->add_partial( 'blogname', array(
         'selector' => '.site-title a',
-        'render_callback' => 'areite_customize_partial_blogname',
+        'render_callback' => 'ebikerental_customize_partial_blogname',
     ) );
 
     $wp_customize->selective_refresh->add_partial( 'blogdescription', array(
         'selector' => '.site-description',
-        'render_callback' => 'areite_customize_partial_blogdescription',
+        'render_callback' => 'ebikerental_customize_partial_blogdescription',
     ) );
 
 
@@ -31,12 +31,12 @@ function areite_customize_register( $wp_customize )
      * Theme options.
      */
 //    $wp_customize->add_section( 'theme_options', array(
-//        'title' => __( 'Theme Options', 'areite' ),
+//        'title' => __( 'Theme Options', 'ebikerental' ),
 //        'priority' => 130, // Before Additional CSS.
 //    ) );
 //
 //    $wp_customize->add_section( 'post_types', array(
-//        'title' => __( 'Post Type Archives', 'areite' ),
+//        'title' => __( 'Post Type Archives', 'ebikerental' ),
 //        'priority' => 130, // Before Additional CSS.
 //    ) );
 
@@ -55,7 +55,7 @@ function areite_customize_register( $wp_customize )
 //            'label' => __( 'Use the customizer?' ),
 //            'section' => 'theme_options',
 //            'type' => 'radio',
-//            'description' => __('You can make your own layout in header.php and ignore all this.', 'areite'),
+//            'description' => __('You can make your own layout in header.php and ignore all this.', 'ebikerental'),
 //            'choices' => array(
 //                'yes' => 'yes',
 //                'no' => 'no'
@@ -75,14 +75,14 @@ function areite_customize_register( $wp_customize )
 //
 //    $wp_customize->add_control( 'site_top_contained',
 //        array(
-//            'label' => __( 'Contain the site top items', 'areite' ),
+//            'label' => __( 'Contain the site top items', 'ebikerental' ),
 //            'section' => 'theme_options',
 //            'type' => 'select',
 //            'choices' => array(
 //                'container' => 'contained',
 //                'container-fluid' => 'full width'
 //            ),
-//            'description' => __('You can set contained size via $container in scss', 'areite')
+//            'description' => __('You can set contained size via $container in scss', 'ebikerental')
 //        ) );
 
 
@@ -101,7 +101,7 @@ function areite_customize_register( $wp_customize )
 //            'label' => __( 'Logo Position' ),
 //            'section' => 'theme_options',
 //            'type' => 'select',
-//            'description' => __('You can make your own layout in php in header.php and ignore presets and manual settings.', 'areite'),
+//            'description' => __('You can make your own layout in php in header.php and ignore presets and manual settings.', 'ebikerental'),
 //            'choices' => array(
 //                'logo-left' => 'logo-left',
 //                'logo-right' => 'logo-right',
@@ -159,7 +159,7 @@ function areite_customize_register( $wp_customize )
 
 }
 
-add_action( 'customize_register', 'areite_customize_register' );
+add_action( 'customize_register', 'ebikerental_customize_register' );
 
 /**
  * Saving the archive theme mods to the pages so we can easily get it from checking the page rather than looping over all theme mods and checking against page
@@ -204,11 +204,11 @@ function save_archive_page(){
  * Render the site title for the selective refresh partial.
  *
  * @since Ignition 1.0
- * @see areite_customize_register()
+ * @see ebikerental_customize_register()
  *
  * @return void
  */
-function areite_customize_partial_blogname()
+function ebikerental_customize_partial_blogname()
 {
     bloginfo( 'name' );
 }
@@ -218,11 +218,11 @@ function areite_customize_partial_blogname()
  * Render the site tagline for the selective refresh partial.
  *
  * @since Ignition 1.0
- * @see areite_customize_register()
+ * @see ebikerental_customize_register()
  *
  * @return void
  */
-function areite_customize_partial_blogdescription()
+function ebikerental_customize_partial_blogdescription()
 {
     bloginfo( 'description' );
 }
@@ -232,19 +232,19 @@ function areite_customize_partial_blogdescription()
 /**
  * Bind JS handlers to instantly live-preview changes.
  */
-function areite_customize_preview_js()
+function ebikerental_customize_preview_js()
 {
-    wp_enqueue_script( 'areite-customize-preview', get_theme_file_uri( '/assets/js/customize-preview.js'
+    wp_enqueue_script( 'ebikerental-customize-preview', get_theme_file_uri( '/assets/js/customize-preview.js'
     ), array('jquery', 'customize-preview'), '1.0', true );
 }
 
-add_action( 'customize_preview_init', 'areite_customize_preview_js' );
+add_action( 'customize_preview_init', 'ebikerental_customize_preview_js' );
 
 /**
  * Load dynamic logic for the customizer controls area.
  */
-function areite_panels_js()
+function ebikerental_panels_js()
 {
-    wp_enqueue_script( 'areite-customize-controls', get_theme_file_uri( '/assets/js/customize-controls.js' ), array(), '1.0', true );
+    wp_enqueue_script( 'ebikerental-customize-controls', get_theme_file_uri( '/assets/js/customize-controls.js' ), array(), '1.0', true );
 }
-//add_action( 'customize_controls_enqueue_scripts', 'areite_panels_js' );
+//add_action( 'customize_controls_enqueue_scripts', 'ebikerental_panels_js' );

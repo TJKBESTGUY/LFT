@@ -6,8 +6,8 @@
 
 .site-footer {
 width: 100%;
-background: $a-grey;
-color: white;
+background: $nude;
+
 
 }
 
@@ -20,7 +20,7 @@ $li-height: 28px;
   color:white;
   padding: 100px 0;
   a {
-    color: white;
+
     line-height: 1.6;
     font-size: 1.6rem;
       @media screen and (max-width: 700px) {
@@ -96,59 +96,6 @@ flex-direction: column;
   svg {
     height: 37px;
     width:auto;
-    fill: white !important;
+
   }
 }
-
-
-.footer-bg-border {
-  opacity: 0.3;
-  position: absolute;
-    top: 0;
-    pointer-events: none;
-    width: calc(100% - 80px);
-    left: 40px;
-    height: 100%;
-    z-index: 1;
-    display: flex;
-    .cell {
-      width: 16.6666666667%;
-      position: relative;
-      min-height: 100%;
-    }
-    .cell:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 1px;
-      height: 100%;
-      background: black;
-    }
-    .cell:last-of-type:after{
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 1px;
-      height: 100%;
-          background: black;
-    }
-}
-
-    @media screen and (max-width: 699.99px) {
-        .footer-bg-border {
-      width: calc(100% - 32px);
-      left: 16px;
-    }
-      .footer-bg-border .cell {
-        width: 25%;
-      }
-      .footer-bg-border .cell:nth-of-type(1) {
-        display: none;
-      }
-      .footer-bg-border .cell:nth-of-type(2) {
-          display: none;
-      }
-
-    }

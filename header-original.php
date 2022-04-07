@@ -32,7 +32,7 @@ $app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg ic
 <body <?php body_class( $app_menu ); ?>>
 
 <a class="skip-link screen-reader-text" href="#site-content-skip">
-	<?php _e( 'Skip to content', 'areite' ); ?>
+	<?php _e( 'Skip to content', 'ebikerental' ); ?>
 </a>
 
 

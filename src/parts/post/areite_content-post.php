@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @package Areite
+ * @package ebikerental
  * @since   4.0
  *
  * Shows a single post or page
@@ -55,8 +55,8 @@
 	<section class="after-article container-content">
 		<?php
 		the_post_navigation( array(
-			'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'areite' ) . '</span><div class="nav-title"><span class="nav-title-icon-wrapper"><span class="iconify" data-icon="carbon:chevron-left"></span></span> <span>%title</span></div>',
-			'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'areite' ) . '</span><div class="nav-title"><span>%title</span> <span class="nav-title-icon-wrapper"><span class="iconify" data-icon="carbon:chevron-right"></span></span></div>',
+			'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'ebikerental' ) . '</span><div class="nav-title"><span class="nav-title-icon-wrapper"><span class="iconify" data-icon="carbon:chevron-left"></span></span> <span>%title</span></div>',
+			'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'ebikerental' ) . '</span><div class="nav-title"><span>%title</span> <span class="nav-title-icon-wrapper"><span class="iconify" data-icon="carbon:chevron-right"></span></span></div>',
 		) );
 		?>
 	</section>

@@ -80,7 +80,7 @@ function ign_menu( $item, $args ) {
 
 	if ( in_array( 'menu-item-has-children', (array) $classes ) ) {
 		$item .= '<button tabindex="-1" class="submenu-dropdown-toggle">' . $arrow . '
-                    <span class="screen-reader-text">' . __( 'Expand child menu', 'areite' ) . '</span></button>';
+                    <span class="screen-reader-text">' . __( 'Expand child menu', 'ebikerental' ) . '</span></button>';
 	}
 
 	return '<div class="menu-item-link">' . $item . '</div>';
@@ -188,7 +188,7 @@ add_filter( 'wp_check_filetype_and_ext', 'svgs_disable_real_mime_check', 10, 4 )
  *
  * @return void
  */
-function areite_output_inline_svg( $html ) {
+function ebikerental_output_inline_svg( $html ) {
 	$logo_id = get_theme_mod( 'custom_logo' ); //made by wp with add_theme_support
 
 	if ( get_post_mime_type( $logo_id ) == 'image/svg+xml' ) {
@@ -204,7 +204,7 @@ function areite_output_inline_svg( $html ) {
 	return $html;
 }
 
-add_filter( 'get_custom_logo', 'areite_output_inline_svg' );
+add_filter( 'get_custom_logo', 'ebikerental_output_inline_svg' );
 
 
 /**
@@ -278,8 +278,8 @@ add_filter( 'login_headerurl', 'ign_login_url' );
  * @since Ignition 1.0
  *
  */
-function areite_resource_hints( $urls, $relation_type ) {
-	if ( wp_style_is( 'areite-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
+function ebikerental_resource_hints( $urls, $relation_type ) {
+	if ( wp_style_is( 'ebikerental-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
 		$urls[] = array(
 			'href' => 'https://fonts.gstatic.com',
 			'crossorigin',
@@ -289,7 +289,7 @@ function areite_resource_hints( $urls, $relation_type ) {
 	return $urls;
 }
 
-add_filter( 'wp_resource_hints', 'areite_resource_hints', 10, 2 );
+add_filter( 'wp_resource_hints', 'ebikerental_resource_hints', 10, 2 );
 
 
 /**

@@ -11,1176 +11,429 @@
 
 
 
+      <div class="U-nav-spacer">
 
+      </div>
 
-      <section class="section--home-header U-sec-pad">
+      <section class="section--full-header">
+        <div class="module--bg-img">
+          <picture>
+            <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva1.jpg">
+              <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva1.jpg">
+                <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva1.jpg" alt="" src="">
+            </picture>
+        </div>
+
         <div class="U_container U_base-pad">
           <div class="module--heading_txt">
             <div class="heading">
-                <h1>Luotettava määräluettelo, laadukkaan rakentamisen perusta</h1>
+                <h1>Laadukkaiden sähköpyörien vuokrausta Saariselällä</h1>
             </div>
 
-            <!-- <div class="flx-container -left-nudge">
-              <div class="cell">
-              <p>Laskemme määräluettelot rakentamista varten kattavasti, tarkasti ja tinkimättömällä ammattitaidolla. Edelläkävijänä olemme kehittäneet määrälaskemisen tekniikoita toimintamme alusta alkaen. Kokemus antaa meille vakaan pohjan jatkuvalle kehitystyölle. Kymmenien vuosien kokemus määräluetteloiden laskemisesta näkyy laatuna ja luotettavuutena. Täsmällisyys on meille arvo niin määrälaskennassa kuin aikatauluissa..</p>
-              </div>
 
-            </div> -->
           </div>
 
         </div>
 
       </section>
 
-      <section class="section--basic U-sec-pad">
-        <div class="U_container U_base-pad">
-          <div class="module--full-image " style="" data-scroll>
-              <!-- <div class="module--full-image " style="margin-right:8.33%;margin-left:8.33%" data-scroll> -->
 
+
+
+          <section class="section--basic U-sec-pad">
+                    <div class="U_container U_base-pad">
+      <div class="module--heading_txt">
+          <div class="heading-content">
+          <div class="heading">
+        <h2>eBikeRental.fi tarjoaa kaikille mahdollisuuden tutustua mukavasti Saariselän tunturien erämaahan laadukkaalla sähköpyörällä</h2>
+          </div>
+      </div>
+    </div>
+
+    <div class="module--split-content">
+          <div class="flx-container">
+            <div class="cell mosaic-split__img split-content__img">
+              <div class="cell_img-content">
+                  <!-- <h3>Hyvät laskut saavat projektit vauhtiin</h3> -->
+                <div class="image-aspect-box -wide-aspect">
+                  <div class="image-aspect-box_inner ">
+                  <picture>
+                    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
+                      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
+                        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/8.jpg" alt="" src="">
+                    </picture>
+
+                </div>
+                </div>
+              </div>
+            </div>
+      <div class="cell mosaic-split__txt split-content__txt">
+        <div class="cell_txt-content">
+          <p>Panostamme laadukkaisiin täysjousitettuihin sähköpyöriin joilla kokematonkin luonnossa liikkuja pääsee helposti ja turvallisesti tunturiin.</p>
+<p>Sinulla ei tarvitse olla aikaisempaa kokemusta sähköpyöräilystä. Tulit yksin, kaveri porukalla tai perheenä, meidän laajasta pyörälikoimasta löytyy jokaiselle sopiva kulkuväline.</p>
+      </div>
+        </div>
+
+
+    </div>
+    </div>
+
+
+
+    </div>
+          </section>
+
+
+          <section class="section--basic U-sec-pad bg--nude">
+                    <div class="U_container U_base-pad">
+      <div class="module--heading_txt">
+          <div class="heading-content">
+          <div class="heading">
+        <h2>Modernit sähköpyörämme mahdollistavat sinulle ja perheellesi pidempiäkin retkiä vaativimmillakin reiteillä</h2>
+          </div>
+      </div>
+    </div>
+      </div>
+
+            <div class="U_container U_base-pad">
+              <div class="module--horizontal-row horizontal-row--bikes">
+                <div class="flx-container">
+
+              <div class="bike-card">
+                <div class="bike-card__inner">
+                  <div class="bike-card__header">
+                    <span class="label--adults f--medium">Aikuisille</span><span class="label--specs f--medium">Täysjousitettu</span>
+
+                  </div>
+
+                  <div class="bike-card__img">
+                    <div class="image-aspect-box">
+                      <div class="image-aspect-box_inner ">
+                      <picture>
+                        <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
+                          <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
+                            <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/8.jpg" alt="" src="">
+                        </picture>
+
+                    </div>
+                    </div>
+                  </div>
+
+                  <div class="bike-card__content">
+                    <h4 class="f--bold">Ghost E-Riot</h4>
+
+                    <p>Runsaasti moottoritehoa. Paljon joustomatkaa. Ja loputtomasti potentiaalia. E-Riot on sähköenduropyörä, joka luultavasti pystyy enempään kuin mitä ikinä voisit pyytää sähkömaastopyörältä. Kun joustomatka on edessä 170 mm ja takana 160 mm, hurjimmatkin alamäet tasoittuvat.</p>
+                  </div>
+
+                    <div class="bike-card__footer">
+                      <div class="-wrap">
+                          <a class="btn--secondary" href="#">ghost-bikes.com</a>
+                      </div>
+                      <span class="f--medium">Tutustu pyörään tarkemmin valmistajan sivuilta</span>
+                        </div>
+
+                </div>
+
+              </div>
+              <div class="bike-card">
+                <div class="bike-card__inner">
+                  <div class="bike-card__header">
+                    <span class="label--adults f--medium">Aikuisille</span><span class="label--specs f--medium">Täysjousitettu</span>
+
+                  </div>
+
+                  <div class="bike-card__img">
+                    <div class="image-aspect-box">
+                      <div class="image-aspect-box_inner ">
+                      <picture>
+                        <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
+                          <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
+                            <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/8.jpg" alt="" src="">
+                        </picture>
+
+                    </div>
+                    </div>
+                  </div>
+
+                  <div class="bike-card__content">
+                    <h4 class="f--bold">Ghost E-Riot</h4>
+
+                    <p>Runsaasti moottoritehoa. Paljon joustomatkaa. Ja loputtomasti potentiaalia. E-Riot on sähköenduropyörä, joka luultavasti pystyy enempään kuin mitä ikinä voisit pyytää sähkömaastopyörältä. Kun joustomatka on edessä 170 mm ja takana 160 mm, hurjimmatkin alamäet tasoittuvat.</p>
+                  </div>
+
+                    <div class="bike-card__footer">
+                      <div class="-wrap">
+                          <a class="btn--secondary" href="#">ghost-bikes.com</a>
+                      </div>
+                      <span class="f--medium">Tutustu pyörään tarkemmin valmistajan sivuilta</span>
+                        </div>
+
+                </div>
+
+              </div>
+              <div class="bike-card">
+                <div class="bike-card__inner">
+                  <div class="bike-card__header">
+                    <span class="label--kids f--medium">Lapsille</span><span class="label--specs f--medium">Täysjousitettu</span>
+
+                  </div>
+
+                  <div class="bike-card__img">
+                    <div class="image-aspect-box">
+                      <div class="image-aspect-box_inner ">
+                      <picture>
+                        <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
+                          <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
+                            <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/8.jpg" alt="" src="">
+                        </picture>
+
+                    </div>
+                    </div>
+                  </div>
+
+                  <div class="bike-card__content">
+                    <h4 class="f--bold">Ghost E-Riot</h4>
+
+                    <p>Runsaasti moottoritehoa. Paljon joustomatkaa. Ja loputtomasti potentiaalia. E-Riot on sähköenduropyörä, joka luultavasti pystyy enempään kuin mitä ikinä voisit pyytää sähkömaastopyörältä. Kun joustomatka on edessä 170 mm ja takana 160 mm, hurjimmatkin alamäet tasoittuvat.</p>
+                  </div>
+
+                    <div class="bike-card__footer">
+                      <div class="-wrap">
+                          <a class="btn--secondary" href="#">ghost-bikes.com</a>
+                      </div>
+                      <span class="f--medium">Tutustu pyörään tarkemmin valmistajan sivuilta</span>
+                        </div>
+
+                </div>
+
+              </div>
+
+
+
+
+              </div>
+
+              </div>
+                  </div>
+
+                  <div class="U_container U_base-pad">
+    <div class="module--heading_txt">
+        <div class="capsule-wrap">
+        <a class="btn--basic" href="#">Kaikki pyörät ›</a>
+    </div>
+  </div>
+
+    </div>
+
+
+          </section>
+
+
+
+
+          <section class="section--basic U-sec-pad">
+                    <div class="U_container U_base-pad">
+
+
+    <div class="module--split-content">
+          <div class="flx-container">
+            <div class="cell mosaic-split__img split-content__img">
+              <div class="cell_img-content">
+                  <!-- <h3>Hyvät laskut saavat projektit vauhtiin</h3> -->
+                <div class="image-aspect-box -wide-aspect">
+                  <div class="image-aspect-box_inner ">
+                  <picture>
+                    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
+                      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
+                        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/8.jpg" alt="" src="">
+                    </picture>
+
+                </div>
+                </div>
+              </div>
+            </div>
+      <div class="cell mosaic-split__txt split-content__txt">
+        <div class="cell_txt-content">
+          <h2>Monipuoliset reitit Saariselän tuntureilla ja metsän siimeksessä</h2>
+          <p>Tutustu Saariselän reittivalikoimaan ja katso reittikartat kohteen esittelysivulta.</p>
+          <div class="capsule-wrap">
+          <a class="btn--basic" href="#">Saariselkä ›</a>
+      </div>
+      </div>
+        </div>
+
+
+    </div>
+    </div>
+
+
+
+    </div>
+          </section>
+
+
+
+          <section class="section--basic U-sec-pad  bg--nude">
+                    <div class="U_container U_base-pad">
+
+
+    <div class="module--quote-floater">
+      <h2>
+        “Hyvin merkittyjä polkuja pitkin oli helppo liikkua. Vaikka tunturien päälle nouseminen olisi itselleni vaikeaa tavallisella pyörällä teki sähköavustus mäkien nousemisen mukavaksi.”
+      </h2>
+    </div>
+    </div>
+
+
+    <div class="U_container U_base-pad">
+      <div class="module--horizontal-row horizontal-row--quotes">
+        <div class="flx-container">
+
+      <div class="quote-card">
+        <div class="quote-card__inner">
+          <div class="quote-card__content">
+            <p> “Tasaiset osuudet sujuivat mukavasti hyvän jousituksen ansiosta. Takaisin kotiin päästyäni hankin itselleni oman sähköpyörän. Enkä ole katunut. Pyörän tukeva rakenne, ajo-ominaisuudet, sekä sähköisen avustuksen tuoma lisäkapasiteetti antavat mahdollisuuden nauttia pitkäkestoisesta lumikenttien kutsusta esim. järven jäällä.”</p>
+          </div>
+          <div class="quote-card__person">
+            <div class="quote-card__img">
             <div class="image-aspect-box">
               <div class="image-aspect-box_inner ">
               <picture>
-                <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva1.jpg">
-                  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva1.jpg">
-                    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva1.jpg" alt="" src="">
+                <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
+                  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
+                    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/8.jpg" alt="" src="">
                 </picture>
-                <picture class="">
-                  <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva2.png">
-                    <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3.png">
-                      <img class="lazy-anim lazyload -overlay-image" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva3.png" alt="" src="">
-                  </picture>
-                  <!-- <picture class="">
-                    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3.png">
-                      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva2.png">
-                        <img class="lazy-anim lazyload -overlay-image -delay" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva2.png" alt="" src="">
-                    </picture> -->
-
+                          </div>
             </div>
+            </div>
+              <span class="f--medium">Mikko Rovanperä</span>
           </div>
+
+
+
+
+
+
         </div>
-          </div>
 
-      </section>
-
-
-          <section class="section--basic U-sec-pad__small">
-                    <div class="U_container U_base-pad">
-      <div class="module--heading_txt floating-heading">
-
-          <div class="heading-content">
-          <div class="heading">
-        <h3>Määrälaskenta-alan markkinajohtajana tuotamme määräluetteloita ja määrätietoa kattavasti, tarkasti ja tinkimättömällä ammattitaidolla</h3>
-          </div>
       </div>
-    </div>
-    </div>
+      <div class="quote-card">
+        <div class="quote-card__inner">
+          <div class="quote-card__content">
+            <p> “Tasaiset osuudet sujuivat mukavasti hyvän jousituksen ansiosta. Takaisin kotiin päästyäni hankin itselleni oman sähköpyörän. Enkä ole katunut. Pyörän tukeva rakenne, ajo-ominaisuudet, sekä sähköisen avustuksen tuoma lisäkapasiteetti antavat mahdollisuuden nauttia pitkäkestoisesta lumikenttien kutsusta esim. järven jäällä.”</p>
+          </div>
+          <div class="quote-card__person">
+            <div class="quote-card__img">
+            <div class="image-aspect-box">
+              <div class="image-aspect-box_inner ">
+              <picture>
+                <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
+                  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
+                    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/8.jpg" alt="" src="">
+                </picture>
+                          </div>
+            </div>
+            </div>
+              <span class="f--medium">Mikko Rovanperä</span>
+          </div>
+
+
+
+
+
+
+        </div>
+
+      </div>
+      <div class="quote-card">
+        <div class="quote-card__inner">
+          <div class="quote-card__content">
+            <p>Vuokrasin syksyllä Saariselälle sähkömaastopyörän ja 3 tunnin ajon jälkeen se olin heti myyty. Hyvin merkittyjä polkuja pitkin oli helppo liikkua. Vaikka tunturien päälle nouseminen olisi itselleni vaikeaa tavallisella pyörällä teki sähköavustus mäkien nousemisen mukavaksi.Tasaiset osuudet sujuivat mukavasti hyvän jousituksen ansiosta. Takaisin kotiin päästyäni hankin itselleni oman sähköpyörän. Enkä ole katunut. Pyörän tukeva rakenne, ajo-ominaisuudet, sekä sähköisen avustuksen tuoma lisäkapasiteetti antavat mahdollisuuden nauttia pitkäkestoisesta lumikenttien kutsusta esim. järven jäällä.</p>
+          </div>
+          <div class="quote-card__person">
+            <div class="quote-card__img">
+            <div class="image-aspect-box">
+              <div class="image-aspect-box_inner ">
+              <picture>
+                <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
+                  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
+                    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/8.jpg" alt="" src="">
+                </picture>
+                          </div>
+            </div>
+            </div>
+            <span class="f--medium">Mikko Rovanperä</span>
+          </div>
+
+
+
+
+
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+      </div>
+
+      </div>
+          </div>
+
+
+
+
           </section>
 
-      <!-- <section class="section--basic U-sec-pad">
-        <div class="U_container U_base-pad">
 
-          <div class="module--split-content -home-first-split" >
-                <div class="flx-container">
-            <div class="cell split-content__img">
+
+
+          <section class="section--basic U-sec-pad bg--dark">
+                    <div class="U_container U_base-pad">
+
+
+    <div class="module--split-content">
+          <div class="flx-container">
+            <div class="cell mosaic-split__img split-content__img">
               <div class="cell_img-content">
-                <div class="image-aspect-box" style="padding-top:75%">
-  <div class="image-aspect-box_inner ">
-  <picture>
-    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b4.jpg">
-      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b4.jpg">
-        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/b4.jpg" alt="" src="">
-    </picture>
-
-</div>
-</div>
-              </div>
-            </div>
-
-            <div class="cell split-content__txt">
-              <div class="cell_txt-content">
-
-                <p class="cell-p -home-first-txt" style="">Edelläkävijänä olemme kehittäneet määrälaskemisen tekniikoita toimintamme alusta alkaen. Kokemus antaa meille vakaan pohjan jatkuvalle kehitystyölle. Kymmenien vuosien kokemus määräluetteloiden laskemisesta näkyy laatuna ja luotettavuutena. Täsmällisyys on meille arvo niin määrälaskennassa kuin aikatauluissa.</p>
-            </div>
-              </div>
-
-
-
-
-
-
-          </div>
-          </div>
-
-        </div>
-
-      </section> -->
-
-
-      <!-- <section class="section--super-digit U-sec-marg -dark-mode">
-
-
-        <div class="U_container U_base-pad U_padded-container">
-
-
-                <div class="footer-bg-border">
-                      <div class="cell">
-                      </div>
-                      <div class="cell">
-                      </div>
-                      <div class="cell">
-                      </div>
-                      <div class="cell">
-                      </div>
-                      <div class="cell">
-                      </div>
-                      <div class="cell">
-                      </div>
-                    </div>
-
-                    <div class="module--laskenta-count">
-                      <div class="flx-container">
-                        <div class="cell laskenta-count__number">
-                            <span class="Anim-item--counter -bold-txt"  style="text-align:right; padding-right:80px" data-scroll data-type="counter" data-value="17">17</span>
-                        </div>
-                        <div class="cell laskenta-count__label">
-                          <span class="h3">Laskennassa olevaa kohdetta</span>
-                        </div>
-                      </div>
-
-
-                    </div>
-
-        </div>
-
-      </section> -->
-
-
-
-      <!-- <section class="section--home-laskenta-count U-sec-pad">
-        <div class="U_container U_base-pad">
-          <div class="module--laskenta-count">
-            <div class="flx-container">
-              <div class="cell laskenta-count__number">
-                  <span class="Anim-item--counter -bold-txt"  style="text-align:right; padding-right:80px" data-scroll data-type="counter" data-value="17">17</span>
-              </div>
-              <div class="cell laskenta-count__label">
-                <span class="h2">Laskennassa olevaa kohdetta</span>
-              </div>
-            </div>
-
-
-          </div>
-
-        </div>
-
-      </section> -->
-
-
-      <!-- <section class="section--basic U-sec-pad__small">
-                <div class="U_container U_base-pad">
-  <div class="module--heading_txt floating-heading floating-heading--pre-table">
-
-      <div class="heading-content">
-      <div class="heading">
-    <h3>Pysymme ajan tasalla siitä, missä rakennetaan. Asiakkaamme saavat meiltä tietää missä rakentamista suunnitellaan
-</h3>
-      </div>
-  </div>
-</div>
-</div>
-      </section> -->
-
-
-
-
-
-      <!-- <section class="section--laskentakohteet-app -custom-pad"> -->
-            <section class="section--laskentakohteet-app U-sec-pad ">
-          <div class="U_container U_base-pad">
-            <div class="module--laskentakohteet-app -home-preview">
-
-              <table>
-                <div class="fake-header-mask">
+                  <!-- <h3>Hyvät laskut saavat projektit vauhtiin</h3> -->
+                <div class="image-aspect-box -wide-aspect">
+                  <div class="image-aspect-box_inner ">
+                  <picture>
+                    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
+                      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
+                        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/8.jpg" alt="" src="">
+                    </picture>
 
                 </div>
-                <thead class="laskentakohteet-app__header">
-                  <tr class="">
-                    <th class="tr--kohde">
-                      <span>Kohde</span>
-                    </th>
-                    <th><span>Tyyppi</span></th>
-                    <th><span>Bruttoala m<sup>2</sup></span></th>
-
-                      <th><span>Tilavuus m<sup>3</sup></span></th>
-                        <th><span>Tarjous pvm</span></th>
-                              <th><span>Valmistuu</span></th>
-
-                  </tr>
-                </thead>
-
-                <tbody class="laskentakohteet-app__body">
-                  <!-- <tr class="Anim-item--list">
-                    <td class="td--kohde">
-                      <div class="flx-container">
-                        <span class="td__label">Heka</span>
-                      <span class="td__name">Maunula Töyrytie 3</span>
-                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Pääkaupunkiseutu</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 92 kpl</span></span>
-                      </div>
-
-
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="">
-                        <div class="flx-container">
-                          <span class="td__label">&#8203;</span>
-                        <span class="td__name">Laajennus</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                        </div>
-                      </div>
-
-                    </td>
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name">8187</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name">24499</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name">15.12.2021</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name -yellow">Valmis</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-
-                  </tr> -->
-
-                  <!-- <tr class="Anim-item--list">
-                    <td class="td--kohde">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name">Pisan päiväkoti</span>
-                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Pääkaupunkiseutu</span></span>
-                      </div>
-
-
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="">
-                        <div class="flx-container">
-                          <span class="td__label">&#8203;</span>
-                        <span class="td__name">Saneeraus</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                        </div>
-                      </div>
-
-                    </td>
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name">1087</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name">24899</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name">16.02.2022</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name">vko 50</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-
-                  </tr> -->
-
-                  <tr class="Anim-item--list">
-                    <td class="td--kohde">
-                      <div class="flx-container">
-                        <span class="td__label">ELO</span>
-                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
-                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Pääkaupunkiseutu</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
-                      </div>
-
-
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="">
-                        <div class="flx-container">
-                          <span class="td__label">&#8203;</span>
-                        <span class="td__name">Uudisrakennus</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                        </div>
-                      </div>
-
-                    </td>
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name">19187</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name">120499</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name">15.09.2021</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name">vko 49</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-
-                  </tr>
-
-
-                  <tr class="Anim-item--list">
-                    <td class="td--kohde">
-                      <div class="flx-container">
-                        <span class="td__label">Heka</span>
-                      <span class="td__name">Maunula Töyrytie 3</span>
-                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Pääkaupunkiseutu</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 92 kpl</span></span>
-                      </div>
-
-
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="">
-                        <div class="flx-container">
-                          <span class="td__label">&#8203;</span>
-                        <span class="td__name">Laajennus,<br>Saneeraus</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                        </div>
-                      </div>
-
-                    </td>
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name">8187</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name">24499</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name">15.12.2021</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name -yellow">Valmis</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-
-                  </tr>
-
-                  <tr class="Anim-item--list">
-                    <td class="td--kohde">
-                      <div class="flx-container">
-                        <span class="td__label">Heka</span>
-                      <span class="td__name">Maunula Töyrytie 3</span>
-                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Pääkaupunkiseutu</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 92 kpl</span></span>
-                      </div>
-
-
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="">
-                        <div class="flx-container">
-                          <span class="td__label">&#8203;</span>
-                        <span class="td__name">Laajennus</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                        </div>
-                      </div>
-
-                    </td>
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name">8187</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name">24499</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name">15.12.2021</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name -yellow">Valmis</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-
-                  </tr>
-
-                  <tr class="Anim-item--list">
-                    <td class="td--kohde">
-                      <div class="flx-container">
-                        <span class="td__label">ELO</span>
-                      <span class="td__name">As Oy Vantaan Kilterinrinne 3</span>
-                      <span class="td__xtra-info"><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/location.svg">Pääkaupunkiseutu</span><span class="-location"><img src="<?php echo get_template_directory_uri(); ?>/svg/info.svg">Asuntoja: 105 kpl</span></span>
-                      </div>
-
-
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="">
-                        <div class="flx-container">
-                          <span class="td__label">&#8203;</span>
-                        <span class="td__name">Uudisrakennus</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                        </div>
-                      </div>
-
-                    </td>
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name">19187</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name">120499</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name">15.09.2021</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-                    <td class="td--basic-cell">
-                      <div class="flx-container">
-                        <span class="td__label">&#8203;</span>
-                      <span class="td__name">vko 49</span>
-                        <span class="td__xtra-info">&#8203;</span>
-                      </div>
-                    </td>
-
-
-                  </tr>
-
-
-
-
-
-
-
-
-                </tbody>
-
-              </table>
-              <div class="table-mask">
-
-              </div>
-
-            </div>
-
-            <div class="laskentakohteet-app__footer laskentakohteet-app__footer--home" style="">
-              <div class="txt">
-                Tällä hetkellä laskennassa <span class="js--counted-number">00</span> kohdetta. Katso kaikki kohteet laskentakohteet-sivulta.
-              </div>
-              <div class="capsule-wrap">
-                <button class="basic-btn btn--yellow"type="button" name="button"><span class="basic-btn__text">Laskentakohteet</span> <span class="basic-btn__icon">
-                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
-                </span> </button>
-              </div>
-            </div>
-
-
-          </div>
-
-      </section>
-
-      <section class="section--basic U-sec-pad">
-        <div class="U_container U_base-pad">
-          <div class="module--split-content -mosaic-split">
-                <div class="flx-container">
-                  <div class="cell mosaic-split__img split-content__img">
-                    <div class="cell_img-content">
-                        <!-- <h3>Hyvät laskut saavat projektit vauhtiin</h3> -->
-                      <div class="image-aspect-box -wide-aspect">
-                        <div class="image-aspect-box_inner ">
-                        <picture>
-                          <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                            <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                              <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/8.jpg" alt="" src="">
-                          </picture>
-
-                      </div>
-                      </div>
-                    </div>
-                  </div>
-            <div class="cell mosaic-split__txt split-content__txt">
-              <div class="cell_txt-content">
-                  <h3>Meillä on kokemusta määrälaskennasta kaikenkokoiseen rakentamiseen<br>ja monenlaisiin urakkamuotoihin</h3>
-              <!-- <p class="">Määrälaskenta sujuvoittaa työtä, antaa vakaan perustan rakennushankkeille ja vähentää hävikkiä – niin materiaaleissa kuin tehokkuudessa. Laskenta on standardoitua ja yhdenmukaista, laskentaprosessi on loppuun asti ajateltu.</p> -->
-              <!-- <div class="capsule-wrap">
-                <button class="basic-btn btn--yellow"type="button" name="button"><span class="basic-btn__text">Lue lisää</span> <span class="basic-btn__icon">
-                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
-                </span> </button>
-              </div> -->
-            </div>
-              </div>
-
-
-          </div>
-          </div>
-
-        </div>
-
-      </section>
-
-      <section class="section--super-digit U-sec-marg -dark-mode">
-        <div class="U_container U_base-pad U_padded-container">
-          <div class="footer-bg-border">
-                <div class="cell">
-                </div>
-                <div class="cell">
-                </div>
-                <div class="cell">
-                </div>
-                <div class="cell">
-                </div>
-                <div class="cell">
-                </div>
-                <div class="cell">
                 </div>
               </div>
-          <div class="module--super-digit">
-            <div class="flx-container">
-              <div class="cell super-digit__number">
-                <div data-scroll class="super-digits-mask">
-                  <span class="Anim-item--split -fake-number -bold-txt">
-                      204 500
-                    </span>
-                  <span class="Anim-item--split -real-number -bold-txt">
-                    204 500
-                    </span>
-
-                </div>
-              </div>
-              <div class="cell super-digit__label">
-                <span class="h3">suurin laskettu kohde (m2)</span>
-              </div>
             </div>
-
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <!-- <section class="section--basic U-sec-pad">
-        <div class="U_container U_base-pad">
-          <div class="module--split-content">
-                <div class="flx-container">
-                  <div class="cell split-content__img">
-                    <div class="cell_img-content">
-                      <div class="image-aspect-box" style="padding-top:75%">
-  <div class="image-aspect-box_inner ">
-  <picture>
-    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus7-a.png">
-      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus7-a.png">
-        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus7-a.png" alt="" src="">
-    </picture>
-
-</div>
-</div>
-                    </div>
-                  </div>
-
-
-            <div class="cell split-content__txt">
-              <div class="cell_txt-content">
-              <h3>Meillä on kokemusta määrälaskennasta kaikenkokoiseen rakentamiseen<br>ja monenlaisiin urakkamuotoihin</h3>
-            </div>
-              </div>
-
-          </div>
-          </div>
-          </div>
-
-      </section> -->
-
-
-<!--
-      <section class="section--basic U-sec-pad">
-        <div class="U_container U_base-pad">
-          <div class="module--split-content">
-                <div class="flx-container">
-                  <div class="cell split-content__txt">
-                    <div class="cell_txt-content">
-                    <h3>Määrälaskentakokemusta kolmelta vuosikymmeneltä ja yli 10 000 määräluettelosta.</h3>
-                  </div>
-                    </div>
-                  <div class="cell split-content__img">
-                    <div class="cell_img-content">
-                      <div class="image-aspect-box" style="padding-top:75%">
-  <div class="image-aspect-box_inner ">
-  <picture>
-    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus7-a.png">
-      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus7-a.png">
-        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus7-a.png" alt="" src="">
-    </picture>
-
-</div>
-</div>
-                    </div>
-                  </div>
-
-
-
-
-          </div>
-          </div>
-          </div>
-
-      </section> -->
-
-
-      <!-- <section class="section--basic U-sec-pad">
-        <div class="U_container U_base-pad">
-          <div class="module--split-content -mosaic-split">
-                <div class="flx-container">
-                  <div class="cell mosaic-split__img split-content__img">
-                    <div class="cell_img-content">
-
-                      <div class="image-aspect-box -wide-aspect">
-                        <div class="image-aspect-box_inner ">
-                        <picture>
-                          <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                            <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                              <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/8.jpg" alt="" src="">
-                          </picture>
-
-                      </div>
-                      </div>
-                    </div>
-                  </div>
-            <div class="cell mosaic-split__txt split-content__txt">
-              <div class="cell_txt-content">
-                  <h3>Meillä on kokemusta määrälaskennasta kaikenkokoiseen rakentamiseen<br>ja monenlaisiin urakkamuotoihin</h3>
-
-            </div>
-              </div>
-
-
-          </div>
-          </div>
-
-        </div>
-
-      </section> -->
-
-
-      <!-- <section class="section--super-digit U-sec-marg">
-        <div class="U_container U_base-pad">
-          <div class="module--super-digit">
-            <div class="flx-container">
-              <div class="cell super-digit__number">
-                <div data-scroll class="super-digits-mask">
-                  <span class="Anim-item--split -fake-number -bold-txt">
-                      204 500
-                    </span>
-                  <span class="Anim-item--split -real-number -bold-txt">
-                    204 500
-                    </span>
-
-                </div>
-              </div>
-              <div class="cell super-digit__label">
-                <span class="h3">suurin laskettu kohde (m2)</span>
-              </div>
-            </div>
-
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <section class="section--basic U-sec-pad">
-        <div class="U_container U_base-pad">
-          <div class="module--full-image -left-nudge">
-            <div class="image-aspect-box ">
-  <div class="image-aspect-box_inner">
-  <picture>
-    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b2.jpg">
-      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b2.jpg">
-        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/b2.jpg" alt="" src="">
-    </picture>
-
-</div>
-</div>
-        </div>
-          </div>
-
-      </section> -->
-
-
-      <!-- <section class="section--basic U-sec-pad" style="">
-        <div class="U_container U_base-pad">
-          <div class="module--heading_txt" >
-
-                <div class="heading-content" style="margin-left:0">
-                <div class="heading">
-              <h2>Määrälaskentakokemusta kolmelta vuosikymmeneltä ja yli 10 000 määräluettelosta</h2>
-
-                </div>
-
-            </div>
-          </div>
-
-        </div>
-
-      </section> -->
-
-
-      <section class="section--basic U-sec-pad__small">
-                <div class="U_container U_base-pad">
-  <div class="module--heading_txt floating-heading" style="padding-left:0">
-
-      <div class="heading-content">
-      <div class="heading">
-    <h2 style="margin-right:20%">Määrälaskentakokemusta kolmelta vuosikymmeneltä ja yli 10 000 määräluettelosta</h2>
-      </div>
-  </div>
-</div>
-</div>
-      </section>
-
-      <section class="section--basic U-sec-pad" >
-        <div class="U_container U_base-pad">
-
-
-
-          <div class="module--split-content -mosaic-split -boxed-layout">
-                <div class="flx-container">
-                  <div class="cell mosaic-split__img split-content__img">
-                    <div class="cell_img-content">
-                        <!-- <h3>Laadukasta määrälaskentaa</h3> -->
-                      <div class="image-aspect-box -wide-aspect">
-                        <div class="image-aspect-box_inner ">
-                        <picture>
-                          <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/7.jpg">
-                            <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/7.jpg">
-                              <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/7.jpg" alt="" src="">
-                          </picture>
-
-                      </div>
-                      </div>
-                    </div>
-                  </div>
-            <div class="cell mosaic-split__txt split-content__txt -boxed-cell">
-              <div class="cell_txt-content">
-
-              <p class="">Olemme toimittaneet yli 10 000 määräluetteloa. Niiden varassa rakennusprojekteja on viety tarjousvaiheen kautta valmiisiin kohteisiin.</p>
-              <p>Määräluettelo toimii rakentamisen pohjana niin kustannuslaskennassa kuin työmaasuunnitteluissa ja hankinnoissa. Kerralla tarkka, pitkään toimiva.</p>
-            </div>
-              </div>
-
-
-          </div>
-          </div>
-                </div>
-
-            </section>
-
-          <section class="section--basic U-sec-pad__small">
-                    <div class="U_container U_base-pad">
-      <div class="module--heading_txt floating-heading">
-
-          <div class="heading-content">
-          <div class="heading">
-          <h3>Tarkkaan mietitty määrälaskentaprosessi ja alan kehittyneimmät työkalut mahdollistavat resurssien täyden hyödyntämisen</h3>
-          </div>
-      </div>
-    </div>
-    </div>
-          </section>
-
-
-          <section class="section--basic U-sec-pad" style="">
-            <div class="U_container U_base-pad">
-
-
-
-              <div class="module--split-content -boxed-layout">
-                    <div class="flx-container">
-
-
-                <div class="cell split-content__txt -boxed-cell">
-                  <div class="cell_txt-content">
-                  <!-- <h3>Täsmällisyys on meille kaikki kaikessa.</h3> -->
-                  <p class="cell-p">Palveluitamme käyttävät säännöllisesti kaiken kokoiset rakennusliikkeet. Meillä on kokemusta monipuolisista kohteista ja urakkamuodoista: monimutkaisista erikoiskohteista kerrostaloihin. Tavoite on aina auttaa asiakasta heidän työssään. Määrälaskenta sujuvoittaa työtä, antaa vankan perustan rakentamiselle ja vähentää hävikkiä.</p>
-                  <div class="capsule-wrap">
-                    <button class="basic-btn btn--black"type="button" name="button"><span class="basic-btn__text">Lue lisää palveluista</span> <span class="basic-btn__icon">
-                      <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
-                    </span> </button>
-                  </div>
-                </div>
-                  </div>
-
-                  <div class="cell split-content__img">
-                    <div class="cell_img-content">
-                      <div class="image-aspect-box">
-        <div class="image-aspect-box_inner ">
-        <picture>
-          <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus3-b.png">
-            <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus3-b.png">
-              <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus3-b.png" alt="" src="">
-          </picture>
-
-      </div>
-      </div>
-                    </div>
-                  </div>
-
-
-              </div>
-              </div>
-
-
-
-
-
-
-            </div>
-
-          </section>
-
-
-          <!-- <section class="section--basic U-sec-pad">
-                    <div class="U_container U_base-pad">
-
-          <div class="module--split-content -home-yritys-split" style="">
-                <div class="flx-container">
-
-
-
-
-            <div class="cell split-content__img">
-              <div class="cell_img-content">
-                <div class="image-aspect-box" style="padding-top:66.67%">
-  <div class="image-aspect-box_inner ">
-  <picture>
-    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b4.jpg">
-      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b4.jpg">
-        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/b4.jpg" alt="" src="">
-    </picture>
-
-</div>
-</div>
-              </div>
-            </div>
-
-            <div class="cell split-content__txt">
-              <div class="cell_txt-content">
-
-              <p class="cell-p" style="">Se ei varmasti ole yllätys, kun on puhe määrien laskemiseen erikoistuneesta pioneeriyrityksestä. Tarkkuus näkyy määräluetteloiden selkeydessä ja käytettävyydessä kuten myös aikatauluissa ja hinnoittelussa. Tähän ytimekäs johdatus yrityssivulle?</p>
-              <div class="capsule-wrap">
-                <button class="basic-btn btn--yellow"type="button" name="button"><span class="basic-btn__text">Lue lisää Areitesta</span> <span class="basic-btn__icon">
-                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
-                </span> </button>
-              </div>
-            </div>
-              </div>
-
-
-          </div>
-          </div>
-
-
-
-        </div>
-
-      </section> -->
-
-      <section class="section--super-digit U-sec-marg -dark-mode">
-
-
-        <div class="U_container U_base-pad U_padded-container">
-
-
-                <div class="footer-bg-border">
-                      <div class="cell">
-                      </div>
-                      <div class="cell">
-                      </div>
-                      <div class="cell">
-                      </div>
-                      <div class="cell">
-                      </div>
-                      <div class="cell">
-                      </div>
-                      <div class="cell">
-                      </div>
-                    </div>
-
-          <div class="module--super-digit">
-            <div class="flx-container">
-              <div class="cell super-digit__number">
-                <div data-scroll class="super-digits-mask">
-                  <span class="Anim-item--split -fake-number -bold-txt">
-                      22 412 735
-                    </span>
-                  <span class="Anim-item--split -real-number -bold-txt">
-                    22 412 735
-                    </span>
-
-                </div>
-
-                <!-- <span>22 412 735</span> -->
-              </div>
-              <div class="cell super-digit__label">
-                <span class="h3">laskettua neliömetriä yhteensä</span>
-              </div>
-            </div>
-
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-
-      <section class="section--basic U-sec-pad__small">
-                <div class="U_container U_base-pad">
-  <div class="module--heading_txt floating-heading" style="padding-left:0">
-
-      <div class="heading-content">
-      <div class="heading">
-    <h2 style="margin-right:0%">Määrälaskennan moniosaajat tuottavat luotettavaa määrätietoa vuosien kokemuksella.</h2>
-      </div>
-  </div>
-</div>
-</div>
-      </section>
-
-
-      <section class="section--basic U-sec-pad">
-                <div class="U_container U_base-pad">
-
-      <div class="module--split-content -home-yritys-split" style="">
-            <div class="flx-container">
-
-
-
-
-        <div class="cell split-content__img">
-          <div class="cell_img-content">
-            <div class="image-aspect-box" style="padding-top:66.67%">
-<div class="image-aspect-box_inner ">
-<picture>
-<source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b4.jpg">
-  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/b4.jpg">
-    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/b4.jpg" alt="" src="">
-</picture>
-
-</div>
-</div>
-          </div>
-        </div>
-
-        <div class="cell split-content__txt">
-          <div class="cell_txt-content">
-
-          <p class="cell-p" style="">Se ei varmasti ole yllätys, kun on puhe määrien laskemiseen erikoistuneesta pioneeriyrityksestä. Tarkkuus näkyy määräluetteloiden selkeydessä ja käytettävyydessä kuten myös aikatauluissa ja hinnoittelussa. Tähän ytimekäs johdatus yrityssivulle?</p>
+      <div class="cell mosaic-split__txt split-content__txt">
+        <div class="cell_txt-content">
+          <h2>Monipuoliset reitit Saariselän tuntureilla ja metsän siimeksessä</h2>
+          <p>Tutustu Saariselän reittivalikoimaan ja katso reittikartat kohteen esittelysivulta.</p>
           <div class="capsule-wrap">
-            <button class="basic-btn btn--yellow"type="button" name="button"><span class="basic-btn__text">Lue lisää Areitesta</span> <span class="basic-btn__icon">
-              <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
-            </span> </button>
-          </div>
+          <a class="btn--basic" href="#">Saariselkä ›</a>
+      </div>
+      </div>
         </div>
-          </div>
 
 
-      </div>
-      </div>
+    </div>
+    </div>
 
 
 
     </div>
-
-  </section>
-
+          </section>
 
 
 
-
-
-      <!-- <section class="section--basic U-sec-pad" style="">
-        <div class="U_container U_base-pad">
-          <div class="module--heading_txt" >
-
-                <div class="heading-content" style="margin-left:0">
-                <div class="heading">
-              <h2>Jatkuva kehitys  pitää<br>askeleen edellä</h2>
-              <p class="ingr" style="">Etsimme aina tapoja kehittää toimintaamme, jotta voimme palvella rakentajia vielä paremmin. Edistämme niin tapoja laskea kuin määrälaskentaohjelmistoja. Oma väkemme on olennaisessa roolissa kehittämässä, jotta voimme aina hyödyntää laajaa kokemustamme.</p>
-                </div>
-
-            </div>
-          </div>
-
-        </div>
-
-      </section> -->
-
-
-
-      <!-- <section class="section--basic U-sec-pad__small" style="">
-        <div class="U_container U_base-pad">
-
-
-
-          <div class="module--split-content -boxed-layout">
-                <div class="flx-container">
-
-
-
-
-            <div class="cell split-content__img">
-              <div class="cell_img-content">
-                <div class="image-aspect-box">
-  <div class="image-aspect-box_inner ">
-  <picture>
-    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus3-b.png">
-      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus3-b.png">
-        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus3-b.png" alt="" src="">
-    </picture>
-
-</div>
-</div>
-              </div>
-            </div>
-
-            <div class="cell split-content__txt -boxed-cell">
-              <div class="cell_txt-content">
-
-              <p class="cell-p">Palveluitamme käyttävät säännöllisesti kaiken kokoiset rakennusliikkeet. Meillä on kokemusta monipuolisista kohteista ja urakkamuodoista: monimutkaisista erikoiskohteista kerrostaloihin. Tavoite on aina auttaa asiakasta heidän työssään. Määrälaskenta sujuvoittaa työtä, antaa vankan perustan rakentamiselle ja vähentää hävikkiä.</p>
-              <div class="capsule-wrap">
-                <button class="basic-btn btn--black"type="button" name="button"><span class="basic-btn__text">Lue lisää palveluista</span> <span class="basic-btn__icon">
-                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
-                </span> </button>
-              </div>
-            </div>
-              </div>
-
-
-          </div>
-          </div>
-
-
-
-
-
-
-        </div>
-
-      </section> -->
-
-
-
-
-
-<?php locate_template('src/parts/global/bottom-marquee.php', true, true); ?>
-
-<?php locate_template('src/parts/global/bottom-cta.php', true, true); ?>
 
 
 

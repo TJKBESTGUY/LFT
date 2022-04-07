@@ -6,8 +6,8 @@
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
 
-add_action('woocommerce_before_main_content', 'areite_wrapper_start', 10);
-add_action('woocommerce_after_main_content', 'areite_wrapper_end', 10);
+add_action('woocommerce_before_main_content', 'ebikerental_wrapper_start', 10);
+add_action('woocommerce_after_main_content', 'ebikerental_wrapper_end', 10);
 
 
 /**
@@ -16,7 +16,7 @@ add_action('woocommerce_after_main_content', 'areite_wrapper_end', 10);
  * @access public
  * @return void
  */
-function areite_wrapper_start() {
+function ebikerental_wrapper_start() {
  ?>
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
@@ -25,11 +25,11 @@ function areite_wrapper_start() {
 
 
 /**
- * areite_wrapper_end function.
+ * ebikerental_wrapper_end function.
  * 
  * @access public
  * @return void
  */
-function areite_wrapper_end() {
+function ebikerental_wrapper_end() {
   echo '</main> </div>';
 }

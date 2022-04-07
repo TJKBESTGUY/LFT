@@ -2,7 +2,7 @@
 /**
  * Additional features to allow styling of the templates easier by adding classes to the body
  *
- * @package Areite
+ * @package ebikerental
  * @since 1.0
  */
 
@@ -13,7 +13,7 @@
  *
  * @return array
  */
-function areite_body_classes( $classes ) {
+function ebikerental_body_classes( $classes ) {
 	// Add class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -26,12 +26,12 @@ function areite_body_classes( $classes ) {
 
 	// Add class if we're viewing the Customizer for easier styling of theme options.
 	if ( is_customize_preview() ) {
-		$classes[] = 'areite-customizer';
+		$classes[] = 'ebikerental-customizer';
 	}
 
 	// Add class on front page.
 	if ( is_front_page() && 'posts' !== get_option( 'show_on_front' ) ) {
-		$classes[] = 'areite-front-page';
+		$classes[] = 'ebikerental-front-page';
 	}
 
 	// Add a class if there is a custom header.
@@ -66,7 +66,7 @@ function areite_body_classes( $classes ) {
 	return $classes;
 }
 
-add_filter( 'body_class', 'areite_body_classes' );
+add_filter( 'body_class', 'ebikerental_body_classes' );
 
 
 
