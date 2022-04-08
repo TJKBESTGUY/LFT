@@ -29,10 +29,15 @@
                 <div class="flx-container">
                   <ul>
                     <li>
-                      <a href="#">09 586 0030</a>
+                      Saariselänkatu 7,<br>
+                      55555 Saariselkä
+                    </li>
+                      <li class="-nav-link-spacer"></li>
+                    <li>
+                      <a href="#">puhelin</a>
                     </li>
                     <li>
-                      <a href="#">areite@areite.fi</a>
+                      <a href="#">sähköposti</a>
                     </li>
                   </ul>
 
@@ -44,37 +49,31 @@
 					<div class="cell footer__nav-links">
 						<ul>
               <li>
-                <a href="/ajankohtaista">Ajankohtaista</a>
+                <a href="/pyorat">Pyörät</a>
               </li>
 							<li>
-								<a href="#">Palvelut</a>
+								<a href="#">Saariselkä</a>
 							</li>
 							<li>
-								<a href="/laskentakohteet">Laskentakohteet</a>
+								<a href="/">Yhteystiedot</a>
 							</li>
+              <li class="-nav-link-spacer"></li>
               <li>
-                <a href="/referenssit">Referenssit</a>
+                <a href="#">Toimitusehdot</a>
               </li>
-							<li>
-								<a href="#">Yritys</a>
-							</li>
-							<li>
-								<a href="#">Ota yhteyttä</a>
-							</li>
+              <li>
+                <a href="#">Tietosuojaseloste</a>
+              </li>
+              <li>
+                <a href="#">Evästeseloste</a>
+              </li>
+
 						</ul>
 					</div>
 
 					<div class="cell footer__extra-content">
 						<ul>
-							<li>
-								<a href="#">Toimitusehdot</a>
-							</li>
-							<li>
-								<a href="#">Tietosuojaseloste</a>
-							</li>
-              <li>
-                <a href="#">Evästeseloste</a>
-              </li>
+
 
 						</ul>
 					</div>
@@ -102,6 +101,7 @@ if($sidebar_icon == 'sidebar-icon'){
 
 
 <?php wp_footer(); ?>
+
 
 </body>
 </html>

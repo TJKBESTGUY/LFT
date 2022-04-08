@@ -51,7 +51,7 @@ width: auto;
 
   @media screen and (max-width: 600px) {
 .header-logo, .header-logo a, .header-logo svg {
-  height: 26px;
+  height: 23px;
 }
   }
 .navigation-links {
@@ -62,9 +62,9 @@ width: 60%;
   width: 20%;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
     @media screen and (max-width: 1000px) {
     width: auto;
-    margin-right: 75px;
     }
   a {
     background: black;
@@ -72,6 +72,14 @@ width: 60%;
     padding: 4px 12px;
     border-radius: 6px;
     font-size: 16px;
+      @media screen and (max-width: 1000px) {
+      margin-right: 75px;
+      }
+      @media screen and (max-width: 600px) {
+        margin-right: 60px;
+      font-size: 14px;
+      padding: 4px 10px;
+      }
   }
 }
 }
@@ -269,6 +277,9 @@ transition: opacity 0.25s;
   height: 0;
   overflow: hidden;
   color: black;
+    @media screen and (min-width: 1000.11px) {
+    display: none;
+    }
 }
 
 .fixed-mobile-navigation_inner {
@@ -287,12 +298,34 @@ height: 100%;
 }
 
 .fixed-logo {
+  height: 63px;
+  align-items: center;
+  a {
+        height: 30px;
+  }
   svg {
 
-    height: 37px;
+    height: 30px;
   }
 
 }
+
+  @media screen and (max-width: 600px) {
+    .fixed-logo {
+
+      a {
+            height: 23px;
+      }
+      svg {
+
+        height: 23px;
+      }
+
+    }
+
+  }
+
+
 .fixed-logo.-bottom {
   margin-bottom: 10px;
     @media screen and (min-width: 1000.11px) {
@@ -302,11 +335,12 @@ height: 100%;
 
 .fixed-logo.-top {
   position: absolute;
-  top: 28px;
+  top: 0;
+  display: flex;
   left: 40px;
   z-index: 33;
-  @media screen and (max-width: 1000px) {
-  display: none;
+  @media screen and (max-width: 699.89px) {
+    left: 16px;
   }
 }
 
@@ -318,12 +352,16 @@ height: 100%;
 
   position: relative;
   a {
-    margin: 0 !important;
+
     display: inline-block;
     line-height: 1;
-    font-weight: 500;
+    		    font-family: "HDColton-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     color: inherit;
       position: relative;
+
+      font-size: 8vw;
+      margin-bottom: 10px;
+
 
     span {
       margin-right: 16px;
@@ -333,6 +371,19 @@ height: 100%;
 
   }
 }
+.fixed-mobile-navigation__links .fixed-order-cta {
+
+background: black;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-top: 20px;
+    display: inline-block;
+    max-width: 140px;
+
+    }
 
 .fixed-mobile-navigation__sub-links {
   margin-top: 40px;
@@ -393,9 +444,6 @@ height: 100%;
 
   }
   .cell {
-    width: 50%;
-
-
     position: relative;
     // padding-bottom: 40px;
 
@@ -407,7 +455,7 @@ height: 100%;
       @media screen and (max-width: 1000px) {
             height: auto;
             // min-height: 10px;
-            padding-top: 80px;
+            padding-top: 120px;
             margin-bottom: 40px;
             // max-height: 100%;
       }

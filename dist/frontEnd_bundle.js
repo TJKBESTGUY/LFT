@@ -1072,74 +1072,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
-/***/ "./src/js/core/smooth-scroll.js":
-/*!**************************************!*\
-  !*** ./src/js/core/smooth-scroll.js ***!
-  \**************************************/
-/***/ (() => {
-
-var scrollEvent = new Event('afterScroll', {
-  bubbles: true
-}); //bubble allows for delegation on body
-
-/**
- * runs when an anchor is clicked or the page loads with an anchor
- * the item we are scrolling to can have an offset
- * @param element
- */
-
-function scrolltoHash(element) {
-  if (element) {
-    var offset = element.dataset.offset || 'start'; //if the offset is a string 'start, center, or end'
-
-    if (isNaN(parseInt(offset))) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: offset
-      });
-    } else {
-      //from top scroll with offset
-      var fromTop = window.pageYOffset + element.getBoundingClientRect().top + parseInt(offset);
-      window.scroll({
-        behavior: 'smooth',
-        top: fromTop
-      });
-    } //fire some more events
-
-
-    setTimeout(function () {
-      element.dispatchEvent(scrollEvent);
-    }, 500);
-  }
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-  // LOADED ONLY FOR PAGE NEEDED
-  if (document.body.classList.contains('page-template-yhteys')) {
-    if (location.hash) {
-      scrolltoHash(document.querySelector(location.hash));
-    }
-
-    document.body.addEventListener('click', function (e) {
-      var item = e.target.closest('a[href^="#"]');
-
-      if (item) {
-        var itemHash = item.getAttribute('href');
-
-        if (itemHash !== '#' && itemHash !== '#0') {
-          e.preventDefault();
-          scrolltoHash(document.querySelector(itemHash));
-        }
-      }
-    });
-    document.addEventListener('afterScroll', function (e) {//run an event after scroll begins
-    });
-  } // LOADED ONLY FOR PAGE NEEDED -- END
-
-});
-
-/***/ }),
-
 /***/ "./src/js/page-specific/home-page.js":
 /*!*******************************************!*\
   !*** ./src/js/page-specific/home-page.js ***!
@@ -1150,6 +1082,37 @@ document.addEventListener('DOMContentLoaded', function () {
 if (document.body.classList.contains('page-template-etusivu')) {
   console.log("home HELLO");
 }
+
+var swiper = new Swiper('.swiper-bikes', {
+  // Optional parameters
+  slidesPerView: "auto",
+  spaceBetween: 0,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next.-bike-swiper',
+    prevEl: '.swiper-button-prev.-bike-swiper'
+  },
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar.-bike-swiper',
+    draggable: true
+  }
+});
+var swiper_quotes = new Swiper('.swiper-quotes', {
+  // Optional parameters
+  slidesPerView: "auto",
+  spaceBetween: 0,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next.-quote-swiper',
+    prevEl: '.swiper-button-prev.-quote-swiper'
+  },
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar.-quote-swiper',
+    draggable: true
+  }
+});
 
 /***/ }),
 
@@ -1299,6 +1262,64 @@ function nav_hover_out(e) {
 // 			e.target.innerHTML = "Ajankohtaista";
 // 	}
 // }
+
+
+var scrollEvent = new Event('afterScroll', {
+  bubbles: true
+}); //bubble allows for delegation on body
+
+/**
+ * runs when an anchor is clicked or the page loads with an anchor
+ * the item we are scrolling to can have an offset
+ * @param element
+ */
+
+function scrolltoHash(element) {
+  if (element) {
+    var offset = element.dataset.offset || 'start'; //if the offset is a string 'start, center, or end'
+
+    if (isNaN(parseInt(offset))) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: offset
+      });
+    } else {
+      //from top scroll with offset
+      var fromTop = window.pageYOffset + element.getBoundingClientRect().top + parseInt(offset);
+      window.scroll({
+        behavior: 'smooth',
+        top: fromTop
+      });
+    } //fire some more events
+
+
+    setTimeout(function () {
+      element.dispatchEvent(scrollEvent);
+    }, 500);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  if (location.hash) {
+    scrolltoHash(document.querySelector(location.hash));
+  }
+
+  document.body.addEventListener('click', function (e) {
+    var item = e.target.closest('a[href^="#"]');
+
+    if (item) {
+      var itemHash = item.getAttribute('href');
+
+      if (itemHash !== '#' && itemHash !== '#0') {
+        e.preventDefault();
+        scrolltoHash(document.querySelector(itemHash));
+      }
+    }
+  });
+  document.addEventListener('afterScroll', function (e) {//run an event after scroll begins
+  });
+});
+console.log("smoothscroll");
 
 /***/ }),
 
@@ -3695,27 +3716,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_core_sidebar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/core/sidebar */ "./src/js/core/sidebar.js");
 /* harmony import */ var _js_core_sidebar__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_js_core_sidebar__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _js_core_navigation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/core/navigation */ "./src/js/core/navigation.js");
-/* harmony import */ var _js_core_smooth_scroll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/core/smooth-scroll */ "./src/js/core/smooth-scroll.js");
-/* harmony import */ var _js_core_smooth_scroll__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_js_core_smooth_scroll__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _js_core_icons__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./js/core/icons */ "./src/js/core/icons.js");
-/* harmony import */ var _js_core_icons__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_js_core_icons__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _js_core_responsive_iframe__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./js/core/responsive-iframe */ "./src/js/core/responsive-iframe.js");
-/* harmony import */ var _js_util_stickymate_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./js/util/stickymate.js */ "./src/js/util/stickymate.js");
-/* harmony import */ var _js_util_stickymate_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_js_util_stickymate_js__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _js_util_lazyloading_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./js/util/lazyloading.js */ "./src/js/util/lazyloading.js");
-/* harmony import */ var _js_util_headroom_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./js/util/headroom.js */ "./src/js/util/headroom.js");
-/* harmony import */ var _js_util_resize_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./js/util/resize.js */ "./src/js/util/resize.js");
-/* harmony import */ var _js_util_resize_js__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_js_util_resize_js__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _js_util_navigation_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./js/util/navigation.js */ "./src/js/util/navigation.js");
-/* harmony import */ var _js_util_navigation_js__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_js_util_navigation_js__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _js_page_specific_home_page_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./js/page-specific/home-page.js */ "./src/js/page-specific/home-page.js");
-/* harmony import */ var _js_page_specific_home_page_js__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_js_page_specific_home_page_js__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _inc_core_core_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../inc/core/_core.js */ "./inc/core/_core.js");
-/* harmony import */ var _inc_core_core_js__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_inc_core_core_js__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _inc_scrollmagic_scrollmagic_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../inc/scrollmagic/_scrollmagic.js */ "./inc/scrollmagic/_scrollmagic.js");
-/* harmony import */ var _inc_scrollmagic_scrollmagic_js__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_inc_scrollmagic_scrollmagic_js__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _parts_global_browser_update_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./parts/global/_browser_update.js */ "./src/parts/global/_browser_update.js");
-/* harmony import */ var _parts_global_browser_update_js__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_parts_global_browser_update_js__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _js_core_icons__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/core/icons */ "./src/js/core/icons.js");
+/* harmony import */ var _js_core_icons__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_js_core_icons__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _js_core_responsive_iframe__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./js/core/responsive-iframe */ "./src/js/core/responsive-iframe.js");
+/* harmony import */ var _js_util_stickymate_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./js/util/stickymate.js */ "./src/js/util/stickymate.js");
+/* harmony import */ var _js_util_stickymate_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_js_util_stickymate_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _js_util_lazyloading_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./js/util/lazyloading.js */ "./src/js/util/lazyloading.js");
+/* harmony import */ var _js_util_headroom_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./js/util/headroom.js */ "./src/js/util/headroom.js");
+/* harmony import */ var _js_util_resize_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./js/util/resize.js */ "./src/js/util/resize.js");
+/* harmony import */ var _js_util_resize_js__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_js_util_resize_js__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _js_util_navigation_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./js/util/navigation.js */ "./src/js/util/navigation.js");
+/* harmony import */ var _js_util_navigation_js__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_js_util_navigation_js__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _js_page_specific_home_page_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./js/page-specific/home-page.js */ "./src/js/page-specific/home-page.js");
+/* harmony import */ var _js_page_specific_home_page_js__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_js_page_specific_home_page_js__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _inc_core_core_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../inc/core/_core.js */ "./inc/core/_core.js");
+/* harmony import */ var _inc_core_core_js__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_inc_core_core_js__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _inc_scrollmagic_scrollmagic_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../inc/scrollmagic/_scrollmagic.js */ "./inc/scrollmagic/_scrollmagic.js");
+/* harmony import */ var _inc_scrollmagic_scrollmagic_js__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_inc_scrollmagic_scrollmagic_js__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _parts_global_browser_update_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./parts/global/_browser_update.js */ "./src/parts/global/_browser_update.js");
+/* harmony import */ var _parts_global_browser_update_js__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_parts_global_browser_update_js__WEBPACK_IMPORTED_MODULE_16__);
  //ADDING SASS
 //add your sass files easilt by starting them with an underscore inside the inc or parts folders
 // You can also manually add a regular file to the front end bundle so you have access to all scss variables and classes
@@ -3727,8 +3746,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
  // import "./js/core/panel-left"
-///////SMOOTH SCROLL IS WRAPPER TO ONLY LOAD ON SPECIFIC PAGE
-
+///////SMOOTH SCROLL IS WRAPPER TO ONLY LOAD ON SPECIFIC PAGE ---- SMOOTH SCROLL ADDED TO navigation.js
+// import "./js/core/smooth-scroll"
 
 
  //////UTILITY

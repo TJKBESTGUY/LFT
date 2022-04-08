@@ -39,8 +39,14 @@ $li-height: 28px;
   list-style: none;
   }
   li {
-        height: $li-height;
+    color:black;
+    		    font-family: "HDColton-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   }
+}
+
+.-nav-link-spacer {
+  min-height: 20px;
+  position: relative;
 }
 
 
@@ -68,7 +74,7 @@ flex-direction: column;
 .footer__left-bar {
   width: 50%;
     @media screen and (max-width: 1000px) {
-      width: 33%;
+
     }
     @media screen and (max-width: 750px) {
       width: 100%;

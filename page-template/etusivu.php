@@ -18,9 +18,9 @@
       <section class="section--full-header">
         <div class="module--bg-img">
           <picture>
-            <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva1.jpg">
-              <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva1.jpg">
-                <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva1.jpg" alt="" src="">
+            <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/header1-dark.jpg">
+              <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/header1-dark.jpg">
+                <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/header1-dark.jpg" alt="" src="">
             </picture>
         </div>
 
@@ -35,6 +35,17 @@
 
         </div>
 
+      </section>
+
+            <section class="section--basic U-sec-pad bg--nude">
+          <div class="U_container U_base-pad">
+            <div class="rental-wrapper">
+                <script src=https://master.d26e4mzfe8pjk0.amplifyapp.com/embed.js data-groups="ebikerental"></script>
+            </div>
+
+
+
+        </div>
       </section>
 
 
@@ -58,9 +69,9 @@
                 <div class="image-aspect-box -wide-aspect">
                   <div class="image-aspect-box_inner ">
                   <picture>
-                    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/8.jpg" alt="" src="">
+                    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva1b.jpg">
+                      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva1b.jpg">
+                        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva1b.jpg" alt="" src="">
                     </picture>
 
                 </div>
@@ -110,9 +121,9 @@
                     <div class="image-aspect-box">
                       <div class="image-aspect-box_inner ">
                       <picture>
-                        <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                          <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                            <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/8.jpg" alt="" src="">
+                        <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/bike1.png">
+                          <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/bike1.png">
+                            <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/bike1.png" alt="" src="">
                         </picture>
 
                     </div>
@@ -146,9 +157,9 @@
                     <div class="image-aspect-box">
                       <div class="image-aspect-box_inner ">
                       <picture>
-                        <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                          <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                            <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/8.jpg" alt="" src="">
+                        <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/bike1.png">
+                          <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/bike1.png">
+                            <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/bike1.png" alt="" src="">
                         </picture>
 
                     </div>
@@ -182,9 +193,9 @@
                     <div class="image-aspect-box">
                       <div class="image-aspect-box_inner ">
                       <picture>
-                        <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                          <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                            <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/8.jpg" alt="" src="">
+                        <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
+                          <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
+                            <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg" alt="" src="">
                         </picture>
 
                     </div>
@@ -216,11 +227,178 @@
               </div>
                   </div>
 
+
+    <div class="U_container U_base-pad -swiper-padder">
+                  <!-- Slider main container -->
+<div class="swiper swiper-bikes">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="bike-card swiper-slide">
+      <div class="bike-card__inner">
+        <div class="bike-card__header">
+          <span class="label--kids f--medium">Lapsille</span><span class="label--specs f--medium">Täysjousitettu</span>
+
+        </div>
+
+        <div class="bike-card__img">
+          <div class="image-aspect-box">
+            <div class="image-aspect-box_inner ">
+            <picture>
+              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
+                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
+                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg" alt="" src="">
+              </picture>
+
+          </div>
+          </div>
+        </div>
+
+        <div class="bike-card__content">
+          <h4 class="f--bold">Ghost E-Riot</h4>
+
+          <p>Runsaasti moottoritehoa. Paljon joustomatkaa. Ja loputtomasti potentiaalia. E-Riot on sähköenduropyörä, joka luultavasti pystyy enempään kuin mitä ikinä voisit pyytää sähkömaastopyörältä. Kun joustomatka on edessä 170 mm ja takana 160 mm, hurjimmatkin alamäet tasoittuvat.</p>
+        </div>
+
+          <div class="bike-card__footer">
+            <div class="-wrap">
+                <a class="btn--secondary" href="#">ghost-bikes.com</a>
+            </div>
+            <span class="f--medium">Tutustu pyörään tarkemmin valmistajan sivuilta</span>
+              </div>
+
+      </div>
+
+    </div>
+    <div class="bike-card swiper-slide">
+      <div class="bike-card__inner">
+        <div class="bike-card__header">
+          <span class="label--kids f--medium">Lapsille</span><span class="label--specs f--medium">Täysjousitettu</span>
+
+        </div>
+
+        <div class="bike-card__img">
+          <div class="image-aspect-box">
+            <div class="image-aspect-box_inner ">
+            <picture>
+              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/bike1.png">
+                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/bike1.png">
+                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/bike1.png" alt="" src="">
+              </picture>
+
+          </div>
+          </div>
+        </div>
+
+        <div class="bike-card__content">
+          <h4 class="f--bold">Ghost E-Riot</h4>
+
+          <p>Runsaasti moottoritehoa. Paljon joustomatkaa. Ja loputtomasti potentiaalia. E-Riot on sähköenduropyörä, joka luultavasti pystyy enempään kuin mitä ikinä voisit pyytää sähkömaastopyörältä. Kun joustomatka on edessä 170 mm ja takana 160 mm, hurjimmatkin alamäet tasoittuvat.</p>
+        </div>
+
+          <div class="bike-card__footer">
+            <div class="-wrap">
+                <a class="btn--secondary" href="#">ghost-bikes.com</a>
+            </div>
+            <span class="f--medium">Tutustu pyörään tarkemmin valmistajan sivuilta</span>
+              </div>
+
+      </div>
+
+    </div>
+
+    <div class="bike-card swiper-slide">
+      <div class="bike-card__inner">
+        <div class="bike-card__header">
+          <span class="label--kids f--medium">Lapsille</span><span class="label--specs f--medium">Täysjousitettu</span>
+
+        </div>
+
+        <div class="bike-card__img">
+          <div class="image-aspect-box">
+            <div class="image-aspect-box_inner ">
+            <picture>
+              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/bike1.png">
+                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/bike1.png">
+                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/bike1.png" alt="" src="">
+              </picture>
+
+          </div>
+          </div>
+        </div>
+
+        <div class="bike-card__content">
+          <h4 class="f--bold">Ghost E-Riot</h4>
+
+          <p>Runsaasti moottoritehoa. Paljon joustomatkaa. Ja loputtomasti potentiaalia. E-Riot on sähköenduropyörä, joka luultavasti pystyy enempään kuin mitä ikinä voisit pyytää sähkömaastopyörältä. Kun joustomatka on edessä 170 mm ja takana 160 mm, hurjimmatkin alamäet tasoittuvat.</p>
+        </div>
+
+          <div class="bike-card__footer">
+            <div class="-wrap">
+                <a class="btn--secondary" href="#">ghost-bikes.com</a>
+            </div>
+            <span class="f--medium">Tutustu pyörään tarkemmin valmistajan sivuilta</span>
+              </div>
+
+      </div>
+
+    </div>
+    <div class="bike-card swiper-slide">
+      <div class="bike-card__inner">
+        <div class="bike-card__header">
+          <span class="label--kids f--medium">Lapsille</span><span class="label--specs f--medium">Täysjousitettu</span>
+
+        </div>
+
+        <div class="bike-card__img">
+          <div class="image-aspect-box">
+            <div class="image-aspect-box_inner ">
+            <picture>
+              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/bike1.png">
+                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/bike1.png">
+                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/bike1.png" alt="" src="">
+              </picture>
+
+          </div>
+          </div>
+        </div>
+
+        <div class="bike-card__content">
+          <h4 class="f--bold">Ghost E-Riot</h4>
+
+          <p>Runsaasti moottoritehoa. Paljon joustomatkaa. Ja loputtomasti potentiaalia. E-Riot on sähköenduropyörä, joka luultavasti pystyy enempään kuin mitä ikinä voisit pyytää sähkömaastopyörältä. Kun joustomatka on edessä 170 mm ja takana 160 mm, hurjimmatkin alamäet tasoittuvat.</p>
+        </div>
+
+          <div class="bike-card__footer">
+            <div class="-wrap">
+                <a class="btn--secondary" href="#">ghost-bikes.com</a>
+            </div>
+            <span class="f--medium">Tutustu pyörään tarkemmin valmistajan sivuilta</span>
+              </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination -bike-swiper"></div>
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar -bike-swiper"></div>
+</div>
+
+<!-- If we need navigation buttons -->
+<div class="swiper-button-prev -bike-swiper"></div>
+<div class="swiper-button-next -bike-swiper"></div>
+
+  </div>
+
                   <div class="U_container U_base-pad">
-    <div class="module--heading_txt">
+
         <div class="capsule-wrap">
         <a class="btn--basic" href="#">Kaikki pyörät ›</a>
-    </div>
+
   </div>
 
     </div>
@@ -243,9 +421,9 @@
                 <div class="image-aspect-box -wide-aspect">
                   <div class="image-aspect-box_inner ">
                   <picture>
-                    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/8.jpg" alt="" src="">
+                    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva2b.jpg">
+                      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva2b.jpg">
+                        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva2b.jpg" alt="" src="">
                     </picture>
 
                 </div>
@@ -285,6 +463,147 @@
     </div>
 
 
+    <div class="U_container U_base-pad -swiper-padder">
+                  <!-- Slider main container -->
+<div class="swiper swiper-quotes">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="quote-card swiper-slide">
+      <div class="quote-card__inner">
+        <div class="quote-card__content">
+          <p> “Tasaiset osuudet sujuivat mukavasti hyvän jousituksen ansiosta. Takaisin kotiin päästyäni hankin itselleni oman sähköpyörän. Enkä ole katunut. Pyörän tukeva rakenne, ajo-ominaisuudet, sekä sähköisen avustuksen tuoma lisäkapasiteetti antavat mahdollisuuden nauttia pitkäkestoisesta lumikenttien kutsusta esim. järven jäällä.”</p>
+        </div>
+        <div class="quote-card__person">
+          <div class="quote-card__img">
+          <div class="image-aspect-box">
+            <div class="image-aspect-box_inner ">
+            <picture>
+              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
+                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
+                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg" alt="" src="">
+              </picture>
+                        </div>
+          </div>
+          </div>
+            <span class="f--medium">Mikko Rovanperä</span>
+        </div>
+
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="quote-card swiper-slide">
+      <div class="quote-card__inner">
+        <div class="quote-card__content">
+          <p> “Tasaiset osuudet sujuivat mukavasti hyvän jousituksen ansiosta. Takaisin kotiin päästyäni hankin itselleni oman sähköpyörän. Enkä ole katunut. Pyörän tukeva rakenne, ajo-ominaisuudet, sekä sähköisen avustuksen tuoma lisäkapasiteetti antavat mahdollisuuden nauttia pitkäkestoisesta lumikenttien kutsusta esim. järven jäällä.”</p>
+        </div>
+        <div class="quote-card__person">
+          <div class="quote-card__img">
+          <div class="image-aspect-box">
+            <div class="image-aspect-box_inner ">
+            <picture>
+              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
+                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
+                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg" alt="" src="">
+              </picture>
+                        </div>
+          </div>
+          </div>
+            <span class="f--medium">Mikko Rovanperä</span>
+        </div>
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+    <div class="quote-card swiper-slide">
+      <div class="quote-card__inner">
+        <div class="quote-card__content">
+          <p> “Tasaiset osuudet sujuivat mukavasti hyvän jousituksen ansiosta. Takaisin kotiin päästyäni hankin itselleni oman sähköpyörän. Enkä ole katunut. Pyörän tukeva rakenne, ajo-ominaisuudet, sekä sähköisen avustuksen tuoma.”</p>
+        </div>
+        <div class="quote-card__person">
+          <div class="quote-card__img">
+          <div class="image-aspect-box">
+            <div class="image-aspect-box_inner ">
+            <picture>
+              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
+                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
+                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg" alt="" src="">
+              </picture>
+                        </div>
+          </div>
+          </div>
+            <span class="f--medium">Mikko Rovanperä</span>
+        </div>
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+    <div class="quote-card swiper-slide">
+      <div class="quote-card__inner">
+        <div class="quote-card__content">
+          <p> “Tasaiset osuudet sujuivat mukavasti hyvän jousituksen ansiosta. Takaisin kotiin päästyäni hankin itselleni oman sähköpyörän. Enkä ole katunut. Pyörän tukeva rakenne, ajo-ominaisuudet, sekä sähköisen avustuksen tuoma.”</p>
+        </div>
+        <div class="quote-card__person">
+          <div class="quote-card__img">
+          <div class="image-aspect-box">
+            <div class="image-aspect-box_inner ">
+            <picture>
+              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/bike1.png">
+                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/bike1.png">
+                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/bike1.png" alt="" src="">
+              </picture>
+                        </div>
+          </div>
+          </div>
+            <span class="f--medium">Mikko Rovanperä</span>
+        </div>
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination -quote-swiper"></div>
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar -quote-swiper"></div>
+</div>
+
+<!-- If we need navigation buttons -->
+<div class="swiper-button-prev -quote-swiper"></div>
+<div class="swiper-button-next -quote-swiper"></div>
+
+  </div>
+
+
     <div class="U_container U_base-pad">
       <div class="module--horizontal-row horizontal-row--quotes">
         <div class="flx-container">
@@ -299,9 +618,9 @@
             <div class="image-aspect-box">
               <div class="image-aspect-box_inner ">
               <picture>
-                <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/8.jpg" alt="" src="">
+                <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
+                  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
+                    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg" alt="" src="">
                 </picture>
                           </div>
             </div>
@@ -327,9 +646,9 @@
             <div class="image-aspect-box">
               <div class="image-aspect-box_inner ">
               <picture>
-                <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/8.jpg" alt="" src="">
+                <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
+                  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
+                    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg" alt="" src="">
                 </picture>
                           </div>
             </div>
@@ -355,9 +674,38 @@
             <div class="image-aspect-box">
               <div class="image-aspect-box_inner ">
               <picture>
-                <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/8.jpg" alt="" src="">
+                <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
+                  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
+                    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg" alt="" src="">
+                </picture>
+                          </div>
+            </div>
+            </div>
+            <span class="f--medium">Mikko Rovanperä</span>
+          </div>
+
+
+
+
+
+
+        </div>
+
+      </div>
+
+      <div class="quote-card">
+        <div class="quote-card__inner">
+          <div class="quote-card__content">
+            <p>Vuokrasin syksyllä Saariselälle sähkömaastopyörän ja 3 tunnin ajon jälkeen se olin heti myyty. Hyvin merkittyjä polkuja pitkin oli helppo liikkua. Vaikka tunturien päälle nouseminen olisi itselleni vaikeaa tavallisella pyörällä teki sähköavustus mäkien nousemisen mukavaksi.Tasaiset osuudet sujuivat mukavasti hyvän jousituksen ansiosta. Takaisin kotiin päästyäni hankin itselleni oman sähköpyörän. Enkä ole katunut. Pyörän tukeva rakenne, ajo-ominaisuudet, sekä sähköisen avustuksen tuoma lisäkapasiteetti antavat mahdollisuuden nauttia pitkäkestoisesta lumikenttien kutsusta esim. järven jäällä.</p>
+          </div>
+          <div class="quote-card__person">
+            <div class="quote-card__img">
+            <div class="image-aspect-box">
+              <div class="image-aspect-box_inner ">
+              <picture>
+                <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
+                  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
+                    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg" alt="" src="">
                 </picture>
                           </div>
             </div>
@@ -404,9 +752,9 @@
                 <div class="image-aspect-box -wide-aspect">
                   <div class="image-aspect-box_inner ">
                   <picture>
-                    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/8.jpg">
-                        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/8.jpg" alt="" src="">
+                    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
+                      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
+                        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg" alt="" src="">
                     </picture>
 
                 </div>

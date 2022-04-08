@@ -14,8 +14,8 @@ import "./js/core/navigation"
 // import "./js/core/panel-left"
 
 
-///////SMOOTH SCROLL IS WRAPPER TO ONLY LOAD ON SPECIFIC PAGE
-import "./js/core/smooth-scroll"
+///////SMOOTH SCROLL IS WRAPPER TO ONLY LOAD ON SPECIFIC PAGE ---- SMOOTH SCROLL ADDED TO navigation.js
+// import "./js/core/smooth-scroll"
 import "./js/core/icons"
 import "./js/core/responsive-iframe"
 
