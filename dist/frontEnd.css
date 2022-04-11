@@ -3582,6 +3582,15 @@ var {
   font-family: "HDColton-Semibold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
+@media screen and (max-width: 800px) {
+  .btn--basic {
+    font-size: 1.4rem;
+    background: #ff8517;
+    padding: 12px 18px;
+    border-radius: 13px;
+    font-family: "HDColton-Semibold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+}
 .basic-btn {
   padding: 12px 28px;
   text-align: center;
@@ -4812,6 +4821,10 @@ Moved: _kohteet
     display: none;
   }
 }
+.bike-card {
+  height: auto;
+}
+
 .bike-card, .quote-card {
   max-width: 33.33% !important;
   padding: 10px 10px;
@@ -5073,6 +5086,20 @@ Moved: _kohteet
 }
 .module--quote-floater h2 {
   color: #ff8517;
+}
+
+.section--bottom-cta .btn--basic {
+  margin-right: 14px;
+}
+@media screen and (max-width: 800px) {
+  .section--bottom-cta .btn--basic {
+    margin-right: 8px;
+  }
+}
+.section--bottom-cta .-btn-right {
+  border: solid 1px #ff8517;
+  background: #031600;
+  color: white;
 }
 
 /*--------------------------------------------------------------

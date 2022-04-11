@@ -824,6 +824,10 @@ display: none;
 
 // CARDS
 
+.bike-card {
+  height: auto;
+}
+
 .bike-card, .quote-card {
 
   // min-width: 33.33%;
@@ -1144,7 +1148,21 @@ text-transform: uppercase;
 
 
 
+.section--bottom-cta {
+  //BBUTTONS///
+  .btn--basic {
+    margin-right: 14px;
+      @media screen and (max-width: 800px) {
+        margin-right: 8px;
+            }
+        }
 
+  .-btn-right {
+    border: solid 1px $orange;
+    background: $dark;
+    color: white;
+  }
+}
 
 
 

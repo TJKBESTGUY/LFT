@@ -54,10 +54,38 @@
                   </div>
                 </div>
 
+
+
+
+                <?php
+                	 $posts = get_posts(array(
+                		'posts_per_page'	=> -1,
+                		'post_type'			=> 'bikes'
+                	 ));
+
+                   ?>
+
+
+
             <div class="U_container U_base-pad">
               <div id="aikuiset" class="module--bikes-grid">
                 <h2 class="bikes-grid__header">Aikuiset</h2>
                 <div class="flx-container">
+
+
+
+                  <?php	 if( $posts ): ?>
+        <?php foreach( $posts as $post ):
+           setup_postdata( $post );?>
+           <?php if( get_field('bike_category') == 'aikuiset'  ): ?>
+<?php locate_template('src/parts/global/card-bike.php', true, true); ?>
+      <?php endif; ?>
+         <?php wp_reset_postdata(); ?>
+         <?php endforeach; ?>
+         <?php endif; ?>
+
+
+
 
               <div class="bike-card--on-grid">
                 <div class="bike-card__inner">
@@ -177,6 +205,64 @@
               <div  id="lapset" class="module--bikes-grid">
                 <h2 class="bikes-grid__header">Lapset</h2>
                 <div class="flx-container">
+
+                  <?php	 if( $posts ): ?>
+        <?php foreach( $posts as $post ):
+           setup_postdata( $post );?>
+           <?php if( get_field('bike_category') == 'lapset'  ): ?>
+        <!-- USE BIKE-CARD TEMPLATE IF YOU GET IT WORKING -->
+      <div class="bike-card--on-grid">
+            <div class="bike-card__inner">
+                <div class="bike-card__header">
+                   <?php if( get_field('bike_category') == 'lapset'  ) { ?>
+              <span class="label--kids f--medium">Lapsille</span>
+              <?php } else { ?>
+                <span class="label--adults f--medium">aikuisille</span>
+                 <?php } ?>
+
+
+
+              <span class="label--specs f--medium"><?php the_field( 'bike_suspension' ); ?></span>
+            </div>
+           <?php $bike_image = get_field( 'bike_image' ); ?>
+<?php if ( $bike_image ) { ?>
+  <div class="bike-card__img">
+    <div class="image-aspect-box">
+      <div class="image-aspect-box_inner ">
+      <picture>
+        <source media="(min-width:650px)" data-srcset="<?php echo $bike_image['url']; ?>">
+          <source media="(min-width:465px)" data-srcset="<?php echo $bike_image['url']; ?>">
+            <img class="lazy-anim lazyload" data-src="<?php echo $bike_image['url']; ?>" alt="<?php echo $bike_image['alt']; ?>" src="">
+        </picture>
+
+    </div>
+    </div>
+  </div>
+<?php } ?>
+
+    <div class="bike-card__content">
+      <h4 class="f--bold"><?php the_field( 'bike_name' ); ?></h4>
+
+      <p><?php the_field( 'text_content_suomi' ); ?></p>
+
+        </div>
+
+
+        <?php $link_for_more_information = get_field( 'link_for_more_information' ); ?>
+        <?php if ( $link_for_more_information ) { ?>
+              <div class="bike-card__footer">
+                      <div class="-wrap">
+                  <a class="btn--secondary" href="<?php echo $link_for_more_information['url']; ?>" target="_blank"><?php echo $link_for_more_information['title']; ?></a>
+                        </div>
+                      <span class="f--medium">Tutustu pyörään tarkemmin valmistajan sivuilta</span>
+              </div>
+        <?php } ?>
+  </div>
+  </div>
+      <?php endif; ?>
+               <?php wp_reset_postdata(); ?>
+         <?php endforeach; ?>
+         <?php endif; ?>
 
               <div class="bike-card--on-grid">
                 <div class="bike-card__inner">
@@ -332,91 +418,12 @@
 
 
                   </div>
-
-
-
-
           </section>
 
 
 
 
-
-
-
-
-          <section class="section--basic U-sec-pad  bg--nude">
-                    <div class="U_container U_base-pad">
-
-
-    <div class="module--quote-floater">
-      <h2>
-        “Hyvin merkittyjä polkuja pitkin oli helppo liikkua. Vaikka tunturien päälle nouseminen olisi itselleni vaikeaa tavallisella pyörällä teki sähköavustus mäkien nousemisen mukavaksi.”
-      </h2>
-    </div>
-    </div>
-
-
-    <div class="U_container U_base-pad">
-      <div class="module--horizontal-row horizontal-row--quotes">
-        <div class="flx-container">
-
-      <div class="quote-card">
-        <div class="quote-card__inner">
-          <div class="quote-card__content">
-            <p> “Tasaiset osuudet sujuivat mukavasti hyvän jousituksen ansiosta. Takaisin kotiin päästyäni hankin itselleni oman sähköpyörän. Enkä ole katunut. Pyörän tukeva rakenne, ajo-ominaisuudet, sekä sähköisen avustuksen tuoma lisäkapasiteetti antavat mahdollisuuden nauttia pitkäkestoisesta lumikenttien kutsusta esim. järven jäällä.”</p>
-          </div>
-          <div class="quote-card__person">
-            <div class="quote-card__img">
-            <div class="image-aspect-box">
-              <div class="image-aspect-box_inner ">
-              <picture>
-                <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/bike1.png">
-                  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/bike1.png">
-                    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/bike1.png" alt="" src="">
-                </picture>
-                          </div>
-            </div>
-            </div>
-              <span class="f--medium">Mikko Rovanperä</span>
-          </div>
-
-
-
-
-
-
-        </div>
-
-      </div>
-      <div class="quote-card">
-        <div class="quote-card__inner">
-          <div class="quote-card__content">
-            <p> “Tasaiset osuudet sujuivat mukavasti hyvän jousituksen ansiosta. Takaisin kotiin päästyäni hankin itselleni oman sähköpyörän. Enkä ole katunut. Pyörän tukeva rakenne, ajo-ominaisuudet, sekä sähköisen avustuksen tuoma lisäkapasiteetti antavat mahdollisuuden nauttia pitkäkestoisesta lumikenttien kutsusta esim. järven jäällä.asdasdasdasdasdkjkjkfafs fdfsds”</p>
-          </div>
-          <div class="quote-card__person">
-            <div class="quote-card__img">
-            <div class="image-aspect-box">
-              <div class="image-aspect-box_inner ">
-              <picture>
-                <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/bike1.png">
-                  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/bike1.png">
-                    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/bike1.png" alt="" src="">
-                </picture>
-                          </div>
-            </div>
-            </div>
-              <span class="f--medium">Mikko Rovanperä</span>
-          </div>
-
-
-
-
-
-
-        </div>
-
-      </div>
+<?php locate_template('src/parts/global/bottom-cta.php', true, true); ?>
 
 
 
@@ -424,58 +431,9 @@
 
 
 
-      </div>
-
-      </div>
-          </div>
 
 
 
-
-          </section>
-
-
-
-
-          <section class="section--basic U-sec-pad bg--dark">
-                    <div class="U_container U_base-pad">
-
-
-    <div class="module--split-content">
-          <div class="flx-container">
-            <div class="cell mosaic-split__img split-content__img">
-              <div class="cell_img-content">
-                  <!-- <h3>Hyvät laskut saavat projektit vauhtiin</h3> -->
-                <div class="image-aspect-box -wide-aspect">
-                  <div class="image-aspect-box_inner ">
-                  <picture>
-                    <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/bike1.png">
-                      <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/bike1.png">
-                        <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/bike1.png" alt="" src="">
-                    </picture>
-
-                </div>
-                </div>
-              </div>
-            </div>
-      <div class="cell mosaic-split__txt split-content__txt">
-        <div class="cell_txt-content">
-          <h2>Monipuoliset reitit Saariselän tuntureilla ja metsän siimeksessä</h2>
-          <p>Tutustu Saariselän reittivalikoimaan ja katso reittikartat kohteen esittelysivulta.</p>
-          <div class="capsule-wrap">
-          <a class="btn--basic" href="#">Saariselkä ›</a>
-      </div>
-      </div>
-        </div>
-
-
-    </div>
-    </div>
-
-
-
-    </div>
-          </section>
 
 
 

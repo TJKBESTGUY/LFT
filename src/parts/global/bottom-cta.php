@@ -9,38 +9,66 @@
 
 ?>
 
-<section class="section--bottom-cta U-sec-pad">
-  <div class="module--bottom-cta">
+<?php if ( have_rows( 'content_block_bottomcta', 8 ) ) : ?>
+
+  <section class="section--basic U-sec-pad section--bottom-cta bg--dark">
+            <div class="U_container U_base-pad">
+<?php while ( have_rows( 'content_block_bottomcta', 8 ) ) : the_row(); ?>
+<?php if( get_sub_field('header') ): ?>
+<div class="module--heading_txt">
+<div class="heading-content">
+<div class="heading">
+<h2><?php the_sub_field( 'header' ); ?></h2>
+</div>
+</div>
+</div>
+<?php endif; ?>
+<?php if ( have_rows( 'content_rows' ) ) : ?>
+<?php while ( have_rows( 'content_rows' ) ) : the_row(); ?>
+<?php $image = get_sub_field( 'image' ); ?>
+<div class="module--split-content">
     <div class="flx-container">
-      <div class="cell bottom-cta__image">
-        <div class="image-aspect-box">
-          <div class="image-aspect-box_inner">
-          <picture>
-            <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-              <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
-                <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" alt="" src="">
-            </picture>
+        <?php if ( $image ) { ?>
+      <div class="cell split-content__img">
+        <div class="cell_img-content">
+            <!-- <h3>Hyvät laskut saavat projektit vauhtiin</h3> -->
+          <div class="image-aspect-box -wide-aspect">
+            <div class="image-aspect-box_inner ">
+            <picture>
+              <source media="(min-width:650px)" data-srcset="<?php echo $image['url']; ?>">
+                <source media="(min-width:465px)" data-srcset="<?php echo $image['url']; ?>">
+                  <img class="lazy-anim lazyload" data-src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" src="">
+              </picture>
 
+          </div>
+          </div>
         </div>
       </div>
+      <?php } ?>
 
-      </div>
-      <div class="cell bottom-cta__content">
-        <div class="content-wrap U_base-pad--right-only">
-        <h3>Kannattaa kysyä!</h3>
-        <p>Meiltä saat helposti lisää tietoa määrälaskennasta sekä laskennassa olevista kohteista. Kaipaatko määräluetteloa tietystä kohteesta tai arviota määrälaskennasta?</p>
-        <div class="capsule-wrap">
-
-          <button class="basic-btn btn--black btn--wide" type="button" name="button"><span class="basic-btn__text">Ota yhteyttä</span> <span class="basic-btn__icon">
-            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,.5A8.5,8.5,0,1,0,17.5,9,8.51,8.51,0,0,0,9,.5Zm1.08,12.93-.91-.94L12,9.7H3.83V8.32H12L9.17,5.51l.91-.94L14.48,9Z"/></svg>
-          </span> </button>
+<div class="cell mosaic-split__txt split-content__txt">
+  <div class="cell_txt-content">
+      <?php if( get_sub_field('heading') ): ?>
+          <h2><?php the_sub_field( 'heading' ); ?></h2>
+           <?php endif; ?>
+    <p><?php the_sub_field( 'text_content' ); ?></p>
+    <?php $cta_button = get_sub_field( 'cta_button' ); ?>
+    <?php $cta_button_copy = get_sub_field( 'cta_button_copy' ); ?>
+        <?php if ( $cta_button ) { ?>
+      <div class="capsule-wrap">
+          <a class="btn--basic -btn-left" href="<?php echo $cta_button['url']; ?>" target="<?php echo $cta_button['target']; ?>"><?php echo $cta_button['title']; ?> ›</a>
+            <a class="btn--basic -btn-right" href="<?php echo $cta_button_copy['url']; ?>" target="<?php echo $cta_button_copy['target']; ?>"><?php echo $cta_button_copy['title']; ?> ›</a>
         </div>
-        </div>
-      </div>
+        <?php } ?>
 
-    </div>
+</div>
   </div>
+</div>
+</div>
 
-
-
+<?php endwhile; ?>
+<?php endif; ?>
+<?php endwhile; ?>
+</div>
 </section>
+<?php endif; ?>

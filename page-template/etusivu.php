@@ -27,7 +27,8 @@
         <div class="U_container U_base-pad">
           <div class="module--heading_txt">
             <div class="heading">
-                <h1>Laadukkaiden sähköpyörien vuokrausta Saariselällä</h1>
+                <h1><?php the_field( 'header_text' ); ?></h1>
+
             </div>
 
 
@@ -95,12 +96,73 @@
           </section>
 
 
+          <?php if ( have_rows( 'content_block_esittely' ) ) : ?>
+            <section class="section--basic U-sec-pad">
+                      <div class="U_container U_base-pad">
+	<?php while ( have_rows( 'content_block_esittely' ) ) : the_row(); ?>
+    <?php if( get_sub_field('header') ): ?>
+    <div class="module--heading_txt">
+        <div class="heading-content">
+        <div class="heading">
+      <h2><?php the_sub_field( 'header' ); ?></h2>
+        </div>
+    </div>
+  </div>
+   <?php endif; ?>
+		<?php if ( have_rows( 'content_rows' ) ) : ?>
+			<?php while ( have_rows( 'content_rows' ) ) : the_row(); ?>
+        	<?php $image = get_sub_field( 'image' ); ?>
+        <div class="module--split-content">
+              <div class="flx-container">
+                	<?php if ( $image ) { ?>
+                <div class="cell split-content__img">
+                  <div class="cell_img-content">
+                      <!-- <h3>Hyvät laskut saavat projektit vauhtiin</h3> -->
+                    <div class="image-aspect-box -wide-aspect">
+                      <div class="image-aspect-box_inner ">
+                      <picture>
+                        <source media="(min-width:650px)" data-srcset="<?php echo $image['url']; ?>">
+                          <source media="(min-width:465px)" data-srcset="<?php echo $image['url']; ?>">
+                            <img class="lazy-anim lazyload" data-src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" src="">
+                        </picture>
+
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                <?php } ?>
+
+          <div class="cell mosaic-split__txt split-content__txt">
+            <div class="cell_txt-content">
+                <?php if( get_sub_field('heading') ): ?>
+                  	<h2><?php the_sub_field( 'heading' ); ?></h2>
+                     <?php endif; ?>
+              <p><?php the_sub_field( 'text_content' ); ?></p>
+              <?php $cta_button = get_sub_field( 'cta_button' ); ?>
+              		<?php if ( $cta_button ) { ?>
+                <div class="capsule-wrap">
+              			<a class="btn--basic" href="<?php echo $cta_button['url']; ?>" target="<?php echo $cta_button['target']; ?>"><?php echo $cta_button['title']; ?> ›</a>
+                  </div>
+                  <?php } ?>
+          </div>
+            </div>
+        </div>
+        </div>
+
+			<?php endwhile; ?>
+		<?php endif; ?>
+	<?php endwhile; ?>
+</div>
+</section>
+<?php endif; ?>
+
+
           <section class="section--basic U-sec-pad bg--nude">
                     <div class="U_container U_base-pad">
       <div class="module--heading_txt">
           <div class="heading-content">
           <div class="heading">
-        <h2>Modernit sähköpyörämme mahdollistavat sinulle ja perheellesi pidempiäkin retkiä vaativimmillakin reiteillä</h2>
+        <h2><?php the_field( 'bikes' ); ?></h2>
           </div>
       </div>
     </div>
@@ -234,6 +296,62 @@
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
+
+
+    <?php $post_objects = get_field( 'bikes_slider' ); ?>
+    <?php if ( $post_objects ): ?>
+    	<?php foreach ( $post_objects as $post ):  ?>
+    		<?php setup_postdata( $post ); ?>
+        <div class="bike-card swiper-slide">
+              <div class="bike-card__inner">
+                  <div class="bike-card__header">
+                <?php if( get_field('bike_category') == 'lapset'  ) { ?>
+           <span class="label--kids f--medium">Lapsille</span>
+           <?php } else { ?>
+             <span class="label--adults f--medium">aikuisille</span>
+              <?php } ?>
+                <span class="label--specs f--medium"><?php the_field( 'bike_suspension' ); ?></span>
+              </div>
+             <?php $bike_image = get_field( 'bike_image' ); ?>
+        <?php if ( $bike_image ) { ?>
+        <div class="bike-card__img">
+        <div class="image-aspect-box">
+        <div class="image-aspect-box_inner ">
+        <picture>
+          <source media="(min-width:650px)" data-srcset="<?php echo $bike_image['url']; ?>">
+            <source media="(min-width:465px)" data-srcset="<?php echo $bike_image['url']; ?>">
+              <img class="lazy-anim lazyload" data-src="<?php echo $bike_image['url']; ?>" alt="<?php echo $bike_image['alt']; ?>" src="">
+          </picture>
+
+        </div>
+        </div>
+        </div>
+        <?php } ?>
+
+        <div class="bike-card__content">
+        <h4 class="f--bold"><?php the_field( 'bike_name' ); ?></h4>
+
+        <p><?php the_field( 'text_content_suomi' ); ?></p>
+
+          </div>
+
+
+          <?php $link_for_more_information = get_field( 'link_for_more_information' ); ?>
+          <?php if ( $link_for_more_information ) { ?>
+                <div class="bike-card__footer">
+                        <div class="-wrap">
+                    <a class="btn--secondary" href="<?php echo $link_for_more_information['url']; ?>" target="_blank"><?php echo $link_for_more_information['title']; ?></a>
+                          </div>
+                        <span class="f--medium">Tutustu pyörään tarkemmin valmistajan sivuilta</span>
+                </div>
+          <?php } ?>
+        </div>
+        </div>
+    	<?php endforeach; ?>
+    	<?php wp_reset_postdata(); ?>
+    <?php endif; ?>
+
+
     <div class="bike-card swiper-slide">
       <div class="bike-card__inner">
         <div class="bike-card__header">
@@ -450,6 +568,67 @@
           </section>
 
 
+          <?php if ( have_rows( 'content_block_saari' ) ) : ?>
+            <section class="section--basic U-sec-pad">
+                      <div class="U_container U_base-pad">
+  <?php while ( have_rows( 'content_block_saari' ) ) : the_row(); ?>
+    <?php if( get_sub_field('header') ): ?>
+    <div class="module--heading_txt">
+        <div class="heading-content">
+        <div class="heading">
+      <h2><?php the_sub_field( 'header' ); ?></h2>
+        </div>
+    </div>
+  </div>
+   <?php endif; ?>
+    <?php if ( have_rows( 'content_rows' ) ) : ?>
+      <?php while ( have_rows( 'content_rows' ) ) : the_row(); ?>
+          <?php $image = get_sub_field( 'image' ); ?>
+        <div class="module--split-content">
+              <div class="flx-container">
+                  <?php if ( $image ) { ?>
+                <div class="cell split-content__img">
+                  <div class="cell_img-content">
+                      <!-- <h3>Hyvät laskut saavat projektit vauhtiin</h3> -->
+                    <div class="image-aspect-box -wide-aspect">
+                      <div class="image-aspect-box_inner ">
+                      <picture>
+                        <source media="(min-width:650px)" data-srcset="<?php echo $image['url']; ?>">
+                          <source media="(min-width:465px)" data-srcset="<?php echo $image['url']; ?>">
+                            <img class="lazy-anim lazyload" data-src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" src="">
+                        </picture>
+
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                <?php } ?>
+
+          <div class="cell mosaic-split__txt split-content__txt">
+            <div class="cell_txt-content">
+                <?php if( get_sub_field('heading') ): ?>
+                    <h2><?php the_sub_field( 'heading' ); ?></h2>
+                     <?php endif; ?>
+              <p><?php the_sub_field( 'text_content' ); ?></p>
+              <?php $cta_button = get_sub_field( 'cta_button' ); ?>
+                  <?php if ( $cta_button ) { ?>
+                <div class="capsule-wrap">
+                    <a class="btn--basic" href="<?php echo $cta_button['url']; ?>" target="<?php echo $cta_button['target']; ?>"><?php echo $cta_button['title']; ?> ›</a>
+                  </div>
+                  <?php } ?>
+          </div>
+            </div>
+        </div>
+        </div>
+
+      <?php endwhile; ?>
+    <?php endif; ?>
+  <?php endwhile; ?>
+</div>
+</section>
+<?php endif; ?>
+
+
 
           <section class="section--basic U-sec-pad  bg--nude">
                     <div class="U_container U_base-pad">
@@ -457,46 +636,54 @@
 
     <div class="module--quote-floater">
       <h2>
-        “Hyvin merkittyjä polkuja pitkin oli helppo liikkua. Vaikka tunturien päälle nouseminen olisi itselleni vaikeaa tavallisella pyörällä teki sähköavustus mäkien nousemisen mukavaksi.”
+<?php the_field( 'main_quote' ); ?>
       </h2>
     </div>
     </div>
 
 
-    <div class="U_container U_base-pad -swiper-padder">
-                  <!-- Slider main container -->
-<div class="swiper swiper-quotes">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
+
+    <?php if ( have_rows( 'quote_cards' ) ) : ?>
+      <div class="U_container U_base-pad -swiper-padder">
+                    <!-- Slider main container -->
+  <div class="swiper swiper-quotes">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+	<?php while ( have_rows( 'quote_cards' ) ) : the_row(); ?>
     <div class="quote-card swiper-slide">
       <div class="quote-card__inner">
         <div class="quote-card__content">
-          <p> “Tasaiset osuudet sujuivat mukavasti hyvän jousituksen ansiosta. Takaisin kotiin päästyäni hankin itselleni oman sähköpyörän. Enkä ole katunut. Pyörän tukeva rakenne, ajo-ominaisuudet, sekä sähköisen avustuksen tuoma lisäkapasiteetti antavat mahdollisuuden nauttia pitkäkestoisesta lumikenttien kutsusta esim. järven jäällä.”</p>
+          <p><?php the_sub_field( 'quote_text' ); ?></p>
         </div>
         <div class="quote-card__person">
+          <?php $person_image = get_sub_field( 'person_image' ); ?>
+          <?php if ( $person_image ) { ?>
           <div class="quote-card__img">
           <div class="image-aspect-box">
             <div class="image-aspect-box_inner ">
             <picture>
-              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
-                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
-                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg" alt="" src="">
+              <source media="(min-width:650px)" data-srcset="<?php echo $person_image['url']; ?>">
+                <source media="(min-width:465px)" data-srcset="<?php echo $person_image['url']; ?>">
+                  <img class="lazy-anim lazyload" data-src="<?php echo $person_image['url']; ?>" alt="<?php echo $person_image['alt']; ?>" src="">
               </picture>
                         </div>
           </div>
           </div>
-            <span class="f--medium">Mikko Rovanperä</span>
+                  <?php } ?>
+            <span class="f--medium"><?php the_sub_field( 'person_name' ); ?></span>
         </div>
-
-
-
-
-
-
       </div>
-
     </div>
+	<?php endwhile; ?>
+
+
+
+
+
+
+
+
+
     <div class="quote-card swiper-slide">
       <div class="quote-card__inner">
         <div class="quote-card__content">
@@ -602,6 +789,8 @@
 <div class="swiper-button-next -quote-swiper"></div>
 
   </div>
+
+  <?php endif; ?>
 
 
     <div class="U_container U_base-pad">
@@ -740,7 +929,7 @@
 
 
 
-          <section class="section--basic U-sec-pad bg--dark">
+          <!-- <section class="section--basic U-sec-pad bg--dark">
                     <div class="U_container U_base-pad">
 
 
@@ -748,7 +937,7 @@
           <div class="flx-container">
             <div class="cell mosaic-split__img split-content__img">
               <div class="cell_img-content">
-                  <!-- <h3>Hyvät laskut saavat projektit vauhtiin</h3> -->
+
                 <div class="image-aspect-box -wide-aspect">
                   <div class="image-aspect-box_inner ">
                   <picture>
@@ -778,7 +967,11 @@
 
 
     </div>
-          </section>
+          </section> -->
+
+
+
+<?php locate_template('src/parts/global/bottom-cta.php', true, true); ?>
 
 
 

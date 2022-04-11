@@ -1671,6 +1671,15 @@ div .editor-styles-wrapper .btn--basic {
   border-radius: 15px;
   font-family: "HDColton-Semibold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
+@media screen and (max-width: 800px) {
+  div .editor-styles-wrapper .btn--basic {
+    font-size: 1.4rem;
+    background: #ff8517;
+    padding: 12px 18px;
+    border-radius: 13px;
+    font-family: "HDColton-Semibold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+}
 div .editor-styles-wrapper .basic-btn {
   padding: 12px 28px;
   text-align: center;
@@ -5048,6 +5057,9 @@ div .editor-styles-wrapper .acf-block-preview .swiper-button-disabled {
     display: none;
   }
 }
+div .editor-styles-wrapper .acf-block-preview .bike-card {
+  height: auto;
+}
 div .editor-styles-wrapper .acf-block-preview .bike-card, div .editor-styles-wrapper .acf-block-preview .quote-card {
   max-width: 33.33% !important;
   padding: 10px 10px;
@@ -5285,6 +5297,19 @@ div .editor-styles-wrapper .acf-block-preview .module--quote-floater {
 }
 div .editor-styles-wrapper .acf-block-preview .module--quote-floater h2 {
   color: #ff8517;
+}
+div .editor-styles-wrapper .acf-block-preview .section--bottom-cta .btn--basic {
+  margin-right: 14px;
+}
+@media screen and (max-width: 800px) {
+  div .editor-styles-wrapper .acf-block-preview .section--bottom-cta .btn--basic {
+    margin-right: 8px;
+  }
+}
+div .editor-styles-wrapper .acf-block-preview .section--bottom-cta .-btn-right {
+  border: solid 1px #ff8517;
+  background: #031600;
+  color: white;
 }
 div .editor-styles-wrapper .acf-block-preview .background-image {
   position: absolute;
