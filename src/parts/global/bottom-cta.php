@@ -31,7 +31,7 @@
         <?php if ( $image ) { ?>
       <div class="cell split-content__img">
         <div class="cell_img-content">
-            <!-- <h3>Hyvät laskut saavat projektit vauhtiin</h3> -->
+        
           <div class="image-aspect-box -wide-aspect">
             <div class="image-aspect-box_inner ">
             <picture>

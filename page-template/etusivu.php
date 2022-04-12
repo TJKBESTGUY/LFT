@@ -55,7 +55,7 @@
 
 
 
-          <section class="section--basic U-sec-pad">
+          <!-- <section class="section--basic U-sec-pad">
                     <div class="U_container U_base-pad">
       <div class="module--heading_txt">
           <div class="heading-content">
@@ -69,7 +69,7 @@
           <div class="flx-container">
             <div class="cell mosaic-split__img split-content__img">
               <div class="cell_img-content">
-                  <!-- <h3>Hyvät laskut saavat projektit vauhtiin</h3> -->
+
                 <div class="image-aspect-box -wide-aspect">
                   <div class="image-aspect-box_inner ">
                   <picture>
@@ -96,7 +96,7 @@
 
 
     </div>
-          </section>
+          </section> -->
 
 
           <?php if ( have_rows( 'content_block_esittely' ) ) : ?>
