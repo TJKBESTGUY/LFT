@@ -550,7 +550,7 @@
 
 
 
-          <section class="section--basic U-sec-pad">
+          <!-- <section class="section--basic U-sec-pad">
                     <div class="U_container U_base-pad">
 
 
@@ -558,7 +558,7 @@
           <div class="flx-container">
             <div class="cell mosaic-split__img split-content__img">
               <div class="cell_img-content">
-                  <!-- <h3>Hyvät laskut saavat projektit vauhtiin</h3> -->
+
                 <div class="image-aspect-box -wide-aspect">
                   <div class="image-aspect-box_inner ">
                   <picture>
@@ -588,7 +588,7 @@
 
 
     </div>
-          </section>
+          </section> -->
 
 
           <?php if ( have_rows( 'content_block_saari' ) ) : ?>
@@ -876,63 +876,9 @@
         </div>
 
       </div>
-      <div class="quote-card">
-        <div class="quote-card__inner">
-          <div class="quote-card__content">
-            <p>Vuokrasin syksyllä Saariselälle sähkömaastopyörän ja 3 tunnin ajon jälkeen se olin heti myyty. Hyvin merkittyjä polkuja pitkin oli helppo liikkua. Vaikka tunturien päälle nouseminen olisi itselleni vaikeaa tavallisella pyörällä teki sähköavustus mäkien nousemisen mukavaksi.Tasaiset osuudet sujuivat mukavasti hyvän jousituksen ansiosta. Takaisin kotiin päästyäni hankin itselleni oman sähköpyörän. Enkä ole katunut. Pyörän tukeva rakenne, ajo-ominaisuudet, sekä sähköisen avustuksen tuoma lisäkapasiteetti antavat mahdollisuuden nauttia pitkäkestoisesta lumikenttien kutsusta esim. järven jäällä.</p>
-          </div>
-          <div class="quote-card__person">
-            <div class="quote-card__img">
-            <div class="image-aspect-box">
-              <div class="image-aspect-box_inner ">
-              <picture>
-                <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
-                  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
-                    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg" alt="" src="">
-                </picture>
-                          </div>
-            </div>
-            </div>
-            <span class="f--medium">Mikko Rovanperä</span>
-          </div>
 
 
 
-
-
-
-        </div>
-
-      </div>
-
-      <div class="quote-card">
-        <div class="quote-card__inner">
-          <div class="quote-card__content">
-            <p>Vuokrasin syksyllä Saariselälle sähkömaastopyörän ja 3 tunnin ajon jälkeen se olin heti myyty. Hyvin merkittyjä polkuja pitkin oli helppo liikkua. Vaikka tunturien päälle nouseminen olisi itselleni vaikeaa tavallisella pyörällä teki sähköavustus mäkien nousemisen mukavaksi.Tasaiset osuudet sujuivat mukavasti hyvän jousituksen ansiosta. Takaisin kotiin päästyäni hankin itselleni oman sähköpyörän. Enkä ole katunut. Pyörän tukeva rakenne, ajo-ominaisuudet, sekä sähköisen avustuksen tuoma lisäkapasiteetti antavat mahdollisuuden nauttia pitkäkestoisesta lumikenttien kutsusta esim. järven jäällä.</p>
-          </div>
-          <div class="quote-card__person">
-            <div class="quote-card__img">
-            <div class="image-aspect-box">
-              <div class="image-aspect-box_inner ">
-              <picture>
-                <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
-                  <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg">
-                    <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/kuva3b.jpg" alt="" src="">
-                </picture>
-                          </div>
-            </div>
-            </div>
-            <span class="f--medium">Mikko Rovanperä</span>
-          </div>
-
-
-
-
-
-
-        </div>
-
-      </div>
 
 
 
