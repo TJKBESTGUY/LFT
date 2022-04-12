@@ -5007,10 +5007,10 @@ div .editor-styles-wrapper .acf-block-preview .horizontal-row--quotes .flx-conta
   align-items: center;
 }
 div .editor-styles-wrapper .acf-block-preview .swiper {
-  padding-bottom: 10px !important;
+  padding-bottom: 18px !important;
 }
 div .editor-styles-wrapper .acf-block-preview .swiper-scrollbar-drag {
-  background: #ff8517 !important;
+  background: #aeaeae !important;
 }
 @media screen and (max-width: 1320px) {
   div .editor-styles-wrapper .acf-block-preview .-swiper-padder {
@@ -5060,6 +5060,9 @@ div .editor-styles-wrapper .acf-block-preview .swiper-button-disabled {
   div .editor-styles-wrapper .acf-block-preview .swiper-button-next, div .editor-styles-wrapper .acf-block-preview .swiper-button-prev {
     display: none;
   }
+}
+div .editor-styles-wrapper .acf-block-preview .swiper-quotes .swiper-wrapper {
+  align-items: center;
 }
 div .editor-styles-wrapper .acf-block-preview .bike-card {
   height: auto;
@@ -5220,6 +5223,7 @@ div .editor-styles-wrapper .acf-block-preview .bike-card__inner, div .editor-sty
   width: 100%;
   height: 100%;
   padding-bottom: 20px;
+  min-height: 300px;
 }
 div .editor-styles-wrapper .acf-block-preview .bike-card__inner {
   display: flex;

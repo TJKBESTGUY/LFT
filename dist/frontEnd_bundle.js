@@ -1087,6 +1087,7 @@ var swiper = new Swiper('.swiper-bikes', {
   // Optional parameters
   slidesPerView: "auto",
   spaceBetween: 0,
+  grabCursor: true,
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next.-bike-swiper',
@@ -1102,6 +1103,7 @@ var swiper_quotes = new Swiper('.swiper-quotes', {
   // Optional parameters
   slidesPerView: "auto",
   spaceBetween: 0,
+  grabCursor: true,
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next.-quote-swiper',

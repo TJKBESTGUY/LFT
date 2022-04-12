@@ -12,7 +12,7 @@ console.log("home HELLO");
 
 	 slidesPerView: "auto",
 	        spaceBetween: 0,
-
+					grabCursor: true,
 
 
 
@@ -34,7 +34,7 @@ console.log("home HELLO");
 
 	slidesPerView: "auto",
 				 spaceBetween: 0,
-
+				 			grabCursor: true,
 
 
 
