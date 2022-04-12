@@ -938,6 +938,12 @@ display: flex;
     border: solid 1px;
     padding: 6px 16px;
     font-size: 1.4rem;
+
+  }
+  a:hover {
+    background: black;
+    color:white;
+    border: solid 1px black;;
   }
 }
 
@@ -1033,7 +1039,12 @@ display: flex;
             box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
   width: 100%;
   height: 100%;
+  padding-bottom: 20px;
+}
 
+.bike-card__inner {
+  display: flex;
+  flex-direction: column;
 }
 
 .quote-card__content, .quote-card__person {
@@ -1076,9 +1087,16 @@ span {
   justify-content: space-between;
   align-items: center;
   padding: 16px;
+  @media screen and (max-width: 700px) {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  }
 }
 .label--specs, .label--adults, .label--kids {
 font-size: 1.1rem;
+@media screen and (max-width: 700px) {
+font-size: 0.9rem;
+}
 text-transform: uppercase;
 }
 
@@ -1109,19 +1127,63 @@ text-transform: uppercase;
 .bike-card__content{
     padding: 16px;
     text-align: center;
+    flex-grow: 2;
     h4 {
       font-size: 3.2rem;
       margin: 0;
+            @media screen and (max-width: 1200px) {
+                  font-size: 2.6rem;
+            }
+            @media screen and (max-width: 800px) {
+                  font-size: 2.2rem;
+            }
     }
     p {
-      margin-top: 26px;
+      margin-top: 18px;
       text-align: center;
       font-size: 1.4rem;
+      @media screen and (max-width: 700px) {
+            font-size: 1.2rem;
+      }
+    }
+    .bike-card__size{
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin-top: 10px;
+      align-items: center;
+      font-size: 16px;
+
+    }
+    .bike-size-span {
+      text-transform: uppercase;
+      font-size: 16px;
+      line-height: 1;
+      position: relative;
+      padding: 0 11px;
+      // color: $orange;
+      // font-family: "HDColton-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    }
+    .bike-size-span:after {
+      content: "|";
+      margin: 0 8px;
+      position: absolute;
+      right: -10px;
+      bottom: 1px;
+      opacity: 0.5;
+      // color: black;
+    }
+    .bike-size-span:last-of-type:after{
+      content: "|";
+      display: none;
     }
 }
 .bike-card__footer {
   padding: 16px;
   text-align: center;
+    @media screen and (max-width: 700px) {
+    padding-top: 8px;
+    }
   .wrap {
     display: flex;
     justify-content: center;
@@ -1140,7 +1202,15 @@ text-transform: uppercase;
   max-width: 1100px;
   margin: auto;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 80px;
+      max-width: 80%;
+    }
+    @media screen and (max-width: 700px) {
+      margin-bottom: 60px;
+      max-width: 90%;
+    }
   h2 {
     color: $orange;
   }
@@ -1161,6 +1231,9 @@ text-transform: uppercase;
     border: solid 1px $orange;
     background: $dark;
     color: white;
+  }
+  .image-aspect-box {
+        padding-top: 56%;
   }
 }
 

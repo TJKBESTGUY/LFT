@@ -1669,7 +1669,11 @@ div .editor-styles-wrapper .btn--basic {
   background: #ff8517;
   padding: 15px 22px;
   border-radius: 15px;
+  transition: 0.3s;
   font-family: "HDColton-Semibold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+div .editor-styles-wrapper .btn--basic:hover {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 @media screen and (max-width: 800px) {
   div .editor-styles-wrapper .btn--basic {
@@ -5125,6 +5129,11 @@ div .editor-styles-wrapper .acf-block-preview .bikes-speed-nav a {
   padding: 6px 16px;
   font-size: 1.4rem;
 }
+div .editor-styles-wrapper .acf-block-preview .bikes-speed-nav a:hover {
+  background: black;
+  color: white;
+  border: solid 1px black;
+}
 div .editor-styles-wrapper .acf-block-preview .quote-card {
   min-height: auto;
 }
@@ -5210,6 +5219,11 @@ div .editor-styles-wrapper .acf-block-preview .bike-card__inner, div .editor-sty
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   width: 100%;
   height: 100%;
+  padding-bottom: 20px;
+}
+div .editor-styles-wrapper .acf-block-preview .bike-card__inner {
+  display: flex;
+  flex-direction: column;
 }
 div .editor-styles-wrapper .acf-block-preview .quote-card__content, div .editor-styles-wrapper .acf-block-preview .quote-card__person {
   padding: 28px;
@@ -5243,9 +5257,20 @@ div .editor-styles-wrapper .acf-block-preview .bike-card__header {
   align-items: center;
   padding: 16px;
 }
+@media screen and (max-width: 700px) {
+  div .editor-styles-wrapper .acf-block-preview .bike-card__header {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
 div .editor-styles-wrapper .acf-block-preview .label--specs, div .editor-styles-wrapper .acf-block-preview .label--adults, div .editor-styles-wrapper .acf-block-preview .label--kids {
   font-size: 1.1rem;
   text-transform: uppercase;
+}
+@media screen and (max-width: 700px) {
+  div .editor-styles-wrapper .acf-block-preview .label--specs, div .editor-styles-wrapper .acf-block-preview .label--adults, div .editor-styles-wrapper .acf-block-preview .label--kids {
+    font-size: 0.9rem;
+  }
 }
 div .editor-styles-wrapper .acf-block-preview .label--adults, div .editor-styles-wrapper .acf-block-preview .label--kids {
   padding: 6px 12px;
@@ -5268,19 +5293,67 @@ div .editor-styles-wrapper .acf-block-preview .bike-card__img .image-aspect-box 
 div .editor-styles-wrapper .acf-block-preview .bike-card__content {
   padding: 16px;
   text-align: center;
+  flex-grow: 2;
 }
 div .editor-styles-wrapper .acf-block-preview .bike-card__content h4 {
   font-size: 3.2rem;
   margin: 0;
 }
+@media screen and (max-width: 1200px) {
+  div .editor-styles-wrapper .acf-block-preview .bike-card__content h4 {
+    font-size: 2.6rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  div .editor-styles-wrapper .acf-block-preview .bike-card__content h4 {
+    font-size: 2.2rem;
+  }
+}
 div .editor-styles-wrapper .acf-block-preview .bike-card__content p {
-  margin-top: 26px;
+  margin-top: 18px;
   text-align: center;
   font-size: 1.4rem;
+}
+@media screen and (max-width: 700px) {
+  div .editor-styles-wrapper .acf-block-preview .bike-card__content p {
+    font-size: 1.2rem;
+  }
+}
+div .editor-styles-wrapper .acf-block-preview .bike-card__content .bike-card__size {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+  align-items: center;
+  font-size: 16px;
+}
+div .editor-styles-wrapper .acf-block-preview .bike-card__content .bike-size-span {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1;
+  position: relative;
+  padding: 0 11px;
+}
+div .editor-styles-wrapper .acf-block-preview .bike-card__content .bike-size-span:after {
+  content: "|";
+  margin: 0 8px;
+  position: absolute;
+  right: -10px;
+  bottom: 1px;
+  opacity: 0.5;
+}
+div .editor-styles-wrapper .acf-block-preview .bike-card__content .bike-size-span:last-of-type:after {
+  content: "|";
+  display: none;
 }
 div .editor-styles-wrapper .acf-block-preview .bike-card__footer {
   padding: 16px;
   text-align: center;
+}
+@media screen and (max-width: 700px) {
+  div .editor-styles-wrapper .acf-block-preview .bike-card__footer {
+    padding-top: 8px;
+  }
 }
 div .editor-styles-wrapper .acf-block-preview .bike-card__footer .wrap {
   display: flex;
@@ -5293,7 +5366,19 @@ div .editor-styles-wrapper .acf-block-preview .module--quote-floater {
   max-width: 1100px;
   margin: auto;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 1200px) {
+  div .editor-styles-wrapper .acf-block-preview .module--quote-floater {
+    margin-bottom: 80px;
+    max-width: 80%;
+  }
+}
+@media screen and (max-width: 700px) {
+  div .editor-styles-wrapper .acf-block-preview .module--quote-floater {
+    margin-bottom: 60px;
+    max-width: 90%;
+  }
 }
 div .editor-styles-wrapper .acf-block-preview .module--quote-floater h2 {
   color: #ff8517;
@@ -5310,6 +5395,9 @@ div .editor-styles-wrapper .acf-block-preview .section--bottom-cta .-btn-right {
   border: solid 1px #ff8517;
   background: #031600;
   color: white;
+}
+div .editor-styles-wrapper .acf-block-preview .section--bottom-cta .image-aspect-box {
+  padding-top: 56%;
 }
 div .editor-styles-wrapper .acf-block-preview .background-image {
   position: absolute;

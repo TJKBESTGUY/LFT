@@ -3579,7 +3579,12 @@ var {
   background: #ff8517;
   padding: 15px 22px;
   border-radius: 15px;
+  transition: 0.3s;
   font-family: "HDColton-Semibold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.btn--basic:hover {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 @media screen and (max-width: 800px) {
@@ -4891,6 +4896,11 @@ Moved: _kohteet
   padding: 6px 16px;
   font-size: 1.4rem;
 }
+.bikes-speed-nav a:hover {
+  background: black;
+  color: white;
+  border: solid 1px black;
+}
 
 .quote-card {
   min-height: auto;
@@ -4985,6 +4995,12 @@ Moved: _kohteet
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   width: 100%;
   height: 100%;
+  padding-bottom: 20px;
+}
+
+.bike-card__inner {
+  display: flex;
+  flex-direction: column;
 }
 
 .quote-card__content, .quote-card__person {
@@ -5024,10 +5040,21 @@ Moved: _kohteet
   align-items: center;
   padding: 16px;
 }
+@media screen and (max-width: 700px) {
+  .bike-card__header {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
 
 .label--specs, .label--adults, .label--kids {
   font-size: 1.1rem;
   text-transform: uppercase;
+}
+@media screen and (max-width: 700px) {
+  .label--specs, .label--adults, .label--kids {
+    font-size: 0.9rem;
+  }
 }
 
 .label--adults, .label--kids {
@@ -5055,20 +5082,68 @@ Moved: _kohteet
 .bike-card__content {
   padding: 16px;
   text-align: center;
+  flex-grow: 2;
 }
 .bike-card__content h4 {
   font-size: 3.2rem;
   margin: 0;
 }
+@media screen and (max-width: 1200px) {
+  .bike-card__content h4 {
+    font-size: 2.6rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .bike-card__content h4 {
+    font-size: 2.2rem;
+  }
+}
 .bike-card__content p {
-  margin-top: 26px;
+  margin-top: 18px;
   text-align: center;
   font-size: 1.4rem;
+}
+@media screen and (max-width: 700px) {
+  .bike-card__content p {
+    font-size: 1.2rem;
+  }
+}
+.bike-card__content .bike-card__size {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+  align-items: center;
+  font-size: 16px;
+}
+.bike-card__content .bike-size-span {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1;
+  position: relative;
+  padding: 0 11px;
+}
+.bike-card__content .bike-size-span:after {
+  content: "|";
+  margin: 0 8px;
+  position: absolute;
+  right: -10px;
+  bottom: 1px;
+  opacity: 0.5;
+}
+.bike-card__content .bike-size-span:last-of-type:after {
+  content: "|";
+  display: none;
 }
 
 .bike-card__footer {
   padding: 16px;
   text-align: center;
+}
+@media screen and (max-width: 700px) {
+  .bike-card__footer {
+    padding-top: 8px;
+  }
 }
 .bike-card__footer .wrap {
   display: flex;
@@ -5082,7 +5157,19 @@ Moved: _kohteet
   max-width: 1100px;
   margin: auto;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 1200px) {
+  .module--quote-floater {
+    margin-bottom: 80px;
+    max-width: 80%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .module--quote-floater {
+    margin-bottom: 60px;
+    max-width: 90%;
+  }
 }
 .module--quote-floater h2 {
   color: #ff8517;
@@ -5100,6 +5187,9 @@ Moved: _kohteet
   border: solid 1px #ff8517;
   background: #031600;
   color: white;
+}
+.section--bottom-cta .image-aspect-box {
+  padding-top: 56%;
 }
 
 /*--------------------------------------------------------------

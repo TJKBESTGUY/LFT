@@ -110,6 +110,7 @@
                   <div class="bike-card__content">
                     <h4 class="f--bold">Ghost E-Riot</h4>
 
+
                     <p>Runsaasti moottoritehoa. Paljon joustomatkaa. Ja loputtomasti potentiaalia. E-Riot on sähköenduropyörä, joka luultavasti pystyy enempään kuin mitä ikinä voisit pyytää sähkömaastopyörältä. Kun joustomatka on edessä 170 mm ja takana 160 mm, hurjimmatkin alamäet tasoittuvat.</p>
                   </div>
 
@@ -242,6 +243,26 @@
 
     <div class="bike-card__content">
       <h4 class="f--bold"><?php the_field( 'bike_name' ); ?></h4>
+      <?php if ( have_rows( 'bike_size' ) ) : ?>
+        <div class="bike-card__size">
+
+	<?php while ( have_rows( 'bike_size' ) ) : the_row(); ?>
+<?php
+$select_sizes_array = get_sub_field( 'select_sizes' );
+if ( $select_sizes_array ):
+  foreach ( $select_sizes_array as $select_sizes_item ):
+    ?>
+    <span class="bike-size-span"><?php echo $select_sizes_item; ?></span>
+    <?php
+  endforeach;
+endif; ?>
+   <?php if( get_sub_field('text_suomi')  )  { ?>
+  <span class=""><?php the_sub_field( 'text_suomi' ); ?></span>
+  <?php } ?>
+	<?php endwhile; ?>
+
+          </div>
+<?php endif; ?>
 
       <p><?php the_field( 'text_content_suomi' ); ?></p>
 

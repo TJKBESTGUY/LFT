@@ -15,12 +15,15 @@
 
       </div>
 
+      <?php $header_image = get_field( 'header_image' ); ?>
+
+
       <section class="section--full-header">
         <div class="module--bg-img">
           <picture>
-            <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/header1-dark.jpg">
-              <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/header1-dark.jpg">
-                <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/header1-dark.jpg" alt="" src="">
+            <source media="(min-width:650px)" data-srcset="<?php echo $header_image['url']; ?>">
+              <source media="(min-width:465px)" data-srcset="<?php echo $header_image['url']; ?>">
+                <img class="lazy-anim lazyload" data-src="<?php echo $header_image['url']; ?>" alt="<?php echo $header_image['alt']; ?>" src="">
             </picture>
         </div>
 
@@ -117,7 +120,7 @@
                 	<?php if ( $image ) { ?>
                 <div class="cell split-content__img">
                   <div class="cell_img-content">
-                      <!-- <h3>Hyvät laskut saavat projektit vauhtiin</h3> -->
+
                     <div class="image-aspect-box -wide-aspect">
                       <div class="image-aspect-box_inner ">
                       <picture>
@@ -330,6 +333,26 @@
 
         <div class="bike-card__content">
         <h4 class="f--bold"><?php the_field( 'bike_name' ); ?></h4>
+        <?php if ( have_rows( 'bike_size' ) ) : ?>
+          <div class="bike-card__size">
+
+    <?php while ( have_rows( 'bike_size' ) ) : the_row(); ?>
+  <?php
+  $select_sizes_array = get_sub_field( 'select_sizes' );
+  if ( $select_sizes_array ):
+    foreach ( $select_sizes_array as $select_sizes_item ):
+      ?>
+      <span class="bike-size-span"><?php echo $select_sizes_item; ?></span>
+      <?php
+    endforeach;
+  endif; ?>
+     <?php if( get_sub_field('text_suomi')  )  { ?>
+    <span class=""><?php the_sub_field( 'text_suomi' ); ?></span>
+    <?php } ?>
+    <?php endwhile; ?>
+
+            </div>
+  <?php endif; ?>
 
         <p><?php the_field( 'text_content_suomi' ); ?></p>
 
