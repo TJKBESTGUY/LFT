@@ -1658,6 +1658,11 @@ div .editor-styles-wrapper .capsule-wrap {
     margin-top: 22px;
   }
 }
+@media screen and (min-width: 1100.11px) {
+  div .editor-styles-wrapper .capsule-wrap.-all-bikes {
+    margin-top: 60px;
+  }
+}
 div .editor-styles-wrapper .btn--secondary {
   border-radius: 6px;
   border: solid 1px #ff8517;
@@ -4746,6 +4751,11 @@ div .editor-styles-wrapper .acf-block-preview .large-p-wrapper {
 }
 div .editor-styles-wrapper .acf-block-preview .module--heading_txt {
   margin-bottom: 60px;
+}
+@media screen and (max-width: 700px) {
+  div .editor-styles-wrapper .acf-block-preview .module--heading_txt {
+    margin-bottom: 40px;
+  }
 }
 div .editor-styles-wrapper .acf-block-preview .floating-heading {
   padding-top: 20px;

@@ -418,6 +418,9 @@ position: relative;
 
 .module--heading_txt {
 margin-bottom: 60px;
+        @media screen and (max-width: 700px) {
+        margin-bottom: 40px;
+        }
 
 }
 

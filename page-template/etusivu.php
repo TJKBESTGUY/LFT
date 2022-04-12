@@ -537,7 +537,7 @@
 
                   <div class="U_container U_base-pad">
 
-        <div class="capsule-wrap">
+        <div class="capsule-wrap -all-bikes">
         <a class="btn--basic" href="#">Kaikki pyörät ›</a>
 
   </div>

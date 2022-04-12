@@ -3567,6 +3567,12 @@ var {
   }
 }
 
+@media screen and (min-width: 1100.11px) {
+  .capsule-wrap.-all-bikes {
+    margin-top: 60px;
+  }
+}
+
 .btn--secondary {
   border-radius: 6px;
   border: solid 1px #ff8517;
@@ -4471,6 +4477,11 @@ Moved: _kohteet
 
 .module--heading_txt {
   margin-bottom: 60px;
+}
+@media screen and (max-width: 700px) {
+  .module--heading_txt {
+    margin-bottom: 40px;
+  }
 }
 
 .floating-heading {
