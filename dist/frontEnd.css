@@ -5075,6 +5075,12 @@ Moved: _kohteet
 .quote-card__content, .quote-card__person {
   padding: 28px;
 }
+@media screen and (max-width: 1230px) {
+  .quote-card__content, .quote-card__person {
+    padding: 16px;
+    font-size: 1.2rem;
+  }
+}
 
 .quote-card__person {
   padding-top: 0;
@@ -5084,6 +5090,11 @@ Moved: _kohteet
 .quote-card__content p {
   font-size: 1.4rem;
 }
+@media screen and (max-width: 1230px) {
+  .quote-card__content p {
+    font-size: 1.2rem;
+  }
+}
 
 .quote-card__person {
   display: flex;
@@ -5092,12 +5103,23 @@ Moved: _kohteet
 .quote-card__person span {
   font-size: 1.6rem;
 }
+@media screen and (max-width: 1230px) {
+  .quote-card__person span {
+    font-size: 1.4rem;
+  }
+}
 
 .quote-card__img {
   width: 80px;
   border-radius: 999px;
   overflow: hidden;
   margin-right: 20px;
+}
+@media screen and (max-width: 1230px) {
+  .quote-card__img {
+    width: 60px;
+    margin-right: 8px;
+  }
 }
 .quote-card__img .image-aspect-box {
   padding-top: 100%;

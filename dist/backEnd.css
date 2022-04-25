@@ -5292,12 +5292,23 @@ div .editor-styles-wrapper .acf-block-preview .bike-card__inner {
 div .editor-styles-wrapper .acf-block-preview .quote-card__content, div .editor-styles-wrapper .acf-block-preview .quote-card__person {
   padding: 28px;
 }
+@media screen and (max-width: 1230px) {
+  div .editor-styles-wrapper .acf-block-preview .quote-card__content, div .editor-styles-wrapper .acf-block-preview .quote-card__person {
+    padding: 16px;
+    font-size: 1.2rem;
+  }
+}
 div .editor-styles-wrapper .acf-block-preview .quote-card__person {
   padding-top: 0;
   padding-bottom: 40px;
 }
 div .editor-styles-wrapper .acf-block-preview .quote-card__content p {
   font-size: 1.4rem;
+}
+@media screen and (max-width: 1230px) {
+  div .editor-styles-wrapper .acf-block-preview .quote-card__content p {
+    font-size: 1.2rem;
+  }
 }
 div .editor-styles-wrapper .acf-block-preview .quote-card__person {
   display: flex;
@@ -5306,11 +5317,22 @@ div .editor-styles-wrapper .acf-block-preview .quote-card__person {
 div .editor-styles-wrapper .acf-block-preview .quote-card__person span {
   font-size: 1.6rem;
 }
+@media screen and (max-width: 1230px) {
+  div .editor-styles-wrapper .acf-block-preview .quote-card__person span {
+    font-size: 1.4rem;
+  }
+}
 div .editor-styles-wrapper .acf-block-preview .quote-card__img {
   width: 80px;
   border-radius: 999px;
   overflow: hidden;
   margin-right: 20px;
+}
+@media screen and (max-width: 1230px) {
+  div .editor-styles-wrapper .acf-block-preview .quote-card__img {
+    width: 60px;
+    margin-right: 8px;
+  }
 }
 div .editor-styles-wrapper .acf-block-preview .quote-card__img .image-aspect-box {
   padding-top: 100%;
