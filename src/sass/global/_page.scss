@@ -183,6 +183,10 @@ padding-right: 16px;
   }
 }
 
+.-mute-top-pad {
+  padding-top: 0!important;
+}
+
 .U-sec-pad__small {
   padding-top: 80px;
   @media only screen and (max-width: 1200px) {
@@ -937,8 +941,59 @@ display: flex;
 }
 }
 
+
+//////BIKE PAGE//////
+
+.section--bikes-header {
+    background: $nude;
+        padding: 60px 0;
+}
+
+
+.module--bikes-header {
+
+  .flx-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .bikes-header__content {
+    width: 50%;
+    padding-bottom: 60px;
+    @media screen and (max-width: 1200px) {
+      padding-bottom: 40px;
+    }
+    .h2 {
+      margin-bottom: 40px;
+      @media screen and (max-width: 1200px) {
+        margin-bottom: 20px;
+      }
+    }
+    p {
+      max-width: 530px;
+      padding-right: 30px;
+
+    }
+        @media screen and (max-width: 960px) {
+        width: 100%;
+        max-width: 550px;
+          padding-bottom: 0;
+        }
+
+  }
+  .bikes-header__img {
+    width: 50%;
+    @media screen and (max-width: 960px) {
+    display: none;
+    }
+  }
+}
+
+
 .bikes-speed-nav {
-  padding: 60px 0;
+  border-top: solid 1px black;
+  padding-top: 20px;
+  padding-bottom:60px;
   display: flex;
   a {
     margin-right: 8px;

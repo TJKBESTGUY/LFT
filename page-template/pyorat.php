@@ -15,26 +15,28 @@
 
       </div>
 
-      <section class="section--full-header">
-        <div class="module--bg-img">
-          <picture>
-            <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/header2.jpg">
-              <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/header2.jpg">
-                <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/header2.jpg" alt="" src="">
-            </picture>
-        </div>
-
-        <div class="U_container U_base-pad">
-          <div class="module--heading_txt">
-            <div class="heading">
-                <h1>Pyörät</h1>
-            </div>
-
-
+      <section class="section--bikes-header">
+            <div class="U_container U_base-pad">
+        <div class="module--bikes-header">
+          <div class="flx-container">
+          <div class="bikes-header__content">
+            <h1 class="h2">Modernit sähköpyörämme mahdollistavat sinulle ja perheellesi pidempiäkin retkiä vaativimmillakin reiteillä</h1>
+            <p>
+              Pyöriemme akut kestävät, tehostuksesta riippuen, 80km-150km. Sähköpyörä varmistaa sen että ryhmä pysyy kasassa vaikka kunto, voima tai kokemustaso olisi eri tasolla. Enää ei tarvitse odottaa perheen pienimpiä tai vanhimpia.
+            </p>
+          </div>
+          <div class="bikes-header__img">
+            <picture>
+              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/header-bike.jpg">
+                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/header-bike.jpg">
+                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/header-bike.jpg" alt="" src="">
+              </picture>
           </div>
 
-        </div>
 
+                </div>
+        </div>
+        </div>
       </section>
 
 
@@ -43,7 +45,7 @@
 
 
 
-          <section class="section--basic U-sec-pad bg--nude">
+          <section class="section--basic U-sec-pad bg--nude -mute-top-pad">
                 <div class="U_container U_base-pad">
                   <div class="bikes-speed-nav">
                           <div class="bikes-speed-nav__inner">

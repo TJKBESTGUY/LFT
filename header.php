@@ -135,13 +135,13 @@
 </style>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
 
 <script type="text/javascript">
 const home_url = "<?php echo home_url() ?>"; // "A string here"
-const dir_url = "<?php echo get_template_directory_uri(); ?>/xml/test.xml"
+
 console.log(home_url);
-console.log(dir_url);
+
 </script>
 
 </head>
@@ -156,9 +156,7 @@ $page_name = get_the_title();
 
 <body <?php body_class( $page_name ); ?>>
 
-<a class="skip-link screen-reader-text" href="#site-content-skip">
-	<?php _e( 'Skip to content', 'ebikerental' ); ?>
-</a>
+
 
 
 
@@ -262,9 +260,6 @@ $page_name = get_the_title();
 
 </div>
 
-<div class="fixed-mobile-navigation__bottom-graphics" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/kuvitukset/kuvitus4-transparent-2600px.png);">
-
-</div>
 
 </div>
 
@@ -276,5 +271,5 @@ $page_name = get_the_title();
 <div class="site-container" id="site-container">
 
     <div id="page" class="site">
-	    <a id="site-content-skip" class="screen-reader-skip">-</a>
+
         <div id="site-content" class="site-content">

@@ -4249,6 +4249,10 @@ section {
   }
 }
 
+.-mute-top-pad {
+  padding-top: 0 !important;
+}
+
 .U-sec-pad__small {
   padding-top: 80px;
 }
@@ -4900,8 +4904,57 @@ Moved: _kohteet
     display: flex;
   }
 }
-.bikes-speed-nav {
+.section--bikes-header {
+  background: #FCFBF7;
   padding: 60px 0;
+}
+
+.module--bikes-header .flx-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.module--bikes-header .bikes-header__content {
+  width: 50%;
+  padding-bottom: 60px;
+}
+@media screen and (max-width: 1200px) {
+  .module--bikes-header .bikes-header__content {
+    padding-bottom: 40px;
+  }
+}
+.module--bikes-header .bikes-header__content .h2 {
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 1200px) {
+  .module--bikes-header .bikes-header__content .h2 {
+    margin-bottom: 20px;
+  }
+}
+.module--bikes-header .bikes-header__content p {
+  max-width: 530px;
+  padding-right: 30px;
+}
+@media screen and (max-width: 960px) {
+  .module--bikes-header .bikes-header__content {
+    width: 100%;
+    max-width: 550px;
+    padding-bottom: 0;
+  }
+}
+.module--bikes-header .bikes-header__img {
+  width: 50%;
+}
+@media screen and (max-width: 960px) {
+  .module--bikes-header .bikes-header__img {
+    display: none;
+  }
+}
+
+.bikes-speed-nav {
+  border-top: solid 1px black;
+  padding-top: 20px;
+  padding-bottom: 60px;
   display: flex;
 }
 .bikes-speed-nav a {
