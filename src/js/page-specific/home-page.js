@@ -6,6 +6,16 @@ console.log("home HELLO");
  }
 
 
+var swiper_css_mode = false;
+
+ if (window.innerWidth > 1101) {
+     console.log("larger Screen");
+ }
+ else {
+      console.log("Small Screen");
+      swiper_css_mode = true;
+ }
+
 
  const swiper = new Swiper('.swiper-bikes', {
    // Optional parameters
@@ -13,7 +23,7 @@ console.log("home HELLO");
 	 slidesPerView: "auto",
 	        spaceBetween: 0,
 					grabCursor: true,
-
+            cssMode: swiper_css_mode,
 
 
    // Navigation arrows
@@ -35,6 +45,7 @@ console.log("home HELLO");
 	slidesPerView: "auto",
 				 spaceBetween: 0,
 				 			grabCursor: true,
+              cssMode: swiper_css_mode,
 
 
 

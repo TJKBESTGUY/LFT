@@ -42,8 +42,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	/*------- Add touch classes or not --------*/
 	if (!("ontouchstart" in document.documentElement)) {
 		document.documentElement.className += " no-touch-device";
+
 	} else {
 		document.documentElement.className += " touch-device";
+
 	}
 
 	/*------- menu buttons --------*/
@@ -343,5 +345,3 @@ if (isHighDensity()) {
 
 	});
 }
-
-

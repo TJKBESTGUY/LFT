@@ -1083,11 +1083,21 @@ if (document.body.classList.contains('page-template-etusivu')) {
   console.log("home HELLO");
 }
 
+var swiper_css_mode = false;
+
+if (window.innerWidth > 1101) {
+  console.log("larger Screen");
+} else {
+  console.log("Small Screen");
+  swiper_css_mode = true;
+}
+
 var swiper = new Swiper('.swiper-bikes', {
   // Optional parameters
   slidesPerView: "auto",
   spaceBetween: 0,
   grabCursor: true,
+  cssMode: swiper_css_mode,
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next.-bike-swiper',
@@ -1104,6 +1114,7 @@ var swiper_quotes = new Swiper('.swiper-quotes', {
   slidesPerView: "auto",
   spaceBetween: 0,
   grabCursor: true,
+  cssMode: swiper_css_mode,
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next.-quote-swiper',
