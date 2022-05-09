@@ -148,6 +148,11 @@ section {
   margin-right: auto;
 }
 
+  .U_container--article {
+    max-width: 1000px;
+  }
+
+
 .U_base-pad {
 padding-left: 16px;
 padding-right: 16px;
@@ -316,6 +321,13 @@ background-position: center center;
         margin-right: 0;
         }
   }
+
+}
+
+
+.heading-p {
+  margin-top: 30px;
+  max-width: 66.666%;
 
 }
 
@@ -739,6 +751,15 @@ padding-left: $txt-pad;
 }
 }
 
+
+
+
+.module---manifest-block {
+  max-width: 800px;
+  text-align: center;
+  margin: auto;
+  color: $orange;
+}
 
 
 ///////BIKE CARDS//////
@@ -1325,12 +1346,119 @@ text-transform: uppercase;
 ////RENTAL////
 
 .rental-wrapper {
-
+background: white;
 }
 
 
 
+/////////KOHDE PAGE /////
 
+.module--split-heading{
+    margin-bottom: 60px;
+ .flx-container {
+  display: flex;
+  flex-wrap: wrap;
+  }
+  .heading {
+    width: 50%;
+    margin: 0;
+
+    @media screen and (max-width: 1000px) {
+    width: 100%;
+    }
+    h2 {
+      margin: 0;
+      margin-bottom: 20px;
+    }
+  }
+  .txt-content {
+    width: 50%;
+    padding-left: 80px;
+        @media screen and (max-width: 1200px) {
+        padding-left: 40px;
+        }
+        @media screen and (max-width: 1000px) {
+        width: 100%;
+        padding: 0;
+        }
+  }
+}
+
+.pdfemb-viewer {
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+  border:none !important;
+}
+
+.routes__desc-container {
+  position: relative;
+  margin-top: 100px;
+  .flx-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.routes__desc-container:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  top: 0;
+  left: 50%;
+  background: black;
+  transform: translateX(-50%);
+      @media screen and (max-width: 740px) {
+        display: none;
+      }
+}
+
+.routes__unit {
+  width: calc(50% - 10%);
+  h3 {
+font-size: 2.4rem;
+  }
+      @media screen and (max-width: 1000px) {
+        width: calc(50% - 6%);
+        h3 {
+          font-size: 2rem;
+        }
+      }
+
+      @media screen and (max-width: 740px) {
+        width: 100%;
+        margin-bottom: 60px;
+        border-left: solid 1px black;
+        padding-left: 20px;
+        h3 {
+          font-size: 2rem;
+        }
+      }
+
+
+}
+
+////////VINKIT////////
+
+.module--content-block--vinkit {
+  margin-bottom: 60px;
+  .vinkit__heading {
+    color:$orange;
+  }
+  .vinkit__txt-content {
+    margin-top: 30px;
+    font-size: 1.6rem;
+  }
+  ul {
+    margin-left: 14px;
+  }
+  li {
+    margin-bottom: 20px;
+  }
+  li::marker {
+        color:$orange;
+  }
+}
 
 
 

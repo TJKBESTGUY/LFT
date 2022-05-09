@@ -44,7 +44,7 @@
             <section class="section--basic U-sec-pad bg--nude">
           <div class="U_container U_base-pad">
             <div class="rental-wrapper">
-                <script src=https://master.d26e4mzfe8pjk0.amplifyapp.com/embed.js data-groups="ebikerental"></script>
+             <script src="https://master.d1yygpfz5h5tlv.amplifyapp.com/embed-v2.js" data-groups="ebikerental"></script>
             </div>
 
 

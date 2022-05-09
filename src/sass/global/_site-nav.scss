@@ -919,14 +919,35 @@ padding-top: 10px;
 
 
 
+.page-template-varaus {
+  .navigation-links.-desktop-nav, .nav-cta {
+    display: none;
+  }
+  .site-header {
+    background: $orange;
+  }
+  .mobile-nav-trigger-box {
+    display: none;
+  }
+
+  .header-logo {
+    width: auto;
+  }
+  .flx-nav {
+    justify-content: center;
+  }
+
+}
+
+
+
+
 
 .fixed-mobile-navigation {
 
 
   // opacity: 1;
   // height: 100%;
-
-
 }
 
 
@@ -978,18 +999,4 @@ padding-top: 10px;
 
 
 
-
-
-
-////////LOADING SHIT/////
-.laskenta-nav-counter {
-  opacity: 0;
-  transform: translateY(6px);
-}
-.S-app-ready {
-  .laskenta-nav-counter {
-    opacity: 1;
-    transition: 0.3s;
-    transform: none;
-  }
-}
+////VARAUS PAGE /////
