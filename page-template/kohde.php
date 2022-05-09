@@ -153,7 +153,7 @@
                       <div class="module--routes">
 
                       <div class="routes__pdf-box">
-                      <?php echo do_shortcode( ' [pdf-embedder url="http://ebikererentalfi.local/wp-content/uploads/2022/05/kartta-www.pdf"] ' ); ?>
+                      <?php echo do_shortcode( ' [pdf-embedder url="/wp-content/uploads/2022/05/kartta-www.pdf"] ' ); ?>
                       </div>
 
                       <div class="capsule-wrap">
