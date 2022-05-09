@@ -177,7 +177,7 @@ $page_name = get_the_title();
 
 
       <a class="-nav-link Target--palvelut " href="/pyorat">Pyörät</a>
-      <a class="-nav-link Target--" href="/saariselkä">Saariselkä
+      <a class="-nav-link Target--" href="/saariselka">Saariselkä
       </a>
 
       <a class="-nav-link Target--yhteystiedot" href="/yhteystiedot">Yhteystiedot</a>
