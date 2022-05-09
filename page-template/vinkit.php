@@ -25,18 +25,37 @@
 
           <section class="section--basic U-sec-pad bg--nude">
                     <div class="U_container U_base-pad U_container--article">
-      <div class="module--heading_txt">
-          <div class="heading-content">
-          <div class="heading">
-        <h1>Valmiina retkelle?</h1>
+
+                      <?php if ( have_rows( 'header_block' ) ) : ?>
+	<?php while ( have_rows( 'header_block' ) ) : the_row(); ?>
+      <div class="module--heading_txt heading-txt--page-start">
+        <div class="heading-content">
+        <div class="heading">
+		<h1><?php the_sub_field( 'header' ); ?></h1>
+          </div>
+              <div class="heading-p">
+		<p><?php the_sub_field( 'text_content' ); ?></p>
+      </div>
+  </div>
+</div>
+	<?php endwhile; ?>
+<?php endif; ?>
+
+
+<?php if ( have_rows( 'vinkit_block' ) ) : ?>
+	<?php while ( have_rows( 'vinkit_block' ) ) : the_row(); ?>
+        <div class="module--content-block--vinkit">
+            <div class="vinkit__heading">
+		<h2><?php the_sub_field( 'heading' ); ?></h2>
+          </div>
+              <div class="vinkit__txt-content">
+		<?php the_sub_field( 'content' ); ?>
           </div>
       </div>
-      <div class="heading-p" style="max-width:100%">
-
-          <p>Saariselän erämaiseen tunturimaastoon lähdettäessä on syytä varustautua huolellisesti retkeen. Oikeanlaiset vaatteet, eväät, juomaa, kartta sekä täyteen ladattu puhelin kuuluvat jokaisen maastoon lähtijän perusvarustukseen. Alta löydät yksityiskohtaisempia vinkkejä matkaan.</p>
-
-      </div>
-    </div>
+	<?php endwhile; ?>
+<?php else : ?>
+	<?php // no rows found ?>
+<?php endif; ?>
 
 
     <div class="module--content-block--vinkit">
@@ -108,6 +127,43 @@ Jätä pidemmistä reiteistä suunnitelma vuokraamoon.</p>
 
     </div>
           </section>
+
+
+          <section class="section--basic U-sec-pad section--bottom-cta bg--dark">
+            <div class="U_container U_base-pad">
+<div class="module--split-content">
+    <div class="flx-container">
+              <div class="cell split-content__img">
+        <div class="cell_img-content">
+
+          <div class="image-aspect-box -wide-aspect">
+            <div class="image-aspect-box_inner ">
+            <picture>
+              <source media="(min-width:650px)" data-srcset="http://ebikererentalfi.local/wp-content/uploads/2022/04/kuva2b.jpg" srcset="http://ebikererentalfi.local/wp-content/uploads/2022/04/kuva2b.jpg">
+                <source media="(min-width:465px)" data-srcset="http://ebikererentalfi.local/wp-content/uploads/2022/04/kuva2b.jpg" srcset="http://ebikererentalfi.local/wp-content/uploads/2022/04/kuva2b.jpg">
+                  <img class="lazy-anim ls-is-cached lazyloaded" data-src="http://ebikererentalfi.local/wp-content/uploads/2022/04/kuva2b.jpg" alt="" src="http://ebikererentalfi.local/wp-content/uploads/2022/04/kuva2b.jpg">
+              </picture>
+
+          </div>
+          </div>
+        </div>
+      </div>
+
+<div class="cell mosaic-split__txt split-content__txt">
+  <div class="cell_txt-content">
+                <h2>Varaa nyt!</h2>
+                      <div class="capsule-wrap">
+          <a class="btn--basic -btn-left" href="/varaus/" target="">Varaa ›</a>
+
+        </div>
+
+</div>
+  </div>
+</div>
+</div>
+
+</div>
+</section>
 
     </main><!-- #main -->
   </div><!-- #primary -->

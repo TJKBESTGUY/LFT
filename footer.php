@@ -52,7 +52,7 @@
                 <a href="/pyorat">Pyörät</a>
               </li>
 							<li>
-								<a href="#">Saariselkä</a>
+								<a href="/saariselka">Saariselkä</a>
 							</li>
 							<li>
 								<a href="/">Yhteystiedot</a>
@@ -88,14 +88,9 @@
 
 </div><!-- #page -->
 
-<?php
-$sidebar_icon = ign_get_config( 'sidebar_icon', 'sidebar-icon' );
-if($sidebar_icon == 'sidebar-icon'){
-	$sidebar_icon = "<span class='$sidebar_icon'></span>";
-}
-?>
 
-<!-- <button aria-label="Toggle Right Panel" data-toggle="open" data-target="#panel-right" aria-expanded="false" class="panel-right-toggle"><?php echo $sidebar_icon; ?></button> -->
+
+
 
 </div><!-- .site-container -->
 

@@ -440,6 +440,9 @@ margin-bottom: 60px;
 
 }
 
+
+
+
 //FLOATING HEADING
 .floating-heading {
   padding-top: 20px;
@@ -1440,6 +1443,19 @@ font-size: 2.4rem;
 
 ////////VINKIT////////
 
+.heading-txt--page-start {
+    @media screen and (max-width: 700px) {
+    padding-top: 60px;
+    }
+  .heading-p {
+    max-width: 100%;
+    font-size: 2rem;
+      @media screen and (max-width: 700px) {
+      font-size: 1.8rem;
+      }
+  }
+}
+
 .module--content-block--vinkit {
   margin-bottom: 60px;
   .vinkit__heading {
@@ -1447,7 +1463,9 @@ font-size: 2.4rem;
   }
   .vinkit__txt-content {
     margin-top: 30px;
+          @media screen and (min-width: 700.11px) {
     font-size: 1.6rem;
+      }
   }
   ul {
     margin-left: 14px;

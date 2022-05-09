@@ -5396,6 +5396,21 @@ Moved: _kohteet
   }
 }
 
+@media screen and (max-width: 700px) {
+  .heading-txt--page-start {
+    padding-top: 60px;
+  }
+}
+.heading-txt--page-start .heading-p {
+  max-width: 100%;
+  font-size: 2rem;
+}
+@media screen and (max-width: 700px) {
+  .heading-txt--page-start .heading-p {
+    font-size: 1.8rem;
+  }
+}
+
 .module--content-block--vinkit {
   margin-bottom: 60px;
 }
@@ -5404,7 +5419,11 @@ Moved: _kohteet
 }
 .module--content-block--vinkit .vinkit__txt-content {
   margin-top: 30px;
-  font-size: 1.6rem;
+}
+@media screen and (min-width: 700.11px) {
+  .module--content-block--vinkit .vinkit__txt-content {
+    font-size: 1.6rem;
+  }
 }
 .module--content-block--vinkit ul {
   margin-left: 14px;

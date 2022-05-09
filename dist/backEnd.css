@@ -5589,6 +5589,20 @@ div .editor-styles-wrapper .acf-block-preview .routes__unit h3 {
     font-size: 2rem;
   }
 }
+@media screen and (max-width: 700px) {
+  div .editor-styles-wrapper .acf-block-preview .heading-txt--page-start {
+    padding-top: 60px;
+  }
+}
+div .editor-styles-wrapper .acf-block-preview .heading-txt--page-start .heading-p {
+  max-width: 100%;
+  font-size: 2rem;
+}
+@media screen and (max-width: 700px) {
+  div .editor-styles-wrapper .acf-block-preview .heading-txt--page-start .heading-p {
+    font-size: 1.8rem;
+  }
+}
 div .editor-styles-wrapper .acf-block-preview .module--content-block--vinkit {
   margin-bottom: 60px;
 }
@@ -5597,7 +5611,11 @@ div .editor-styles-wrapper .acf-block-preview .module--content-block--vinkit .vi
 }
 div .editor-styles-wrapper .acf-block-preview .module--content-block--vinkit .vinkit__txt-content {
   margin-top: 30px;
-  font-size: 1.6rem;
+}
+@media screen and (min-width: 700.11px) {
+  div .editor-styles-wrapper .acf-block-preview .module--content-block--vinkit .vinkit__txt-content {
+    font-size: 1.6rem;
+  }
 }
 div .editor-styles-wrapper .acf-block-preview .module--content-block--vinkit ul {
   margin-left: 14px;

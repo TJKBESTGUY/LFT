@@ -177,7 +177,7 @@ $page_name = get_the_title();
 
 
       <a class="-nav-link Target--palvelut " href="/pyorat">Pyörät</a>
-      <a class="-nav-link Target--" href="/">Saariselkä
+      <a class="-nav-link Target--" href="/saariselkä">Saariselkä
       </a>
 
       <a class="-nav-link Target--yhteystiedot" href="/yhteystiedot">Yhteystiedot</a>
@@ -185,7 +185,7 @@ $page_name = get_the_title();
     </nav>
 
     <div class="nav-cta">
-      <a class="f--medium" href="">Varaa nyt</a>
+      <a class="f--medium" href="/varaa" target="_blank">Varaa nyt</a>
     </div>
 
       </div>
@@ -220,10 +220,10 @@ $page_name = get_the_title();
 
     <nav class="fixed-mobile-navigation__links U_base-pad--right-only">
       <a class="-nav-link Target--palvelut " href="/pyorat">Pyörät</a>
-      <a class="-nav-link Target--" href="/">Saariselkä
+      <a class="-nav-link Target--" href="/saariselka">Saariselkä
       </a>
       <a class="-nav-link Target--yhteystiedot" href="/yhteystiedot">Yhteystiedot</a>
-      <a class="f--medium fixed-order-cta" href="">Varaa nyt</a>
+      <a class="f--medium fixed-order-cta" href="varaa" target="_blank">Varaa nyt</a>
     </nav>
 
       <div class="fixed-mobile-navigation__sub-links">
@@ -231,10 +231,10 @@ $page_name = get_the_title();
 
           <ul>
             <li>
-              <!-- <a href="#">09 586 0030</a> -->
+
             </li>
             <li>
-              <!-- <a href="#">areite@areite.fi</a> -->
+
             </li>
           </ul>
         </div>
