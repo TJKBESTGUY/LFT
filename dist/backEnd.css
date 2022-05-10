@@ -5395,24 +5395,31 @@ div .editor-styles-wrapper .acf-block-preview .bike-card__content {
   text-align: center;
   flex-grow: 2;
 }
-div .editor-styles-wrapper .acf-block-preview .bike-card__content h4 {
+div .editor-styles-wrapper .acf-block-preview .bike-card__content .bike__name, div .editor-styles-wrapper .acf-block-preview .bike-card__content h4 {
   font-size: 3.2rem;
   margin: 0;
 }
 @media screen and (max-width: 1200px) {
-  div .editor-styles-wrapper .acf-block-preview .bike-card__content h4 {
+  div .editor-styles-wrapper .acf-block-preview .bike-card__content .bike__name, div .editor-styles-wrapper .acf-block-preview .bike-card__content h4 {
     font-size: 2.6rem;
   }
 }
 @media screen and (max-width: 800px) {
-  div .editor-styles-wrapper .acf-block-preview .bike-card__content h4 {
+  div .editor-styles-wrapper .acf-block-preview .bike-card__content .bike__name, div .editor-styles-wrapper .acf-block-preview .bike-card__content h4 {
     font-size: 2.2rem;
   }
+}
+div .editor-styles-wrapper .acf-block-preview .bike-card__content .bike__sub-name {
+  font-size: 1.3rem;
+  line-height: 1;
+  color: #ff8517;
+  display: inline-flex;
+  line-height: 1;
 }
 div .editor-styles-wrapper .acf-block-preview .bike-card__content p {
   margin-top: 18px;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 @media screen and (max-width: 700px) {
   div .editor-styles-wrapper .acf-block-preview .bike-card__content p {

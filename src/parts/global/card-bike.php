@@ -37,7 +37,8 @@
 <?php } ?>
 
 <div class="bike-card__content">
-<h4 class="f--bold"><?php the_field( 'bike_name' ); ?></h4>
+  <h4 class="f--bold bike__name"><?php the_field( 'bike_name' ); ?></h4>
+  <span class="bike__sub-name"><?php the_field( 'bike_name_sub' ); ?></span>
 
 <p><?php the_field( 'text_content_suomi' ); ?></p>
 

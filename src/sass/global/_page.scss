@@ -1234,7 +1234,7 @@ text-transform: uppercase;
     padding: 16px;
     text-align: center;
     flex-grow: 2;
-    h4 {
+    .bike__name, h4 {
       font-size: 3.2rem;
       margin: 0;
             @media screen and (max-width: 1200px) {
@@ -1244,10 +1244,17 @@ text-transform: uppercase;
                   font-size: 2.2rem;
             }
     }
+    .bike__sub-name {
+      font-size: 1.3rem;
+    line-height: 1;
+    color: #ff8517;
+    display: inline-flex;
+    line-height: 1;
+    }
     p {
       margin-top: 18px;
       text-align: center;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       @media screen and (max-width: 700px) {
             font-size: 1.2rem;
       }
