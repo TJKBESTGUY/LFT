@@ -39,6 +39,26 @@
 <div class="bike-card__content">
   <h4 class="f--bold bike__name"><?php the_field( 'bike_name' ); ?></h4>
   <span class="bike__sub-name"><?php the_field( 'bike_name_sub' ); ?></span>
+  <?php if ( have_rows( 'bike_size' ) ) : ?>
+    <div class="bike-card__size">
+
+<?php while ( have_rows( 'bike_size' ) ) : the_row(); ?>
+<?php
+$select_sizes_array = get_sub_field( 'select_sizes' );
+if ( $select_sizes_array ):
+foreach ( $select_sizes_array as $select_sizes_item ):
+?>
+<span class="bike-size-span"><?php echo $select_sizes_item; ?></span>
+<?php
+endforeach;
+endif; ?>
+<?php if( get_sub_field('text_suomi')  )  { ?>
+<span class=""><?php the_sub_field( 'text_suomi' ); ?></span>
+<?php } ?>
+<?php endwhile; ?>
+
+      </div>
+<?php endif; ?>
 
 <p><?php the_field( 'text_content_suomi' ); ?></p>
 
