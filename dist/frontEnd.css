@@ -5214,7 +5214,7 @@ Moved: _kohteet
   line-height: 1;
 }
 .bike-card__content p {
-  margin-top: 18px;
+  margin-top: 10px;
   text-align: center;
   font-size: 1.3rem;
 }
@@ -5227,7 +5227,7 @@ Moved: _kohteet
   display: flex;
   width: 100%;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 6px;
   align-items: center;
   font-size: 16px;
 }
@@ -5254,10 +5254,11 @@ Moved: _kohteet
 .bike-card__footer {
   padding: 16px;
   text-align: center;
+  padding-top: 4px;
 }
 @media screen and (max-width: 700px) {
   .bike-card__footer {
-    padding-top: 8px;
+    padding-top: 4px;
   }
 }
 .bike-card__footer .wrap {
