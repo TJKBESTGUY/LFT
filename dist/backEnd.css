@@ -5468,7 +5468,9 @@ div .editor-styles-wrapper .acf-block-preview .bike-card__footer .wrap {
   justify-content: center;
 }
 div .editor-styles-wrapper .acf-block-preview .bike-card__footer span {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  margin-top: 12px;
+  display: inline-block;
 }
 div .editor-styles-wrapper .acf-block-preview .module--quote-floater {
   max-width: 1100px;

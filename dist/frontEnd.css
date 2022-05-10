@@ -5266,7 +5266,9 @@ Moved: _kohteet
   justify-content: center;
 }
 .bike-card__footer span {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  margin-top: 12px;
+  display: inline-block;
 }
 
 .module--quote-floater {
