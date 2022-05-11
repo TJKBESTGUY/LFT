@@ -5446,6 +5446,20 @@ Moved: _kohteet
   color: #ff8517;
 }
 
+.module--basic-article ul {
+  margin-left: 14px;
+  margin-top: 20px;
+}
+.module--basic-article li {
+  margin-bottom: 20px;
+}
+.module--basic-article li::marker {
+  color: #ff8517;
+}
+.module--basic-article ul ul li::marker {
+  color: black;
+}
+
 img[data-action=zoom] {
   cursor: pointer;
   cursor: -moz-zoom-in;

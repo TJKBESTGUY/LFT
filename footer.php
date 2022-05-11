@@ -59,7 +59,7 @@
 							</li>
               <li class="-nav-link-spacer"></li>
               <li>
-                <a href="#">Toimitusehdot</a>
+                <a href="/toimitusehdot">Toimitusehdot</a>
               </li>
               <li>
                 <a href="#">Tietosuojaseloste</a>

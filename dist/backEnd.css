@@ -5637,6 +5637,19 @@ div .editor-styles-wrapper .acf-block-preview .module--content-block--vinkit li 
 div .editor-styles-wrapper .acf-block-preview .module--content-block--vinkit li::marker {
   color: #ff8517;
 }
+div .editor-styles-wrapper .acf-block-preview .module--basic-article ul {
+  margin-left: 14px;
+  margin-top: 20px;
+}
+div .editor-styles-wrapper .acf-block-preview .module--basic-article li {
+  margin-bottom: 20px;
+}
+div .editor-styles-wrapper .acf-block-preview .module--basic-article li::marker {
+  color: #ff8517;
+}
+div .editor-styles-wrapper .acf-block-preview .module--basic-article ul ul li::marker {
+  color: black;
+}
 div .editor-styles-wrapper .acf-block-preview img[data-action=zoom] {
   cursor: pointer;
   cursor: -moz-zoom-in;

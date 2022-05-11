@@ -1490,7 +1490,24 @@ font-size: 2.4rem;
 }
 
 
+///// USE UL/LI STYLE ON BASIC SHIITT
 
+
+.module--basic-article {
+  ul {
+    margin-left: 14px;
+    margin-top: 20px;
+  }
+  li {
+    margin-bottom: 20px;
+  }
+  li::marker {
+        color:$orange;
+  }
+  ul ul  li::marker {
+    color:black;
+  }
+}
 
 
 
