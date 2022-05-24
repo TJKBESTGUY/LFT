@@ -150,7 +150,7 @@ console.log(home_url);
 
 
 <?php
-$app_menu = ign_get_config("mobile_menu_type", 'regular_menu'); //accepts svg icon or 'app' which renders the special = to x
+
 $page_name = get_the_title();
 ?>
 

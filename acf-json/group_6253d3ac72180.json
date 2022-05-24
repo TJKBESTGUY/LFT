@@ -24,6 +24,31 @@
             "new_lines": "br"
         },
         {
+            "key": "field_627b97d8b33b2",
+            "label": "Header Image",
+            "name": "header_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "admin_only": 0,
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_6253d3ef7cf7b",
             "label": "Content block - Esittely",
             "name": "content_block_esittely",
@@ -629,5 +654,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1649671809
+    "modified": 1652266991
 }

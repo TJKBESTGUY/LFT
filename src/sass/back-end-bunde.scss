@@ -2,6 +2,7 @@
 @use 'wordpress/default-blocks';
 @use "gutenberg/gutenberg-layout";
 @use "gutenberg/gutenberg-styles";
+@use "gutenberg/editor-styles";
 
 
 .editor-styles-wrapper .acf-block-preview{

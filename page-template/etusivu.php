@@ -365,8 +365,12 @@
                 <div class="bike-card__footer">
                         <div class="-wrap">
                     <a class="btn--secondary" href="<?php echo $link_for_more_information['url']; ?>" target="_blank"><?php echo $link_for_more_information['title']; ?></a>
+                    <?php $link_for_more_information_2 = get_field( 'link_for_more_information_2' ); ?>
+                    <?php if ( $link_for_more_information_2 ) { ?>
+	                     <a class="btn--secondary" href="<?php echo $link_for_more_information_2['url']; ?>" target="<?php echo $link_for_more_information_2['target']; ?>"><?php echo $link_for_more_information_2['title']; ?></a>
+                     <?php } ?>
                           </div>
-                        <span class="f--medium">Tutustu pyörään tarkemmin valmistajan sivuilta</span>
+                        <span class="f--medium">Tutustu tarkemmin valmistajan sivuilta</span>
                 </div>
           <?php } ?>
         </div>

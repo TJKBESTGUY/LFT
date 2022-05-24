@@ -1,0 +1,238 @@
+@use "../resources" as *; //should also load resources
+
+///////CUSTOM EDITOR STYLES/////
+
+body #wpadminbar {
+  background: #121313;
+}
+
+.wp-admin {
+  background: #e9edee66;
+}
+
+a {
+  color: #103cf0;
+}
+
+
+// .edit-post-visual-editor {
+//   min-height: 600px;
+// }
+
+
+
+// .wp-block-post-title {
+//    border-bottom: solid 1px black;
+// }
+
+#postdivrich {
+  display:none;
+}
+
+
+.acf-postbox:nth-child(even) {
+	/* background: #dea1d8; */
+
+	    border: solid 1px #e2e4e7;
+		    /* border-radius: 10px 10px 0px 0px; */
+			margin: 2rem 0;
+}
+
+
+.acf-postbox:nth-child(even) h2.ui-sortable-handle span {
+	background: #a0cdff;
+	   	    padding: 6px 10px;
+			border-radius: 999px;
+}
+
+
+.acf-flexible-content .layout .acf-fc-layout-order {
+
+    text-align: center;
+    line-height: 20px;
+    margin: 0 2px 0 0;
+    background: black;
+    font-size: 12px;
+    color: white;
+}
+
+
+.acf-postbox:nth-child(odd) {
+	/* background:#b7b4ec; */
+
+
+	    border: solid 1px #e2e4e7;
+		    /* border-radius: 10px 10px 0px 0px; */
+}
+
+.acf-postbox:nth-child(odd) h2.ui-sortable-handle span {
+	background: #b7b4ec;
+	    padding: 6px 10px;
+						border-radius: 999px;
+}
+
+.acf-postbox {
+	color: #000;
+    border: 1px solid rgb(238 238 238);
+    box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px !important;
+}
+
+
+
+.acf-postbox>.hndle .acf-hndle-cog {
+	color:black;
+}
+
+#editor .postbox {
+    color: black !important;
+}
+
+.postbox .handle-order-higher, .postbox .handle-order-lower {
+    color: #000000 !important;
+
+}
+
+.accordion-section-title:after, .handlediv, .item-edit, .postbox .handlediv.button-link, .toggle-indicator {
+    color: #000000 !important;
+}
+
+.acf-field .acf-label label {
+	/* display: inline-block;
+	    font-weight: 400;
+	    margin: 0 0 3px;
+	    padding: 0;
+	    border: solid 1px;
+	    padding: 4px 10px;
+	    border-radius: 30px;
+	    text-align: center; */
+			text-transform: uppercase;
+}
+
+
+
+.acf-postbox .inside  {
+	background: white;
+}
+
+.edit-post-meta-boxes-area .postbox>.inside {
+border:none;
+
+}
+
+.acf-row-handle.order span {
+		font-weight: 600;
+}
+
+.acf-row:nth-of-type(odd) .acf-row-handle.order {
+	  border-right: solid 1px #dfdfdf;
+  background: white;
+	/* background: #eeeeee; */
+  color: #000;
+  text-shadow: none;
+}
+
+
+
+.acf-row:nth-of-type(odd) .acf-row-handle.order span{
+	color: #fff;
+	background: #546dd6;
+	text-shadow: none;
+padding: 4px 8px;
+	/* border: solid 1px #dfdfdf; */
+	border-radius: 35px;
+	font-weight: 400 !important;
+	font-size: 10px;
+}
+
+.acf-field {
+
+    border: none !important;
+    border-top: solid 1px #eeeeee !important;
+}
+
+
+.acf-row:nth-of-type(even) .acf-row-handle.order {
+  background: white;
+	 /* background: #eeeeee; */
+  color: #000;
+  text-shadow: none;
+	border-right: solid 1px #dfdfdf;
+}
+
+.acf-row:nth-of-type(even) .acf-row-handle.order span{
+	color: #fff;
+	    background: #546dd6;
+	    text-shadow: none;
+	    padding: 4px 8px;
+	    /* border: solid 1px #dfdfdf; */
+	    border-radius: 35px;
+	    font-weight: 400 !important;
+			font-size: 10px;
+
+}
+
+.acf-postbox h2 {
+	    color: #103cf0 !important;
+			font-size: 15px;
+}
+
+.acf-fields>.acf-field {
+    position: relative;
+    margin: 0;
+    padding: 36px 12px;
+    border-top: #546DD6 solid 2px;
+}
+
+.acf-repeater .acf-row-handle.remove {
+    background: #ffffff;
+    border-left-color: #DFDFDF;
+}
+
+.acf-flexible-content .layout {
+
+    /* border: 1px solid #000000; */
+    border-radius: 6px;
+}
+
+.acf-fc-layout-handle {
+
+
+border-bottom: #000000 solid 1px;
+color: #136fe8;
+
+}
+
+.wp-core-ui .button-primary {
+  background: black;
+    border-color: black;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 26px;
+}
+
+.wp-core-ui .button-primary:hover {
+  background: #1561ba;
+    border-color: #1461ba;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 26px;
+}
+	.acf-flexible-content .layout {
+
+	}
+
+	.acf-flexible-content .layout .acf-fc-layout-handle {
+
+	}
+	.acf-fields.-left > .acf-field:before {
+background: white !important;
+}
+
+#editor .edit-post-layout__metaboxes {
+  max-width: 1000px;
+    margin: auto;
+  min-width: 75%;
+        margin-bottom: 100px;
+}

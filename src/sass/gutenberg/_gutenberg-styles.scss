@@ -18,7 +18,7 @@ div .editor-styles-wrapper{
   font-smoothing: antialiased;
 
 
-  @include meta.load-css( '../global/typography');
+  // @include meta.load-css( '../global/typography');
 
   //only applying inside acf preview blocks, so we dont mess with buttons and inputs of WordPress
   .acf-block-preview {
@@ -30,6 +30,3 @@ div .editor-styles-wrapper{
     @include meta.load-css("../settings/settings");
   }
 }
-
-
-
