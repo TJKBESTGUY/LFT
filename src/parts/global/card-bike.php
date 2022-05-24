@@ -69,6 +69,9 @@ endif; ?>
   <?php if ( $link_for_more_information ) { ?>
         <div class="bike-card__footer">
                 <div class="-wrap">
+                  <?php if ( $link_for_more_information_2 ) { ?>
+                     <a class="btn--secondary" href="<?php echo $link_for_more_information_2['url']; ?>" target="<?php echo $link_for_more_information_2['target']; ?>"><?php echo $link_for_more_information_2['title']; ?></a>
+                   <?php } ?>
             <a class="btn--secondary" href="<?php echo $link_for_more_information['url']; ?>" target="_blank"><?php echo $link_for_more_information['title']; ?></a>
                   </div>
                 <span class="f--medium">Tutustu pyörään tarkemmin valmistajan sivuilta</span>
