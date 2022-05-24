@@ -179,6 +179,8 @@ $page_name = get_the_title();
       <a class="-nav-link Target--palvelut " href="/pyorat">Pyörät</a>
       <a class="-nav-link Target--" href="/saariselka">Saariselkä
       </a>
+      <a class="-nav-link Target--hinnasto" href="/hinnasto">Hinnasto
+      </a>
 
       <a class="-nav-link Target--yhteystiedot" href="/yhteystiedot">Yhteystiedot</a>
 
@@ -221,6 +223,8 @@ $page_name = get_the_title();
     <nav class="fixed-mobile-navigation__links U_base-pad--right-only">
       <a class="-nav-link Target--palvelut " href="/pyorat">Pyörät</a>
       <a class="-nav-link Target--" href="/saariselka">Saariselkä
+      </a>
+      <a class="-nav-link Target--hinnasto" href="/hinnasto">Hinnasto
       </a>
       <a class="-nav-link Target--yhteystiedot" href="/yhteystiedot">Yhteystiedot</a>
       <a class="f--medium fixed-order-cta" href="varaa" target="_blank">Varaa nyt</a>

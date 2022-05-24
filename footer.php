@@ -54,19 +54,20 @@
 							<li>
 								<a href="/saariselka">Saariselkä</a>
 							</li>
+              <li>
+								<a href="/hinnasto">Hinnasto</a>
+							</li>
 							<li>
-								<a href="/">Yhteystiedot</a>
+								<a href="/yhteystiedot">Yhteystiedot</a>
 							</li>
               <li class="-nav-link-spacer"></li>
               <li>
-                <a href="/toimitusehdot">Toimitusehdot</a>
+                <a href="/vuokrausehdot">Vuokrausehdot</a>
               </li>
               <li>
-                <a href="#">Tietosuojaseloste</a>
+                <a href="/Tietosuojaseloste">Tietosuojaseloste</a>
               </li>
-              <li>
-                <a href="#">Evästeseloste</a>
-              </li>
+
 
 						</ul>
 					</div>

@@ -5460,6 +5460,13 @@ Moved: _kohteet
   color: black;
 }
 
+.-single-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 img[data-action=zoom] {
   cursor: pointer;
   cursor: -moz-zoom-in;

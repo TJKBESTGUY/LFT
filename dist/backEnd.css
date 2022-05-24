@@ -5227,6 +5227,12 @@ div .editor-styles-wrapper .acf-block-preview .module--basic-article li::marker 
 div .editor-styles-wrapper .acf-block-preview .module--basic-article ul ul li::marker {
   color: black;
 }
+div .editor-styles-wrapper .acf-block-preview .-single-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 div .editor-styles-wrapper .acf-block-preview img[data-action=zoom] {
   cursor: pointer;
   cursor: -moz-zoom-in;

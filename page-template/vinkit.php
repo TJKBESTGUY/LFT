@@ -70,27 +70,13 @@
             <div class="U_container U_base-pad">
 <div class="module--split-content">
     <div class="flx-container">
-              <div class="cell split-content__img">
-        <div class="cell_img-content">
 
-          <div class="image-aspect-box -wide-aspect">
-            <div class="image-aspect-box_inner ">
-            <picture>
-              <source media="(min-width:650px)" data-srcset="http://ebikererentalfi.local/wp-content/uploads/2022/04/kuva2b.jpg" srcset="http://ebikererentalfi.local/wp-content/uploads/2022/04/kuva2b.jpg">
-                <source media="(min-width:465px)" data-srcset="http://ebikererentalfi.local/wp-content/uploads/2022/04/kuva2b.jpg" srcset="http://ebikererentalfi.local/wp-content/uploads/2022/04/kuva2b.jpg">
-                  <img class="lazy-anim ls-is-cached lazyloaded" data-src="http://ebikererentalfi.local/wp-content/uploads/2022/04/kuva2b.jpg" alt="" src="http://ebikererentalfi.local/wp-content/uploads/2022/04/kuva2b.jpg">
-              </picture>
 
-          </div>
-          </div>
-        </div>
-      </div>
-
-<div class="cell mosaic-split__txt split-content__txt">
+<div class="cell mosaic-split__txt split-content__txt -single-cell">
   <div class="cell_txt-content">
                 <h2>Varaa nyt!</h2>
                       <div class="capsule-wrap">
-          <a class="btn--basic -btn-left" href="/varaus/" target="">Varaa ›</a>
+          <a class="btn--basic -btn-left" href="/varaa/" target="">Varaa ›</a>
 
         </div>
 
