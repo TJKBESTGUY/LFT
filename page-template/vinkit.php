@@ -76,7 +76,7 @@
   <div class="cell_txt-content">
                 <h2>Varaa nyt!</h2>
                       <div class="capsule-wrap">
-          <a class="btn--basic -btn-left" href="/varaa/" target="">Varaa ›</a>
+          <a class="btn--basic -btn-left" href="/varaa/" target="_blank">Varaa ›</a>
 
         </div>
 
