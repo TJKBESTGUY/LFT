@@ -21,9 +21,8 @@
           <div class="flx-container">
           <div class="bikes-header__content">
             <h1 class="h2">Modernit sähköpyörämme mahdollistavat sinulle ja perheellesi pidempiäkin retkiä vaativimmillakin reiteillä</h1>
-            <p>
-              Pyöriemme akut kestävät, tehostuksesta riippuen, 80km-150km. Sähköpyörä varmistaa sen että ryhmä pysyy kasassa vaikka kunto, voima tai kokemustaso olisi eri tasolla. Enää ei tarvitse odottaa perheen pienimpiä tai vanhimpia.
-            </p>
+            <p>Vuokraamollamme on laaja valikoima erilaisia pyöriä monessa eri koossa. Henkilökuntamme auttaa sinua valitsemaan juuri sinulle sopivan vaihtoehdon. Oikean kokoisen pyörän valinta on tärkeää jotta saat mukavan ja turvallisen pyöräilykokemuksen.
+Tervetuloa kokeilemaan ennen päätöstä!</p>
           </div>
           <div class="bikes-header__img">
             <picture>
@@ -273,9 +272,8 @@ endif; ?>
                           <div class="image-aspect-box -wide-aspect">
                             <div class="image-aspect-box_inner ">
                             <picture>
-                              <source media="(min-width:650px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/bike1.png">
-                                <source media="(min-width:465px)" data-srcset="<?php echo get_template_directory_uri(); ?>/images/bike1.png">
-                                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/bike1.png" alt="" src="">
+
+                                  <img class="lazy-anim lazyload" data-src="<?php echo get_template_directory_uri(); ?>/images/varusteet1.jpg" alt="" src="">
                               </picture>
 
                           </div>
@@ -285,15 +283,14 @@ endif; ?>
                 <div class="cell mosaic-split__txt split-content__txt">
                   <div class="cell_txt-content">
                     <h2>Varusteet</h2>
-                    <p>Tutustu Saariselän reittivalikoimaan ja katso reittikartat kohteen esittelysivulta.</p>
-                    <div class="capsule-wrap">
-                    <a class="btn--basic" href="#">Saariselkä ›</a>
-                </div>
+
                 </div>
                   </div>
 
 
               </div>
+
+
               </div>
 
 

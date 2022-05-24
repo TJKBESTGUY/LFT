@@ -29,15 +29,15 @@
                 <div class="flx-container">
                   <ul>
                     <li>
-                      Saariselänkatu 7,<br>
-                      55555 Saariselkä
+                      Kelotie 2<br>
+                      99830 Saariselkä
                     </li>
                       <li class="-nav-link-spacer"></li>
                     <li>
-                      <a href="#">puhelin</a>
+                      <a href="tel:+358505566853">050 556 6853</a>
                     </li>
                     <li>
-                      <a href="#">sähköposti</a>
+                      <a href="mailto:saariselka@ebikerental.fi">saariselka@ebikerental.fi</a>
                     </li>
                   </ul>
 

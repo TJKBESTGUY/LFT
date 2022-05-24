@@ -359,7 +359,10 @@ height: 100%;
     color: inherit;
       position: relative;
 
-      font-size: 8vw;
+      font-size: 5vw;
+          @media screen and (max-width: 500px) {
+        font-size: 2.6rem;
+          }
       margin-bottom: 10px;
 
 
@@ -386,7 +389,7 @@ background: black;
     }
 
 .fixed-mobile-navigation__sub-links {
-  margin-top: 40px;
+  margin-top: 20px;
   ul {
     list-style-type: none;
     margin: 0;
@@ -395,10 +398,14 @@ background: black;
   }
   li {
     margin-right: 20px;
+    margin-bottom: 6px;
   }
   a {
-    color:white;
+    color:black;
+    font-weight: 400;
+    font-family: "HDColton-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     position: relative;
+    font-size: 2rem;
   }
 }
 
