@@ -21,8 +21,7 @@
       <section class="section--full-header">
         <div class="module--bg-img">
           <picture>
-            <source media="(min-width:650px)" data-srcset="<?php echo $header_image['url']; ?>">
-              <source media="(min-width:465px)" data-srcset="<?php echo $header_image['url']; ?>">
+        
                 <img class="lazy-anim lazyload" data-src="<?php echo $header_image['url']; ?>" alt="<?php echo $header_image['alt']; ?>" src="">
             </picture>
         </div>

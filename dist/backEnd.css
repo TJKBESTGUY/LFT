@@ -5268,6 +5268,13 @@ div .editor-styles-wrapper .acf-block-preview .zoom-overlay-open,
 div .editor-styles-wrapper .acf-block-preview .zoom-overlay-transitioning {
   cursor: default;
 }
+div .editor-styles-wrapper .acf-block-preview .lazy-anim {
+  opacity: 0;
+}
+div .editor-styles-wrapper .acf-block-preview .lazy-anim.lazyloaded {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
 div .editor-styles-wrapper .acf-block-preview .background-image {
   position: absolute;
   top: 0;

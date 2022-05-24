@@ -5508,6 +5508,15 @@ img.zoom-img {
   cursor: default;
 }
 
+.lazy-anim {
+  opacity: 0;
+}
+
+.lazy-anim.lazyloaded {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
 /*--------------------------------------------------------------
 # Global Forms
 --------------------------------------------------------------*/
