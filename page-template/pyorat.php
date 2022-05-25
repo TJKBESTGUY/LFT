@@ -283,6 +283,12 @@ endif; ?>
                 <div class="cell mosaic-split__txt split-content__txt">
                   <div class="cell_txt-content">
                     <h2>Varusteet</h2>
+                    <p>
+                      Vuokraamme pyörien vuokraajille lisäksi laadukkaita POC:n kypäriä, kevyitä lukkoja sekä pyörään kiinnitettäviä puhelinpidikkeitä.
+                    </p>
+                    <p>
+                      Myymälästämme voit ostaa juomapulloja, ajovarusteita ja pientä purtavaa retkien iloksi.
+                    </p>
 
                 </div>
                   </div>

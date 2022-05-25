@@ -234,11 +234,11 @@ $page_name = get_the_title();
         <div class="">
 
           <ul>
-        
+
             <li>
               <a href="/vuokrausehdot">Vuokrausehdot</a>
             </li>
-            <li>
+            <li class="tietosuoja-link">
               <a href="/Tietosuojaseloste">Tietosuojaseloste</a>
             </li>
 
