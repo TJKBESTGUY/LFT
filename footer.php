@@ -99,5 +99,275 @@
 <?php wp_footer(); ?>
 
 
+
+<script>
+// COOKIE
+
+window.addEventListener('load', function () {
+     // obtain cookieconsent plugin
+     var cookieconsent = initCookieConsent();
+
+     // run plugin with config object
+     cookieconsent.run({
+         autorun: true,
+         current_lang: "fi",
+
+         autoclear_cookies: true,
+         page_scripts: true,
+         remove_cookie_tables: false,
+         onAccept: function (cookie) {
+             // ... cookieconsent accepted
+         },
+
+         onChange: function (cookie, changed_preferences) {
+             // ... cookieconsent preferences were changed
+         },
+
+         gui_options: {
+       consent_modal: {
+           layout: 'box',               // box/cloud/bar
+           position: 'bottom left',     // bottom/middle/top + left/right/center
+           transition: 'slide'             // zoom/slide
+       },
+       settings_modal: {
+           layout: 'bar',                 // box/bar
+           // position: 'left',           // left/right
+           transition: 'slide'             // zoom/slide
+       }
+   },
+
+         languages: {
+             en: {
+                 consent_modal: {
+                     title: '',
+                     description: 'This website uses essential cookies to ensure its proper operation and tracking cookies to understand how you interact with it. The latter will be set only upon approval. You can learn more about cookies or change your preferences on our cookie setttings: <a href="javascript:void(0);" aria-label="View cookie settings" data-cc="c-settings">Cookie Settings</a>',
+                     primary_btn: {
+                         text: 'Accept',
+                         role: 'accept_all'  // 'accept_selected' or 'accept_all'
+                     },
+                     secondary_btn: {
+                            text: 'Reject',
+                           role: 'accept_necessary'   //'settings' or 'accept_necessary'
+
+                     }
+                 },
+                 settings_modal: {
+                     title: 'Cookie preferences',
+                     save_settings_btn: 'Save settings',
+                     accept_all_btn: 'Accept all',
+                     reject_all_btn: 'Reject all',       // optional, [v.2.5.0 +]
+                     cookie_table_headers: [
+                         {col1: 'Name'},
+                         {col2: 'Domain'},
+                         {col3: 'Expiration'},
+                         {col4: 'Description'},
+                         {col5: 'Type'}
+                     ],
+                     blocks: [
+                         {
+                             title: 'Cookie usage',
+                             description: 'This website uses cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want.'
+                         }, {
+                             title: 'Strictly necessary cookies',
+                             description: 'This website uses cookies to improve the user experience of visitors. Some of these are necessary for the operation of the service and are activated automatically.',
+                             toggle: {
+                                 value: 'necessary',
+                                 enabled: true,
+                                 readonly: true
+                             }
+                         }, {
+                             title: 'Analytics cookies',
+                             description: 'These cookies collect information about how you use the website, which pages you visited and which links you clicked on. All of the data is anonymized and cannot be used to identify you.',
+                             toggle: {
+                                 value: 'analytics',
+                                 enabled: false,
+                                 readonly: false
+                             },
+                             cookie_table: [
+                                 {
+                                     col1: '_ga',
+                                     col2: 'google.com',
+                                     col3: '2 years',
+                                     col4: 'Used to distinguish users.',
+                                     col5: 'Permanent cookie',
+                                     is_regex: true
+                                 },
+                                 {
+                                     col1: '_gid',
+                                     col2: 'google.com',
+                                     col3: '1 day',
+                                     col4: 'Used to distinguish users.',
+                                     col5: 'Permanent cookie'
+                                 }
+                             ]
+                         }
+                         // {
+                         //     title: 'More information',
+                         //     description: 'For any queries in relation to my policy on cookies and your choices, please <a class="cc-link" href="#yourwebsite">contact me</a>.',
+                         // }
+                     ]
+                 }
+             },
+             fi: {
+                 consent_modal: {
+                     title: '',
+                     description: 'Tämä sivusto käyttää välttämättömiä evästeitä suorituskyvyn varmistamiseksi sekä yleisen käytön seurantaan. Lisäksi käytämme kohdennusevästeitä käyttäjäkokemuksen parantamiseksi, analytiikkaan ja kohdistetun sisällön näyttämiseen. Jatkamalla sivuston käyttöä ilman asetusten muuttamista hyväksyt välttämättömien evästeiden käytön. <a href="javascript:void(0);" aria-label="Lue lisää" data-cc="c-settings">Lue lisää evästeistä</a>',
+                     primary_btn: {
+                         text: 'Hyväksy',
+                         role: 'accept_all'  // 'accept_selected' or 'accept_all'
+                     },
+                     secondary_btn: {
+                            text: 'Kieltäydy',
+                           role: 'accept_necessary'   //'settings' or 'accept_necessary'
+                     }
+                 },
+                 settings_modal: {
+                     title: 'Evästeet',
+                     save_settings_btn: 'Tallenna asetukset',
+                     accept_all_btn: 'Hyväksy',
+                     reject_all_btn: 'Kieltäydy',       // optional, [v.2.5.0 +]
+                     cookie_table_headers: [
+                         {col1: 'Name'},
+                         {col2: 'Domain'},
+                         {col3: 'Expiration'},
+                         {col4: 'Description'},
+                         {col5: 'Type'}
+                     ],
+                     blocks: [
+                         {
+                             title: 'Evästeasetukset',
+                             description: 'Tämä sivusto käyttää välttämättömiä evästeitä suorituskyvyn varmistamiseksi sekä yleisen käytön seurantaan. Lisäksi käytämme kohdennusevästeitä käyttäjäkokemuksen parantamiseksi, analytiikkaan ja kohdistetun sisällön näyttämiseen.'
+                         }, {
+                             title: 'Välttämättömät evästeet:',
+                             description: 'Nämä evästeet ovat välttämättömiä sivuston toimintojen ja palveluiden käyttämiselle. Koska nämä evästeet ovat välttämättömiä sivuston toimivuuden kannalta niitä ei voi estää ilman, että ne vaikuttavat sivuston käyttökokemukseen ja toimivuuteen.',
+                             toggle: {
+                                 value: 'necessary',
+                                 enabled: true,
+                                 readonly: true
+                             }
+                         }, {
+                             title: 'Analytiikka',
+                             description: 'Keräämme myös anonymisoitua analytiikkatietoa Google Analyticsin avulla parantaaksemme käyttökokemusta. <a class="cc-link" aria-label="Lue lisää" href="https://policies.google.com/privacy?hl=fi" target="_blank">Lue lisää</a>',
+                             toggle: {
+                                 value: 'analytics',
+                                 enabled: false,
+                                 readonly: false
+                             },
+                             // cookie_table: [
+                             //     {
+                             //         col1: '_ga',
+                             //         col2: 'google.com',
+                             //         col3: '2 years',
+                             //         col4: 'Used to distinguish users.',
+                             //         col5: 'Permanent cookie',
+                             //         is_regex: true
+                             //     },
+                             //     {
+                             //         col1: '_gid',
+                             //         col2: 'google.com',
+                             //         col3: '1 day',
+                             //         col4: 'Used to distinguish users.',
+                             //         col5: 'Permanent cookie'
+                             //     }
+                             // ]
+                         }
+                         // {
+                         //     title: 'Tietosuojailmoitus',
+                         //     description: 'INGRESSI TÄHÄN JA LINKKI',
+                         // }
+                     ]
+                 }
+             }
+         }
+     });
+ });
+
+</script>
+
+<style media="screen">
+.cc_div{
+  	font-family: "HDColton-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+#c-ttl, #s-bl td:before, #s-ttl, .cc_div .b-tl, .cc_div .c-bn {
+    font-weight: 400 !important;
+}
+
+#cm button, .c-bn {
+    border-radius: 999px !important;
+}
+
+#cm, #s-bl .act .b-acc, #s-inr, .cc_div .b-tl, .cc_div .c-bl {
+
+
+}
+
+#c-txt{
+color: black !important;
+font-size: 13px !important;
+
+}
+
+#s-cnt .b-bn .b-tl {
+  font-size: .85em !important;
+}
+
+#c-bns button:first-child{
+    background: black!important;
+}
+
+#c-s-bn, #s-rall-bn, #s-sv-bn {
+  color: black !important;
+}
+
+.cc_div .c-bn {
+border-radius: 999px !important;
+// background: #fcf6ed !important;
+}
+
+
+
+.b-tl, #s-cnt .p {
+  color: black !important;
+}
+
+#c-ttl, #s-bl td:before, #s-ttl, .cc_div .b-tl, .cc_div .c-bn {
+// font-weight: normal !important;
+}
+
+.cc_div .b-tg .c-tgl:checked~.c-tg {
+      background:black!important;
+}
+
+
+#c-bns button:first-child, #s-bns button:first-child {
+    color: #fff;
+    background: black!important;
+
+}
+
+#s-c-bn::after, #s-c-bn::before {
+    background: black!important;
+}
+
+.cc_div .b-tg .c-tg.c-ro {
+    cursor: not-allowed;
+    opacity: 0.3;
+}
+
+#s-c-bn {
+  border-radius: 55px !important;
+}
+
+#s-ttl {
+
+    color: black !important;
+}
+
+.desc.b-acc {
+    color: black !important;
+}
+</style>
+
+
 </body>
 </html>
