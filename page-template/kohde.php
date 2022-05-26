@@ -149,7 +149,7 @@
                       </div>
 
                       <div class="capsule-wrap">
-              			<a class="btn--basic" href="http://ebikererentalfi.local/pyorat/" target="">Lataa kartta tästä</a>
+              			<a class="btn--basic" href="https://ebikerental.fi/wp-content/uploads/2022/05/kartta-www.pdf/" target="_blank">Lataa kartta tästä</a>
                   </div>
                     </div>
 
@@ -211,7 +211,7 @@
     <?php endif; ?>
 
 
-      
+
 
 
 
