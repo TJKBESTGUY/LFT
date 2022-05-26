@@ -37,7 +37,7 @@
                       <a href="tel:+358505566853">050 556 6853</a>
                     </li>
                     <li>
-                      <a href="mailto:saariselka@ebikerental.fi">saariselka@ebikerental.fi</a>
+                      <a href="mailto:asiakaspalvelu@ebikerental.fi ">asiakaspalvelu@ebikerental.fi</a>
                     </li>
                   </ul>
 
