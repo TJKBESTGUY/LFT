@@ -39,6 +39,14 @@
                     <li>
                       <a href="mailto:asiakaspalvelu@ebikerental.fi ">asiakaspalvelu@ebikerental.fi</a>
                     </li>
+                      <li class="-nav-link-spacer"></li>
+                    <li style="font-size:1.6rem">
+
+                      <strong>Aukioloajat:</strong>
+                    </li>
+                      <li style="font-size:1.6rem">
+                    ma – su: 8.00 – 18:00
+                    </li>
                   </ul>
 
 
