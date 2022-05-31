@@ -6469,6 +6469,63 @@ input:focus + .input-append {
   justify-content: center;
 }
 
+.lang-switch {
+  position: absolute;
+  right: 122px;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  font-size: 12px;
+  background: #FCFBF7;
+  padding: 7px 3px;
+  transition: opacity 0.3s;
+  border-radius: 999px;
+  border: solid 1px #b4b4b4;
+}
+@media screen and (max-width: 1200px) {
+  .lang-switch {
+    right: 0;
+    top: 86px;
+    background: white;
+    border: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+}
+.lang-switch a {
+  margin: 0 10px;
+  line-height: 1;
+  opacity: 0.6;
+  font-family: "HDColton-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+.lang-switch a:hover {
+  opacity: 1;
+  transition: 0.25s;
+}
+
+.lang-separator {
+  position: relative;
+  height: calc(12px);
+  width: 1px;
+  background: #b4b4b4;
+}
+
+.lang-switch--fi-active .link-fi {
+  opacity: 1;
+}
+
+.lang-switch--en-active .link-en {
+  opacity: 1;
+}
+
+@media screen and (max-width: 1200px) {
+  .headroom--not-top .lang-switch {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
 /*--------------------------------------------------------------
 # Default Footer
 --------------------------------------------------------------*/

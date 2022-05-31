@@ -21,7 +21,7 @@
       <section class="section--full-header">
         <div class="module--bg-img">
           <picture>
-        
+
                 <img class="lazy-anim lazyload" data-src="<?php echo $header_image['url']; ?>" alt="<?php echo $header_image['alt']; ?>" src="">
             </picture>
         </div>
@@ -401,7 +401,13 @@
                   <div class="U_container U_base-pad">
 
         <div class="capsule-wrap -all-bikes">
-        <a class="btn--basic" href="/pyorat">Kaikki pyörät ›</a>
+          <?php if ( get_field( 'lang' ) == 1 ) { ?>
+  <a class="btn--basic" href="/en/bikes">All bikes ›</a>
+  <?php } else { ?>
+
+  <a class="btn--basic" href="/pyorat">Kaikki pyörät ›</a>
+  <?php } ?>
+
 
   </div>
 

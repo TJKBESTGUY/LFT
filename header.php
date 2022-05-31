@@ -13,7 +13,9 @@
 
 ?>
 <!DOCTYPE html>
-<html lang="fi" class="no-js no-svg dom-loading front-end">
+
+
+<html <?php if ( get_field( 'lang' ) == 1 ) { ?> lang="en" <?php } else { ?> lang="fi" <?php } ?> class="no-js no-svg dom-loading front-end">
 
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -164,7 +166,7 @@ $page_name = get_the_title();
 
 <header class="site-header">
   <div class="site-header_inner U_container U_base-pad">
-    <div class="flx-container flx-nav">
+    <div class="flx-container flx-nav" style="position:relative">
 
 
 
@@ -190,6 +192,19 @@ $page_name = get_the_title();
 
       </nav>
 
+
+      <div class="lang-switch <?php if ( get_field( 'lang' ) == 1 ) { ?>
+lang-switch--en-active
+<?php } else { ?>
+lang-switch--fi-active
+<?php } ?>">
+        <a class="link-fi" href="<?php echo home_url() ?>">FI</a>
+        <div class="lang-separator"></div>
+            <a class="link-en" href="<?php echo home_url() ?>/en">EN</a>
+      </div>
+
+
+
       <div class="nav-cta">
         <a class="f--medium" href="/varaa" target="_blank">Book Now</a>
       </div>
@@ -209,12 +224,26 @@ $page_name = get_the_title();
 
     </nav>
 
+    <div class="lang-switch <?php if ( get_field( 'lang' ) == 1 ) { ?>
+lang-switch--en-active
+<?php } else { ?>
+lang-switch--fi-active
+<?php } ?>">
+      <a class="link-fi" href="<?php echo home_url() ?>">FI</a>
+      <div class="lang-separator"></div>
+          <a class="link-en" href="<?php echo home_url() ?>/en">EN</a>
+    </div>
+
+
     <div class="nav-cta">
       <a class="f--medium" href="/varaa" target="_blank">Varaa nyt</a>
     </div>
 
 
         <?php } ?>
+
+
+
 
       </div>
   </div>
