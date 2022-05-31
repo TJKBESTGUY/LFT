@@ -40,13 +40,25 @@
                       <a href="mailto:asiakaspalvelu@ebikerental.fi ">asiakaspalvelu@ebikerental.fi</a>
                     </li>
                       <li class="-nav-link-spacer"></li>
-                    <li style="font-size:1.6rem">
+                      <?php if ( get_field( 'lang' ) == 1 ) { ?>
+                        <li style="font-size:1.6rem">
 
-                      <strong>Aukioloajat:</strong>
-                    </li>
-                      <li style="font-size:1.6rem">
-                    ma – su: 8.00 – 18:00
-                    </li>
+                          <strong>Hours:</strong>
+                        </li>
+                          <li style="font-size:1.6rem">
+                        Mon – Sun: 8.00 – 18:00
+                        </li>
+
+                      <?php } else { ?>
+                        <li style="font-size:1.6rem">
+
+                          <strong>Aukioloajat:</strong>
+                        </li>
+                          <li style="font-size:1.6rem">
+                        ma – su: 8.00 – 18:00
+                        </li>
+                      <?php } ?>
+
                   </ul>
 
 
@@ -54,31 +66,63 @@
 
 					</div>
 
-					<div class="cell footer__nav-links">
-						<ul>
-              <li>
-                <a href="/pyorat">Pyörät</a>
-              </li>
-							<li>
-								<a href="/saariselka">Saariselkä</a>
-							</li>
-              <li>
-								<a href="/hinnasto">Hinnasto</a>
-							</li>
-							<li>
-								<a href="/yhteystiedot">Yhteystiedot</a>
-							</li>
-              <li class="-nav-link-spacer"></li>
-              <li>
-                <a href="/vuokrausehdot">Vuokrausehdot</a>
-              </li>
-              <li class="tietosuoja-link">
-                <a href="/Tietosuojaseloste">Tietosuojaseloste</a>
-              </li>
 
 
-						</ul>
-					</div>
+          <?php if ( get_field( 'lang' ) == 1 ) { ?>
+            <div class="cell footer__nav-links">
+              <ul>
+                <li>
+                  <a href="/en/bikes">Bikes</a>
+                </li>
+                <li>
+                  <a href="en/saariselka">Saariselkä</a>
+                </li>
+                <li>
+                  <a href="en/pricing">Pricing</a>
+                </li>
+                <li>
+                  <a href="/en/contact">Contact</a>
+                </li>
+                <li class="-nav-link-spacer"></li>
+                <!-- <li>
+                  <a href="/vuokrausehdot">Vuokrausehdot</a>
+                </li> -->
+                <!-- <li class="tietosuoja-link">
+                  <a href="/Tietosuojaseloste">Tietosuojaseloste</a>
+                </li> -->
+
+
+              </ul>
+            </div>
+
+ <?php } else { ?>
+   <div class="cell footer__nav-links">
+     <ul>
+       <li>
+         <a href="/pyorat">Pyörät</a>
+       </li>
+       <li>
+         <a href="/saariselka">Saariselkä</a>
+       </li>
+       <li>
+         <a href="/hinnasto">Hinnasto</a>
+       </li>
+       <li>
+         <a href="/yhteystiedot">Yhteystiedot</a>
+       </li>
+       <li class="-nav-link-spacer"></li>
+       <li>
+         <a href="/vuokrausehdot">Vuokrausehdot</a>
+       </li>
+       <li class="tietosuoja-link">
+         <a href="/Tietosuojaseloste">Tietosuojaseloste</a>
+       </li>
+
+
+     </ul>
+   </div>
+
+ <?php } ?>
 
 					<div class="cell footer__extra-content">
 						<ul>

@@ -173,6 +173,28 @@ $page_name = get_the_title();
 
 </a>
     </div>
+
+
+    <?php if ( get_field( 'lang' ) == 1 ) { ?>
+      <nav class="navigation-links -desktop-nav flx-container">
+
+
+
+        <a class="-nav-link Target--palvelut " href="/en/bikes">Bikes</a>
+        <a class="-nav-link Target--" href="en/saariselka">Saariselkä
+        </a>
+        <a class="-nav-link Target--hinnasto" href="en/pricing">Pricing
+        </a>
+
+        <a class="-nav-link Target--yhteystiedot" href="/en/contact">Contact</a>
+
+      </nav>
+
+      <div class="nav-cta">
+        <a class="f--medium" href="/varaa" target="_blank">Book Now</a>
+      </div>
+    <?php } else { ?>
+
     <nav class="navigation-links -desktop-nav flx-container">
 
 
@@ -190,6 +212,9 @@ $page_name = get_the_title();
     <div class="nav-cta">
       <a class="f--medium" href="/varaa" target="_blank">Varaa nyt</a>
     </div>
+
+
+        <?php } ?>
 
       </div>
   </div>
@@ -222,13 +247,30 @@ $page_name = get_the_title();
     <div class="content-wrap U_base-pad--right-only">
 
     <nav class="fixed-mobile-navigation__links U_base-pad--right-only">
-      <a class="-nav-link Target--palvelut " href="/pyorat">Pyörät</a>
-      <a class="-nav-link Target--" href="/saariselka">Saariselkä
-      </a>
-      <a class="-nav-link Target--hinnasto" href="/hinnasto">Hinnasto
-      </a>
-      <a class="-nav-link Target--yhteystiedot" href="/yhteystiedot">Yhteystiedot</a>
-      <a class="f--medium fixed-order-cta" href="varaa" target="_blank">Varaa nyt</a>
+
+
+      <?php if ( get_field( 'lang' ) == 1 ) { ?>
+        <a class="-nav-link Target--palvelut " href="/en/bikes">Bikes</a>
+        <a class="-nav-link Target--" href="en/saariselka">Saariselkä
+        </a>
+        <a class="-nav-link Target--hinnasto" href="en/pricing">Pricing
+        </a>
+
+        <a class="-nav-link Target--yhteystiedot" href="/en/contact">Contact</a>
+            <a class="f--medium fixed-order-cta" href="varaa" target="_blank">Book Now</a>
+
+  <?php } else { ?>
+    <a class="-nav-link Target--palvelut " href="/pyorat">Pyörät</a>
+    <a class="-nav-link Target--" href="/saariselka">Saariselkä
+    </a>
+    <a class="-nav-link Target--hinnasto" href="/hinnasto">Hinnasto
+    </a>
+    <a class="-nav-link Target--yhteystiedot" href="/yhteystiedot">Yhteystiedot</a>
+    <a class="f--medium fixed-order-cta" href="varaa" target="_blank">Varaa nyt</a>
+
+  <?php } ?>
+
+
     </nav>
 
       <div class="fixed-mobile-navigation__sub-links">
@@ -236,12 +278,19 @@ $page_name = get_the_title();
 
           <ul>
 
-            <li>
-              <a href="/vuokrausehdot">Vuokrausehdot</a>
-            </li>
-            <li class="tietosuoja-link">
-              <a href="/Tietosuojaseloste">Tietosuojaseloste</a>
-            </li>
+            <?php if ( get_field( 'lang' ) == 1 ) { ?>
+
+  <?php } else { ?>
+    <li>
+      <a href="/vuokrausehdot">Vuokrausehdot</a>
+    </li>
+    <li class="tietosuoja-link">
+      <a href="/Tietosuojaseloste">Tietosuojaseloste</a>
+    </li>
+
+  <?php } ?>
+
+
 
 
           </ul>

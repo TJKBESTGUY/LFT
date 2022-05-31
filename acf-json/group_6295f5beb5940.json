@@ -1,0 +1,45 @@
+{
+    "key": "group_6295f5beb5940",
+    "title": "Choose language",
+    "fields": [
+        {
+            "key": "field_6295f5c92e24f",
+            "label": "Lang",
+            "name": "lang",
+            "type": "true_false",
+            "instructions": "Select this if the page is in English",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "admin_only": 0,
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ign_set_data": "",
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1653995241
+}
