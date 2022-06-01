@@ -135,6 +135,14 @@
   width: 100%;
   height: 3px;
 }
+
+.en-page .-lang--fi {
+    display: none !important;
+}
+
+.fi-page .-lang--en  {
+    display: none !important;
+}
 </style>
 
 
@@ -343,7 +351,7 @@ lang-switch--fi-active
 
 
 
-<div class="site-container" id="site-container">
+<div class="site-container <?php if ( get_field( 'lang' ) == 1 ) { ?> en-page <?php } else { ?> fi-page <?php } ?>" id="site-container">
 
     <div id="page" class="site">
 
