@@ -75,10 +75,10 @@
                   <a href="/en/bikes">Bikes</a>
                 </li>
                 <li>
-                  <a href="en/saariselka">Saariselkä</a>
+                  <a href="/en/saariselka">Saariselkä</a>
                 </li>
                 <li>
-                  <a href="en/pricing">Pricing</a>
+                  <a href="e/n/pricing">Pricing</a>
                 </li>
                 <li>
                   <a href="/en/contact">Contact</a>

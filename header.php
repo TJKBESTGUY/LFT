@@ -191,9 +191,9 @@ $page_name = get_the_title();
 
 
         <a class="-nav-link Target--palvelut " href="/en/bikes">Bikes</a>
-        <a class="-nav-link Target--" href="en/saariselka">Saariselkä
+        <a class="-nav-link Target--" href="/en/saariselka">Saariselkä
         </a>
-        <a class="-nav-link Target--hinnasto" href="en/pricing">Pricing
+        <a class="-nav-link Target--hinnasto" href="/en/pricing">Pricing
         </a>
 
         <a class="-nav-link Target--yhteystiedot" href="/en/contact">Contact</a>
@@ -288,7 +288,7 @@ lang-switch--fi-active
 
       <?php if ( get_field( 'lang' ) == 1 ) { ?>
         <a class="-nav-link Target--palvelut " href="/en/bikes">Bikes</a>
-        <a class="-nav-link Target--" href="en/saariselka">Saariselkä
+        <a class="-nav-link Target--" href="/en/saariselka">Saariselkä
         </a>
         <a class="-nav-link Target--hinnasto" href="en/pricing">Pricing
         </a>
