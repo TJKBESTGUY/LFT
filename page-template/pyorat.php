@@ -33,9 +33,8 @@
         <div class="module--bikes-header">
           <div class="flx-container">
           <div class="bikes-header__content">
-            <h1 class="h2">Modernit sähköpyörämme mahdollistavat sinulle ja perheellesi pidempiäkin retkiä vaativimmillakin reiteillä</h1>
-            <p>Vuokraamollamme on laaja valikoima erilaisia pyöriä monessa eri koossa. Henkilökuntamme auttaa sinua valitsemaan juuri sinulle sopivan vaihtoehdon. Oikean kokoisen pyörän valinta on tärkeää jotta saat mukavan ja turvallisen pyöräilykokemuksen.
-Tervetuloa kokeilemaan ennen päätöstä!</p>
+            <h1 class="h2"><?php the_field( 'heading_p' ); ?></h1>
+            <p><?php the_field( 'text_content_p' ); ?></p>
           </div>
           <div class="bikes-header__img">
             <picture>
@@ -311,11 +310,19 @@ endif; ?>
               </div>
 
 
+
+
+
+
+          <?php if ( have_rows( 'content_block_varusteet' ) ) : ?>
+            	<?php while ( have_rows( 'content_block_varusteet' ) ) : the_row(); ?>
               <div id="varusteet" class="module--split-content -after-bikes-grid">
                     <div class="flx-container">
+                      		<?php if ( have_rows( 'content_rows' ) ) : ?>
+                            	<?php while ( have_rows( 'content_rows' ) ) : the_row(); ?>
                       <div class="cell mosaic-split__img split-content__img">
                         <div class="cell_img-content">
-                
+
                           <div class="image-aspect-box -wide-aspect">
                             <div class="image-aspect-box_inner ">
                             <picture>
@@ -329,23 +336,19 @@ endif; ?>
                       </div>
                 <div class="cell mosaic-split__txt split-content__txt">
                   <div class="cell_txt-content">
-                    <h2>Varusteet</h2>
+                    <h2><?php the_sub_field( 'heading' ); ?></h2>
                     <p>
-                      Vuokraamme pyörien vuokraajille lisäksi laadukkaita POC:n kypäriä, kevyitä lukkoja sekä pyörään kiinnitettäviä puhelinpidikkeitä.
-                    </p>
-                    <p>
-                      Myymälästämme voit ostaa juomapulloja, ajovarusteita ja pientä purtavaa retkien iloksi.
+                      		<?php the_sub_field( 'text_content' ); ?>
                     </p>
 
                 </div>
                   </div>
-
-
+                  		<?php endwhile; ?>
+                  		<?php endif; ?>
               </div>
-
-
               </div>
-
+              	<?php endwhile; ?>
+              <?php endif; ?>
 
 
 
