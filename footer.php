@@ -29,33 +29,21 @@
                 <div class="flx-container">
                   <ul>
                     <li>
-                      Kelotie 2<br>
-                      99830 Saariselkä
+                      <?php the_field( 'address', 'option' ); ?>
                     </li>
                       <li class="-nav-link-spacer"></li>
                     <li>
-                      <a href="tel:+358505566853">050 556 6853</a>
-                    </li>
-                    <li>
-                      <a href="mailto:asiakaspalvelu@ebikerental.fi ">asiakaspalvelu@ebikerental.fi</a>
+                    <?php the_field( 'address_copy', 'option' ); ?>
                     </li>
                       <li class="-nav-link-spacer"></li>
                       <?php if ( get_field( 'lang' ) == 1 ) { ?>
                         <li style="font-size:1.6rem">
-
-                          <strong>Hours:</strong>
-                        </li>
-                          <li style="font-size:1.6rem">
-                        Mon – Sun: 8.00 – 18:00
+                          <?php the_field( 'hours_en', 'option' ); ?>
                         </li>
 
                       <?php } else { ?>
                         <li style="font-size:1.6rem">
-
-                          <strong>Aukioloajat:</strong>
-                        </li>
-                          <li style="font-size:1.6rem">
-                        ma – su: 8.00 – 18:00
+                          <?php the_field( 'hours', 'option' ); ?>
                         </li>
                       <?php } ?>
 
@@ -84,12 +72,7 @@
                   <a href="/en/contact">Contact</a>
                 </li>
                 <li class="-nav-link-spacer"></li>
-                <!-- <li>
-                  <a href="/vuokrausehdot">Vuokrausehdot</a>
-                </li> -->
-                <!-- <li class="tietosuoja-link">
-                  <a href="/Tietosuojaseloste">Tietosuojaseloste</a>
-                </li> -->
+
 
 
               </ul>

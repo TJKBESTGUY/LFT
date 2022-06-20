@@ -483,3 +483,31 @@ function ea_disable_classic_editor() {
 
 }
 add_action( 'admin_head', 'ea_disable_classic_editor' );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Footer info',
+		'menu_title'	=> 'Footer info',
+		'menu_slug' 	=> 'footer-info',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+
+
+
+}

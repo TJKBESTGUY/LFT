@@ -128,7 +128,8 @@
          <?php } ?>
 
          <div class="bike-card__content">
-         <h4 class="f--bold bike__name"><?php the_field( 'bike_name' ); ?></h4>
+           <h4 class="f--bold bike__name -lang--fi"><?php the_field( 'bike_name' ); ?></h4>
+           <h4 class="f--bold bike__name -lang--en"><?php the_field( 'bike_name_en' ); ?></h4>
          <span class="bike__sub-name"><?php the_field( 'bike_name_sub' ); ?></span>
          <?php if ( have_rows( 'bike_size' ) ) : ?>
            <div class="bike-card__size">
@@ -242,7 +243,8 @@
   <?php } ?>
 
   <div class="bike-card__content">
-  <h4 class="f--bold bike__name"><?php the_field( 'bike_name' ); ?></h4>
+    <h4 class="f--bold bike__name -lang--fi"><?php the_field( 'bike_name' ); ?></h4>
+    <h4 class="f--bold bike__name -lang--en"><?php the_field( 'bike_name_en' ); ?></h4>
   <span class="bike__sub-name"><?php the_field( 'bike_name_sub' ); ?></span>
   <?php if ( have_rows( 'bike_size' ) ) : ?>
     <div class="bike-card__size">

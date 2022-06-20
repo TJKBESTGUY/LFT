@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_6253e1cf83c2f",
-            "label": "Bike Manufacturer",
+            "label": "Bike Name (big text)",
             "name": "bike_name",
             "type": "text",
             "instructions": "",
@@ -25,8 +25,30 @@
             "ign_set_data": ""
         },
         {
+            "key": "field_62b04a1f06a0a",
+            "label": "Bike Name EN (big text)",
+            "name": "bike_name_en",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "admin_only": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "autocomplete": "",
+            "ign_set_data": ""
+        },
+        {
             "key": "field_627a16ef98077",
-            "label": "Bike Name",
+            "label": "Bike Brand",
             "name": "bike_name_sub",
             "type": "text",
             "instructions": "",
@@ -324,5 +346,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1653398768
+    "modified": 1655720498
 }
