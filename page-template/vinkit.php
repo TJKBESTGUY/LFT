@@ -74,11 +74,21 @@
 
 <div class="cell mosaic-split__txt split-content__txt -single-cell">
   <div class="cell_txt-content">
-                <h2>Varaa nyt!</h2>
-                      <div class="capsule-wrap">
-          <a class="btn--basic -btn-left" href="/varaa/" target="_blank">Varaa ›</a>
 
+    <?php if ( get_field( 'lang' ) == 1 ) { ?>
+      <h2>Book now</h2>
+            <div class="capsule-wrap">
+    <a class="btn--basic -btn-left" href="/varaa/" target="_blank">Book now ›</a>
+            </div>
+<?php } else { ?>
+  <h2>Varaa nyt!</h2>
+        <div class="capsule-wrap">
+<a class="btn--basic -btn-left" href="/varaa/" target="_blank">Varaa ›</a>
         </div>
+<?php } ?>
+
+
+
 
 </div>
   </div>
