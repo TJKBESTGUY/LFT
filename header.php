@@ -317,6 +317,10 @@ lang-switch--fi-active
 
             <?php if ( get_field( 'lang' ) == 1 ) { ?>
 
+              <li>
+                <a href="/rental-terms/">Rental Terms</a>
+              </li>
+
   <?php } else { ?>
     <li>
       <a href="/vuokrausehdot">Vuokrausehdot</a>

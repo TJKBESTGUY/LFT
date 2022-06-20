@@ -60,19 +60,21 @@
             <div class="cell footer__nav-links">
               <ul>
                 <li>
-                  <a href="/en/bikes">Bikes</a>
+                  <a href="/en/bikes/">Bikes</a>
                 </li>
                 <li>
-                  <a href="/en/saariselka">Saariselkä</a>
+                  <a href="/en/saariselka/">Saariselkä</a>
                 </li>
                 <li>
-                  <a href="e/n/pricing">Pricing</a>
+                  <a href="e/n/pricing/">Pricing</a>
                 </li>
                 <li>
-                  <a href="/en/contact">Contact</a>
+                  <a href="/en/contact/">Contact</a>
                 </li>
                 <li class="-nav-link-spacer"></li>
-
+                <li>
+                  <a href="/rental-terms/">Rental Terms</a>
+                </li>
 
 
               </ul>
@@ -82,16 +84,16 @@
    <div class="cell footer__nav-links">
      <ul>
        <li>
-         <a href="/pyorat">Pyörät</a>
+         <a href="/pyora/t">Pyörät</a>
        </li>
        <li>
-         <a href="/saariselka">Saariselkä</a>
+         <a href="/saariselka/">Saariselkä</a>
        </li>
        <li>
-         <a href="/hinnasto">Hinnasto</a>
+         <a href="/hinnasto/">Hinnasto</a>
        </li>
        <li>
-         <a href="/yhteystiedot">Yhteystiedot</a>
+         <a href="/yhteystiedot/">Yhteystiedot</a>
        </li>
        <li class="-nav-link-spacer"></li>
        <li>
