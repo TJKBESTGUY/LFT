@@ -200,8 +200,13 @@
     endforeach;
   endif; ?>
      <?php if( get_sub_field('text_suomi')  )  { ?>
-    <span class=""><?php the_sub_field( 'text_suomi' ); ?></span>
+    <span class="-lang--fi"><?php the_sub_field( 'text_suomi' ); ?></span>
+
     <?php } ?>
+
+         <?php if( get_sub_field('text_en')  )  { ?>
+             <span class="-lang--en"><?php the_sub_field( 'text_en' ); ?></span>
+               <?php } ?>
 
     <?php endwhile; ?>
 
