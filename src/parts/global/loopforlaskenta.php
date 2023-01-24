@@ -5,7 +5,7 @@
  * You are encouraged to add to your footer here.
  * You can make use of the acf theme settings page to add footer fields and output them here
  *
- * @package ebikerental
+ * @package Lifted
  * @since 1.0
  * @version 1.0
  */

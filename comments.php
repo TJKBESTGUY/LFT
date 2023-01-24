@@ -33,7 +33,7 @@ if ( post_password_required() ) {
 				$comments_number = get_comments_number();
 				if ( '1' === $comments_number ) {
 					/* translators: %s: post title */
-					printf( _x( 'One Reply to &ldquo;%s&rdquo;', 'comments title', 'ebikerental' ), get_the_title() );
+					printf( _x( 'One Reply to &ldquo;%s&rdquo;', 'comments title', 'lifted' ), get_the_title() );
 				} else {
 					printf(
 					/* translators: 1: number of comments, 2: post title */
@@ -42,7 +42,7 @@ if ( post_password_required() ) {
 							'%1$s Replies to &ldquo;%2$s&rdquo;',
 							$comments_number,
 							'comments title',
-							'ebikerental'
+							'lifted'
 						),
 						number_format_i18n( $comments_number ),
 						get_the_title()
@@ -57,15 +57,15 @@ if ( post_password_required() ) {
 					'avatar_size' => 60,
 					'style'       => 'ol',
 					'short_ping'  => true,
-					'reply_text'  => ign_get_svg( array( 'icon' => 'mail-reply' ) ) . __( ' Reply', 'ebikerental' ),
-					'callback'    => 'ebikerental_comments_callback'
+					'reply_text'  => ign_get_svg( array( 'icon' => 'mail-reply' ) ) . __( ' Reply', 'lifted' ),
+					'callback'    => 'lifted_comments_callback'
 				) );
 				?>
 			</ol>
 
 			<?php the_comments_pagination( array(
-				'prev_text' => '<span class="iconify" data-icon="carbon:chevron-left"></span><span class="screen-reader-text">' . __( 'Previous', 'ebikerental' ) . '</span>',
-				'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'ebikerental' ) . '</span><span class="iconify" data-icon="carbon:chevron-right"></span>',
+				'prev_text' => '<span class="iconify" data-icon="carbon:chevron-left"></span><span class="screen-reader-text">' . __( 'Previous', 'lifted' ) . '</span>',
+				'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'lifted' ) . '</span><span class="iconify" data-icon="carbon:chevron-right"></span>',
 			) );
 
 		endif; // Check for have_comments().
@@ -73,7 +73,7 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, leave note
 		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 
-			<p class="no-comments"><?php _e( 'Comments are closed.', 'ebikerental' ); ?></p>
+			<p class="no-comments"><?php _e( 'Comments are closed.', 'lifted' ); ?></p>
 		<?php
 		endif;
 

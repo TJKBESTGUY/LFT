@@ -4,7 +4,7 @@
  * Ignition functions and definitions
  *
  * @link    https://developer.wordpress.org/themes/basics/theme-functions/
- * @package ebikerental
+ * @package Lifted
  * @since   1.0
  *
  * The first file to look at is theme.config.json where you can quickly set up some theme settings
@@ -49,16 +49,16 @@ if ( version_compare( $GLOBALS['wp_version'], '5.5', '<' ) ) {
  * Here is where you can start changing settings.
  * you can also add google fonts and a submenu arrow via the ign_config variable below
  */
-function ebikerental_setup() {
+function lifted_setup() {
 
 
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed at WordPress.org. See: https://translate.wordpress.org/projects/wp-themes/ignition
 	 * If you're building a theme based on Ignition, and you downloaded this from github, use a find and replace
-	 * to change 'ebikerental' to the name of your theme in all the template files.
+	 * to change 'lifted' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'ebikerental' );
+	load_theme_textdomain( 'lifted' );
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
@@ -81,6 +81,9 @@ function ebikerental_setup() {
 	set_post_thumbnail_size( 300, 300, true );
 	add_image_size( 'header_image', 2000, 9999 );
 
+	add_image_size( 'content-image', 2000, 2000 );
+	add_image_size( 'eq-image', 15, 15 );
+
 
 	add_filter( 'intermediate_image_sizes_advanced', 'remove_default_images' );
 
@@ -89,7 +92,7 @@ function ebikerental_setup() {
 	 * Add menus here
 	 */
 	register_nav_menus( array(
-		'top-menu' => __( 'Top Menu', 'ebikerental' ), //main menu at top.
+		'top-menu' => __( 'Top Menu', 'lifted' ), //main menu at top.
 	) );
 
 	/*
@@ -160,7 +163,7 @@ function ebikerental_setup() {
 	$GLOBALS['content_width'] = 730;
 }
 
-add_action( 'after_setup_theme', 'ebikerental_setup' );
+add_action( 'after_setup_theme', 'lifted_setup' );
 
 
 /*--------------------------------------------------------------
@@ -205,20 +208,20 @@ add_action( 'admin_init', 'redirect_admin' );
  * Enqueue all scripts and styles.
  * Add your own scripts and styles below.
  */
-function ebikerental_scripts() {
+function lifted_scripts() {
 	global $wp;
 
 	// Add google fonts
 	if ( ign_get_config( 'google_fonts' ) ) {
-		wp_enqueue_style( 'ebikerental-fonts', ign_google_fonts_url(), array(), wp_get_theme()->get( 'Version' ) );
+		wp_enqueue_style( 'lifted-fonts', ign_google_fonts_url(), array(), wp_get_theme()->get( 'Version' ) );
 	}
 
 
 	// Theme stylesheet. Will get this stylesheet or a child themes stylesheet.
-	wp_enqueue_style( 'ebikerental-style', get_stylesheet_uri(), '', wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'lifted-style', get_stylesheet_uri(), '', wp_get_theme()->get( 'Version' ) );
 
 	//Sass compiles styles. Will get child's theme version if found instead. Child theme should import with sass.
-	wp_enqueue_style( 'ebikerental-sass-styles', get_theme_file_uri( '/dist/frontEnd.css' ), '', wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'lifted-sass-styles', get_theme_file_uri( '/dist/frontEnd.css' ), '', wp_get_theme()->get( 'Version' ) );
 
 	wp_enqueue_script( 'iconify', 'https://code.iconify.design/1/1.0.6/iconify.min.js' );
 
@@ -233,14 +236,14 @@ function ebikerental_scripts() {
 
 
 	//any javascript file in assets/js that ends with custom.js will be lumped into this file.
-	wp_enqueue_script( 'ebikerental-custom-js', get_template_directory_uri() . '/dist/frontEnd_bundle.js', array(
+	wp_enqueue_script( 'lifted-custom-js', get_template_directory_uri() . '/dist/frontEnd_bundle.js', array(
 		'jquery',
 		'polyfill'
 	),
 		wp_get_theme()->get( 'Version' ), true );
 
 	//AJAX ready for .custom.js files
-	wp_localize_script( 'ebikerental-custom-js', 'frontEndAjax', array(
+	wp_localize_script( 'lifted-custom-js', 'frontEndAjax', array(
 		'ajaxurl'    => admin_url( 'admin-ajax.php' ),
 		'nonce'      => wp_create_nonce( 'ajax_nonce' ),
 		'url'        => home_url(),
@@ -249,7 +252,7 @@ function ebikerental_scripts() {
 
 
 	//Icons: add icons for use in custom js here
-	wp_localize_script( 'ebikerental-custom-js', 'icons', array(
+	wp_localize_script( 'lifted-custom-js', 'icons', array(
 		'angleRight' => ign_get_svg( array( 'icon' => 'angle-right' ) ),
 		'sidebar'    => ign_get_svg( array( 'icon' => 'sidebar' ) )
 	) );
@@ -263,7 +266,7 @@ function ebikerental_scripts() {
 
 }
 
-add_action( 'wp_enqueue_scripts', 'ebikerental_scripts' );
+add_action( 'wp_enqueue_scripts', 'lifted_scripts' );
 
 
 /*
@@ -277,7 +280,7 @@ function ign_gutenberg_styles() {
 	// Load the theme styles within Gutenberg.
 	wp_enqueue_style( 'ign-gutenberg-style', get_theme_file_uri( '/dist/gutenberg-editor-style' . $suffix . '.css' ), false, wp_get_theme()->get( 'Version' ), 'all' );
 
-	wp_enqueue_script( 'ebikerental-custom-js', get_template_directory_uri() . '/dist/custom' . $suffix . '.js', array( 'jquery' ),
+	wp_enqueue_script( 'lifted-custom-js', get_template_directory_uri() . '/dist/custom' . $suffix . '.js', array( 'jquery' ),
 		wp_get_theme()->get( 'Version' ), true );
 }
 
@@ -301,7 +304,7 @@ function footer_styles() {
 	//load regular versions if script debug is set to true in wp-config file.
 	//$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 	wp_enqueue_script( 'iconify', 'https://code.iconify.design/1/1.0.6/iconify.min.js' );
-	wp_enqueue_style( 'ebikerental-admin-styles', get_theme_file_uri( '/dist/backEnd.css' ), '', wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'lifted-admin-styles', get_theme_file_uri( '/dist/backEnd.css' ), '', wp_get_theme()->get( 'Version' ) );
 }
 
 add_action( 'admin_footer', 'footer_styles', 99 );
@@ -318,9 +321,9 @@ add_action( 'admin_footer', 'footer_styles', 99 );
 if ( ! function_exists( 'ign_widgets_init' ) ) {
 	function ign_widgets_init() {
 		register_sidebar( array(
-			'name'          => __( 'Sidebar', 'ebikerental' ),
+			'name'          => __( 'Sidebar', 'lifted' ),
 			'id'            => 'sidebar-1',
-			'description'   => __( 'Add widgets here to appear in your sidebar.', 'ebikerental' ),
+			'description'   => __( 'Add widgets here to appear in your sidebar.', 'lifted' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -330,7 +333,7 @@ if ( ! function_exists( 'ign_widgets_init' ) ) {
 
 //footer widgets and sections. up to 4
 		register_sidebar( array(
-			'name'          => esc_html__( 'Footer', 'ebikerental' ),
+			'name'          => esc_html__( 'Footer', 'lifted' ),
 			'id'            => 'sidebar-2',
 			'description'   => esc_html__( 'Add footer widgets here.', 'pwm' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -341,7 +344,7 @@ if ( ! function_exists( 'ign_widgets_init' ) ) {
 
 
 		register_sidebar( array(
-			'name'          => esc_html__( 'Footer 2', 'ebikerental' ),
+			'name'          => esc_html__( 'Footer 2', 'lifted' ),
 			'id'            => 'sidebar-3',
 			'description'   => esc_html__( 'Add footer widgets here.', 'pwm' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -352,7 +355,7 @@ if ( ! function_exists( 'ign_widgets_init' ) ) {
 
 
 		register_sidebar( array(
-			'name'          => esc_html__( 'Footer 3', 'ebikerental' ),
+			'name'          => esc_html__( 'Footer 3', 'lifted' ),
 			'id'            => 'sidebar-4',
 			'description'   => esc_html__( 'Add footer widgets here.', 'pwm' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -362,7 +365,7 @@ if ( ! function_exists( 'ign_widgets_init' ) ) {
 		) );
 
 		register_sidebar( array(
-			'name'          => esc_html__( 'Footer 4', 'ebikerental' ),
+			'name'          => esc_html__( 'Footer 4', 'lifted' ),
 			'id'            => 'sidebar-5',
 			'description'   => esc_html__( 'Add footer widgets here.', 'pwm' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -379,13 +382,13 @@ add_action( 'widgets_init', 'ign_widgets_init' );
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
  */
-function ebikerental_pingback_header() {
+function lifted_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		printf( '<link rel="pingback" href="%s">' . "\n", get_bloginfo( 'pingback_url' ) );
 	}
 }
 
-add_action( 'wp_head', 'ebikerental_pingback_header' );
+add_action( 'wp_head', 'lifted_pingback_header' );
 
 
 /*--------------------------------------------------------------
@@ -485,19 +488,6 @@ function ea_disable_classic_editor() {
 add_action( 'admin_head', 'ea_disable_classic_editor' );
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 if( function_exists('acf_add_options_page') ) {
 
 	acf_add_options_page(array(
@@ -507,7 +497,166 @@ if( function_exists('acf_add_options_page') ) {
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false
 	));
-
-
-
 }
+
+
+
+
+
+///////LAZYBLOCK/////////
+
+function register_layout_category( $categories ) {
+
+	$categories[] = array(
+		'slug'  => 'goodman-blocks',
+		'title' => 'Goodman Blocks'
+	);
+
+	return $categories;
+}
+
+if ( version_compare( get_bloginfo( 'version' ), '5.8', '>=' ) ) {
+	add_filter( 'block_categories_all', 'register_layout_category' );
+} else {
+	add_filter( 'block_categories', 'register_layout_category' );
+}
+
+/////IMAGE//////
+/**
+ * Additional lazy blocks Handlebars helper
+ */
+function myPlugin_lazyblocks_handlebars_helper($handlebars){
+
+  /**
+   * wp_get_attachment_image Handlebars helper
+   * @link https://github.com/nk-o/lazy-blocks/issues/68
+   * @see  https://developer.wordpress.org/reference/functions/wp_get_attachment_image/
+   *
+   * @example
+   * {{{ wp_get_attachment_image control_name 'thumbnail' }}}
+   */
+  $handlebars->registerHelper('wp_get_attachment_image', function($image, $size=null){
+    if ( isset($image['id']) ) {
+      return wp_get_attachment_image($image['id'], $size);
+    }
+  });
+}
+
+function myPlugin_lazyblocks_handlebars_helper_custom($handlebars){
+
+  /**
+   * wp_get_attachment_image Handlebars helper
+   * @link https://github.com/nk-o/lazy-blocks/issues/68
+   * @see  https://developer.wordpress.org/reference/functions/wp_get_attachment_image/
+   *
+   * @example
+   * {{{ wp_get_attachment_image control_name 'thumbnail' }}}
+   */
+  $handlebars->registerHelper('wp_get_attachment_image', function($image, $size=null){
+    if ( isset($image['id']) ) {
+		$imgurl = wp_get_attachment_image_url( $image['id'], $size ); //use custom set size
+      return $imgurl;
+    }
+  });
+}
+
+// lazy block Handlebars helper
+add_action('lzb_handlebars_object', 'myPlugin_lazyblocks_handlebars_helper_custom');
+
+
+
+add_filter( 'lazyblock/section-block/frontend_allow_wrapper', '__return_false' );
+add_filter( 'lazyblock/row-block/frontend_allow_wrapper', '__return_false' );
+add_filter( 'lazyblock/material-block/frontend_allow_wrapper', '__return_false' );
+add_filter( 'lazyblock/info-card/frontend_allow_wrapper', '__return_false' );
+/////IMAGE//////
+
+
+// filter for Frontend output.
+add_filter( 'lazyblock/blog-posts-carousel/frontend_callback', 'my_block_output', 10, 2 );
+
+add_filter( 'lazyblock/blog-posts-carousel/frontend_callback', 'my_block_output', 10, 2 );
+
+
+
+if ( ! function_exists( 'my_block_output' ) ) :
+    /**
+     * Test Render Callback
+     *
+     * @param string $output - block output.
+     * @param array  $attributes - block attributes.
+     */
+    function my_block_output( $output, $attributes ) {
+        ob_start();
+        ?>
+				      <?php locate_template('src/parts/php_blocks/workshop-loop-block.php', true, false); ?>
+
+
+        <?php
+        return ob_get_clean();
+    }
+endif;
+
+
+// PHP BLOCKS /////
+add_filter( 'lazyblock/workshop-item-loop/frontend_callback', 'workshop_loop_output', 10, 2 );
+add_filter( 'lazyblock/asiantuntijat-item-loop/frontend_callback', 'asiantuntijat_loop_output', 10, 2 );
+add_filter( 'lazyblock/blog-item-loop/frontend_callback', 'blog_loop_output', 10, 2 );
+
+if ( ! function_exists( 'workshop_loop_output' ) ) :
+    /**
+     * Test Render Callback
+     *
+     * @param string $output - block output.
+     * @param array  $attributes - block attributes.
+     */
+    function workshop_loop_output( $output, $attributes ) {
+        ob_start();
+        ?>
+
+				      <?php locate_template('src/parts/php_blocks/workshop-loop-block.php', true, false); ?>
+
+
+        <?php
+        return ob_get_clean();
+    }
+endif;
+
+
+if ( ! function_exists( 'blog_loop_output' ) ) :
+    /**
+     * Test Render Callback
+     *
+     * @param string $output - block output.
+     * @param array  $attributes - block attributes.
+     */
+    function blog_loop_output( $output, $attributes ) {
+        ob_start();
+        ?>
+
+				      <?php locate_template('src/parts/php_blocks/blog-loop-block.php', true, false); ?>
+
+
+        <?php
+        return ob_get_clean();
+    }
+endif;
+
+if ( ! function_exists( 'asiantuntijat_loop_output' ) ) :
+    /**
+     * Test Render Callback
+     *
+     * @param string $output - block output.
+     * @param array  $attributes - block attributes.
+     */
+    function asiantuntijat_loop_output( $output, $attributes ) {
+        ob_start();
+        ?>
+
+				      <?php locate_template('src/parts/php_blocks/asiantuntijat-loop-block.php', true, false); ?>
+
+
+        <?php
+        return ob_get_clean();
+    }
+endif;

@@ -14,9 +14,9 @@
 --------------------------------------------------------------*/
 :root {
   //Fonts. change to the fonts you want. Defaults to OS Fonts. Load google fonts via theme.config.json
-  --font: "HDColton-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --font: "Config-Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --font-alt: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; //for headings etc..
-  --line-height: 1.5;
+  --line-height: 1.4;
   --font-pre: 'Source Code Pro', monospace;
   --line-height-pre: 22px;
   --article-font-size: 1.7rem; //slightly larger text for articles and actual content

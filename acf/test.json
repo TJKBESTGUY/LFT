@@ -1,0 +1,54 @@
+
+{
+  "key": "group_name",
+  "title": "Link Groups",
+  "fields": [
+    {
+      "key": "link_groups",
+      "label": "Link Groups",
+      "name": "link_groups",
+      "type": "repeater",
+      "collapsed": "group_header",
+      "layout": "block",
+      "sub_fields": [
+        {
+          "key": "group_header",
+          "label": "Group Header",
+          "name": "group_header",
+          "type": "text"
+        },
+        {
+          "key": "links",
+          "label": "Links",
+          "name": "links",
+          "type": "repeater",
+          "collapsed": "link",
+          "layout": "block",
+          "sub_fields": [
+            {
+              "key": "link",
+              "label": "Link",
+              "name": "link",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "location": [
+    {
+      "param": "page_template",
+      "operator": "==",
+      "value": "page-templates/template-name.php"
+    }
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": 1,
+  "description": ""
+}

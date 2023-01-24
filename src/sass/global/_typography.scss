@@ -12,6 +12,7 @@ html {
 body{
 	font-size: 1.8rem; //results in 18px
 	line-height: var(--line-height);
+
 	font-family: var(--font);
 	color: var(--main-text-color);
 	-webkit-font-smoothing: antialiased;
@@ -51,17 +52,18 @@ h6 {
 	font-family: var(--font-alt);
 }
 
-p {
+p, .base-text {
 	margin: 0 0 1em 0;
 		font-weight: 400;
+		font-size: inherit;
 }
 
 
-.entry-content > p, section p{
-	&:last-child {
-		margin-bottom: 0;
-	}
-}
+// .entry-content > p, section p{
+// 	&:last-child {
+// 		margin-bottom: 0;
+// 	}
+// }
 
 /*------- Quick text alignment classes --------*/
 .text-center {
@@ -99,18 +101,21 @@ h1, .h1 {
 	 }
 }
 
-h2, .h2 {
-	font-size: 4rem;
-	line-height: 1.2;
+h2, .h2, .single-post--legacy h1 {
+	font-size: 5.6rem;
+	line-height: 1.1;
 	margin: 0;
-	@media screen and (max-width: 1200px) {
-		font-size: 3.6rem;
+	@media screen and (max-width: 1440px) {
+		font-size: 4vw;
 	}
 	@media screen and (max-width: 1100px) {
-		font-size: 3.2rem;
+		font-size: 4.4rem;
 	}
 	@media screen and (max-width: 700px) {
-		font-size: 2.4rem;
+			font-size: 5.8vw;
+ }
+ @media screen and (max-width: 500px) {
+		 font-size: 6.2vw;
  }
 
 	&:first-child{
@@ -127,49 +132,36 @@ h2, .h2 {
 
 h3, .h3 {
 	font-size: 4.8rem;
-		font-size: 4.7rem;
+		font-size: 4.4rem;
 	line-height: 1.2;
 	margin: 0;
-	margin-bottom: 40px;
-	// word-break: break-all;
-	@media screen and (max-width: $base-width-media-max) {
-	font-size: 3.3vw;
+	@media screen and (max-width: 1440px) {
+		font-size: 3vw;
 	}
-
-	@media screen and (max-width: 1200px) {
-		 margin-bottom: 20px;
+	@media screen and (max-width: 1100px) {
+		font-size: 3.2rem;
 	}
-
-
-	@media screen and (max-width: 1024px) {
-	font-size: 3.4rem;
-	}
-	// @media screen and (max-width: 940px) {
-	// font-size: 5.6vw;
-	// }
-	@media screen and (max-width: 570px) {
-	font-size: 5.6vw;
-	}
-
-	@media screen and (max-width: 750px) {
-	margin-bottom: 14px;
-	}
+	@media screen and (max-width: 700px) {
+			font-size: 4.2vw;
+ }
+ @media screen and (max-width: 500px) {
+		 font-size: 5.2vw;
+ }
 }
 
 h4, .h4 {
-	font-size: 4rem;
+	font-size: 2.4rem;
 	line-height: 1.2;
 
 	@media screen and (max-width: $base-width-media-max) {
-	font-size: 2.8vw;
+
 	}
 	@media screen and (max-width: 1024px) {
-	font-size: 2.8rem;
+
 	}
 	@media screen and (max-width: 500px) {
-		font-size: 5.6vw;
-	}
 
+	}
 
 }
 
@@ -180,16 +172,26 @@ h5, .h5 {
 }
 
 
-h1, h2, .f--bold {
-	    font-family: "HDColton-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+/////MARGIN/////
+
+h1,h2,h3,h4 {
+	margin-bottom: 0.75em;
+}
+
+
+
+h1, h2, .f--bold, strong, .strong  {
+	font-weight: 400;
+	    font-family: "Config-SemiBold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 .f--semibold  {
-		    font-family: "HDColton-Semibold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+		    font-family: "Config-Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 .f--medium  {
-		    font-family: "HDColton-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+		    font-family: "Config-Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
+
 
 /*--------------------------------------------------------------
 # Basic Links
@@ -305,10 +307,6 @@ var {
 }
 
 
-.-bold-txt, strong, .strong {
-	font-weight: 400;
-	font-family: "HDColton-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-}
 
 
 ////////BUTTTONS//////
@@ -323,90 +321,57 @@ margin-top: 40px;
 		}
 }
 
-.capsule-wrap.-all-bikes {
-		@media screen and (min-width: 1100.11px) {
-	margin-top: 60px;
-}
-}
-
-
-.btn--secondary {
-	border-radius: 6px;
-	border: solid 1px $orange;
-	font-size: 1.4rem;
-	padding: 6px 12px;
-			    font-family: "HDColton-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+.basic-card__inner .capsule-wrap {
+	margin-top: 20px;
 }
 
 .btn--basic {
-	background: $orange;
-		padding: 15px 22px;
-		border-radius: 15px;
+	cursor: pointer;
+	-webkit-appearance: none;
+	background: white;
+	color:black;
+	text-decoration: none;
+	border: none;
+		padding: 12px 22px;
+		border-radius: 999px;
 		transition: 0.3s;
-	font-family: "HDColton-Semibold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+		box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+		box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 2px 6px 2px;
+		min-width: 130px;
+		text-align: center;
+
+
+
+}
+
+.btn--outline {
+	 border: 1px solid 	#d9d9d9;
+	 box-shadow: none;
+	 background: none;
+}
+
+.workshop-nav .btn--outline {
+	background: white;
+}
+
+.btn--basic--small {
+
+    padding: 8px 16px;
+    min-width: 112px;
+    font-size: 1.6rem;
+}
+
+.btn--dark {
+	background: black;
+	color:white;
+	box-shadow: none;
 }
 
 .btn--basic:hover {
     box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 2px 6px 2px;
 }
 
-	@media screen and (max-width: 800px) {
-		.btn--basic {
-			font-size: 1.4rem;
-			background: $orange;
-				padding: 12px 18px;
-				border-radius: 13px;
-			font-family: "HDColton-Semibold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-		}
 
-	}
-
-.basic-btn {
-
-	padding: 12px 28px;
-	text-align: center;
-	border-radius: 999px;
-	border-width: 1px;
-	border-color: black;
-	border-style: solid;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-
-	cursor:pointer;
-	margin-right: 20px;
-
-	@media screen and (max-width: 1200px) {
-		padding: 10px 24px;
-	}
-}
-
-
-
-.basic-btn__text {
-line-height: 1;
-		transition: 0.25s;
-}
-.basic-btn__icon {
-	width: 1.7rem;
-	height: 1.7rem;
-
-	margin-left: 0.8rem;
-			transition: 0.25s;
-}
-
-
-
-.basic-btn:hover {
-	.basic-btn__text {
-		transform: translateX(1.2rem);
-		transition: 0.25s 0.1s;
-	}
-	.basic-btn__icon {
-		opacity: 0;
-			transition: 0.2s;
-	}
-}
 
 .btn--yellow {
 	background: $a-yellow;
@@ -450,23 +415,84 @@ line-height: 1;
 }
 
 
-.btn--refe-content-extend {
-	.basic-btn__icon {
-    margin: 0;
-}
-.basic-btn__text {
 
-		margin-left: 0.8rem;
-}
+////tag capsule
+
+.tag-capsule {
+
+	font-size: 1.6rem;
+	padding: 12px;
+	border: solid 1px;
+	// border-radius: 999px;
+	text-align: center;
 }
 
-.basic-btn.-muted-hover:hover {
-	.basic-btn__text {
-	transform: none !important;
+/////////////////EXTRA CLASSES FOR TEXT ITEMS//////
+
+.star-li {
+
+	display: flex;
+	p {
+		font-size: 1.5rem;
+		line-height: 1.2;
+		margin-left: 24px;
+		margin-bottom: 14px;
 	}
-	.basic-btn__icon {
-		opacity: 1 !important;
-	}
 }
 
-// UUTISET BBUTTON IS ON NAV CSS
+.star-li--large {
+		p {
+			font-size: 2.2rem;
+			}
+}
+
+
+.star-symbol {
+	position: relative;
+	margin: 0 !important;
+
+	.star-symbol__inner {
+	position: absolute;
+top: 2px;
+left: 0;
+width: 14px;
+height: 14px;
+
+	background-image: url("data:image/svg+xml,%3Csvg id='uuid-7c27314f-7cb5-447f-a3c9-03785896e97a' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14.4 14.38'%3E%3Cg id='uuid-46a04dc1-acaa-46be-a5f0-e1afe642d23c'%3E%3Cpath d='M6.79 14.38c0-3.75-3.04-6.79-6.79-6.79v-.8C3.75 6.79 6.79 3.75 6.79 0h.82c0 3.75 3.04 6.79 6.79 6.79v.8c-3.75 0-6.79 3.04-6.79 6.79h-.82Z' style='fill:%2361cdef%3B'/%3E%3C/g%3E%3C/svg%3E");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+}
+
+
+.large-icons {
+	.star-li {
+
+		display: flex;
+		p {
+			font-size: 2rem;
+			line-height: 1.2;
+			margin-left: 24px;
+			margin-bottom: 2rem;
+		}
+	}
+	.star-symbol {
+		position: relative;
+		margin: 0 !important;
+
+		.star-symbol__inner {
+		position: absolute;
+	top: 5px;
+	left: 0;
+	width: 14px;
+	height: 14px;
+
+		background-image: url("data:image/svg+xml,%3Csvg id='uuid-7c27314f-7cb5-447f-a3c9-03785896e97a' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14.4 14.38'%3E%3Cg id='uuid-46a04dc1-acaa-46be-a5f0-e1afe642d23c'%3E%3Cpath d='M6.79 14.38c0-3.75-3.04-6.79-6.79-6.79v-.8C3.75 6.79 6.79 3.75 6.79 0h.82c0 3.75 3.04 6.79 6.79 6.79v.8c-3.75 0-6.79 3.04-6.79 6.79h-.82Z' style='fill:%2361cdef%3B'/%3E%3C/g%3E%3C/svg%3E");
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	}
+
+}

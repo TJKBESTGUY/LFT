@@ -2,7 +2,7 @@
 /**
  * SVG icons related functions and filters
  *
- * @package ebikerental
+ * @package Lifted
  * @since 1.0
  * Based on Twenty Seventeen
  */
@@ -12,7 +12,7 @@
  * View your custom icons easily
  * You now also have access to iconify
  */
-function ebikerental_icon_template() {
+function lifted_icon_template() {
 
 	$slug = $_SERVER["REQUEST_URI"];
 	if ( $slug == '/icons' ) {
@@ -25,7 +25,7 @@ function ebikerental_icon_template() {
 /**
  * Add SVG definitions to the footer.
  */
-function ebikerental_include_svg_icons() {
+function lifted_include_svg_icons() {
 	// Define SVG sprite file.
 	$svg_icons = get_parent_theme_file_path( '/src/icons/symbol-defs.svg' );
 
@@ -37,9 +37,9 @@ function ebikerental_include_svg_icons() {
 
 //must be turned on via the theme config file
 if ( ign_get_config( 'load_custom_icons' ) ) {
-	add_action( "template_redirect", 'ebikerental_icon_template' );
-	add_action( 'wp_footer', 'ebikerental_include_svg_icons', 9999 );
-	add_action( 'admin_footer', 'ebikerental_include_svg_icons', 9999 );
+	add_action( "template_redirect", 'lifted_icon_template' );
+	add_action( 'wp_footer', 'lifted_include_svg_icons', 9999 );
+	add_action( 'admin_footer', 'lifted_include_svg_icons', 9999 );
 }
 
 /**
@@ -57,12 +57,12 @@ if ( ign_get_config( 'load_custom_icons' ) ) {
 function ign_get_svg( $args = array() ) {
 	// Make sure $args are an array.
 	if ( empty( $args ) ) {
-		return __( 'Please define default parameters in the form of an array.', 'ebikerental' );
+		return __( 'Please define default parameters in the form of an array.', 'lifted' );
 	}
 
 	// Define an icon.
 	if ( false === array_key_exists( 'icon', $args ) ) {
-		return __( 'Please define an SVG icon filename.', 'ebikerental' );
+		return __( 'Please define an SVG icon filename.', 'lifted' );
 	}
 
 	// Set defaults.
@@ -86,8 +86,8 @@ function ign_get_svg( $args = array() ) {
 	 * Ignition doesn't use the SVG title or description attributes; non-decorative icons are described with .screen-reader-text.
 	 *
 	 * However, child themes can use the title and description to add information to non-decorative SVG icons to improve accessibility.
-	 * Example 1 with title:  echo ebikerental_get_svg( array( 'icon' => 'arrow-right', 'title' => __( 'This is the title', 'textdomain' ) ) );
-	 * Example 2 with title and description: <?php echo ebikerental_get_svg( array( 'icon' => 'arrow-right', 'title' => __( 'This is the title', 'textdomain' ), 'desc' => __( 'This is the description', 'textdomain' ) ) ); ?>
+	 * Example 1 with title:  echo lifted_get_svg( array( 'icon' => 'arrow-right', 'title' => __( 'This is the title', 'textdomain' ) ) );
+	 * Example 2 with title and description: <?php echo lifted_get_svg( array( 'icon' => 'arrow-right', 'title' => __( 'This is the title', 'textdomain' ), 'desc' => __( 'This is the description', 'textdomain' ) ) ); ?>
 	 *
 	 * See https://www.paciellogroup.com/blog/2013/12/using-aria-enhance-svg-accessibility/.
 	 */

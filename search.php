@@ -6,7 +6,7 @@
  * Or just add the pull in sidebar
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package ebikerental
+ * @package Lifted
  * @since 1.0
  * @version 1.0
  */
@@ -20,9 +20,9 @@ get_header(); ?>
 
                 <div class="header-content container-fluid">
                     <?php if ( have_posts() ) : ?>
-                        <h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'ebikerental' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+                        <h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'lifted' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
                     <?php else : ?>
-                        <h1 class="page-title"><?php _e( 'Nothing Found', 'ebikerental' ); ?></h1>
+                        <h1 class="page-title"><?php _e( 'Nothing Found', 'lifted' ); ?></h1>
                     <?php endif; ?>
                     <div class="container-content">
                         <?php get_search_form(); ?>
@@ -44,9 +44,9 @@ get_header(); ?>
 			        <?php
 
 			        the_posts_pagination( array(
-				        'prev_text'          => '<span class="iconify" data-icon="carbon:chevron-left"></span><span class="screen-reader-text">' . __( 'Previous page', 'ebikerental' ) . '</span>',
-				        'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'ebikerental' ) . '</span><span class="iconify" data-icon="carbon:chevron-right"></span>',
-				        'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'ebikerental' ) . ' </span>',
+				        'prev_text'          => '<span class="iconify" data-icon="carbon:chevron-left"></span><span class="screen-reader-text">' . __( 'Previous page', 'lifted' ) . '</span>',
+				        'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'lifted' ) . '</span><span class="iconify" data-icon="carbon:chevron-right"></span>',
+				        'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'lifted' ) . ' </span>',
 			        ) );
 
 			        ?>

@@ -11,7 +11,7 @@
  * @since Ignition 1.0
  *
  */
-function ebikerental_excerpt_more( $more ) {
+function lifted_excerpt_more( $more ) {
 	if ( is_admin() && ! wp_doing_ajax() ) {
 		return $more;
 	}
@@ -19,7 +19,7 @@ function ebikerental_excerpt_more( $more ) {
 	return '&hellip; ';
 }
 
-add_filter( 'excerpt_more', 'ebikerental_excerpt_more' );
+add_filter( 'excerpt_more', 'lifted_excerpt_more' );
 
 
 /*--------------------------------------------------------------
@@ -32,7 +32,7 @@ add_filter( 'excerpt_more', 'ebikerental_excerpt_more' );
  */
 
 //html5 comment
-function ebikerental_comments_callback( $comment, $args, $depth ) {
+function lifted_comments_callback( $comment, $args, $depth ) {
 
 	$tag = ( 'div' === $args['style'] ) ? 'div' : 'li';
 	?>

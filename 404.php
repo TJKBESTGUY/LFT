@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package ebikerental
+ * @package Lifted
  * @since 1.0
  * @version 1.0
  */
@@ -15,8 +15,8 @@ get_header(); ?>
 
 			<div class="container-content text-center">
 				<div class="h1 title-404">404</div>
-					<p><?php _e( 'It looks like nothing was found at this location.', 'ebikerental' ); ?></p>
-					<a class="button" href="<?php echo home_url(); ?>"><?php _e( 'Go To Home', 'ebikerental' ); ?></a>
+					<p><?php _e( 'It looks like nothing was found at this location.', 'lifted' ); ?></p>
+					<a class="button" href="<?php echo home_url(); ?>"><?php _e( 'Go To Home', 'lifted' ); ?></a>
 			</div>
 
 		</main><!-- #main -->

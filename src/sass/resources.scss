@@ -340,11 +340,11 @@ Mixins
 
 
 //////UTILITY VARAIBLES/////
-$base-width: 1400px;
+$base-width: 1800px;
 // $base-width: 1480px;
 $base-width-half: $base-width / 2;
 
-$base-width-media-max: 1400px - 0.1px;
+$base-width-media-max: 1800px - 0.1px;
 
 
 // $base-width: 1400px;
@@ -370,11 +370,32 @@ $a-text-grey: #B0B0B0;
 $a-text-grey-alt: #858585;
 
 $nude: #FCFBF7;
+$nude: #f6f4eacf;
+
+$nude: #f6f4ea;
+$nude: #faf8f2;
+$nude: #f5f2ea;
+
+
+
 $orange: #ff8517;
 $green: #71EF5F;
 $dark: #031600;
 
+$l-blue: #04aef2;
+$l-bg-blue: rgb(4 174 242 / 5%);
+$l-bg-blue: #edf9ff;
+$l-bg-blue: #dff7ff;
+$l-bg-blue: #edf9ff;
 
+$l-grey:  #696973;
+
+$l-green: #00d084;
+$l-bg-green:  rgb(0 208 132 / 17%);
+
+$l-bg-green: rgb(27 219 123 / 15%);
+$l-orange: #ff8517;
+$border: #00000026;
 
 
 @mixin h5-contact-size {

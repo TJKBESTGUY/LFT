@@ -858,7 +858,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"ebikerental","slug":"ebikerental","server":"ebikerentalfi.local","ssl":false,"google_fonts":["Roboto:400,400i,700,700i","Roboto Slab:400,700"],"menu_icon":"","sidebar_icon":"","submenu_arrow_icon":"","comment_icon":"","search_menu_item":false,"dev_admin_bar_color":"#156288","admin_access_capability":"manage_options","load_custom_icons":false,"mobile_menu_type":"app-menu","logo_position":"logo-left","site_top_container":"container","default_acf_header_block":["post","page"]}');
+module.exports = JSON.parse('{"name":"Lifted","slug":"lifted","server":"lifted.local","ssl":false,"google_fonts":["Roboto:400,400i,700,700i","Roboto Slab:400,700"],"menu_icon":"","sidebar_icon":"","submenu_arrow_icon":"","comment_icon":"","search_menu_item":false,"dev_admin_bar_color":"#156288","admin_access_capability":"manage_options","load_custom_icons":false,"mobile_menu_type":"app-menu","logo_position":"logo-left","site_top_container":"container","default_acf_header_block":["post","page"]}');
 
 /***/ })
 

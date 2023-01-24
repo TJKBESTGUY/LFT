@@ -9,23 +9,14 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package ebikerental
+ * @package Lifted
  * @since 1.0
  * @version 1.0
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
 
-			<?php
-			while ( have_posts() ) : the_post();
-				ign_template('content');
-			endwhile; // End of the loop.
-			?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+      <?php locate_template('src/parts/global/main-page-loop.php', true, true); ?>
 
 <?php get_footer();

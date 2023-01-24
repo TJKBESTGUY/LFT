@@ -12,25 +12,29 @@
  * @since 1.0
  * @version 1.0
  */
+ get_header(); ?>
 
-get_header(); ?>
+     <div id="primary" class="content-area">
+         <main id="main" class="site-main" role="main">
+           <!-- <div class="U-nav-spacer">
 
-    <div id="primary" class="content-area">
-        <main id="main" class="site-main" role="main">
-	        <?php
-	        if ( have_posts() ):
-		        while ( have_posts() ) : the_post();
-	                ign_template('ebikerental_content');
-		        endwhile; // End of the loop.
+           </div> -->
+           <article class="single-post single-post--legacy -x-pad -y-pad">
 
-	        endif;
-	        ?>
+          <?php
+          if ( have_posts() ):
+            while ( have_posts() ) : the_post();
+             locate_template('src/parts/global/main-page-loop.php', true, true);
+            endwhile; // End of the loop.
 
-          <?php locate_template('src/parts/global/bottom-cta.php', true, true); ?>
-
-        </main><!-- #main -->
-    </div><!-- #primary -->
-
+          endif;
+          ?>
+                 </article>
 
 
-<?php get_footer();
+         </main><!-- #main -->
+     </div><!-- #primary -->
+
+
+
+ <?php get_footer();

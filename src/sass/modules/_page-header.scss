@@ -1,0 +1,158 @@
+
+@use "../resources" as *;
+@use "../variables" as *;
+
+
+.section--page-header {
+  padding-top: 0;
+}
+
+
+h1.tag {
+
+    color: $l-blue;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+     // font-family: "Config-Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+     @media only screen and (max-width: 1100px) {
+     font-size: 1.4rem;
+     margin-top: 10px;
+     }
+  }
+
+.module--header-block {
+  background: $nude;
+  border-radius: 16px;
+overflow: hidden;
+  @media only screen and (min-width: 1600px) {
+font-size: 1.9rem;
+    }
+  .flx-container {
+      display: flex;
+        width: 100%;
+
+          @media only screen and (max-width: 1100px) {
+        display: block;
+          }
+
+  }
+  .cell {
+    width: 50%;
+    min-width: 50%;
+    position: relative;
+
+      flex: 1;
+      @media only screen and (max-width: 1400px) {
+
+      }
+
+
+
+  }
+  .header-block__meta {
+    width: auto;
+    max-width: 1200px;
+    @media only screen and (max-width: 1100px) {
+  min-height: auto !important;
+    }
+
+  }
+
+  .page-template-materiaalit .header-block__meta {
+    padding-left: 40px;
+	  padding-right:40px;
+	text-align:center;
+  }
+
+.page-template-materiaalit .module--header-block .flx-container {
+  justify-content: center;
+  }
+
+.page-template-materiaalit .module--header-block p {
+	margin: auto;
+}
+
+.page-template-podcast .header-block__meta {
+    padding-left: 40px;
+	  padding-right:40px;
+	text-align:center;
+  }
+
+.page-template-podcast .module--header-block .flx-container {
+  justify-content: center;
+  }
+
+.page-template-podcast .module--header-block p {
+	margin: auto;
+}
+
+&.module--header-block--has-img {
+    .cell {
+        min-height: 570px;
+        @media only screen and (max-width: 1400px) {
+          min-height: 400px;
+        }
+    }
+}
+
+
+  h1 {
+    color: $l-blue;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+     // font-family: "Config-Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+     @media only screen and (max-width: 1100px) {
+     font-size: 1.4rem;
+     margin-top: 10px;
+     }
+  }
+  h2 {
+    margin-bottom: 30px;
+  }
+  p {
+        max-width: 700px;
+  }
+
+
+  .header-block__img {
+    @media only screen and (max-width: 1100px) {
+
+  width: 100%;
+    }
+    @media only screen and (max-width: 500px) {
+    min-height: 300px ;
+  width: 100%;
+    }
+    .placeholder-img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+}
+
+.module--header-block--no-img {
+.header-block__meta {
+  margin: auto;
+  text-align: center;
+  p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+}
+
+.section-theme--dark .module--header-block {
+  background: black;
+}

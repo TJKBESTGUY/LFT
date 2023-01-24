@@ -1,6 +1,6 @@
 <?php
 /**
- * @package ebikerental
+ * @package Lifted
  * @since 1.0
  * @version 1.0
  *
@@ -18,7 +18,7 @@
             <div class="site-navigation__nav-holder" data-moveto="#panel-left" data-moveat="--nav-move"
                  data-moveto-pos="0">
                 <nav class="site-navigation__nav" role="navigation"
-                     aria-label="<?php _e( 'Top Menu', 'ebikerental' ); ?>">
+                     aria-label="<?php _e( 'Top Menu', 'lifted' ); ?>">
 					<?php wp_nav_menu( array(
 						'theme_location' => 'top-menu',
 						'menu_id'        => 'top-menu',

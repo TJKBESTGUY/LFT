@@ -13,7 +13,7 @@ var doc_body = document.body
 
 var options = {
     // vertical offset in px before element is first unpinned
-    offset : 450,
+    offset : 10,
     // or you can specify offset individually for up/down scroll
 
     // scroll tolerance in px before state changes
@@ -56,7 +56,7 @@ var options = {
     // callback when below offset, `this` is headroom object
     onNotTop : function() {
       document.body.classList.remove("S-active--news-feed");
-  
+
     },
     // callback when at bottom of page, `this` is headroom object
     onBottom : function() {},

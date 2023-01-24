@@ -16,8 +16,7 @@
       </div>
 
 
-      <section class="section--basic U-sec-pad">
-                <div class="U_container U_base-pad U_container--article">
+
                   <div class="module--basic-article">
 
 
@@ -31,8 +30,8 @@
       ?>
 
                   </div>
-    </div>
-          </section>
+
+
 
 
           <section class="section--basic U-sec-pad section--bottom-cta bg--dark">

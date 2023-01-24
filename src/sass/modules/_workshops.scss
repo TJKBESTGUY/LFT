@@ -1,0 +1,204 @@
+
+@use "../resources" as *;
+@use "../variables" as *;
+
+
+.module--workshop-app {
+    background: $nude;
+    border-radius: 16px;
+overflow: hidden;
+    // padding: 0;
+    	@media only screen and (min-width: 700px) and (max-width: 1700px) {
+  padding: 60px;
+  }
+  @media only screen and (min-width: 700px) and (max-width: 1650px) {
+padding: 40px;
+}
+}
+
+.workshop-nav {
+  position: relative;
+  padding-bottom: 30px;
+  margin-bottom:60px;
+  border-bottom: solid 1px $border;
+    @media only screen  and (max-width: 1650px) {
+      padding-bottom: 20px;
+    }
+  button, a {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  display: inline-block;
+    span {
+      color:$l-blue;
+      pointer-events: none;
+      transition: 0.5s;
+    }
+    &:hover span {
+        color: $l-green;
+    }
+  }
+
+    .S-active {
+      // background: white;
+    }
+
+  .S-active span {
+    color: $l-green;
+  }
+}
+
+.workshop-group {
+  // display: flex;
+  margin-bottom: 60px;
+  justify-content: space-between;
+  @media only screen and (max-width: 1100px) {
+display: block;
+}
+}
+
+/////MOVE TO _PAGE IF USED ALSE watchSlidesProgress
+
+.aside-heading {
+  // width: 33.33%;
+  //     min-width: 33.33%;
+        min-width: 40%;
+  // padding-right: 100px;
+    max-width: 50%;
+  margin-bottom: 40px;
+  @media only screen and (max-width: 1100px) {
+  width: auto;
+  max-width: 90%;
+}
+h3 {
+  margin-bottom: 0.4em;
+}
+}
+
+.group-desciption {
+
+  // font-size: 1.8rem;
+  color: $l-grey;
+}
+
+.aside-content {
+  flex-grow: 1;
+}
+
+/////MOVE TO _PAGE IF USED ALSE watchSlidesProgress
+
+.workshop-group__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+
+
+
+
+.workshop-item {
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+  @media only screen and (min-width: 0px) and (max-width: 1050px) {
+width: calc(100%);
+  }
+}
+
+
+
+
+@mixin w-cell--split() {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+
+&:first-of-type {
+  padding-right: 30px;
+  border-right: solid 1px $border;
+}
+&:last-of-type {
+  padding-left: 30px;
+}
+.capsule-wrap {
+  margin-top: 20px;
+      margin-bottom: 16px;
+}
+   }
+
+
+   @mixin w-cell--stack() {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+
+   &:first-of-type {
+
+   }
+   &:last-of-type {
+  margin-top: 30px;
+  // display: none;
+   }
+   .capsule-wrap {
+     margin-top: 20px;
+         margin-bottom: 10px;
+   }
+      }
+
+@media only screen and (min-width: 0px) and (max-width: 800px) {
+      .workshop-item  .cell {
+      @include w-cell--stack();
+      }
+}
+
+@media only screen and (min-width: 800.11px) and (max-width: 1050px) {
+      .workshop-item  .cell {
+      @include w-cell--split();
+      }
+}
+
+
+@media only screen and (min-width: 1050.11px) and (max-width: 1600px) {
+      .workshop-item  .cell {
+      @include w-cell--stack();
+      }
+}
+
+@media only screen and (min-width: 1600.11px) {
+.workshop-item  .cell {
+@include w-cell--split();
+}
+}
+
+
+
+
+.workshop-group-wrap {
+  transition: all 0.25s;
+    transform: translateY(0);
+}
+
+.S-animating--filters {
+  .workshop-group-wrap {
+    opacity: 0;
+
+  }
+}
+
+.workshop-group.S-disabled__item {
+    display: none !important;
+}
+
+
+.on-page {
+  .workshop-nav {
+    display: none;
+  }
+
+  #johtaminen, #tiimityo{
+    display: none;
+  }
+  .aside-heading {
+    display: none;
+  }
+}
