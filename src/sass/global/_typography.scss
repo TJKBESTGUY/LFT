@@ -468,8 +468,12 @@ height: 14px;
 
 .large-icons {
 	.star-li {
-
+		border-top: solid 1px #d7d7d7;
+    padding-top: 20px;
 		display: flex;
+		&:last-of-type {
+			border-bottom: solid 1px #d7d7d7;
+		}
 		p {
 			font-size: 2rem;
 			line-height: 1.2;

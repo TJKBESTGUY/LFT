@@ -602,6 +602,44 @@ endif;
 add_filter( 'lazyblock/workshop-item-loop/frontend_callback', 'workshop_loop_output', 10, 2 );
 add_filter( 'lazyblock/asiantuntijat-item-loop/frontend_callback', 'asiantuntijat_loop_output', 10, 2 );
 add_filter( 'lazyblock/blog-item-loop/frontend_callback', 'blog_loop_output', 10, 2 );
+add_filter( 'lazyblock/asiakas-item-loop/frontend_callback', 'asiakas_loop_output', 10, 2 );
+
+
+
+if ( ! function_exists( 'asiakas_loop_output' ) ) :
+    /**
+     * Test Render Callback
+     *
+     * @param string $output - block output.
+     * @param array  $attributes - block attributes.
+     */
+    function asiakas_loop_output( $output, $attributes ) {
+        ob_start();
+        ?>
+
+				<?php $cat_loop = esc_html( $attributes['kategoria'] ); ?>
+				<?php $num_loop = esc_html( $attributes['maara'] ); ?>
+
+
+
+<?php
+
+$args = [
+  'cat' => $cat_loop,
+	'num' => $num_loop,
+];
+
+ ?>
+
+				      <?php locate_template('src/parts/php_blocks/asiakas-loop-block.php', true, false, $args); ?>
+
+
+        <?php
+        return ob_get_clean();
+    }
+endif;
+
+
 
 if ( ! function_exists( 'workshop_loop_output' ) ) :
     /**

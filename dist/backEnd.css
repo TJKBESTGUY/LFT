@@ -2310,6 +2310,9 @@ div .editor-styles-wrapper .acf-block-preview .site-logo svg, div .editor-styles
 div .editor-styles-wrapper .acf-block-preview .site-navigation .site-logo {
   padding: 3px 0;
 }
+div .editor-styles-wrapper .acf-block-preview .-hide {
+  display: none;
+}
 div .editor-styles-wrapper .acf-block-preview .site-top {
   position: relative;
   background: #007fb0;

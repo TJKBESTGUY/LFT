@@ -9,7 +9,7 @@
  */
 
 ?>
-<div class="cell basic-card article-card swiper-slide" >
+<div class="basic-card article-card" >
 
   <div class="basic-card__inner">
     <div class="basic-card__image">
