@@ -8,6 +8,7 @@
 body {
   background: var(--body-bg);
   background: #fdfdfd;
+  letter-spacing: 0.2px;
   // overflow-x: hidden;
 }
 #page {
@@ -351,7 +352,7 @@ padding-right: 4px;
 .section-theme--color {
     .section-inner-container > div {
      background: $nude;
-     border-radius: 16px;
+     border-radius: 10px;
 
      }
   h2 {
@@ -372,7 +373,7 @@ padding-right: 4px;
 .section-theme--dark {
   .section-inner-container  > div {
 	background: black;
-       border-radius: 16px;
+       border-radius: 10px;
 }
 	color:white;
 }
@@ -967,15 +968,15 @@ margin-right: -10px;
   }
 
   ///desktop -- USE THE CELL STYLES for mobile
-    @media screen and (min-width: 800.11px) {
-  .cell:first-of-type {
-    width: 50%;
-    min-width: 50%;
-  }
-  .cell:last-of-type {
-    flex-grow: 1;
-  }
-  }
+  //   @media screen and (min-width: 800.11px) {
+  // .cell:first-of-type {
+  //   width: 50%;
+  //   min-width: 50%;
+  // }
+  // .cell:last-of-type {
+  //   flex-grow: 1;
+  // }
+  // }
 
 
 }
@@ -992,17 +993,18 @@ margin-right: -10px;
 //MEADIUM///
 
 .module--split-content .split-content__txt {
-  @media screen and (max-width: 800px) {
+  // @media screen and (max-width: 800px) {
   width: 60%;;
     min-width: 60%;
-}
+// }
 }
 
 .module--split-content .split-content__img {
-  @media screen and (max-width: 800px) {
+  // @media screen and (max-width: 800px) {
   width: 40%;
     min-width: 40%;
-}
+        height: fit-content;
+// }
 }
 
 ////MOBILE
@@ -1442,6 +1444,11 @@ img.zoom-img {
 }
 }
 
+.placeholder-img, .lazy-img {
+  border-radius: 10px;
+     overflow: hidden;
+
+}
 .logo-img {
   .placeholder-img {
     opacity: 0;

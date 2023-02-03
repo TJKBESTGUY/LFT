@@ -34,37 +34,247 @@
   </div>
 </section>
 
+<div class="content-spacer--small">
+</div>
+<div class="content-spacer--small">
+</div>
 
+<section class="section--basic U-sec-pad--none section-theme--color section-width--normal has-icons no-anim">
 
-<section class="section--home-services">
-  <div class="U_container U_base-pad">
-  <div class="module--home-services" style="
-    padding-top: 100px;" >
+  <div class="section-inner-container U_container U_base-pad" style="max-width:;">
+      <div class="section-bg-container" style="background:">
 
-  <!-- <div class="home-services-aside">
-    <div class="home-services-aside__content U-sec-pad--small">
+<div class="lazyblock-text-container-LAIh5 wp-block-lazyblock-text-container">
+  <div class="module--basic-content basic-content-flx -x-pad basic-content--bottom basic-content-flx--left aos-init aos-animate heading-txt" data-aos="heading-txt" style="    padding-top: 0;">
+    <div class="basic-content__inner" style="max-width:800px;">
 
-    <h3>Tarjoamme vaikuttavia hyvinvoinnin ja tuottavuuden nostamiseen keskittyviä henkilöstön kehittämisen palveluita tietotyöorganisaatioille</h3>
-  </div>
-    </div> -->
-
-
-<div class="home-services-content">
-
-  <div class="home-services-aside__content U-sec-pad--small">
-    <h1 class="base-text tag">
-    Palvelut
-  </h1>
-  <h3>Tarjoamme vaikuttavia hyvinvoinnin ja tuottavuuden nostamiseen keskittyviä henkilöstön kehittämisen palveluita tietotyöorganisaatioille</h3>
+<h3>Palvelut</h3>
+<h4 class="has-text-align-left" id="valmennusohjelmat">Tarjoamme vaikuttavia hyvinvoinnin ja tuottavuuden nostamiseen keskittyviä henkilöstön kehittämisen palveluita tietotyöorganisaatioille</h4>
+<div class="content-spacer--small">
 </div>
 
 
-<section class="section--basic U-sec-pad--small section-theme--color section-width--normal service-item service-item-1">
-  <div class="section-inner-container U_container U_base-pad" style="max-width:;">
-      <div class="section-bg-container" >
+    </div>
+</div>
+</div>
 
-        <div class="wp-block-lazyblock-split-content-flex lazyblock-split-content-flex-ZPVMJn"><div class="module--split-content  -x-pad " style="    padding-left: 80px;
-          padding-right: 80px;">
+<div class="lazyblock-content-flex-row-2-Z1zDYw8 wp-block-lazyblock-content-flex-row-2"><div class="module--split-content  -x-pad   -small-gaps    ">
+  <div class="flx-container  flx--33">
+
+
+<div class="cell-basic anim--cell aos-init aos-animate info-boxes" data-scroll="" data-aos="info-boxes">
+<div class="basic-card__inner">
+
+<div class="lazyblock-rounded-image-2tGICv wp-block-lazyblock-rounded-image"><div class="module--contact-avatar">
+    <div class="contact-avatar__image left">
+      <div class="placeholder-img">
+        <img decoding="async" class="" data-src=" /wp-content/uploads/2022/12/icon1-1-15x15.png" alt="" src=" /wp-content/uploads/2022/12/icon1-1-15x15.png">
+
+       </div>
+       <div class="lazy-img">
+        <img decoding="async" class="lazyanim lazyloaded" data-src=" /wp-content/uploads/2022/12/icon1-1.png" alt="" src=" /wp-content/uploads/2022/12/icon1-1.png">
+</div>
+</div>
+</div></div>
+
+<h1 class="base-text tag" style="margin-bottom:14px;">
+        Johtaminen
+            </h1>
+<h4 class="has-text-align-left" id="hyvinvointi-paranee"><strong>Esihenkilötyöhön panostaminen maksaa itsensä moninkertaisesti taikaisin.</strong></h4>
+
+
+
+<p class="has-text-align-left">Johtamisen valmennuksemme nostavat esihenkilöiden yksilöllisen ja kollektiivisen kyvykkyyden seuraavalle tasolle. Tuloksellisuutta ja hyvinvointia käsi kädessä!</p>
+
+
+<div class="lazyblock-basic-cta-block-Z9O4Pw wp-block-lazyblock-basic-cta-block">
+<div class="capsule-wrap ">
+<a class="btn--basic btn--dark " style=" " href="">Tutustu palveluun</a>
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="cell-basic anim--cell aos-init aos-animate info-boxes" data-scroll="" data-aos="info-boxes">
+<div class="basic-card__inner">
+
+<div class="lazyblock-rounded-image-gCjTO wp-block-lazyblock-rounded-image"><div class="module--contact-avatar">
+    <div class="contact-avatar__image left">
+      <div class="placeholder-img">
+        <img decoding="async" class="" data-src=" /wp-content/uploads/2022/12/icon1-1-15x15.png" alt="" src=" /wp-content/uploads/2022/12/icon1-1-15x15.png">
+
+       </div>
+       <div class="lazy-img">
+        <img decoding="async" class="lazyanim lazyloaded" data-src=" /wp-content/uploads/2022/12/icon1-1.png" alt="" src=" /wp-content/uploads/2022/12/icon1-1.png">
+</div>
+</div>
+</div></div>
+
+<h1 class="base-text tag" style="margin-bottom:14px;">
+      Tiimityö
+            </h1>
+<h4 class="has-text-align-left" id="hyvinvointi-paranee"><strong>Huipputiimi on moninkertaisesti enemmän kuin osiensa summa.</strong></h4>
+
+
+
+<p class="has-text-align-left">Valmennuksiemme avulla työyhteisösi jäsenet saadaan onnistumaan yhdessä! Kehitämme jokaisen valmiuksia yhteistyöhön sekä yhteisön me-henkeä ja yhteisiä toimintatapoja.</p>
+
+
+<div class="lazyblock-basic-cta-block-Z1uvpJP wp-block-lazyblock-basic-cta-block">
+<div class="capsule-wrap ">
+<a class="btn--basic btn--dark " style=" " href="">Tutustu palveluun</a>
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="cell-basic anim--cell aos-init aos-animate info-boxes" data-scroll="" data-aos="info-boxes">
+<div class="basic-card__inner">
+
+<div class="lazyblock-rounded-image-ZyekAM wp-block-lazyblock-rounded-image"><div class="module--contact-avatar">
+    <div class="contact-avatar__image left">
+      <div class="placeholder-img">
+        <img decoding="async" class="" data-src=" /wp-content/uploads/2022/12/icon1-1-15x15.png" alt="" src=" /wp-content/uploads/2022/12/icon1-1-15x15.png">
+
+       </div>
+       <div class="lazy-img">
+        <img decoding="async" class="lazyanim lazyloaded" data-src=" /wp-content/uploads/2022/12/icon1-1.png" alt="" src=" /wp-content/uploads/2022/12/icon1-1.png">
+</div>
+</div>
+</div></div>
+
+<h1 class="base-text tag" style="margin-bottom:14px;">
+  Itsensä johtaminen
+            </h1>
+<h4 class="has-text-align-left" id="hyvinvointi-paranee"><strong>Oikeiden työkalujen ja menetelmien avulla jokainen yksilö voi menestyä.</strong></h4>
+
+
+
+<p class="has-text-align-left">Valmennuksemme auttaa organisaatiosi jokaista jäsentä kasvattamaan ja käyttämään voimavarojaan viisaasti ja joustavasti.</p>
+
+
+<div class="lazyblock-basic-cta-block-1IUxOR wp-block-lazyblock-basic-cta-block">
+<div class="capsule-wrap ">
+<a class="btn--basic btn--dark " style=" " href="">Tutustu palveluun</a>
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+
+</div>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+</section>
+
+
+<section class="section--basic U-sec-pad section-theme--light section-width--normal ">
+  <div class="section-inner-container U_container U_base-pad" style="max-width:;">
+      <div class="section-bg-container" style="background:">
+
+<div class="lazyblock-split-content-flex-V6fvD wp-block-lazyblock-split-content-flex"><div class="module--split-content  -x-pad ">
+  <div class="flx-container">
+
+
+
+     <div class="cell  split-content__txt">
+  <div class="cell_txt-content">
+
+
+<h3 id="kohti-parempaa-tiimityota"><strong>Valmennennustapahtumat</strong></h3>
+
+
+
+<h4>Parhaat tulokset saavutamme aina valmennusohjelmien avulla. Toteutamme kuitenkin myös yksittäisiä valmennustapahtumia eri palvelukokonaisuuksiimme liittyen. Tarjoamme sekä yksittäisiä luentoja että räätälöityjä luentokokonaisuuksia, suomeksi, englanniksi ja ruotsiksi, livenä sekä etänä.</h4>
+
+<div class="capsule-wrap  capsule-wrap ">
+  <a class="btn--basic btn--dark" style="" href="">Tutustu Valmennennustapahtumiin</a>
+  </div>
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+  <div class="cell split-content__img">
+      <div class="placeholder-img">
+        <img class="" data-src=" http://lifted.local/wp-content/uploads/2022/12/Screen-Shot-2022-12-09-at-3.48.31-PM-15x12.png" alt="" src=" http://lifted.local/wp-content/uploads/2022/12/Screen-Shot-2022-12-09-at-3.48.31-PM-15x12.png">
+
+       </div>
+       <div class="lazy-img">
+
+       <img decoding="async" class="lazyanim ls-is-cached lazyloaded" data-src=" http://lifted.local/wp-content/uploads/2022/12/Screen-Shot-2022-12-09-at-3.48.31-PM.png" alt="" src=" http://lifted.local/wp-content/uploads/2022/12/Screen-Shot-2022-12-09-at-3.48.31-PM.png">
+</div>
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- <div class="content-spacer--small">
+</div> -->
+<!-- <div class="content-spacer--small">
+</div>
+<div class="content-spacer--small">
+</div>
+<div class="content-spacer--small">
+</div> -->
+
+
+
+
+
+
+<section class="section--basic U-sec-pad section-theme--color section-width--normal ">
+  <div class="section-inner-container U_container U_base-pad" style="max-width:;">
+      <div class="section-bg-container" style="background:">
+
+<div class="wp-block-lazyblock-split-content-flex lazyblock-split-content-flex-hkqb7"><div class="module--split-content  -x-pad ">
   <div class="flx-container">
 
 
@@ -73,224 +283,84 @@
 
 
 
+    <div class="cell split-content__img">
+        <div class="placeholder-img">
+          <img class="" data-src=" http://lifted.local/wp-content/uploads/2022/12/Screen-Shot-2022-12-09-at-3.48.31-PM-15x12.png" alt="" src=" http://lifted.local/wp-content/uploads/2022/12/Screen-Shot-2022-12-09-at-3.48.31-PM-15x12.png">
 
-
-
-
-
-
-     <div class="cell mosaic-split__txt split-content__txt">
-       <div class="service-item__icon">
-         <img src="https://lifted.fi/wp-content/uploads/2021/03/Lifted-ikonit-siniset-25.png">
-       </div>
-  <div class="">
-
-
-<h3 id="hedelmallinen-tiimityo-perustuu-tiimin-jokaisen-jasenen-panokseen-ja-heidan-valisen-yhteistyon-laatuun-1"><strong>Johtamisen valmennukset</strong></h3>
-
-
-
-<p>Johtaminen voi olla joko avain tai este organisaatiosi menestymiseen. Esihenkilötyöhön panostaminen maksaa itsensä moninkertaisesti taikaisin! Johtamisen valmennuksemme nostavat esihenkilöiden yksilöllisen ja kollektiivisen kyvykkyyden seuraavalle tasolle. Tuloksellisuutta ja hyvinvointia käsi kädessä!</p>
-
-
-<div class="capsule-wrap  capsule-wrap--center ">
-<a class="btn--basic btn--dark" style="background:#04aef2; " href="">Tutustu</a>
-</div>
-
-
-</div>
-</div>
-
-
-</div>
-
-
-
-
-</div>
-
-
-
-</div>
-
-</div>
-</div>
-</section>
-
-
-  <section class="section--basic U-sec-pad--small section-theme--color section-width--normal service-item">
-    <div class="section-inner-container U_container U_base-pad" style="max-width:;">
-        <div class="section-bg-container" style=" background: #faf8f2;">
-
-          <div class="wp-block-lazyblock-split-content-flex lazyblock-split-content-flex-ZPVMJn"><div class="module--split-content  -x-pad " style="    padding-left: 80px;
-            padding-right: 80px;">
-    <div class="flx-container">
-
-
-
-
-
-
-
-
-
-
-
-
-
-       <div class="cell mosaic-split__txt split-content__txt">
-         <div class="service-item__icon">
-           <img src="https://lifted.fi/wp-content/uploads/2021/03/Lifted-ikonit-siniset-25.png">
          </div>
-    <div class="">
+         <div class="lazy-img">
+
+         <img decoding="async" class="lazyanim ls-is-cached lazyloaded" data-src=" http://lifted.local/wp-content/uploads/2022/12/Screen-Shot-2022-12-09-at-3.48.31-PM.png" alt="" src=" http://lifted.local/wp-content/uploads/2022/12/Screen-Shot-2022-12-09-at-3.48.31-PM.png">
+  </div>
+  </div>
 
 
-  <h3 id="hedelmallinen-tiimityo-perustuu-tiimin-jokaisen-jasenen-panokseen-ja-heidan-valisen-yhteistyon-laatuun-1"><strong>Tiimityön valmennukset</strong></h3>
 
 
 
-  <p>Huipputiimi on moninkertaisesti enemmän kuin osiensa summa. Ja jokaisesta tiimistä voi kehittyä tällainen huipputiimi jos heillä on oikea valmentaja.
-Valmennuksiemme avulla työyhteisösi jäsenet saadaan onnistumaan yhdessä! Kehitämme jokaisen valmiuksia yhteistyöhön sekä yhteisön me-henkeä ja yhteisiä toimintatapoja.
+     <div class="cell mosaic-split__txt split-content__txt" style="
+    display: flex;
+    align-items: center;
+">
+  <div class="cell_txt-content">
+<h3 id="kenelle-liftedin-tyoyhteisotaitojen-ja-tiimityon-valmennus-sopii">Lifted on kehittämisen kumppanisi kasvussa, muutoksessa ja haastavissa tilanteissa</h3>
+<div class="large-icons wp-block-lazyblock-info-list lazyblock-info-list-2bN8dQ">  <div class="-list">
+<div class="-item star-li">
+<p class="star-symbol"> <span class="star-symbol__inner"></span> </p><p>
+  Sidomme ratkaisumme aina organisaation liiketoimintaan ja strategiaan asiakaslähtöisesti.
+
 </p>
+</div>
+
+<div class="-item star-li">
+<p class="star-symbol"> <span class="star-symbol__inner"></span> </p><p>
+  Meillä on erittäin vahva kokemus, huippuasiantuntijat, tehokkaat prosessit ja erilaisiin tilanteisiin parhaiten sopivat työkalut.
+
+</p>
+</div>
+
+<div class="-item star-li">
+<p class="star-symbol"> <span class="star-symbol__inner"></span> </p><p>
+  Suurin kilpailuetumme on saavuttamamme pitkäkestoiset tulokset. Referenssimme puhuvat puolestaan ja kestävät vertailun.
+
+</p>
+</div>
+
+<div class="-item star-li">
+<p class="star-symbol"> <span class="star-symbol__inner"></span> </p><p>
+  Olemme satojen organisaatioiden luottama kehittämisen kumppani.
+
+</p>
+</div>
+
+</div>
+
+ </div>
 
 
-  <div class="capsule-wrap  capsule-wrap--center ">
-  <a class="btn--basic btn--dark" style="background:#04aef2; " href="">Tutustu</a>
-  </div>
+</div>
+</div>
 
 
-  </div>
-  </div>
-
-
-  </div>
-
-
-
-
-  </div>
-
-
-
-  </div>
-
-  </div>
-  </div>
-  </section>
-
-
-  <section class="section--basic U-sec-pad--small section-theme--color section-width--normal service-item ">
-    <div class="section-inner-container U_container U_base-pad" style="max-width:;">
-        <div class="section-bg-container">
-
-  <div class="wp-block-lazyblock-split-content-flex lazyblock-split-content-flex-ZPVMJn"><div class="module--split-content  -x-pad " style="    padding-left: 80px;
-    padding-right: 80px;">
-    <div class="flx-container">
-
-
-
-
-
-
-
-
-
-
-
-
-
-       <div class="cell mosaic-split__txt split-content__txt">
-         <div class="service-item__icon">
-           <img src="https://lifted.fi/wp-content/uploads/2021/03/Lifted-ikonit-siniset-25.png">
-         </div>
-    <div class="">
-
-
-  <h3 id="hedelmallinen-tiimityo-perustuu-tiimin-jokaisen-jasenen-panokseen-ja-heidan-valisen-yhteistyon-laatuun-1"><strong>Itsensä johtamisen valmennukset</strong></h3>
-
-
-
-  <p>Työelämä vaatii enemmän itsensä johtamisen taitoja ja itseohjautuvuutta kuin koskaan aikaisemmin. Oikeiden työkalujen ja menetelmien avulla jokainen yksilö voi menestyä!
-Valmennuksemme auttaa organisaatiosi jokaista jäsentä kasvattamaan ja käyttämään voimavarojaan viisaasti ja joustavasti</p>
-
-
-  <div class="capsule-wrap  capsule-wrap--center ">
-  <a class="btn--basic btn--dark" style="background:#04aef2; " href="">Tutustu</a>
-  </div>
-
-
-  </div>
-  </div>
-
-
-  </div>
-
-
-
-
-  </div>
-
-
-
-  </div>
-
-  </div>
-  </div>
-  </section>
-
-
-
-
-
+</div>
 
 
 
 
 </div>
-  </div>
-    </div>
-</section>
 
 
 
-
-
-<!-- <div class="content-spacer--small">
-</div> -->
-<!-- <div class="content-spacer--small">
 </div>
-<div class="content-spacer--small">
-</div>
-<div class="content-spacer--small">
-</div> -->
 
-
-<section class="section--basic U-sec-pad section-theme--light section-width--normal " style="">
-  <div class="section-inner-container U_container U_base-pad" style="max-width:;">
-      <div class="section-bg-container" >
-
-
-        <div class="module--basic-content basic-content-flx  -x-pad basic-content--bottom basic-content-flx--center anim-cell" data-scroll="" data-aos="heading-txt">
-            <div class="basic-content__inner" style="max-width:1000px;">
-              <h1 class="base-text tag has-text-align-center">
-          Lifted
-            </h1>
-
-        <h3 class="has-text-align-center" id="panostamalla-tyoyhteisotaitojen-kehittamiseen-saavutatkin-merkittavia-hyotyja">Lifted on kehittämisen kumppanisi kasvussa, muutoksessa ja haastavissa tilanteissa</h3>
-        <!-- <div class="content-spacer--small">
-        </div> -->
-
-            </div>
-        </div>
 </div>
 </div>
 </section>
 
 
-
-<section class="section--basic U-sec-pad--small section-theme--light section-width--normal has-icons">
+<section class="section--basic U-sec-pad--small section-theme--color section-width--normal has-icons">
   <div class="section-inner-container U_container U_base-pad" style="max-width:;">
-      <div class="section-bg-container" style="background:">
+      <div class="section-bg-container" style="background:#edf9ff;">
 
             <!-- <div class="content-spacer--small">
             </div>
@@ -313,7 +383,7 @@ Valmennuksemme auttaa organisaatiosi jokaista jäsentä kasvattamaan ja käyttä
 
 
 
-<div class="dark-card wp-block-lazyblock-content-flex-row-2 lazyblock-content-flex-row-2-1CULJL"><div class="module--split-content  -x-pad    ">
+<div class=" wp-block-lazyblock-content-flex-row-2 lazyblock-content-flex-row-2-1CULJL"><div class="module--split-content  -x-pad    ">
   <div class="flx-container  flx--25">
 
 
@@ -412,94 +482,8 @@ yksilöä</strong></p>
 </div>
 </section>
 
-<section class="section--basic U-sec-pad section-theme--color section-width--normal ">
-  <div class="section-inner-container U_container U_base-pad" style="max-width:;">
-      <div class="section-bg-container" style="background:">
 
-<div class="wp-block-lazyblock-split-content-flex lazyblock-split-content-flex-hkqb7"><div class="module--split-content  -x-pad ">
-  <div class="flx-container">
-
-
-
-
-
-
-
-  <div class="cell split-content__img">
-      <div class="placeholder-img">
-        <img decoding="async" class="" data-src=" http://lifted.local/wp-content/uploads/2022/12/lifted-webres-24-15x10.jpg" alt="" src=" http://lifted.local/wp-content/uploads/2022/12/lifted-webres-24-15x10.jpg">
-
-       </div>
-       <div class="lazy-img">
-
-       <img decoding="async" class="lazyanim lazyloaded" data-src=" http://lifted.local/wp-content/uploads/2022/12/lifted-webres-24-2000x1334.jpg" alt="" src=" http://lifted.local/wp-content/uploads/2022/12/lifted-webres-24-2000x1334.jpg">
-</div>
-</div>
-
-
-
-
-
-     <div class="cell mosaic-split__txt split-content__txt" style="
-    display: flex;
-    align-items: center;
-">
-  <div class="cell_txt-content">
-
-<div class="large-icons wp-block-lazyblock-info-list lazyblock-info-list-2bN8dQ">  <div class="-list">
-<div class="-item star-li">
-<p class="star-symbol"> <span class="star-symbol__inner"></span> </p><p>
-  Sidomme ratkaisumme aina organisaation liiketoimintaan ja strategiaan asiakaslähtöisesti.
-
-</p>
-</div>
-
-<div class="-item star-li">
-<p class="star-symbol"> <span class="star-symbol__inner"></span> </p><p>
-  Meillä on erittäin vahva kokemus, huippuasiantuntijat, tehokkaat prosessit ja erilaisiin tilanteisiin parhaiten sopivat työkalut.
-
-</p>
-</div>
-
-<div class="-item star-li">
-<p class="star-symbol"> <span class="star-symbol__inner"></span> </p><p>
-  Suurin kilpailuetumme on saavuttamamme pitkäkestoiset tulokset. Referenssimme puhuvat puolestaan ja kestävät vertailun.
-
-</p>
-</div>
-
-<div class="-item star-li">
-<p class="star-symbol"> <span class="star-symbol__inner"></span> </p><p>
-  Olemme satojen organisaatioiden luottama kehittämisen kumppani.
-
-</p>
-</div>
-
-</div>
-
- </div>
-
-
-</div>
-</div>
-
-
-</div>
-
-
-
-
-</div>
-
-
-
-</div>
-
-</div>
-</div>
-</section>
-
-<section class="section--basic U-sec-pad section-theme--color section-width--normal " style="" >
+<section class="section--basic U-sec-pad--small section-theme--color section-width--normal " style="" >
   <div class="section-inner-container U_container U_base-pad" style="justify-content: center;">
       <div class="section-bg-container">
 

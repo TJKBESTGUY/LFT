@@ -603,7 +603,52 @@ add_filter( 'lazyblock/workshop-item-loop/frontend_callback', 'workshop_loop_out
 add_filter( 'lazyblock/asiantuntijat-item-loop/frontend_callback', 'asiantuntijat_loop_output', 10, 2 );
 add_filter( 'lazyblock/blog-item-loop/frontend_callback', 'blog_loop_output', 10, 2 );
 add_filter( 'lazyblock/asiakas-item-loop/frontend_callback', 'asiakas_loop_output', 10, 2 );
+add_filter( 'lazyblock/select-item-loop/frontend_callback', 'select_loop_output', 10, 2 );
 
+
+
+if ( ! function_exists( 'select_loop_output' ) ) :
+    /**
+     * Test Render Callback
+     *
+     * @param string $output - block output.
+     * @param array  $attributes - block attributes.
+     */
+    function select_loop_output( $output, $attributes ) {
+        ob_start();
+        ?>
+
+				<div class="module--blog-app -x-pad">
+
+				  <div class="flx-container">
+				<?php foreach( $attributes['post-select'] as $post_id ): ?>
+					<?php $args = array(
+									'p'         => $post_id,
+									'post_type' => 'any',
+							);
+
+							$loop = new WP_Query( $args );
+
+							while ( $loop->have_posts() ) : $loop->the_post();
+								?>
+
+					<?php locate_template('src/parts/global/button-card-post.php', true, false); ?>
+
+									<?php
+							endwhile;
+
+							wp_reset_postdata();  ?>
+
+				<?php endforeach; ?>
+
+			</div>
+			</div>
+
+
+        <?php
+        return ob_get_clean();
+    }
+endif;
 
 
 if ( ! function_exists( 'asiakas_loop_output' ) ) :
@@ -617,15 +662,15 @@ if ( ! function_exists( 'asiakas_loop_output' ) ) :
         ob_start();
         ?>
 
-				<?php $cat_loop = esc_html( $attributes['kategoria'] ); ?>
+
 				<?php $num_loop = esc_html( $attributes['maara'] ); ?>
 
-
+<?php $selected_taxonomy = get_term_by('slug', $attributes['category-select'], 'category'); ?>
 
 <?php
 
 $args = [
-  'cat' => $cat_loop,
+  'cat' => $selected_taxonomy->slug,
 	'num' => $num_loop,
 ];
 

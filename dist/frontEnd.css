@@ -1885,7 +1885,7 @@ var {
   border-bottom: solid 1px #d7d7d7;
 }
 .large-icons .star-li p {
-  font-size: 2rem;
+  font-size: 1.9rem;
   line-height: 1.2;
   margin-left: 24px;
   margin-bottom: 2rem;
@@ -1896,7 +1896,7 @@ var {
 }
 .large-icons .star-symbol .star-symbol__inner {
   position: absolute;
-  top: 5px;
+  top: 4px;
   left: 0;
   width: 14px;
   height: 14px;
@@ -2044,6 +2044,7 @@ body {
   background: white;
   background: var(--body-bg);
   background: #fdfdfd;
+  letter-spacing: 0.2px;
 }
 
 .site-content {
@@ -2333,14 +2334,14 @@ section {
 
 .section-theme--color .section-inner-container > div {
   background: #f5f2ea;
-  border-radius: 16px;
+  border-radius: 10px;
 }
 .section-theme--dark {
   color: white;
 }
 .section-theme--dark .section-inner-container > div {
   background: black;
-  border-radius: 16px;
+  border-radius: 10px;
 }
 
 .image-aspect-box {
@@ -2847,32 +2848,22 @@ Moved: _kohteet
   display: flex;
   flex-wrap: nowrap;
 }
-@media screen and (min-width: 800.11px) {
-  .module--split-content .cell:first-of-type {
-    width: 50%;
-    min-width: 50%;
-  }
-  .module--split-content .cell:last-of-type {
-    flex-grow: 1;
-  }
-}
 
 .module--split-content.-right-nudge {
   padding-right: 8.3333%;
 }
 
-@media screen and (max-width: 800px) {
-  .module--split-content .split-content__txt {
-    width: 60%;
-    min-width: 60%;
-  }
+.module--split-content .split-content__txt {
+  width: 60%;
+  min-width: 60%;
 }
 
-@media screen and (max-width: 800px) {
-  .module--split-content .split-content__img {
-    width: 40%;
-    min-width: 40%;
-  }
+.module--split-content .split-content__img {
+  width: 40%;
+  min-width: 40%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 @media screen and (max-width: 750px) {
@@ -3261,6 +3252,11 @@ img.zoom-img {
 .module--full-image .placeholder-img {
   opacity: 0;
   min-width: 100%;
+}
+
+.placeholder-img, .lazy-img {
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .logo-img .placeholder-img {
@@ -6937,6 +6933,10 @@ q {
   height: 100%;
 }
 
+.section-theme--light .basic-card__inner {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
 .basic-card__inner {
   display: flex;
   flex-direction: column;
@@ -7525,7 +7525,7 @@ q {
 }
 .themes .flx-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 1fr;
 }
 @media screen and (max-width: 1400px) {
