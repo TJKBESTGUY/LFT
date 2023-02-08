@@ -19,6 +19,10 @@ body {
       overflow: hidden;
 }
 
+.site-container{
+      overflow: hidden;
+}
+
 
 /*--------------------------------------------------------------
 # Logo
@@ -218,6 +222,8 @@ padding-right: 4px;
     @media only screen and (max-width: 1200px) {
       padding-left: 40px;
       padding-right: 40px;
+      padding-left: 30px;
+      padding-right: 30px;
     }
     @media only screen and (max-width: 699.89px) {
       padding-left: 30px;
@@ -243,7 +249,7 @@ padding-right: 4px;
     padding-top: 60px;
     padding-bottom: 60px;
   }
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1000px) {
     padding-top: 40px;
     padding-bottom: 40px;
   }
@@ -253,6 +259,10 @@ padding-right: 4px;
 .U-inner-content--y--small, .-y-pad--small{
   padding-top: 40px;
   padding-bottom: 40px;
+    @media only screen and (max-width: 500px) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
 }
 
 .content-spacer {
@@ -289,8 +299,16 @@ padding-right: 4px;
     margin-top: 100px;
     // margin-bottom: 100px;
   }
+  @media only screen and (max-width: 1100px) {
+    margin-top: 80px;
+    // margin-bottom: 100px;
+  }
   @media only screen and (max-width: 700px) {
     margin-top: 60px;
+    // margin-bottom: 60px;
+  }
+  @media only screen and (max-width: 500px) {
+    margin-top: 30px;
     // margin-bottom: 60px;
   }
 }
@@ -302,8 +320,16 @@ padding-right: 4px;
       margin-top: 60px;
         // margin-bottom: 60px;
   }
+  @media only screen and (max-width: 1000px) {
+      margin-top: 30px;
+        // margin-bottom: 60px;
+  }
   @media only screen and (max-width: 700px) {
       margin-top: 40px;
+        // margin-bottom: 40px;
+  }
+  @media only screen and (max-width: 500px) {
+      margin-top: 20px;
         // margin-bottom: 40px;
   }
 }
@@ -891,9 +917,14 @@ clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   padding: 30px;
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1200px) {
   width: calc(50%);
   padding: 30px;
+  }
+
+  @media screen and (max-width: 750px) {
+
+    width: calc(100%);
   }
 
   @media screen and (max-width: 500px) {
@@ -910,16 +941,24 @@ clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 .flx--25 > .cell-basic {
   width: calc(25%);
   padding: 20px;
+  min-width: 320px;
   @media screen and (max-width: 1200px) {
   width: calc(33.33%);
-
+  min-width: 320px;
   }
   @media screen and (max-width: 1100px) {
   width: calc(50%);
   }
   @media screen and (max-width: 700px) {
+    min-width: 320px;
   width: calc(100%);
   max-width: 400px;
+  justify-self: center;
+    padding: 10px;
+  }
+
+  @media screen and (max-width: 500px) {
+  min-width: auto;
   }
 
 }
@@ -944,6 +983,12 @@ margin-right: -10px;
 
 .cell-basic .basic-card__inner {
   padding: 40px;
+  @media screen and (max-width: 800px) {
+
+      padding: 30px;
+
+  }
+
   @media screen and (max-width: 700px) {
 
       padding: 20px;
@@ -1013,6 +1058,7 @@ margin-right: -10px;
   .flx-container {
       @media screen and (max-width: 750px) {
         flex-wrap: wrap;
+        justify-content: center;
       }
   }
   @media screen and (max-width: 700px) {
@@ -1027,7 +1073,7 @@ margin-right: -10px;
 .module--split-content .split-content__txt {
   @media screen and (max-width: 750px) {
   width: 100%;
-    min-width: 100%;
+  max-width: 450px;
     order: 2;
     margin-top: 20px;
 }
@@ -1036,7 +1082,8 @@ margin-right: -10px;
 .module--split-content .split-content__img {
   @media screen and (max-width: 750px) {
   width: 100%;
-    min-width: 100%;
+  max-width: 450px;
+    // min-width: 100%;
     order: 1;
 }
 }
@@ -1427,6 +1474,11 @@ img.zoom-img {
 
 }
 
+
+.placeholder-img {
+      visibility: hidden;
+}
+
 .module--full-image {
   position: relative;
   width: 100vw;
@@ -1464,6 +1516,15 @@ img.zoom-img {
     }
   }
 }
+
+.article-card {
+  .placeholder-img,  .lazy-img{
+   border-radius: 0;
+ }
+
+}
+
+
 
 
 .split-content__img, .full-image {
@@ -1523,7 +1584,14 @@ img.zoom-img {
     width: 80px;
       margin-right: 27px;
     filter: grayscale(1);
+    @media screen and (max-width: 800px) {
+      width: 65px;
+    }
+    @media screen and (max-width: 500px) {
+      width: 50px;
+    }
   }
+
 }
 
 .module--header-block {
@@ -1538,6 +1606,13 @@ img.zoom-img {
   margin-right: 27px;
   padding: 0;
 filter: grayscale(1);
+@media screen and (max-width: 800px) {
+  width: 65px;
+}
+    @media screen and (max-width: 500px) {
+      width: 50px;
+    }
+
 }
 
 }

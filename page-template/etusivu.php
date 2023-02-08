@@ -358,9 +358,9 @@
 </section>
 
 
-<section class="section--basic U-sec-pad--small section-theme--color section-width--normal has-icons">
+<section class="section--basic U-sec-pad section-theme--light section-width--normal has-icons">
   <div class="section-inner-container U_container U_base-pad" style="max-width:;">
-      <div class="section-bg-container" style="background:#edf9ff;">
+      <div class="section-bg-container" style="">
 
             <!-- <div class="content-spacer--small">
             </div>
@@ -384,7 +384,7 @@
 
 
 <div class=" wp-block-lazyblock-content-flex-row-2 lazyblock-content-flex-row-2-1CULJL"><div class="module--split-content  -x-pad    ">
-  <div class="flx-container  flx--25">
+  <div class="flx-container  flx--25 dark-card">
 
 
 <div class="cell-basic anim--cell" data-scroll="" data-aos="info-boxes">
@@ -780,7 +780,7 @@ yksilöä</strong></p>
 
 
 
-              <div class="module--basic-content basic-content-flx  basic-content--middle  ">
+              <div class="module--basic-content basic-content-flx  ">
   <div class="basic-content__inner" style="max-width:1000px;">
 
     <h1 class="base-text tag ">

@@ -132,7 +132,7 @@ lang-switch--fi-active
             <div class="dropdown-nav__content">
             <div class="flx-container">
               <div class="dropdown-nav__cell -left">
-                <h3 class="f--bold">Mitä teemme</h3>
+                <h3 class="f--bold">Mitä teemme </h3>
                 <p>Tarjoamme vaikuttavia hyvinvoinnin ja
 Itsensä johtaminen
 Etätyö- ja hybridityö

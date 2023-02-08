@@ -57,6 +57,10 @@ font-size: 1.9rem;
   min-height: auto !important;
     }
 
+    @media only screen and (max-width: 500px) {
+  padding: 10px 16px;
+    }
+
   }
 
   .page-template-materiaalit .header-block__meta {
