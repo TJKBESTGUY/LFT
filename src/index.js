@@ -8,16 +8,16 @@ import './sass/front-end-bunde.scss'
 
 //js from src
 import "./js/core/events"
-import "./js/core/objectfitFallback"
+// import "./js/core/objectfitFallback"
 // import "./js/core/sidebar"
-import "./js/core/navigation"
+// import "./js/core/navigation"
 // import "./js/core/panel-left"
 
 
 ///////SMOOTH SCROLL IS WRAPPER TO ONLY LOAD ON SPECIFIC PAGE ---- SMOOTH SCROLL ADDED TO navigation.js
 // import "./js/core/smooth-scroll"
-import "./js/core/icons"
-import "./js/core/responsive-iframe"
+// import "./js/core/icons"
+// import "./js/core/responsive-iframe"
 
 
 //////UTILITY

@@ -447,403 +447,6 @@ if (isHighDensity()) {
 
 /***/ }),
 
-/***/ "./src/js/core/icons.js":
-/*!******************************!*\
-  !*** ./src/js/core/icons.js ***!
-  \******************************/
-/***/ (() => {
-
-//turn icons into svg if using the icons that come with theme folder
-document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('.svg-icon').forEach(function (icon) {
-    icon.classList.remove('svg-icon'); //classlist.value does not wokr in ie11. use getAttrbiute
-
-    var iconClass = icon.getAttribute('class'); //ie11 does not work well with nodes. needed to add as string. no createelementNS
-
-    var iconString = "<svg class=\"icon ".concat(iconClass, "\" role=\"img\"><use href=\"#").concat(iconClass, "\" xlink:href=\"#").concat(iconClass, "\"></use></svg>");
-    icon.insertAdjacentHTML('afterend', iconString);
-    icon.remove();
-  });
-});
-
-/***/ }),
-
-/***/ "./src/js/core/navigation.js":
-/*!***********************************!*\
-  !*** ./src/js/core/navigation.js ***!
-  \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _setup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./setup */ "./src/js/core/setup.js");
-/* harmony import */ var _navigation_callbacks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./navigation_callbacks */ "./src/js/core/navigation_callbacks.js");
-/* harmony import */ var _theme_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../theme.config */ "./theme.config.json");
-
-
- //toggle logic functionality that calls the above functions
-//use this one to run the opening and closing of a menu item. dont call above functions directly
-
-function toggleMenuItem(menuItem) {
-  var toggleState = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-  var topLevel = isTopLevel(menuItem);
-  var horizontalMenu = isHorizontalMenu(menuItem); //toplevel horizontal on tablet
-
-  if (topLevel && horizontalMenu) {
-    //also check if menu is offscreen and give it a class
-    //checkOffScreenMenu(menuItem.querySelector('.sub-menu'))
-    (0,_navigation_callbacks__WEBPACK_IMPORTED_MODULE_1__.toggleTopLevelHorizontalMenu)(menuItem, toggleState);
-    return;
-  } //toplevel vertical on tablet
-
-
-  if (topLevel && !horizontalMenu) {
-    (0,_navigation_callbacks__WEBPACK_IMPORTED_MODULE_1__.toggleTopLevelVerticalMenu)(menuItem, toggleState);
-    return;
-  }
-
-  (0,_navigation_callbacks__WEBPACK_IMPORTED_MODULE_1__.toggleSubMenu)(menuItem, toggleState);
-} //MAIN MENU EVENT. CAN BE CALLED ON ANY MENU ITEM WITH CHILDREN
-
-
-var menuClickEvent = false; //make only one click event once a click is used
-
-function createMenuListener(menuItem) {
-  menuItem.addEventListener('pointerover', function (e) {
-    e.stopPropagation();
-    var toggleState = true; //always open unless touch event which changes this below
-    //TOUCH CLICK EVENT
-
-    if (e.pointerType !== 'mouse') {
-      //clicking a real link opens it
-      if (!e.target.closest("a[href^=\"#\"]") && !e.target.closest('.submenu-dropdown-toggle')) {
-        return;
-      }
-
-      if (menuItem.classList.contains('toggled-on')) {
-        toggleState = false;
-      } //if were opening a top level on horizontal with a click, we need a way to close another that may be opened
-
-
-      if (isTopLevel(menuItem) && !menuItem.classList.contains('toggled-on') && isHorizontalMenu(menuItem)) {
-        closeAllTopMenus();
-      }
-    } //touch device
-    //open close for hover and device touch
-
-
-    toggleMenuItem(menuItem, toggleState);
-  }); //pointerover
-
-  menuItem.addEventListener('pointerleave', function (e) {
-    e.stopPropagation(); //simply close for hover
-
-    if (e.pointerType === 'mouse') {
-      toggleMenuItem(menuItem, false);
-    } //triggers when the lcick on is removed...too fast so we need to add another event for clicking off
-
-
-    if (e.pointerType !== 'mouse') {
-      //clicked up on touch now we want that fi they click elsewhere to close everything
-      if (!menuClickEvent) {
-        menuClickEvent = true;
-        document.addEventListener('click', function (e) {
-          //if were not clicking a menu, close any menus opened
-          if (!e.target.closest('.menu')) {
-            closeAllTopMenus();
-          }
-        });
-      }
-    }
-  });
-} //close all top level menus
-
-
-function closeAllTopMenus() {
-  var otherMenuItems = document.querySelectorAll('.top-level-item.toggled-on');
-
-  if (otherMenuItems) {
-    otherMenuItems.forEach(function (item) {
-      toggleMenuItem(item, false);
-    });
-  }
-}
-
-function isTopLevel(menuItem) {
-  return menuItem.classList.contains('top-level-item');
-} //if the item is inside a submenu inside another submenu
-
-
-function isNestedSubMenu(menuItem) {
-  return menuItem.classList.contains('nested-menu-item');
-}
-
-function isHorizontalMenu(menuItem) {
-  return getComputedStyle(menuItem.closest('.menu')).flexDirection !== 'column';
-} //fix and reset on resize
-
-
-document.addEventListener('afterResize', function () {
-  document.querySelectorAll('.top-level-item.menu-item-has-children').forEach(function (item) {
-    toggleMenuItem(item, false);
-    item.querySelector('.sub-menu').style.removeProperty('display');
-
-    if (isHorizontalMenu(item)) {
-      checkOffScreenMenu(item.querySelector('.sub-menu'));
-    }
-  });
-});
-document.addEventListener('DOMContentLoaded', function () {
-  //adds menu events to all menus. more menus can be added later by passing it through createMenuListener
-  var menus = document.querySelectorAll('.menu-item');
-  menus.forEach(function (menuItem, index) {
-    createMenuListener(menuItem);
-  }); //on load if its a vertical menu, open the parent dropdown right away
-
-  document.querySelectorAll('.menu .current-menu-item.menu-item-has-children, .menu .current-menu-parent').forEach(function (menu) {
-    //if its a vertical menu. we can know by the flex direction of menu
-    if (getComputedStyle(menu.closest('.menu')).flexDirection === 'column') {
-      toggleMenuItem(menu);
-    }
-  });
-}); // FOCUS EVENTS - only for keyboard
-
-var menuMightBeOpen = false;
-document.body.addEventListener('focusin', function (e) {
-  var menuItem = e.target.closest('.menu-item');
-
-  if (menuItem && menuItem.classList.contains('menu-item-has-children')) {
-    window.addEventListener('keyup', function (e) {
-      var code = e.keyCode ? e.keyCode : e.which;
-
-      if (code === 9 || code === 16) {
-        menuMightBeOpen = true; //close other top menus when this one is turned on
-
-        if (isTopLevel(menuItem)) {
-          closeAllTopMenus();
-        }
-
-        toggleMenuItem(menuItem, true);
-      }
-    }, {
-      once: true
-    });
-  }
-
-  if (menuMightBeOpen) {
-    closeAllTopMenus();
-    menuMightBeOpen = false;
-  }
-});
-/*------- move submenus if too close to edge on desktop --------*/
-
-function checkOffScreenMenu(submenu) {
-  var display = window.getComputedStyle(submenu).display;
-
-  if (display !== 'block') {
-    submenu.style.display = 'block';
-  } //make item visible so we can get left edge
-
-
-  var rightEdge = submenu.getBoundingClientRect().right;
-  var leftEdge = submenu.getBoundingClientRect().left; //set menu back
-
-  if (display !== 'block') {
-    submenu.style.removeProperty('display');
-  }
-
-  var viewport = document.documentElement.clientWidth; //if the submenu is off the page, pull it back somewhat
-
-  if (rightEdge > viewport) {
-    (0,_navigation_callbacks__WEBPACK_IMPORTED_MODULE_1__.fixOffScreenMenu)(submenu, 'right');
-    return;
-  }
-
-  if (leftEdge < 0) {
-    (0,_navigation_callbacks__WEBPACK_IMPORTED_MODULE_1__.fixOffScreenMenu)(submenu, 'left');
-  } else {
-    (0,_navigation_callbacks__WEBPACK_IMPORTED_MODULE_1__.fixOffScreenMenu)(submenu, 'none');
-  }
-}
-
-jQuery(function ($) {
-  //move logo in middle of menu on desktop if logo is middle position
-  if ($('.logo-in-middle').length) {
-    var navigationLi = $('.site-navigation__nav-holder .menu li');
-    var middle = Math.floor($(navigationLi).length / 2) - 1; //add logo to the middle when page loads
-
-    $('<li class="menu-item li-logo-holder"><div class="menu-item-link"></div></li>').insertAfter(navigationLi.filter(':eq(' + middle + ')'));
-    $('.site-logo').clone().appendTo('.li-logo-holder');
-  }
-});
-
-/***/ }),
-
-/***/ "./src/js/core/navigation_callbacks.js":
-/*!*********************************************!*\
-  !*** ./src/js/core/navigation_callbacks.js ***!
-  \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "toggleTopLevelHorizontalMenu": () => (/* binding */ toggleTopLevelHorizontalMenu),
-/* harmony export */   "toggleTopLevelVerticalMenu": () => (/* binding */ toggleTopLevelVerticalMenu),
-/* harmony export */   "toggleSubMenu": () => (/* binding */ toggleSubMenu),
-/* harmony export */   "fixOffScreenMenu": () => (/* binding */ fixOffScreenMenu)
-/* harmony export */ });
-/* harmony import */ var src_js_core_setup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/js/core/setup */ "./src/js/core/setup.js");
- //CHANGE THE FUNCTIONS BELOW TO CHANGE HOW YOUR MENUS OPEN AND CLOSE
-//menuItem is an li that has a .sub-menu, you can decide however you want to open this
-//css for this can be found in menus.scss and menu_layout.scss
-//its better to override the layout file in menu.scss rather than touch that
-//opens a top level item when the menu is horizontal
-
-function toggleTopLevelHorizontalMenu(menuItem) {
-  var open = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-
-  if (open) {
-    //change to whatever you want ie: ignSlideDown...
-    menuItem.classList.add('toggled-on');
-  } else {
-    menuItem.classList.remove('toggled-on');
-  }
-} //runs when a toplevel vertical menu item is hovered or clicked
-
-function toggleTopLevelVerticalMenu(menuItem) {
-  var open = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-  var subMenu = menuItem.querySelector('.sub-menu');
-
-  if (open) {
-    //change to whatever you want ie: ignSlideDown...
-    menuItem.classList.add('toggled-on');
-    return (0,src_js_core_setup__WEBPACK_IMPORTED_MODULE_0__.ignSlideDown)(subMenu);
-  } else {
-    menuItem.classList.remove('toggled-on');
-    return (0,src_js_core_setup__WEBPACK_IMPORTED_MODULE_0__.ignSlideUp)(subMenu);
-  }
-} //non on all top level submenus for click and hover
-
-function toggleSubMenu(menuItem) {
-  var open = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-  var subMenu = menuItem.querySelector('.sub-menu'); // Exit function if no subMenu is found.
-
-  if (!subMenu) return;
-
-  if (open) {
-    //change to whatever you want ie: ignSlideDown...
-    menuItem.classList.add('toggled-on');
-    return (0,src_js_core_setup__WEBPACK_IMPORTED_MODULE_0__.ignSlideDown)(subMenu);
-  } else {
-    menuItem.classList.remove('toggled-on');
-    return (0,src_js_core_setup__WEBPACK_IMPORTED_MODULE_0__.ignSlideUp)(subMenu);
-  }
-} //when a top level horizontal
-
-function fixOffScreenMenu(submenu) {
-  var side = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'right';
-
-  if (side === 'right') {
-    submenu.closest('.menu-item').classList.add('offscreen-right');
-  }
-
-  if (side === 'left') {
-    submenu.closest('.menu-item').classList.add('offscreen-left');
-  }
-
-  if (side === 'none') {
-    submenu.closest('.menu-item').classList.remove('offscreen-left', 'offscreen-right');
-  }
-}
-
-/***/ }),
-
-/***/ "./src/js/core/objectfitFallback.js":
-/*!******************************************!*\
-  !*** ./src/js/core/objectfitFallback.js ***!
-  \******************************************/
-/***/ (() => {
-
-jQuery(function ($) {
-  'use strict'; // the css selector for the container that the image should be attached to as a background-image
-
-  var imgContainer = '.background-image, .cover-image';
-
-  function getCurrentSrc(element, cb) {
-    var _getSrc;
-
-    if (!window.HTMLPictureElement) {
-      if (window.respimage) {
-        respimage({
-          elements: [element]
-        });
-      } else if (window.picturefill) {
-        picturefill({
-          elements: [element]
-        });
-      }
-
-      cb(element.src);
-      return;
-    }
-
-    _getSrc = function getSrc() {
-      element.removeEventListener('load', _getSrc);
-      element.removeEventListener('error', _getSrc);
-      cb(element.currentSrc);
-    };
-
-    element.addEventListener('load', _getSrc);
-    element.addEventListener('error', _getSrc);
-
-    if (element.complete) {
-      _getSrc();
-    }
-  }
-
-  function setBgImage() {
-    $(imgContainer).each(function () {
-      var $this = $(this),
-          img = $this.find('img').get(0);
-      getCurrentSrc(img, function (elementSource) {
-        $this.css('background-image', 'url(' + elementSource + ')');
-      });
-    });
-  }
-
-  if ('objectFit' in document.documentElement.style === false) {
-    $('html').addClass('no-objectfit');
-    $(window).resize(function () {
-      setBgImage();
-    });
-    setBgImage();
-  }
-});
-
-/***/ }),
-
-/***/ "./src/js/core/responsive-iframe.js":
-/*!******************************************!*\
-  !*** ./src/js/core/responsive-iframe.js ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _setup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./setup */ "./src/js/core/setup.js");
- //make iframe videos responsive
-
-document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('iframe[src*="youtube.com"], iframe[data-src*="youtube.com"], iframe[src*="vimeo.com"], iframe[data-src*="vimeo.com"]').forEach(function (iframe) {
-    if (!iframe.parentElement.classList.contains('videowrapper')) {
-      (0,_setup__WEBPACK_IMPORTED_MODULE_0__.wrap)(iframe).classList.add('videowrapper');
-    }
-  });
-});
-
-/***/ }),
-
 /***/ "./src/js/core/setup.js":
 /*!******************************!*\
   !*** ./src/js/core/setup.js ***!
@@ -3515,17 +3118,6 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
-/***/ }),
-
-/***/ "./theme.config.json":
-/*!***************************!*\
-  !*** ./theme.config.json ***!
-  \***************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = JSON.parse('{"name":"Lifted","slug":"lifted","server":"lifted.local","ssl":false,"google_fonts":["Roboto:400,400i,700,700i","Roboto Slab:400,700"],"menu_icon":"","sidebar_icon":"","submenu_arrow_icon":"","comment_icon":"","search_menu_item":false,"dev_admin_bar_color":"#156288","admin_access_capability":"manage_options","load_custom_icons":false,"mobile_menu_type":"app-menu","logo_position":"logo-left","site_top_container":"container","default_acf_header_block":["post","page"]}');
-
 /***/ })
 
 /******/ 	});
@@ -3619,28 +3211,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! normalize.css */ "./node_modules/normalize.css/normalize.css");
 /* harmony import */ var _sass_front_end_bunde_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sass/front-end-bunde.scss */ "./src/sass/front-end-bunde.scss");
 /* harmony import */ var _js_core_events__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/core/events */ "./src/js/core/events.js");
-/* harmony import */ var _js_core_objectfitFallback__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/core/objectfitFallback */ "./src/js/core/objectfitFallback.js");
-/* harmony import */ var _js_core_objectfitFallback__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_js_core_objectfitFallback__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _js_core_navigation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/core/navigation */ "./src/js/core/navigation.js");
-/* harmony import */ var _js_core_icons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/core/icons */ "./src/js/core/icons.js");
-/* harmony import */ var _js_core_icons__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_js_core_icons__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _js_core_responsive_iframe__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/core/responsive-iframe */ "./src/js/core/responsive-iframe.js");
-/* harmony import */ var _js_util_plugins_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./js/util/plugins.js */ "./src/js/util/plugins.js");
-/* harmony import */ var _js_util_plugins_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_js_util_plugins_js__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _js_util_lazyloading_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./js/util/lazyloading.js */ "./src/js/util/lazyloading.js");
-/* harmony import */ var _js_util_headroom_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./js/util/headroom.js */ "./src/js/util/headroom.js");
-/* harmony import */ var _js_util_resize_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./js/util/resize.js */ "./src/js/util/resize.js");
-/* harmony import */ var _js_util_resize_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_js_util_resize_js__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _js_util_navigation_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./js/util/navigation.js */ "./src/js/util/navigation.js");
-/* harmony import */ var _js_util_navigation_js__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_js_util_navigation_js__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _js_page_specific_home_page_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./js/page-specific/home-page.js */ "./src/js/page-specific/home-page.js");
-/* harmony import */ var _js_page_specific_home_page_js__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_js_page_specific_home_page_js__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _inc_core_core_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../inc/core/_core.js */ "./inc/core/_core.js");
-/* harmony import */ var _inc_core_core_js__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_inc_core_core_js__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _inc_scrollmagic_scrollmagic_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../inc/scrollmagic/_scrollmagic.js */ "./inc/scrollmagic/_scrollmagic.js");
-/* harmony import */ var _inc_scrollmagic_scrollmagic_js__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_inc_scrollmagic_scrollmagic_js__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _parts_global_browser_update_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./parts/global/_browser_update.js */ "./src/parts/global/_browser_update.js");
-/* harmony import */ var _parts_global_browser_update_js__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_parts_global_browser_update_js__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _js_util_plugins_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/util/plugins.js */ "./src/js/util/plugins.js");
+/* harmony import */ var _js_util_plugins_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_js_util_plugins_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _js_util_lazyloading_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/util/lazyloading.js */ "./src/js/util/lazyloading.js");
+/* harmony import */ var _js_util_headroom_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/util/headroom.js */ "./src/js/util/headroom.js");
+/* harmony import */ var _js_util_resize_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/util/resize.js */ "./src/js/util/resize.js");
+/* harmony import */ var _js_util_resize_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_js_util_resize_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _js_util_navigation_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./js/util/navigation.js */ "./src/js/util/navigation.js");
+/* harmony import */ var _js_util_navigation_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_js_util_navigation_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _js_page_specific_home_page_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./js/page-specific/home-page.js */ "./src/js/page-specific/home-page.js");
+/* harmony import */ var _js_page_specific_home_page_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_js_page_specific_home_page_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _inc_core_core_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../inc/core/_core.js */ "./inc/core/_core.js");
+/* harmony import */ var _inc_core_core_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_inc_core_core_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _inc_scrollmagic_scrollmagic_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../inc/scrollmagic/_scrollmagic.js */ "./inc/scrollmagic/_scrollmagic.js");
+/* harmony import */ var _inc_scrollmagic_scrollmagic_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_inc_scrollmagic_scrollmagic_js__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _parts_global_browser_update_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./parts/global/_browser_update.js */ "./src/parts/global/_browser_update.js");
+/* harmony import */ var _parts_global_browser_update_js__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_parts_global_browser_update_js__WEBPACK_IMPORTED_MODULE_11__);
  //ADDING SASS
 //add your sass files easilt by starting them with an underscore inside the inc or parts folders
 // You can also manually add a regular file to the front end bundle so you have access to all scss variables and classes
@@ -3648,15 +3234,15 @@ __webpack_require__.r(__webpack_exports__);
 
  //js from src
 
-
- // import "./js/core/sidebar"
-
- // import "./js/core/panel-left"
+ // import "./js/core/objectfitFallback"
+// import "./js/core/sidebar"
+// import "./js/core/navigation"
+// import "./js/core/panel-left"
 ///////SMOOTH SCROLL IS WRAPPER TO ONLY LOAD ON SPECIFIC PAGE ---- SMOOTH SCROLL ADDED TO navigation.js
 // import "./js/core/smooth-scroll"
-
-
- //////UTILITY
+// import "./js/core/icons"
+// import "./js/core/responsive-iframe"
+//////UTILITY
 
 
 
