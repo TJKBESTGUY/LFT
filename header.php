@@ -25,19 +25,23 @@
 
 
 
-<style media="screen">
-@font-face {
-  font-family: "Config-SemiBold";
-  src: url('<?php echo get_template_directory_uri(); ?>/fonts/Adam-Ladd-Config-SemiBold.woff2') format('woff2');
-}
-@font-face {
-  font-family: "Config-Text";
-  src: url('<?php echo get_template_directory_uri(); ?>/fonts/Adam-Ladd-Config-Text.woff2') format('woff2');
-}
 
-</style>
 
 	<?php wp_head(); ?>
+
+  <style media="screen">
+  @font-face {
+    font-family: "Config-SemiBold";
+    src: url('<?php echo get_template_directory_uri(); ?>/fonts/Adam-Ladd-Config-SemiBold.woff2') format('woff2');
+     font-display: swap;
+  }
+  @font-face {
+    font-family: "Config-Text";
+    src: url('<?php echo get_template_directory_uri(); ?>/fonts/Adam-Ladd-Config-Text.woff2') format('woff2');
+     font-display: swap;
+  }
+
+  </style>
 
   <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
 
