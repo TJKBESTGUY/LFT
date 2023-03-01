@@ -260,7 +260,9 @@ suoraan sähköpostiisi joka kuukausi.</p>
 
 <p class="has-text-align-center">Tai varaa aika suoraan kalenteristani<br>ilmaiselle sparraukselle tästä</p>
 
-<div class="pipedriveWebForms" data-pd-webforms="https://webforms.pipedrive.com/f/1wWpPVVzF8pMgU4P2cz2rhDsaa8gClC36zWzFhnx43hG6NKNaV4CCDtpXthpcjsWL"><script src="https://webforms.pipedrive.com/f/loader"></script></div>
+<div class="pipedriveWebForms" data-pd-webforms="https://webforms.pipedrive.com/f/1wWpPVVzF8pMgU4P2cz2rhDsaa8gClC36zWzFhnx43hG6NKNaV4CCDtpXthpcjsWL">
+  <!-- <script defer src="https://webforms.pipedrive.com/f/loader"></script> -->
+</div>
 </div>
 
 </div>

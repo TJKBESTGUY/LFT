@@ -6,7 +6,7 @@ import 'lazysizes';
 window.lazySizesConfig = window.lazySizesConfig || {};
 
 lazySizesConfig.preloadAfterLoad = false;
-lazySizesConfig.expand = 1000;
+
 
 
 document.addEventListener('lazyloaded', function(e){
