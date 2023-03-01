@@ -3647,7 +3647,7 @@ div .editor-styles-wrapper .acf-block-preview .modal-contact-form .pipedriveWebF
 div .editor-styles-wrapper .acf-block-preview .scrolling-image {
   overflow-x: auto;
 }
-div .editor-styles-wrapper .acf-block-preview .scrolling-image::-webkit-scrollbar {
+div .editor-styles-wrapper .acf-block-preview .touch-device .scrolling-image::-webkit-scrollbar {
   display: none;
 }
 div .editor-styles-wrapper .acf-block-preview .scrolling-image .U_container {

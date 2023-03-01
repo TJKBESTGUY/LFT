@@ -1817,7 +1817,7 @@ filter: grayscale(1);
   overflow-x:auto;
 }
 
-.scrolling-image::-webkit-scrollbar {
+.touch-device .scrolling-image::-webkit-scrollbar {
   display: none;
 }
 
