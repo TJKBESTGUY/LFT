@@ -1558,7 +1558,7 @@ img.zoom-img {
 .swiper-slide {
   .placeholder-img, .lazy-img {
     border-radius: 0;
-  
+
 
   }
 }
@@ -1809,4 +1809,23 @@ filter: grayscale(1);
     position: relative;
     margin-top: 50px;
   }
+}
+
+
+
+.scrolling-image {
+  overflow-x:auto;
+}
+
+.scrolling-image::-webkit-scrollbar {
+  display: none;
+}
+
+.scrolling-image .U_container {
+padding: 0 !important;
+}
+
+
+.scrolling-image .module--full-image {
+  min-width: 1600px;
 }

@@ -3615,6 +3615,22 @@ img.zoom-img {
   margin-top: 50px;
 }
 
+.scrolling-image {
+  overflow-x: auto;
+}
+
+.scrolling-image::-webkit-scrollbar {
+  display: none;
+}
+
+.scrolling-image .U_container {
+  padding: 0 !important;
+}
+
+.scrolling-image .module--full-image {
+  min-width: 1600px;
+}
+
 /*--------------------------------------------------------------
 # Global Forms
 --------------------------------------------------------------*/
