@@ -225,7 +225,7 @@ function lifted_scripts() {
 	//Sass compiles styles. Will get child's theme version if found instead. Child theme should import with sass.
 	wp_enqueue_style( 'lifted-sass-styles', get_theme_file_uri( '/dist/frontEnd.css' ), '', wp_get_theme()->get( 'Version' ) );
 
-	wp_enqueue_script( 'iconify', 'https://code.iconify.design/1/1.0.6/iconify.min.js' );
+	// wp_enqueue_script( 'iconify', 'https://code.iconify.design/1/1.0.6/iconify.min.js' );
 
 	//ie11 js polyfills
 	// wp_enqueue_script( 'polyfill', 'https://polyfill.io/v3/polyfill.min.js?flags=gated&features=AbortController%2Cdefault%2CNodeList.prototype.forEach%2CEvent%2Csmoothscroll' );

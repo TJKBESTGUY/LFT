@@ -1042,36 +1042,6 @@ function ignSlideToggle(target) {
 
 /***/ }),
 
-/***/ "./src/js/core/sidebar.js":
-/*!********************************!*\
-  !*** ./src/js/core/sidebar.js ***!
-  \********************************/
-/***/ (() => {
-
-document.addEventListener('DOMContentLoaded', function () {
-  //move the header above the article when header-above is found
-  var headerAbove = document.querySelector('.header-above');
-
-  if (headerAbove !== null) {
-    document.querySelectorAll('.entry-header, .page-header').forEach(function (header) {
-      headerAbove.parentElement.prepend(header);
-      header.classList.add('header-moved'); //might be useful for someone
-    });
-  } //when a secondary is used, a sidebar is shown, on load we do a few things to smooth the transition of the header
-
-
-  var sidebar = document.querySelector('#secondary');
-
-  if (sidebar !== null) {
-    sidebar.innerHTML = sidebar.innerHTML.trim(); //if moving stuff in and out its good to remove extra space so :empty works
-
-    var sidebarTemplate = document.querySelector('.sidebar-template');
-    sidebarTemplate.classList.add('active');
-  }
-});
-
-/***/ }),
-
 /***/ "./src/js/page-specific/home-page.js":
 /*!*******************************************!*\
   !*** ./src/js/page-specific/home-page.js ***!
@@ -3651,28 +3621,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_core_events__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/core/events */ "./src/js/core/events.js");
 /* harmony import */ var _js_core_objectfitFallback__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/core/objectfitFallback */ "./src/js/core/objectfitFallback.js");
 /* harmony import */ var _js_core_objectfitFallback__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_js_core_objectfitFallback__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _js_core_sidebar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/core/sidebar */ "./src/js/core/sidebar.js");
-/* harmony import */ var _js_core_sidebar__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_js_core_sidebar__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _js_core_navigation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/core/navigation */ "./src/js/core/navigation.js");
-/* harmony import */ var _js_core_icons__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/core/icons */ "./src/js/core/icons.js");
-/* harmony import */ var _js_core_icons__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_js_core_icons__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _js_core_responsive_iframe__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./js/core/responsive-iframe */ "./src/js/core/responsive-iframe.js");
-/* harmony import */ var _js_util_plugins_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./js/util/plugins.js */ "./src/js/util/plugins.js");
-/* harmony import */ var _js_util_plugins_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_js_util_plugins_js__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _js_util_lazyloading_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./js/util/lazyloading.js */ "./src/js/util/lazyloading.js");
-/* harmony import */ var _js_util_headroom_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./js/util/headroom.js */ "./src/js/util/headroom.js");
-/* harmony import */ var _js_util_resize_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./js/util/resize.js */ "./src/js/util/resize.js");
-/* harmony import */ var _js_util_resize_js__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_js_util_resize_js__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _js_util_navigation_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./js/util/navigation.js */ "./src/js/util/navigation.js");
-/* harmony import */ var _js_util_navigation_js__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_js_util_navigation_js__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _js_page_specific_home_page_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./js/page-specific/home-page.js */ "./src/js/page-specific/home-page.js");
-/* harmony import */ var _js_page_specific_home_page_js__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_js_page_specific_home_page_js__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _inc_core_core_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../inc/core/_core.js */ "./inc/core/_core.js");
-/* harmony import */ var _inc_core_core_js__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_inc_core_core_js__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _inc_scrollmagic_scrollmagic_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../inc/scrollmagic/_scrollmagic.js */ "./inc/scrollmagic/_scrollmagic.js");
-/* harmony import */ var _inc_scrollmagic_scrollmagic_js__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_inc_scrollmagic_scrollmagic_js__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _parts_global_browser_update_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./parts/global/_browser_update.js */ "./src/parts/global/_browser_update.js");
-/* harmony import */ var _parts_global_browser_update_js__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_parts_global_browser_update_js__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _js_core_navigation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/core/navigation */ "./src/js/core/navigation.js");
+/* harmony import */ var _js_core_icons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/core/icons */ "./src/js/core/icons.js");
+/* harmony import */ var _js_core_icons__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_js_core_icons__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _js_core_responsive_iframe__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/core/responsive-iframe */ "./src/js/core/responsive-iframe.js");
+/* harmony import */ var _js_util_plugins_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./js/util/plugins.js */ "./src/js/util/plugins.js");
+/* harmony import */ var _js_util_plugins_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_js_util_plugins_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _js_util_lazyloading_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./js/util/lazyloading.js */ "./src/js/util/lazyloading.js");
+/* harmony import */ var _js_util_headroom_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./js/util/headroom.js */ "./src/js/util/headroom.js");
+/* harmony import */ var _js_util_resize_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./js/util/resize.js */ "./src/js/util/resize.js");
+/* harmony import */ var _js_util_resize_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_js_util_resize_js__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _js_util_navigation_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./js/util/navigation.js */ "./src/js/util/navigation.js");
+/* harmony import */ var _js_util_navigation_js__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_js_util_navigation_js__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _js_page_specific_home_page_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./js/page-specific/home-page.js */ "./src/js/page-specific/home-page.js");
+/* harmony import */ var _js_page_specific_home_page_js__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_js_page_specific_home_page_js__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _inc_core_core_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../inc/core/_core.js */ "./inc/core/_core.js");
+/* harmony import */ var _inc_core_core_js__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_inc_core_core_js__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _inc_scrollmagic_scrollmagic_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../inc/scrollmagic/_scrollmagic.js */ "./inc/scrollmagic/_scrollmagic.js");
+/* harmony import */ var _inc_scrollmagic_scrollmagic_js__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_inc_scrollmagic_scrollmagic_js__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _parts_global_browser_update_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./parts/global/_browser_update.js */ "./src/parts/global/_browser_update.js");
+/* harmony import */ var _parts_global_browser_update_js__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_parts_global_browser_update_js__WEBPACK_IMPORTED_MODULE_15__);
  //ADDING SASS
 //add your sass files easilt by starting them with an underscore inside the inc or parts folders
 // You can also manually add a regular file to the front end bundle so you have access to all scss variables and classes
@@ -3681,7 +3649,7 @@ __webpack_require__.r(__webpack_exports__);
  //js from src
 
 
-
+ // import "./js/core/sidebar"
 
  // import "./js/core/panel-left"
 ///////SMOOTH SCROLL IS WRAPPER TO ONLY LOAD ON SPECIFIC PAGE ---- SMOOTH SCROLL ADDED TO navigation.js
@@ -3693,7 +3661,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- //navigation
+ // import './js/util/swiper.js';
+//navigation
 
  ////PAGE SPECIFIC
 

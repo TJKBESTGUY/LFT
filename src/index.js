@@ -9,7 +9,7 @@ import './sass/front-end-bunde.scss'
 //js from src
 import "./js/core/events"
 import "./js/core/objectfitFallback"
-import "./js/core/sidebar"
+// import "./js/core/sidebar"
 import "./js/core/navigation"
 // import "./js/core/panel-left"
 
@@ -27,7 +27,7 @@ import './js/util/plugins.js';
 import './js/util/lazyloading.js';
 import './js/util/headroom.js';
 import './js/util/resize.js';
-
+// import './js/util/swiper.js';
 
 
 //navigation

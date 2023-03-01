@@ -45,8 +45,8 @@
 
 
 
-
- <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script defer src="https://unpkg.com/swiper@8.4.7/swiper-bundle.min.js"></script>
+ <script defer src="https://unpkg.com/alpinejs@3.11.1/dist/cdn.min.js"></script>
 
 
   <script>
@@ -61,7 +61,7 @@
 <!-- <script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.6.1/dist/cookieconsent.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.6.1/dist/cookieconsent.css"> -->
 
-<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
   <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
 
 <script type="text/javascript">

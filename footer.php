@@ -240,11 +240,11 @@ suoraan sähköpostiisi joka kuukausi.</p>
 <div class="lazyblock-contact-avatart-Z1dmiqC wp-block-lazyblock-contact-avatart"><div class="module--contact-avatar -y-pad--small">
     <div class="contact-avatar__image">
       <div class="placeholder-img">
-        <img decoding="async" class="" data-src=" /wp-content/uploads/2022/12/Jukka-Joutsiniemi-2-scaled-1-e1676296744902-15x15.jpeg" alt="" src=" /wp-content/uploads/2022/12/Jukka-Joutsiniemi-2-scaled-1-e1676296744902-15x15.jpeg">
+        <img class="lazyload lazyanim" data-src=" /wp-content/uploads/2022/12/Jukka-Joutsiniemi-2-scaled-1-e1676296744902-15x15.jpeg" alt="" src="">
 
        </div>
        <div class="lazy-img">
-        <img decoding="async" class="lazyanim ls-is-cached lazyloaded" data-src=" /wp-content/uploads/2022/12/Jukka-Joutsiniemi-2-scaled-1-2000x2000.jpeg" alt="" src=" /wp-content/uploads/2022/12/Jukka-Joutsiniemi-2-scaled-1-2000x2000.jpeg">
+        <img decoding="async" class="lazyanim lazyload" data-src=" /wp-content/uploads/2022/12/Jukka-Joutsiniemi-2-scaled-1-2000x2000.jpeg" alt="" src="">
 </div>
 </div>
 <div class="contact-avatar__content">
