@@ -210,7 +210,7 @@
 <h4>Parhaat tulokset saavutamme aina valmennusohjelmien avulla. Toteutamme kuitenkin myös yksittäisiä valmennustapahtumia eri palvelukokonaisuuksiimme liittyen. Tarjoamme sekä yksittäisiä luentoja että räätälöityjä luentokokonaisuuksia, suomeksi, englanniksi ja ruotsiksi, livenä sekä etänä.</h4>
 
 <div class="capsule-wrap  capsule-wrap ">
-  <a class="btn--basic btn--dark" style="" href="">Tutustu Valmennennustapahtumiin</a>
+  <a class="btn--basic btn--dark" style="" href="">Valmennustapahtumat</a>
   </div>
 
 
@@ -227,12 +227,12 @@
 
   <div class="cell split-content__img">
       <div class="placeholder-img">
-        <img class="" data-src=" http://lifted.local/wp-content/uploads/2022/12/Screen-Shot-2022-12-09-at-3.48.31-PM-15x12.png" alt="" src=" http://lifted.local/wp-content/uploads/2022/12/Screen-Shot-2022-12-09-at-3.48.31-PM-15x12.png">
+        <img class="" data-src=" /wp-content/uploads/2022/12/Screen-Shot-2022-12-09-at-3.48.31-PM-15x12.png" alt="" src=" /wp-content/uploads/2022/12/Screen-Shot-2022-12-09-at-3.48.31-PM-15x12.png">
 
        </div>
        <div class="lazy-img">
 
-       <img decoding="async" class="lazyanim ls-is-cached lazyloaded" data-src=" http://lifted.local/wp-content/uploads/2022/12/Screen-Shot-2022-12-09-at-3.48.31-PM.png" alt="" src=" http://lifted.local/wp-content/uploads/2022/12/Screen-Shot-2022-12-09-at-3.48.31-PM.png">
+       <img decoding="async" class="lazyanim ls-is-cached lazyloaded" data-src=" /wp-content/uploads/2022/12/Screen-Shot-2022-12-09-at-3.48.31-PM.png" alt="" src=" /wp-content/uploads/2022/12/Screen-Shot-2022-12-09-at-3.48.31-PM.png">
 </div>
 </div>
 
@@ -285,12 +285,12 @@
 
     <div class="cell split-content__img">
         <div class="placeholder-img">
-          <img class="" data-src=" http://lifted.local/wp-content/uploads/2022/12/Screen-Shot-2022-12-09-at-3.48.31-PM-15x12.png" alt="" src=" http://lifted.local/wp-content/uploads/2022/12/Screen-Shot-2022-12-09-at-3.48.31-PM-15x12.png">
+          <img class="" data-src=" /wp-content/uploads/2022/12/Screen-Shot-2022-12-09-at-3.48.31-PM-15x12.png" alt="" src=" /wp-content/uploads/2022/12/Screen-Shot-2022-12-09-at-3.48.31-PM-15x12.png">
 
          </div>
          <div class="lazy-img">
 
-         <img decoding="async" class="lazyanim ls-is-cached lazyloaded" data-src=" http://lifted.local/wp-content/uploads/2022/12/Screen-Shot-2022-12-09-at-3.48.31-PM.png" alt="" src=" http://lifted.local/wp-content/uploads/2022/12/Screen-Shot-2022-12-09-at-3.48.31-PM.png">
+         <img decoding="async" class="lazyanim ls-is-cached lazyloaded" data-src=" /wp-content/uploads/2022/12/Screen-Shot-2022-12-09-at-3.48.31-PM.png" alt="" src=" /wp-content/uploads/2022/12/Screen-Shot-2022-12-09-at-3.48.31-PM.png">
   </div>
   </div>
 
@@ -797,17 +797,110 @@ yksilöä</strong></p>
 </div>
 
         <div class="swiper swiper-container  swiper--extended " x-ref="swiper" data-index="0">
-          <!-- <div class="swiper-backdrop-content">
-            <span>
-                  <h3>Nappaa talteen parhaat vinkit työyhteisösi voimavarojen kehittämiseen!</h3>
-            </span>
 
-          </div> -->
           <div class="swiper-wrapper">
 
-            <!-- <div class="swiper-slide swiper-fake-slide">
+            <div class="cell basic-card article-card swiper-slide" >
 
-            </div> -->
+  <div class="basic-card__inner">
+    <div class="basic-card__image">
+
+<div class="placeholder-img">
+<img class="" data-src='http://lifted.local/wp-content/uploads/2023/02/ossi-ahto-kasva-tai-kuihdu-15x8.webp' alt="" src='http://lifted.local/wp-content/uploads/2023/02/ossi-ahto-kasva-tai-kuihdu-15x8.webp'>
+
+</div>
+<div class="lazy-img">
+
+<img decoding="async" class="lazyanim lazyload" data-src="http://lifted.local/wp-content/uploads/2023/02/ossi-ahto-kasva-tai-kuihdu.webp" alt="" src="">
+      </div>
+
+    </div>
+    <div class="basic-card__content">
+      <div class="-header">
+
+<span class="-cat">Podcast</span>
+
+<span class="-pod-number"> <span class="pod-number__inner"></span>#008</span>
+
+
+      </div>
+      <div class="-meta">
+        <p class=" -title f--bold"> Kasva tai kuihdu </p>
+
+
+                <div class="-desc"> <p>Tällä kertaa studiossa puhutaan liiketoiminnan ja organisaatioiden kasvusta. Kasvu on rakennettu hienosti joidenkin organisaation DNA:han, mutta tämän keskustelun perusteella kasvun asenne pitäisi juurruttaa jokaiseen organisaatioon!</p>
+</div>
+
+
+
+                 <p class="-guest f--bold">Vieraana: Ossi Ahto</p>
+                  <div class="capsule-wrap " style="margin-top:0">
+      <a class="btn--basic btn--dark btn--basic--small" style="" href="http://lifted.local/kasva-tai-kuihdu/">Lue</a>
+      </div>
+
+
+      </div>
+
+      <div class="-footer">
+        <span class="-date">February 13, 2023</span>
+      </div>
+
+    </div>
+</div>
+
+      </div>
+
+
+    <div class="cell basic-card article-card swiper-slide" >
+
+  <div class="basic-card__inner">
+    <div class="basic-card__image">
+
+<div class="placeholder-img">
+<img class="" data-src='http://lifted.local/wp-content/uploads/2022/11/liftcast-1-15x8.jpg' alt="" src='http://lifted.local/wp-content/uploads/2022/11/liftcast-1-15x8.jpg'>
+
+</div>
+<div class="lazy-img">
+
+<img decoding="async" class="lazyanim lazyload" data-src="http://lifted.local/wp-content/uploads/2022/11/liftcast-1.jpg" alt="" src="">
+      </div>
+
+    </div>
+    <div class="basic-card__content">
+      <div class="-header">
+
+<span class="-cat">Podcast</span>
+
+<span class="-pod-number"> <span class="pod-number__inner"></span>#002</span>
+
+
+      </div>
+      <div class="-meta">
+        <p class=" -title f--bold"> Liftcast #006: Inhimillisempää liiketoimintaa </p>
+
+
+                <div class="-desc"> <p>fdsfdf</p>
+</div>
+
+
+
+                 <p class="-guest f--bold">Cae jeah</p>
+                  <div class="capsule-wrap " style="margin-top:0">
+      <a class="btn--basic btn--dark btn--basic--small" style="" href="http://lifted.local/liftcast-006-inhimillisempaa-liiketoimintaa/">Lue</a>
+      </div>
+
+
+      </div>
+
+      <div class="-footer">
+        <span class="-date">January 23, 2023</span>
+      </div>
+
+    </div>
+</div>
+
+      </div>
+
 
             <div class="cell basic-card article-card swiper-slide">
               <div class="basic-card__inner">
@@ -934,11 +1027,14 @@ yksilöä</strong></p>
       <!-- ////OUTPUT ENDS////// -->
       </div>
       </div>
-      <div class="capsule-wrap " style="margin-top:0">
-      <a class="btn--basic btn--dark" style="" href="">Kaikki blogiartikkelit</a>
-      </div>
-      <!-- <div class="swiper-button-prev" x-ref="prev"></div>
-          <div class="swiper-button-next" x-ref="next"></div> -->
+
+      <div class="swiper-nav--bottom swiper-nav--right-absolute ">
+         <div class="swiper-button-prev swiper-button--top" x-ref="prev"></div>
+           <div class="swiper-button-next swiper-button--top" x-ref="next"></div>
+       </div>
+       <div class="capsule-wrap " style="margin-top:0">
+       <a class="btn--basic btn--dark" style="" href="">Kaikki blogiartikkelit</a>
+       </div>
       </div>
 
           </div>
@@ -947,18 +1043,19 @@ yksilöä</strong></p>
 
 
 
-      <section class="section--basic U-sec-pad section-theme--dark section-width--normal section--home-lifcast">
+      <section class="section--basic U-sec-pad section-theme--color section-width--normal section--home-lifcast">
         <div class="section-inner-container U_container U_base-pad" style="max-width:;">
             <div class="section-bg-container" style="background:">
 
-      <div class="wp-block-lazyblock-split-content-flex lazyblock-split-content-flex-Z1yJAvO"><div class="module--split-content  -x-pad ">
+      <div class="wp-block-lazyblock-split-content-flex lazyblock-split-content-flex-Z1yJAvO">
+        <div class="module--split-content  -x-pad module--lifcast-preview">
         <h1 class="base-text tag " style="    color: #00d084;">
               Liftcast
                 </h1>
             <h3 class="" style="max-width:800px;">Liftcast on podcast, jossa nostamme sinut ja organisaatiosi seuraavalle tasolle.</h3>
             <div class="content-spacer--small">
         </div>
-        <div class="flx-container">
+        <div class="flx-container ">
 
 
 
@@ -988,7 +1085,7 @@ yksilöä</strong></p>
                   <a href="">Lue jaksoesittely</a>
               </div>
             <span class="-pod-number"> <span class="pod-number__inner"></span> #001</span>
-    <h5 class="f--bold">DEI tai heihei!  - Nasim Selmani</h5>
+    <h5 class="">DEI tai heihei!  - Nasim Selmani</h5>
 
             </div>
           </div>
@@ -1000,7 +1097,7 @@ yksilöä</strong></p>
                     <a href="">Lue jaksoesittely</a>
               </div>
                         <span class="-pod-number"> <span class="pod-number__inner"></span> #002</span>
-    <h5 class="f--bold">Onnistu muutosjohtamisessa - Sami El-Bash</h5>
+    <h5 class="">Onnistu muutosjohtamisessa - Sami El-Bash</h5>
 
             </div>
           </div>
@@ -1012,7 +1109,7 @@ yksilöä</strong></p>
                     <a href="">Lue jaksoesittely</a>
               </div>
                       <span class="-pod-number"> <span class="pod-number__inner"></span> #003</span>
-    <h5 class="f--bold">Vetävämpi työnantajamielikuva  - Camilla Kylander</h5>
+    <h5 class="">Vetävämpi työnantajamielikuva  - Camilla Kylander</h5>
 
             </div>
           </div>
@@ -1023,7 +1120,7 @@ yksilöä</strong></p>
                     <a href="">Lue jaksoesittely</a>
               </div>
                       <span class="-pod-number"> <span class="pod-number__inner"></span> #004</span>
-    <h5 class="f--bold">Inhimillisempää liiketoimintaa - Nasim Selmani</h5>
+    <h5 class="">Inhimillisempää liiketoimintaa - Nasim Selmani</h5>
 
             </div>
           </div>
@@ -1060,8 +1157,7 @@ yksilöä</strong></p>
 
       <div class="content-spacer--small">
 </div>
-<div class="content-spacer--small">
-</div>
+
 
       </div>
       </div>

@@ -93,11 +93,13 @@ h1, .h1 {
 	line-height: 1.2;
 	font-weight: normal;
 	margin: 0;
-	  @media screen and (max-width: 950px) {
-			font-size: 8vw;
+	  @media screen and (max-width: 1200px) {
+			font-size: 6vw;
+				 font-size: clamp(7rem, 6.2vw, 7.8rem);
 		}
-		@media screen and (max-width: 700px) {
+		@media screen and (max-width: 800px) {
 		 font-size: 10vw;
+		 font-size: clamp(5vw, 10vw, 6rem);
 	 }
 }
 
@@ -159,11 +161,11 @@ h4, .h4 {
 	@media screen and (max-width: $base-width-media-max) {
 
 	}
-	@media screen and (max-width: 1024px) {
+	@media screen and (max-width: 1200px) {
 		font-size: clamp(1.7rem, 5vw, 2rem);
 	}
 	@media screen and (max-width: 500px) {
-	font-size: clamp(1.7rem, 5vw, 1.9rem);
+	font-size: clamp(1.7rem, 4vw, 1.9rem);
 	}
 
 }
@@ -180,9 +182,34 @@ h5, .h5 {
 
 /////MARGIN/////
 
-h1,h2,h3,h4 {
+h1,h2,h3,h4, .single-post--legacy h1 {
 	margin-bottom: 0.75em;
+	@media screen and (max-width: 1200px) {
+			margin-bottom: 0.5em;
+	}
 }
+
+.single-post--legacy {
+	h1,h2,h3,h4 {
+	margin-top: 1.25em;
+	font-size: 4rem;
+	line-height: 1.1;
+
+	@media screen and (max-width: 1440px) {
+font-size: clamp(2.4rem, 4vw, 4rem);
+	}
+	@media screen and (max-width: 1100px) {
+
+	}
+	@media screen and (max-width: 700px) {
+
+ }
+ @media screen and (max-width: 500px) {
+
+ }
+	}
+}
+
 
 
 
@@ -208,6 +235,17 @@ a {
 	text-decoration: none;
 	cursor: pointer;
 }
+article, p {
+	a {
+		color: $l-blue;
+		text-decoration: none;
+		cursor: pointer;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+}
+
 
 h1 a, h2 a{
 	color: inherit;
@@ -230,19 +268,20 @@ dfn,
 cite,
 em,
 blockquote {
-	font-style: italic;
+	font-style: normal;
 }
 
 blockquote {
 	quotes: "“" "”";
 	overflow: hidden;
 	position: relative;
-	margin: 0 0 2em 0;
+	margin: 3em 0 3em 0;
 	font-family: var(--font);
 	background: transparent;
 
 	p {
-		padding-left: 40px;
+		// padding-left: 40px;
+		@extend .h3;
 	}
 
 	p:last-of-type {
@@ -251,12 +290,12 @@ blockquote {
 
 	//quote mark
 	&:before {
-		content: open-quote;
-		font-size: 4rem;
-		position: absolute;
-		left: 0;
-		top: 0;
-		line-height: 1;
+		// content: open-quote;
+		// font-size: 4rem;
+		// position: absolute;
+		// left: 0;
+		// top: 0;
+		// line-height: 1;
 	}
 }
 

@@ -23,10 +23,7 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
 
 
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-    />
+
 
 <style media="screen">
 @font-face {
@@ -42,9 +39,9 @@
 
 	<?php wp_head(); ?>
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
 
-  <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+  <!-- <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script> -->
 
 
 
@@ -65,7 +62,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.6.1/dist/cookieconsent.css"> -->
 
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
 
 <script type="text/javascript">
 const home_url = "<?php echo home_url() ?>"; // "A string here"
@@ -126,6 +123,94 @@ lang-switch--fi-active
     <nav class="navigation-links -desktop-nav flx-container">
 
 
+      <?php if( have_rows('navigation_group', 'option') ): ?>
+
+
+
+          <?php while( have_rows('navigation_group', 'option') ) : the_row(); ?>
+
+
+
+
+
+      <div class="dropdown-nav" x-data="{ dropdown_open: false }" :class="dropdown_open && 'S-active--dropdown'"  @mouseleave="dropdown_open = false; $store.dropdown = false">
+          <button class="-nav-link Target--palvelut" href="/" @mouseenter="dropdown_open = true; $store.dropdown = true"><?php the_sub_field('group_name'); ?></button>
+          <div class="dropdown-nav__wrap" @mouseleave="dropdown_open = false; $store.dropdown = false">
+            <div class="dropdown-nav__content">
+            <div class="flx-container">
+              <div class="dropdown-nav__cell -left">
+                <h3 class="f--bold"><?php the_sub_field('group_name'); ?></h3>
+                <p>
+<?php the_sub_field('group_info_text'); ?>
+
+
+
+                </p>
+
+      <?php $link_m = get_sub_field('group_main_link'); ?>
+      <?php
+      if( $link_m ):
+
+
+    $link_m_url = $link_m['url'];
+    $link_m_title = $link_m['title'];
+
+    ?>
+    <div class="-arrow-link">
+
+      <a href="<?php echo $link_m_url; ?>"><?php echo   $link_m_title; ?></a>
+          <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg>
+    </div>
+
+
+<?php endif; ?>
+
+
+
+
+              </div>
+              <div class="dropdown-nav__cell -right">
+                <ul class="-ul">
+                    <?php while( have_rows('links', 'option') ) : the_row(); ?>
+                      <?php $link = get_sub_field('nav_link'); ?>
+                      <?php $link_url = $link['url'];
+                      $link_title = $link['title']; ?>
+
+                      <?php
+                      $image = get_sub_field('nav_link_icon');
+if( !empty( $image ) ): ?>
+<li class="-li">
+
+      <a class="-nav-link Target-- -main-link" href="<?php echo $link_url; ?>"> <span class="f--bold" >  <img class="lazyload" width="30" height="30" data-src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" /> <?php echo $link_title; ?></span>
+    <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
+</li>
+
+<?php endif; ?>
+<?php
+if( empty( $image ) ): ?>
+<li class="-li">
+
+      <a class="-nav-link Target-- -main-link" href="<?php echo $link_url; ?>"> <span><?php echo $link_title; ?></span>
+    <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
+</li>
+
+
+
+<?php endif; ?>
+
+                        <?php endwhile; ?>
+                </ul>
+                </div>
+              </div>
+
+            </div>
+            </div>
+
+          </div>
+                <?php endwhile; ?>
+
+              <?php endif; ?>
+
       <div class="dropdown-nav" x-data="{ dropdown_open: false }" :class="dropdown_open && 'S-active--dropdown'"  @mouseleave="dropdown_open = false; $store.dropdown = false">
           <button class="-nav-link Target--palvelut" href="/" @mouseenter="dropdown_open = true; $store.dropdown = true">Mitä teemme</button>
           <div class="dropdown-nav__wrap" @mouseleave="dropdown_open = false; $store.dropdown = false">
@@ -138,7 +223,7 @@ Itsensä johtaminen
 Etätyö- ja hybridityö
 tuottavuuden nostamiseen keskittyviä henkilöstön kehittämisen palveluita tietotyöorganisaatioille.</p>
 <div class="-arrow-link">
-  <a href="#">Kaikki palvelut</a>
+  <a href="/palvelut/">Kaikki palvelut</a>
       <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg>
 </div>
 
@@ -146,7 +231,7 @@ tuottavuuden nostamiseen keskittyviä henkilöstön kehittämisen palveluita tie
               <div class="dropdown-nav__cell -right">
                 <ul class="-ul">
                   <li class="-li">
-                    <a class="-nav-link Target-- -main-link" href="/palvelu"> <span class="f--bold"> <img src="https://lifted.fi/wp-content/uploads/2021/03/Lifted-ikonit-siniset-25.png" alt=""> Johtaminen</span>
+                    <a class="-nav-link Target-- -main-link" href="/johtamisen-ja-esimiestyon-valmennus/"> <span class="f--bold"> <img class="lazyload"  data-src="https://lifted.fi/wp-content/uploads/2021/03/Lifted-ikonit-siniset-25.png" alt=""> Johtaminen</span>
                   <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
                     <!-- <div class="-sub-links">
                       <a href="#" class="tag-capsule ">Ländäri esimiestyö</a>     <a href="#" class="tag-capsule">Ländäri Tiimityö</a>     <a href="#" class="tag-capsule">Ländäri Tiimityö</a>
@@ -156,13 +241,13 @@ tuottavuuden nostamiseen keskittyviä henkilöstön kehittämisen palveluita tie
 
                   </li>
                   <li class="-li">
-                    <a class="-nav-link Target-- -main-link" href="/palvelu"> <span class="f--bold"> <img src="https://lifted.fi/wp-content/uploads/2021/03/Lifted-ikonit-siniset-23.png" alt=""> Tiimityö</span>
+                    <a class="-nav-link Target-- -main-link" href="/tyoyhteisotaitojen-ja-tiimityon-valmennus/"> <span class="f--bold"> <img class="lazyload"  data-src="https://lifted.fi/wp-content/uploads/2021/03/Lifted-ikonit-siniset-23.png" alt=""> Tiimityö</span>
                   <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
 
                   </li>
                   <li class="-li">
 
-                        <a class="-nav-link Target-- -main-link" href="/palvelu"> <span class="f--bold"> <img src="https://lifted.fi/wp-content/uploads/2021/03/Lifted-ikonit-siniset-09.png" alt=""> Itsensä johtaminen</span>
+                        <a class="-nav-link Target-- -main-link" href="/palvelu"> <span class="f--bold"> <img class="lazyload"  data-src="https://lifted.fi/wp-content/uploads/2021/03/Lifted-ikonit-siniset-09.png" alt=""> Itsensä johtaminen</span>
                       <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
 
 
@@ -211,7 +296,7 @@ tuottavuuden nostamiseen keskittyviä henkilöstön kehittämisen palveluita tie
 
                       </li>
                       <li class="-li">
-                        <a class="-nav-link Target-- -main-link" href="/artikkelit"> <span>Podcast</span>
+                        <a class="-nav-link Target-- -main-link" href="/category/podcast/"> <span>Podcast</span>
                       <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
 
                       </li>
@@ -345,7 +430,7 @@ lang-switch--fi-active
 
 
     <div class="nav-cta">
-      <a class="f--medium" href="/varaa" target="_blank">Ota yhteyttä</a>
+      <a class="f--medium" href="/yhteystiedot/">Ota yhteyttä</a>
     </div>
 
 
@@ -371,23 +456,247 @@ lang-switch--fi-active
 </div>
 
 <div class="fixed-mobile-navigation">
-<div class="fixed-mobile-navigation_inner U_container U_base-pad" style="display:none">
-  <div class="fixed-logo -top">
-
-        <a href="<?php echo home_url() ?>"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 98"><defs><style>.cls-1{fill:#ff8517;}</style></defs><path d="M120.28,55.73c0-11.73,9-20.88,20.4-20.88,11.73,0,20.06,8.74,20.06,20.64a18.74,18.74,0,0,1-.16,3h-31.4c1.06,6.56,5.59,10.28,11.9,10.28a11.94,11.94,0,0,0,10.68-6.07l7.45,4.21a21.17,21.17,0,0,1-18.13,9.71A20.56,20.56,0,0,1,120.28,55.73Zm9.15-3.8h22.25c-.81-5.42-5-9.31-11.09-9.31C135,42.62,130.72,46.1,129.43,51.93Z"/><path d="M167.63,75.8V20h21.44c9.79,0,16.59,6.32,16.59,15.3a12.93,12.93,0,0,1-6.56,11.49c5.59,2.1,8.82,6.88,8.82,13.11,0,9.38-6.63,15.94-16.75,15.94Zm9.3-32.21H188.1c5.1,0,8.33-3.07,8.33-7.69s-3.23-7.76-8.33-7.76H176.93Zm0,24h12.3c5.67,0,9.39-3.16,9.39-8.1s-3.72-8.09-9.39-8.09h-12.3Z"/><path d="M213.43,24.25a5.18,5.18,0,1,1,10.36,0,5.18,5.18,0,0,1-10.36,0Zm.65,51.55V35.66h9V75.8Z"/><path d="M231.72,75.8V20h9V55.57l17.48-19.91h10.76L254.05,52.74,269.83,75.8h-10.6L248.15,59.45l-7.45,8.09V75.8Z"/><path d="M269.11,55.73c0-11.73,9-20.88,20.39-20.88,11.74,0,20.07,8.74,20.07,20.64a18.74,18.74,0,0,1-.16,3H278c1.05,6.56,5.59,10.28,11.9,10.28a12,12,0,0,0,10.68-6.07L308,66.9a21.15,21.15,0,0,1-18.12,9.71A20.56,20.56,0,0,1,269.11,55.73Zm9.14-3.8h22.26c-.81-5.42-5-9.31-11.09-9.31C283.84,42.62,279.55,46.1,278.25,51.93Z"/><path d="M316.45,75.8V20h21.37c10.68,0,18.28,7.53,18.28,18a17.19,17.19,0,0,1-10.68,16.42l12,21.45H347L335.87,55.89H325.76V75.8Zm9.31-28.73h11c6,0,10-3.56,10-9.14,0-5.75-4-9.15-10-9.15h-11Z"/><path d="M359,55.73c0-11.73,9-20.88,20.4-20.88,11.73,0,20.06,8.74,20.06,20.64a18.74,18.74,0,0,1-.16,3h-31.4c1.06,6.56,5.59,10.28,11.9,10.28a12,12,0,0,0,10.68-6.07L398,66.9a21.17,21.17,0,0,1-18.13,9.71A20.56,20.56,0,0,1,359,55.73Zm9.15-3.8h22.25c-.81-5.42-5-9.31-11.09-9.31C373.75,42.62,369.46,46.1,368.17,51.93Z"/><path d="M406,75.8V35.66h8.58v4.13c2.59-3.08,6.72-4.94,11.81-4.94,9.88,0,16.92,7,16.92,18.13V75.8h-9v-22c0-6.56-3.56-10.44-9.38-10.44-6,0-10,4-10,10.44v22Z"/><path d="M467.87,75.8c-9.14,0-13.51-4-13.51-12.3V43.92h-6.64V35.66h4.61a2,2,0,0,0,2-2.26V25.63h9v10H474v8.26H463.34V62.61c0,3.15,1.54,4.77,5.18,4.77H474V75.8Z"/><path d="M476.77,55.73c0-11.73,8.74-20.88,20.23-20.88A16.54,16.54,0,0,1,510.44,41V35.66H519V75.8h-8.57V70.46c-2.92,3.88-7.77,6.15-13.44,6.15C485.51,76.61,476.77,67.46,476.77,55.73Zm33.34,0c0-7.2-5.09-12.46-12.13-12.46s-12.22,5.26-12.22,12.46S490.94,68.11,498,68.11,510.11,62.93,510.11,55.73Z"/><path d="M527.76,75.8V20h9V75.8Z"/><path d="M543.62,70.78a5.71,5.71,0,1,1,5.66,5.58A5.68,5.68,0,0,1,543.62,70.78Z"/><path d="M563,75.8V43.92h-6.23V35.66H563V33.32C563,25.55,568.63,20,577.69,20h4.61v7.93h-4.21c-4.2,0-6.15,2-6.15,5.75v2h11v8.26h-11V75.8Zm24.68-51.55a5.18,5.18,0,1,1,10.36,0,5.18,5.18,0,0,1-10.36,0Zm.65,51.55V35.66h9V75.8Z"/><circle cx="48.75" cy="49" r="46.75"/><path class="cls-1" d="M49.56,67.43C39.5,67.43,34.94,61.05,35.27,53c2.66.06,5.55,0,8.73-.09C66.29,52,76.19,44.12,76.29,34.32c.08-7.83-6.91-12.94-17.1-12.94-14.57,0-27.47,10-31.62,23.92-9-1.38-13.33-4-13.33-4L11.7,49.18S16,51.39,26.26,52.45c-1,13.26,6.11,24.18,21.75,24.18,13,0,22.77-9,26.91-19.25H64.78A16.21,16.21,0,0,1,49.56,67.43ZM36.42,46.08A21.24,21.24,0,0,1,57,30.17c5.16,0,9.16,1.79,9.26,5.28,0,4.34-3.89,9.92-24,10.63q-3.12.11-5.89,0Z"/></svg>
-
-      </a>
-  </div>
-
-<div class="flx-container">
-  <div class="cell -text-content">
-
-    <div class="content-wrap U_base-pad--right-only">
-
-    <nav class="fixed-mobile-navigation__links U_base-pad--right-only">
+<div class="fixed-mobile-navigation_inner U_container U_base-pad" style="">
 
 
-      <?php if ( get_field( 'lang' ) == 1 ) { ?>
+
+
+
+    <nav class="fixed-mobile-navigation__links">
+      <div class="capsule-wrap ">
+<a class="btn--basic btn--dark " style="color:white" href="/yhteystiedot">Ota yhteyttä</a>
+</div>
+
+
+<?php if( have_rows('navigation_group', 'option') ): ?>
+
+
+
+    <?php while( have_rows('navigation_group', 'option') ) : the_row(); ?>
+
+
+
+
+
+      <div class="mobile-nav-unit">
+      <div class="">
+        <div class="">
+          <h3 class="f--bold"><?php the_sub_field('group_name'); ?></h3>
+          <p>
+<?php the_sub_field('group_info_text'); ?>
+
+
+
+          </p>
+
+
+
+
+
+
+        </div>
+        <div class="dropdown-nav__cell -right">
+          <ul class="-ul">
+              <?php while( have_rows('links', 'option') ) : the_row(); ?>
+                <?php $link = get_sub_field('nav_link'); ?>
+                <?php $link_url = $link['url'];
+                $link_title = $link['title']; ?>
+
+                <?php
+                $image = get_sub_field('nav_link_icon');
+if( !empty( $image ) ): ?>
+<li class="-li">
+
+<a class="-nav-link Target-- -main-link" href="<?php echo $link_url; ?>"> <span class="f--bold" >  <img class="lazyload"  width="30" height="30" data-src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" /> <?php echo $link_title; ?></span>
+<svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
+</li>
+
+<?php endif; ?>
+<?php
+if( empty( $image ) ): ?>
+<li class="-li">
+
+<a class="-nav-link Target-- -main-link" href="<?php echo $link_url; ?>"> <span><?php echo $link_title; ?></span>
+<svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
+</li>
+
+
+<img class="lazyload"  data-src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+<?php endif; ?>
+
+                  <?php endwhile; ?>
+
+
+                  <?php $link_m = get_sub_field('group_main_link'); ?>
+                  <?php
+                  if( $link_m ):
+
+
+                  $link_m_url = $link_m['url'];
+                  $link_m_title = $link_m['title'];
+
+                  ?>
+
+                  <li class="-li">
+
+                        <a class="-nav-link Target-- -main-link" href="<?php echo $link_m_url; ?>"> <span><?php echo   $link_m_title; ?></span>
+                      <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
+
+
+                  </li>
+                  <?php endif; ?>
+
+
+
+
+          </ul>
+          </div>
+        </div>
+      </div>
+
+          <?php endwhile; ?>
+
+        <?php endif; ?>
+
+
+
+
+      <div class="mobile-nav-unit">
+      <div class="">
+        <div class="">
+          <h3 class="f--bold">Mitä teemme </h3>
+          <p>Tarjoamme vaikuttavia hyvinvoinnin ja
+Itsensä johtaminen
+Etätyö- ja hybridityö
+tuottavuuden nostamiseen keskittyviä henkilöstön kehittämisen palveluita tietotyöorganisaatioille.</p>
+<!-- <div class="-arrow-link">
+<a href="#">Kaikki palvelut</a>
+<svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg>
+</div> -->
+
+        </div>
+        <div class="dropdown-nav__cell -right">
+          <ul class="-ul">
+            <li class="-li">
+              <a class="-nav-link Target-- -main-link" href="/johtamisen-ja-esimiestyon-valmennus/"> <span class="f--bold"> <img class="lazyload"  data-src="https://lifted.fi/wp-content/uploads/2021/03/Lifted-ikonit-siniset-25.png" alt=""> Johtaminen</span>
+            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
+              <!-- <div class="-sub-links">
+                <a href="#" class="tag-capsule ">Ländäri esimiestyö</a>     <a href="#" class="tag-capsule">Ländäri Tiimityö</a>     <a href="#" class="tag-capsule">Ländäri Tiimityö</a>
+                 <a href="#" class="tag-capsule">Ländäri johtaminen</a>
+
+              </div> -->
+
+            </li>
+            <li class="-li">
+              <a class="-nav-link Target-- -main-link" href="/tyoyhteisotaitojen-ja-tiimityon-valmennus/"> <span class="f--bold"> <img class="lazyload"  data-src="https://lifted.fi/wp-content/uploads/2021/03/Lifted-ikonit-siniset-23.png" alt=""> Tiimityö</span>
+            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
+
+            </li>
+            <li class="-li">
+
+                  <a class="-nav-link Target-- -main-link" href="/palvelu"> <span class="f--bold"> <img class="lazyload"  data-src="https://lifted.fi/wp-content/uploads/2021/03/Lifted-ikonit-siniset-09.png" alt=""> Itsensä johtaminen</span>
+                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
+
+
+            </li>
+            <li class="-li">
+
+                  <a class="-nav-link Target-- -main-link" href="/luennot"> <span>Luennot ja Workshopit</span>
+                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
+
+
+            </li>
+            <li class="-li">
+
+                  <a class="-nav-link Target-- -main-link" href="/palvelut"> <span>Kaikki palvelut</span>
+                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
+
+
+            </li>
+
+
+
+
+
+
+
+          </ul>
+                </div>
+        </div>
+
+      </div>
+
+
+      <div class="mobile-nav-unit">
+      <div class="">
+        <div class="">
+          <h3 class="f--bold">Sisällöt</h3>
+          <p>Tarjoamme vaikuttavia hyvinvoinnin ja
+Itsensä johtaminen
+Etätyö- ja hybridityö
+tuottavuuden nostamiseen keskittyviä henkilöstön kehittämisen palveluita tietotyöorganisaatioille.</p>
+
+
+        </div>
+        <div class="dropdown-nav__cell -right">
+          <ul class="-ul">
+            <li class="-li">
+              <a class="-nav-link Target-- -main-link" href="/artikkelit"> <span>Artikkelit</span>
+            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
+
+
+            </li>
+            <li class="-li">
+              <a class="-nav-link Target-- -main-link" href="/category/podcast/"> <span>Podcast</span>
+            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
+
+            </li>
+            <li class="-li">
+
+                  <a class="-nav-link Target-- -main-link" href="/materiaalit"> <span>Materiaalit</span>
+                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
+              </div>
+        </div>
+
+      </div>
+
+      <div class="mobile-nav-unit">
+      <div class="">
+        <div class="">
+          <h3 class="f--bold">Meistä</h3>
+          <p>Tarjoamme vaikuttavia hyvinvoinnin ja
+      Itsensä johtaminen
+      Etätyö- ja hybridityö
+      tuottavuuden nostamiseen keskittyviä henkilöstön kehittämisen palveluita tietotyöorganisaatioille.</p>
+
+
+        </div>
+        <div class="dropdown-nav__cell -right">
+          <ul class="-ul">
+            <li class="-li">
+              <a class="-nav-link Target-- -main-link" href="/"> <span>Lifted</span>
+            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
+
+
+            </li>
+            <li class="-li">
+              <a class="-nav-link Target-- -main-link" href="/asiantuntijat"> <span>Asiantuntijat</span>
+            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
+
+            </li>
+            <li class="-li">
+
+                  <a class="-nav-link Target-- -main-link" href="/kokemuksia"> <span>Kokemuksia</span>
+                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
+              </div>
+        </div>
+
+      </div>
+
+
+
+
+      <!-- <?php if ( get_field( 'lang' ) == 1 ) { ?>
         <a class="-nav-link Target--palvelut " href="/en/bikes">Bikes</a>
         <a class="-nav-link Target--" href="/en/">Saariselkä
         </a>
@@ -406,12 +715,14 @@ lang-switch--fi-active
     <a class="-nav-link Target--yhteystiedot" href="/yhteystiedot">Yhteystiedot</a>
     <a class="f--medium fixed-order-cta" href="varaa" target="_blank">Varaa nyt</a>
 
-  <?php } ?>
+  <?php } ?> -->
 
 
     </nav>
 
-      <div class="fixed-mobile-navigation__sub-links">
+
+
+      <!-- <div class="fixed-mobile-navigation__sub-links">
         <div class="">
 
           <ul>
@@ -437,16 +748,15 @@ lang-switch--fi-active
 
           </ul>
         </div>
-      </div>
+      </div> -->
 
 
 
 
-  </div>
-      </div>
 
 
-</div>
+
+
 
 
 </div>

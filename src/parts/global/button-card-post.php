@@ -71,7 +71,7 @@ foreach( $categories as $category ) {
       </div>
 
       <div class="-footer">
-        <span class="-date"><?php echo the_date(); ?></span>
+        <span class="-date"><?php echo get_the_date("j.n.Y") ?></span>
       </div>
 
     </div>

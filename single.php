@@ -16,10 +16,47 @@
 
      <div id="primary" class="content-area">
          <main id="main" class="site-main" role="main">
-           <!-- <div class="U-nav-spacer">
+           <div class="U-nav-spacer">
 
-           </div> -->
-           <article class="single-post single-post--legacy -x-pad -y-pad">
+           </div>
+
+           <section class="section--page-header ">
+           <div class="U_container U_base-pad">
+           <div class="module--header-block  module--header-block--no-img ">
+            <div class="flx-container">
+              <div class="cell header-block__meta U-inner-content--x U-inner-content--y">
+             <h1 class="base-text">
+               <?php
+               $categories = get_the_category();
+       if ( ! empty( $categories ) ) {
+       foreach( $categories as $category ) {
+       ?>
+
+      <?php echo $category->name; ?>
+
+       <?php
+       }
+       }
+       ?>
+             </h1>
+
+             <div class="">
+
+
+           <h1 class="h2"><?php echo get_the_title(); ?></h1>
+
+             </div>
+             </div>
+
+
+
+           </div>
+           </div>
+           </div></section>
+
+           <article class="single-post single-post--legacy -x-pad">
+             <div class="single-post--legacy__inner">
+
 
           <?php
           if ( have_posts() ):
@@ -29,6 +66,7 @@
 
           endif;
           ?>
+                   </div>
                  </article>
 
 

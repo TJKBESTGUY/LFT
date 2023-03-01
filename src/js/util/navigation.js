@@ -1,8 +1,9 @@
 
 var nav_trigger = document.querySelector(".mobile-nav-trigger")
+var nav_trigger_hide = document.querySelector(".site-container")
 var doc_body = document.body
 nav_trigger.addEventListener("click", mobile_nav);
-
+nav_trigger_hide.addEventListener("click", mobile_nav_hide);
 function mobile_nav (e) {
 
 if (!document.body.classList.contains('S-active--mobile-nav')) {
@@ -12,6 +13,11 @@ else {
 	doc_body.classList.remove("S-active--mobile-nav")
 }
 
+}
+
+function mobile_nav_hide (e) {
+
+	doc_body.classList.remove("S-active--mobile-nav")
 }
 
 

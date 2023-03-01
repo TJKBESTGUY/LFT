@@ -58,9 +58,26 @@ padding-top: 40px;
     .single-post--legacy {
       max-width: 1200px;
       margin: auto;
+          @media only screen and (max-width: 1600px) {
+          max-width: 1000px;
+          }
+
       .article-meta {
     display: none;
 }
+    }
+
+    .single-post--legacy__inner {
+        border-top: solid 1px rgba(0,0,0,0.14902);
+              @media only screen and (max-width: 500px) {
+              margin-top: 30px;
+              }
+    }
+
+
+
+    .single-post--legacy .U-nav-spacer {
+      display: none;
     }
 
 ///////NEWS ARCHIVE//////

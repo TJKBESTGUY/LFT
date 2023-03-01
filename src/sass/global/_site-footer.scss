@@ -12,10 +12,15 @@ p, a, li {
   @media screen and (max-width: 1500px) {
   font-size: 1.5rem;
   }
+
+}
+@media screen and (max-width: 500px) {
+padding: 0 20px;
+}
+
 }
 
 
-}
 
 $li-height: 28px;
 
@@ -30,13 +35,13 @@ $li-height: 28px;
 
   // margin-top: 40px;
   padding: 40px 0;
-  padding-bottom: 100px;
+
   a {
 
-    line-height: 1.6;
-    font-size: 1.6rem;
+    line-height: 1;
+    // font-size: 1.6rem;
       @media screen and (max-width: 700px) {
-        font-size: 1.6rem;
+        // font-size: 1.6rem;
       }
 
   }
@@ -81,7 +86,9 @@ $li-height: 28px;
 .footer-heading, .footer-group-header {
   color: $l-blue;
   font-family: "Config-SemiBold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-
+      @media screen and (max-width: 1400px) {
+      margin-bottom: 10px;
+      }
 }
 
 .-nav-link-spacer {
@@ -116,6 +123,12 @@ flex-direction: column;
     width: 33.33%;
       @media screen and (max-width: 1400px) {
           width: 25%;
+      }
+      @media screen and (max-width: 900px) {
+          width: 50%;
+      }
+      @media screen and (max-width: 500px) {
+          width: 100%;
       }
 
   }

@@ -1078,138 +1078,33 @@ document.addEventListener('DOMContentLoaded', function () {
   \*******************************************/
 /***/ (() => {
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-var MiniMasonry = function () {
-  "use strict";
-
-  function t(t) {
-    return this._sizes = [], this._columns = [], this._container = null, this._count = null, this._width = 0, this._removeListener = null, this._currentGutterX = null, this._currentGutterY = null, this._resizeTimeout = null, this.conf = {
-      baseWidth: 255,
-      gutterX: null,
-      gutterY: null,
-      gutter: 10,
-      container: null,
-      minify: !0,
-      ultimateGutter: 5,
-      surroundingGutter: !0,
-      direction: "ltr",
-      wedge: !1
-    }, this.init(t), this;
-  }
-
-  return t.prototype.init = function (t) {
-    for (var i in this.conf) {
-      null != t[i] && (this.conf[i] = t[i]);
-    }
-
-    if (null != this.conf.gutterX && null != this.conf.gutterY || (this.conf.gutterX = this.conf.gutterY = this.conf.gutter), this._currentGutterX = this.conf.gutterX, this._currentGutterY = this.conf.gutterY, console.log(this._currentGutterX), this._container = "object" == _typeof(this.conf.container) && this.conf.container.nodeName ? this.conf.container : document.querySelector(this.conf.container), !this._container) throw new Error("Container not found or missing");
-    var e = this.resizeThrottler.bind(this);
-    window.addEventListener("resize", e), this._removeListener = function () {
-      window.removeEventListener("resize", e);
-    }, this.layout();
-  }, t.prototype.reset = function () {
-    this._sizes = [], this._columns = [], this._count = null, this._width = this._container.clientWidth;
-    var t = this.conf.baseWidth;
-    this._width < t && (this._width = t, this._container.style.minWidth = t + "px"), 1 == this.getCount() ? (this._currentGutterX = this.conf.ultimateGutter, this._count = 1) : this._width < this.conf.baseWidth + 2 * this._currentGutterX ? this._currentGutterX = 0 : this._currentGutterX = this.conf.gutterX;
-  }, t.prototype.getCount = function () {
-    return this.conf.surroundingGutter ? Math.floor((this._width - this._currentGutterX) / (this.conf.baseWidth + this._currentGutterX)) : Math.floor((this._width + this._currentGutterX) / (this.conf.baseWidth + this._currentGutterX));
-  }, t.prototype.computeWidth = function () {
-    var t = this.conf.surroundingGutter ? (this._width - this._currentGutterX) / this._count - this._currentGutterX : (this._width + this._currentGutterX) / this._count - this._currentGutterX;
-    return t = Number.parseFloat(t.toFixed(2));
-  }, t.prototype.layout = function () {
-    if (this._container) {
-      this.reset(), null == this._count && (this._count = this.getCount());
-
-      for (var t = this.computeWidth(), i = 0; i < this._count; i++) {
-        this._columns[i] = 0;
-      }
-
-      for (var e, n, r = this._container.children, s = 0; s < r.length; s++) {
-        r[s].style.width = t + "px", this._sizes[s] = r[s].clientHeight;
-      }
-
-      e = "ltr" == this.conf.direction ? this.conf.surroundingGutter ? this._currentGutterX : 0 : this._width - (this.conf.surroundingGutter ? this._currentGutterX : 0), this._count > this._sizes.length && (n = this._sizes.length * (t + this._currentGutterX) - this._currentGutterX, !1 === this.conf.wedge ? e = "ltr" == this.conf.direction ? (this._width - n) / 2 : this._width - (this._width - n) / 2 : "ltr" == this.conf.direction || (e = this._width - this._currentGutterX));
-
-      for (var o = 0; o < r.length; o++) {
-        var h = this.conf.minify ? this.getShortest() : this.getNextColumn(o),
-            u = 0;
-        !this.conf.surroundingGutter && h == this._columns.length || (u = this._currentGutterX);
-        var c = "ltr" == this.conf.direction ? e + (t + u) * h : e - (t + u) * h - t,
-            u = this._columns[h];
-        r[o].style.transform = "translate3d(" + Math.round(c) + "px," + Math.round(u) + "px,0)", this._columns[h] += this._sizes[o] + (1 < this._count ? this.conf.gutterY : this.conf.ultimateGutter);
-      }
-
-      this._container.style.height = this._columns[this.getLongest()] - this._currentGutterY + "px";
-    } else console.error("Container not found");
-  }, t.prototype.getNextColumn = function (t) {
-    return t % this._columns.length;
-  }, t.prototype.getShortest = function () {
-    for (var t = 0, i = 0; i < this._count; i++) {
-      this._columns[i] < this._columns[t] && (t = i);
-    }
-
-    return t;
-  }, t.prototype.getLongest = function () {
-    for (var t = 0, i = 0; i < this._count; i++) {
-      this._columns[i] > this._columns[t] && (t = i);
-    }
-
-    return t;
-  }, t.prototype.resizeThrottler = function () {
-    this._resizeTimeout || (this._resizeTimeout = setTimeout(function () {
-      this._resizeTimeout = null, this._container.clientWidth != this._width && this.layout();
-    }.bind(this), 33));
-  }, t.prototype.destroy = function () {
-    "function" == typeof this._removeListener && this._removeListener();
-
-    for (var t = this._container.children, i = 0; i < t.length; i++) {
-      t[i].style.removeProperty("width"), t[i].style.removeProperty("transform");
-    }
-
-    this._container.style.removeProperty("height"), this._container.style.removeProperty("min-width");
-  }, t;
-}(); // ScrollOut({
+// ScrollOut({
 //   once: true,
 //   threshold: 0.9,
 //
 // });
-
-
-AOS.init({
-  // Global settings:
-  disable: false,
-  // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-  startEvent: 'DOMContentLoaded',
-  // name of the event dispatched on the document, that AOS should initialize on
-  initClassName: 'aos-init',
-  // class applied after initialization
-  animatedClassName: 'aos-animate',
-  // class applied on animation
-  useClassNames: true,
-  // if true, will add content of `data-aos` as classes on scroll
-  disableMutationObserver: false,
-  // disables automatic mutations' detections (advanced)
-  debounceDelay: 50,
-  // the delay on debounce used while resizing window (advanced)
-  throttleDelay: 99,
-  // the delay on throttle used while scrolling the page (advanced)
-  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-  offset: 0,
-  // offset (in px) from the original trigger point
-  delay: 0,
-  // values from 0 to 3000, with step 50ms
-  duration: 400,
-  // values from 0 to 3000, with step 50ms
-  easing: 'ease',
-  // default easing for AOS animations
-  once: true,
-  // whether animation should happen only once - while scrolling down
-  mirror: false,
-  // whether elements should animate out while scrolling past them
-  anchorPlacement: 'bottom-bottom' // defines which position of the element regarding to window should trigger the animation
-
-});
+// AOS.init({
+//   // Global settings:
+//   disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+//   startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+//   initClassName: 'aos-init', // class applied after initialization
+//   animatedClassName: 'aos-animate', // class applied on animation
+//   useClassNames: true, // if true, will add content of `data-aos` as classes on scroll
+//   disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+//   debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+//   throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+//
+//
+//   // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+//   offset: 0, // offset (in px) from the original trigger point
+//   delay: 0, // values from 0 to 3000, with step 50ms
+//   duration: 400, // values from 0 to 3000, with step 50ms
+//   easing: 'ease', // default easing for AOS animations
+//   once: true, // whether animation should happen only once - while scrolling down
+//   mirror: false, // whether elements should animate out while scrolling past them
+//   anchorPlacement: 'bottom-bottom', // defines which position of the element regarding to window should trigger the animation
+//
+// });
 document.addEventListener('alpine:init', function () {
   Alpine.store('dropdown', false);
   Alpine.store('clicked_test', false);
@@ -1230,7 +1125,16 @@ document.addEventListener('alpine:init', function () {
     console.log('clicktest');
     console.log(Alpine.store('clicked_test'));
   });
-}); ///////TEMPALTE WRAP STARTS//////////
+});
+
+if (document.querySelector('.themes-list')) {
+  document.querySelector('.themes-list .basic-card__inner').addEventListener("click", show_more);
+}
+
+function show_more() {
+  document.querySelector('.themes-list').classList.add("show-all");
+} ///////TEMPALTE WRAP STARTS//////////
+
 
 if (document.body.classList.contains('page-template-etusivu')) {
   console.log("home HELLO");
@@ -1472,7 +1376,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.lazySizesConfig = window.lazySizesConfig || {};
-lazySizesConfig.preloadAfterLoad = true;
+lazySizesConfig.preloadAfterLoad = false;
 lazySizesConfig.expand = 1000;
 document.addEventListener('lazyloaded', function (e) {
   console.log("lazyyy");
@@ -1495,8 +1399,10 @@ console.log("lazyload active");
 /***/ (() => {
 
 var nav_trigger = document.querySelector(".mobile-nav-trigger");
+var nav_trigger_hide = document.querySelector(".site-container");
 var doc_body = document.body;
 nav_trigger.addEventListener("click", mobile_nav);
+nav_trigger_hide.addEventListener("click", mobile_nav_hide);
 
 function mobile_nav(e) {
   if (!document.body.classList.contains('S-active--mobile-nav')) {
@@ -1504,6 +1410,10 @@ function mobile_nav(e) {
   } else {
     doc_body.classList.remove("S-active--mobile-nav");
   }
+}
+
+function mobile_nav_hide(e) {
+  doc_body.classList.remove("S-active--mobile-nav");
 }
 
 var nav_links = document.querySelectorAll(".-nav-link");
@@ -1595,6 +1505,522 @@ console.log("smoothscroll");
 
 /***/ }),
 
+/***/ "./src/js/util/plugins.js":
+/*!********************************!*\
+  !*** ./src/js/util/plugins.js ***!
+  \********************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+!function (e, t) {
+  "object" == ( false ? 0 : _typeof(exports)) && "undefined" != "object" ? module.exports = t() :  true ? !(__WEBPACK_AMD_DEFINE_FACTORY__ = (t),
+		__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+		(__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) :
+		__WEBPACK_AMD_DEFINE_FACTORY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : 0;
+}(this, function () {
+  "use strict";
+
+  var e = "undefined" != typeof window ? window : "undefined" != typeof __webpack_require__.g ? __webpack_require__.g : "undefined" != typeof self ? self : {},
+      t = "Expected a function",
+      n = NaN,
+      o = "[object Symbol]",
+      i = /^\s+|\s+$/g,
+      a = /^[-+]0x[0-9a-f]+$/i,
+      r = /^0b[01]+$/i,
+      c = /^0o[0-7]+$/i,
+      s = parseInt,
+      u = "object" == _typeof(e) && e && e.Object === Object && e,
+      d = "object" == (typeof self === "undefined" ? "undefined" : _typeof(self)) && self && self.Object === Object && self,
+      l = u || d || Function("return this")(),
+      f = Object.prototype.toString,
+      m = Math.max,
+      p = Math.min,
+      b = function b() {
+    return l.Date.now();
+  };
+
+  function v(e, n, o) {
+    var i,
+        a,
+        r,
+        c,
+        s,
+        u,
+        d = 0,
+        l = !1,
+        f = !1,
+        v = !0;
+    if ("function" != typeof e) throw new TypeError(t);
+
+    function y(t) {
+      var n = i,
+          o = a;
+      return i = a = void 0, d = t, c = e.apply(o, n);
+    }
+
+    function h(e) {
+      var t = e - u;
+      return void 0 === u || t >= n || t < 0 || f && e - d >= r;
+    }
+
+    function k() {
+      var e = b();
+      if (h(e)) return x(e);
+      s = setTimeout(k, function (e) {
+        var t = n - (e - u);
+        return f ? p(t, r - (e - d)) : t;
+      }(e));
+    }
+
+    function x(e) {
+      return s = void 0, v && i ? y(e) : (i = a = void 0, c);
+    }
+
+    function O() {
+      var e = b(),
+          t = h(e);
+
+      if (i = arguments, a = this, u = e, t) {
+        if (void 0 === s) return function (e) {
+          return d = e, s = setTimeout(k, n), l ? y(e) : c;
+        }(u);
+        if (f) return s = setTimeout(k, n), y(u);
+      }
+
+      return void 0 === s && (s = setTimeout(k, n)), c;
+    }
+
+    return n = w(n) || 0, g(o) && (l = !!o.leading, r = (f = "maxWait" in o) ? m(w(o.maxWait) || 0, n) : r, v = "trailing" in o ? !!o.trailing : v), O.cancel = function () {
+      void 0 !== s && clearTimeout(s), d = 0, i = u = a = s = void 0;
+    }, O.flush = function () {
+      return void 0 === s ? c : x(b());
+    }, O;
+  }
+
+  function g(e) {
+    var t = _typeof(e);
+
+    return !!e && ("object" == t || "function" == t);
+  }
+
+  function w(e) {
+    if ("number" == typeof e) return e;
+    if (function (e) {
+      return "symbol" == _typeof(e) || function (e) {
+        return !!e && "object" == _typeof(e);
+      }(e) && f.call(e) == o;
+    }(e)) return n;
+
+    if (g(e)) {
+      var t = "function" == typeof e.valueOf ? e.valueOf() : e;
+      e = g(t) ? t + "" : t;
+    }
+
+    if ("string" != typeof e) return 0 === e ? e : +e;
+    e = e.replace(i, "");
+    var u = r.test(e);
+    return u || c.test(e) ? s(e.slice(2), u ? 2 : 8) : a.test(e) ? n : +e;
+  }
+
+  var y = function y(e, n, o) {
+    var i = !0,
+        a = !0;
+    if ("function" != typeof e) throw new TypeError(t);
+    return g(o) && (i = "leading" in o ? !!o.leading : i, a = "trailing" in o ? !!o.trailing : a), v(e, n, {
+      leading: i,
+      maxWait: n,
+      trailing: a
+    });
+  },
+      h = "Expected a function",
+      k = NaN,
+      x = "[object Symbol]",
+      O = /^\s+|\s+$/g,
+      j = /^[-+]0x[0-9a-f]+$/i,
+      E = /^0b[01]+$/i,
+      N = /^0o[0-7]+$/i,
+      z = parseInt,
+      C = "object" == _typeof(e) && e && e.Object === Object && e,
+      A = "object" == (typeof self === "undefined" ? "undefined" : _typeof(self)) && self && self.Object === Object && self,
+      q = C || A || Function("return this")(),
+      L = Object.prototype.toString,
+      T = Math.max,
+      M = Math.min,
+      S = function S() {
+    return q.Date.now();
+  };
+
+  function D(e) {
+    var t = _typeof(e);
+
+    return !!e && ("object" == t || "function" == t);
+  }
+
+  function H(e) {
+    if ("number" == typeof e) return e;
+    if (function (e) {
+      return "symbol" == _typeof(e) || function (e) {
+        return !!e && "object" == _typeof(e);
+      }(e) && L.call(e) == x;
+    }(e)) return k;
+
+    if (D(e)) {
+      var t = "function" == typeof e.valueOf ? e.valueOf() : e;
+      e = D(t) ? t + "" : t;
+    }
+
+    if ("string" != typeof e) return 0 === e ? e : +e;
+    e = e.replace(O, "");
+    var n = E.test(e);
+    return n || N.test(e) ? z(e.slice(2), n ? 2 : 8) : j.test(e) ? k : +e;
+  }
+
+  var $ = function $(e, t, n) {
+    var o,
+        i,
+        a,
+        r,
+        c,
+        s,
+        u = 0,
+        d = !1,
+        l = !1,
+        f = !0;
+    if ("function" != typeof e) throw new TypeError(h);
+
+    function m(t) {
+      var n = o,
+          a = i;
+      return o = i = void 0, u = t, r = e.apply(a, n);
+    }
+
+    function p(e) {
+      var n = e - s;
+      return void 0 === s || n >= t || n < 0 || l && e - u >= a;
+    }
+
+    function b() {
+      var e = S();
+      if (p(e)) return v(e);
+      c = setTimeout(b, function (e) {
+        var n = t - (e - s);
+        return l ? M(n, a - (e - u)) : n;
+      }(e));
+    }
+
+    function v(e) {
+      return c = void 0, f && o ? m(e) : (o = i = void 0, r);
+    }
+
+    function g() {
+      var e = S(),
+          n = p(e);
+
+      if (o = arguments, i = this, s = e, n) {
+        if (void 0 === c) return function (e) {
+          return u = e, c = setTimeout(b, t), d ? m(e) : r;
+        }(s);
+        if (l) return c = setTimeout(b, t), m(s);
+      }
+
+      return void 0 === c && (c = setTimeout(b, t)), r;
+    }
+
+    return t = H(t) || 0, D(n) && (d = !!n.leading, a = (l = "maxWait" in n) ? T(H(n.maxWait) || 0, t) : a, f = "trailing" in n ? !!n.trailing : f), g.cancel = function () {
+      void 0 !== c && clearTimeout(c), u = 0, o = s = i = c = void 0;
+    }, g.flush = function () {
+      return void 0 === c ? r : v(S());
+    }, g;
+  },
+      W = function W() {};
+
+  function P(e) {
+    e && e.forEach(function (e) {
+      var t = Array.prototype.slice.call(e.addedNodes),
+          n = Array.prototype.slice.call(e.removedNodes);
+      if (function e(t) {
+        var n = void 0,
+            o = void 0;
+
+        for (n = 0; n < t.length; n += 1) {
+          if ((o = t[n]).dataset && o.dataset.aos) return !0;
+          if (o.children && e(o.children)) return !0;
+        }
+
+        return !1;
+      }(t.concat(n))) return W();
+    });
+  }
+
+  function Y() {
+    return window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+  }
+
+  var _ = {
+    isSupported: function isSupported() {
+      return !!Y();
+    },
+    ready: function ready(e, t) {
+      var n = window.document,
+          o = new (Y())(P);
+      W = t, o.observe(n.documentElement, {
+        childList: !0,
+        subtree: !0,
+        removedNodes: !0
+      });
+    }
+  },
+      B = function B(e, t) {
+    if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
+  },
+      F = function () {
+    function e(e, t) {
+      for (var n = 0; n < t.length; n++) {
+        var o = t[n];
+        o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, o.key, o);
+      }
+    }
+
+    return function (t, n, o) {
+      return n && e(t.prototype, n), o && e(t, o), t;
+    };
+  }(),
+      I = Object.assign || function (e) {
+    for (var t = 1; t < arguments.length; t++) {
+      var n = arguments[t];
+
+      for (var o in n) {
+        Object.prototype.hasOwnProperty.call(n, o) && (e[o] = n[o]);
+      }
+    }
+
+    return e;
+  },
+      K = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i,
+      G = /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i,
+      J = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i,
+      Q = /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i;
+
+  function R() {
+    return navigator.userAgent || navigator.vendor || window.opera || "";
+  }
+
+  var U = new (function () {
+    function e() {
+      B(this, e);
+    }
+
+    return F(e, [{
+      key: "phone",
+      value: function value() {
+        var e = R();
+        return !(!K.test(e) && !G.test(e.substr(0, 4)));
+      }
+    }, {
+      key: "mobile",
+      value: function value() {
+        var e = R();
+        return !(!J.test(e) && !Q.test(e.substr(0, 4)));
+      }
+    }, {
+      key: "tablet",
+      value: function value() {
+        return this.mobile() && !this.phone();
+      }
+    }, {
+      key: "ie11",
+      value: function value() {
+        return "-ms-scroll-limit" in document.documentElement.style && "-ms-ime-align" in document.documentElement.style;
+      }
+    }]), e;
+  }())(),
+      V = function V(e, t) {
+    var n = void 0;
+    return U.ie11() ? (n = document.createEvent("CustomEvent")).initCustomEvent(e, !0, !0, {
+      detail: t
+    }) : n = new CustomEvent(e, {
+      detail: t
+    }), document.dispatchEvent(n);
+  },
+      X = function X(e) {
+    return e.forEach(function (e, t) {
+      return function (e, t) {
+        var n = e.options,
+            o = e.position,
+            i = e.node,
+            a = (e.data, function () {
+          e.animated && (function (e, t) {
+            t && t.forEach(function (t) {
+              return e.classList.remove(t);
+            });
+          }(i, n.animatedClassNames), V("aos:out", i), e.options.id && V("aos:in:" + e.options.id, i), e.animated = !1);
+        });
+        n.mirror && t >= o.out && !n.once ? a() : t >= o["in"] ? e.animated || (function (e, t) {
+          t && t.forEach(function (t) {
+            return e.classList.add(t);
+          });
+        }(i, n.animatedClassNames), V("aos:in", i), e.options.id && V("aos:in:" + e.options.id, i), e.animated = !0) : e.animated && !n.once && a();
+      }(e, window.pageYOffset);
+    });
+  },
+      Z = function Z(e) {
+    for (var t = 0, n = 0; e && !isNaN(e.offsetLeft) && !isNaN(e.offsetTop);) {
+      t += e.offsetLeft - ("BODY" != e.tagName ? e.scrollLeft : 0), n += e.offsetTop - ("BODY" != e.tagName ? e.scrollTop : 0), e = e.offsetParent;
+    }
+
+    return {
+      top: n,
+      left: t
+    };
+  },
+      ee = function ee(e, t, n) {
+    var o = e.getAttribute("data-aos-" + t);
+
+    if (void 0 !== o) {
+      if ("true" === o) return !0;
+      if ("false" === o) return !1;
+    }
+
+    return o || n;
+  },
+      te = function te(e, t) {
+    return e.forEach(function (e, n) {
+      var o = ee(e.node, "mirror", t.mirror),
+          i = ee(e.node, "once", t.once),
+          a = ee(e.node, "id"),
+          r = t.useClassNames && e.node.getAttribute("data-aos"),
+          c = [t.animatedClassName].concat(r ? r.split(" ") : []).filter(function (e) {
+        return "string" == typeof e;
+      });
+      t.initClassName && e.node.classList.add(t.initClassName), e.position = {
+        "in": function (e, t, n) {
+          var o = window.innerHeight,
+              i = ee(e, "anchor"),
+              a = ee(e, "anchor-placement"),
+              r = Number(ee(e, "offset", a ? 0 : t)),
+              c = a || n,
+              s = e;
+          i && document.querySelectorAll(i) && (s = document.querySelectorAll(i)[0]);
+          var u = Z(s).top - o;
+
+          switch (c) {
+            case "top-bottom":
+              break;
+
+            case "center-bottom":
+              u += s.offsetHeight / 2;
+              break;
+
+            case "bottom-bottom":
+              u += s.offsetHeight;
+              break;
+
+            case "top-center":
+              u += o / 2;
+              break;
+
+            case "center-center":
+              u += o / 2 + s.offsetHeight / 2;
+              break;
+
+            case "bottom-center":
+              u += o / 2 + s.offsetHeight;
+              break;
+
+            case "top-top":
+              u += o;
+              break;
+
+            case "bottom-top":
+              u += o + s.offsetHeight;
+              break;
+
+            case "center-top":
+              u += o + s.offsetHeight / 2;
+          }
+
+          return u + r;
+        }(e.node, t.offset, t.anchorPlacement),
+        out: o && function (e, t) {
+          window.innerHeight;
+          var n = ee(e, "anchor"),
+              o = ee(e, "offset", t),
+              i = e;
+          return n && document.querySelectorAll(n) && (i = document.querySelectorAll(n)[0]), Z(i).top + i.offsetHeight - o;
+        }(e.node, t.offset)
+      }, e.options = {
+        once: i,
+        mirror: o,
+        animatedClassNames: c,
+        id: a
+      };
+    }), e;
+  },
+      ne = function ne() {
+    var e = document.querySelectorAll("[data-aos]");
+    return Array.prototype.map.call(e, function (e) {
+      return {
+        node: e
+      };
+    });
+  },
+      oe = [],
+      ie = !1,
+      ae = {
+    offset: 120,
+    delay: 0,
+    easing: "ease",
+    duration: 400,
+    disable: !1,
+    once: !1,
+    mirror: !1,
+    anchorPlacement: "top-bottom",
+    startEvent: "DOMContentLoaded",
+    animatedClassName: "aos-animate",
+    initClassName: "aos-init",
+    useClassNames: !1,
+    disableMutationObserver: !1,
+    throttleDelay: 99,
+    debounceDelay: 50
+  },
+      re = function re() {
+    return document.all && !window.atob;
+  },
+      ce = function ce() {
+    arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (ie = !0), ie && (oe = te(oe, ae), X(oe), window.addEventListener("scroll", y(function () {
+      X(oe, ae.once);
+    }, ae.throttleDelay)));
+  },
+      se = function se() {
+    if (oe = ne(), de(ae.disable) || re()) return ue();
+    ce();
+  },
+      ue = function ue() {
+    oe.forEach(function (e, t) {
+      e.node.removeAttribute("data-aos"), e.node.removeAttribute("data-aos-easing"), e.node.removeAttribute("data-aos-duration"), e.node.removeAttribute("data-aos-delay"), ae.initClassName && e.node.classList.remove(ae.initClassName), ae.animatedClassName && e.node.classList.remove(ae.animatedClassName);
+    });
+  },
+      de = function de(e) {
+    return !0 === e || "mobile" === e && U.mobile() || "phone" === e && U.phone() || "tablet" === e && U.tablet() || "function" == typeof e && !0 === e();
+  };
+
+  return {
+    init: function init(e) {
+      return ae = I(ae, e), oe = ne(), ae.disableMutationObserver || _.isSupported() || (console.info('\n      aos: MutationObserver is not supported on this browser,\n      code mutations observing has been disabled.\n      You may have to call "refreshHard()" by yourself.\n    '), ae.disableMutationObserver = !0), ae.disableMutationObserver || _.ready("[data-aos]", se), de(ae.disable) || re() ? ue() : (document.querySelector("body").setAttribute("data-aos-easing", ae.easing), document.querySelector("body").setAttribute("data-aos-duration", ae.duration), document.querySelector("body").setAttribute("data-aos-delay", ae.delay), -1 === ["DOMContentLoaded", "load"].indexOf(ae.startEvent) ? document.addEventListener(ae.startEvent, function () {
+        ce(!0);
+      }) : window.addEventListener("load", function () {
+        ce(!0);
+      }), "DOMContentLoaded" === ae.startEvent && ["complete", "interactive"].indexOf(document.readyState) > -1 && ce(!0), window.addEventListener("resize", $(ce, ae.debounceDelay, !0)), window.addEventListener("orientationchange", $(ce, ae.debounceDelay, !0)), oe);
+    },
+    refresh: ce,
+    refreshHard: se
+  };
+});
+
+/***/ }),
+
 /***/ "./src/js/util/resize.js":
 /*!*******************************!*\
   !*** ./src/js/util/resize.js ***!
@@ -1615,792 +2041,20 @@ window.addEventListener("resize", function () {
 
 /***/ }),
 
-/***/ "./src/js/util/stickymate.js":
-/*!***********************************!*\
-  !*** ./src/js/util/stickymate.js ***!
-  \***********************************/
-/***/ (() => {
-
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-/*
-
-	stickymate v1.3.7
-	Licensed under the MIT License
-	Copyright 2021 Michael Rafailyk
-	rafailyk@icloud.com
-	https://github.com/rafailyk/stickymate
-	https://www.npmjs.com/package/stickymate
-
-*/
-{
-  // sticky section
-  var sticky = {
-    attribute: 'data-sticky',
-    elements: false,
-    container: 'sticky-container',
-    property: 'position: -webkit-sticky; position: sticky;',
-    // check if browser support position: sticky
-    supported: function supported() {
-      var element = document.createElement('div');
-      element.style.cssText = sticky.property;
-      return element.style.position.match('sticky') ? true : false;
-    },
-    wrap: function wrap() {
-      if (sticky.supported()) {
-        if (!sticky.elements && document.querySelectorAll('[' + sticky.attribute + ']').length) {
-          sticky.elements = document.querySelectorAll('[' + sticky.attribute + ']');
-
-          for (var i = 0; i < sticky.elements.length; i++) {
-            // make sure that we wrap sticky only once
-            if (!sticky.elements[i].parentNode.classList.contains(sticky.container)) {
-              // wrap sticky only if its doesn't have a parent
-              if (sticky.elements[i].parentNode.tagName.toLowerCase() == 'body') {
-                var container = document.createElement('div');
-                container.classList.add(sticky.container);
-                container.style.position = 'relative';
-                sticky.elements[i].parentNode.insertBefore(container, sticky.elements[i]);
-                container.appendChild(sticky.elements[i]);
-              } else {
-                sticky.elements[i].parentNode.classList.add(sticky.container); // change static position to relative to properly get the offsetTop in animation.get
-
-                var parentPosition = window.getComputedStyle(sticky.elements[i].parentNode).getPropertyValue('position');
-
-                if (parentPosition == 'static') {
-                  sticky.elements[i].parentNode.style.position = 'relative';
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    get: function get() {
-      if (sticky.supported()) {
-        element: for (var i = 0; i < sticky.elements.length; i++) {
-          // get params about from/duration of sticky position
-          var params = sticky.elements[i].getAttribute(sticky.attribute); // create correct json string
-
-          params = validation.tojson(params);
-
-          try {
-            params = JSON.parse(params);
-          } catch (e) {
-            continue element;
-          }
-
-          if (!params['from'] || !params['duration']) continue element; // break the params string to separate the numbers inside
-
-          params['from'] = params['from'].split(/(-?\d*\.?\d+)/).filter(function (e) {
-            return e === 0 || e;
-          });
-          params['duration'] = params['duration'].split(/(-?\d*\.?\d+)/).filter(function (e) {
-            return e === 0 || e;
-          });
-          if (!params['from'][0].match(/\d|top|center|bottom/)) continue element;
-          if (!params['duration'][0].match(/\d/)) continue element;
-
-          if (params['from'] == 'top') {
-            params['from'][0] = 0;
-          } else if (params['from'] == 'center') {
-            var vh = -document.documentElement.clientHeight / 2;
-            var eh = -sticky.elements[i].offsetHeight / 2;
-            params['from'][0] = vh - eh;
-          } else if (params['from'] == 'bottom') {
-            var _vh = -document.documentElement.clientHeight;
-
-            var _eh = -sticky.elements[i].offsetHeight;
-
-            params['from'][0] = _vh - _eh;
-          } // convert any type of keys to the pixels
-
-
-          var start_numbers = -params['from'][0] + 0;
-          var start_units = params['from'][1];
-          var start = convert.unitsToPixels(start_numbers, start_units);
-          var end = convert.unitsToPixels(+params['duration'][0], params['duration'][1]); // compose the min-height for the parent container
-          // but get correct offset until the element is not a sticky
-
-          var originalPosition = sticky.elements[i].style.position;
-          sticky.elements[i].style.position = 'static';
-          end += sticky.elements[i].offsetTop;
-          end += sticky.elements[i].offsetHeight;
-          sticky.elements[i].style.position = originalPosition; // apply params back to an elements
-
-          sticky.set(sticky.elements[i], sticky.elements[i].parentElement, start, end);
-        }
-      }
-    },
-    set: function set(element, container, start, end) {
-      if (!element.style.position.match('sticky')) {
-        // actually make the element sticky
-        element.style.cssText = (element.getAttribute('style') || '') + sticky.property;
-      }
-
-      element.style.top = start + 'px';
-      container.style.minHeight = end + 'px';
-    }
-  }; // animation section
-
-  var _animation = {
-    attribute: 'data-animation',
-    elements: false,
-    list: [],
-    status: {
-      before: 'before',
-      active: 'active',
-      after: 'after'
-    },
-    get: function get() {
-      if (!_animation.elements && document.querySelectorAll('[' + _animation.attribute + ']').length) {
-        _animation.elements = document.querySelectorAll('[' + _animation.attribute + ']');
-      }
-
-      _animation.list = [];
-
-      element: for (var i = 0; i < _animation.elements.length; i++) {
-        // get correct top position
-        // if animated element is inside the sticky, its top position moves along scroll
-        var top = correctTop(_animation.elements[i]); // get params about position keys and animated values
-
-        var params = _animation.elements[i].getAttribute(_animation.attribute); // create correct json string
-
-
-        params = validation.tojson(params);
-
-        try {
-          params = JSON.parse(params);
-        } catch (e) {
-          continue element;
-        } // create an array and fill it with verified params
-
-
-        var paramsVerified = [];
-
-        for (var property_name in params) {
-          if (typeof _animation.elements[i].style[property_name] === 'undefined') continue element;
-          if (Object.keys(params[property_name]).length < 2) continue element;
-          var property_value = {};
-          var list = {};
-          list[property_name] = {
-            'position': [],
-            'values': [],
-            'status': null,
-            'locked': false
-          }; // convert keys to pixels and get sorted keys
-
-          keys: for (var key in params[property_name]) {
-            var position = key.split(/(-?\d*\.?\d+)/).filter(function (e) {
-              return e === 0 || e;
-            });
-            if (!position[0].match(/\d/)) continue keys;
-            var numbers = +position[0] + 0;
-            var units = position[1];
-            position = convert.unitsToPixels(numbers, units) + top;
-            position = Math.round(position);
-            property_value[position] = params[property_name][key];
-          } // save keys and values saparately, verify and prepare them
-
-
-          save: for (var _key in property_value) {
-            for (var k = 0; k < list[property_name]['position'].length; k++) {
-              if (+_key === list[property_name]['position'][k][0]) continue save;
-            }
-
-            list[property_name]['position'].push(+_key);
-            list[property_name]['values'].push(property_value[_key]);
-          } // aligning the order of multiple transform values, like scale(...), translate(...) etc
-
-
-          if (property_name == 'transform') {
-            (function () {
-              var _ref;
-
-              // separate subvalues
-              for (var j = 0; j < list[property_name]['values'].length; j++) {
-                list[property_name]['values'][j] = list[property_name]['values'][j].split(/\s(?=[^()]*\()/);
-              } // make the same order of subvalues inside each value
-
-
-              var subvalues = new Map((_ref = []).concat.apply(_ref, _toConsumableArray(list[property_name]['values'])).map(function (item) {
-                return [item.replace(/\(.*\)/, ''), item];
-              }));
-              var valuesOrdered = list[property_name]['values'].map(function (row) {
-                return _toConsumableArray(row.reduce(function (map, item) {
-                  return map.set(item.replace(/\(.*\)/, ''), item);
-                }, new Map(subvalues)).values());
-              }); // join subvalues back to string
-
-              for (var _k = 0; _k < list[property_name]['values'].length; _k++) {
-                list[property_name]['values'][_k] = valuesOrdered[_k].join(' ');
-              }
-            })();
-          } // separate the numbers inside values
-
-
-          for (var l = 0; l < list[property_name]['values'].length; l++) {
-            list[property_name]['values'][l] = list[property_name]['values'][l].split(/(-?\d*\.?\d+)/).filter(function (e) {
-              return e === 0 || e;
-            });
-          } // verify values for missing units types
-
-
-          validation.autocomplete(list[property_name]['values']);
-          paramsVerified.push(list);
-        } // make a global list of animated elements with them positions, values and statuses
-
-
-        _animation.list.push({
-          'element': _animation.elements[i],
-          'params': paramsVerified
-        });
-      }
-    },
-    detect: function detect(i, scroll) {
-      scroll = scroll || window.pageYOffset;
-      var properties = _animation.list[i]['params'];
-
-      for (var j = 0; j < properties.length; j++) {
-        var percent = void 0;
-        var property = void 0;
-        var params = void 0;
-
-        for (var key in properties[j]) {
-          property = key;
-        }
-
-        params = properties[j][property];
-        var position = params['position'];
-        var first = 0;
-        var last = position.length - 1; // the element is before the first position key of its animation, apply changes only once
-
-        if (scroll < position[first] && params['status'] != _animation.status.before) {
-          params['status'] = _animation.status.before;
-          percent = 0;
-
-          _animation.set(_animation.list[i], percent, first, first, j, property);
-        } // the element is after the last position key of its animation, apply changes only once
-        else if (scroll >= position[last] && params['status'] != _animation.status.after) {
-            params['status'] = _animation.status.after;
-            percent = 100;
-
-            _animation.set(_animation.list[i], percent, last, last, j, property);
-          } // the element is between the first and last position keys of its animation
-          else if (scroll >= position[first] && scroll < position[last]) {
-              if (params['status'] != _animation.status.active) {
-                params['status'] = _animation.status.active;
-              } // animation has only two position keys (without intermediate)
-
-
-              if (position.length == 2) {
-                percent = convert.pixelsToPercent(position[first], position[last], scroll);
-
-                _animation.set(_animation.list[i], percent, first, last, j, property);
-              } // animation has intermediate position keys
-              else {
-                  for (var k = 0; k < position.length; k++) {
-                    // looking for keys between which we are now
-                    if (position[k + 1] && scroll >= position[k] && scroll < position[k + 1]) {
-                      // at the first entry in any case, apply the changes
-                      // next time animate only if the values between keys are not identical
-                      if (!params['locked']) {
-                        percent = convert.pixelsToPercent(position[k], position[k + 1], scroll);
-
-                        _animation.set(_animation.list[i], percent, k, k + 1, j, property);
-                      } // compare values between keys, if they are the same - lock
-
-
-                      var start = '';
-                      var end = '';
-
-                      for (var l = 0; l < params['values'][k].length; l++) {
-                        start += params['values'][k][l];
-                        end += params['values'][k + 1][l];
-                      }
-
-                      if (start == end && !params['locked']) {
-                        params['locked'] = true;
-                      } else if (start != end && params['locked']) {
-                        params['locked'] = false;
-                      }
-                    }
-                  }
-                }
-            }
-      }
-    },
-    set: function set(element, percent, start, end, id, property) {
-      start = element['params'][id][property]['values'][start];
-      end = element['params'][id][property]['values'][end]; // collect the value back to string
-
-      var value = '';
-
-      for (var i = 0; i < start.length; i++) {
-        if (percent == 0) {
-          value += start[i];
-        } else if (percent == 100) {
-          value += end[i];
-        } else {
-          if (validation.numbers(start[i])) {
-            value += convert.percentToValue(start[i], end[i], percent);
-          } else {
-            value += start[i];
-          }
-        }
-      } // apply changes to an element
-
-
-      window.requestAnimationFrame(function () {
-        if (property != 'opacity') {
-          element['element'].style['-webkit-' + property] = value;
-        }
-
-        element['element'].style[property] = value;
-      });
-    }
-  }; // classes section
-
-  var _classes = {
-    attribute: 'data-classes',
-    elements: false,
-    list: [],
-    get: function get() {
-      if (!_classes.elements) {
-        _classes.elements = document.querySelectorAll('[' + _classes.attribute + ']');
-      }
-
-      _classes.list = [];
-
-      element: for (var i = 0; i < _classes.elements.length; i++) {
-        // get correct top position
-        // if element is inside the sticky, its top position moves along scroll
-        var top = correctTop(_classes.elements[i]); // get params about position keys and classes in values
-
-        var params = _classes.elements[i].getAttribute(_classes.attribute); // create correct json string
-
-
-        params = validation.tojson(params);
-
-        try {
-          params = JSON.parse(params);
-        } catch (e) {
-          continue element;
-        } // list of keys and final classes for current element
-
-
-        var list = {
-          'element': _classes.elements[i],
-          'params': []
-        }; // save original classlist and write first key
-
-        if (!_classes.elements[i].hasAttribute('data-classlist-original')) {
-          _classes.elements[i].setAttribute('data-classlist-original', _classes.elements[i].className);
-        }
-
-        list['params'].push({
-          'position': 0,
-          'status': false,
-          'classes': _classes.elements[i].getAttribute('data-classlist-original')
-        }); // convert keys to pixels and get sorted keys
-
-        var params_sorted = {};
-
-        keys: for (var key in params) {
-          var position = key.split(/(-?\d*\.?\d+)/).filter(function (e) {
-            return e === 0 || e;
-          });
-          if (!position[0].match(/\d/)) continue keys;
-          var numbers = +position[0] + 0;
-          var units = position[1];
-          position = convert.unitsToPixels(numbers, units) + top;
-          position = Math.round(position);
-          params_sorted[position] = params[key];
-        } // compare classlist of current key with classlist of previous key and rewrite updated current classlist
-
-
-        var counter = 0;
-
-        for (var _key2 in params_sorted) {
-          // compose current key
-          var sublist = {
-            'position': +_key2,
-            'status': false,
-            'classes': list['params'][counter]['classes']
-          }; // add the class only if it was not in the previous key
-
-          if (params_sorted[_key2]['add']) {
-            var addList = params_sorted[_key2]['add'].split(/\,?\s+|\,|\s+/g);
-
-            for (var j = 0; j < addList.length; j++) {
-              if (!sublist['classes'].match(addList[j])) {
-                sublist['classes'] += ' ' + addList[j];
-              }
-            }
-          } // remove the class only if it was in the previous key
-
-
-          if (params_sorted[_key2]['remove']) {
-            var removeList = params_sorted[_key2]['remove'].split(/\,?\s+|\,|\s+/g);
-
-            for (var _j = 0; _j < removeList.length; _j++) {
-              if (sublist['classes'].match(removeList[_j])) {
-                sublist['classes'] = sublist['classes'].replace(removeList[_j], '');
-              }
-            } // remove extra spaces
-
-
-            sublist['classes'] = sublist['classes'].replace(/^\s+|\s+$/, '').replace(/\s{2,}/, ' ');
-          }
-
-          list['params'].push(sublist);
-          counter++;
-        } // add the element, status and keys/classes to the global list
-
-
-        _classes.list.push(list);
-      }
-    },
-    detect: function detect(i, scroll) {
-      scroll = scroll || window.pageYOffset;
-      var element = _classes.list[i]['element'];
-      var params = _classes.list[i]['params'];
-
-      for (var j = 0; j < params.length; j++) {
-        var current = params[j]['position'];
-        var prev = void 0;
-        var next = void 0;
-        if (params[j - 1]) prev = params[j - 1]['position'];
-        if (params[j + 1]) next = params[j + 1]['position'];
-        var last = params[params.length - 1]['position']; // find the matching key
-
-        var ifNotLast = next && scroll >= current && scroll < next && !params[j]['status'];
-        var ifLast = scroll >= current && current == last && !params[j]['status'];
-
-        if (ifNotLast || ifLast) {
-          params[j]['status'] = true; // if there is a need to apply classes only once, need to remove the following two conditions
-
-          if (params[j - 1]) {
-            params[j - 1]['status'] = false;
-          }
-
-          if (params[j + 1]) {
-            params[j + 1]['status'] = false;
-          } // apply classes to an element
-
-
-          _classes.set(element, params[j]['classes']);
-        }
-      }
-    },
-    set: function set(element, list) {
-      window.requestAnimationFrame(function () {
-        element.className = list;
-      });
-    }
-  }; // utilities
-
-  var validation = {
-    numbers: function numbers(data) {
-      if (typeof data == 'number') return true;else if (data.match(/\d/)) return true;else return false;
-    },
-    tojson: function tojson(data) {
-      // wrap in brackets
-      if (data.substring(0, 1) !== '{') data = '{' + data + '}';
-      data = data // protect commas inside round brackets
-      .replace(/,(?=[^()]*\))/g, '__') // remove spaces around base separators
-      .replace(/([\s\r\n]+)?([:\,\{\}])([\s\r\n]+)?/g, '$2') // wrap key and values in double quotes
-      .replace(/(['"])?([a-zA-Z0-9\.\%\-_\(\)\s]+)(['"])?/g, '"$2"') // return commas inside round brackets
-      .replace(/__/g, ',');
-      return data;
-    },
-    autocomplete: function autocomplete(data) {
-      // get the longest string
-      var completed = data[0].slice();
-
-      for (var i = 0; i < data.length; i++) {
-        if (data[i].length > completed.length) {
-          completed = data[i].slice();
-        }
-      } // get the longest substrings except numbers
-
-
-      for (var _i = 0; _i < data.length; _i++) {
-        for (var j = 0; j < completed.length; j++) {
-          if (data[_i][j] && !validation.numbers(data[_i][j])) {
-            if (data[_i][j].length > completed[j].length) {
-              completed[j] = data[_i][j];
-            }
-          }
-        }
-      } // correct the wrong substrings except numbers, in each string
-
-
-      for (var _i2 = 0; _i2 < completed.length; _i2++) {
-        for (var _j2 = 0; _j2 < data.length; _j2++) {
-          if (data[_j2][_i2]) {
-            if (validation.numbers(data[_j2][_i2])) {
-              data[_j2][_i2] = +data[_j2][_i2];
-            } else if (!validation.numbers(data[_j2][_i2]) && data[_j2][_i2] != completed[_i2]) {
-              data[_j2][_i2] = completed[_i2];
-            }
-          } else {
-            if (validation.numbers(completed[_i2])) {
-              data[_j2][_i2] = +completed[_i2];
-            } else {
-              data[_j2][_i2] = completed[_i2];
-            }
-          }
-        }
-      }
-
-      return data;
-    }
-  };
-  var convert = {
-    unitsToPixels: function unitsToPixels(numbers, units) {
-      units = units || 'px';
-
-      if (units.match('px')) {
-        return numbers;
-      } else if (units.match('vh')) {
-        return numbers / 100 * document.documentElement.clientHeight;
-      } else if (units.match('vw')) {
-        return numbers / 100 * document.documentElement.clientWidth;
-      }
-    },
-    pixelsToPercent: function pixelsToPercent(a, b, pixels) {
-      return (pixels - a) * 100 / (b - a);
-    },
-    percentToValue: function percentToValue(a, b, percent) {
-      return percent * (b - a) / 100 + a;
-    }
-  };
-
-  var correctTop = function correctTop(element) {
-    var top = 0;
-
-    while (element && !isNaN(element.offsetTop)) {
-      if (!element.style.position.match('sticky')) {
-        top += element.offsetTop - element.scrollTop;
-      } else {
-        var originalPosition = element.style.position;
-        element.style.position = 'relative';
-        top += element.offsetTop - element.scrollTop;
-        element.style.position = originalPosition;
-      }
-
-      element = element.offsetParent;
-    }
-
-    return top;
-  };
-
-  var resizeEnd = function resizeEnd(params) {
-    var startWidth = document.documentElement.clientWidth;
-    var startHeight = document.documentElement.clientHeight;
-    setTimeout(function () {
-      var endWidth = document.documentElement.clientWidth;
-      var endHeight = document.documentElement.clientHeight;
-
-      if (startWidth == endWidth && startHeight == endHeight) {
-        // end of resize event
-        params();
-      }
-    }, 50);
-  };
-
-  var observation = function observation() {
-    // decide whether to use IntersectionObserver or window scroll event for detecting elements
-    if ('IntersectionObserver' in window) {
-      // observe the visibility of elements in modern browsers
-      var detector = {
-        animation: function animation(i) {
-          _animation.detect(i);
-        },
-        classes: function classes(i) {
-          _classes.detect(i);
-        },
-        list: {
-          animation: {},
-          classes: {}
-        }
-      };
-      var observer = new IntersectionObserver(function (entries, observer) {
-        entries.forEach(function (entry) {
-          // get index and action type (animation/classes) of element to find it in animation/classes list
-          var index = entry.target.animation_index;
-          var action = entry.target.scroll_action; // prepare a personal function wrapper for detecting element in a window scroll event
-
-          if (!detector.list[action][index]) {
-            detector.list[action][index] = function () {
-              detector[action](index);
-            };
-          } // link or unlink this function to scroll event only when the element intersect a viewport
-
-
-          if (entry.isIntersecting) {
-            window.addEventListener('scroll', detector.list[action][index], {
-              passive: true
-            });
-          } else {
-            window.removeEventListener('scroll', detector.list[action][index], {
-              passive: true
-            });
-          }
-        });
-      });
-
-      if (_animation && _animation.elements) {
-        _animation.elements.forEach(function (elem, index) {
-          // check if either parent has an overflow hidden
-          var parent = elem.parentElement;
-
-          while (parent) {
-            var styles = window.getComputedStyle(parent);
-
-            if (styles.getPropertyValue('overflow') == 'hidden' || styles.getPropertyValue('overflow-x') == 'hidden') {
-              // be sure that parent's position is not static
-              var parentPosition = window.getComputedStyle(elem.parentElement).getPropertyValue('position');
-
-              if (parentPosition == 'static') {
-                elem.parentElement.style.position = 'relative';
-              } // add the new element before original element for observing instead of him
-
-
-              var observed = document.createElement('div');
-              observed.style.position = 'absolute';
-              observed.style.pointerEvents = 'none';
-              observed.style.left = '0px';
-              observed.style.top = '0px';
-              observed.style.width = '100%';
-              observed.style.height = '100%';
-              elem.before(observed); // now IntersectionObserver will observe this new element instead of original
-
-              elem = observed;
-              break;
-            }
-
-            parent = parent.parentElement;
-          } // link index from animation/classes list and action type (animation/classes) to observed element
-
-
-          elem.animation_index = index;
-          elem.scroll_action = 'animation';
-          observer.observe(elem);
-        });
-      }
-
-      if (_classes && _classes.elements) {
-        _classes.elements.forEach(function (elem, index) {
-          elem.animation_index = index;
-          elem.scroll_action = 'classes';
-          observer.observe(elem);
-        });
-      }
-    } else {
-      // listen scroll event in older browsers
-      window.addEventListener('scroll', function () {
-        var scroll = window.pageYOffset;
-
-        for (var i = 0; i < _animation.list.length; i++) {
-          _animation.detect(i, scroll);
-        }
-
-        for (var _i3 = 0; _i3 < _classes.list.length; _i3++) {
-          _classes.detect(_i3, scroll);
-        }
-      }, {
-        passive: true
-      });
-    }
-  }; // initialization
-  // get data and set keys and params
-
-
-  var initialization = function initialization() {
-    sticky.wrap();
-    sticky.get();
-
-    _animation.get();
-
-    _classes.get();
-
-    for (var i = 0; i < _animation.list.length; i++) {
-      _animation.detect(i);
-    }
-
-    for (var _i4 = 0; _i4 < _classes.list.length; _i4++) {
-      _classes.detect(_i4);
-    }
-  }; // checking DOM state
-
-
-  if (document.readyState == 'loading') {
-    document.addEventListener('DOMContentLoaded', function () {
-      initialization();
-      observation();
-    });
-    window.onload = initialization;
-  } else if (document.readyState == 'interactive') {
-    initialization();
-    observation();
-    window.onload = initialization;
-  } else if (document.readyState == 'complete') {
-    initialization();
-    observation();
-  } // update lists of element's position after resize
-
-
-  window.addEventListener('resize', function () {
-    resizeEnd(initialization);
-  }, {
-    passive: true
-  });
-}
-
-/***/ }),
-
 /***/ "./src/parts/global/_browser_update.js":
 /*!*********************************************!*\
   !*** ./src/parts/global/_browser_update.js ***!
   \*********************************************/
 /***/ (() => {
 
-var $buoop = {
-  required: {
-    e: -4,
-    f: -3,
-    o: -3,
-    s: -1,
-    c: -3
-  },
-  insecure: true,
-  api: 2020.04
-};
-
-function $buo_f() {
-  var e = document.createElement("script");
-  e.src = "//browser-update.org/update.min.js";
-  document.body.appendChild(e);
-}
-
-;
-
-try {
-  document.addEventListener("DOMContentLoaded", $buo_f, false);
-} catch (e) {
-  window.attachEvent("onload", $buo_f);
-}
+// var $buoop = {required:{e:-4,f:-3,o:-3,s:-1,c:-3},insecure:true,api:2020.04 };
+// function $buo_f(){
+//    var e = document.createElement("script");
+//    e.src = "//browser-update.org/update.min.js";
+//    document.body.appendChild(e);
+// };
+// try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+// catch(e){window.attachEvent("onload", $buo_f)}
 
 /***/ }),
 
@@ -3955,6 +3609,18 @@ module.exports = JSON.parse('{"name":"Lifted","slug":"lifted","server":"lifted.l
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -3991,8 +3657,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_core_icons__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/core/icons */ "./src/js/core/icons.js");
 /* harmony import */ var _js_core_icons__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_js_core_icons__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _js_core_responsive_iframe__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./js/core/responsive-iframe */ "./src/js/core/responsive-iframe.js");
-/* harmony import */ var _js_util_stickymate_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./js/util/stickymate.js */ "./src/js/util/stickymate.js");
-/* harmony import */ var _js_util_stickymate_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_js_util_stickymate_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _js_util_plugins_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./js/util/plugins.js */ "./src/js/util/plugins.js");
+/* harmony import */ var _js_util_plugins_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_js_util_plugins_js__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _js_util_lazyloading_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./js/util/lazyloading.js */ "./src/js/util/lazyloading.js");
 /* harmony import */ var _js_util_headroom_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./js/util/headroom.js */ "./src/js/util/headroom.js");
 /* harmony import */ var _js_util_resize_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./js/util/resize.js */ "./src/js/util/resize.js");

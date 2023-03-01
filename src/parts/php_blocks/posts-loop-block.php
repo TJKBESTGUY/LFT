@@ -34,12 +34,7 @@ $the_query->the_post();
 <div class="basic-card__inner">
 
   <div class="basic-card__img">
-    <!-- <div class="image-aspect-box"><div class="image-aspect-box_inner ">
-    <picture> <source media="(min-width:650px)" data-srcset="https://ebikerental.fi/wp-content/uploads/2022/04/3.jpg" srcset="https://ebikerental.fi/wp-content/uploads/2022/04/3.jpg"> <source media="(min-width:465px)" data-srcset="https://ebikerental.fi/wp-content/uploads/2022/04/3.jpg" srcset="https://ebikerental.fi/wp-content/uploads/2022/04/3.jpg">
-      <img class="lazy-anim lazyloaded" data-src="https://ebikerental.fi/wp-content/uploads/2022/04/3.jpg" alt="" src="https://ebikerental.fi/wp-content/uploads/2022/04/3.jpg">
-    </picture>
-  </div>
-</div> -->
+
 </div>
 
 <div class="basic-card__header">

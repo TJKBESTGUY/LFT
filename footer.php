@@ -60,28 +60,69 @@
 
  <?php } else { ?>
    <div class="cell footer__nav-links">
-     <!-- <?php
-  if( have_rows('link_groups', "option") ):
-    while ( have_rows("link_groups" , "option") ) : the_row();
-?>
-  <div class="link-group">
-    <p class="footer-group-header"><?php the_sub_field('group_header'); ?></p>
-    <ul>
-      <?php
-        if( have_rows('links') ):
-          while ( have_rows('links') ) : the_row();
-      ?>
-        <li><?php the_sub_field('link'); ?></li>
-      <?php
-          endwhile;
-        endif;
-      ?>
-    </ul>
-  </div>
-<?php
-    endwhile;
-  endif;
-?> -->
+
+
+     <?php if( have_rows('navigation_group', 'option') ): ?>
+
+
+
+         <?php while( have_rows('navigation_group', 'option') ) : the_row(); ?>
+
+
+
+
+
+           <div class="link-group">
+
+               <p class="footer-group-header"><?php the_sub_field('group_name'); ?> </p>
+
+
+
+               <ul class="-ul">
+                   <?php while( have_rows('links', 'option') ) : the_row(); ?>
+                     <?php $link = get_sub_field('nav_link'); ?>
+                     <?php $link_url = $link['url'];
+                     $link_title = $link['title']; ?>
+                     <li class="-li">
+
+                     <a class="" href="<?php echo $link_url; ?>"> <span><?php echo $link_title; ?></span>
+                  </a>
+                     </li>
+                       <?php endwhile; ?>
+
+
+                       <?php $link_m = get_sub_field('group_main_link'); ?>
+                       <?php
+                       if( $link_m ):
+
+
+                       $link_m_url = $link_m['url'];
+                       $link_m_title = $link_m['title'];
+
+                       ?>
+
+                       <li class="-li">
+
+                             <a class="" href="<?php echo $link_m_url; ?>"> <span><?php echo   $link_m_title; ?></span>
+                          </a>
+
+
+                       </li>
+                       <?php endif; ?>
+
+
+
+
+               </ul>
+
+           </div>
+
+               <?php endwhile; ?>
+
+             <?php endif; ?>
+
+
+
      <div class="link-group">
        <p class="footer-group-header">Mitä teemme</p>
     <ul>
@@ -188,21 +229,22 @@ suoraan sähköpostiisi joka kuukausi.</p>
         <div class="basic-content__inner" style="max-width:;">
 
 
-<h2 class="has-text-align-center has-text-color" id="kiinnostuitko" style="color:#04aef2">Kiinnostuitko?</h2>
+
+<h3 class="has-text-align-center has-text-color" id="kiinnostuitko" style="color:#04aef2"><strong>Kiinnostuitko?</strong></h3>
 
 
 
 <p class="has-text-align-center">Täytä lomake, niin olemme sinuun yhteydessä jo tänään. Halutessasi voit olla meihin suoraan yhteydessä myös puhelimitse:</p>
 
 
-<div class="wp-block-lazyblock-contact-avatart lazyblock-contact-avatart-Z1dmiqC"><div class="module--contact-avatar -y-pad--small">
+<div class="lazyblock-contact-avatart-Z1dmiqC wp-block-lazyblock-contact-avatart"><div class="module--contact-avatar -y-pad--small">
     <div class="contact-avatar__image">
       <div class="placeholder-img">
-        <img decoding="async" class="" data-src=" http://lifted.local/wp-content/uploads/2022/12/Jukka-Joutsiniemi-2-scaled-1-15x15.jpeg" alt="" src=" http://lifted.local/wp-content/uploads/2022/12/Jukka-Joutsiniemi-2-scaled-1-15x15.jpeg">
+        <img decoding="async" class="" data-src=" /wp-content/uploads/2022/12/Jukka-Joutsiniemi-2-scaled-1-e1676296744902-15x15.jpeg" alt="" src=" /wp-content/uploads/2022/12/Jukka-Joutsiniemi-2-scaled-1-e1676296744902-15x15.jpeg">
 
        </div>
        <div class="lazy-img">
-        <img decoding="async" class="lazyanim ls-is-cached lazyloaded" data-src=" http://lifted.local/wp-content/uploads/2022/12/Jukka-Joutsiniemi-2-scaled-1-2000x2000.jpeg" alt="" src=" http://lifted.local/wp-content/uploads/2022/12/Jukka-Joutsiniemi-2-scaled-1-2000x2000.jpeg">
+        <img decoding="async" class="lazyanim ls-is-cached lazyloaded" data-src=" /wp-content/uploads/2022/12/Jukka-Joutsiniemi-2-scaled-1-2000x2000.jpeg" alt="" src=" /wp-content/uploads/2022/12/Jukka-Joutsiniemi-2-scaled-1-2000x2000.jpeg">
 </div>
 </div>
 <div class="contact-avatar__content">
@@ -218,10 +260,14 @@ suoraan sähköpostiisi joka kuukausi.</p>
 
 <p class="has-text-align-center">Tai varaa aika suoraan kalenteristani<br>ilmaiselle sparraukselle tästä</p>
 
+<div class="pipedriveWebForms" data-pd-webforms="https://webforms.pipedrive.com/f/1wWpPVVzF8pMgU4P2cz2rhDsaa8gClC36zWzFhnx43hG6NKNaV4CCDtpXthpcjsWL"><script src="https://webforms.pipedrive.com/f/loader"></script></div>
+</div>
 
 </div>
 
-</div></div>
+
+    </div>
+
 
     </div>
       </div>

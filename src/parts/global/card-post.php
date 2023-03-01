@@ -19,8 +19,13 @@
 
 </div>
 <div class="lazy-img">
+  <picture>
 
-<img class="lazyanim lazyload" data-src="<?php echo get_the_post_thumbnail_url($post_id, "content-image" ); ?>" alt="" src="">
+    <source media="(min-width:450px)" data-srcset="<?php echo get_the_post_thumbnail_url($post_id, "content-image--mobile" ); ?>" srcset="">
+     <source media="(min-width:0px)" data-srcset="<?php echo get_the_post_thumbnail_url($post_id, "content-image--medium" ); ?>" srcset="">
+       <img class="lazy-anim lazyload" data-src='<?php echo get_the_post_thumbnail_url($post_id, "content-image--medium" ); ?>' src='<?php echo get_the_post_thumbnail_url($post_id, "eq-image" ); ?> '>
+     </picture>
+
       </div>
 
     </div>
@@ -67,7 +72,7 @@ foreach( $categories as $category ) {
       </div>
 
       <div class="-footer">
-        <span class="-date"><?php echo the_date(); ?></span>
+        <span class="-date"><?php echo get_the_date("j.n.Y") ?></span>
       </div>
 
     </div>

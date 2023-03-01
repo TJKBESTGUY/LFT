@@ -35,9 +35,16 @@
              <?php
             if ( isset( $image['url'] ) ) : ?>
               <div class="person-card__image">
-                  <img decoding="async" class="lazy-anim lazyload" data-src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                <picture>
+
+                  <source media="(min-width:450px)" data-srcset="<?php echo wp_get_attachment_image_url( $image['id'], 'content-image--mobile'); ?>" srcset="">
+                   <source media="(min-width:0px)" data-srcset="<?php echo wp_get_attachment_image_url( $image['id'], 'content-image--avatar'); ?>" srcset="">
+                     <img class="lazy-anim lazyload" data-src='<?php echo wp_get_attachment_image_url( $image['id'], 'content-image--mobile'); ?>' src='<?php echo wp_get_attachment_image_url( $image['id'], 'eq-image'); ?> '>
+                   </picture>
                         </div>
             <?php endif; ?>
+
+
 
 
           <div class="person-card__content">

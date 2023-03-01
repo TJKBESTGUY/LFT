@@ -17,7 +17,12 @@
 <?php
 if ( isset( $image['url'] ) ) : ?>
 <div class="-image">
-<img decoding="async" class="lazy-anim lazyload" data-src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+  <picture>
+
+    <source media="(min-width:450px)" data-srcset="<?php echo wp_get_attachment_image_url( $image['id'], 'content-image--medium'); ?>" srcset="">
+     <source media="(min-width:0px)" data-srcset="<?php echo wp_get_attachment_image_url( $image['id'], 'content-image--mobile'); ?>" srcset="">
+       <img class="lazy-anim lazyload" data-src='<?php echo wp_get_attachment_image_url( $image['id'], 'content-image--medium'); ?>' src='<?php echo wp_get_attachment_image_url( $image['id'], 'eq-image'); ?> '>
+     </picture>
 </div>
 
 <?php endif; ?>

@@ -83,7 +83,9 @@ function lifted_setup() {
 
 	add_image_size( 'content-image', 2000, 2000 );
 	add_image_size( 'eq-image', 15, 15 );
-
+	add_image_size( 'content-image--medium', 1450, 1450 );
+		add_image_size( 'content-image--mobile', 800, 800 );
+				add_image_size( 'content-image--avatar', 160, 160 );
 
 	add_filter( 'intermediate_image_sizes_advanced', 'remove_default_images' );
 
@@ -213,12 +215,12 @@ function lifted_scripts() {
 
 	// Add google fonts
 	if ( ign_get_config( 'google_fonts' ) ) {
-		wp_enqueue_style( 'lifted-fonts', ign_google_fonts_url(), array(), wp_get_theme()->get( 'Version' ) );
+		// wp_enqueue_style( 'lifted-fonts', ign_google_fonts_url(), array(), wp_get_theme()->get( 'Version' ) );
 	}
 
 
 	// Theme stylesheet. Will get this stylesheet or a child themes stylesheet.
-	wp_enqueue_style( 'lifted-style', get_stylesheet_uri(), '', wp_get_theme()->get( 'Version' ) );
+	// wp_enqueue_style( 'lifted-style', get_stylesheet_uri(), '', wp_get_theme()->get( 'Version' ) );
 
 	//Sass compiles styles. Will get child's theme version if found instead. Child theme should import with sass.
 	wp_enqueue_style( 'lifted-sass-styles', get_theme_file_uri( '/dist/frontEnd.css' ), '', wp_get_theme()->get( 'Version' ) );
@@ -226,7 +228,7 @@ function lifted_scripts() {
 	wp_enqueue_script( 'iconify', 'https://code.iconify.design/1/1.0.6/iconify.min.js' );
 
 	//ie11 js polyfills
-	wp_enqueue_script( 'polyfill', 'https://polyfill.io/v3/polyfill.min.js?flags=gated&features=AbortController%2Cdefault%2CNodeList.prototype.forEach%2CEvent%2Csmoothscroll' );
+	// wp_enqueue_script( 'polyfill', 'https://polyfill.io/v3/polyfill.min.js?flags=gated&features=AbortController%2Cdefault%2CNodeList.prototype.forEach%2CEvent%2Csmoothscroll' );
 
 	//jQuery 3.0 replaces WP jquery
 	wp_deregister_script( 'jquery-core' );
@@ -238,7 +240,7 @@ function lifted_scripts() {
 	//any javascript file in assets/js that ends with custom.js will be lumped into this file.
 	wp_enqueue_script( 'lifted-custom-js', get_template_directory_uri() . '/dist/frontEnd_bundle.js', array(
 		'jquery',
-		'polyfill'
+		// 'polyfill'
 	),
 		wp_get_theme()->get( 'Version' ), true );
 
@@ -491,9 +493,9 @@ add_action( 'admin_head', 'ea_disable_classic_editor' );
 if( function_exists('acf_add_options_page') ) {
 
 	acf_add_options_page(array(
-		'page_title' 	=> 'Footer info',
-		'menu_title'	=> 'Footer info',
-		'menu_slug' 	=> 'footer-info',
+		'page_title' 	=> 'Navigation',
+		'menu_title'	=> 'Navigation',
+		'menu_slug' 	=> 'navigation-info',
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false
 	));
@@ -604,8 +606,133 @@ add_filter( 'lazyblock/asiantuntijat-item-loop/frontend_callback', 'asiantuntija
 add_filter( 'lazyblock/blog-item-loop/frontend_callback', 'blog_loop_output', 10, 2 );
 add_filter( 'lazyblock/asiakas-item-loop/frontend_callback', 'asiakas_loop_output', 10, 2 );
 add_filter( 'lazyblock/select-item-loop/frontend_callback', 'select_loop_output', 10, 2 );
+add_filter( 'lazyblock/lifcast-item-loop/frontend_callback', 'liftcast_loop_output', 10, 2 );
+
+if ( ! function_exists( 'liftcast_loop_output' ) ) :
+    /**
+     * Test Render Callback
+     *
+     * @param string $output - block output.
+     * @param array  $attributes - block attributes.
+     */
+    function liftcast_loop_output( $output, $attributes ) {
+        ob_start();
+        ?>
+
+				<section class="section--basic U-sec-pad section-theme--color section-width--normal section--home-lifcast">
+				        <div class="section-inner-container U_container U_base-pad" style="">
+				            <div class="section-bg-container" style="background:">
+
+				      <div class="wp-block-lazyblock-split-content-flex lazyblock-split-content-flex-Z1yJAvO">
+				        <div class="module--split-content  -x-pad module--lifcast-preview">
+				        <h1 class="base-text tag " style="">
+				              Liftcast
+				                </h1>
+				            <h3 class="" style="max-width:900px;">Liftcast on podcast, jossa nostamme sinut ja organisaatiosi seuraavalle tasolle.</h3>
+				            <div class="content-spacer--small">
+				        </div>
+				        <div class="flx-container ">
 
 
+
+
+
+
+
+				        <div class="cell split-content__img cat-image-cell">
+
+				             <div class="lazy-img-aspect">
+
+				             <img decoding="async" class="lazyanim  lazyloaded" data-src=" /wp-content/uploads/2022/11/liftcast-1.jpg" alt="" src=" /wp-content/uploads/2022/11/liftcast-1.jpg">
+				      </div>
+				      </div>
+
+
+
+
+
+				           <div class="cell mosaic-split__txt split-content__txt cast-preview">
+				        <div class="cell_txt-content">
+
+									<?php $args = array(
+									        'post_type' => 'post',
+									        'post_status' => 'publish',
+													  'category_name' => 'podcast',
+									        'posts_per_page'   => 4,
+
+
+									    );
+
+									    $loop = new WP_Query( $args );
+
+									    while ( $loop->have_posts() ) : $loop->the_post();
+									      ?>
+
+												<div class="cast-play-cell" style="position:relative">
+														<a href="<?php the_permalink(); ?>" style="width:100%;height:100%;position:absolute;z-index:3;">
+																			</a>
+													<img class="lazyload lazyanim" data-src="https://lifted.fi/wp-content/uploads/2022/11/liftcast_1500x1500-1-768x768.jpg" alt="">
+													<div class="content">
+														<div class="-header">
+																<a href="<?php the_permalink(); ?>">Lue jaksoesittely</a>
+														</div>
+													<span class="-pod-number"> <span class="pod-number__inner"></span><?php the_field('pod_number'); ?></span>
+													<div class="pod-meta">
+									<h5 class=""><?php echo get_the_title(); ?>
+												<?php if( get_field('extra_meta') ): ?>
+													- <?php the_field('extra_meta'); ?>
+															<?php endif; ?>
+									</h5>
+
+													</div>
+
+													</div>
+
+												</div>
+
+									        <?php
+									    endwhile;
+
+									    wp_reset_postdata();  ?>
+
+				      </div>
+				      </div>
+
+
+				      </div>
+
+				      <div class="cast-play-footer">
+				        <div class="capsule-wrap " style="">
+				    <a class="btn--basic btn--basic--small btn--dark" style="" href="">Spotify</a>
+				      <a class="btn--basic btn--basic--small btn--dark" style="" href="">Podplay</a>
+				            <a class="btn--basic btn--basic--small btn--dark" style="" href="">Apple Podcasts</a>
+
+				        <a class="btn--basic btn--dark" style="background:#04aef2;" href="">Lifcast</a>
+				        <a class="btn--basic btn--dark" style="background:#04aef2;" href="">Kaikki jaksot</a>
+				    </div>
+				      </div>
+
+
+				      </div>
+
+
+
+				      </div>
+
+				      <div class="content-spacer--small">
+				</div>
+
+
+				      </div>
+				      </div>
+
+				      </section>
+
+
+        <?php
+        return ob_get_clean();
+    }
+endif;
 
 if ( ! function_exists( 'select_loop_output' ) ) :
     /**

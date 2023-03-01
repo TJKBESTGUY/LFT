@@ -56,8 +56,10 @@
 </div>
 </div>
 
-<div class="swiper-button-prev" style="display:none" x-ref="prev"></div>
-    <div class="swiper-button-next" style="display:none" x-ref="next"></div>
+<div class="swiper-nav--bottom swiper-nav--right ">
+  <div class="swiper-button-prev" style="" x-ref="prev"></div>
+      <div class="swiper-button-next" style="" x-ref="next"></div>
+</div>
 
 
 </div>
