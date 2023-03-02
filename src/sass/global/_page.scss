@@ -21,6 +21,8 @@ body {
 
 .site-container{
       overflow: hidden;
+      position: relative;
+      display: block;
 }
 
 
@@ -1827,5 +1829,6 @@ padding: 0 !important;
 
 
 .scrolling-image .module--full-image {
-  min-width: 1600px;
+  min-width: 1200px;
+  padding: 20px 0;
 }

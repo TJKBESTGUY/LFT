@@ -284,6 +284,11 @@ transition: 0.25s;
 // SINGLE POST ///////
 
 
+
+
+
+
+
 ///BACK BUTTON ON block
 
 .btn--go-back {
@@ -476,4 +481,9 @@ padding-top: 40px;
   .wp-block-image {
     padding: 0;
   }
+}
+
+
+.wp-block-embed iframe {
+  width: 100%;
 }

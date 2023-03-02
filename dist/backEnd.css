@@ -2301,6 +2301,8 @@ div .editor-styles-wrapper .acf-block-preview .site-content {
 }
 div .editor-styles-wrapper .acf-block-preview .site-container {
   overflow: hidden;
+  position: relative;
+  display: block;
 }
 div .editor-styles-wrapper .acf-block-preview .site-logo {
   font-size: 3.3rem;
@@ -3654,7 +3656,8 @@ div .editor-styles-wrapper .acf-block-preview .scrolling-image .U_container {
   padding: 0 !important;
 }
 div .editor-styles-wrapper .acf-block-preview .scrolling-image .module--full-image {
-  min-width: 1600px;
+  min-width: 1200px;
+  padding: 20px 0;
 }
 div .editor-styles-wrapper .acf-block-preview .background-image {
   position: absolute;

@@ -2101,6 +2101,8 @@ body {
 
 .site-container {
   overflow: hidden;
+  position: relative;
+  display: block;
 }
 
 /*--------------------------------------------------------------
@@ -3628,7 +3630,8 @@ img.zoom-img {
 }
 
 .scrolling-image .module--full-image {
-  min-width: 1600px;
+  min-width: 1200px;
+  padding: 20px 0;
 }
 
 /*--------------------------------------------------------------
@@ -5514,6 +5517,10 @@ ul.article-feed__content li {
 
 .wp-block-column .wp-block-image {
   padding: 0;
+}
+
+.wp-block-embed iframe {
+  width: 100%;
 }
 
 /**
