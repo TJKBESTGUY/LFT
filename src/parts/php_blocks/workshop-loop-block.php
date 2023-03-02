@@ -203,14 +203,7 @@
 
 
 
-    <div class="workshop-group__heading aside-heading">
 
-
-
-    <h3 class="f--bold"><?php echo  $valmennukset->name; ?></h3>
-    <?php   echo '<p class="group-desciption">' . $valmennukset->description. '</p>'; ?>
-
-    </div>
 
     <div  class="workshop-group__items aside-content">
 
@@ -333,14 +326,7 @@ if ($query->have_posts()) :
 
 
 
-<div class="workshop-group__heading aside-heading">
 
-
-
-<h3 class="f--bold"><?php echo  $valmennukset->name; ?></h3>
-<?php   echo '<p class="group-desciption">' . $valmennukset->description. '</p>'; ?>
-
-</div>
 
 <div  class="workshop-group__items aside-content">
 

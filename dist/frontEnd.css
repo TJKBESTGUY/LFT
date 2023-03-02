@@ -1634,12 +1634,6 @@ h5, .h5 {
 h1, h2, h3, h4, .single-post--legacy h1 {
   margin-bottom: 0.75em;
 }
-@media screen and (max-width: 1200px) {
-  h1, h2, h3, h4, .single-post--legacy h1 {
-    margin-bottom: 0.5em;
-  }
-}
-
 .single-post--legacy h1, .single-post--legacy h2, .single-post--legacy h3, .single-post--legacy h4 {
   margin-top: 1.25em;
   font-size: 4rem;
