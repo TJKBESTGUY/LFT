@@ -56,10 +56,11 @@
 </div>
 </div>
 
-<div class="swiper-nav--bottom swiper-nav--right ">
+<div class="swiper-nav--bottom swiper-nav--right-absolute ">
   <div class="swiper-button-prev" style="" x-ref="prev"></div>
       <div class="swiper-button-next" style="" x-ref="next"></div>
-</div>
 
+</div>
+  <div class="capsule-wrap " style="margin-top:0;"> <a class="btn--basic btn--dark " style=" " href="/artikkelit">Kaikki artikkelit</a></div>
 
 </div>

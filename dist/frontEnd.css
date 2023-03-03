@@ -7590,7 +7590,7 @@ q {
   justify-content: flex-end;
   justify-content: flex-end;
   position: absolute;
-  right: 0;
+  right: 14px;
   bottom: 24px;
 }
 .swiper-nav--right-absolute .swiper-button-prev {
