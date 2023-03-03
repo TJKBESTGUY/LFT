@@ -788,13 +788,16 @@ function initSwiper() {
 
 window.runModal = function (event) {
   event.preventDefault();
-  var the_url = event.currentTarget.href;
   console.log("modal run");
   event.currentTarget.classList.add("prevent-click");
   var targets_area = event.target.getAttribute('data-modal');
   var tax_elems = document.querySelectorAll('.modal-item');
   var root = document.getElementsByTagName("HTML")[0];
   root.classList.add("S-has--modal");
+  var the_url = targets_area;
+  var stateObj;
+  var pjax_url = the_url;
+  window.history.pushState(stateObj, "", the_url);
   document.querySelector(".modal-smoke").classList.remove("S-hidden");
   document.querySelector(".modal").classList.remove("S-hidden");
   tax_elems.forEach(function (elem) {
@@ -834,11 +837,12 @@ window.hideModal = function (e) {
   document.querySelector(".modal-contact-form").classList.add("S-hidden");
   document.querySelector(".modal-contact-form").removeAttribute("style");
   document.querySelector(".modal-smoke").classList.add("S-hidden");
-  document.querySelector(".modal").classList.add("S-hidden"); // document.querySelector(".site-container").classList.remove("-swap-layer");
-  // document.querySelector(".mobile-nav-trigger-box").classList.remove("S-hidden");
-
-  console.log("toggle form");
+  document.querySelector(".modal").classList.add("S-hidden");
   document.querySelector(".modal").scroll(0, 0);
+  var the_url = page_url;
+  var stateObj;
+  var pjax_url = the_url;
+  window.history.pushState(stateObj, "", the_url);
 };
 
 window.runTaxFilters = function (e) {

@@ -559,3 +559,23 @@ border-top: solid 1px #d7d7d7;
 			}
 
 }
+
+
+///////FOCUS/////
+.S-detected--tab {
+
+
+
+	a:focus-visible {
+	    outline: -webkit-focus-ring-color auto 1px;
+outline-offset: 4px;
+	    transition: box-shadow 0.2s ease 0s !important;
+	    box-shadow: rgb(255 255 255 / 80%) 0px 0px 0px 2px, rgb(17 169 238) 0px 0px 0px 4px !important;
+	}
+	button:focus-visible {
+		outline: -webkit-focus-ring-color auto 1px;
+outline-offset: 4px;
+		transition: box-shadow 0.2s ease 0s !important;
+		box-shadow: rgb(255 255 255 / 80%) 0px 0px 0px 2px, rgb(17 169 238) 0px 0px 0px 4px !important;
+	}
+}

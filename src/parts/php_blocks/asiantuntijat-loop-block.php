@@ -73,7 +73,7 @@
              ?>
             </div>
             <div class="capsule-wrap ">
-              <a class="btn--basic btn--basic--small btn--dark" style=" " href="" @click="runModal" data-modal="<?php echo get_permalink(); ?>">Tutustu</a>
+              <a class="btn--basic btn--basic--small btn--dark" style=" " href="<?php echo get_permalink(); ?>" @click="runModal" data-modal="<?php echo get_permalink(); ?>">Tutustu</a>
             </div>
             <div class="modal-contact-info--card">
 

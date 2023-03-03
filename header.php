@@ -48,7 +48,7 @@
   <!-- <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script> -->
 
 
-
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
 <script defer src="https://unpkg.com/swiper@8.4.7/swiper-bundle.min.js"></script>
  <script defer src="https://unpkg.com/alpinejs@3.11.1/dist/cdn.min.js"></script>
 
@@ -70,7 +70,7 @@
 
 <script type="text/javascript">
 const home_url = "<?php echo home_url() ?>"; // "A string here"
-
+const page_url = "<?php echo get_permalink(); ?>"; // "A string here"
 console.log(home_url);
 
 </script>
@@ -137,8 +137,8 @@ lang-switch--fi-active
 
 
 
-      <div class="dropdown-nav" x-data="{ dropdown_open: false }" :class="dropdown_open && 'S-active--dropdown'"  @mouseleave="dropdown_open = false; $store.dropdown = false">
-          <button class="-nav-link Target--palvelut" href="/" @mouseenter="dropdown_open = true; $store.dropdown = true"><?php the_sub_field('group_name'); ?></button>
+      <div class="dropdown-nav" x-data="{ dropdown_open: false }" :class="dropdown_open && 'S-active--dropdown'"  @mouseleave="dropdown_open = false; $store.dropdown = false" x-trap="dropdown_open">
+          <button class="-nav-link Target--palvelut" href="/" @mouseenter="dropdown_open = true; $store.dropdown = true" @keydown.enter="dropdown_open = ! dropdown_open; $store.dropdown = true"><?php the_sub_field('group_name'); ?></button>
           <div class="dropdown-nav__wrap" @mouseleave="dropdown_open = false; $store.dropdown = false">
             <div class="dropdown-nav__content">
             <div class="flx-container">
@@ -367,40 +367,91 @@ tuottavuuden nostamiseen keskittyviä henkilöstön kehittämisen palveluita tie
 
                   </div>
 
-                  <div class="dropdown-nav" x-data="{ dropdown_open: false }" :class="dropdown_open && 'S-active--dropdown'"  @mouseleave="dropdown_open = false">
-                      <button class="-nav-link Target--palvelut" href="/" @mouseenter="">Ajankohtaista</button>
+                  <div class="dropdown-nav dropdown-nav--ajankohtaista" x-data="{ dropdown_open: false }" :class="dropdown_open && 'S-active--dropdown'"  @mouseleave="dropdown_open = false">
+                      <button class="-nav-link" href="/" @mouseenter="dropdown_open = true; $store.dropdown = true" @keydown.enter="dropdown_open = ! dropdown_open; $store.dropdown = true">Ajankohtaista</button>
                       <div class="dropdown-nav__wrap" @mouseleave="dropdown_open = false">
                         <div class="dropdown-nav__content">
                         <div class="flx-container">
-                          <div class="dropdown-nav__cell -left">
-                            <h3 class="f--bold">Ajankohtaista</h3>
-                            <p>Tarjoamme vaikuttavia hyvinvoinnin ja
-            Itsensä johtaminen
-            Etätyö- ja hybridityö
-            tuottavuuden nostamiseen keskittyviä henkilöstön kehittämisen palveluita tietotyöorganisaatioille.</p>
 
-
-                          </div>
                           <div class="dropdown-nav__cell -right">
                             <ul class="-ul">
-                              <li class="-li">
-                                <a class="-nav-link Target-- -main-link" href="/"> <span>Asiantuntijat</span>
-                              <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
+
+                              <?php $args = array(
+                                      'post_type' => 'post',
+                                      'post_status' => 'publish',
+                                        'category_name' => 'podcast',
+                                      'posts_per_page'   => 1,
 
 
-                              </li>
-                              <li class="-li">
-                                <a class="-nav-link Target-- -main-link" href="/"> <span>Asiantuntijat</span>
-                              <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
+                                  );
 
-                              </li>
-                              <li class="-li">
+                                  $loop = new WP_Query( $args );
 
-                                    <a class="-nav-link Target-- -main-link" href="/"> <span>Asiantuntijat</span>
-                                  <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
-                                </div>
+                                  while ( $loop->have_posts() ) : $loop->the_post();
+                                    ?>
 
-                              </li>
+                                    <li class="-li">
+                                        <span class="editor-tag f--bold" style="font-size: 1.4rem;color:">Lifcast</span>
+                                      <a class="-nav-link Target-- -main-link" href="<?php the_permalink(); ?>"> <span><?php echo get_the_title(); ?>	<?php if( get_field('extra_meta') ): ?>
+                													- <?php the_field('extra_meta'); ?><?php endif; ?></span>
+                                  </a>
+
+                                      <?php
+                                  endwhile;
+
+                                  wp_reset_postdata();  ?>
+
+                                  <?php $args = array(
+                                          'post_type' => 'post',
+                                          'post_status' => 'publish',
+                                            'category_name' => 'asiakastarinat',
+                                          'posts_per_page'   => 1,
+
+
+                                      );
+
+                                      $loop = new WP_Query( $args );
+
+                                      while ( $loop->have_posts() ) : $loop->the_post();
+                                        ?>
+
+                                        <li class="-li">
+                                            <span class="editor-tag f--bold" style="font-size: 1.4rem;color:">Asiakastarinat</span>
+                                          <a class="-nav-link Target-- -main-link" href="<?php the_permalink(); ?>"> <span><?php if( get_field('extra_meta') ): ?>
+                                           <?php the_field('extra_meta'); ?> - <?php endif; ?><?php echo get_the_title(); ?></span>
+                                      </a>
+
+                                          <?php
+                                      endwhile;
+
+                                      wp_reset_postdata();  ?>
+
+                                      <?php $args = array(
+                                              'post_type' => 'valmennukset',
+                                              'post_status' => 'publish',
+
+                                              'posts_per_page'   => 1,
+
+
+                                          );
+
+                                          $loop = new WP_Query( $args );
+
+                                          while ( $loop->have_posts() ) : $loop->the_post();
+                                            ?>
+
+                                            <li class="-li">
+                                                <span class="editor-tag f--bold" style="font-size: 1.4rem;color:">Luennot</span>
+                                              <a class="-nav-link Target-- -main-link" href="<?php the_permalink(); ?>"> <span><?php if( get_field('extra_meta') ): ?>
+                                               <?php the_field('extra_meta'); ?> - <?php endif; ?><?php echo get_the_title(); ?></span>
+                                          </a>
+
+                                              <?php
+                                          endwhile;
+
+                                          wp_reset_postdata();  ?>
+
+
 
 
                             </ul>
