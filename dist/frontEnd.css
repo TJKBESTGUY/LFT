@@ -4829,11 +4829,9 @@ input:focus + .input-append {
   align-items: center;
 }
 .dropdown-nav__cell.-right li .-main-link img {
-  width: 30px;
+  width: 50px;
   display: inline-flex;
-  background: #f5f2ea;
-  padding: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-right: 16px;
 }
 .dropdown-nav__cell.-right li .-sub-links {

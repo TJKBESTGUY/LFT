@@ -123,7 +123,7 @@
 
 
 
-     <div class="link-group">
+     <div class="link-group hardcode">
        <p class="footer-group-header">Mitä teemme</p>
     <ul>
      <li>Johtaminen</li>
@@ -135,7 +135,7 @@
 
     </ul>
      </div>
-     <div class="link-group">
+     <div class="link-group hardcode">
        <p class="footer-group-header">Sisällöt</p>
     <ul>
      <li>Artikkelit</li>
@@ -146,7 +146,7 @@
 
     </ul>
      </div>
-     <div class="link-group">
+     <div class="link-group hardcode">
        <p class="footer-group-header">Meistä</p>
     <ul>
        <li>Asiantuntijat</li>
@@ -157,7 +157,7 @@
 
     </ul>
      </div>
-     <div class="link-group">
+     <div class="link-group hardocde">
        <p class="footer-group-header">Seuraa meitä</p>
     <ul>
      <li>LinkedIn</li>
