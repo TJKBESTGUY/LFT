@@ -157,7 +157,7 @@
 
     </ul>
      </div>
-     <div class="link-group hardocde">
+     <div class="link-group hardcode">
        <p class="footer-group-header">Seuraa meitä</p>
     <ul>
      <li>LinkedIn</li>
