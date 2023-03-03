@@ -215,7 +215,7 @@ if( empty( $image ) ): ?>
 
               <?php endif; ?>
 
-      <div class="dropdown-nav" x-data="{ dropdown_open: false }" :class="dropdown_open && 'S-active--dropdown'"  @mouseleave="dropdown_open = false; $store.dropdown = false">
+      <div class="dropdown-nav hardcode" x-data="{ dropdown_open: false }" :class="dropdown_open && 'S-active--dropdown'"  @mouseleave="dropdown_open = false; $store.dropdown = false">
           <button class="-nav-link Target--palvelut" href="/" @mouseenter="dropdown_open = true; $store.dropdown = true">Mitä teemme</button>
           <div class="dropdown-nav__wrap" @mouseleave="dropdown_open = false; $store.dropdown = false">
             <div class="dropdown-nav__content">
@@ -277,7 +277,7 @@ tuottavuuden nostamiseen keskittyviä henkilöstön kehittämisen palveluita tie
 
           </div>
 
-          <div class="dropdown-nav" x-data="{ dropdown_open: false }" :class="dropdown_open && 'S-active--dropdown'"  @mouseleave="dropdown_open = false">
+          <div class="dropdown-nav hardcode" x-data="{ dropdown_open: false }" :class="dropdown_open && 'S-active--dropdown'"  @mouseleave="dropdown_open = false">
               <button class="-nav-link Target--palvelut" href="/" @mouseenter="dropdown_open = true; $store.dropdown = true">Sisällöt</button>
               <div class="dropdown-nav__wrap" @mouseleave="dropdown_open = false">
                 <div class="dropdown-nav__content">
@@ -322,7 +322,7 @@ tuottavuuden nostamiseen keskittyviä henkilöstön kehittämisen palveluita tie
 
               </div>
 
-              <div class="dropdown-nav" x-data="{ dropdown_open: false }" :class="dropdown_open && 'S-active--dropdown'"  @mouseleave="dropdown_open = false">
+              <div class="dropdown-nav hardcode" x-data="{ dropdown_open: false }" :class="dropdown_open && 'S-active--dropdown'"  @mouseleave="dropdown_open = false">
                   <button class="-nav-link Target--palvelut" href="/" @mouseenter="dropdown_open = true; $store.dropdown = true">Meistä</button>
                   <div class="dropdown-nav__wrap" @mouseleave="dropdown_open = false">
                     <div class="dropdown-nav__content">
