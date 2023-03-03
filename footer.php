@@ -29,21 +29,8 @@
                   </a>
                               </div>
                               <div class="-info">
-                                  <p class="footer-heading f--bold"> Lifted – hyvinvointia ja tuottavuutta</p>
-                                  <p>Vaikuttavien henkilöstön kehittämisen
-    palveluiden avulla autamme
-    organisaatiotasi menestymään, ihmiset
-    edellä. <br><br>
-    Lifted Oy on suomalainen vuonna 2013
-    perustettu yritys</p>
-    <p class="footer-heading f--bold -yhteystiedot"></p>
-    <div class="-yhteystiedot">
-      <p>+358 (0) 44 2711 487</p>
-      <p>lifted@lifted.fi</p>
-      <p>Sofiankatu 4 C,
-      00170 Helsinki</p>
-
-      <p>Y-tunnus: 2603736-2</p>
+                                <?php the_field('footer_text', 'option'); ?>
+  
     </div>
 
 
