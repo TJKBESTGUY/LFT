@@ -703,12 +703,12 @@ if ( ! function_exists( 'liftcast_loop_output' ) ) :
 
 				      <div class="cast-play-footer">
 				        <div class="capsule-wrap " style="">
-				    <a class="btn--basic btn--basic--small btn--dark" style="" href="">Spotify</a>
-				      <a class="btn--basic btn--basic--small btn--dark" style="" href="">Podplay</a>
-				            <a class="btn--basic btn--basic--small btn--dark" style="" href="">Apple Podcasts</a>
+				    <a class="btn--basic btn--basic--small btn--dark" style="" target="_blank" href="https://open.spotify.com/show/3glCt1KuSbUQa3S8UYPFwD">Spotify</a>
+				      <a class="btn--basic btn--basic--small btn--dark" style=""  target="_blank"  href="https://www.podplay.com/fi-fi/podcasts/liftcast-17394">Podplay</a>
+				            <a class="btn--basic btn--basic--small btn--dark" style=""  target="_blank"  href="https://open.spotify.com/show/3glCt1KuSbUQa3S8UYPFwD">Apple Podcasts</a>
 
 				        <a class="btn--basic btn--dark" style="background:#04aef2;" href="">Lifcast</a>
-				        <a class="btn--basic btn--dark" style="background:#04aef2;" href="">Kaikki jaksot</a>
+				        <a class="btn--basic btn--dark" style="background:#04aef2;" href="/podcast">Kaikki jaksot</a>
 				    </div>
 				      </div>
 

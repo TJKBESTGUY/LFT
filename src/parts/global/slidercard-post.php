@@ -63,7 +63,7 @@ foreach( $categories as $category ) {
 
                  <p class="-guest f--bold"><?php the_field('extra_meta'); ?></p>
          <?php endif; ?>
-         <div class="capsule-wrap " style="margin-top:0">
+         <div class="capsule-wrap " style="">
       <a class="btn--basic btn--dark btn--basic--small" style="" href="<?php the_permalink(); ?>">Lue</a>
       </div>
 
