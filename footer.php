@@ -30,7 +30,7 @@
                               </div>
                               <div class="-info">
                                 <?php the_field('footer_text', 'option'); ?>
-  
+
     </div>
 
 
@@ -38,7 +38,7 @@
             </div>
 
 
-					</div>
+
 
 
 
