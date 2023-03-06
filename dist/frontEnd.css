@@ -8442,7 +8442,7 @@ q {
   display: flex;
   align-items: flex-end;
   font-size: 1.4rem;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 .article-card .-meta {
   transition: 0.3s;

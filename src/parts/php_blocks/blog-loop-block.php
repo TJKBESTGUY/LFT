@@ -21,6 +21,7 @@
       slidesPerView: 'auto',
              spaceBetween: 0,
              grabCursor: true,
+             touchStartPreventDefault: false,
             cssMode: swiper_css_mode,
             navigation: {
                nextEl: $refs.next,
