@@ -4759,11 +4759,11 @@ input:focus + .input-append {
 }
 
 .dropdown-nav {
-  margin: 0 16px;
+  padding: 2px 16px;
 }
 @media screen and (max-width: 1200px) {
   .dropdown-nav {
-    margin: 0 10px;
+    padding: 2px 10px;
   }
 }
 
@@ -5178,6 +5178,7 @@ input:focus + .input-append {
 }
 
 .single-post--legacy__inner {
+  padding-top: 30px;
   border-top: solid 1px rgba(0, 0, 0, 0.14902);
 }
 @media only screen and (max-width: 500px) {
@@ -5188,6 +5189,17 @@ input:focus + .input-append {
 
 .single-post--legacy .U-nav-spacer {
   display: none;
+}
+
+.article-header__image {
+  margin-top: 60px;
+  width: 100%;
+  min-height: 200px;
+}
+@media only screen and (max-width: 700px) {
+  .article-header__image {
+    margin-top: 30px;
+  }
 }
 
 @media only screen and (min-width: 1100.11px) {
@@ -7943,7 +7955,7 @@ q {
   margin-right: auto;
   margin-bottom: 10px;
 }
-.quote-card .basic-card__content .-quote-meta-text {
+.quote-card .basic-card__content .-quote-meta-text, .quote-card .basic-card__content .-quote-meta-txt {
   margin-bottom: 0;
 }
 .quote-card .basic-card__content .-quote-name {
@@ -8107,6 +8119,11 @@ q {
   .module--asiantuntijat-app .basic-card__inner {
     flex-direction: column;
   }
+}
+
+.person-card {
+  width: 100% !important;
+  max-width: 760px;
 }
 
 @media screen and (max-width: 500px) {

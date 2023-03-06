@@ -44,7 +44,20 @@
 
 
            <h1 class="h2"><?php echo get_the_title(); ?></h1>
+           <?php  if ( has_post_thumbnail() ) {  ?>
+            <div class="basic-card__image article-header__image">
 
+        <div class="placeholder-img">
+        <img class="" data-src=" <?php echo get_the_post_thumbnail_url($post_id, "eq-image" ); ?> " alt="" src="<?php echo get_the_post_thumbnail_url($post_id, "eq-image" ); ?>">
+
+        </div>
+        <div class="lazy-img">
+
+        <img class="lazyanim lazyload" data-src="<?php echo get_the_post_thumbnail_url($post_id, "content-image" ); ?>" alt="" src="">
+              </div>
+
+            </div>
+      <?php     }  ?>
              </div>
              </div>
 
