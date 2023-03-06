@@ -54,11 +54,14 @@ foreach( $categories as $category ) {
 
         <?php
         if ( ! has_excerpt() ) {
-             echo '';
+                ?>
+            <div class="-desc"><?php echo wp_trim_words(get_the_excerpt(), 10); ?></div>
+                 <?php
            } else {
+    
                   ?>
 
-                <div class="-desc"> <?php echo the_excerpt(); ?></div>
+                <div class="-desc"><?php echo the_excerpt(); ?></div>
                 <?php
             }
          ?>
