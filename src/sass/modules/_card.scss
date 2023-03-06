@@ -1107,7 +1107,8 @@ flex-wrap: wrap;
   align-items: center;
   margin-bottom: 2px;
   color: $l-blue;
-  font-size: 1.4rem
+  font-size: 1.4rem;
+  min-height: 40px;
 }
 .-cat {
   text-transform: uppercase;

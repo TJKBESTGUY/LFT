@@ -8401,6 +8401,7 @@ q {
   margin-bottom: 2px;
   color: #04aef2;
   font-size: 1.4rem;
+  min-height: 40px;
 }
 .article-card .-cat {
   text-transform: uppercase;
