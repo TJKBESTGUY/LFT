@@ -31,10 +31,12 @@ get_header();
           </div>
 
         <?php
-
-        $categories = get_the_category();
-        $current_cat = $categories[0]->cat_ID;
-         $category_id = $categories[0]->name;
+          $category = get_category( get_query_var( 'cat' ) );
+          $cat_id = $category->cat_ID;
+          $cat_name = $category->name;
+        // $categories = get_the_category();
+        // $current_cat = $categories[0]->cat_ID;
+        //  $category_id = $categories[0]->name;
 
 
 
@@ -45,13 +47,14 @@ get_header();
           <div class="flx-container">
             <div class="cell header-block__meta U-inner-content--x U-inner-content--y">
            <h1 class="base-text">
-            <?php  echo  $category_id; ?>
+            <!-- <?php  echo  $category_id; ?> -->
+            <?php  echo  $cat_name; ?>
            </h1>
 
            <div class="header-block__txt">
 
 
-         <h2 id=""><?php echo category_description(); ?></h2>
+         <h2 id=""><?php echo category_description($cat_id); ?></h2>
 
 
 
