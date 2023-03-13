@@ -5142,6 +5142,11 @@ input:focus + .input-append {
 .module--archive-nav .pagination .page-numbers {
   background: black;
   border-radius: 99px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .module--archive-nav .page-numbers:not(.prev):not(.next) {
   background: none;

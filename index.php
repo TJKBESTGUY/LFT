@@ -89,7 +89,7 @@ get_header();
                     endif;
 
                     ?>
-                
+
 
 
 
@@ -103,8 +103,8 @@ get_header();
 
             <?php
             the_posts_pagination( array(
-              'prev_text'          => '<span class="iconify" data-icon="carbon:chevron-left"></span><span class="screen-reader-text">' . __( 'Previous page', 'lifted' ) . '</span>',
-              'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'lifted' ) . '</span><span class="iconify" data-icon="carbon:chevron-right"></span>',
+              'prev_text'          => '<span class="iconify" data-icon="carbon:chevron-left">&#8592;</span><span class="screen-reader-text">' . __( 'Previous page', 'lifted' ) . '</span>',
+              'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'lifted' ) . '</span><span class="iconify" data-icon="carbon:chevron-right">&#8594;</span>',
               'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'lifted' ) . ' </span>',
             ) );
             ?>

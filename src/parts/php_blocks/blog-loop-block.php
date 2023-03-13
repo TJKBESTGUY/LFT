@@ -40,6 +40,7 @@
             'post_type' => 'post',
             'post_status' => 'publish',
             'posts_per_page' => 5,
+            'category__not_in' => array( 11 ), 
 
         );
 
