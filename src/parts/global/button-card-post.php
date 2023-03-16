@@ -74,7 +74,18 @@ foreach( $categories as $category ) {
       </div>
 
       <div class="-footer">
-        <span class="-date"><?php echo get_the_date("j.n.Y") ?></span>
+        <?php $aihe = get_the_terms( $post_id, 'aihealueet' ) ?>
+      <?php
+      if ( ! empty( $aihe ) ) {
+      foreach( $aihe as $category ) {
+      ?>
+
+      <span class="-cat"><?php echo $category->name; ?></span>
+
+      <?php
+      }
+      }
+      ?>
       </div>
 
     </div>

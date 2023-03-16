@@ -104,6 +104,7 @@ get_header();
 
 
                   <div class="grid-container">
+                    <?php query_posts('cat=-11'); ?>
                     <?php
                     if ( have_posts() ):
                       while ( have_posts() ) : the_post();
