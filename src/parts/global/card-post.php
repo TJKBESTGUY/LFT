@@ -31,6 +31,7 @@
     </div>
     <div class="basic-card__content">
       <div class="-header">
+
         <?php
         $categories = get_the_category();
 if ( ! empty( $categories ) ) {
@@ -55,10 +56,10 @@ foreach( $categories as $category ) {
         <?php
         if ( ! has_excerpt() ) {
                 ?>
-            <div class="-desc"><?php echo wp_trim_words(get_the_excerpt(), 10); ?></div>
+            <div class="-desc"><?php echo wp_trim_words(get_the_excerpt(), 20); ?></div>
                  <?php
            } else {
-    
+
                   ?>
 
                 <div class="-desc"><?php echo the_excerpt(); ?></div>
@@ -75,7 +76,19 @@ foreach( $categories as $category ) {
       </div>
 
       <div class="-footer">
-        <span class="-date"><?php echo get_the_date("j.n.Y") ?></span>
+        <?php $aihe = get_the_terms( $post_id, 'aihealueet' ) ?>
+      <?php
+      if ( ! empty( $aihe ) ) {
+      foreach( $aihe as $category ) {
+      ?>
+
+      <span class="-cat"><?php echo $category->name; ?></span>
+
+      <?php
+      }
+      }
+      ?>
+      
       </div>
 
     </div>

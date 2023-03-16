@@ -1113,6 +1113,16 @@ flex-wrap: wrap;
 .-cat {
   text-transform: uppercase;
 }
+
+.-footer .-cat {
+  background: #000000;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    color: white;
+    margin-right: 4px;
+}
+
 .-title {
     @extend .card-title
 }
@@ -1136,6 +1146,9 @@ margin-top: 4px;
 a.article-card {
     cursor: pointer;
 }
+
+
+
 
 
 .-pod-number {

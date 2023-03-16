@@ -29,7 +29,6 @@ get_header();
           <div class="U-nav-spacer">
 
           </div>
-
         <?php
           $category = get_category( get_query_var( 'cat' ) );
           $cat_id = $category->cat_ID;
@@ -41,20 +40,25 @@ get_header();
 
 
          ?>
+
+         <?php
+         $tax = $wp_query->get_queried_object();
+
+
+          ?>
          <section class="section--page-header ">
          <div class="U_container U_base-pad">
          <div class="module--header-block  module--header-block--no-img " style="background:#ffffff">
           <div class="flx-container">
             <div class="cell header-block__meta U-inner-content--x U-inner-content--y">
            <h1 class="base-text">
-            <!-- <?php  echo  $category_id; ?> -->
-            <?php  echo  $cat_name; ?>
+             Asiakastarinat
            </h1>
 
            <div class="header-block__txt">
 
 
-         <h2 id=""><?php echo category_description($cat_id); ?></h2>
+         <h2 id=""><?php echo $tax->name ?></h2>
 
 
 
@@ -80,40 +84,28 @@ get_header();
 
                 <div class="module--blog-app -x-pad">
                   <div class="workshop-nav">
-                     <a  href="/artikkelit" class="btn--basic btn--basic--small btn--dark"  data-tax="">Uusimmat Artikkelit</a>
+                    <h4>Asiakastarinoiden aiheet:</h4>
+                    <a href="/category/asiakastarinat" class="btn--basic btn--basic--small btn--outline   " type="button" name="button" data-tax="Asiakastarinat">Kaikki <span></span> </a>
                      <?php
                    // get all the valmennukset tags from the database
-                   $var_valmennukset = get_terms( array(
-                           'taxonomy' => 'category',
+                   $var_aiheet = get_terms( array(
+                           'taxonomy' => 'aihealueet',
                            'hide_empty' => 1,
                    ) );
 
                         ?>
-                        
                      <?php
-                     foreach ($var_valmennukset as $terms)
+                     foreach ($var_aiheet as $terms)
                      {
                             ?>
-
-                            <a  href="/category/<?php   echo $terms->slug; ?>" class="btn--basic btn--basic--small btn--outline   <?php
-                              if ( $terms->name ==  $category_id ) {
-                                echo " S-active";
-                          }
-                               ?>" type="button" name="button" data-tax="<?php   echo $terms->name; ?>"><?php   echo $terms->name; ?> <span>(<?php  echo $terms->count; ?>)</span> </a>
+                            <a  href="/aihealueet/<?php   echo $terms->slug; ?>" class="btn--basic btn--basic--small btn--outline" type="button" name="button" data-tax="<?php   echo $terms->name; ?>"><?php   echo $terms->name; ?> <span>(<?php  echo $terms->count; ?>)</span> </a>
 
 
                             <?php
                            }
                            ?>
-                           <div class="page-index">
-                             Sivu:
-                           <?php
-                           $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                           echo $paged.'/'.$wp_query->max_num_pages;
-                           ?>
-                              </div>
 
-                </div>
+          </div>
                   <div class="grid-container">
                     <?php
                     if ( have_posts() ):
