@@ -26,7 +26,7 @@
     </div>
     <div class="basic-card__content">
       <div class="-header">
-        <?php
+        <!-- <?php
         $categories = get_the_category();
 if ( ! empty( $categories ) ) {
 foreach( $categories as $category ) {
@@ -37,7 +37,13 @@ foreach( $categories as $category ) {
 <?php
 }
 }
-?>
+?> -->
+<?php
+$term = get_field('paakategoria');
+if( $term ): ?>
+
+<span class="-cat"><?php echo esc_html( $term->name ); ?></span>
+<?php endif; ?>
 <?php if( get_field('pod_number') ): ?>
 <span class="-pod-number"> <span class="pod-number__inner"></span><?php the_field('pod_number'); ?></span>
 
