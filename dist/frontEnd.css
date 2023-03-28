@@ -10278,13 +10278,20 @@ h1.tag {
     margin-bottom: 16px;
   }
 }
-.workshop-group-wrap {
+.workshop-group-wrap, .module--blog-app {
   transition: all 0.25s;
   transform: translateY(0);
 }
 
 .S-animating--filters .workshop-group-wrap {
   opacity: 0;
+}
+.S-animating--filters .module--blog-app {
+  opacity: 0;
+}
+
+.article-card.S-disabled__item {
+  display: none !important;
 }
 
 .workshop-group.S-disabled__item {

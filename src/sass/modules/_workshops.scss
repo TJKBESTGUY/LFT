@@ -173,7 +173,7 @@ width: calc(100%);
 
 
 
-.workshop-group-wrap {
+.workshop-group-wrap, .module--blog-app {
   transition: all 0.25s;
     transform: translateY(0);
 }
@@ -183,6 +183,14 @@ width: calc(100%);
     opacity: 0;
 
   }
+  .module--blog-app  {
+    opacity: 0;
+
+  }
+}
+
+.article-card.S-disabled__item {
+    display: none !important;
 }
 
 .workshop-group.S-disabled__item {

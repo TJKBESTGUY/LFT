@@ -9,7 +9,24 @@
  */
 
 ?>
-<div class="basic-card article-card" >
+
+      <?php $aihe = get_the_terms( $post_id, 'aihealueet' ) ?>
+
+<div class="basic-card article-card"   <?php
+  if ( ! empty( $aihe ) ) {
+      ?>
+        data-tax="
+     <?php
+  foreach( $aihe as $category ) {
+  ?>
+<?php echo $category->slug; ?>
+  <?php
+  }
+  ?>
+  "
+  <?php
+  }
+  ?> >
 
   <div class="basic-card__inner">
     <div class="basic-card__image">
@@ -74,7 +91,7 @@ foreach( $categories as $category ) {
       </div>
 
       <div class="-footer">
-        <?php $aihe = get_the_terms( $post_id, 'aihealueet' ) ?>
+
       <?php
       if ( ! empty( $aihe ) ) {
       foreach( $aihe as $category ) {

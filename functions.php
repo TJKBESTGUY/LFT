@@ -607,6 +607,58 @@ add_filter( 'lazyblock/blog-item-loop/frontend_callback', 'blog_loop_output', 10
 add_filter( 'lazyblock/asiakas-item-loop/frontend_callback', 'asiakas_loop_output', 10, 2 );
 add_filter( 'lazyblock/select-item-loop/frontend_callback', 'select_loop_output', 10, 2 );
 add_filter( 'lazyblock/lifcast-item-loop/frontend_callback', 'liftcast_loop_output', 10, 2 );
+add_filter( 'lazyblock/asiantuntijat-filters/frontend_callback', 'asiantuntijat_filters', 10, 2 );
+
+
+
+
+if ( ! function_exists( 'asiantuntijat_filters' ) ) :
+    /**
+     * Test Render Callback
+     *
+     * @param string $output - block output.
+     * @param array  $attributes - block attributes.
+     */
+    function asiantuntijat_filters( $output, $attributes ) {
+        ob_start();
+        ?>
+				<div class="-x-pad">
+
+
+				<div class="workshop-nav">
+
+		  <button @click="resetTaxFilters_asiakastarinat"  class="btn--basic btn--basic--small btn--outline   " type="button" name="button" data-tax="Kaikki">Kaikki <span></span> </button>
+					 <?php
+				 // get all the valmennukset tags from the database
+				 $var_aiheet = get_terms( array(
+								 'taxonomy' => 'aihealueet',
+								 'hide_empty' => 1,
+				 ) );
+
+							?>
+					 <?php
+					 foreach ($var_aiheet as $terms)
+					 {
+									?>
+									<button  @click="runTaxFilters_asiakastarinat" href="/aihealueet/<?php   echo $terms->slug; ?>" class="btn--basic btn--basic--small btn--outline" type="button" name="button" data-tax="<?php   echo $terms->slug; ?>"><?php   echo $terms->name; ?> <span>(<?php  echo $terms->count; ?>)</span>
+							</button>
+
+
+									<?php
+								 }
+								 ?>
+
+</div>
+
+		</div>
+
+
+        <?php
+        return ob_get_clean();
+    }
+endif;
+
+
 
 if ( ! function_exists( 'liftcast_loop_output' ) ) :
     /**

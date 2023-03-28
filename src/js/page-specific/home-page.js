@@ -278,3 +278,57 @@ window.runTaxFilters = function(e) {
                                             document.body.classList.remove("S-animating--filters");
                                         }, 300);
                               }
+
+
+
+
+
+
+                              window.runTaxFilters_asiakastarinat = function(e) {
+                                              console.log("tax run asiakas");
+                                               let targets_area = e.target.getAttribute('data-tax');
+                                               console.log(targets_area);
+                                                  var tax_elems = document.querySelectorAll('.article-card');
+                                                  document.body.classList.add("S-animating--filters");
+                                                  if (document.querySelector(".btn--basic.S-active")) {
+                                                     document.querySelector(".btn--basic.S-active").classList.remove("S-active");
+                                                  }
+
+                                                  setTimeout(function(){
+                                                    e.target.classList.add("S-active");
+
+                                                  }, 0);
+                                                   	setTimeout(function(){
+                                                  tax_elems.forEach(function (elem) {
+                                                    console.log(elem);
+                                                     if (elem.dataset.tax.includes(targets_area)) {
+                                                       elem.classList.remove("S-disabled__item");
+                                                       }
+                                                       else  {
+                                                         elem.classList.add("S-disabled__item");
+                                                       }
+                                                  });
+                                                           document.body.classList.remove("S-animating--filters");
+                                                       }, 300);
+
+
+
+                                             }
+
+
+                                             window.resetTaxFilters_asiakastarinat = function(e) {
+
+
+                                                                 var tax_elems = document.querySelectorAll('.article-card');
+                                                                 document.body.classList.add("S-animating--filters");
+                                                                 if (document.querySelector(".btn--basic.S-active")) {
+                                                                    document.querySelector(".btn--basic.S-active").classList.remove("S-active");
+                                                                 }
+
+                                                                   setTimeout(function(){
+                                                                 tax_elems.forEach(function (elem) {
+                                                                         elem.classList.remove("S-disabled__item");
+                                                                 });
+                                                                          document.body.classList.remove("S-animating--filters");
+                                                                      }, 300);
+                                                            }
