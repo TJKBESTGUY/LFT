@@ -12,7 +12,8 @@
 
       <?php $aihe = get_the_terms( $post_id, 'aihealueet' ) ?>
 
-<div class="basic-card article-card"   <?php
+<div class="basic-card article-card"
+<?php
   if ( ! empty( $aihe ) ) {
       ?>
         data-tax="
@@ -26,7 +27,17 @@
   "
   <?php
   }
-  ?> >
+  ?>
+  <?php
+    if ( empty( $aihe ) ) {
+        ?>
+          data-tax="no-tax"
+    <?php
+    }
+    ?>
+
+
+  >
 
   <div class="basic-card__inner">
     <div class="basic-card__image">
