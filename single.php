@@ -26,7 +26,7 @@
             <div class="flx-container">
               <div class="cell header-block__meta U-inner-content--x U-inner-content--y">
              <h1 class="base-text">
-               <?php
+               <!-- <?php
                $categories = get_the_category();
        if ( ! empty( $categories ) ) {
        foreach( $categories as $category ) {
@@ -37,7 +37,14 @@
        <?php
        }
        }
-       ?>
+       ?> -->
+       <?php
+       $term = get_field('paakategoria');
+       if( $term ): ?>
+
+      <?php echo esc_html( $term->name ); ?>
+
+       <?php endif; ?>
              </h1>
 
              <div class="">
