@@ -50,7 +50,7 @@ get_header();
 
                 <div class="module--blog-app -x-pad">
                   <div class="workshop-nav">
-                    <h4>Katergoriat:</h4>
+                  
                      <a  href="/artikkelit" class="btn--basic btn--basic--small btn--dark"  data-tax="">Uusimmat Artikkelit</a>
                      <?php
                    // get all the valmennukset tags from the database
