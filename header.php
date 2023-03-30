@@ -376,12 +376,18 @@ tuottavuuden nostamiseen keskittyviä henkilöstön kehittämisen palveluita tie
 
                     <a class="-nav-link Target-- -main-link" href="/kokemuksia/"> <span>Referenssit</span></a>
 
-                  <div class="dropdown-nav dropdown-nav--ajankohtaista" x-data="{ dropdown_open: false }" :class="dropdown_open && 'S-active--dropdown'"  @mouseleave="dropdown_open = false">
+                  <div class="dropdown-nav" x-data="{ dropdown_open: false }" :class="dropdown_open && 'S-active--dropdown'"  @mouseleave="dropdown_open = false">
                       <button class="-nav-link" href="/" @mouseenter="dropdown_open = true; $store.dropdown = true" @keydown.enter="dropdown_open = ! dropdown_open; $store.dropdown = true">Ajankohtaista</button>
                       <div class="dropdown-nav__wrap" @mouseleave="dropdown_open = false">
                         <div class="dropdown-nav__content">
                         <div class="flx-container">
+                          <div class="dropdown-nav__cell -left">
+                            <h3 class="f--bold">Ajankohtaista</h3>
+                            <p>
+          Tästä osiosta löydät aina ajankohtaisimpia materiaalejamme ja valmennuksiamme</p>
 
+
+                          </div>
                           <div class="dropdown-nav__cell -right">
                             <ul class="-ul">
 
