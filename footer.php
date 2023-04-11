@@ -229,13 +229,12 @@
                                               <div class="cell">
 
 
-                                                  <h3 class="card-title f--bold">Pysy työhyvinvoinnin aallonharjalla!
+                                                  <h3 class="card-title f--bold">Pysy johtamisen ja työyhteisön kehittämisen aallonharjalla!
+
                                                   </h3>
-                                                  <p>Saat
-uusimmat puheenaiheet ja tutkimustulokset
-suoraan sähköpostiisi joka kuukausi.</p>
+                                                  <p>Saat uusimmat puheenaiheet ja tutkimustulokset suoraan sähköpostiisi joka kuukausi.</p>
                                                   <div class="capsule-wrap capsule-wrap--center">
-                          <a class="btn--basic btn--basic--small btn--dark" style="background:#04aef2;" href="#">Tilaa Uutiskirje</a>
+                          <a class="btn--basic btn--dark" style="" href="#">Tilaa Uutiskirje</a>
                         </div>
 
                                             </div>
