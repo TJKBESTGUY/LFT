@@ -50,13 +50,13 @@ get_header();
 
                 <div class="module--blog-app -x-pad">
                   <div class="workshop-nav">
-                  
+
                      <a  href="/artikkelit" class="btn--basic btn--basic--small btn--dark"  data-tax="">Uusimmat Artikkelit</a>
                      <?php
                    // get all the valmennukset tags from the database
                    $var_cat = get_terms( array(
-                           'taxonomy' => 'category',
-                           'hide_empty' => 1,
+                           'taxonomy' => 'aiheet',
+                           'hide_empty' => 0,
                              'parent' => 0,
                    ) );
 
@@ -65,7 +65,7 @@ get_header();
                      foreach ($var_cat as $terms)
                      {
                             ?>
-                            <a  href="/category/<?php   echo $terms->slug; ?>" class="btn--basic btn--basic--small btn--outline" type="button" name="button" data-tax="<?php   echo $terms->name; ?>"><?php   echo $terms->name; ?> <span>(<?php  echo $terms->count; ?>)</span> </a>
+                            <a  href="/aiheet/<?php   echo $terms->slug; ?>" class="btn--basic btn--basic--small btn--outline" type="button" name="button" data-tax="<?php   echo $terms->name; ?>"><?php   echo $terms->name; ?> <span>(<?php  echo $terms->count; ?>)</span> </a>
 
 
                             <?php
@@ -104,7 +104,30 @@ get_header();
 
 
                   <div class="grid-container">
-                    <?php query_posts('cat=-11'); ?>
+
+                      <?php
+
+
+                       ?>
+
+
+                       <?php
+                       $args = array(
+    'post_type' => 'post',
+    'tax_query' => array(
+        'relation' => 'AND',
+        array(
+            'taxonomy' => 'category',
+            'field'    => 'term_id',
+            'terms'    => array( 11, 20 ),
+            'operator' => 'NOT IN',
+        ),
+    ),
+);
+
+                        ?>
+
+                    <?php query_posts($args); ?>
                     <?php
                     if ( have_posts() ):
                       while ( have_posts() ) : the_post();

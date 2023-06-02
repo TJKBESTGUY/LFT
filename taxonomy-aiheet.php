@@ -52,6 +52,8 @@ get_header();
            </h1>
 
            <div class="header-block__txt">
+
+
          <h2 id=""><?php echo category_description($cat_id); ?></h2>
 
 
@@ -77,63 +79,41 @@ get_header();
 
 
                 <div class="module--blog-app -x-pad">
-                <div class="workshop-nav">
-                  <h4>Asiakastarinoiden aiheet:</h4>
-                  <a href="/category/asiakastarinat" class="btn--basic btn--basic--small btn--outline   " type="button" name="button" data-tax="Asiakastarinat">Kaikki <span></span> </a>
-                   <?php
-                 // get all the valmennukset tags from the database
-                 $var_aiheet = get_terms( array(
-                         'taxonomy' => 'aihealueet',
-                         'hide_empty' => 1,
-                 ) );
+                  <div class="workshop-nav">
+                     <a  href="/artikkelit" class="btn--basic btn--basic--small btn--dark"  data-tax="">Uusimmat Artikkelit</a>
+                     <?php
+                   // get all the valmennukset tags from the database
+                   $var_valmennukset = get_terms( array(
+                           'taxonomy' => 'aiheet',
+                           'hide_empty' => 0,
+                   ) );
 
-                      ?>
-                   <?php
-                   foreach ($var_aiheet as $terms)
-                   {
-                          ?>
-                          <a  href="/aihealueet/<?php   echo $terms->slug; ?>" class="btn--basic btn--basic--small btn--outline" type="button" name="button" data-tax="<?php   echo $terms->name; ?>"><?php   echo $terms->name; ?> <span>(<?php  echo $terms->count; ?>)</span> </a>
+                        ?>
 
+                     <?php
+                     foreach ($var_valmennukset as $terms)
+                     {
+                            ?>
 
-                          <?php
-                         }
-                         ?>
-
-        </div>
-        <!-- <div class="workshop-nav">
-           <a  href="/artikkelit" class="btn--basic btn--basic--small btn--dark"  data-tax="">Uusimmat Artikkelit</a>
-           <?php
-         // get all the valmennukset tags from the database
-         $var_valmennukset = get_terms( array(
-                 'taxonomy' => 'category',
-                 'hide_empty' => 1,
-         ) );
-
-              ?>
-           <?php
-           foreach ($var_valmennukset as $terms)
-           {
-                  ?>
-
-                  <a  href="/category/<?php   echo $terms->slug; ?>" class="btn--basic btn--basic--small btn--outline   <?php
-                    if ( $terms->name ==  $category_id ) {
-                      echo " S-active";
-                }
-                     ?>" type="button" name="button" data-tax="<?php   echo $terms->name; ?>"><?php   echo $terms->name; ?> <span>(<?php  echo $terms->count; ?>)</span> </a>
+                            <a  href="/category/<?php   echo $terms->slug; ?>" class="btn--basic btn--basic--small btn--outline   <?php
+                              if ( $terms->name ==  $category_id ) {
+                                echo " S-active";
+                          }
+                               ?>" type="button" name="button" data-tax="<?php   echo $terms->name; ?>"><?php   echo $terms->name; ?> <span>(<?php  echo $terms->count; ?>)</span> </a>
 
 
-                  <?php
-                 }
-                 ?>
-                 <div class="page-index">
-                   Sivu:
-                 <?php
-                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                 echo $paged.'/'.$wp_query->max_num_pages;
-                 ?>
-                    </div>
+                            <?php
+                           }
+                           ?>
+                           <div class="page-index">
+                             Sivu:
+                           <?php
+                           $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                           echo $paged.'/'.$wp_query->max_num_pages;
+                           ?>
+                              </div>
 
-      </div> -->
+                </div>
                   <div class="grid-container">
                     <?php
                     if ( have_posts() ):

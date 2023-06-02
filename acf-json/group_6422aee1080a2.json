@@ -17,7 +17,7 @@
                 "id": ""
             },
             "admin_only": 0,
-            "taxonomy": "category",
+            "taxonomy": "aiheet",
             "add_term": 0,
             "save_terms": 0,
             "load_terms": 0,
@@ -45,5 +45,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679995128
+    "modified": 1685701044
 }
