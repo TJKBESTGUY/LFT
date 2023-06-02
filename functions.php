@@ -232,14 +232,14 @@ function lifted_scripts() {
 
 	//jQuery 3.0 replaces WP jquery
 	wp_deregister_script( 'jquery-core' );
-	// wp_register_script( 'jquery-core', "https://code.jquery.com/jquery-3.5.1.min.js", array(), '3.5.1' );
+	wp_register_script( 'jquery-core', "https://code.jquery.com/jquery-3.5.1.min.js", array(), '3.5.1' );
 	wp_deregister_script( 'jquery-migrate' );
 	// wp_register_script( 'jquery-migrate', "https://code.jquery.com/jquery-migrate-3.3.0.min.js", array( 'jquery-core' ), '3.3.0' );
 
 
 	//any javascript file in assets/js that ends with custom.js will be lumped into this file.
 	wp_enqueue_script( 'lifted-custom-js', get_template_directory_uri() . '/dist/frontEnd_bundle.js', array(
-		// 'jquery',
+		'jquery-core',
 		// 'polyfill'
 	),
 		wp_get_theme()->get( 'Version' ), true );
@@ -922,3 +922,59 @@ if ( ! function_exists( 'asiantuntijat_loop_output' ) ) :
         return ob_get_clean();
     }
 endif;
+
+
+
+
+
+
+
+
+////AJAX///////
+
+function weichie_load_more() {
+  $ajaxposts = new WP_Query([
+    'post_type' => array('post'),
+    'posts_per_page' => 6,
+		'tax_query' => array(
+				'relation' => 'AND',
+				array(
+						'taxonomy' => 'category',
+						'field'    => 'term_id',
+						'terms'    => array( 11, 20 ),
+						'operator' => 'NOT IN',
+				),
+		),
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'paged' => $_POST['paged'],
+  ]);
+
+
+
+$response = '';
+ $max_pages = $ajaxposts->max_num_pages;
+
+ if($ajaxposts->have_posts()) {
+	 ob_start();
+	 while($ajaxposts->have_posts()) : $ajaxposts->the_post();
+			      $response .=  get_template_part( 'src/parts/global/card', 'post' );
+	 endwhile;
+	 $output = ob_get_contents();
+	 ob_end_clean();
+ } else {
+	 $response = '';
+ }
+
+ $result = [
+	 'max' => $max_pages,
+	 'html' => $output,
+ ];
+
+ echo json_encode($result);
+ exit;
+}
+
+
+add_action('wp_ajax_weichie_load_more', 'weichie_load_more');
+add_action('wp_ajax_nopriv_weichie_load_more', 'weichie_load_more');

@@ -112,52 +112,77 @@ get_header();
 
 
                        <?php
-                       $args = array(
-    'post_type' => 'post',
-    'tax_query' => array(
-        'relation' => 'AND',
-        array(
-            'taxonomy' => 'category',
-            'field'    => 'term_id',
-            'terms'    => array( 11, 20 ),
-            'operator' => 'NOT IN',
-        ),
-    ),
-);
+//                        $args = array(
+//     'post_type' => 'post',
+//     'orderby' => 'date',
+//     'order' => 'DESC',
+//     'tax_query' => array(
+//         'relation' => 'AND',
+//         array(
+//             'taxonomy' => 'category',
+//             'field'    => 'term_id',
+//             'terms'    => array( 11, 20 ),
+//             'operator' => 'NOT IN',
+//         ),
+//     ),
+//       'paged' => $_POST['paged'],
+// );
 
-                        ?>
-
-                    <?php query_posts($args); ?>
-                    <?php
-                    if ( have_posts() ):
-                      while ( have_posts() ) : the_post();
-                          ?>
-                                <?php locate_template('src/parts/global/card-post.php', true, false); ?>
-
-                        <?php
-                      endwhile;
-                    endif;
-
-                    ?>
-
-
-
-
+$ajaxposts = new WP_Query([
+  'post_type' => 'post',
+  'orderby' => 'date',
+  'order' => 'DESC',
+    'posts_per_page' => 12,
+  'tax_query' => array(
+      'relation' => 'AND',
+      array(
+          'taxonomy' => 'category',
+          'field'    => 'term_id',
+          'terms'    => array( 11, 20 ),
+          'operator' => 'NOT IN',
+      ),
+  ),
+    'paged' => $_POST['paged'],
+]);
 
 
+ ?>
 
+ <?php if($ajaxposts->have_posts()): ?>
 
+ <?php
+   while ($ajaxposts ->have_posts()): $ajaxposts->the_post();
+       locate_template('src/parts/global/card-post.php', true, false);
+   endwhile;
+ ?>
+
+<?php endif; ?>
+<?php wp_reset_postdata(); ?>
 
                   </div>
+
+                  <div class="posts-more-container grid-container" style="margin-top:20px">
+
+                                </div>
+
+
+                                <div class="article-loading">
+
+
+                            <div class="capsule-wrap">
+              <button  class="btn--basic btn--outline" id="load-more">Lataa lisää</button>
+
+              </div>
+              <div class="article-loading-done f--sans" style="display:none">
+              Kaikki artikkelit on ladattuna
+              </div>
+              </div>
+
+
+
                   <div class="module--archive-nav">
 
-            <?php
-            the_posts_pagination( array(
-              'prev_text'          => '<span class="iconify" data-icon="carbon:chevron-left">&#8592;</span><span class="screen-reader-text">' . __( 'Previous page', 'lifted' ) . '</span>',
-              'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'lifted' ) . '</span><span class="iconify" data-icon="carbon:chevron-right">&#8594;</span>',
-              'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'lifted' ) . ' </span>',
-            ) );
-            ?>
+
                   </div>
                         </div>
                         </div>
@@ -171,6 +196,41 @@ get_header();
 
         </main><!-- #main -->
     </div><!-- #primary -->
+
+
+
+    <script type="text/javascript">
+
+function loadMore(paged) {
+  $.ajax({
+    type: 'POST',
+    url: '/wp-admin/admin-ajax.php',
+    dataType: 'json',
+    data: {
+      action: 'weichie_load_more',
+      paged,
+    },
+    success: function (res) {
+      console.log(paged);
+      console.log(res.max);
+      if(paged >= res.max) {
+        $('#load-more').hide();
+        console.log("nomore pages");
+          $('.article-loading-done').show();
+
+      }
+      $('.posts-more-container').append(res.html);
+    }
+  });
+}
+
+
+let newPage = 1;
+$('#load-more').on('click', function(){
+  loadMore(newPage + 1);
+  newPage++;
+});
+</script>
 
 
 <?php
