@@ -85,7 +85,7 @@ get_header();
                    // get all the valmennukset tags from the database
                    $var_valmennukset = get_terms( array(
                            'taxonomy' => 'aiheet',
-                           'hide_empty' => 0,
+                           'hide_empty' => 1,
                    ) );
 
                         ?>
@@ -95,7 +95,7 @@ get_header();
                      {
                             ?>
 
-                            <a  href="/category/<?php   echo $terms->slug; ?>" class="btn--basic btn--basic--small btn--outline   <?php
+                            <a  href="/aiheet/<?php   echo $terms->slug; ?>" class="btn--basic btn--basic--small btn--outline   <?php
                               if ( $terms->name ==  $category_id ) {
                                 echo " S-active";
                           }

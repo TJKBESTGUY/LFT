@@ -56,7 +56,7 @@ get_header();
                    // get all the valmennukset tags from the database
                    $var_cat = get_terms( array(
                            'taxonomy' => 'aiheet',
-                           'hide_empty' => 0,
+                           'hide_empty' => 1,
                              'parent' => 0,
                    ) );
 
@@ -129,10 +129,8 @@ get_header();
 // );
 
 $ajaxposts = new WP_Query([
-  'post_type' => 'post',
-  'orderby' => 'date',
-  'order' => 'DESC',
-    'posts_per_page' => 12,
+  'post_type' => array('post'),
+  'posts_per_page' => 12,
   'tax_query' => array(
       'relation' => 'AND',
       array(
@@ -142,7 +140,9 @@ $ajaxposts = new WP_Query([
           'operator' => 'NOT IN',
       ),
   ),
-    'paged' => $_POST['paged'],
+  'orderby' => 'date',
+  'order' => 'DESC',
+  'paged' => $_POST['paged'],
 ]);
 
 
