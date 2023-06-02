@@ -941,7 +941,7 @@ function weichie_load_more() {
 				array(
 						'taxonomy' => 'category',
 						'field'    => 'term_id',
-						'terms'    => array( 11 ),
+						'terms'    => array( 11, 210 ),
 						'operator' => 'NOT IN',
 				),
 		),
