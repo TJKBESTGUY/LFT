@@ -138,7 +138,7 @@ $ajaxposts = new WP_Query([
       array(
           'taxonomy' => 'category',
           'field'    => 'term_id',
-          'terms'    => array( 11, 20 ),
+          'terms'    => array( 11 ),
           'operator' => 'NOT IN',
       ),
   ),

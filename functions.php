@@ -935,13 +935,13 @@ endif;
 function weichie_load_more() {
   $ajaxposts = new WP_Query([
     'post_type' => array('post'),
-    'posts_per_page' => 6,
+    'posts_per_page' => 12,
 		'tax_query' => array(
 				'relation' => 'AND',
 				array(
 						'taxonomy' => 'category',
 						'field'    => 'term_id',
-						'terms'    => array( 11, 20 ),
+						'terms'    => array( 11 ),
 						'operator' => 'NOT IN',
 				),
 		),
