@@ -1872,7 +1872,7 @@ span {
 }
 
 
-   @for $i from 1 through 10 {
+   @for $i from 1 through 20 {
              .anim--cell:nth-of-type(#{$i}) {
 
             transition-delay:(#{$i*0.25s !important});

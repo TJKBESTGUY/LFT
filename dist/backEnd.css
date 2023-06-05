@@ -3712,6 +3712,36 @@ div .editor-styles-wrapper .acf-block-preview .anim--cell:nth-of-type(9) {
 div .editor-styles-wrapper .acf-block-preview .anim--cell:nth-of-type(10) {
   transition-delay: 2.5s !important;
 }
+div .editor-styles-wrapper .acf-block-preview .anim--cell:nth-of-type(11) {
+  transition-delay: 2.75s !important;
+}
+div .editor-styles-wrapper .acf-block-preview .anim--cell:nth-of-type(12) {
+  transition-delay: 3s !important;
+}
+div .editor-styles-wrapper .acf-block-preview .anim--cell:nth-of-type(13) {
+  transition-delay: 3.25s !important;
+}
+div .editor-styles-wrapper .acf-block-preview .anim--cell:nth-of-type(14) {
+  transition-delay: 3.5s !important;
+}
+div .editor-styles-wrapper .acf-block-preview .anim--cell:nth-of-type(15) {
+  transition-delay: 3.75s !important;
+}
+div .editor-styles-wrapper .acf-block-preview .anim--cell:nth-of-type(16) {
+  transition-delay: 4s !important;
+}
+div .editor-styles-wrapper .acf-block-preview .anim--cell:nth-of-type(17) {
+  transition-delay: 4.25s !important;
+}
+div .editor-styles-wrapper .acf-block-preview .anim--cell:nth-of-type(18) {
+  transition-delay: 4.5s !important;
+}
+div .editor-styles-wrapper .acf-block-preview .anim--cell:nth-of-type(19) {
+  transition-delay: 4.75s !important;
+}
+div .editor-styles-wrapper .acf-block-preview .anim--cell:nth-of-type(20) {
+  transition-delay: 5s !important;
+}
 div .editor-styles-wrapper .acf-block-preview .background-image {
   position: absolute;
   top: 0;

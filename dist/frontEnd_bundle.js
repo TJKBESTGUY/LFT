@@ -944,7 +944,7 @@ var observer_animation = new IntersectionObserver(function (entries) {
     } else {}
   });
 }, {
-  threshold: 0.2
+  threshold: 0.3
 }); //
 
 for (var i = 0; i < the_animation.length; i++) {
