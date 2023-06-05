@@ -9745,6 +9745,11 @@ th.no-sort:after {
     padding: 60px 20px;
   }
 }
+@media only screen and (max-width: 600px) {
+  .module--modal-content {
+    padding: 60px 10px;
+  }
+}
 .module--modal-content h4 {
   margin-top: 0;
 }
