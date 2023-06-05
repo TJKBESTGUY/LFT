@@ -45,7 +45,7 @@
                               <a class="btn--basic btn--dark js-modal-contact-btn" style=" " href=""  @click="runModalContact">Varaa / Kysy luennosta</a>
                             </div>
                             <div class="modal-item__footer">
-                            <h5 class="f--bold" style"margin-bottom: 20px;">Aiheen asiantuntijoitamme:</h5>
+                            <h5 class="f--bold" style="margin-bottom: 20px;">Aiheen asiantuntijoitamme:</h5>
 
                               <div class="modal-item__avatars">
                             <?php
