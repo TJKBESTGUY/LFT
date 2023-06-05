@@ -8295,8 +8295,6 @@ q {
   color: #696973;
 }
 .info-card .-footer {
-  flex-grow: 1;
-  display: flex;
   align-items: flex-end;
   font-size: 1.6rem;
   text-transform: uppercase;
@@ -9911,6 +9909,11 @@ th.no-sort:after {
   max-width: calc(25% - 20px);
   margin: 0 10px;
   margin: 0 10px;
+}
+@media only screen and (max-width: 600px) {
+  .modal-item__avatars > div {
+    min-width: 100px;
+  }
 }
 
 .modal-contact-info--top a {
