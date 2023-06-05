@@ -1855,13 +1855,26 @@ span {
 
 
 
-// .section--basic {
-//   transform: translate3d(0,50px,0);
-//   opacity: 0;
-// }
-//
-// .scroll-animation.section--basic {
-//   opacity: 1;
-//   transform: none;
-//   transition: all 1s;
-// }
+.section--basic {
+  .anim--cell {
+    transform: translate3d(0,20px,0)!important;
+    opacity: 0 !important;
+  }
+
+}
+
+.scroll-animation.section--basic {
+    .anim--cell {
+  opacity: 1!important;
+  transform: none!important;
+  transition: all 0.75s;
+    }
+}
+
+
+   @for $i from 1 through 10 {
+             .anim--cell:nth-of-type(#{$i}) {
+
+            transition-delay:(#{$i*0.25s !important});
+            }
+          }

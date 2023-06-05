@@ -3673,6 +3673,45 @@ div .editor-styles-wrapper .acf-block-preview .modal-header-bg span {
 div .editor-styles-wrapper .acf-block-preview .modal-item__header .-content {
   max-width: 100% !important;
 }
+div .editor-styles-wrapper .acf-block-preview .section--basic .anim--cell {
+  transform: translate3d(0, 20px, 0) !important;
+  opacity: 0 !important;
+}
+div .editor-styles-wrapper .acf-block-preview .scroll-animation.section--basic .anim--cell {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: all 0.75s;
+}
+div .editor-styles-wrapper .acf-block-preview .anim--cell:nth-of-type(1) {
+  transition-delay: 0.25s !important;
+}
+div .editor-styles-wrapper .acf-block-preview .anim--cell:nth-of-type(2) {
+  transition-delay: 0.5s !important;
+}
+div .editor-styles-wrapper .acf-block-preview .anim--cell:nth-of-type(3) {
+  transition-delay: 0.75s !important;
+}
+div .editor-styles-wrapper .acf-block-preview .anim--cell:nth-of-type(4) {
+  transition-delay: 1s !important;
+}
+div .editor-styles-wrapper .acf-block-preview .anim--cell:nth-of-type(5) {
+  transition-delay: 1.25s !important;
+}
+div .editor-styles-wrapper .acf-block-preview .anim--cell:nth-of-type(6) {
+  transition-delay: 1.5s !important;
+}
+div .editor-styles-wrapper .acf-block-preview .anim--cell:nth-of-type(7) {
+  transition-delay: 1.75s !important;
+}
+div .editor-styles-wrapper .acf-block-preview .anim--cell:nth-of-type(8) {
+  transition-delay: 2s !important;
+}
+div .editor-styles-wrapper .acf-block-preview .anim--cell:nth-of-type(9) {
+  transition-delay: 2.25s !important;
+}
+div .editor-styles-wrapper .acf-block-preview .anim--cell:nth-of-type(10) {
+  transition-delay: 2.5s !important;
+}
 div .editor-styles-wrapper .acf-block-preview .background-image {
   position: absolute;
   top: 0;
