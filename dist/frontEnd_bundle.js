@@ -930,7 +930,27 @@ window.resetTaxFilters_asiakastarinat = function (e) {
     });
     document.body.classList.remove("S-animating--filters");
   }, 300);
-};
+}; ////Anim
+
+
+var the_animation = document.querySelectorAll('.section--basic');
+var observer_animation = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('scroll-animation');
+      setTimeout(function () {
+        entry.target.classList.add('scroll-animation--lets-click');
+      }, 1000);
+    } else {}
+  });
+}, {
+  threshold: 0.2
+}); //
+
+for (var i = 0; i < the_animation.length; i++) {
+  var elements = the_animation[i];
+  observer_animation.observe(elements);
+}
 
 /***/ }),
 

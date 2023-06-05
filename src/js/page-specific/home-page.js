@@ -332,3 +332,35 @@ window.runTaxFilters = function(e) {
                                                                           document.body.classList.remove("S-animating--filters");
                                                                       }, 300);
                                                             }
+
+
+
+
+
+
+////Anim
+const the_animation = document.querySelectorAll('.section--basic')
+
+const observer_animation = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('scroll-animation');
+            setTimeout(function() {
+            entry.target.classList.add('scroll-animation--lets-click');
+          }, 1000);
+
+        }
+            else {
+
+            }
+
+    })
+},
+   { threshold: 0.2
+   });
+//
+  for (let i = 0; i < the_animation.length; i++) {
+   const elements = the_animation[i];
+
+    observer_animation.observe(elements);
+  }

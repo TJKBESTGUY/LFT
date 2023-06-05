@@ -1849,3 +1849,19 @@ span {
 .modal-item__header .-content {
     max-width: 100% !important;
 }
+
+
+
+
+
+
+.section--basic {
+  transform: translate3d(0,40px,0);
+  opacity: 0;
+}
+
+.scroll-animation.section--basic {
+  opacity: 1;
+  transform: none;
+  transition: all 0.7s;
+}

@@ -3673,6 +3673,15 @@ div .editor-styles-wrapper .acf-block-preview .modal-header-bg span {
 div .editor-styles-wrapper .acf-block-preview .modal-item__header .-content {
   max-width: 100% !important;
 }
+div .editor-styles-wrapper .acf-block-preview .section--basic {
+  transform: translate3d(0, 40px, 0);
+  opacity: 0;
+}
+div .editor-styles-wrapper .acf-block-preview .scroll-animation.section--basic {
+  opacity: 1;
+  transform: none;
+  transition: all 0.7s;
+}
 div .editor-styles-wrapper .acf-block-preview .background-image {
   position: absolute;
   top: 0;
