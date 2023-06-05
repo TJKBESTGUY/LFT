@@ -1832,3 +1832,20 @@ padding: 0 !important;
   min-width: 1200px;
   padding: 20px 0;
 }
+
+.modal-header-bg {
+  background-position: top center;
+  h1.h3 {
+    color:white !important;
+  }
+  padding: 100px 20px;
+border-radius: 10px;
+span {
+  color:white !important;
+
+}
+}
+
+.modal-item__header .-content {
+    max-width: 100% !important;
+}

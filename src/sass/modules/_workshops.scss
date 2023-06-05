@@ -103,6 +103,7 @@ h3 {
   @media only screen and (min-width: 0px) and (max-width: 1050px) {
 width: calc(100%);
   }
+
 }
 
 
@@ -131,7 +132,9 @@ width: calc(100%);
      width: 100%;
      display: flex;
      flex-direction: column;
-
+     // .--footer {
+     //       align-items: flex-start;
+     // }
    &:first-of-type {
 
    }
@@ -153,7 +156,8 @@ width: calc(100%);
 
 @media only screen and (min-width: 800.11px) and (max-width: 1050px) {
       .workshop-item  .cell {
-      @include w-cell--split();
+      // @include w-cell--split();
+        @include w-cell--stack();
       }
 }
 
@@ -166,7 +170,8 @@ width: calc(100%);
 
 @media only screen and (min-width: 1600.11px) {
 .workshop-item  .cell {
-@include w-cell--split();
+// @include w-cell--split();
+  @include w-cell--stack();
 }
 }
 

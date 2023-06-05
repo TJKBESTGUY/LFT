@@ -3654,6 +3654,22 @@ img.zoom-img {
   padding: 20px 0;
 }
 
+.modal-header-bg {
+  background-position: top center;
+  padding: 100px 20px;
+  border-radius: 10px;
+}
+.modal-header-bg h1.h3 {
+  color: white !important;
+}
+.modal-header-bg span {
+  color: white !important;
+}
+
+.modal-item__header .-content {
+  max-width: 100% !important;
+}
+
 /*--------------------------------------------------------------
 # Global Forms
 --------------------------------------------------------------*/
@@ -10230,20 +10246,16 @@ h1.tag {
 }
 @media only screen and (min-width: 800.11px) and (max-width: 1050px) {
   .workshop-item .cell {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
   }
-  .workshop-item .cell:first-of-type {
-    padding-right: 30px;
-    border-right: solid 1px rgba(0,0,0,0.14902);
-  }
   .workshop-item .cell:last-of-type {
-    padding-left: 30px;
+    margin-top: 30px;
   }
   .workshop-item .cell .capsule-wrap {
     margin-top: 20px;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
 }
 @media only screen and (min-width: 1050.11px) and (max-width: 1600px) {
@@ -10262,20 +10274,16 @@ h1.tag {
 }
 @media only screen and (min-width: 1600.11px) {
   .workshop-item .cell {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
   }
-  .workshop-item .cell:first-of-type {
-    padding-right: 30px;
-    border-right: solid 1px rgba(0,0,0,0.14902);
-  }
   .workshop-item .cell:last-of-type {
-    padding-left: 30px;
+    margin-top: 30px;
   }
   .workshop-item .cell .capsule-wrap {
     margin-top: 20px;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
 }
 .workshop-group-wrap, .module--blog-app {

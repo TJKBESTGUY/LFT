@@ -3659,6 +3659,20 @@ div .editor-styles-wrapper .acf-block-preview .scrolling-image .module--full-ima
   min-width: 1200px;
   padding: 20px 0;
 }
+div .editor-styles-wrapper .acf-block-preview .modal-header-bg {
+  background-position: top center;
+  padding: 100px 20px;
+  border-radius: 10px;
+}
+div .editor-styles-wrapper .acf-block-preview .modal-header-bg h1.h3 {
+  color: white !important;
+}
+div .editor-styles-wrapper .acf-block-preview .modal-header-bg span {
+  color: white !important;
+}
+div .editor-styles-wrapper .acf-block-preview .modal-item__header .-content {
+  max-width: 100% !important;
+}
 div .editor-styles-wrapper .acf-block-preview .background-image {
   position: absolute;
   top: 0;
