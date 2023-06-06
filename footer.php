@@ -14,6 +14,12 @@
 
 </div><!-- #site-content -->
 
+
+<?php if ( get_field( 'lang' ) == 1 ) { ?>
+
+
+ <?php } else { ?>
+
 <footer id="colophon" class="site-footer" role="contentinfo">
     <div class="U_container U_base-pad">
 
@@ -250,6 +256,9 @@
 
 			</div>
 </footer><!-- #colophon -->
+
+
+ <?php } ?>
 
 </div><!-- #page -->
 

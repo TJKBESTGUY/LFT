@@ -602,6 +602,7 @@ endif;
 
 // PHP BLOCKS /////
 add_filter( 'lazyblock/workshop-item-loop/frontend_callback', 'workshop_loop_output', 10, 2 );
+add_filter( 'lazyblock/workshop-item-loop-en/frontend_callback', 'workshop_loop_output_en', 10, 2 );
 add_filter( 'lazyblock/asiantuntijat-item-loop/frontend_callback', 'asiantuntijat_loop_output', 10, 2 );
 add_filter( 'lazyblock/blog-item-loop/frontend_callback', 'blog_loop_output', 10, 2 );
 add_filter( 'lazyblock/asiakas-item-loop/frontend_callback', 'asiakas_loop_output', 10, 2 );
@@ -877,6 +878,25 @@ if ( ! function_exists( 'workshop_loop_output' ) ) :
         ?>
 
 				      <?php locate_template('src/parts/php_blocks/workshop-loop-block.php', true, false); ?>
+
+
+        <?php
+        return ob_get_clean();
+    }
+endif;
+
+if ( ! function_exists( 'workshop_loop_output_en' ) ) :
+    /**
+     * Test Render Callback
+     *
+     * @param string $output - block output.
+     * @param array  $attributes - block attributes.
+     */
+    function workshop_loop_output_en( $output, $attributes ) {
+        ob_start();
+        ?>
+
+				      <?php locate_template('src/parts/php_blocks/workshop-loop-block-en.php', true, false); ?>
 
 
         <?php

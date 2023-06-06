@@ -115,11 +115,11 @@ $page_name = get_the_title();
       <nav class="navigation-links -desktop-nav flx-container">
 
 
-        <?php if( have_rows('navigation_group_en', 'option') ): ?>
+        <?php if( have_rows('navigation_en', 'option') ): ?>
 
 
 
-            <?php while( have_rows('navigation_group_en', 'option') ) : the_row(); ?>
+            <?php while( have_rows('navigation_en', 'option') ) : the_row(); ?>
 
 
 
