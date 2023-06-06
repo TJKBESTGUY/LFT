@@ -52,7 +52,7 @@
                            // echo '<h3>' . $valmennukset->name. '</h3>';
 
                            $args = array(
-                           'post_type' => 'valmennuksetenglish',
+                           'post_type' => 'lectures',
                            'orderby' => 'title',
                            'order' => 'ASC',
                            'posts_per_page' => -1,
