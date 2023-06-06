@@ -32,7 +32,7 @@
 
 
                          <div class="workshop-nav">
-                            <button @click="resetTaxFilters"  class="btn--basic btn--outline" type="button" name="button" data-tax="">All<span> (<?php echo $count_posts ?>)</span> </button>
+                            <button @click="resetTaxFilters"  class="btn--basic btn--outline" type="button" name="button" data-tax="">All<span></span> </button>
 
                        <?php
                        foreach ($var_valmennukset as $terms)
@@ -59,7 +59,7 @@
                            'tax_query' => array(
                                'relation' => 'AND', // at the same time meet both conditions
                    array(
-                       'taxonomy' => 'valmennuskategoriat', // custom tag taxonomy name
+                       'taxonomy' => 'valmennuskategoriatenglish', // custom tag taxonomy name
                        'field'    => 'term_id',
                        'terms'    => array( $valmennukset->term_id ),
                    ),
@@ -109,7 +109,8 @@
                                                </h3>
 
                                                <div class="capsule-wrap ">
-                       <a class="btn--basic btn--basic--small btn--outline" @click="runModal" data-modal="<?php echo get_permalink(); ?>" href="#">Lue Lisää</a> <a class="btn--basic btn--basic--small btn--dark" style=" " href="#" @click="runModalContact">varaa</a>
+                       <a class="btn--basic btn--basic--small btn--outline" @click="runModal" data-modal="<?php echo get_permalink(); ?>" href="#">Read more</a>
+                       <!-- <a class="btn--basic btn--basic--small btn--dark" style=" " href="#" @click="runModalContact">varaa</a> -->
                      </div>
                                          <div class="-footer">
                                            <?php   $repeater = get_lzb_meta( 'valmennukset-tags' ); ?>
