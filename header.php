@@ -210,7 +210,7 @@ $page_name = get_the_title();
 
 
 
-                      <a class="-nav-link Target-- -main-link" href="/kokemuksia/"> <span>References</span></a>
+                      <a class="-nav-link Target-- -main-link" href="/en/references/"> <span>References</span></a>
 
 
 
@@ -336,157 +336,9 @@ if( empty( $image ) ): ?>
 
               <?php endif; ?>
 
-      <div class="dropdown-nav hardcode" x-data="{ dropdown_open: false }" :class="dropdown_open && 'S-active--dropdown'"  @mouseleave="dropdown_open = false; $store.dropdown = false">
-          <button class="-nav-link Target--palvelut" href="/" @mouseenter="dropdown_open = true; $store.dropdown = true">Mitä teemme</button>
-          <div class="dropdown-nav__wrap" @mouseleave="dropdown_open = false; $store.dropdown = false">
-            <div class="dropdown-nav__content">
-            <div class="flx-container">
-              <div class="dropdown-nav__cell -left">
-                <h3 class="f--bold">Mitä teemme </h3>
-                <p>Tarjoamme vaikuttavia hyvinvoinnin ja
-Itsensä johtaminen
-Etätyö- ja hybridityö
-tuottavuuden nostamiseen keskittyviä henkilöstön kehittämisen palveluita tietotyöorganisaatioille.</p>
-<div class="-arrow-link">
-  <a href="/palvelut/">Kaikki palvelut</a>
-      <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg>
-</div>
-
-              </div>
-              <div class="dropdown-nav__cell -right">
-                <ul class="-ul">
-                  <li class="-li">
-                    <a class="-nav-link Target-- -main-link" href="/johtamisen-ja-esimiestyon-valmennus/"> <span class="f--bold"> <img class="lazyload"  data-src="https://lifted.fi/wp-content/uploads/2021/03/Lifted-ikonit-siniset-25.png" alt=""> Johtaminen</span>
-                  <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
-                    <!-- <div class="-sub-links">
-                      <a href="#" class="tag-capsule ">Ländäri esimiestyö</a>     <a href="#" class="tag-capsule">Ländäri Tiimityö</a>     <a href="#" class="tag-capsule">Ländäri Tiimityö</a>
-                       <a href="#" class="tag-capsule">Ländäri johtaminen</a>
-
-                    </div> -->
-
-                  </li>
-                  <li class="-li">
-                    <a class="-nav-link Target-- -main-link" href="/tyoyhteisotaitojen-ja-tiimityon-valmennus/"> <span class="f--bold"> <img class="lazyload"  data-src="https://lifted.fi/wp-content/uploads/2021/03/Lifted-ikonit-siniset-23.png" alt=""> Tiimityö</span>
-                  <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
-
-                  </li>
-                  <li class="-li">
-
-                        <a class="-nav-link Target-- -main-link" href="/palvelu"> <span class="f--bold"> <img class="lazyload"  data-src="https://lifted.fi/wp-content/uploads/2021/03/Lifted-ikonit-siniset-09.png" alt=""> Itsensä johtaminen</span>
-                      <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
-
-
-                  </li>
-                  <li class="-li">
-
-                        <a class="-nav-link Target-- -main-link" href="/luennot"> <span>Luennot ja Workshopit</span>
-                      <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
-
-
-                  </li>
 
 
 
-
-
-                </ul>
-                      </div>
-              </div>
-
-            </div>
-            </div>
-
-          </div>
-
-          <div class="dropdown-nav hardcode" x-data="{ dropdown_open: false }" :class="dropdown_open && 'S-active--dropdown'"  @mouseleave="dropdown_open = false">
-              <button class="-nav-link Target--palvelut" href="/" @mouseenter="dropdown_open = true; $store.dropdown = true">Sisällöt</button>
-              <div class="dropdown-nav__wrap" @mouseleave="dropdown_open = false">
-                <div class="dropdown-nav__content">
-                <div class="flx-container">
-                  <div class="dropdown-nav__cell -left">
-                    <h3 class="f--bold">Sisällöt</h3>
-                    <p>Tarjoamme vaikuttavia hyvinvoinnin ja
-    Itsensä johtaminen
-    Etätyö- ja hybridityö
-    tuottavuuden nostamiseen keskittyviä henkilöstön kehittämisen palveluita tietotyöorganisaatioille.</p>
-
-
-                  </div>
-                  <div class="dropdown-nav__cell -right">
-                    <ul class="-ul">
-                      <li class="-li">
-                        <a class="-nav-link Target-- -main-link" href="/artikkelit"> <span>Artikkelit</span>
-                      <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
-
-
-                      </li>
-                      <li class="-li">
-                        <a class="-nav-link Target-- -main-link" href="/category/podcast/"> <span>Podcast</span>
-                      <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
-
-                      </li>
-                      <li class="-li">
-
-                            <a class="-nav-link Target-- -main-link" href="/materiaalit"> <span>Materiaalit</span>
-                          <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
-                        </div>
-
-                      </li>
-
-
-                    </ul>
-
-                  </div>
-
-                </div>
-                </div>
-
-              </div>
-
-              <div class="dropdown-nav hardcode" x-data="{ dropdown_open: false }" :class="dropdown_open && 'S-active--dropdown'"  @mouseleave="dropdown_open = false">
-                  <button class="-nav-link Target--palvelut" href="/" @mouseenter="dropdown_open = true; $store.dropdown = true">Meistä</button>
-                  <div class="dropdown-nav__wrap" @mouseleave="dropdown_open = false">
-                    <div class="dropdown-nav__content">
-                    <div class="flx-container">
-                      <div class="dropdown-nav__cell -left">
-                        <h3 class="f--bold">Meistä</h3>
-                        <p>Tarjoamme vaikuttavia hyvinvoinnin ja
-        Itsensä johtaminen
-        Etätyö- ja hybridityö
-        tuottavuuden nostamiseen keskittyviä henkilöstön kehittämisen palveluita tietotyöorganisaatioille.</p>
-
-
-                      </div>
-                      <div class="dropdown-nav__cell -right">
-                        <ul class="-ul">
-                          <li class="-li">
-                            <a class="-nav-link Target-- -main-link" href="/"> <span>Lifted</span>
-                          <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
-
-
-                          </li>
-                          <li class="-li">
-                            <a class="-nav-link Target-- -main-link" href="/asiantuntijat"> <span>Asiantuntijat</span>
-                          <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
-
-                          </li>
-                          <li class="-li">
-
-                                <a class="-nav-link Target-- -main-link" href="/kokemuksia"> <span>Kokemuksia</span>
-                              <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
-                            </div>
-
-                          </li>
-
-
-                        </ul>
-
-                      </div>
-
-                    </div>
-                    </div>
-
-                  </div>
 
 
                     <a class="-nav-link Target-- -main-link" href="/kokemuksia/"> <span>Referenssit</span></a>
@@ -644,6 +496,114 @@ lang-switch--fi-active
 <div class="fixed-mobile-navigation_inner U_container U_base-pad" style="">
 
 
+  <?php if ( get_field( 'lang' ) == 1 ) { ?>
+
+    <nav class="fixed-mobile-navigation__links">
+      <div class="capsule-wrap ">
+<a class="btn--basic btn--dark " style="color:white" href="/en/contact">Contact us</a>
+</div>
+
+
+<?php if( have_rows('navigation_en', 'option') ): ?>
+
+
+
+    <?php while( have_rows('navigation_en', 'option') ) : the_row(); ?>
+
+
+
+
+
+      <div class="mobile-nav-unit">
+      <div class="">
+        <div class="">
+          <h3 class="f--bold"><?php the_sub_field('group_name'); ?></h3>
+          <p>
+<?php the_sub_field('group_info_text'); ?>
+
+
+
+          </p>
+
+
+
+
+
+
+        </div>
+        <div class="dropdown-nav__cell -right">
+          <ul class="-ul">
+              <?php while( have_rows('links', 'option') ) : the_row(); ?>
+                <?php $link = get_sub_field('nav_link'); ?>
+                <?php $link_url = $link['url'];
+                $link_title = $link['title']; ?>
+
+                <?php
+                $image = get_sub_field('nav_link_icon');
+if( !empty( $image ) ): ?>
+<li class="-li">
+
+<a class="-nav-link Target-- -main-link" href="<?php echo $link_url; ?>"> <span class="f--bold" >  <img class="lazyload"  width="30" height="30" data-src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" /> <?php echo $link_title; ?></span>
+<svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
+</li>
+
+<?php endif; ?>
+<?php
+if( empty( $image ) ): ?>
+<li class="-li">
+
+<a class="-nav-link Target-- -main-link" href="<?php echo $link_url; ?>"> <span><?php echo $link_title; ?></span>
+<svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
+</li>
+
+
+<img class="lazyload"  data-src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+<?php endif; ?>
+
+                  <?php endwhile; ?>
+
+
+                  <?php $link_m = get_sub_field('group_main_link'); ?>
+                  <?php
+                  if( $link_m ):
+
+
+                  $link_m_url = $link_m['url'];
+                  $link_m_title = $link_m['title'];
+
+                  ?>
+
+                  <li class="-li">
+
+                        <a class="-nav-link Target-- -main-link" href="<?php echo $link_m_url; ?>"> <span><?php echo   $link_m_title; ?></span>
+                      <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
+
+
+                  </li>
+                  <?php endif; ?>
+
+
+
+
+          </ul>
+          </div>
+        </div>
+      </div>
+
+          <?php endwhile; ?>
+
+        <?php endif; ?>
+
+
+
+    </nav>
+
+
+
+
+  <?php } else { ?>
+
+
 
 
 
@@ -745,165 +705,10 @@ if( empty( $image ) ): ?>
 
 
 
-
-      <div class="mobile-nav-unit">
-      <div class="">
-        <div class="">
-          <h3 class="f--bold">Mitä teemme </h3>
-          <p>Tarjoamme vaikuttavia hyvinvoinnin ja
-Itsensä johtaminen
-Etätyö- ja hybridityö
-tuottavuuden nostamiseen keskittyviä henkilöstön kehittämisen palveluita tietotyöorganisaatioille.</p>
-<!-- <div class="-arrow-link">
-<a href="#">Kaikki palvelut</a>
-<svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg>
-</div> -->
-
-        </div>
-        <div class="dropdown-nav__cell -right">
-          <ul class="-ul">
-            <li class="-li">
-              <a class="-nav-link Target-- -main-link" href="/johtamisen-ja-esimiestyon-valmennus/"> <span class="f--bold"> <img class="lazyload"  data-src="https://lifted.fi/wp-content/uploads/2021/03/Lifted-ikonit-siniset-25.png" alt=""> Johtaminen</span>
-            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
-              <!-- <div class="-sub-links">
-                <a href="#" class="tag-capsule ">Ländäri esimiestyö</a>     <a href="#" class="tag-capsule">Ländäri Tiimityö</a>     <a href="#" class="tag-capsule">Ländäri Tiimityö</a>
-                 <a href="#" class="tag-capsule">Ländäri johtaminen</a>
-
-              </div> -->
-
-            </li>
-            <li class="-li">
-              <a class="-nav-link Target-- -main-link" href="/tyoyhteisotaitojen-ja-tiimityon-valmennus/"> <span class="f--bold"> <img class="lazyload"  data-src="https://lifted.fi/wp-content/uploads/2021/03/Lifted-ikonit-siniset-23.png" alt=""> Tiimityö</span>
-            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
-
-            </li>
-            <li class="-li">
-
-                  <a class="-nav-link Target-- -main-link" href="/palvelu"> <span class="f--bold"> <img class="lazyload"  data-src="https://lifted.fi/wp-content/uploads/2021/03/Lifted-ikonit-siniset-09.png" alt=""> Itsensä johtaminen</span>
-                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
-
-
-            </li>
-            <li class="-li">
-
-                  <a class="-nav-link Target-- -main-link" href="/luennot"> <span>Luennot ja Workshopit</span>
-                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
-
-
-            </li>
-            <li class="-li">
-
-                  <a class="-nav-link Target-- -main-link" href="/palvelut"> <span>Kaikki palvelut</span>
-                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
-
-
-            </li>
-
-
-
-
-
-
-
-          </ul>
-                </div>
-        </div>
-
-      </div>
-
-
-      <div class="mobile-nav-unit">
-      <div class="">
-        <div class="">
-          <h3 class="f--bold">Sisällöt</h3>
-          <p>Tarjoamme vaikuttavia hyvinvoinnin ja
-Itsensä johtaminen
-Etätyö- ja hybridityö
-tuottavuuden nostamiseen keskittyviä henkilöstön kehittämisen palveluita tietotyöorganisaatioille.</p>
-
-
-        </div>
-        <div class="dropdown-nav__cell -right">
-          <ul class="-ul">
-            <li class="-li">
-              <a class="-nav-link Target-- -main-link" href="/artikkelit"> <span>Artikkelit</span>
-            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
-
-
-            </li>
-            <li class="-li">
-              <a class="-nav-link Target-- -main-link" href="/category/podcast/"> <span>Podcast</span>
-            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
-
-            </li>
-            <li class="-li">
-
-                  <a class="-nav-link Target-- -main-link" href="/materiaalit"> <span>Materiaalit</span>
-                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
-              </div>
-        </div>
-
-      </div>
-
-      <div class="mobile-nav-unit">
-      <div class="">
-        <div class="">
-          <h3 class="f--bold">Meistä</h3>
-          <p>Tarjoamme vaikuttavia hyvinvoinnin ja
-      Itsensä johtaminen
-      Etätyö- ja hybridityö
-      tuottavuuden nostamiseen keskittyviä henkilöstön kehittämisen palveluita tietotyöorganisaatioille.</p>
-
-
-        </div>
-        <div class="dropdown-nav__cell -right">
-          <ul class="-ul">
-            <li class="-li">
-              <a class="-nav-link Target-- -main-link" href="/"> <span>Lifted</span>
-            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
-
-
-            </li>
-            <li class="-li">
-              <a class="-nav-link Target-- -main-link" href="/asiantuntijat"> <span>Asiantuntijat</span>
-            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
-
-            </li>
-            <li class="-li">
-
-                  <a class="-nav-link Target-- -main-link" href="/kokemuksia"> <span>Kokemuksia</span>
-                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
-              </div>
-        </div>
-
-      </div>
-
-
-
-
-      <!-- <?php if ( get_field( 'lang' ) == 1 ) { ?>
-        <a class="-nav-link Target--palvelut " href="/en/bikes">Bikes</a>
-        <a class="-nav-link Target--" href="/en/">Saariselkä
-        </a>
-        <a class="-nav-link Target--hinnasto" href="en/pricing">Pricing
-        </a>
-
-        <a class="-nav-link Target--yhteystiedot" href="/en/contact">Contact</a>
-            <a class="f--medium fixed-order-cta" href="varaa" target="_blank">Book Now</a>
-
-  <?php } else { ?>
-    <a class="-nav-link Target--palvelut " href="/">Pyörät</a>
-    <a class="-nav-link Target--" href="/">Saariselkä
-    </a>
-    <a class="-nav-link Target--hinnasto" href="/hinnasto">Hinnasto
-    </a>
-    <a class="-nav-link Target--yhteystiedot" href="/yhteystiedot">Yhteystiedot</a>
-    <a class="f--medium fixed-order-cta" href="varaa" target="_blank">Varaa nyt</a>
-
-  <?php } ?> -->
-
-
     </nav>
+
+
+      <?php } ?>
 
 
 
