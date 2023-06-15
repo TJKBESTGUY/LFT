@@ -696,7 +696,7 @@ if ( ! function_exists( 'liftcast_loop_output' ) ) :
 
 				             <div class="lazy-img-aspect">
 
-				             	<img class="lazyload lazyanim" data-src="<?php echo get_template_directory_uri(); ?>/images/lifcast_cropped.jpg" alt="Lifcast">
+				             	<img class="lazyload lazyanim" data-src="<?php echo get_template_directory_uri(); ?>/images/lifcast_extended.jpg" alt="Lifcast">
 				      </div>
 				      </div>
 
