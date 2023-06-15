@@ -696,7 +696,7 @@ if ( ! function_exists( 'liftcast_loop_output' ) ) :
 
 				             <div class="lazy-img-aspect">
 
-				             <img decoding="async" class="lazyanim  lazyloaded" data-src=" /wp-content/uploads/2022/11/liftcast-1.jpg" alt="" src=" /wp-content/uploads/2022/11/liftcast-1.jpg">
+				             	<img class="lazyload lazyanim" data-src="<?php echo get_template_directory_uri(); ?>/images/lifcast.jpg" alt="Lifcast">
 				      </div>
 				      </div>
 
@@ -724,7 +724,7 @@ if ( ! function_exists( 'liftcast_loop_output' ) ) :
 												<div class="cast-play-cell" style="position:relative">
 														<a href="<?php the_permalink(); ?>" style="width:100%;height:100%;position:absolute;z-index:3;">
 																			</a>
-													<img class="lazyload lazyanim" data-src="<?php echo get_template_directory_uri(); ?>/images/lifcast.jpg" alt="Lifcast">
+													<img class="lazyload lazyanim" data-src="https://lifted.fi/wp-content/uploads/2022/11/liftcast_1500x1500-1-768x768.jpg" alt="">
 													<div class="content">
 														<div class="-header">
 																<a href="<?php the_permalink(); ?>">Lue jaksoesittely</a>
@@ -760,7 +760,7 @@ if ( ! function_exists( 'liftcast_loop_output' ) ) :
 				      <a class="btn--basic btn--basic--small btn--dark" style=""  target="_blank"  href="https://www.podplay.com/fi-fi/podcasts/liftcast-17394">Podplay</a>
 				            <a class="btn--basic btn--basic--small btn--dark" style=""  target="_blank"  href="https://open.spotify.com/show/3glCt1KuSbUQa3S8UYPFwD">Apple Podcasts</a>
 
-				        <a class="btn--basic btn--dark" style="background:#04aef2;" href="/podcasti">Lifcast</a>
+				        <a class="btn--basic btn--dark" style="background:#04aef2;" href="/podcast/">Lifcast</a>
 
 				    </div>
 				      </div>
