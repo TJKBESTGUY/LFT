@@ -31,7 +31,7 @@ get_header();
           </div>
 
         <?php
-          $category = get_category( get_query_var( 'cat' ) );
+          $category = get_queried_object();
           $cat_id = $category->cat_ID;
           $cat_name = $category->name;
         // $categories = get_the_category();
@@ -46,15 +46,12 @@ get_header();
          <div class="module--header-block  module--header-block--no-img " style="background:#ffffff">
           <div class="flx-container">
             <div class="cell header-block__meta U-inner-content--x U-inner-content--y">
-           <h1 class="base-text">
-            <!-- <?php  echo  $category_id; ?> -->
-            <?php  echo  $cat_name; ?>
-           </h1>
+        
 
            <div class="header-block__txt">
 
 
-         <h2 id=""><?php echo category_description($cat_id); ?></h2>
+         <h2 id="">  <?php  echo  $cat_name; ?></h2>
 
 
 
@@ -80,40 +77,35 @@ get_header();
 
                 <div class="module--blog-app -x-pad">
                   <div class="workshop-nav">
+
                      <a  href="/artikkelit" class="btn--basic btn--basic--small btn--dark"  data-tax="">Uusimmat Artikkelit</a>
                      <?php
                    // get all the valmennukset tags from the database
-                   $var_valmennukset = get_terms( array(
+                   $var_cat = get_terms( array(
                            'taxonomy' => 'aiheet',
                            'hide_empty' => 1,
+                             'parent' => 0,
                    ) );
 
                         ?>
-
                      <?php
-                     foreach ($var_valmennukset as $terms)
+                     foreach ($var_cat as $terms)
                      {
                             ?>
-
-                            <a  href="/aiheet/<?php   echo $terms->slug; ?>" class="btn--basic btn--basic--small btn--outline   <?php
-                              if ( $terms->name ==  $category_id ) {
-                                echo " S-active";
-                          }
-                               ?>" type="button" name="button" data-tax="<?php   echo $terms->name; ?>"><?php   echo $terms->name; ?> <span>(<?php  echo $terms->count; ?>)</span> </a>
+                            <a  href="/aiheet/<?php   echo $terms->slug; ?>" class="btn--basic btn--basic--small btn--outline" type="button" name="button" data-tax="<?php   echo $terms->name; ?>"><?php   echo $terms->name; ?> <span>(<?php  echo $terms->count; ?>)</span> </a>
 
 
                             <?php
                            }
                            ?>
                            <div class="page-index">
-                             Sivu:
+                                Sivu:
                            <?php
                            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                            echo $paged.'/'.$wp_query->max_num_pages;
                            ?>
                               </div>
-
-                </div>
+        </div>
                   <div class="grid-container">
                     <?php
                     if ( have_posts() ):
