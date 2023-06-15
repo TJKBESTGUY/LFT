@@ -76,10 +76,6 @@ if( $term ): ?>
 
       </div>
 
-      <div class="-footer">
-        <span class="-date"><?php echo get_the_date("j.n.Y") ?></span>
-      </div>
-
     </div>
 </div>
 

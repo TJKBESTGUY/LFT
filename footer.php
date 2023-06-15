@@ -177,51 +177,6 @@
 
 
 
-     <div class="link-group hardcode">
-       <p class="footer-group-header">Mitä teemme</p>
-    <ul>
-     <li>Johtaminen</li>
-     <li>Tiimityö</li>
-     <li>Itsensä johtaminen</li>
-     <li>Luennot ja Workshopit</li>
-      <li>Kaikki palvelut</li>
-
-
-    </ul>
-     </div>
-     <div class="link-group hardcode">
-       <p class="footer-group-header">Sisällöt</p>
-    <ul>
-     <li>Artikkelit</li>
-     <li>Podcast</li>
-     <li>Materiaalit</li>
-
-
-
-    </ul>
-     </div>
-     <div class="link-group hardcode">
-       <p class="footer-group-header">Meistä</p>
-    <ul>
-       <li>Asiantuntijat</li>
-
-     <li>Kokemuksia</li>
-      <li>Ota Yhteyttä</li>
-
-
-    </ul>
-     </div>
-     <div class="link-group hardcode">
-       <p class="footer-group-header">Seuraa meitä</p>
-    <ul>
-     <li>LinkedIn</li>
-     <li>Lifcast</li>
-     <li>Twitter</li>
-     <li>YouTube</li>
-
-
-    </ul>
-     </div>
 
 
 
@@ -240,7 +195,7 @@
                                                   </h3>
                                                   <p>Saat uusimmat puheenaiheet ja tutkimustulokset suoraan sähköpostiisi joka kuukausi.</p>
                                                   <div class="capsule-wrap capsule-wrap--center">
-                          <a class="btn--basic btn--dark" style="" href="#">Tilaa Uutiskirje</a>
+                          <a class="btn--basic btn--dark" style="" href="/uutiskirje/">Tilaa Uutiskirje</a>
                         </div>
 
                                             </div>
