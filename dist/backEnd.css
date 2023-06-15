@@ -3129,6 +3129,7 @@ div .editor-styles-wrapper .acf-block-preview .module--split-content .split-cont
   div .editor-styles-wrapper .acf-block-preview .module--split-content .split-content__txt {
     width: 100%;
     max-width: 450px;
+    max-width: 600px;
     order: 2;
     margin-top: 20px;
     min-width: 50%;
@@ -3138,6 +3139,7 @@ div .editor-styles-wrapper .acf-block-preview .module--split-content .split-cont
   div .editor-styles-wrapper .acf-block-preview .module--split-content .split-content__img {
     width: 100%;
     max-width: 450px;
+    max-width: 600px;
     order: 1;
   }
 }

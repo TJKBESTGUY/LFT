@@ -3047,6 +3047,7 @@ Moved: _kohteet
   .module--split-content .split-content__txt {
     width: 100%;
     max-width: 450px;
+    max-width: 600px;
     order: 2;
     margin-top: 20px;
     min-width: 50%;
@@ -3057,6 +3058,7 @@ Moved: _kohteet
   .module--split-content .split-content__img {
     width: 100%;
     max-width: 450px;
+    max-width: 600px;
     order: 1;
   }
 }
