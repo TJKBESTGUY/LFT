@@ -93,13 +93,13 @@
   <div class="section-inner-container U_container U_base-pad" style="max-width:;">
     <div class="section-bg-container" style="background:">
       <div class="lazyblock-text-container-ZFTI3r wp-block-lazyblock-text-container">
-        <div class="module--basic-content basic-content-flx  basic-content--bottom   " data-aos="heading-txt">
+        <div class="module--basic-content basic-content-flx  basic-content--bottom   -x-pad" data-aos="heading-txt">
           <div class="basic-content__inner" style="max-width:100%;">
             <h3 class="wp-block-heading" id="tutustu-myos-uusimpiin-artikkeleihimme">Uusimmat sisällöt:</h3>
           </div>
         </div>
       </div>
-      <div class="module--slider U_container"
+      <div class="module--slider U_container -x-pad"
 
 
         x-data="{swiper: null}"
@@ -150,7 +150,7 @@
 
       </div>
         <div class="capsule-wrap " style="margin-top:0;"> <a class="btn--basic btn--dark " style=" " href="/artikkelit/">Kaikki artikkelit</a>
-         <a class="btn--basic btn--dark " style=" " href="/podcast/">Kaikki Podcastit</a></div>
+       </div>
       </div>
 
     </div>
