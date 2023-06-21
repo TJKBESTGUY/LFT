@@ -1745,7 +1745,7 @@ filter: grayscale(1);
 @for $i from 1 through 15 {
  .anim--cell:nth-of-type(#{$i}) {
 
-  transition-delay:(#{$i*0.1s});
+  transition-delay:(#{$i*0.1s !important});
   }
 }
  }
