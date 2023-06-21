@@ -1739,14 +1739,16 @@ filter: grayscale(1);
   transition-delay:(#{$i*0.25s});
   }
 }
+ .themes {
+
 
 @for $i from 1 through 15 {
- .themes .anim--cell:nth-of-type(#{$i}) {
+ .anim--cell:nth-of-type(#{$i}) {
 
   transition-delay:(#{$i*0.1s});
   }
 }
-
+ }
 
 // [data-aos="info-boxes"] {
 //   opacity: 0;
