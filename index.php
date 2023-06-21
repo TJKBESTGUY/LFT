@@ -161,7 +161,7 @@ $ajaxposts = new WP_Query([
 
                   </div>
 
-                  <div class="posts-more-container grid-container" style="margin-top:20px">
+                  <div class="posts-more-container grid-container" style="margin-top:60px">
 
                                 </div>
 
