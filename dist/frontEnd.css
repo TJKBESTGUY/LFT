@@ -2851,11 +2851,6 @@ Moved: _kohteet
     font-size: 1.4rem;
   }
 }
-@media screen and (max-width: 500px) {
-  .module--split-content .cell-basic:first-of-type {
-    padding-top: 0 !important;
-  }
-}
 
 .flx--50 {
   margin-left: -40px;

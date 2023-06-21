@@ -2940,11 +2940,6 @@ div .editor-styles-wrapper .acf-block-preview .module--split-content .flx--50, d
     font-size: 1.4rem;
   }
 }
-@media screen and (max-width: 500px) {
-  div .editor-styles-wrapper .acf-block-preview .module--split-content .cell-basic:first-of-type {
-    padding-top: 0 !important;
-  }
-}
 div .editor-styles-wrapper .acf-block-preview .flx--50 {
   margin-left: -40px;
   margin-right: -40px;
