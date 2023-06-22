@@ -89,7 +89,7 @@
                    </div>
                  </article>
 
-                 <section id="" class="section--basic U-sec-pad--small section-theme--light section-width--normal ">
+                 <!-- <section id="" class="section--basic U-sec-pad--small section-theme--light section-width--normal ">
   <div class="section-inner-container U_container U_base-pad" style="max-width:;">
     <div class="section-bg-container" style="background:">
       <div class="lazyblock-text-container-ZFTI3r wp-block-lazyblock-text-container">
@@ -155,7 +155,7 @@
 
     </div>
   </div>
-</section>
+</section> -->
 
 
 
