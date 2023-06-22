@@ -54,8 +54,8 @@
 
 
 
-  <script  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"></script>
-   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+  <!-- <script  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"></script>
+   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script> -->
 
   <script>
 
@@ -497,7 +497,7 @@ lang-switch--fi-active
   </div>
 </div>
 
-<div class="fixed-mobile-navigation">
+<div class="fixed-mobile-navigation" style="display:none">
 <div class="fixed-mobile-navigation_inner U_container U_base-pad" style="">
 
 

@@ -7,7 +7,11 @@ nav_trigger_hide.addEventListener("click", mobile_nav_hide);
 function mobile_nav (e) {
 
 if (!document.body.classList.contains('S-active--mobile-nav')) {
-doc_body.classList.add("S-active--mobile-nav")
+	document.querySelector(".fixed-mobile-navigation").style.display = "block"
+	setTimeout(() => {
+  doc_body.classList.add("S-active--mobile-nav")
+}, 50);
+
 }
 else {
 	doc_body.classList.remove("S-active--mobile-nav")

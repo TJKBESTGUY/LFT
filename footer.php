@@ -251,17 +251,17 @@
 <div class="lazyblock-contact-avatart-Z1dmiqC wp-block-lazyblock-contact-avatart"><div class="module--contact-avatar -y-pad--small">
     <div class="contact-avatar__image">
       <div class="placeholder-img">
-        <img class="lazyload lazyanim" data-src=" /wp-content/uploads/2022/12/Jukka-Joutsiniemi-2-scaled-1-e1676296744902-15x15.jpeg" alt="" src="">
+        <img class="lazyload lazyanim" data-src=" /wp-content/uploads/2023/06/Screen-Shot-2023-06-05-at-11.59.11-AM.png" alt="" src="">
 
        </div>
        <div class="lazy-img">
-        <img decoding="async" class="lazyanim lazyload" data-src=" /wp-content/uploads/2022/12/Jukka-Joutsiniemi-2-scaled-1-2000x2000.jpeg" alt="" src="">
+        <img decoding="async" class="lazyanim lazyload" data-src=" /wp-content/uploads/2023/06/Screen-Shot-2023-06-05-at-11.59.11-AM.png" alt="" src="">
 </div>
 </div>
 <div class="contact-avatar__content">
 
 
-<p class="has-text-align-center"><strong>Jukka Joutsiniemi</strong><br>Co-founder<br>Työyhteisöjen sparraaja</p>
+<p class="has-text-align-center"><strong>Jukka Joutsiniemi</strong><br>Co-founder<br>Johtamisen ja työyhteisöiden kehittäjä</p>
 
 
 
@@ -271,9 +271,9 @@
 
 <p class="has-text-align-center">Tai varaa aika suoraan kalenteristani<br>ilmaiselle sparraukselle tästä</p>
 
-<div class="pipedriveWebForms" data-pd-webforms="https://webforms.pipedrive.com/f/1wWpPVVzF8pMgU4P2cz2rhDsaa8gClC36zWzFhnx43hG6NKNaV4CCDtpXthpcjsWL">
-  <!-- <script defer src="https://webforms.pipedrive.com/f/loader"></script> -->
-  <div class="lazyload" data-script="https://webforms.pipedrive.com/f/loader">
+<div class="pipedriveWebForms" data-pd-webforms="https://webforms.pipedrive.com/f/32OwwG8L4jJ4CBR9fHXwDPVmVFuObyrOhmeYYyOzDdr88TfF3FSiz7ut8HWrPGqDp">
+    <div class="lazyload" data-script="https://webforms.pipedrive.com/f/loader">
+
 </div>
 </div>
 

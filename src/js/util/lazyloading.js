@@ -6,7 +6,7 @@ import 'lazysizes';
 window.lazySizesConfig = window.lazySizesConfig || {};
 
 lazySizesConfig.preloadAfterLoad = false;
-
+lazySizesConfig.hFac = 0.1;
 
 
 document.addEventListener('lazyloaded', function(e){
