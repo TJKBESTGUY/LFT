@@ -95,7 +95,7 @@
       <div class="lazyblock-text-container-ZFTI3r wp-block-lazyblock-text-container">
         <div class="module--basic-content basic-content-flx  basic-content--bottom   -x-pad" data-aos="heading-txt">
           <div class="basic-content__inner" style="max-width:100%;">
-            <h3 class="wp-block-heading" id="tutustu-myos-uusimpiin-artikkeleihimme">Uusimmat sisällöt:</h3>
+            <h3 class="wp-block-heading" id="tutustu-myos-uusimpiin-artikkeleihimme">More content in english:</h3>
           </div>
         </div>
       </div>
