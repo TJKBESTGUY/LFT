@@ -1027,7 +1027,8 @@ margin-right: -10px;
 }
 
 .cell-basic .basic-card__inner {
-  padding: 40px;
+  // padding: 40px;
+  padding: 30px;
   @media screen and (max-width: 1400px) {
 
       padding: 30px;
@@ -1036,13 +1037,13 @@ margin-right: -10px;
   @media screen and (max-width: 800px) {
 
       padding: 30px;
-
+        padding: 24px;
   }
 
   @media screen and (max-width: 700px) {
 
       padding: 20px;
-
+        padding: 16px;
   }
 
 

@@ -2985,7 +2985,7 @@ Moved: _kohteet
 }
 
 .cell-basic .basic-card__inner {
-  padding: 40px;
+  padding: 30px;
 }
 @media screen and (max-width: 1400px) {
   .cell-basic .basic-card__inner {
@@ -2995,11 +2995,13 @@ Moved: _kohteet
 @media screen and (max-width: 800px) {
   .cell-basic .basic-card__inner {
     padding: 30px;
+    padding: 24px;
   }
 }
 @media screen and (max-width: 700px) {
   .cell-basic .basic-card__inner {
     padding: 20px;
+    padding: 16px;
   }
 }
 .cell-basic .basic-card__inner .module--full-image {

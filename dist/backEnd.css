@@ -3065,7 +3065,7 @@ div .editor-styles-wrapper .acf-block-preview .cell-basic .module--full-image {
   margin-bottom: 20px;
 }
 div .editor-styles-wrapper .acf-block-preview .cell-basic .basic-card__inner {
-  padding: 40px;
+  padding: 30px;
 }
 @media screen and (max-width: 1400px) {
   div .editor-styles-wrapper .acf-block-preview .cell-basic .basic-card__inner {
@@ -3075,11 +3075,13 @@ div .editor-styles-wrapper .acf-block-preview .cell-basic .basic-card__inner {
 @media screen and (max-width: 800px) {
   div .editor-styles-wrapper .acf-block-preview .cell-basic .basic-card__inner {
     padding: 30px;
+    padding: 24px;
   }
 }
 @media screen and (max-width: 700px) {
   div .editor-styles-wrapper .acf-block-preview .cell-basic .basic-card__inner {
     padding: 20px;
+    padding: 16px;
   }
 }
 div .editor-styles-wrapper .acf-block-preview .cell-basic .basic-card__inner .module--full-image {
