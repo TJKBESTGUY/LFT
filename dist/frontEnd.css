@@ -3704,7 +3704,7 @@ img.zoom-img {
 
 .scrolling-image .module--full-image {
   min-width: 1200px;
-  padding: 20px 0;
+  padding: 0;
 }
 
 .modal-header-bg {

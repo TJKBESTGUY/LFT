@@ -3701,7 +3701,7 @@ div .editor-styles-wrapper .acf-block-preview .scrolling-image .U_container {
 }
 div .editor-styles-wrapper .acf-block-preview .scrolling-image .module--full-image {
   min-width: 1200px;
-  padding: 20px 0;
+  padding: 0;
 }
 div .editor-styles-wrapper .acf-block-preview .modal-header-bg {
   background-position: top center;
