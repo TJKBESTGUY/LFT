@@ -842,7 +842,7 @@ window.hideModal = function (e) {
   var the_url = page_url;
   var stateObj;
   var pjax_url = the_url;
-  window.history.pushState(stateObj, "", the_url);
+  window.history.replaceState(stateObj, "", the_url);
 };
 
 window.runTaxFilters = function (e) {

@@ -270,6 +270,7 @@
 
 
 <p class="has-text-align-center">Tai varaa aika suoraan kalenteristani<br>ilmaiselle sparraukselle tästä</p>
+<div class="capsule-wrap  capsule-wrap--center "> <a class="btn--basic btn--dark " style=" " href="https://calendly.com/jukkajoutsiniemi/lifted-jukka-joutsiniemi?month=2023-06" target="_blank">Varaa</a></div>
 
 <div class="pipedriveWebForms" data-pd-webforms="https://webforms.pipedrive.com/f/32OwwG8L4jJ4CBR9fHXwDPVmVFuObyrOhmeYYyOzDdr88TfF3FSiz7ut8HWrPGqDp">
     <div class="lazyload" data-script="https://webforms.pipedrive.com/f/loader">
