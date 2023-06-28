@@ -10,14 +10,51 @@
  */
 
 get_header(); ?>
-	<div id="primary" class="error-404 not-found content-area layout-center-content">
+
+<style media="screen">
+	.article-header {
+	text-align: center;
+	color:black;
+	}
+
+	.error404 .site-content {
+		margin-top: 200px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.error404 {
+    background: #fdfdfd;
+
+}
+</style>
+
+	<div id="primary" class="">
 		<main id="main" class="site-main" role="main">
 
-			<div class="container-content text-center">
-				<div class="h1 title-404">404</div>
-					<p><?php _e( 'It looks like nothing was found at this location.', 'lifted' ); ?></p>
-					<a class="button" href="<?php echo home_url(); ?>"><?php _e( 'Go To Home', 'lifted' ); ?></a>
-			</div>
+			<section>
+                           <div class="section-inner-container U_container U_base-pad" style="">
+
+                           <div class="article-header article-header--stacked" style="">
+
+                             <h2>404</h2>
+
+                               <h3>Kyseistä sivua ei valitettavasti löydy.</h3>
+															  <h4>Olemme uudistaneet sivustoamme, joten kaikki linkit eivät välttämättä vielä ohjaudu oikein.<br><br>
+																	Tutustu uudistettuun sivuumme:
+
+																</h4>
+
+																 <div class="capsule-wrap  capsule-wrap--center "> <a class="btn--basic btn--dark " style=" " href="https://lifted.fi">Etusivu</a></div>
+
+                           </div>
+
+
+
+                         </div>
+                                          </section>
+
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
