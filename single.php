@@ -87,6 +87,57 @@
           endif;
           ?>
                    </div>
+
+                   <div class="share-buttons-container">
+  <span class="meta-label">Jaa sisältö</span>
+<div class="share-list">
+<!-- FACEBOOK -->
+<a class="fb-h" onclick="return fbs_click()" target="_blank">
+<img src="https://img.icons8.com/material-rounded/96/000000/facebook-f.png">
+<span>Facebook</span>
+</a>
+
+<!-- TWITTER -->
+<a class="tw-h" onclick="return tbs_click()"  target="_blank">
+<img src="https://img.icons8.com/material-rounded/96/000000/twitter-squared.png">
+<span>Twitter</span>
+</a>
+
+<!-- LINKEDIN -->
+<a class="li-h" onclick="return lbs_click()"  target="_blank">
+<img src="https://img.icons8.com/material-rounded/96/000000/linkedin.png">
+<span>LinkedIn</span>
+</a>
+
+<!-- REDDIT -->
+<a class="re-h" onclick="return rbs_click()" target="_blank">
+<img src="https://img.icons8.com/ios-glyphs/90/000000/reddit.png">
+<span>Reddit</span>
+</a>
+
+<!-- PINTEREST -->
+<a data-pin-do="buttonPin" data-pin-config="none" class="pi-h" onclick="return pbs_click()" target="_blank">
+<img src="https://img.icons8.com/ios-glyphs/90/000000/pinterest.png">
+<span>Pinterest</span>
+</a>
+</div>
+</div>
+
+
+<script type="text/javascript">
+var pageLink = window.location.href;
+var pageTitle = String(document.title).replace(/\&/g, '%26');
+
+function fbs_click() { window.open(`http://www.facebook.com/sharer.php?u=${pageLink}&quote=${pageTitle}`,'sharer','toolbar=0,status=0,width=626,height=436');return false; }
+
+function tbs_click() { window.open(`https://twitter.com/intent/tweet?text=${pageTitle}&url=${pageLink}`,'sharer','toolbar=0,status=0,width=626,height=436');return false; }
+
+function lbs_click() { window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${pageLink}`,'sharer','toolbar=0,status=0,width=626,height=436');return false; }
+
+function rbs_click() { window.open(`https://www.reddit.com/submit?url=${pageLink}`,'sharer','toolbar=0,status=0,width=626,height=436');return false; }
+
+function pbs_click() { window.open(`https://www.pinterest.com/pin/create/button/?&text=${pageTitle}&url=${pageLink}&description=${pageTitle}`,'sharer','toolbar=0,status=0,width=626,height=436');return false; }
+</script>
                  </article>
 
                  <section id="" class="section--basic U-sec-pad--small section-theme--light section-width--normal ">

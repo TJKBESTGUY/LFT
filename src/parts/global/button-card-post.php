@@ -101,7 +101,13 @@ if( $term ): ?>
                  <p class="-guest f--bold"><?php the_field('extra_meta'); ?></p>
          <?php endif; ?>
          <div class="capsule-wrap " style="">
-      <a class="btn--basic btn--dark btn--basic--small" style="" href="<?php the_permalink(); ?>">Lue</a>
+           <?php if( get_field('pod_number') ): ?>
+             <a class="btn--basic btn--dark btn--basic--small" style="" href="<?php the_permalink(); ?>">Tutustu ja kuuntele</a>
+           <?php endif; ?>
+           <?php if( ! get_field('pod_number') ): ?>
+             <a class="btn--basic btn--dark btn--basic--small" style="" href="<?php the_permalink(); ?>">Lue</a>
+           <?php endif; ?>
+
       </div>
 
 

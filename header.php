@@ -758,6 +758,19 @@ if( empty( $image ) ): ?>
 
 </div>
 
+<script>window.pipedriveLeadboosterConfig = {base: 'leadbooster-chat.pipedrive.com',companyId: 7397014,playbookUuid: '6f3bbc27-d69c-4fd5-9977-f6ab012c7d6f',version: 2};(function () {var w = window;if (w.LeadBooster) {console.warn('LeadBooster already exists');} else {w.LeadBooster = {q: [],on: function (n, h) {this.q.push({ t: 'o', n: n, h: h });},trigger: function (n) {this.q.push({ t: 't', n: n });},};}})();</script>
+<script>
+       // Wait for 3 seconds after page load
+       setTimeout(function() {
+           // Create a new script element
+           var script = document.createElement('script');
+           script.src = 'https://leadbooster-chat.pipedrive.com/assets/loader.js';
+           script.async = true;
+
+           // Append the script to the document's body
+           document.body.appendChild(script);
+       }, 3000);
+   </script>
 
 
 

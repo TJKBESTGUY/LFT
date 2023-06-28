@@ -226,7 +226,9 @@
 
 
 <!-- fixed STUFF -->
-<div class="modal-smoke S-hidden"></div>
+<div class="modal-smoke S-hidden"> <div class="" style="display:none;">
+
+</div> </div>
 <div class="modal css-scroll-modal  js--hide-modal S-hidden" @click.self="hideModal">
 <section class="section--modal js--hide-modal" @click.self="hideModal">
   <div class="U_container U_base-pad js--hide-modal" @click.self="hideModal">

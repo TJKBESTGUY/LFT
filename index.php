@@ -51,7 +51,7 @@ get_header();
                 <div class="module--blog-app -x-pad">
                   <div class="workshop-nav">
 
-                     <a  href="/artikkelit" class="btn--basic btn--basic--small btn--dark"  data-tax="">Uusimmat Artikkelit</a>
+                     <a  href="/artikkelit" class="btn--basic btn--basic--small btn--dark"  data-tax="">Uusimmat artikkelit</a>
                      <?php
                    // get all the valmennukset tags from the database
                    $var_cat = get_terms( array(
