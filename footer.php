@@ -487,7 +487,7 @@ window.addEventListener('load', function () {
 
 <style media="screen">
 .cc_div{
-  	font-family: "HDColton-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: "Config-Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 #c-ttl, #s-bl td:before, #s-ttl, .cc_div .b-tl, .cc_div .c-bn {
     font-weight: 400 !important;

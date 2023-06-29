@@ -718,31 +718,18 @@ if( empty( $image ) ): ?>
 
 
       <!-- <div class="fixed-mobile-navigation__sub-links">
-        <div class="">
 
-          <ul>
 
             <?php if ( get_field( 'lang' ) == 1 ) { ?>
 
-              <li>
-                <a href="/rental-terms/">Rental Terms</a>
-              </li>
+
 
   <?php } else { ?>
-    <li>
-      <a href="/vuokrausehdot">Vuokrausehdot</a>
-    </li>
-    <li class="tietosuoja-link">
-      <a href="/Tietosuojaseloste">Tietosuojaseloste</a>
-    </li>
+
 
   <?php } ?>
 
 
-
-
-          </ul>
-        </div>
       </div> -->
 
 
