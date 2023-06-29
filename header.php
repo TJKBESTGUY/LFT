@@ -346,7 +346,7 @@ if( empty( $image ) ): ?>
 
 
 
-                    <a class="-nav-link Target-- -main-link" href="/kokemuksia/"> <span>Referenssit</span></a>
+                    <a class="-nav-link Target-- -main-link" href="https://lifted.fi/referenssit"> <span>Referenssit</span></a>
 
                   <div class="dropdown-nav" x-data="{ dropdown_open: false }" :class="dropdown_open && 'S-active--dropdown'"  @mouseleave="dropdown_open = false">
                       <button class="-nav-link" href="/" @mouseenter="dropdown_open = true; $store.dropdown = true" @keydown.enter="dropdown_open = ! dropdown_open; $store.dropdown = true">Ajankohtaista</button>
