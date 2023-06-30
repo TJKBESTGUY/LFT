@@ -378,7 +378,7 @@ if( empty( $image ) ): ?>
                                     ?>
 
                                     <li class="-li">
-                                        <span class="editor-tag f--bold" style="font-size: 1.4rem;color:">Lifcast</span>
+                                        <span class="editor-tag f--bold" style="font-size: 1.4rem;color:">Liftcast</span>
                                       <a class="-nav-link Target-- -main-link" href="<?php the_permalink(); ?>"> <span><?php echo get_the_title(); ?>	<?php if( get_field('extra_meta') ): ?>
                 													- <?php the_field('extra_meta'); ?><?php endif; ?></span>
                                   </a>
