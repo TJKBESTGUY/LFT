@@ -97,7 +97,12 @@
                               <div class="capsule-wrap capsule-wrap--center">
                                 <button @click="hideModal" class="btn--basic btn--outline" style=" " href="">Sulje ikkuna</button>
                               </div>
-
+                              <div class="static-luento-page-cta" style="display:none">
+                                <h4>Tutustu luentoihimme ja varaa.</h4>
+                              <div class="capsule-wrap capsule-wrap--center">
+                                <a href="/luennot/" class="btn--basic btn--outline" style=" " href="">Kaikki luennot</a>
+                              </div>
+                                      </div>
 
                             </div>
                           </div>
