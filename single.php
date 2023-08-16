@@ -141,6 +141,72 @@ function pbs_click() { window.open(`https://www.pinterest.com/pin/create/button/
                  </article>
 
                  <section id="" class="section--basic U-sec-pad--small section-theme--light section-width--normal ">
+                   <?php
+$featured_posts = get_field('related_posts');
+if( $featured_posts ): ?>
+                   <div class="section-inner-container U_container U_base-pad" style="max-width:;">
+                     <div class="section-bg-container" style="background:">
+                       <div class="lazyblock-text-container-ZFTI3r wp-block-lazyblock-text-container">
+                         <div class="module--basic-content basic-content-flx  basic-content--bottom   -x-pad" data-aos="heading-txt">
+                           <div class="basic-content__inner" style="max-width:100%;">
+                             <h3 class="wp-block-heading" id="">Lue myös:</h3>
+                           </div>
+                         </div>
+                       </div>
+                       <div class="module--slider U_container -x-pad"
+
+
+                         x-data="{swiper: null}"
+                           x-init="swiper = new Swiper($refs.swiper, {
+                             slidesPerView: 'auto',
+                                    spaceBetween: 0,
+                                    grabCursor: true,
+                                    touchStartPreventDefault: false,
+                                   cssMode: swiper_css_mode,
+                                   navigation: {
+                                      nextEl: $refs.next,
+                                     prevEl:  $refs.prev,
+
+                                     },
+                             })"
+                         >
+
+                       <!-- //Wrapper starts -->
+
+                       <div class="swiper swiper-container swiper--extended" x-ref="swiper">
+
+                         <div class="swiper-wrapper">
+
+
+
+
+        <?php foreach( $featured_posts as $post ):
+
+            // Setup this post for WP functions (variable must be named $post).
+            setup_postdata($post); ?>
+                   <?php locate_template('src/parts/global/slidercard-post.php', true, false); ?>
+        <?php endforeach; ?>
+
+        <?php
+        // Reset the global post object so that the rest of the page works correctly.
+        wp_reset_postdata(); ?>
+
+                       </div>
+
+
+                       </div>
+
+                       <div class=" swiper-nav--bottom swiper-nav--right  ">
+                         <div class="swiper-button-prev" style="" x-ref="prev"></div>
+                             <div class="swiper-button-next" style="" x-ref="next"></div>
+
+                       </div>
+
+                       </div>
+
+                     </div>
+                   </div>
+                     <?php endif; ?>
   <div class="section-inner-container U_container U_base-pad" style="max-width:;">
     <div class="section-bg-container" style="background:">
       <div class="lazyblock-text-container-ZFTI3r wp-block-lazyblock-text-container">
@@ -171,6 +237,7 @@ function pbs_click() { window.open(`https://www.pinterest.com/pin/create/button/
       <!-- //Wrapper starts -->
 
       <div class="swiper swiper-container swiper--extended" x-ref="swiper">
+
         <div class="swiper-wrapper">
 
           <?php $args = array(
@@ -193,6 +260,8 @@ function pbs_click() { window.open(`https://www.pinterest.com/pin/create/button/
 
               wp_reset_postdata();  ?>
       </div>
+
+
       </div>
 
       <div class="swiper-nav--bottom swiper-nav--right-absolute ">

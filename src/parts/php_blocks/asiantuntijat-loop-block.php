@@ -32,7 +32,7 @@
     while ( $loop->have_posts() ) : $loop->the_post();
       ?>
 
-	 <?php if ($lang == en ) { ?>
+	 <?php if ($lang == 'en' ) { ?>
    <div class="cell basic-card--on-grid person-card person-card--en">
         <div class="basic-card__inner">
 
