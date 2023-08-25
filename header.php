@@ -241,7 +241,7 @@ $page_name = get_the_title();
 
 
       <div class="nav-cta">
-        <a class="f--medium" href="/yhteystiedot/">Contact us</a>
+        <a class="f--medium" href="/en/contact-us/">Contact us</a>
       </div>
 
 
@@ -505,7 +505,7 @@ lang-switch--fi-active
 
     <nav class="fixed-mobile-navigation__links">
       <div class="capsule-wrap ">
-<a class="btn--basic btn--dark " style="color:white" href="/en/contact">Contact us</a>
+<a class="btn--basic btn--dark " style="color:white" href="/en/contact-us/">Contact us</a>
 </div>
 
 
