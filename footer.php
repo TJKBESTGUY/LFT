@@ -243,7 +243,50 @@
 
 
 <?php if ( get_field( 'lang' ) == 1 ) { ?>
+  <h3 class="has-text-align-center has-text-color" id="kiinnostuitko" style="color:#04aef2"><strong>Are you interested?</strong></h3>
 
+
+
+  <p class="has-text-align-center">Fill out the form and we will contact you today:</p>
+
+
+  <div class="lazyblock-contact-avatart-Z1dmiqC wp-block-lazyblock-contact-avatart"><div class="module--contact-avatar -y-pad--small">
+      <div class="contact-avatar__image">
+        <div class="placeholder-img">
+          <img class="lazyload lazyanim" data-src=" /wp-content/uploads/2023/06/Screen-Shot-2023-06-05-at-11.59.11-AM.png" alt="" src="">
+
+         </div>
+         <div class="lazy-img">
+          <img decoding="async" class="lazyanim lazyload" data-src=" /wp-content/uploads/2023/06/Screen-Shot-2023-06-05-at-11.59.11-AM.png" alt="" src="">
+  </div>
+  </div>
+  <div class="contact-avatar__content">
+
+
+  <p class="has-text-align-center"><strong>Jukka Joutsiniemi</strong><br>Co-founder<br>Developer of leadership & organizations</p>
+
+
+
+  <p class="has-text-align-center"><a href="tel:+358 44 271 1487" data-type="tel" data-id="tel:+358 44 271 1487">+358 44 271 1487</a></p>
+
+
+
+  <p class="has-text-align-center">If you wish, you can also contact us by phone or book a free time directly from the calendar.</p>
+  <div class="capsule-wrap  capsule-wrap--center "> <a class="btn--basic btn--dark " style=" " href="https://calendly.com/jukkajoutsiniemi/lifted-jukka-joutsiniemi?month=2023-06" target="_blank">Book</a></div>
+
+  <div class="pipedriveWebForms" data-pd-webforms="https://webforms.pipedrive.com/f/1HGka6mZW1gtqKA0ajpdcj8ncMtSAPBqd07dX0r0kZKnB8EqX8c2Ph5aeeBKjAfvB">
+      <div class="lazyload" data-script="https://webforms.pipedrive.com/f/loader">
+
+  </div>
+  </div>
+
+  </div>
+
+
+      </div>
+
+
+      </div>
 
    <?php } else { ?>
 <h3 class="has-text-align-center has-text-color" id="kiinnostuitko" style="color:#04aef2"><strong>Kiinnostuitko?</strong></h3>
