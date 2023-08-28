@@ -149,7 +149,7 @@
                                        </div>
 
                                        <template x-teleport=".module--modal-content">
-                                               <?php locate_template('src/parts/modal/modal-valmennukset.php', true, false); ?>
+                                               <?php locate_template('src/parts/modal/modal-valmennukset-en.php', true, false); ?>
                                            </template>
                                                </div>
 
