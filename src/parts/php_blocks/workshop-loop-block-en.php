@@ -110,7 +110,7 @@
 
                                                <div class="capsule-wrap ">
                        <a class="btn--basic btn--basic--small btn--outline" @click="runModal" data-modal="<?php echo get_permalink(); ?>" href="#">Read more</a>
-                       <!-- <a class="btn--basic btn--basic--small btn--dark" style=" " href="#" @click="runModalContact">varaa</a> -->
+                       <a class="btn--basic btn--basic--small btn--dark" style=" " href="#" @click="runModalContact">Book</a>
                      </div>
                                          <div class="-footer">
                                            <?php   $repeater = get_lzb_meta( 'valmennukset-tags' ); ?>
