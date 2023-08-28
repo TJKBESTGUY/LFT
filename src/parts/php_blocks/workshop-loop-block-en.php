@@ -184,6 +184,127 @@
  } else {
 ?>
 
+<?php
+
+
+$term_list = get_the_terms($post->ID, 'valmennuskategoriatenglish');
+
+if ( !empty($term_list) ) :
+foreach($term_list as $term_single) {
+
+}
+endif;
+?>
+
+<?php
+$args = array(
+'post_type' => 'lectures',
+'orderby' => 'title',
+'order' => 'ASC',
+'posts_per_page' => -1,
+'tax_query' => array(
+      array(
+          'taxonomy' => 'valmennuskategoriatenglish',
+          'field' => 'slug',
+          'terms' => $term_single->slug,
+      ),
+        ),
+
+);
+
+ ?>
+
+
+  <div class="module--workshop-app -x-pad">
+<div class="workshop-group-wrap">
+<?php
+$query = new WP_Query( $args );
+if ($query->have_posts()) :
+?>
+
+
+
+<div id="<?php echo  $valmennukset->slug; ?>" class="workshop-group" x-data="{ tax: '<?php echo $valmennukset->name ?>' }" data-tax="<?php echo $valmennukset->name ?>">
+
+
+
+
+
+<div  class="workshop-group__items aside-content">
+
+
+
+  <?php
+while ($query->have_posts()) : $query->the_post();
+      ?>
+
+      <div class="workshop-item info-card">
+        <div class="cell">
+
+        <span class="-cat" x-text="tax"></span>
+            <h3 class="card-title f--bold"><?php the_title( '' ); ?>
+            </h3>
+
+            <div class="capsule-wrap ">
+<a class="btn--basic btn--basic--small btn--outline" @click="runModal" data-modal="<?php echo get_permalink(); ?>" href="#">Read more</a> <a class="btn--basic btn--basic--small btn--dark" style=" " href="#" @click="runModalContact">Book</a>
+</div>
+      <div class="-footer">
+        <?php   $repeater = get_lzb_meta( 'valmennukset-tags' ); ?>
+        <?php
+       foreach ( $repeater as $inner_control ) {
+         ?>
+          <span class="f--bold"><?php echo $inner_control['tag']; ?></span>
+
+         <?php
+       }
+       ?>
+          <!-- <span class="f--bold">+ENGLISH</span>   <span class="f--bold">LIVE</span><span class="f--bold">ETÄ</span> -->
+      </div>
+      </div>
+      <div class="cell">
+        <div class="-list">
+          <?php   $repeater = get_lzb_meta( 'valmennukset-features' ); ?>
+          <?php
+         foreach ( $repeater as $inner_control ) {
+           ?>
+
+            <div class="-item star-li">
+                  <p class="star-symbol">&#8203; <span class="star-symbol__inner"></span> </p><p><?php echo $inner_control['tag']; ?></p>
+            </div>
+
+           <?php
+         }
+         ?>
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <template x-teleport=".module--modal-content">
+            <?php locate_template('src/parts/modal/modal-valmennukset-en.php', true, false); ?>
+        </template>
+            </div>
+
+    <?php
+endwhile;
+  ?>
+
+          </div>
+      </div>
+
+
+  <?php
+wp_reset_postdata();
+endif;
+
+?>
+</div>
+</div>
+
 
  <?php
  }
