@@ -289,9 +289,12 @@
 
 
 $term_list = get_the_terms($post->ID, 'valmennuskategoriat');
+
+if ( !empty($term_list) ) :
 foreach($term_list as $term_single) {
 
 }
+endif;
 ?>
 
 <?php

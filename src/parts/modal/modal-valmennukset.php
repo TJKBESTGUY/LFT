@@ -16,10 +16,13 @@
 <div class="modal-header-bg lazyload lazyanim" data-bg="<?php echo get_template_directory_uri() ?>/images/bg1.jpg">
   <?php $terms = get_the_terms( get_the_ID(), 'valmennuskategoriat' ); ?>
 
-<span class="-cat f--bold"><?php foreach ( $terms as $term )
-{ 
+<span class="-cat f--bold">
+  <?php if ( !empty( $terms) ) : ?>
+  <?php foreach ( $terms as $term )
+{
  echo $term->name;
 } ?>
+<?php endif; ?>
 </span>
 <h1 class="h3 f--bold"><?php the_title( '' ); ?>
 </h1>

@@ -242,7 +242,10 @@
         <div class="basic-content__inner" style="max-width:;">
 
 
+<?php if ( get_field( 'lang' ) == 1 ) { ?>
 
+
+   <?php } else { ?>
 <h3 class="has-text-align-center has-text-color" id="kiinnostuitko" style="color:#04aef2"><strong>Kiinnostuitko?</strong></h3>
 
 
@@ -287,6 +290,9 @@
 
 
     </div>
+
+ <?php } ?>
+
       </div>
     </div>
 
