@@ -428,7 +428,7 @@ if( empty( $image ) ): ?>
                                             ?>
 
                                             <li class="-li">
-                                                <span class="editor-tag f--bold" style="font-size: 1.4rem;color:">Luennot</span>
+                                                <span class="editor-tag f--bold" style="font-size: 1.4rem;color:">Valmennukset</span>
                                               <a class="-nav-link Target-- -main-link" href="<?php the_permalink(); ?>"> <span><?php if( get_field('extra_meta') ): ?>
                                                <?php the_field('extra_meta'); ?> - <?php endif; ?><?php echo get_the_title(); ?></span>
                                           </a>
