@@ -55,7 +55,7 @@
             <div class="basic-card__image article-header__image">
 
         <div class="placeholder-img">
-        <img class="" data-src=" <?php echo get_the_post_thumbnail_url($post_id, "eq-image" ); ?> " alt="" src="<?php echo get_the_post_thumbnail_url($post_id, "eq-image" ); ?>">
+        <img class="" data-src=" <?php echo get_the_post_thumbnail_url($post_id, "content-image--mobile" ); ?> " alt="" src="<?php echo get_the_post_thumbnail_url($post_id, "content-image--mobile" ); ?>">
 
         </div>
         <div class="lazy-img">
