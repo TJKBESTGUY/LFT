@@ -23,10 +23,6 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
 
 
-
-
-
-
 	<?php wp_head(); ?>
 
   <style media="screen">
@@ -745,7 +741,21 @@ if( empty( $image ) ): ?>
 
 </div>
 
-<script>window.pipedriveLeadboosterConfig = {base: 'leadbooster-chat.pipedrive.com',companyId: 7397014,playbookUuid: '6f3bbc27-d69c-4fd5-9977-f6ab012c7d6f',version: 2};(function () {var w = window;if (w.LeadBooster) {console.warn('LeadBooster already exists');} else {w.LeadBooster = {q: [],on: function (n, h) {this.q.push({ t: 'o', n: n, h: h });},trigger: function (n) {this.q.push({ t: 't', n: n });},};}})();</script>
+<?php if ( get_field( 'lang' ) == 1 ) { ?>
+
+
+
+  <script>
+    window.pipedriveLeadboosterConfig = {base: 'leadbooster-chat.pipedrive.com',companyId: 7397014,playbookUuid: 'eddbeeeb-5d0b-4f16-b04b-2732c1e442f3',version: 2};(function () {var w = window;if (w.LeadBooster) {console.warn('LeadBooster already exists');} else {w.LeadBooster = {q: [],on: function (n, h) {this.q.push({ t: 'o', n: n, h: h });},trigger: function (n) {this.q.push({ t: 't', n: n });},};}})();
+    </script>
+
+<?php } else { ?>
+  <script>
+  window.pipedriveLeadboosterConfig = {base: 'leadbooster-chat.pipedrive.com',companyId: 7397014,playbookUuid: '6f3bbc27-d69c-4fd5-9977-f6ab012c7d6f',version: 2};(function () {var w = window;if (w.LeadBooster) {console.warn('LeadBooster already exists');} else {w.LeadBooster = {q: [],on: function (n, h) {this.q.push({ t: 'o', n: n, h: h });},trigger: function (n) {this.q.push({ t: 't', n: n });},};}})();
+  </script>
+
+<?php } ?>
+
 <script>
        // Wait for 3 seconds after page load
        setTimeout(function() {
