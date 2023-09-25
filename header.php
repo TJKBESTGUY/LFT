@@ -378,6 +378,7 @@ if( empty( $image ) ): ?>
                                       <a class="-nav-link Target-- -main-link" href="<?php the_permalink(); ?>"> <span><?php echo get_the_title(); ?>	<?php if( get_field('extra_meta') ): ?>
                 													- <?php the_field('extra_meta'); ?><?php endif; ?></span>
                                   </a>
+                                  </li>
 
                                       <?php
                                   endwhile;
@@ -403,36 +404,62 @@ if( empty( $image ) ): ?>
                                           <a class="-nav-link Target-- -main-link" href="<?php the_permalink(); ?>"> <span><?php if( get_field('extra_meta') ): ?>
                                            <?php the_field('extra_meta'); ?> - <?php endif; ?><?php echo get_the_title(); ?></span>
                                       </a>
-
+                                        </li>
                                           <?php
                                       endwhile;
 
                                       wp_reset_postdata();  ?>
 
-                                      <?php $args = array(
-                                              'post_type' => 'valmennukset',
-                                              'post_status' => 'publish',
 
-                                              'posts_per_page'   => 1,
+                                          <?php $args = array(
+                                                  'post_type' => 'post',
+                                                  'post_status' => 'publish',
+
+                                                  'posts_per_page'   => 1,
+                                                  'tax_query' => array(
+                                                      'relation' => 'AND',
+                                                      array(
+                                                          'taxonomy' => 'category',
+                                                          'field'    => 'term_id',
+                                                          'terms'    => array( 11, 210, 10 ),
+                                                          'operator' => 'NOT IN',
+                                                      ),
+                                                  ),
 
 
-                                          );
+                                              );
 
-                                          $loop = new WP_Query( $args );
+                                              $loop = new WP_Query( $args );
 
-                                          while ( $loop->have_posts() ) : $loop->the_post();
+                                              while ( $loop->have_posts() ) : $loop->the_post();
+                                                ?>
+
+                                                <li class="-li">
+                                                    <span class="editor-tag f--bold" style="font-size: 1.4rem;color:">Artikkelit</span>
+                                                  <a class="-nav-link Target-- -main-link" href="<?php the_permalink(); ?>"> <span><?php if( get_field('extra_meta') ): ?>
+                                                   <?php the_field('extra_meta'); ?> - <?php endif; ?><?php echo get_the_title(); ?></span>
+                                              </a>
+                                                </li>
+
+                                                  <?php
+                                              endwhile;
+
+                                              wp_reset_postdata();  ?>
+
+
+                                                <?php $link = get_field('linkki_ajankoht', 'option'); ?>
+                                                <?php
+                                                if( $link ):
+
+                                            $link_url = $link['url'];
+                                            $link_title = $link['title'];
+                                            $link_target = $link['target'] ? $link['target'] : '_self';
                                             ?>
-
-                                            <li class="-li">
-                                                <span class="editor-tag f--bold" style="font-size: 1.4rem;color:">Valmennukset</span>
-                                              <a class="-nav-link Target-- -main-link" href="<?php the_permalink(); ?>"> <span><?php if( get_field('extra_meta') ): ?>
-                                               <?php the_field('extra_meta'); ?> - <?php endif; ?><?php echo get_the_title(); ?></span>
-                                          </a>
-
-                                              <?php
-                                          endwhile;
-
-                                          wp_reset_postdata();  ?>
+                                              <li class="-li">
+                                                  <span class="editor-tag f--bold" style="font-size: 1.4rem;color:"><?php the_field('tunniste_ajankoht', 'option'); ?></span>
+                                                <a class="-nav-link Target-- -main-link" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                                                  </li>
+                                        <?php endif; ?>
 
 
 

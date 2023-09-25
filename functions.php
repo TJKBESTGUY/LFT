@@ -493,8 +493,8 @@ add_action( 'admin_head', 'ea_disable_classic_editor' );
 if( function_exists('acf_add_options_page') ) {
 
 	acf_add_options_page(array(
-		'page_title' 	=> 'Navigation',
-		'menu_title'	=> 'Navigation',
+		'page_title' 	=> 'Navigaatio',
+		'menu_title'	=> 'Navigaatio',
 		'menu_slug' 	=> 'navigation-info',
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false
