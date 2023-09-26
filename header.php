@@ -211,7 +211,7 @@ $page_name = get_the_title();
 
 
 
-                      <a class="-nav-link Target-- -main-link" href="/en/references/"> <span>References</span></a>
+                      <a class="-nav-link Target-- -main-link" href="/en/references/"> <span>Customer stories</span></a>
 
 
 
