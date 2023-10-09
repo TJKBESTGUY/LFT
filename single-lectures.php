@@ -21,7 +21,7 @@ get_header(); ?>
 
           </div>
       <section class="section--modal-page module--modal-content">
-            <?php locate_template('src/parts/modal/modal-valmennukset.php', true, false); ?>
+            <?php locate_template('src/parts/modal/modal-valmennukset-en.php', true, false); ?>
 
                                           </section>
 

@@ -105,9 +105,9 @@
                                 <button @click="hideModal" class="btn--basic btn--outline" style=" " href="">Sulje ikkuna</button>
                               </div>
                               <div class="static-luento-page-cta" style="display:none">
-                                <h4>Tutustu luentoihimme:</h4>
+                                <h4>Tutustu valmennuksiin:</h4>
                               <div class="capsule-wrap capsule-wrap--center">
-                                <a href="/luennot/" class="btn--basic btn--outline" style=" " href="">Kaikki luennot</a>
+                                <a href="/luennot/" class="btn--basic btn--outline" style=" " href="">Kaikki valmennukset</a>
                               </div>
                                       </div>
 
