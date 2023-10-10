@@ -52,13 +52,14 @@
                               <a class="btn--basic btn--dark js-modal-contact-btn" style=" " href=""  @click="runModalContact">Book now</a>
                             </div>
                             <div class="modal-item__footer">
-                            <h5 class="f--bold" style="margin-bottom: 20px;">Experts:</h5>
 
-                              <div class="modal-item__avatars">
+
+
                             <?php
                             $featured_posts = get_field('aiheen_asiantuntijat');
                             if( $featured_posts ): ?>
-
+                              <h5 class="f--bold" style="margin-bottom: 20px;">Experts:</h5>
+                              <div class="modal-item__avatars">
                                 <?php foreach( $featured_posts as $post ):
 
                                     // Setup this post for WP functions (variable must be named $post).
@@ -95,12 +96,15 @@
                                 <?php
                                 // Reset the global post object so that the rest of the page works correctly.
                                 wp_reset_postdata(); ?>
+
+                                        </div>
+
                             <?php endif; ?>
 
 
 
 
-                                                    </div>
+
                               <div class="capsule-wrap capsule-wrap--center">
                                 <button @click="hideModal" class="btn--basic btn--outline" style=" " href="">Close</button>
                               </div>
