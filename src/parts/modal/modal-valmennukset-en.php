@@ -107,7 +107,7 @@
                               <div class="static-luento-page-cta" style="display:none">
 
                               <div class="capsule-wrap capsule-wrap--center">
-                                <a  class="btn--basic btn--outline" style=" " href="https://lifted.fi/lectures">Lectures & workshops</a>
+                                <a  class="btn--basic btn--outline" style=" " href="https://lifted.fi/en/lectures-workshops/">Lectures & workshops</a>
                               </div>
                                       </div>
 
