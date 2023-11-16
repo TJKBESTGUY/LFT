@@ -111,7 +111,7 @@
 </a>
 
 <!-- TWITTER -->
-<a class="tw-h" onclick="return tbs_click()"  target="_blank">
+<a class="tw-h twitter-share-button"  href="https://twitter.com/intent/tweet" target="_blank">
 <img width="96" height="96" src="https://img.icons8.com/material-rounded/96/twitterx--v1.png" alt="twitterx--v1"/>
 <span>X</span>
 </a>
