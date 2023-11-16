@@ -91,6 +91,13 @@
                    <div class="share-buttons-container">
   <span class="meta-label">Jaa sisältö</span>
 <div class="share-list">
+
+  <!-- LINKEDIN -->
+  <a class="li-h" onclick="return lbs_click()"  target="_blank">
+  <img src="https://img.icons8.com/material-rounded/96/000000/linkedin.png">
+  <span>LinkedIn</span>
+  </a>
+
 <!-- FACEBOOK -->
 <a class="fb-h" onclick="return fbs_click()" target="_blank">
 <img src="https://img.icons8.com/material-rounded/96/000000/facebook-f.png">
@@ -99,30 +106,20 @@
 
 <!-- TWITTER -->
 <a class="tw-h" onclick="return tbs_click()"  target="_blank">
-<img src="https://img.icons8.com/material-rounded/96/000000/twitter-squared.png">
-<span>Twitter</span>
+<img width="96" height="96" src="https://img.icons8.com/material-rounded/96/twitterx--v1.png" alt="twitterx--v1"/>
+<span>X</span>
 </a>
 
-<!-- LINKEDIN -->
-<a class="li-h" onclick="return lbs_click()"  target="_blank">
-<img src="https://img.icons8.com/material-rounded/96/000000/linkedin.png">
-<span>LinkedIn</span>
+
+<a class="what-h" onclick="return what_click()"  target="_blank">
+
+<img width="96" height="96" src="https://img.icons8.com/material-rounded/96/whatsapp--v1.png" alt="whatsapp--v1"/>
+<span>WhatsApp</span>
 </a>
 
-<!-- REDDIT -->
-<a class="re-h" onclick="return rbs_click()" target="_blank">
-<img src="https://img.icons8.com/ios-glyphs/90/000000/reddit.png">
-<span>Reddit</span>
-</a>
 
-<!-- PINTEREST -->
-<a data-pin-do="buttonPin" data-pin-config="none" class="pi-h" onclick="return pbs_click()" target="_blank">
-<img src="https://img.icons8.com/ios-glyphs/90/000000/pinterest.png">
-<span>Pinterest</span>
-</a>
 </div>
 </div>
-
 
 <script type="text/javascript">
 var pageLink = window.location.href;
@@ -134,9 +131,10 @@ function tbs_click() { window.open(`https://twitter.com/intent/tweet?text=${page
 
 function lbs_click() { window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${pageLink}`,'sharer','toolbar=0,status=0,width=626,height=436');return false; }
 
-function rbs_click() { window.open(`https://www.reddit.com/submit?url=${pageLink}`,'sharer','toolbar=0,status=0,width=626,height=436');return false; }
+function what_click() { window.open(`https://api.whatsapp.com/send?text=${pageTitle}%20${pageLink}`,'whatsappsharer','toolbar=0,status=0,width=626,height=436');return false; }
 
-function pbs_click() { window.open(`https://www.pinterest.com/pin/create/button/?&text=${pageTitle}&url=${pageLink}&description=${pageTitle}`,'sharer','toolbar=0,status=0,width=626,height=436');return false; }
+
+
 </script>
                  </article>
 
