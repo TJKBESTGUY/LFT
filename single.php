@@ -104,6 +104,12 @@
 <span>Facebook</span>
 </a>
 
+<a class="what-h" onclick="return what_click()"  target="_blank">
+
+<img width="96" height="96" src="https://img.icons8.com/material-rounded/96/whatsapp--v1.png" alt="whatsapp--v1"/>
+<span>WhatsApp</span>
+</a>
+
 <!-- TWITTER -->
 <a class="tw-h" onclick="return tbs_click()"  target="_blank">
 <img width="96" height="96" src="https://img.icons8.com/material-rounded/96/twitterx--v1.png" alt="twitterx--v1"/>
@@ -111,11 +117,7 @@
 </a>
 
 
-<a class="what-h" onclick="return what_click()"  target="_blank">
 
-<img width="96" height="96" src="https://img.icons8.com/material-rounded/96/whatsapp--v1.png" alt="whatsapp--v1"/>
-<span>WhatsApp</span>
-</a>
 
 
 </div>
