@@ -93,7 +93,6 @@ get_header();
            foreach ($var_aiheet as $terms)
            {
                   ?>
-                  <a  href="/aihealueet/<?php   echo $terms->slug; ?>" class="btn--basic btn--basic--small btn--outline" type="button" name="button" data-tax="<?php   echo $terms->name; ?>"><?php   echo $terms->name; ?> <span>(<?php  echo $terms->count; ?>)</span> </a>
 
 
                   <?php
@@ -131,6 +130,7 @@ get_header();
 $ajaxposts = new WP_Query([
   'post_type' => array('post'),
   'posts_per_page' => 12,
+   'post_status'    => 'publish', // Exclude drafts by setting post_status to 'publish'
   'tax_query' => array(
       'relation' => 'AND',
       array(

@@ -955,6 +955,7 @@ endif;
 function weichie_load_more() {
   $ajaxposts = new WP_Query([
     'post_type' => array('post'),
+		 'post_status'    => 'publish', // Exclude drafts by setting post_status to 'publish'
     'posts_per_page' => 12,
 		'tax_query' => array(
 				'relation' => 'AND',
