@@ -293,6 +293,20 @@ if( $featured_posts ): ?>
 
 </section>
 
+<?php
+$reusable_block_id = 101204; // Replace with the actual ID of your reusable block
+
+// Get the post content by ID
+$reusable_block = get_post($reusable_block_id);
+
+// Check if the post exists and is a reusable block
+if ($reusable_block && $reusable_block->post_type === 'wp_block') {
+    // Output the content of the reusable block
+    echo apply_filters('the_content', $reusable_block->post_content);
+} else {
+
+}
+?>
 
 
 
