@@ -20,7 +20,7 @@
   <div class="flx-container">
 
     <?php $args = array(
-            'post_type' => 'post',
+            'post_type' => 'any',
             'post_status' => 'publish',
             'category_name' => $args['cat'],
             'posts_per_page' => $args['num'],
