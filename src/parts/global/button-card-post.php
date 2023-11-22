@@ -10,6 +10,15 @@
 
 ?>
 
+<style media="screen">
+  .en-page .btn-en {
+    display: block !important;
+  }
+  .en-page .btn-fi {
+    display: none !important;
+  }
+</style>
+
       <?php $aihe = get_the_terms( $post_id, 'aihealueet' ) ?>
 
 <div class="basic-card article-card"
@@ -101,12 +110,15 @@ if( $term ): ?>
                  <p class="-guest f--bold"><?php the_field('extra_meta'); ?></p>
          <?php endif; ?>
          <div class="capsule-wrap " style="">
+
            <?php if( get_field('pod_number') ): ?>
-             <a class="btn--basic btn--dark btn--basic--small" style="" href="<?php the_permalink(); ?>">Tutustu ja kuuntele</a>
+             <a class="btn--basic btn--dark btn--basic--small btn-fi" style="" href="<?php the_permalink(); ?>">Tutustu ja kuuntele</a>
            <?php endif; ?>
            <?php if( ! get_field('pod_number') ): ?>
-             <a class="btn--basic btn--dark btn--basic--small" style="" href="<?php the_permalink(); ?>">Lue</a>
+             <a class="btn--basic btn--dark btn--basic--small btn-fi" style="" href="<?php the_permalink(); ?>">Lue</a>
            <?php endif; ?>
+
+           <a class="btn--basic btn--dark btn--basic--small btn-en" style="display:none" href="<?php the_permalink(); ?>">Read more</a>
 
       </div>
 
