@@ -755,15 +755,6 @@ if( empty( $image ) ): ?>
 
       </div> -->
 
-
-
-
-
-
-
-
-
-
 </div>
 
 </div>
@@ -772,18 +763,18 @@ if( empty( $image ) ): ?>
 
 
 
-  <script>
+  <!-- <script>
     window.pipedriveLeadboosterConfig = {base: 'leadbooster-chat.pipedrive.com',companyId: 7397014,playbookUuid: 'eddbeeeb-5d0b-4f16-b04b-2732c1e442f3',version: 2};(function () {var w = window;if (w.LeadBooster) {console.warn('LeadBooster already exists');} else {w.LeadBooster = {q: [],on: function (n, h) {this.q.push({ t: 'o', n: n, h: h });},trigger: function (n) {this.q.push({ t: 't', n: n });},};}})();
-    </script>
+    </script> -->
 
 <?php } else { ?>
-  <script>
+  <!-- <script>
   window.pipedriveLeadboosterConfig = {base: 'leadbooster-chat.pipedrive.com',companyId: 7397014,playbookUuid: '6f3bbc27-d69c-4fd5-9977-f6ab012c7d6f',version: 2};(function () {var w = window;if (w.LeadBooster) {console.warn('LeadBooster already exists');} else {w.LeadBooster = {q: [],on: function (n, h) {this.q.push({ t: 'o', n: n, h: h });},trigger: function (n) {this.q.push({ t: 't', n: n });},};}})();
-  </script>
+  </script> -->
 
 <?php } ?>
 
-<script>
+<!-- <script>
        // Wait for 3 seconds after page load
        setTimeout(function() {
            // Create a new script element
@@ -794,7 +785,7 @@ if( empty( $image ) ): ?>
            // Append the script to the document's body
            document.body.appendChild(script);
        }, 3000);
-   </script>
+   </script> -->
 
 
 
