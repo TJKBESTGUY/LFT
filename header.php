@@ -116,6 +116,11 @@ $page_name = get_the_title();
       <nav class="navigation-links -desktop-nav flx-container">
 
 
+
+
+
+
+
         <?php if( have_rows('navigation_en', 'option') ): ?>
 
 
@@ -250,6 +255,198 @@ $page_name = get_the_title();
 
 
       <?php if( have_rows('navigation_group', 'option') ): ?>
+
+<style media="screen">
+.logged-in  .dd-nav--services {
+  display: block !important;
+}
+</style>
+
+        <?php while( have_rows('services_navigation_g', 'option') ) : the_row(); ?>
+          <div class="dropdown-nav dd-nav--services"style="display:none;" x-data="{ dropdown_open: false }" :class="dropdown_open &amp;&amp; 'S-active--dropdown'" @mouseleave="dropdown_open = false; $store.dropdown = false" x-trap="dropdown_open">
+                    <button class="-nav-link Target--palvelut" href="/" @mouseenter="dropdown_open = true; $store.dropdown = true" @keydown.enter="dropdown_open = ! dropdown_open; $store.dropdown = true"><?php the_sub_field('group_name'); ?> <svg viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="12px" height="12px" class="NavDropdown-module--icon--84991">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M.293.293a1 1 0 0 1 1.414 0L7 5.586 12.293.293a1 1 0 1 1 1.414 1.414l-6 6a1 1 0 0 1-1.414 0l-6-6a1 1 0 0 1 0-1.414Z" fill="currentColor"></path>
+                      </svg>
+                    </button>
+                    <div class="dropdown-nav__wrap" @mouseleave="dropdown_open = false; $store.dropdown = false" style="
+                width: 1100px;
+                max-width: 95vw;
+            ">
+                                <div class="dropdown-nav__content">
+                                  <div class="flx-container" style="
+                                /* flex-direction: column; */
+                            ">
+
+                                    <div class="dropdown-nav__cell -right" style="
+                                width: 100%;
+                                display: flex;
+                            ">
+                                      <ul class="-ul services-main-dd" style="flex-direction: row;flex-wrap: wrap;    width: 100%;">
+
+                                        <?php while( have_rows('links', 'option') ) : the_row(); ?>
+                                          <?php $link = get_sub_field('nav_link'); ?>
+                                          <?php $link_url = $link['url'];
+                                          $link_title = $link['title']; ?>
+
+                                          <?php
+                                          $image = get_sub_field('nav_link_icon');
+                    if( !empty( $image ) ): ?>
+                    <li class="-li" style="padding-top: 0;border-bottom: 0;">
+
+                          <a class="-nav-link Target-- -main-link" href="<?php echo $link_url; ?>"> <span class="f--bold" >  <img class="lazyload" width="30" height="30" data-src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" /> <?php echo $link_title; ?></span>
+                        <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
+                        <?php if( have_rows('sub_links') ): ?>
+      <div class="main-nav__sublinks">
+        <?php while( have_rows('sub_links') ): the_row();
+          $sublink = get_sub_field('sub_link'); // This is a link field
+        ?>
+          <a href="<?php echo esc_url($sublink['url']); ?>">
+            <?php echo esc_html($sublink['title']); ?>
+          </a>
+        <?php endwhile; ?>
+      </div>
+    <?php endif; ?>
+                    </li>
+
+                    <?php endif; ?>
+                    <?php
+                    if( empty( $image ) ): ?>
+                    <li class="-li" style="padding-top: 0;border-bottom: 0;">
+
+                          <a class="-nav-link Target-- -main-link" href="<?php echo $link_url; ?>"> <span><?php echo $link_title; ?></span>
+                        <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
+                        <?php if( have_rows('sub_links') ): ?>
+      <div class="main-nav__sublinks">
+        <?php while( have_rows('sub_links') ): the_row();
+          $sublink = get_sub_field('sub_link'); // This is a link field
+        ?>
+          <a href="<?php echo esc_url($sublink['url']); ?>">
+            <?php echo esc_html($sublink['title']); ?>
+          </a>
+        <?php endwhile; ?>
+      </div>
+    <?php endif; ?>
+
+                    </li>
+
+
+
+                    <?php endif; ?>
+
+                                            <?php endwhile; ?>
+
+                                            <div class="services-main-dd__bottom">
+
+
+                                              <a class="-nav-link Target-- -main-link" href="/luennot/">
+                                                <span style="
+                    font-family: &quot;Config-SemiBold&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen-Sans, Ubuntu, Cantarell, &quot;Helvetica Neue&quot;, sans-serif;
+                ">Luennot ja workshopit</span>
+                                                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path>
+                                                </svg>
+                                              </a>
+
+                                                  <a class="x-btn" href="/palvelut/">Kaikki palvelut
+                                                  <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path>
+                                                  </svg>
+                                                  </a>
+
+
+
+
+
+
+
+                                            </div>
+
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                      </div>
+
+        <?php endwhile; ?>
+
+
+
+
+
+
+
+        <style media="screen">
+      .services-main-dd {
+        justify-content: space-between !important;
+      }
+.services-main-dd .-li {
+  width: calc(50% - 20px) !important;
+}
+
+          .main-nav__sublinks {
+            display: flex
+;
+flex-direction: column;
+
+    margin-top: 10px;
+          }
+          .main-nav__sublinks a {
+            padding: 8px 0;
+                line-height: 1;
+                border-top: solid 1px #d7d7d7;
+                font-size: 1.6rem;
+                color: #4e4e4e;
+}
+
+.main-nav__sublinks a::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 6px;
+  background: currentColor;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 10"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg>') no-repeat center;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 10"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg>') no-repeat center;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.services-main-dd__bottom {
+  width: 100% !important;
+  padding-top: 20px;
+  border-top: solid 1px #d9d9d9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.services-main-dd__bottom svg {
+  transform: rotate(90deg);
+      transition: all 0.3s;
+      /* height: 12px; */
+      height: 8px;
+      margin-top: 1px;
+        margin-left: 10px;
+}
+
+.services-main-dd__bottom a {
+  display: flex;
+  align-items: center;
+  padding: 0;
+
+}
+
+
+
+.services-main-dd__bottom .x-btn{
+background: #06aef2;
+    color: white;
+    padding: 14px 16px;
+    border-radius: 999px;
+    font-size: 1.6rem;
+    }
+        </style>
 
 
 
@@ -520,7 +717,9 @@ lang-switch--fi-active
   </div>
 </div>
 
-<div class="fixed-mobile-navigation" style="display:none">
+
+<div class="fixed-mobile-navigation" style="display: block;">
+<!-- <div class="fixed-mobile-navigation" style="display:none"> -->
 <div class="fixed-mobile-navigation_inner U_container U_base-pad" style="">
 
 
@@ -640,6 +839,131 @@ if( empty( $image ) ): ?>
 <a class="btn--basic btn--dark " style="color:white" href="/yhteystiedot">Ota yhteyttä</a>
 </div>
 
+
+
+
+<script type="text/javascript">
+document.querySelectorAll('.btn--accordion-trigger').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const accordion = btn.closest('.mobile-nav-accordion');
+    const parent = accordion.closest('.module--nav-accordions');
+
+    parent.querySelectorAll('.mobile-nav-accordion').forEach((item) => {
+      const links = item.querySelector('.mobile-nav-accordion__links');
+
+      if (item !== accordion) {
+        item.classList.remove('open');
+        links.style.height = links.scrollHeight + 'px'; // Set current height
+        requestAnimationFrame(() => {
+          links.style.height = '0px';
+        });
+      }
+    });
+
+    const links = accordion.querySelector('.mobile-nav-accordion__links');
+    const isOpen = accordion.classList.toggle('open');
+
+    if (isOpen) {
+      links.style.height = links.scrollHeight + 'px';
+      links.addEventListener('transitionend', function handler() {
+        links.style.height = 'auto'; // Reset to auto after open transition
+        links.removeEventListener('transitionend', handler);
+      });
+    } else {
+      links.style.height = links.scrollHeight + 'px';
+      requestAnimationFrame(() => {
+        links.style.height = '0px';
+      });
+    }
+  });
+});
+
+</script>
+
+<style media="screen">
+.dropdown-nav__cell.-right li.mobile-nav-accordion {
+    display: flex;
+align-items: center;
+justify-content: space-between;
+flex-wrap: wrap;
+  }
+
+.dropdown-nav__cell.-right li.mobile-nav-accordion  .-main-link {
+      min-width: 70%;
+      max-width: 90%;
+    }
+
+    .mobile-nav-accordion__links {
+      width: 100%;
+    }
+
+    .mobile-nav-accordion__links {
+      overflow: hidden;
+      height: 0;
+      transition: height 0.3s ease;
+
+    }
+
+    .btn--accordion-trigger {
+      outline: none;
+      border: none;
+      padding: 0;
+      background: white;
+    }
+
+    .mobile-nav-accordion__links .x-inner {
+      padding: 12px 0;
+      padding-top: 8px;
+    }
+
+    .mobile-nav-accordion__links a {
+      margin-top: 12px;
+    padding-top: 12px;
+    /* padding: 12px 0; */
+    border-top: solid 1px #d9d9d9;
+    width: 100%;
+    display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 1.6rem;
+    color: #4e4e4e;
+
+    }
+
+
+      .mobile-nav-accordion__links a svg {
+            transform: rotate(90deg) !important;
+            width: 12px;
+      }
+
+
+     .mobile-nav-accordion  .mobile-nav-accordion__links .x-inner {
+    opacity: 0;
+
+     transition: all 0.3s ease;
+
+    }
+     .mobile-nav-accordion.open     .mobile-nav-accordion__links .x-inner {
+       opacity: 1;
+
+        transition: all 0.3s 0.3s ease;
+     }
+
+  .mobile-nav-accordion .btn--accordion-trigger {
+    transform: rotate(-180deg) !important;
+    transition: 0.5s;
+    }
+    .mobile-nav-accordion.open .btn--accordion-trigger {
+      transform: rotate(0deg) !important;
+    }
+
+
+
+
+
+
+
+</style>
 
 <?php if( have_rows('navigation_group', 'option') ): ?>
 
