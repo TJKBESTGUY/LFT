@@ -1016,6 +1016,10 @@ if( empty( $image ) ): ?>
         background: white;
       }
 
+      .btn--accordion-trigger svg {
+            color: #06aef2;
+      }
+
       .mobile-nav-accordion__links .x-inner {
         padding: 12px 0;
         padding-top: 8px;
@@ -1039,6 +1043,7 @@ if( empty( $image ) ): ?>
         .mobile-nav-accordion__links a svg {
               transform: rotate(90deg) !important;
               width: 12px;
+      color: #06aef2;
         }
 
 
