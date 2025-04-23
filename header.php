@@ -397,6 +397,7 @@ flex-direction: column;
                 border-top: solid 1px #d7d7d7;
                 font-size: 1.6rem;
                 color: #4e4e4e;
+                transition: all 0.3s;
 }
 
 .main-nav__sublinks a::after {
@@ -441,7 +442,7 @@ flex-direction: column;
 
 .services-main-dd__bottom .x-btn{
 background: #06aef2;
-    color: white;
+    color: white !important;
     padding: 14px 16px;
     border-radius: 999px;
     font-size: 1.6rem;
