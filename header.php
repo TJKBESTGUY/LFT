@@ -1043,7 +1043,7 @@ if( empty( $image ) ): ?>
         .mobile-nav-accordion__links a svg {
               transform: rotate(90deg) !important;
               width: 12px;
-      color: #06aef2;
+  
         }
 
 
