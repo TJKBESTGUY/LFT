@@ -843,131 +843,232 @@ if( empty( $image ) ): ?>
 
 
 
-<script type="text/javascript">
-document.querySelectorAll('.btn--accordion-trigger').forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const accordion = btn.closest('.mobile-nav-accordion');
-    const parent = accordion.closest('.module--nav-accordions');
 
-    parent.querySelectorAll('.mobile-nav-accordion').forEach((item) => {
-      const links = item.querySelector('.mobile-nav-accordion__links');
 
-      if (item !== accordion) {
-        item.classList.remove('open');
-        links.style.height = links.scrollHeight + 'px'; // Set current height
+<?php if( have_rows('navigation_group', 'option') ): ?>
+
+
+
+
+    <?php while( have_rows('services_navigation_g', 'option') ) : the_row(); ?>
+  <div class="mobile-nav-unit dd-nav--services">
+    <div class="">
+      <div class="">
+        <h3 class="f--bold"><?php the_sub_field('group_name'); ?></h3>
+        <p>
+    <?php the_sub_field('group_info_text'); ?>
+
+
+
+        </p>
+      </div>
+      <div class="dropdown-nav__cell -right">
+        <ul class="-ul module--nav-accordions">
+
+
+          <?php while( have_rows('links', 'option') ) : the_row(); ?>
+            <?php $link = get_sub_field('nav_link'); ?>
+            <?php $link_url = $link['url'];
+            $link_title = $link['title']; ?>
+
+            <?php
+            $image = get_sub_field('nav_link_icon');
+if( !empty( $image ) ): ?>
+<li class="-li  mobile-nav-accordion">
+
+<a class="-nav-link Target-- -main-link" href="<?php echo $link_url; ?>"> <span class="f--bold" >  <img class="lazyload"  width="30" height="30" data-src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" /> <?php echo $link_title; ?></span>
+
+</a>
+<button class="btn--accordion-trigger">
+<svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path>
+</svg>
+</button>
+
+
+<?php if( have_rows('sub_links') ): ?>
+  <div class="mobile-nav-accordion__links">
+    <div class="x-inner">
+      <?php while( have_rows('sub_links') ): the_row();
+        $sublink = get_sub_field('sub_link');
+        if( $sublink ):
+      ?>
+        <a href="<?php echo esc_url($sublink['url']); ?>">
+          <?php echo esc_html($sublink['title']); ?>
+          <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path>
+          </svg>
+        </a>
+      <?php endif; endwhile; ?>
+    </div>
+  </div>
+<?php endif; ?>
+
+</li>
+
+<?php endif; ?>
+<?php
+if( empty( $image ) ): ?>
+<li class="-li  mobile-nav-accordion">
+
+<a class="-nav-link Target-- -main-link" href="<?php echo $link_url; ?>"> <span><?php echo $link_title; ?></span>
+<svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path></svg></a>
+</li>
+
+
+<img class="lazyload"  data-src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+<?php endif; ?>
+
+              <?php endwhile; ?>
+
+
+
+          <li class="-li">
+            <a class="-nav-link Target-- -main-link" href="/luennot/">
+              <span>Luennot ja workshopit</span>
+              <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path>
+              </svg>
+            </a>
+          </li>
+          <img class=" lazyloaded" data-src="" alt="">
+          <li class="-li">
+            <a class="-nav-link Target-- -main-link" href="/palvelut/">
+              <span>Kaikki palvelut</span>
+              <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <?php endwhile; ?>
+
+  <script type="text/javascript">
+  document.querySelectorAll('.btn--accordion-trigger').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const accordion = btn.closest('.mobile-nav-accordion');
+      const parent = accordion.closest('.module--nav-accordions');
+
+      parent.querySelectorAll('.mobile-nav-accordion').forEach((item) => {
+        const links = item.querySelector('.mobile-nav-accordion__links');
+
+        if (item !== accordion) {
+          item.classList.remove('open');
+          links.style.height = links.scrollHeight + 'px'; // Set current height
+          requestAnimationFrame(() => {
+            links.style.height = '0px';
+          });
+        }
+      });
+
+      const links = accordion.querySelector('.mobile-nav-accordion__links');
+      const isOpen = accordion.classList.toggle('open');
+
+      if (isOpen) {
+        links.style.height = links.scrollHeight + 'px';
+        links.addEventListener('transitionend', function handler() {
+          links.style.height = 'auto'; // Reset to auto after open transition
+          links.removeEventListener('transitionend', handler);
+        });
+      } else {
+        links.style.height = links.scrollHeight + 'px';
         requestAnimationFrame(() => {
           links.style.height = '0px';
         });
       }
     });
-
-    const links = accordion.querySelector('.mobile-nav-accordion__links');
-    const isOpen = accordion.classList.toggle('open');
-
-    if (isOpen) {
-      links.style.height = links.scrollHeight + 'px';
-      links.addEventListener('transitionend', function handler() {
-        links.style.height = 'auto'; // Reset to auto after open transition
-        links.removeEventListener('transitionend', handler);
-      });
-    } else {
-      links.style.height = links.scrollHeight + 'px';
-      requestAnimationFrame(() => {
-        links.style.height = '0px';
-      });
-    }
   });
-});
 
-</script>
+  </script>
 
-<style media="screen">
-.dropdown-nav__cell.-right li.mobile-nav-accordion {
-    display: flex;
-align-items: center;
-justify-content: space-between;
-flex-wrap: wrap;
-  }
-
-.dropdown-nav__cell.-right li.mobile-nav-accordion  .-main-link {
-      min-width: 70%;
-      max-width: 90%;
+  <style media="screen">
+  .dropdown-nav__cell.-right li.mobile-nav-accordion {
+      display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
     }
 
-    .mobile-nav-accordion__links {
+  .dropdown-nav__cell.-right li.mobile-nav-accordion  .-main-link {
+        min-width: 70%;
+        max-width: 90%;
+      }
+
+      .mobile-nav-accordion__links {
+        width: 100%;
+      }
+
+      .mobile-nav-accordion__links {
+        overflow: hidden;
+        height: 0;
+        transition: height 0.3s ease;
+
+      }
+
+      .btn--accordion-trigger {
+        outline: none;
+        border: none;
+        padding: 0;
+        background: white;
+      }
+
+      .mobile-nav-accordion__links .x-inner {
+        padding: 12px 0;
+        padding-top: 8px;
+      }
+
+      .mobile-nav-accordion__links a {
+        margin-top: 12px;
+      padding-top: 12px;
+      /* padding: 12px 0; */
+      border-top: solid 1px #d9d9d9;
       width: 100%;
-    }
+      display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+      color: #4e4e4e;
 
-    .mobile-nav-accordion__links {
-      overflow: hidden;
-      height: 0;
-      transition: height 0.3s ease;
-
-    }
-
-    .btn--accordion-trigger {
-      outline: none;
-      border: none;
-      padding: 0;
-      background: white;
-    }
-
-    .mobile-nav-accordion__links .x-inner {
-      padding: 12px 0;
-      padding-top: 8px;
-    }
-
-    .mobile-nav-accordion__links a {
-      margin-top: 12px;
-    padding-top: 12px;
-    /* padding: 12px 0; */
-    border-top: solid 1px #d9d9d9;
-    width: 100%;
-    display: flex;
-justify-content: space-between;
-align-items: center;
-font-size: 1.6rem;
-    color: #4e4e4e;
-
-    }
-
-
-      .mobile-nav-accordion__links a svg {
-            transform: rotate(90deg) !important;
-            width: 12px;
       }
 
 
-     .mobile-nav-accordion  .mobile-nav-accordion__links .x-inner {
-    opacity: 0;
-
-     transition: all 0.3s ease;
-
-    }
-     .mobile-nav-accordion.open     .mobile-nav-accordion__links .x-inner {
-       opacity: 1;
-
-        transition: all 0.3s 0.3s ease;
-     }
-
-  .mobile-nav-accordion .btn--accordion-trigger {
-    transform: rotate(-180deg) !important;
-    transition: 0.5s;
-    }
-    .mobile-nav-accordion.open .btn--accordion-trigger {
-      transform: rotate(0deg) !important;
-    }
+        .mobile-nav-accordion__links a svg {
+              transform: rotate(90deg) !important;
+              width: 12px;
+        }
 
 
+       .mobile-nav-accordion  .mobile-nav-accordion__links .x-inner {
+      opacity: 0;
+
+       transition: all 0.3s ease;
+
+      }
+       .mobile-nav-accordion.open     .mobile-nav-accordion__links .x-inner {
+         opacity: 1;
+
+          transition: all 0.3s 0.3s ease;
+       }
+
+    .mobile-nav-accordion .btn--accordion-trigger {
+      transform: rotate(-180deg) !important;
+      transition: 0.5s;
+      }
+      .mobile-nav-accordion.open .btn--accordion-trigger {
+        transform: rotate(0deg) !important;
+      }
 
 
 
 
 
-</style>
 
-<?php if( have_rows('navigation_group', 'option') ): ?>
 
+  </style>
 
 
     <?php while( have_rows('navigation_group', 'option') ) : the_row(); ?>
