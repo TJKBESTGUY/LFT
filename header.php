@@ -851,7 +851,7 @@ if( empty( $image ) ): ?>
 
 
     <?php while( have_rows('services_navigation_g', 'option') ) : the_row(); ?>
-  <div class="mobile-nav-unit dd-nav--services">
+  <div class="mobile-nav-unit dd-nav--services" style="display:none">
     <div class="">
       <div class="">
         <h3 class="f--bold"><?php the_sub_field('group_name'); ?></h3>
@@ -1043,7 +1043,7 @@ if( empty( $image ) ): ?>
         .mobile-nav-accordion__links a svg {
               transform: rotate(90deg) !important;
               width: 12px;
-  
+
         }
 
 
