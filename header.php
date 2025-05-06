@@ -1001,7 +1001,8 @@ if( empty( $image ) ): ?>
       }
 
         .dropdown-nav__cell.-right li.mobile-nav-accordion .f--bold {
-
+            color: black;
+            text-align: left;
         }
 
       .mobile-nav-accordion__links {
