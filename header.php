@@ -976,13 +976,14 @@ if( empty( $image ) ): ?>
 
   // Delay scroll check just a bit to ensure layout has fully updated
   setTimeout(() => {
-    const parentEl = btn.closest('.mobile-nav-accordion');
-    const rect = parentEl.getBoundingClientRect();
+    const rect = btn.getBoundingClientRect();
     const isInView =
       rect.top >= 0 &&
       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
 
     if (!isInView) {
+      // Scroll the parent into view if button is not visible
+      const parentEl = btn.closest('.mobile-nav-accordion');
       parentEl.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
