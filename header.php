@@ -969,17 +969,41 @@ if( empty( $image ) ): ?>
       const links = accordion.querySelector('.mobile-nav-accordion__links');
       const isOpen = accordion.classList.toggle('open');
 
+       btn.style.pointerEvents = 'none';
+
+       const restoreBtn = () => {
+  btn.style.pointerEvents = '';
+
+  // Delay scroll check just a bit to ensure layout has fully updated
+  setTimeout(() => {
+    const rect = btn.getBoundingClientRect();
+    const isInView =
+      rect.top >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+
+    if (!isInView) {
+      btn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }, 50); // slight delay helps with layout shift
+};
+
       if (isOpen) {
         links.style.height = links.scrollHeight + 'px';
         links.addEventListener('transitionend', function handler() {
           links.style.height = 'auto'; // Reset to auto after open transition
+             btn.style.pointerEvents = ''; // Re-enable button after transition
+                  restoreBtn();
           links.removeEventListener('transitionend', handler);
         });
       } else {
         links.style.height = links.scrollHeight + 'px';
-        requestAnimationFrame(() => {
-          links.style.height = '0px';
-        });
+    requestAnimationFrame(() => {
+      links.style.height = '0px';
+    });
+    links.addEventListener('transitionend', function handler() {
+      btn.style.pointerEvents = ''; // Also re-enable after closing
+      links.removeEventListener('transitionend', handler);
+    });
       }
     });
   });
@@ -1066,13 +1090,13 @@ if( empty( $image ) ): ?>
        .mobile-nav-accordion  .mobile-nav-accordion__links .x-inner {
       opacity: 0;
 
-       transition: all 0.3s ease;
+       transition: all 0.3s 0.1s ease;
 
       }
        .mobile-nav-accordion.open     .mobile-nav-accordion__links .x-inner {
          opacity: 1;
 
-          transition: all 0.3s 0.3s ease;
+          transition: all 0.3s 0.4s ease;
        }
 
     .mobile-nav-accordion .btn--accordion-trigger svg{
