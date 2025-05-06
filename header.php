@@ -976,15 +976,19 @@ if( empty( $image ) ): ?>
 
   // Delay scroll check just a bit to ensure layout has fully updated
   setTimeout(() => {
-    const rect = btn.getBoundingClientRect();
+    const parentEl = btn.closest('.mobile-nav-accordion');
+    const rect = parentEl.getBoundingClientRect();
     const isInView =
       rect.top >= 0 &&
       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
 
     if (!isInView) {
-      btn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      parentEl.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
     }
-  }, 50); // slight delay helps with layout shift
+  }, 100);
 };
 
       if (isOpen) {
