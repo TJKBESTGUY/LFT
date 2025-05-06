@@ -1058,6 +1058,7 @@ if( empty( $image ) ): ?>
               transform: rotate(90deg) !important;
               width: 12px;
                   color: #4e4e4e !important;
+                      margin-left: 20px;
 
         }
 
