@@ -257,13 +257,13 @@ $page_name = get_the_title();
       <?php if( have_rows('navigation_group', 'option') ): ?>
 
 <style media="screen">
-.logged-in  .dd-nav--services {
+ .dd-nav--services {
   display: block !important;
 }
 </style>
 
         <?php while( have_rows('services_navigation_g', 'option') ) : the_row(); ?>
-          <div class="dropdown-nav dd-nav--services"style="display:none;" x-data="{ dropdown_open: false }" :class="dropdown_open &amp;&amp; 'S-active--dropdown'" @mouseleave="dropdown_open = false; $store.dropdown = false" x-trap="dropdown_open">
+          <div class="dropdown-nav dd-nav--services" x-data="{ dropdown_open: false }" :class="dropdown_open &amp;&amp; 'S-active--dropdown'" @mouseleave="dropdown_open = false; $store.dropdown = false" x-trap="dropdown_open">
                     <button class="-nav-link Target--palvelut" href="/" @mouseenter="dropdown_open = true; $store.dropdown = true" @keydown.enter="dropdown_open = ! dropdown_open; $store.dropdown = true"><?php the_sub_field('group_name'); ?> <svg viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="12px" height="12px" class="NavDropdown-module--icon--84991">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M.293.293a1 1 0 0 1 1.414 0L7 5.586 12.293.293a1 1 0 1 1 1.414 1.414l-6 6a1 1 0 0 1-1.414 0l-6-6a1 1 0 0 1 0-1.414Z" fill="currentColor"></path>
                       </svg>
@@ -851,7 +851,7 @@ if( empty( $image ) ): ?>
 
 
     <?php while( have_rows('services_navigation_g', 'option') ) : the_row(); ?>
-  <div class="mobile-nav-unit dd-nav--services" style="display:none">
+  <div class="mobile-nav-unit dd-nav--services" >
     <div class="">
       <div class="">
         <h3 class="f--bold"><?php the_sub_field('group_name'); ?></h3>
@@ -876,10 +876,11 @@ if( empty( $image ) ): ?>
 if( !empty( $image ) ): ?>
 <li class="-li  mobile-nav-accordion">
 
-<a class="-nav-link Target-- -main-link" href="<?php echo $link_url; ?>"> <span class="f--bold" >  <img class="lazyload"  width="30" height="30" data-src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" /> <?php echo $link_title; ?></span>
+<div class="-nav-link Target-- -main-link" href="<?php echo $link_url; ?>">
 
-</a>
+
 <button class="btn--accordion-trigger">
+  <span class="f--bold" >  <img class="lazyload"  width="30" height="30" data-src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" /> <?php echo $link_title; ?></span>
 <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M0.425782 8.8789C0.238282 8.66797 0.238282 8.46875 0.425782 8.28125L7.80859 0.898437C7.99609 0.710937 8.18359 0.710937 8.37109 0.898437L15.7539 8.28125C15.9414 8.46875 15.9414 8.66797 15.7539 8.87891L15.0508 9.54687C14.8633 9.75781 14.6641 9.75781 14.4531 9.54687L8.08984 3.21875L1.72656 9.54687C1.51563 9.75781 1.31641 9.75781 1.12891 9.54687L0.425782 8.8789Z" fill="currentColor"></path>
 </svg>
@@ -903,7 +904,7 @@ if( !empty( $image ) ): ?>
     </div>
   </div>
 <?php endif; ?>
-
+</div>
 </li>
 
 <?php endif; ?>
@@ -994,12 +995,18 @@ if( empty( $image ) ): ?>
     }
 
   .dropdown-nav__cell.-right li.mobile-nav-accordion  .-main-link {
-        min-width: 70%;
-        max-width: 90%;
+      width: 100%;
+      position: relative;
+      display: block;
       }
+
+        .dropdown-nav__cell.-right li.mobile-nav-accordion .f--bold {
+
+        }
 
       .mobile-nav-accordion__links {
         width: 100%;
+            position: relative;
       }
 
       .mobile-nav-accordion__links {
@@ -1011,9 +1018,15 @@ if( empty( $image ) ): ?>
 
       .btn--accordion-trigger {
         outline: none;
-        border: none;
-        padding: 0;
-        background: white;
+      border: none;
+      padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    width: 100%;
+
+
       }
 
       .btn--accordion-trigger svg {
@@ -1035,7 +1048,7 @@ if( empty( $image ) ): ?>
   justify-content: space-between;
   align-items: center;
   font-size: 1.6rem;
-      color: #4e4e4e;
+      color: #4e4e4e !important;
 
       }
 
@@ -1043,6 +1056,7 @@ if( empty( $image ) ): ?>
         .mobile-nav-accordion__links a svg {
               transform: rotate(90deg) !important;
               width: 12px;
+                  color: #4e4e4e !important;
 
         }
 
@@ -1059,11 +1073,11 @@ if( empty( $image ) ): ?>
           transition: all 0.3s 0.3s ease;
        }
 
-    .mobile-nav-accordion .btn--accordion-trigger {
+    .mobile-nav-accordion .btn--accordion-trigger svg{
       transform: rotate(-180deg) !important;
       transition: 0.5s;
       }
-      .mobile-nav-accordion.open .btn--accordion-trigger {
+      .mobile-nav-accordion.open .btn--accordion-trigger svg{
         transform: rotate(0deg) !important;
       }
 
