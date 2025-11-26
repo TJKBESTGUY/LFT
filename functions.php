@@ -244,6 +244,20 @@ function lifted_scripts() {
 	),
 		wp_get_theme()->get( 'Version' ), true );
 
+
+		////ADD FILTER FOR COOKIEBOT///////
+
+		add_filter( 'script_loader_tag', function( $tag, $handle, $src ) {
+		    if ( $handle === 'lifted-custom-js' ) {
+		        return str_replace(
+		            '<script ',
+		            '<script data-cookieconsent="ignore" ',
+		            $tag
+		        );
+		    }
+		    return $tag;
+		}, 10, 3 );
+
 	//AJAX ready for .custom.js files
 	wp_localize_script( 'lifted-custom-js', 'frontEndAjax', array(
 		'ajaxurl'    => admin_url( 'admin-ajax.php' ),
