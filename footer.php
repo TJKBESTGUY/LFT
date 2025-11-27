@@ -118,62 +118,48 @@
 
              <?php if( have_rows('navigation_group_footer', 'option') ): ?>
 
+                 <?php while( have_rows('navigation_group_footer', 'option') ) : the_row(); ?>
 
+                     <div class="link-group">
+                         <p class="footer-group-header"><?php the_sub_field('group_name'); ?></p>
 
-                 <?php while( have_rows('navigation_group_footer') ) : the_row(); ?>
+                         <ul class="-ul">
+                             <?php if( have_rows('links') ): ?>
+                                 <?php while( have_rows('links') ) : the_row(); ?>
+                                     <?php
+                                     $link = get_sub_field('nav_link');
+                                     if( $link ):
+                                         $link_url = $link['url'];
+                                         $link_title = $link['title'];
+                                     ?>
+                                     <li class="-li">
+                                         <a href="<?php echo esc_url($link_url); ?>">
+                                             <span><?php echo esc_html($link_title); ?></span>
+                                         </a>
+                                     </li>
+                                     <?php endif; ?>
+                                 <?php endwhile; ?>
+                             <?php endif; ?>
 
-
-
-
-
-                   <div class="link-group">
-
-                       <p class="footer-group-header"><?php the_sub_field('group_name'); ?> </p>
-
-
-
-                       <ul class="-ul">
-                           <?php while( have_rows('links', 'option') ) : the_row(); ?>
-                             <?php $link = get_sub_field('nav_link'); ?>
-                             <?php $link_url = $link['url'];
-                             $link_title = $link['title']; ?>
+                             <?php
+                             $link_m = get_sub_field('group_main_link');
+                             if( $link_m ):
+                                 $link_m_url = $link_m['url'];
+                                 $link_m_title = $link_m['title'];
+                             ?>
                              <li class="-li">
-
-                             <a class="" href="<?php echo $link_url; ?>"> <span><?php echo $link_title; ?></span>
-                          </a>
+                                 <a href="<?php echo esc_url($link_m_url); ?>">
+                                     <span><?php echo esc_html($link_m_title); ?></span>
+                                 </a>
                              </li>
-                               <?php endwhile; ?>
+                             <?php endif; ?>
 
+                         </ul>
+                     </div>
 
-                               <?php $link_m = get_sub_field('group_main_link'); ?>
-                               <?php
-                               if( $link_m ):
+                 <?php endwhile; ?>
 
-
-                               $link_m_url = $link_m['url'];
-                               $link_m_title = $link_m['title'];
-
-                               ?>
-
-                               <li class="-li">
-
-                                     <a class="" href="<?php echo $link_m_url; ?>"> <span><?php echo   $link_m_title; ?></span>
-                                  </a>
-
-
-                               </li>
-                               <?php endif; ?>
-
-
-
-
-                       </ul>
-
-                   </div>
-
-                       <?php endwhile; ?>
-
-                     <?php endif; ?>
+             <?php endif; ?>
 
 
 
