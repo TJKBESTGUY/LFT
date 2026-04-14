@@ -181,7 +181,7 @@
                                                   </h3>
                                                   <p>Saat uusimmat puheenaiheet ja tutkimustulokset suoraan sähköpostiisi joka kuukausi.</p>
                                                   <div class="capsule-wrap capsule-wrap--center">
-                          <a class="btn--basic btn--dark" style="" href="/uutiskirje/">Tilaa Uutiskirjemme</a>
+                          <a class="btn--basic btn--dark" style="" href="/uutiskirje/">Tilaa Uutiskirjeemme</a>
                         </div>
 
                                             </div>
