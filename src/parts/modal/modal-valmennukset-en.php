@@ -48,9 +48,9 @@
 
 
 
-                            <div class="capsule-wrap capsule-wrap--center">
+                            <!-- <div class="capsule-wrap capsule-wrap--center">
                               <a class="btn--basic btn--dark js-modal-contact-btn" style=" " href=""  @click="runModalContact">Book now</a>
-                            </div>
+                            </div> -->
                             <div class="modal-item__footer">
 
 
