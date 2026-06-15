@@ -110,7 +110,7 @@
 
                                                <div class="capsule-wrap ">
                        <a class="btn--basic btn--basic--small btn--outline" @click="runModal" data-modal="<?php echo get_permalink(); ?>" href="#">Read more</a>
-                       <a class="btn--basic btn--basic--small btn--dark" style=" " href="#" @click="runModalContact">Book</a>
+                       <a class="btn--basic btn--basic--small btn--dark" style=" " href="https://lifted.fi/luennot/#ota-yhteytta">Book</a>
                      </div>
                                          <div class="-footer">
                                            <?php   $repeater = get_lzb_meta( 'valmennukset-tags' ); ?>
@@ -246,7 +246,7 @@ while ($query->have_posts()) : $query->the_post();
             </h3>
 
             <div class="capsule-wrap ">
-<a class="btn--basic btn--basic--small btn--outline" @click="runModal" data-modal="<?php echo get_permalink(); ?>" href="#">Read more</a> <a class="btn--basic btn--basic--small btn--dark" style=" " href="#" @click="runModalContact">Book</a>
+<a class="btn--basic btn--basic--small btn--outline" @click="runModal" data-modal="<?php echo get_permalink(); ?>" href="#">Read more</a> <a class="btn--basic btn--basic--small btn--dark" style=" " href="https://lifted.fi/luennot/#ota-yhteytta">Book</a>
 </div>
       <div class="-footer">
         <?php   $repeater = get_lzb_meta( 'valmennukset-tags' ); ?>
