@@ -49,7 +49,7 @@
 
 
                             <div class="capsule-wrap capsule-wrap--center">
-                              <a class="btn--basic btn--dark js-modal-contact-btn" style=" " href=""  @click="runModalContact">Varaa / Kysy luennosta</a>
+                              <a class="btn--basic btn--dark js-modal-contact-btn" style=" " href="https://lifted.fi/luennot/#ota-yhteytta" @click="hideModal" >Varaa / Kysy luennosta</a>
                             </div>
                             <div class="modal-item__footer">
                             <h5 class="f--bold" style="margin-bottom: 20px;">Aiheen asiantuntijoitamme:</h5>
