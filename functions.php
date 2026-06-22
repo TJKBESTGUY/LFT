@@ -710,7 +710,7 @@ if ( ! function_exists( 'liftcast_loop_output' ) ) :
 
 				             <div class="lazy-img-aspect">
 
-				             	<img class="lazyload lazyanim" data-src="https://lifted.fi/wp-content/uploads/2026/06/Liftcast-UUSI-kansikuva-1.png" alt="Liftcast">
+				             	<img class="lazyload lazyanim" data-src="https://lifted.fi/wp-content/uploads/2026/06/Liftcast-UUSI-kansikuva.jpg" alt="Liftcast">
 				      </div>
 				      </div>
 
